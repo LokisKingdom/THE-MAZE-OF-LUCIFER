@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl24fhtqoymjd"
+path="res://.godot/imported/SHUT THAT CHATTERBOX (14).mp3-66fb8c5dabda04b2fe3fb446cdd060da.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/THE CHATTERBOX/SHUT THAT CHATTERBOX (14).mp3"
+dest_files=["res://.godot/imported/SHUT THAT CHATTERBOX (14).mp3-66fb8c5dabda04b2fe3fb446cdd060da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

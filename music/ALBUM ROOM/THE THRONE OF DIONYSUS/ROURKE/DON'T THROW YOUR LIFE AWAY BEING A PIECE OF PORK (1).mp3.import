@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://buus744irsofc"
+path="res://.godot/imported/DON'T THROW YOUR LIFE AWAY BEING A PIECE OF PORK (1).mp3-4f39bc44ab963989e6c29447b0b9d1a0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/ROURKE/DON'T THROW YOUR LIFE AWAY BEING A PIECE OF PORK (1).mp3"
+dest_files=["res://.godot/imported/DON'T THROW YOUR LIFE AWAY BEING A PIECE OF PORK (1).mp3-4f39bc44ab963989e6c29447b0b9d1a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

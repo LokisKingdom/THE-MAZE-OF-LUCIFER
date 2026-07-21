@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfmgx3t2md4wa"
+path="res://.godot/imported/SIDE A - 2) MOVE ALONG HOME (4).mp3-97069f6114b7749e282be69e7b796a30.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/APRIL 29th (album)/SIDE A - 2) MOVE ALONG HOME (4).mp3"
+dest_files=["res://.godot/imported/SIDE A - 2) MOVE ALONG HOME (4).mp3-97069f6114b7749e282be69e7b796a30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

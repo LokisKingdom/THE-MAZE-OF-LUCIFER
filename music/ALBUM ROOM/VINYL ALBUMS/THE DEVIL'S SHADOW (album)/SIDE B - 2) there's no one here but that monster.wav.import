@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bn8ar0v5q21ln"
+path="res://.godot/imported/SIDE B - 2) there's no one here but that monster.wav-e7dd3b4ad34141ca0abdb75f79d7a809.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/THE DEVIL'S SHADOW (album)/SIDE B - 2) there's no one here but that monster.wav"
+dest_files=["res://.godot/imported/SIDE B - 2) there's no one here but that monster.wav-e7dd3b4ad34141ca0abdb75f79d7a809.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

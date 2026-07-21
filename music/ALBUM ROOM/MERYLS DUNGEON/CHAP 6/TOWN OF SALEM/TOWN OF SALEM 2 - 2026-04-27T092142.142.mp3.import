@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhr3rox0atyr8"
+path="res://.godot/imported/TOWN OF SALEM 2 - 2026-04-27T092142.142.mp3-23dca0543964f2b27fd7f157a87e8ecf.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/TOWN OF SALEM/TOWN OF SALEM 2 - 2026-04-27T092142.142.mp3"
+dest_files=["res://.godot/imported/TOWN OF SALEM 2 - 2026-04-27T092142.142.mp3-23dca0543964f2b27fd7f157a87e8ecf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

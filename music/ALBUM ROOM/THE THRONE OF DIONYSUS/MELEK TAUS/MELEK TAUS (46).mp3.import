@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crmipcnpsn7r8"
+path="res://.godot/imported/MELEK TAUS (46).mp3-3107c1ebe11fd9034b40a539a53cb8ae.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/MELEK TAUS/MELEK TAUS (46).mp3"
+dest_files=["res://.godot/imported/MELEK TAUS (46).mp3-3107c1ebe11fd9034b40a539a53cb8ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

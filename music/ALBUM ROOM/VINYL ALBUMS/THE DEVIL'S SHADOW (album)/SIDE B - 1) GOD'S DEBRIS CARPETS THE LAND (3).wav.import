@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cr78r38ahcqmr"
+path="res://.godot/imported/SIDE B - 1) GOD'S DEBRIS CARPETS THE LAND (3).wav-1a2cdb7c8878fb7c0bc95447abeed72d.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/THE DEVIL'S SHADOW (album)/SIDE B - 1) GOD'S DEBRIS CARPETS THE LAND (3).wav"
+dest_files=["res://.godot/imported/SIDE B - 1) GOD'S DEBRIS CARPETS THE LAND (3).wav-1a2cdb7c8878fb7c0bc95447abeed72d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

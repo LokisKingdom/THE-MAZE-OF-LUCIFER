@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://paj1s8724gnw"
+path="res://.godot/imported/Loki Spake - LOKASENNA - Lamentations - Section 1 (3).mp3-ad07100b3619a6fa9bf81284390cce52.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/LOKASENNA/Loki Spake - LOKASENNA - Lamentations - Section 1 (3).mp3"
+dest_files=["res://.godot/imported/Loki Spake - LOKASENNA - Lamentations - Section 1 (3).mp3-ad07100b3619a6fa9bf81284390cce52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

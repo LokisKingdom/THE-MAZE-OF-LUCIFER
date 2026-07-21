@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctt1pypngshcw"
+path="res://.godot/imported/MONSTER (1).mp3-2eb6ea3eb5501ff8b1f2e6d785af539a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYLS DUNGEON (album)/MONSTER (1).mp3"
+dest_files=["res://.godot/imported/MONSTER (1).mp3-2eb6ea3eb5501ff8b1f2e6d785af539a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

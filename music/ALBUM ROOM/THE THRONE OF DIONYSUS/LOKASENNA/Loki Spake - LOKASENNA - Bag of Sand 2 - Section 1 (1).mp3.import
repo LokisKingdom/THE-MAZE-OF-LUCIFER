@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj6348secqjkk"
+path="res://.godot/imported/Loki Spake - LOKASENNA - Bag of Sand 2 - Section 1 (1).mp3-9948e61380542917a6532c7a683406b3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/LOKASENNA/Loki Spake - LOKASENNA - Bag of Sand 2 - Section 1 (1).mp3"
+dest_files=["res://.godot/imported/Loki Spake - LOKASENNA - Bag of Sand 2 - Section 1 (1).mp3-9948e61380542917a6532c7a683406b3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

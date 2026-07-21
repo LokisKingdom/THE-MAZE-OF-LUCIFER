@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpn776g8abai7"
+path="res://.godot/imported/ADRIFT IN THAT SEA.mp3-89cd839fcf101a772fdd050170935cb7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/THE SKY IS FALLING/ADRIFT IN THAT SEA.mp3"
+dest_files=["res://.godot/imported/ADRIFT IN THAT SEA.mp3-89cd839fcf101a772fdd050170935cb7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

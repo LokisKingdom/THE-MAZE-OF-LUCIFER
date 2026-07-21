@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmg25l3l5ub1a"
+path="res://.godot/imported/LETTER TO THE SUPREME COURT OF AMERICA (20).mp3-13ff965c2661e40a2ca1d0a8f2397e5f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/SILENCE/LETTER TO THE SUPREME COURT/LETTER TO THE SUPREME COURT OF AMERICA (20).mp3"
+dest_files=["res://.godot/imported/LETTER TO THE SUPREME COURT OF AMERICA (20).mp3-13ff965c2661e40a2ca1d0a8f2397e5f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

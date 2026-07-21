@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blpa7lwl8tpli"
+path="res://.godot/imported/THE DOOR THAT MUST NEVER BE OPENED (15).mp3-5c8af0e830e214a5e8d5f99160c7ee9a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/DIONYSUS' WINE FLASK/THE DOOR THAT MUST NEVER BE OPENED (15).mp3"
+dest_files=["res://.godot/imported/THE DOOR THAT MUST NEVER BE OPENED (15).mp3-5c8af0e830e214a5e8d5f99160c7ee9a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

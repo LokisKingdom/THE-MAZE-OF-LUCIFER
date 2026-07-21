@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wqj41cxgaje3"
+path="res://.godot/imported/THE CHATTERBOX (83).mp3-cfa1a172f4c1f95740c649213a69de97.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/THE CHATTERBOX/THE CHATTERBOX (83).mp3"
+dest_files=["res://.godot/imported/THE CHATTERBOX (83).mp3-cfa1a172f4c1f95740c649213a69de97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

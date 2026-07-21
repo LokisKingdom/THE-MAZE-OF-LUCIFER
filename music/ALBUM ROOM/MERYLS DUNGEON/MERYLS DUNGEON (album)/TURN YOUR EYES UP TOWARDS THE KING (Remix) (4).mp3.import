@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6cyf2maev7re"
+path="res://.godot/imported/TURN YOUR EYES UP TOWARDS THE KING (Remix) (4).mp3-b7a6d32b7c5e4b110772a6414fe41ab5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYLS DUNGEON (album)/TURN YOUR EYES UP TOWARDS THE KING (Remix) (4).mp3"
+dest_files=["res://.godot/imported/TURN YOUR EYES UP TOWARDS THE KING (Remix) (4).mp3-b7a6d32b7c5e4b110772a6414fe41ab5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

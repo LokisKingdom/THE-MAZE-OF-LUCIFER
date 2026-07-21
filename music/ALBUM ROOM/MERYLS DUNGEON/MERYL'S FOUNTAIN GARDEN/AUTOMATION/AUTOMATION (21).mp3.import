@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwwb2dt2fy71c"
+path="res://.godot/imported/AUTOMATION (21).mp3-15d4eb54988e508adafbd5b1e71ce3c1.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S FOUNTAIN GARDEN/AUTOMATION/AUTOMATION (21).mp3"
+dest_files=["res://.godot/imported/AUTOMATION (21).mp3-15d4eb54988e508adafbd5b1e71ce3c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

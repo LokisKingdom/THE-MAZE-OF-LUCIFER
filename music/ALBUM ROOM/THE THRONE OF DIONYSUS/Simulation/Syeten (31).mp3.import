@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lrn4axmay02h"
+path="res://.godot/imported/Syeten (31).mp3-13a7756dbdd68f505420f287fbe27131.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/Simulation/Syeten (31).mp3"
+dest_files=["res://.godot/imported/Syeten (31).mp3-13a7756dbdd68f505420f287fbe27131.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

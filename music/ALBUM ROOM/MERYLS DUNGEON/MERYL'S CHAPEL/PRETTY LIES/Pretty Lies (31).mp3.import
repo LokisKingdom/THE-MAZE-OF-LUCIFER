@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2q2ep5q8ujnk"
+path="res://.godot/imported/Pretty Lies (31).mp3-24377fc19bad58a665553a1f48f8c94b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/PRETTY LIES/Pretty Lies (31).mp3"
+dest_files=["res://.godot/imported/Pretty Lies (31).mp3-24377fc19bad58a665553a1f48f8c94b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

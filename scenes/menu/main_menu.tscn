@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://egwmklcbbne4"]
+
+[ext_resource type="Script" uid="uid://b4tmgp5id1emm" path="res://scenes/menu/main_menu.gd" id="1_yceb4"]
+[ext_resource type="Theme" uid="uid://kqvjkouj0io8" path="res://assets/ui/main.tres" id="2_1gpnp"]
+[ext_resource type="Script" uid="uid://diw7a4gkr5ad" path="res://src/music_ui.gd" id="3_kiqgm"]
+[ext_resource type="LabelSettings" uid="uid://46kgbyqshu0n" path="res://assets/ui/variants/title_label.tres" id="6_4mhxx"]
+
+[node name="MainMenu" type="Control" unique_id=1733437855]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1gpnp")
+script = ExtResource("1_yceb4")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2066386889]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1438708464]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1380082994]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=574011032]
+layout_mode = 2
+script = ExtResource("3_kiqgm")
+
+[node name="Title" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=748826620]
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+text = "Godot Roguelike Example"
+label_settings = ExtResource("6_4mhxx")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1792608677]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=524628735]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=500732407]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Quit"
+
+[node name="AlbumSelector" type="OptionButton" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=215033346]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CurrentSongSelector" type="OptionButton" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1718925795]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

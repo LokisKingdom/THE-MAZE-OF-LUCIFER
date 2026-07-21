@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2v7ival723qs"
+path="res://.godot/imported/VETOED (1).mp3-ddafd1c6f7455131e4bf5a05fee5afc9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/DIONYSUS' FLUTE/VETOED (1).mp3"
+dest_files=["res://.godot/imported/VETOED (1).mp3-ddafd1c6f7455131e4bf5a05fee5afc9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

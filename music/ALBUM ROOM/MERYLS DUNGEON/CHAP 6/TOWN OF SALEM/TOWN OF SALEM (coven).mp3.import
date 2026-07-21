@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de4l1he4o1mf1"
+path="res://.godot/imported/TOWN OF SALEM (coven).mp3-9bf74438dc8699e8836b7cd5b6062f60.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/TOWN OF SALEM/TOWN OF SALEM (coven).mp3"
+dest_files=["res://.godot/imported/TOWN OF SALEM (coven).mp3-9bf74438dc8699e8836b7cd5b6062f60.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

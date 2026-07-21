@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqquc5kv6qyuv"
+path="res://.godot/imported/EAT THAT CRINGE (15).mp3-0b2ccf4cd9b253361fbd7a09255fe1e6.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S FOUNTAIN GARDEN/EAT THAT CRINGE/EAT THAT CRINGE (15).mp3"
+dest_files=["res://.godot/imported/EAT THAT CRINGE (15).mp3-0b2ccf4cd9b253361fbd7a09255fe1e6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

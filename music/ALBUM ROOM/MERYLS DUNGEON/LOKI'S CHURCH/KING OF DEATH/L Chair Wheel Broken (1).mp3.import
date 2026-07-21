@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bv0utvqf3g31p"
+path="res://.godot/imported/L Chair Wheel Broken (1).mp3-6c178b9ca6bff8877014ff7baaa3cbeb.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/LOKI'S CHURCH/KING OF DEATH/L Chair Wheel Broken (1).mp3"
+dest_files=["res://.godot/imported/L Chair Wheel Broken (1).mp3-6c178b9ca6bff8877014ff7baaa3cbeb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmp8wvu3471ac"
+path="res://.godot/imported/Seed of Ragnarok (47).mp3-da9bb1d1897119d62eec963b3afb1057.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/SEED OF RAGNAROK/Seed of Ragnarok (47).mp3"
+dest_files=["res://.godot/imported/Seed of Ragnarok (47).mp3-da9bb1d1897119d62eec963b3afb1057.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

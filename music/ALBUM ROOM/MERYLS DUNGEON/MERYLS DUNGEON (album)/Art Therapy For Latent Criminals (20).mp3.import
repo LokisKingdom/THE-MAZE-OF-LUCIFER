@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxxoapxjlbui7"
+path="res://.godot/imported/Art Therapy For Latent Criminals (20).mp3-0930fea1f47ce14cef14fe2f8328025e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYLS DUNGEON (album)/Art Therapy For Latent Criminals (20).mp3"
+dest_files=["res://.godot/imported/Art Therapy For Latent Criminals (20).mp3-0930fea1f47ce14cef14fe2f8328025e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

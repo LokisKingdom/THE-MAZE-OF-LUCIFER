@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://daawvnq68hdmn"
+path="res://.godot/imported/A STORY ABOUT A MONSTER FALLING IN LOVE (1).mp3-9518fa43408c497ca52b90da6fe83d05.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/DIONYSUS' FLUTE/A STORY ABOUT A MONSTER FALLING IN LOVE (1).mp3"
+dest_files=["res://.godot/imported/A STORY ABOUT A MONSTER FALLING IN LOVE (1).mp3-9518fa43408c497ca52b90da6fe83d05.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

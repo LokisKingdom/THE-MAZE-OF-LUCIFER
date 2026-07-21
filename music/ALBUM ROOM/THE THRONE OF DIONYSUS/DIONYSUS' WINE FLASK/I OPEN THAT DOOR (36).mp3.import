@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lcqk6w4c6sdw"
+path="res://.godot/imported/I OPEN THAT DOOR (36).mp3-f425a5bc96fa987dd75856d36c8a74b0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/DIONYSUS' WINE FLASK/I OPEN THAT DOOR (36).mp3"
+dest_files=["res://.godot/imported/I OPEN THAT DOOR (36).mp3-f425a5bc96fa987dd75856d36c8a74b0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

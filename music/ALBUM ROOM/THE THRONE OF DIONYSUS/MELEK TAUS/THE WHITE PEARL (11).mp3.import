@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2hx4ud7mw0mk"
+path="res://.godot/imported/THE WHITE PEARL (11).mp3-348e4f260280023e4d4b7b7b638a7fd3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/MELEK TAUS/THE WHITE PEARL (11).mp3"
+dest_files=["res://.godot/imported/THE WHITE PEARL (11).mp3-348e4f260280023e4d4b7b7b638a7fd3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

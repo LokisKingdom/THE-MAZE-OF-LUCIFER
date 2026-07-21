@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de8t313kea5ef"
+path="res://.godot/imported/SIDE B - 3) Meaning Town.mp3-2de21b12f31f1d0a9b52614a303bf10f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/THE DEVIL'S SHADOW (album)/SIDE B - 3) Meaning Town.mp3"
+dest_files=["res://.godot/imported/SIDE B - 3) Meaning Town.mp3-2de21b12f31f1d0a9b52614a303bf10f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

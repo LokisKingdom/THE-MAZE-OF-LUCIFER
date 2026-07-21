@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lalejtubvs0v"
+path="res://.godot/imported/THE SKY IS FALLING!!!! (22).mp3-6b2b51369dd0743b6b3ac749192f7c4d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/THE SKY IS FALLING/THE SKY IS FALLING!!!! (22).mp3"
+dest_files=["res://.godot/imported/THE SKY IS FALLING!!!! (22).mp3-6b2b51369dd0743b6b3ac749192f7c4d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0o0jired7ef1"
+path="res://.godot/imported/The Devil's Advocate (7).mp3-dd1109bd6e95cf62c80ed96b370137a4.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/the devil's advocate/The Devil's Advocate (7).mp3"
+dest_files=["res://.godot/imported/The Devil's Advocate (7).mp3-dd1109bd6e95cf62c80ed96b370137a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

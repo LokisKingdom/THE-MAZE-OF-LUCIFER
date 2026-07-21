@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r7njfefi8k7j"
+path="res://.godot/imported/Cockroach_Jesus.mp3-42063006086c9c23c4c8b6498e5385a2.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S FOUNTAIN GARDEN/COCKROACH JESUS/Cockroach_Jesus.mp3"
+dest_files=["res://.godot/imported/Cockroach_Jesus.mp3-42063006086c9c23c4c8b6498e5385a2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

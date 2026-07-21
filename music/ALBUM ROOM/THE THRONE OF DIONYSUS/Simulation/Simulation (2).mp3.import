@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbw7lhis1scd3"
+path="res://.godot/imported/Simulation (2).mp3-1f9d4e94e37b4a312c866d464f624be0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/Simulation/Simulation (2).mp3"
+dest_files=["res://.godot/imported/Simulation (2).mp3-1f9d4e94e37b4a312c866d464f624be0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

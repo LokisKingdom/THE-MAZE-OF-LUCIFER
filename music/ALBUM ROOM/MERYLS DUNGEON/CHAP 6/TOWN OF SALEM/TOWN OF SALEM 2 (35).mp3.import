@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://din4oflloetkf"
+path="res://.godot/imported/TOWN OF SALEM 2 (35).mp3-ce8073915ae7822d8872b5f885cb25c7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/TOWN OF SALEM/TOWN OF SALEM 2 (35).mp3"
+dest_files=["res://.godot/imported/TOWN OF SALEM 2 (35).mp3-ce8073915ae7822d8872b5f885cb25c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

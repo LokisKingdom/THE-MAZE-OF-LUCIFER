@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://k677w764pws1"
+path="res://.godot/imported/I DANCE ON YOUR GRAVE (41).mp3-76bee0f0442f37fd18bb6d280cc30b2a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/I DANCE ON YOUR GRAVE/I DANCE ON YOUR GRAVE (41).mp3"
+dest_files=["res://.godot/imported/I DANCE ON YOUR GRAVE (41).mp3-76bee0f0442f37fd18bb6d280cc30b2a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

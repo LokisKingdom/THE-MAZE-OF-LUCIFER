@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkx3hiqwr8atj"
+path="res://.godot/imported/CATHEDRAL OF XEEN (6).mp3-a89848c2881c6b3335338130856a5fd7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/LOKI'S CHURCH/CATHEDRAL OF XEEN/CATHEDRAL OF XEEN (6).mp3"
+dest_files=["res://.godot/imported/CATHEDRAL OF XEEN (6).mp3-a89848c2881c6b3335338130856a5fd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqyp78ys4l6op"
+path="res://.godot/imported/KING OF DEATH (34).mp3-69ea5a9f75d778e9f8ea7818b9a5197e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/LOKI'S CHURCH/KING OF DEATH/KING OF DEATH (34).mp3"
+dest_files=["res://.godot/imported/KING OF DEATH (34).mp3-69ea5a9f75d778e9f8ea7818b9a5197e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

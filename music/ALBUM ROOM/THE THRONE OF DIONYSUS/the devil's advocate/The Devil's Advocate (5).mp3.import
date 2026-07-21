@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cevlqrtp8tu01"
+path="res://.godot/imported/The Devil's Advocate (5).mp3-65b42c9e5bf2db5d712a351031f49167.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/the devil's advocate/The Devil's Advocate (5).mp3"
+dest_files=["res://.godot/imported/The Devil's Advocate (5).mp3-65b42c9e5bf2db5d712a351031f49167.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

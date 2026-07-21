@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcrye2ty04cqv"
+path="res://.godot/imported/Capella (6).mp3-271fff008d8a76e5bfaf34a92e0ea9b9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S FOUNTAIN GARDEN/CAPELLA/Capella (6).mp3"
+dest_files=["res://.godot/imported/Capella (6).mp3-271fff008d8a76e5bfaf34a92e0ea9b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

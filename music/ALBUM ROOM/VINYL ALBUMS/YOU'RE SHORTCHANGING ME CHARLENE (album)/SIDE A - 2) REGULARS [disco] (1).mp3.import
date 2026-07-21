@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cej7cqbwlwt2d"
+path="res://.godot/imported/SIDE A - 2) REGULARS [disco] (1).mp3-d8e20c4e5980003c8588c64f00ea02e5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/YOU'RE SHORTCHANGING ME CHARLENE (album)/SIDE A - 2) REGULARS [disco] (1).mp3"
+dest_files=["res://.godot/imported/SIDE A - 2) REGULARS [disco] (1).mp3-d8e20c4e5980003c8588c64f00ea02e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

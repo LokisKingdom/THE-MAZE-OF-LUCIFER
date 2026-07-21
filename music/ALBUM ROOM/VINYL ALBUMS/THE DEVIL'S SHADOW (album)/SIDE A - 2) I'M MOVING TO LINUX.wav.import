@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vwucw6w14knu"
+path="res://.godot/imported/SIDE A - 2) I'M MOVING TO LINUX.wav-f4b3eab8c5b0112be0b316a55df0b82e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/THE DEVIL'S SHADOW (album)/SIDE A - 2) I'M MOVING TO LINUX.wav"
+dest_files=["res://.godot/imported/SIDE A - 2) I'M MOVING TO LINUX.wav-f4b3eab8c5b0112be0b316a55df0b82e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

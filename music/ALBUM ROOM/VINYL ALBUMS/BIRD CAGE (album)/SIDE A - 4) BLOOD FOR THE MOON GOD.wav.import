@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://etp5n2cmsgp5"
+path="res://.godot/imported/SIDE A - 4) BLOOD FOR THE MOON GOD.wav-4433f6a7f1deadb8dd0d1e9a18019386.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/BIRD CAGE (album)/SIDE A - 4) BLOOD FOR THE MOON GOD.wav"
+dest_files=["res://.godot/imported/SIDE A - 4) BLOOD FOR THE MOON GOD.wav-4433f6a7f1deadb8dd0d1e9a18019386.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

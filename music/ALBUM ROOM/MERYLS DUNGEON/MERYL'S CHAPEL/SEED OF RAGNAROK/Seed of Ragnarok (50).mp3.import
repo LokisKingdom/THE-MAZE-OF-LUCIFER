@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nrobwexbdg3f"
+path="res://.godot/imported/Seed of Ragnarok (50).mp3-2acd7edec4b52bb467aabd63880cd144.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/SEED OF RAGNAROK/Seed of Ragnarok (50).mp3"
+dest_files=["res://.godot/imported/Seed of Ragnarok (50).mp3-2acd7edec4b52bb467aabd63880cd144.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

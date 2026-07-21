@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c13wa660jq4in"
+path="res://.godot/imported/SIDE A - 1) GOD'S DEBRIS.wav-ff0f71bd504ef6ab3d4d8e3b0d404bc7.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/THE DEVIL'S SHADOW (album)/SIDE A - 1) GOD'S DEBRIS.wav"
+dest_files=["res://.godot/imported/SIDE A - 1) GOD'S DEBRIS.wav-ff0f71bd504ef6ab3d4d8e3b0d404bc7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

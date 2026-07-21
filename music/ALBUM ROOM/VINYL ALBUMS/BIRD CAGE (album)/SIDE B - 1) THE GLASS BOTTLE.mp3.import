@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmdtg8yp2h0hw"
+path="res://.godot/imported/SIDE B - 1) THE GLASS BOTTLE.mp3-2bb983207ec7b2ed413dd7c40ec0bb0f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/BIRD CAGE (album)/SIDE B - 1) THE GLASS BOTTLE.mp3"
+dest_files=["res://.godot/imported/SIDE B - 1) THE GLASS BOTTLE.mp3-2bb983207ec7b2ed413dd7c40ec0bb0f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

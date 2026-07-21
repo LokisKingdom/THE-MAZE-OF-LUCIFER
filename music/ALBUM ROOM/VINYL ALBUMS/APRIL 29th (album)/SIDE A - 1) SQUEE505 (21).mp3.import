@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ff5bgnn8wx8d"
+path="res://.godot/imported/SIDE A - 1) SQUEE505 (21).mp3-9ed3918d6266fd62b5890bdda6a82a8e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/APRIL 29th (album)/SIDE A - 1) SQUEE505 (21).mp3"
+dest_files=["res://.godot/imported/SIDE A - 1) SQUEE505 (21).mp3-9ed3918d6266fd62b5890bdda6a82a8e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

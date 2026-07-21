@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd1rvrnoq6jf6"
+path="res://.godot/imported/When I could still sleep at night (10).mp3-f2a48e292e66852bed92b7b0e583c30e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/ROURKE/When I could still sleep at night (10).mp3"
+dest_files=["res://.godot/imported/When I could still sleep at night (10).mp3-f2a48e292e66852bed92b7b0e583c30e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

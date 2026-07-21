@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cinyyu7wu0e2m"
+path="res://.godot/imported/Simulacrum (17).mp3-9789cde70f048cbb1ecaf9b80b4a2bec.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/Simulation/Simulacrum (17).mp3"
+dest_files=["res://.godot/imported/Simulacrum (17).mp3-9789cde70f048cbb1ecaf9b80b4a2bec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfna4qbqbak4b"
+path="res://.godot/imported/SIDE B - 3) REGULARS (1).mp3-aaddaa2b5647371e89357fb07a5f0d04.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/YOU'RE SHORTCHANGING ME CHARLENE (album)/SIDE B - 3) REGULARS (1).mp3"
+dest_files=["res://.godot/imported/SIDE B - 3) REGULARS (1).mp3-aaddaa2b5647371e89357fb07a5f0d04.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

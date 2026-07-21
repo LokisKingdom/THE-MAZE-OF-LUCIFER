@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m1tmavpldwoq"
+path="res://.godot/imported/Loki Spake - LOKASENNA - Section 2 (1).mp3-4af4c17d5f2a1388e18de5e109d5a75b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/LOKASENNA/Loki Spake - LOKASENNA - Section 2 (1).mp3"
+dest_files=["res://.godot/imported/Loki Spake - LOKASENNA - Section 2 (1).mp3-4af4c17d5f2a1388e18de5e109d5a75b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

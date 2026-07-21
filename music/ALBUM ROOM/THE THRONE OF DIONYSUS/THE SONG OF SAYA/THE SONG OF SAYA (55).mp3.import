@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b83orxs5cm7sv"
+path="res://.godot/imported/THE SONG OF SAYA (55).mp3-976fd188b456699d3bc4cc2656a39764.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/THE SONG OF SAYA/THE SONG OF SAYA (55).mp3"
+dest_files=["res://.godot/imported/THE SONG OF SAYA (55).mp3-976fd188b456699d3bc4cc2656a39764.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rcxyiveuqt2i"
+path="res://.godot/imported/RISING UP OUT OF THAT SEA (10).mp3-cbb28b94da324f3e2dec8565a0830f1b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/THE SKY IS FALLING/RISING UP OUT OF THAT SEA (10).mp3"
+dest_files=["res://.godot/imported/RISING UP OUT OF THAT SEA (10).mp3-cbb28b94da324f3e2dec8565a0830f1b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bubop6xeulxs6"
+path="res://.godot/imported/THE DOOR IS A JAR (1).mp3-b4314cee2d226a3c96e3263eadeb1e0f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/ROURKE/THE DOOR IS A JAR (1).mp3"
+dest_files=["res://.godot/imported/THE DOOR IS A JAR (1).mp3-b4314cee2d226a3c96e3263eadeb1e0f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

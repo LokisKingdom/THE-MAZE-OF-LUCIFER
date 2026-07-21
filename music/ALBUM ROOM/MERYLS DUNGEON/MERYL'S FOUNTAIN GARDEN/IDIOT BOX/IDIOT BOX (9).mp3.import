@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj5s67fnq6jp5"
+path="res://.godot/imported/IDIOT BOX (9).mp3-3a899e397f34c38c2c965a1d3a7e028f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S FOUNTAIN GARDEN/IDIOT BOX/IDIOT BOX (9).mp3"
+dest_files=["res://.godot/imported/IDIOT BOX (9).mp3-3a899e397f34c38c2c965a1d3a7e028f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

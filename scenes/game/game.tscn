@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://6vgxn7ofs4d"]
+
+[ext_resource type="Script" uid="uid://cuqhbxmt7anku" path="res://scenes/game/game.gd" id="1_kl8r1"]
+[ext_resource type="PackedScene" uid="uid://bfqgm8kk5gfh4" path="res://scenes/ui/hud.tscn" id="3_8gq2p"]
+[ext_resource type="Script" uid="uid://xuwwn6ns1igh" path="res://src/map_renderer.gd" id="3_epo20"]
+[ext_resource type="PackedScene" uid="uid://bfslatuvr4fbb" path="res://scenes/ui/reticle.tscn" id="4_elgt6"]
+[ext_resource type="Script" uid="uid://buect6amyvpau" path="res://src/camera_controller.gd" id="4_jlmnd"]
+[ext_resource type="Script" uid="uid://8wuux8632dos" path="res://scenes/ui/reticle.gd" id="5_hrhsc"]
+[ext_resource type="Material" uid="uid://jtcaw8hmu2ka" path="res://assets/particles/hit_particles.tres" id="8_87uf6"]
+[ext_resource type="Shader" uid="uid://mtyd2u0ryq75" path="res://assets/shaders/hit_vignette.gdshader" id="9_1xlxx"]
+[ext_resource type="Script" uid="uid://diw7a4gkr5ad" path="res://src/music_ui.gd" id="9_2a8rs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4wvt"]
+shader = ExtResource("9_1xlxx")
+shader_parameter/vignette_intensity = 0.0
+shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_rgb = Color(0.69, 0, 0, 1)
+
+[node name="Game" type="Node2D" unique_id=987902482]
+script = ExtResource("1_kl8r1")
+
+[node name="MapRenderer" type="Node2D" parent="." unique_id=318217988]
+unique_name_in_owner = true
+script = ExtResource("3_epo20")
+
+[node name="Actors" type="Node2D" parent="." unique_id=1909686596]
+unique_name_in_owner = true
+
+[node name="Reticle" parent="." unique_id=1658473008 instance=ExtResource("4_elgt6")]
+unique_name_in_owner = true
+script = ExtResource("5_hrhsc")
+
+[node name="CameraController" type="Camera2D" parent="." unique_id=1560749008]
+script = ExtResource("4_jlmnd")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1225986442]
+unique_name_in_owner = true
+
+[node name="HUD" parent="UI" unique_id=1787334475 instance=ExtResource("3_8gq2p")]
+unique_name_in_owner = true
+
+[node name="HitEffect" type="ColorRect" parent="UI" unique_id=229543017]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_c4wvt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.62, 0.187137, 0.1798, 1)
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=1416610235]
+resources = [PackedStringArray("hit_particles"), [ExtResource("8_87uf6")]]
+
+[node name="MusicUI" type="CanvasLayer" parent="." unique_id=1320769607]
+script = ExtResource("9_2a8rs")
+
+[node name="AlbumSelector" type="OptionButton" parent="MusicUI" unique_id=725177820]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 218.0
+offset_top = 7.0
+offset_right = 408.66663
+offset_bottom = 47.0
+grow_horizontal = 2
+scale = Vector2(0.75, 0.75)
+theme_override_font_sizes/font_size = 26
+
+[node name="CurrentSongSelector" type="OptionButton" parent="MusicUI" unique_id=57048455]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 50.0
+offset_right = 20.0
+offset_bottom = 70.0
+grow_horizontal = 2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpmn1qrsybdrg"
+path="res://.godot/imported/Keys of Incorporation (2).mp3-2bac71e22361a945f2bc0b476b753f37.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/SEED OF RAGNAROK/Keys of Incorporation (2).mp3"
+dest_files=["res://.godot/imported/Keys of Incorporation (2).mp3-2bac71e22361a945f2bc0b476b753f37.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

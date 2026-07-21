@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkc2aywv8m4kb"
+path="res://.godot/imported/BLUE (3).mp3-d3b186e4bdb2d6d9e1d02e6a88e5bc2e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/THE THRONE OF DIONYSUS/BLUE/BLUE (3).mp3"
+dest_files=["res://.godot/imported/BLUE (3).mp3-d3b186e4bdb2d6d9e1d02e6a88e5bc2e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbxkmgk6gd0rr"
+path="res://.godot/imported/SIDE B - 2) Lokasenna Section 2 (1) (shortened).mp3-1c2793e10eafd5b75bad4371edaddc0c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/VINYL ALBUMS/APRIL 29th (album)/SIDE B - 2) Lokasenna Section 2 (1) (shortened).mp3"
+dest_files=["res://.godot/imported/SIDE B - 2) Lokasenna Section 2 (1) (shortened).mp3-1c2793e10eafd5b75bad4371edaddc0c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

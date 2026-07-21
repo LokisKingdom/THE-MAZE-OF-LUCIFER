@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ftffuboj4woy"
+path="res://.godot/imported/THE CHICKEN _based on the old legend_ (6).mp3-0dce1ea65cb22e69bc7ae49b667f5553.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/MERYL'S CHAPEL/THE SKY IS FALLING/THE CHICKEN _based on the old legend_ (6).mp3"
+dest_files=["res://.godot/imported/THE CHICKEN _based on the old legend_ (6).mp3-0dce1ea65cb22e69bc7ae49b667f5553.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
