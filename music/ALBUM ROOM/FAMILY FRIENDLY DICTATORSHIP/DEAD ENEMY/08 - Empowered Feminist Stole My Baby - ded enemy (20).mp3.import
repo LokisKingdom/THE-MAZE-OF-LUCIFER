@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gspww0sx3nkv"
+path="res://.godot/imported/08 - Empowered Feminist Stole My Baby - ded enemy (20).mp3-6e4f34818d9b35a1f654fc64ce08d3ed.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/DEAD ENEMY/08 - Empowered Feminist Stole My Baby - ded enemy (20).mp3"
+dest_files=["res://.godot/imported/08 - Empowered Feminist Stole My Baby - ded enemy (20).mp3-6e4f34818d9b35a1f654fc64ce08d3ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

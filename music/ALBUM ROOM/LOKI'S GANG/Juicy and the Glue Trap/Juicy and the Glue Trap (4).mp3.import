@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mi53nlrikvkq"
+path="res://.godot/imported/Juicy and the Glue Trap (4).mp3-fa6a08b1a14c4b71875251595b9dc502.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/Juicy and the Glue Trap/Juicy and the Glue Trap (4).mp3"
+dest_files=["res://.godot/imported/Juicy and the Glue Trap (4).mp3-fa6a08b1a14c4b71875251595b9dc502.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

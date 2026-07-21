@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://craj8ju1yjmb5"
+path="res://.godot/imported/there's no one here but that monster.wav-fbeb8beaf5ab4487f8fb15af2d85f1e8.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/Art Therapy For Latent Criminals/there's no one here but that monster.wav"
+dest_files=["res://.godot/imported/there's no one here but that monster.wav-fbeb8beaf5ab4487f8fb15af2d85f1e8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

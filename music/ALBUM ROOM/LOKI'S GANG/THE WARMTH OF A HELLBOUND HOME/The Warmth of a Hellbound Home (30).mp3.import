@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nd00cg73cwq8"
+path="res://.godot/imported/The Warmth of a Hellbound Home (30).mp3-38383832bf05533b41b051acb48cde4b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/THE WARMTH OF A HELLBOUND HOME/The Warmth of a Hellbound Home (30).mp3"
+dest_files=["res://.godot/imported/The Warmth of a Hellbound Home (30).mp3-38383832bf05533b41b051acb48cde4b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

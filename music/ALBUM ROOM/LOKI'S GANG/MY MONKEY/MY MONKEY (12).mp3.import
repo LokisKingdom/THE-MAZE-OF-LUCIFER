@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpl6qw4c3rxvr"
+path="res://.godot/imported/MY MONKEY (12).mp3-bc12e44bcc9ae6f33aab69204501dea6.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/MY MONKEY/MY MONKEY (12).mp3"
+dest_files=["res://.godot/imported/MY MONKEY (12).mp3-bc12e44bcc9ae6f33aab69204501dea6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq6lax2tuht2a"
+path="res://.godot/imported/06 - Loki - The lamb who spake as a dragon (2).mp3-4dc470981f1ac2112061b733f267fba1.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/FREE US FROM FASCISM/06 - Loki - The lamb who spake as a dragon (2).mp3"
+dest_files=["res://.godot/imported/06 - Loki - The lamb who spake as a dragon (2).mp3-4dc470981f1ac2112061b733f267fba1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

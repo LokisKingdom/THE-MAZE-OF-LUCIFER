@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvw2gqs8saj8x"
+path="res://.godot/imported/Injections (3).mp3-cfcf50ac5562fc037539128d3a92c325.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/LEVEL 1/DOLLARSVILLE/Injections (3).mp3"
+dest_files=["res://.godot/imported/Injections (3).mp3-cfcf50ac5562fc037539128d3a92c325.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

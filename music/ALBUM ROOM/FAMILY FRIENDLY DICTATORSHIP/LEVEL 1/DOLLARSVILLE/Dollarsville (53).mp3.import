@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://conyw55lt1bim"
+path="res://.godot/imported/Dollarsville (53).mp3-34a3138c67698bac5d555d00375dfec5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/LEVEL 1/DOLLARSVILLE/Dollarsville (53).mp3"
+dest_files=["res://.godot/imported/Dollarsville (53).mp3-34a3138c67698bac5d555d00375dfec5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

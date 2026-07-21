@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ts0ui6o8137p"
+path="res://.godot/imported/HRTO File No. 2026-67265-1 – Regarding a clarification – Brendan S. Rose.mp3-d55ff6ecb97c950f58c55b0e0b1a749a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LEGAL/HRTO File No. 2026-67265-1 – Regarding a clarification – Brendan S. Rose.mp3"
+dest_files=["res://.godot/imported/HRTO File No. 2026-67265-1 – Regarding a clarification – Brendan S. Rose.mp3-d55ff6ecb97c950f58c55b0e0b1a749a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

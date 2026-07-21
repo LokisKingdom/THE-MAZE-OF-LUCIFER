@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwi51grxyart5"
+path="res://.godot/imported/HE WAS FOUND WANTING (00).mp3-c8b8f8c11a6a9f10f3da21e528dc0c5a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/THE TOWER OF THE MOON/HE WAS FOUND WANTING (00).mp3"
+dest_files=["res://.godot/imported/HE WAS FOUND WANTING (00).mp3-c8b8f8c11a6a9f10f3da21e528dc0c5a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bs11llvrsl4te"
+path="res://.godot/imported/ONLY GOD ONLY KNOWS (26).mp3-993cd16980bb98d814204ca85b57f903.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/ONLY GOD ONLY KNOWS/ONLY GOD ONLY KNOWS (26).mp3"
+dest_files=["res://.godot/imported/ONLY GOD ONLY KNOWS (26).mp3-993cd16980bb98d814204ca85b57f903.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

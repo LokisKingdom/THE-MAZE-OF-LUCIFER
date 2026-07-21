@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7b58inrp1283"
+path="res://.godot/imported/LOKI AND THE WINE JUG (34).mp3-f2022a830b73ad85b95ac533daee348d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/LOKI AND THE WINE JUG/LOKI AND THE WINE JUG (34).mp3"
+dest_files=["res://.godot/imported/LOKI AND THE WINE JUG (34).mp3-f2022a830b73ad85b95ac533daee348d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

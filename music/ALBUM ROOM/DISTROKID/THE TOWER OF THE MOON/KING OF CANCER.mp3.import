@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp76nibmpxao4"
+path="res://.godot/imported/KING OF CANCER.mp3-9b650e4cfe7394987a55311daa2b392a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/THE TOWER OF THE MOON/KING OF CANCER.mp3"
+dest_files=["res://.godot/imported/KING OF CANCER.mp3-9b650e4cfe7394987a55311daa2b392a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

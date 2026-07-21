@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm41jkc2mfalj"
+path="res://.godot/imported/HRTO File No. 2026-67265-1 – Request to Amend Add Respondent - Brendan S. Rose.mp3-fc0eb6f29befd5c214502fec0cc9c3f0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LEGAL/HRTO File No. 2026-67265-1 – Request to Amend Add Respondent - Brendan S. Rose.mp3"
+dest_files=["res://.godot/imported/HRTO File No. 2026-67265-1 – Request to Amend Add Respondent - Brendan S. Rose.mp3-fc0eb6f29befd5c214502fec0cc9c3f0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

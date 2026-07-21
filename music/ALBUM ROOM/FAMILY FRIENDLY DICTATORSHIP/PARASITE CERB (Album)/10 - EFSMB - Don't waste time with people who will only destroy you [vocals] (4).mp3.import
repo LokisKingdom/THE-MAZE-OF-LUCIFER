@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnyvsqiol4hql"
+path="res://.godot/imported/10 - EFSMB - Don't waste time with people who will only destroy you [vocals] (4).mp3-b4239f0544d7bbd815a6adbcc08eccb3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/PARASITE CERB (Album)/10 - EFSMB - Don't waste time with people who will only destroy you [vocals] (4).mp3"
+dest_files=["res://.godot/imported/10 - EFSMB - Don't waste time with people who will only destroy you [vocals] (4).mp3-b4239f0544d7bbd815a6adbcc08eccb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

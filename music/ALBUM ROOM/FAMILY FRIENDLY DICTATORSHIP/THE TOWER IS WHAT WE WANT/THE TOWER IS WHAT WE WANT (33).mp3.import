@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brke727ese3ui"
+path="res://.godot/imported/THE TOWER IS WHAT WE WANT (33).mp3-b30a98d2ac98ea9a1c333970c0c9f72b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/THE TOWER IS WHAT WE WANT/THE TOWER IS WHAT WE WANT (33).mp3"
+dest_files=["res://.godot/imported/THE TOWER IS WHAT WE WANT (33).mp3-b30a98d2ac98ea9a1c333970c0c9f72b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

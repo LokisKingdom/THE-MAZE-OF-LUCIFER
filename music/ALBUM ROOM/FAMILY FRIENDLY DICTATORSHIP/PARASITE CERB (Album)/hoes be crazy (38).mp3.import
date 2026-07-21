@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bri6k51okfm4v"
+path="res://.godot/imported/hoes be crazy (38).mp3-3bb4dce69668fd6e1f7a3bddb4a5849f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/PARASITE CERB (Album)/hoes be crazy (38).mp3"
+dest_files=["res://.godot/imported/hoes be crazy (38).mp3-3bb4dce69668fd6e1f7a3bddb4a5849f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

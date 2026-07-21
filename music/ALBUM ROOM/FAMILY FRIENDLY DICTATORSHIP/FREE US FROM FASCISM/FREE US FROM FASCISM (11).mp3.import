@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca4eunoxs7qiy"
+path="res://.godot/imported/FREE US FROM FASCISM (11).mp3-0b8bcbafe4c56286ca7f7da25e986421.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/FREE US FROM FASCISM/FREE US FROM FASCISM (11).mp3"
+dest_files=["res://.godot/imported/FREE US FROM FASCISM (11).mp3-0b8bcbafe4c56286ca7f7da25e986421.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

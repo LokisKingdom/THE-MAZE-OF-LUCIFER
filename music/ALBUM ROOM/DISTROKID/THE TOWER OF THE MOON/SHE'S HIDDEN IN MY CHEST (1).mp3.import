@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://batvc4tu2x00y"
+path="res://.godot/imported/SHE'S HIDDEN IN MY CHEST (1).mp3-3cd0c85165d4790ab46bdca7f88f291e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/THE TOWER OF THE MOON/SHE'S HIDDEN IN MY CHEST (1).mp3"
+dest_files=["res://.godot/imported/SHE'S HIDDEN IN MY CHEST (1).mp3-3cd0c85165d4790ab46bdca7f88f291e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

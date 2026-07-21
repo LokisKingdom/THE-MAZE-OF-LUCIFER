@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsf04pg5xvmsa"
+path="res://.godot/imported/NO ANGEL (7).mp3-c1ecca935bf4a8166ead7c1d4c912ec3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/NO ANGEL/NO ANGEL (7).mp3"
+dest_files=["res://.godot/imported/NO ANGEL (7).mp3-c1ecca935bf4a8166ead7c1d4c912ec3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

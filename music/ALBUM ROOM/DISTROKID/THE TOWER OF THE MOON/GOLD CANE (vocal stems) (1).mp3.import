@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8c23ah4jk3e8"
+path="res://.godot/imported/GOLD CANE (vocal stems) (1).mp3-308996a1e9473a3dfdfd6496801cbc6a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/THE TOWER OF THE MOON/GOLD CANE (vocal stems) (1).mp3"
+dest_files=["res://.godot/imported/GOLD CANE (vocal stems) (1).mp3-308996a1e9473a3dfdfd6496801cbc6a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

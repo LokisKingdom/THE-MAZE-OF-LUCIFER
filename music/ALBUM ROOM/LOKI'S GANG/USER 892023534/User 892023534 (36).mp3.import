@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ewnt7iiadp0j"
+path="res://.godot/imported/User 892023534 (36).mp3-7fa2f8280ff41e02bc59547d65611e12.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/USER 892023534/User 892023534 (36).mp3"
+dest_files=["res://.godot/imported/User 892023534 (36).mp3-7fa2f8280ff41e02bc59547d65611e12.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

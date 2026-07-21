@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjv5cn4f763i4"
+path="res://.godot/imported/MY FRIENDS ARE IN THE WATER (28).mp3-4632a6ae059a4bdd2e075e776e83f154.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/MY FRIENDS ARE IN THE WATER/MY FRIENDS ARE IN THE WATER (28).mp3"
+dest_files=["res://.godot/imported/MY FRIENDS ARE IN THE WATER (28).mp3-4632a6ae059a4bdd2e075e776e83f154.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

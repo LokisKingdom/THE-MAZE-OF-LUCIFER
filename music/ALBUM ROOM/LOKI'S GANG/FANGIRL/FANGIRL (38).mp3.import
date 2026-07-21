@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkcva6ecijr0g"
+path="res://.godot/imported/FANGIRL (38).mp3-02fb2de18623df76da4595fc6259f821.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/FANGIRL/FANGIRL (38).mp3"
+dest_files=["res://.godot/imported/FANGIRL (38).mp3-02fb2de18623df76da4595fc6259f821.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

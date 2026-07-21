@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://civ038avresla"
+path="res://.godot/imported/18 (8).mp3-34567d5621d771e7495c8897e95645f8.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/FAMILY FRIENDLY DICTATORSHIP/LEVEL 1/DOLLARSVILLE/18 (8).mp3"
+dest_files=["res://.godot/imported/18 (8).mp3-34567d5621d771e7495c8897e95645f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

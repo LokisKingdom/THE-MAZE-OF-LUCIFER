@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bs6rtihpawkji"
+path="res://.godot/imported/SAY HELLO TO THE MOONLIGHT.wav-6319f39a7e7ea8c6b7f01d756d53fcfa.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/THE TOWER OF THE MOON/SAY HELLO TO THE MOONLIGHT.wav"
+dest_files=["res://.godot/imported/SAY HELLO TO THE MOONLIGHT.wav-6319f39a7e7ea8c6b7f01d756d53fcfa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

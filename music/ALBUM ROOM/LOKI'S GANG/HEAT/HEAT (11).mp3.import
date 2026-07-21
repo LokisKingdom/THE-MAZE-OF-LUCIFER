@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx1qyt56tswxy"
+path="res://.godot/imported/HEAT (11).mp3-003eb8610fc4c418eb629db4a31ed214.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/HEAT/HEAT (11).mp3"
+dest_files=["res://.godot/imported/HEAT (11).mp3-003eb8610fc4c418eb629db4a31ed214.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://by0lk70utcya6"
+path="res://.godot/imported/MEDIUM RED HOOD (23).mp3-32d6c3bb6910eefb95b8297cbed9ba23.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/MEDIUM RED HOOD/MEDIUM RED HOOD (23).mp3"
+dest_files=["res://.godot/imported/MEDIUM RED HOOD (23).mp3-32d6c3bb6910eefb95b8297cbed9ba23.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o0hk3hvvmpq"
+path="res://.godot/imported/REEFER MADNESS (9).mp3-4909074fa1a03de576bb5d5337b6aa4c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/REEFER MADNESS/REEFER MADNESS (9).mp3"
+dest_files=["res://.godot/imported/REEFER MADNESS (9).mp3-4909074fa1a03de576bb5d5337b6aa4c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

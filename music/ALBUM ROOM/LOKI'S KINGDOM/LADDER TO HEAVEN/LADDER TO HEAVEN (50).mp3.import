@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhvei70y8rgrg"
+path="res://.godot/imported/LADDER TO HEAVEN (50).mp3-8ab5a2d3698c42c70841cdb00846ebe0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/LADDER TO HEAVEN/LADDER TO HEAVEN (50).mp3"
+dest_files=["res://.godot/imported/LADDER TO HEAVEN (50).mp3-8ab5a2d3698c42c70841cdb00846ebe0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

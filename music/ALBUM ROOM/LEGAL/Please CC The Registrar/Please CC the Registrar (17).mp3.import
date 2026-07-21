@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://347flag63884"
+path="res://.godot/imported/Please CC the Registrar (17).mp3-65945d1d47d65098430283b67870bd81.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LEGAL/Please CC The Registrar/Please CC the Registrar (17).mp3"
+dest_files=["res://.godot/imported/Please CC the Registrar (17).mp3-65945d1d47d65098430283b67870bd81.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cf3lp65qroj4n"
+path="res://.godot/imported/WRITTEN SUBMISSIONS OF THE APPLICANT.mp3-7fd67887ee20e6c74f90ff14de2250d7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LEGAL/WRITTEN SUBMISSIONS OF THE APPLICANT.mp3"
+dest_files=["res://.godot/imported/WRITTEN SUBMISSIONS OF THE APPLICANT.mp3-7fd67887ee20e6c74f90ff14de2250d7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

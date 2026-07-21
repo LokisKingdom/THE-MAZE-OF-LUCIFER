@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bw0vkifafe6ft"
+path="res://.godot/imported/Sligs Workday (0).mp3-ff18e0f86e7a4b4103b03b351db3298b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/DISTROKID/Art Therapy For Latent Criminals/Sligs Workday (0).mp3"
+dest_files=["res://.godot/imported/Sligs Workday (0).mp3-ff18e0f86e7a4b4103b03b351db3298b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ck6ol7c5fiybo"
+path="res://.godot/imported/Garbage on the Streets of Brussels (22).mp3-0bd98a9e7bfed6fab36835f6c78d7464.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S GANG/Garbage on the Streets of Brussels/Garbage on the Streets of Brussels (22).mp3"
+dest_files=["res://.godot/imported/Garbage on the Streets of Brussels (22).mp3-0bd98a9e7bfed6fab36835f6c78d7464.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbykg0u7p67cg"
+path="res://.godot/imported/DEFEAT THE NOID (8).mp3-de8ea709d05ac8391c927c1f493df0a9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LEGAL/DEFEAT THE NOID/DEFEAT THE NOID (8).mp3"
+dest_files=["res://.godot/imported/DEFEAT THE NOID (8).mp3-de8ea709d05ac8391c927c1f493df0a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
