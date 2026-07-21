@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmwoqpxbu3aqd"
+path="res://.godot/imported/and if you can't fly.wav-f8028200ec97fe5397bb3ab7d23f55e0.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/and if you can't fly.wav"
+dest_files=["res://.godot/imported/and if you can't fly.wav-f8028200ec97fe5397bb3ab7d23f55e0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

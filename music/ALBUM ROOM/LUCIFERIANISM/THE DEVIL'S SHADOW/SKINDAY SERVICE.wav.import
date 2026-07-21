@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnnb20sp2bn5d"
+path="res://.godot/imported/SKINDAY SERVICE.wav-4f525440bbae798a6710b37b77bfed16.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THE DEVIL'S SHADOW/SKINDAY SERVICE.wav"
+dest_files=["res://.godot/imported/SKINDAY SERVICE.wav-4f525440bbae798a6710b37b77bfed16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d304tdhbhp6k0"
+path="res://.godot/imported/MOONLIGHT MOON.wav-1090e7dff85de92e06ec9ce34c4aaefe.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/MOONLIGHT MOON.wav"
+dest_files=["res://.godot/imported/MOONLIGHT MOON.wav-1090e7dff85de92e06ec9ce34c4aaefe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

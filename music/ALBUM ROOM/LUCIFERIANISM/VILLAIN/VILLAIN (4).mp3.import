@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://biybg5mvy3u1i"
+path="res://.godot/imported/VILLAIN (4).mp3-1d31a9fdb92b25165611141412827fb3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/VILLAIN/VILLAIN (4).mp3"
+dest_files=["res://.godot/imported/VILLAIN (4).mp3-1d31a9fdb92b25165611141412827fb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

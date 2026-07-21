@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://40q6ey02066o"
+path="res://.godot/imported/Can I not sink you in deeper like this_.mp3-899e9d320cccba47c672a5bf1d816c36.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/MAX/Can I not sink you in deeper like this_.mp3"
+dest_files=["res://.godot/imported/Can I not sink you in deeper like this_.mp3-899e9d320cccba47c672a5bf1d816c36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

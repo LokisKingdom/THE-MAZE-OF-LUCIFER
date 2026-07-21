@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cygr2820pe5ot"
+path="res://.godot/imported/グリーン・キャンディー - スメック・ミー・トゥ・ザ・ゼヌ・ディメンション (33).mp3-fddd4d671897ff4908698e05ad98ab98.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/グリーン・キャンディー - スメック・ミー・トゥ・ザ・ゼヌ・ディメンション/グリーン・キャンディー - スメック・ミー・トゥ・ザ・ゼヌ・ディメンション (33).mp3"
+dest_files=["res://.godot/imported/グリーン・キャンディー - スメック・ミー・トゥ・ザ・ゼヌ・ディメンション (33).mp3-fddd4d671897ff4908698e05ad98ab98.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

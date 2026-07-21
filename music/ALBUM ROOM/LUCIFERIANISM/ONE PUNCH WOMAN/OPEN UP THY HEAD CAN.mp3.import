@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvmm23lxn2fwq"
+path="res://.godot/imported/OPEN UP THY HEAD CAN.mp3-a47d7442a1c25eae4f9c3487d2382aeb.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ONE PUNCH WOMAN/OPEN UP THY HEAD CAN.mp3"
+dest_files=["res://.godot/imported/OPEN UP THY HEAD CAN.mp3-a47d7442a1c25eae4f9c3487d2382aeb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

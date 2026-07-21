@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh01a6ysj3310"
+path="res://.godot/imported/a pair of cuffs poorer.wav-c854da96e6eb6589c4677433ca42a1fe.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/a pair of cuffs poorer.wav"
+dest_files=["res://.godot/imported/a pair of cuffs poorer.wav-c854da96e6eb6589c4677433ca42a1fe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpo75xp6kalms"
+path="res://.godot/imported/LUCIFER MEDIA CORPORATION (47).mp3-b1041f0c5ec09dc6d3e6260f337c2ea9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/LUCIFER MEDIA CORPORATION/LUCIFER MEDIA CORPORATION (47).mp3"
+dest_files=["res://.godot/imported/LUCIFER MEDIA CORPORATION (47).mp3-b1041f0c5ec09dc6d3e6260f337c2ea9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

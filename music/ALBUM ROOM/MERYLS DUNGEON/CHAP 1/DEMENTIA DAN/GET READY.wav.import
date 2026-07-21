@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8gag1gobrhbs"
+path="res://.godot/imported/GET READY.wav-640e06fbdae6a54f0b3d12cb10b8f79e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/GET READY.wav"
+dest_files=["res://.godot/imported/GET READY.wav-640e06fbdae6a54f0b3d12cb10b8f79e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

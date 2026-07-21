@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4frbj01sguxa"
+path="res://.godot/imported/AND WHEN THEY REACH THE SUMMIT (1).wav-fd99b303e9b179425efe8a2280d5462d.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SIMULATION THEORY/AND WHEN THEY REACH THE SUMMIT (1).wav"
+dest_files=["res://.godot/imported/AND WHEN THEY REACH THE SUMMIT (1).wav-fd99b303e9b179425efe8a2280d5462d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://da5utkbeck3bs"
+path="res://.godot/imported/GOD'S SIREN SHOUTS.wav-5d498ebecab6ab3c48ed295e7be1f4da.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/GOD'S SIREN SHOUTS.wav"
+dest_files=["res://.godot/imported/GOD'S SIREN SHOUTS.wav-5d498ebecab6ab3c48ed295e7be1f4da.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

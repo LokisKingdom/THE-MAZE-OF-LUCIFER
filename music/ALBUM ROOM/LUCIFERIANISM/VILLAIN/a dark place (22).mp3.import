@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ck6w7heh67b8e"
+path="res://.godot/imported/a dark place (22).mp3-abcd76a0a194405483f94c2aecfac02a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/VILLAIN/a dark place (22).mp3"
+dest_files=["res://.godot/imported/a dark place (22).mp3-abcd76a0a194405483f94c2aecfac02a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

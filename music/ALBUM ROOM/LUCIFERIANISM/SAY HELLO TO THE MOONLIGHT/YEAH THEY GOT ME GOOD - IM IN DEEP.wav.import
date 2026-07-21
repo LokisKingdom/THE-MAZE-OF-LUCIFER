@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cg30t4tshk1sh"
+path="res://.godot/imported/YEAH THEY GOT ME GOOD - IM IN DEEP.wav-cf04433a5c42da764d7d2b03735443a9.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/YEAH THEY GOT ME GOOD - IM IN DEEP.wav"
+dest_files=["res://.godot/imported/YEAH THEY GOT ME GOOD - IM IN DEEP.wav-cf04433a5c42da764d7d2b03735443a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

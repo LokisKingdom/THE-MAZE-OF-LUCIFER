@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7qt4u555poxm"
+path="res://.godot/imported/EMPOWERED GIRL (33).mp3-a45520b734cf1986acaca61d93489500.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/VILLAIN/EMPOWERED GIRL (33).mp3"
+dest_files=["res://.godot/imported/EMPOWERED GIRL (33).mp3-a45520b734cf1986acaca61d93489500.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

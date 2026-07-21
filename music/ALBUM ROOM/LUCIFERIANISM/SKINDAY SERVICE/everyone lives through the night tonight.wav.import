@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqp8ep3swtvg7"
+path="res://.godot/imported/everyone lives through the night tonight.wav-0851d8a4db8de94ad27d30309ba159d1.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/everyone lives through the night tonight.wav"
+dest_files=["res://.godot/imported/everyone lives through the night tonight.wav-0851d8a4db8de94ad27d30309ba159d1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

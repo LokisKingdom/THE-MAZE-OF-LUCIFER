@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk5dwi6nb7rm7"
+path="res://.godot/imported/i try to put an array of meanings into everything.wav-ce358bacf47c88c3c741de31cb505ac4.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/i try to put an array of meanings into everything.wav"
+dest_files=["res://.godot/imported/i try to put an array of meanings into everything.wav-ce358bacf47c88c3c741de31cb505ac4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

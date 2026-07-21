@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://daghcr2urdhxd"
+path="res://.godot/imported/THE SHADOWS ON THE CAVES WALLS (2).wav-fa60d21f5e4f07afa1c958df679b5f49.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SIMULATION THEORY/THE SHADOWS ON THE CAVES WALLS (2).wav"
+dest_files=["res://.godot/imported/THE SHADOWS ON THE CAVES WALLS (2).wav-fa60d21f5e4f07afa1c958df679b5f49.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

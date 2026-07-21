@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfdie0tb5jami"
+path="res://.godot/imported/DEMENTIA DAN IS ARMED TO THE TEETH.wav-b4aed2e9fb016a79856e9947ae6a01b4.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/DEMENTIA DAN IS ARMED TO THE TEETH.wav"
+dest_files=["res://.godot/imported/DEMENTIA DAN IS ARMED TO THE TEETH.wav-b4aed2e9fb016a79856e9947ae6a01b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj3q0nsvponda"
+path="res://.godot/imported/SAY YOU'LL GO TO THE GOODNIGHT.mp3-6496255f2f5f1e6010ed303ae88c290b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/SAY YOU'LL GO TO THE GOODNIGHT.mp3"
+dest_files=["res://.godot/imported/SAY YOU'LL GO TO THE GOODNIGHT.mp3-6496255f2f5f1e6010ed303ae88c290b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

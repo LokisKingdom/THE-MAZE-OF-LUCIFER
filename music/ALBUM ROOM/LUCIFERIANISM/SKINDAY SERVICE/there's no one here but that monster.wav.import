@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0ik0n7nds4il"
+path="res://.godot/imported/there's no one here but that monster.wav-7d24202cb90bfca9005a4c2280ce0112.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/there's no one here but that monster.wav"
+dest_files=["res://.godot/imported/there's no one here but that monster.wav-7d24202cb90bfca9005a4c2280ce0112.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbatc32rulaq2"
+path="res://.godot/imported/IN THIS CITY, THAT MEANS SOMETHING.wav-3b56fdcc6b5408bbd9ab2bd3383e471a.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/IN THIS CITY, THAT MEANS SOMETHING.wav"
+dest_files=["res://.godot/imported/IN THIS CITY, THAT MEANS SOMETHING.wav-3b56fdcc6b5408bbd9ab2bd3383e471a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

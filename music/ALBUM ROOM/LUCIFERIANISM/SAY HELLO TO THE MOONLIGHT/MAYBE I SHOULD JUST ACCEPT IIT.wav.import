@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwuv3p5vyyyr5"
+path="res://.godot/imported/MAYBE I SHOULD JUST ACCEPT IIT.wav-995f70a9c1d8f6551433acaad34628e1.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/MAYBE I SHOULD JUST ACCEPT IIT.wav"
+dest_files=["res://.godot/imported/MAYBE I SHOULD JUST ACCEPT IIT.wav-995f70a9c1d8f6551433acaad34628e1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

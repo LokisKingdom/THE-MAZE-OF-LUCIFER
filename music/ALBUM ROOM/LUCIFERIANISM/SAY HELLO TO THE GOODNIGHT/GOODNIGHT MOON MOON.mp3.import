@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db0qefuqm2k60"
+path="res://.godot/imported/GOODNIGHT MOON MOON.mp3-2b1ec66419ba30a511b43fba9a29647e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/GOODNIGHT MOON MOON.mp3"
+dest_files=["res://.godot/imported/GOODNIGHT MOON MOON.mp3-2b1ec66419ba30a511b43fba9a29647e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

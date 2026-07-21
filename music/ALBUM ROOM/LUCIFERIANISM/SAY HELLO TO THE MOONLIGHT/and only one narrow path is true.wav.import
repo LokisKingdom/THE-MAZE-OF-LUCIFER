@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ca01xt3hhl6ax"
+path="res://.godot/imported/and only one narrow path is true.wav-322cfc164a62db5640e16eab60ac6f86.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/and only one narrow path is true.wav"
+dest_files=["res://.godot/imported/and only one narrow path is true.wav-322cfc164a62db5640e16eab60ac6f86.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

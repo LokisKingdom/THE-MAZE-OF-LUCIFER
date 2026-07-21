@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boh6cbo75t0j"
+path="res://.godot/imported/HERO OF LEGEND (3).mp3-690e508e931346659656e3f63d8b0f29.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/CLOUD YELLS AT OLD MAN/HERO OF LEGEND (3).mp3"
+dest_files=["res://.godot/imported/HERO OF LEGEND (3).mp3-690e508e931346659656e3f63d8b0f29.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

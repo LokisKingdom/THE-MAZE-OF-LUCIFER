@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ghsqs48auoxb"
+path="res://.godot/imported/Qualis Artifex Pereo (40).mp3-bf14d5d6e5f9fb436e8a188632e043c5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/Qualis Artifex Pereo/Qualis Artifex Pereo (40).mp3"
+dest_files=["res://.godot/imported/Qualis Artifex Pereo (40).mp3-bf14d5d6e5f9fb436e8a188632e043c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

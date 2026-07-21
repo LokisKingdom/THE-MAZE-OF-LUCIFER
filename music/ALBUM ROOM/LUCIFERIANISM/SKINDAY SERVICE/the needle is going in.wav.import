@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://rol4skp3tgte"
+path="res://.godot/imported/the needle is going in.wav-884bffb9367f451f3d3f2ae6dd925279.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/the needle is going in.wav"
+dest_files=["res://.godot/imported/the needle is going in.wav-884bffb9367f451f3d3f2ae6dd925279.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

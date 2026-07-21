@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj71l5twpfxxj"
+path="res://.godot/imported/Letter to Kiwi.mp3-04f84a4bbb9066c7b1f41865f48bec9d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/MAX/Letter to Kiwi.mp3"
+dest_files=["res://.godot/imported/Letter to Kiwi.mp3-04f84a4bbb9066c7b1f41865f48bec9d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dh4m4g84hv0sk"
+path="res://.godot/imported/CLOUD DESTROYS THE WORLD - DATES YUFFIE (8).mp3-d30725c35f4b4e4dda9b12e993119460.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/CLOUD YELLS AT OLD MAN/CLOUD DESTROYS THE WORLD - DATES YUFFIE (8).mp3"
+dest_files=["res://.godot/imported/CLOUD DESTROYS THE WORLD - DATES YUFFIE (8).mp3-d30725c35f4b4e4dda9b12e993119460.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

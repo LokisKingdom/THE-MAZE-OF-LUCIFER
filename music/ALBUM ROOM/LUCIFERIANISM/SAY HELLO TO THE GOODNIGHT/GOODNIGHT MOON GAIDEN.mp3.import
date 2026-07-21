@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0peiqulr472w"
+path="res://.godot/imported/GOODNIGHT MOON GAIDEN.mp3-b0da90e96d9030721790b4ba4fe15780.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/GOODNIGHT MOON GAIDEN.mp3"
+dest_files=["res://.godot/imported/GOODNIGHT MOON GAIDEN.mp3-b0da90e96d9030721790b4ba4fe15780.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

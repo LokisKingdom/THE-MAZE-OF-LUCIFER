@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dyokqxjnxiy2i"
+path="res://.godot/imported/The Male Inference (1).wav-bd5c3a5c4d4d6063f23de255bad5ce52.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/The Male Inference (1).wav"
+dest_files=["res://.godot/imported/The Male Inference (1).wav-bd5c3a5c4d4d6063f23de255bad5ce52.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

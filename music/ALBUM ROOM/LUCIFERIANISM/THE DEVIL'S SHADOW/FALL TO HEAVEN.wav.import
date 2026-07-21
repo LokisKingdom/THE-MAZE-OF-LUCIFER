@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddtd8b4jw2dd7"
+path="res://.godot/imported/FALL TO HEAVEN.wav-9ae40eb5b1d8cb2ae33bcadcb03244ea.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THE DEVIL'S SHADOW/FALL TO HEAVEN.wav"
+dest_files=["res://.godot/imported/FALL TO HEAVEN.wav-9ae40eb5b1d8cb2ae33bcadcb03244ea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

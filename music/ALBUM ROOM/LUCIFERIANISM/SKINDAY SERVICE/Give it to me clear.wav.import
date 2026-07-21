@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bghhml6hgcwwd"
+path="res://.godot/imported/Give it to me clear.wav-2d645c71f1956bc61646e2150f5f46b9.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/Give it to me clear.wav"
+dest_files=["res://.godot/imported/Give it to me clear.wav-2d645c71f1956bc61646e2150f5f46b9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

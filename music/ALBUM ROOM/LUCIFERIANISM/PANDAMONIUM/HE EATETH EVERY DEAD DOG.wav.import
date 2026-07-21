@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd2t1mfmksk62"
+path="res://.godot/imported/HE EATETH EVERY DEAD DOG.wav-7d14c69e9b27172f7c9cccd84ba58be7.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/PANDAMONIUM/HE EATETH EVERY DEAD DOG.wav"
+dest_files=["res://.godot/imported/HE EATETH EVERY DEAD DOG.wav-7d14c69e9b27172f7c9cccd84ba58be7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

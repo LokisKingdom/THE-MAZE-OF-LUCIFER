@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8pucho84ufgb"
+path="res://.godot/imported/THE GARBAGE CAN IS WATCHING ME.wav-20828257c4f266628cbeb323c2f0439e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/I'M MOVING TO LINUX/THE GARBAGE CAN IS WATCHING ME.wav"
+dest_files=["res://.godot/imported/THE GARBAGE CAN IS WATCHING ME.wav-20828257c4f266628cbeb323c2f0439e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

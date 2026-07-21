@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://tiqlv2c6jp4x"
+path="res://.godot/imported/THEY FEAR TO PROSECUTE HIM.wav-f6ec38144a2b2db2d6a2f6807498fc54.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/THEY FEAR TO PROSECUTE HIM.wav"
+dest_files=["res://.godot/imported/THEY FEAR TO PROSECUTE HIM.wav-f6ec38144a2b2db2d6a2f6807498fc54.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

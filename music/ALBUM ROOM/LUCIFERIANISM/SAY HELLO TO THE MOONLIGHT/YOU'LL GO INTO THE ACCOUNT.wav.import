@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqkahu62dlvih"
+path="res://.godot/imported/YOU'LL GO INTO THE ACCOUNT.wav-c54b884335220e02cd7da6b185d3daf9.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/YOU'LL GO INTO THE ACCOUNT.wav"
+dest_files=["res://.godot/imported/YOU'LL GO INTO THE ACCOUNT.wav-c54b884335220e02cd7da6b185d3daf9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bivars54gdsmb"
+path="res://.godot/imported/GROK HER IN A BIKINI (5).mp3-42e90169d0b19705975efc38039d9885.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/GROK PUT HER IN A BIKINI/GROK HER IN A BIKINI (5).mp3"
+dest_files=["res://.godot/imported/GROK HER IN A BIKINI (5).mp3-42e90169d0b19705975efc38039d9885.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xrbk0ubjf0h0"
+path="res://.godot/imported/SAY HELLLO TO THE MOOONLIGHT.mp3-772b3740ca36c703d35de8f8f20572e8.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/SAY HELLLO TO THE MOOONLIGHT.mp3"
+dest_files=["res://.godot/imported/SAY HELLLO TO THE MOOONLIGHT.mp3-772b3740ca36c703d35de8f8f20572e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

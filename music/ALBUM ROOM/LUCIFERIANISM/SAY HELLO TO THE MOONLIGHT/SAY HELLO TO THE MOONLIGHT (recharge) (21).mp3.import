@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvf4thr86uysx"
+path="res://.godot/imported/SAY HELLO TO THE MOONLIGHT (recharge) (21).mp3-4084cb4a7a9a9b94c6cab2d5811ef492.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/SAY HELLO TO THE MOONLIGHT (recharge) (21).mp3"
+dest_files=["res://.godot/imported/SAY HELLO TO THE MOONLIGHT (recharge) (21).mp3-4084cb4a7a9a9b94c6cab2d5811ef492.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

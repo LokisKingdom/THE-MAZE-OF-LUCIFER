@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bx3cc3sxq7x4r"
+path="res://.godot/imported/PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (16).mp3-b20124fd53df64a0884d9bbbc8dc3f44.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/PRISON PUZZLE OF THE SPHINX/PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (16).mp3"
+dest_files=["res://.godot/imported/PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (16).mp3-b20124fd53df64a0884d9bbbc8dc3f44.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

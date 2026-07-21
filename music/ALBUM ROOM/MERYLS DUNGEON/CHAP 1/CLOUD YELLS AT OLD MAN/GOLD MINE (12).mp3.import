@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqesvmt1djrhr"
+path="res://.godot/imported/GOLD MINE (12).mp3-d5c1ebc8b2b3e5d805740f2bff2a6f38.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/CLOUD YELLS AT OLD MAN/GOLD MINE (12).mp3"
+dest_files=["res://.godot/imported/GOLD MINE (12).mp3-d5c1ebc8b2b3e5d805740f2bff2a6f38.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

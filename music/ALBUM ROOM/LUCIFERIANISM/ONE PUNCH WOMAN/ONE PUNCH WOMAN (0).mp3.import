@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djxbey5lmwe2s"
+path="res://.godot/imported/ONE PUNCH WOMAN (0).mp3-588d8ec8974b99f59b4dfe02b750fb35.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ONE PUNCH WOMAN/ONE PUNCH WOMAN (0).mp3"
+dest_files=["res://.godot/imported/ONE PUNCH WOMAN (0).mp3-588d8ec8974b99f59b4dfe02b750fb35.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

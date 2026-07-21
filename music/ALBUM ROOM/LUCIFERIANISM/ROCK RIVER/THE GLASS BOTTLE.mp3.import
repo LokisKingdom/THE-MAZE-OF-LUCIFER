@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deoso4uf61olb"
+path="res://.godot/imported/THE GLASS BOTTLE.mp3-820d48d268c898475983f452dd8d9f17.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ROCK RIVER/THE GLASS BOTTLE.mp3"
+dest_files=["res://.godot/imported/THE GLASS BOTTLE.mp3-820d48d268c898475983f452dd8d9f17.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

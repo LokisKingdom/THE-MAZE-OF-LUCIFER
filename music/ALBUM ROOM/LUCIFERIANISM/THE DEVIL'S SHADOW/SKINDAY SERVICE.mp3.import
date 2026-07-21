@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs3avjaduxwse"
+path="res://.godot/imported/SKINDAY SERVICE.mp3-d98e8b67d0954a62fa24db8af4af1927.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THE DEVIL'S SHADOW/SKINDAY SERVICE.mp3"
+dest_files=["res://.godot/imported/SKINDAY SERVICE.mp3-d98e8b67d0954a62fa24db8af4af1927.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

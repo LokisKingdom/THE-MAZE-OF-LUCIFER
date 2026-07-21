@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbowojp4udfe2"
+path="res://.godot/imported/ARKHAM ASYLUM FOR GOOD JOKER (3).wav-709963aba4c40523d38b1348a9cdbe28.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/ARKHAM ASYLUM FOR GOOD JOKER/ARKHAM ASYLUM FOR GOOD JOKER (3).wav"
+dest_files=["res://.godot/imported/ARKHAM ASYLUM FOR GOOD JOKER (3).wav-709963aba4c40523d38b1348a9cdbe28.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

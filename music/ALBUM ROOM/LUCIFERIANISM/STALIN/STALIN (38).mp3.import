@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0nfn6t37q44x"
+path="res://.godot/imported/STALIN (38).mp3-45b0325c2efc6fb53e1aea920bff2674.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/STALIN/STALIN (38).mp3"
+dest_files=["res://.godot/imported/STALIN (38).mp3-45b0325c2efc6fb53e1aea920bff2674.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

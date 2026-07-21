@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bupkbq0mu8204"
+path="res://.godot/imported/so you see there's a duality.wav-f507ca099490e6ba5c2c5d8ef3effaf3.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/so you see there's a duality.wav"
+dest_files=["res://.godot/imported/so you see there's a duality.wav-f507ca099490e6ba5c2c5d8ef3effaf3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jh7431w1b58v"
+path="res://.godot/imported/STALIN (21).mp3-c7e2c6b09f3ca852debcf4917c932d73.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/STALIN/STALIN (21).mp3"
+dest_files=["res://.godot/imported/STALIN (21).mp3-c7e2c6b09f3ca852debcf4917c932d73.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

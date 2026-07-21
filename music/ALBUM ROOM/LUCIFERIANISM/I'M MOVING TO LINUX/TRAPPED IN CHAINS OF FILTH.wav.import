@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfa8ih2myjxs8"
+path="res://.godot/imported/TRAPPED IN CHAINS OF FILTH.wav-3601047221dee35903c4f939ec87d30e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/I'M MOVING TO LINUX/TRAPPED IN CHAINS OF FILTH.wav"
+dest_files=["res://.godot/imported/TRAPPED IN CHAINS OF FILTH.wav-3601047221dee35903c4f939ec87d30e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

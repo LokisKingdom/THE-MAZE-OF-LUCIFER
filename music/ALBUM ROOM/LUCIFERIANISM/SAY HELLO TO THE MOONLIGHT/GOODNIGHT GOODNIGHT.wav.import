@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn4v3r45801ej"
+path="res://.godot/imported/GOODNIGHT GOODNIGHT.wav-739154d684e1b75bf496b7d839b8f96b.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/GOODNIGHT GOODNIGHT.wav"
+dest_files=["res://.godot/imported/GOODNIGHT GOODNIGHT.wav-739154d684e1b75bf496b7d839b8f96b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

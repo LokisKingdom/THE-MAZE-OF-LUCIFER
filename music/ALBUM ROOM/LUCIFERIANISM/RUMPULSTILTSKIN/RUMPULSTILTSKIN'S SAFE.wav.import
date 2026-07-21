@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3rj0nl7oaulv"
+path="res://.godot/imported/RUMPULSTILTSKIN'S SAFE.wav-ffdce9e5f1b18dd6a1de3fda2f929071.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/RUMPULSTILTSKIN/RUMPULSTILTSKIN'S SAFE.wav"
+dest_files=["res://.godot/imported/RUMPULSTILTSKIN'S SAFE.wav-ffdce9e5f1b18dd6a1de3fda2f929071.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

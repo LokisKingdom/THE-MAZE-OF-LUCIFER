@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drlowjqd54hx0"
+path="res://.godot/imported/THEY GIVE PRIZES TO GUESS HOW THEY DANCE (1).wav-0e7b7ab64c663f8306ff2f3120ea6f92.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SIMULATION THEORY/THEY GIVE PRIZES TO GUESS HOW THEY DANCE (1).wav"
+dest_files=["res://.godot/imported/THEY GIVE PRIZES TO GUESS HOW THEY DANCE (1).wav-0e7b7ab64c663f8306ff2f3120ea6f92.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

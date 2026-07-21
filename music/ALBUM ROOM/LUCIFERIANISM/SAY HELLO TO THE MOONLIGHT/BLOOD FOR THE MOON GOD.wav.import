@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://buvwu0lgvmbbq"
+path="res://.godot/imported/BLOOD FOR THE MOON GOD.wav-fa573917d7ec99a13dc31fbe4f2520f7.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/BLOOD FOR THE MOON GOD.wav"
+dest_files=["res://.godot/imported/BLOOD FOR THE MOON GOD.wav-fa573917d7ec99a13dc31fbe4f2520f7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

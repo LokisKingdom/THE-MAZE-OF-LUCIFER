@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lb64co8v487x"
+path="res://.godot/imported/MAMA SAYS MAMA DOES (19).mp3-2f3af22592edac927649e65084f10947.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/MAMA SAYS MAMA DOES/MAMA SAYS MAMA DOES (19).mp3"
+dest_files=["res://.godot/imported/MAMA SAYS MAMA DOES (19).mp3-2f3af22592edac927649e65084f10947.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

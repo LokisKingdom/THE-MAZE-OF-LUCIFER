@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqbuwxittrxvr"
+path="res://.godot/imported/RED APPLE (49).mp3-1f01be396e1d07a89992f8b6d7bb464c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/RED APPLE/RED APPLE (49).mp3"
+dest_files=["res://.godot/imported/RED APPLE (49).mp3-1f01be396e1d07a89992f8b6d7bb464c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

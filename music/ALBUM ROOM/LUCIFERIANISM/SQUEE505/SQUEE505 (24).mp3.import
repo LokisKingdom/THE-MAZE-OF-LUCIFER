@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ktehifwldlkj"
+path="res://.godot/imported/SQUEE505 (24).mp3-cac608bd1d0c44d6eebc9f7ed284e10e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SQUEE505/SQUEE505 (24).mp3"
+dest_files=["res://.godot/imported/SQUEE505 (24).mp3-cac608bd1d0c44d6eebc9f7ed284e10e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br237thodq5pk"
+path="res://.godot/imported/JOKER ROAMS THE STREETS.wav-c6b5c64442787915062e80b065a3abce.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/ARKHAM ASYLUM FOR GOOD JOKER/JOKER ROAMS THE STREETS.wav"
+dest_files=["res://.godot/imported/JOKER ROAMS THE STREETS.wav-c6b5c64442787915062e80b065a3abce.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

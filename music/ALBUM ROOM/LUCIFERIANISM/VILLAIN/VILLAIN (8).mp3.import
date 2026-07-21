@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmmikbqi0rpqp"
+path="res://.godot/imported/VILLAIN (8).mp3-ca44f739175e38f77df9632322c4247c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/VILLAIN/VILLAIN (8).mp3"
+dest_files=["res://.godot/imported/VILLAIN (8).mp3-ca44f739175e38f77df9632322c4247c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

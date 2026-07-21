@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn48iv4xb4nqj"
+path="res://.godot/imported/you'll be goin' down.wav-dc324066e36a3273773e1afc0db18db1.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/you'll be goin' down.wav"
+dest_files=["res://.godot/imported/you'll be goin' down.wav-dc324066e36a3273773e1afc0db18db1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

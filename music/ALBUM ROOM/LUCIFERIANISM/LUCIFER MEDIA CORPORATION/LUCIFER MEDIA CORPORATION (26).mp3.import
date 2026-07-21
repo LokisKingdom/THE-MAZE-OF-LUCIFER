@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca844qoa4cm16"
+path="res://.godot/imported/LUCIFER MEDIA CORPORATION (26).mp3-60749319c1834e883d4f34ace7b21a37.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/LUCIFER MEDIA CORPORATION/LUCIFER MEDIA CORPORATION (26).mp3"
+dest_files=["res://.godot/imported/LUCIFER MEDIA CORPORATION (26).mp3-60749319c1834e883d4f34ace7b21a37.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

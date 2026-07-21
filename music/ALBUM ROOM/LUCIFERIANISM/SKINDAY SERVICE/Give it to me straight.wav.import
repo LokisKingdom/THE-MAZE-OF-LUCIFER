@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dd605xh5jpc16"
+path="res://.godot/imported/Give it to me straight.wav-49071bf9d63df5c28b1b814ca10f5b3c.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/Give it to me straight.wav"
+dest_files=["res://.godot/imported/Give it to me straight.wav-49071bf9d63df5c28b1b814ca10f5b3c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

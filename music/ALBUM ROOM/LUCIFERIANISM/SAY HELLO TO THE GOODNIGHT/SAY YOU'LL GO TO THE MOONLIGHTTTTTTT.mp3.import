@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caaoqc0nh2v2g"
+path="res://.godot/imported/SAY YOU'LL GO TO THE MOONLIGHTTTTTTT.mp3-93274d382de17a2bb8c65fc6bd3e44bf.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/SAY YOU'LL GO TO THE MOONLIGHTTTTTTT.mp3"
+dest_files=["res://.godot/imported/SAY YOU'LL GO TO THE MOONLIGHTTTTTTT.mp3-93274d382de17a2bb8c65fc6bd3e44bf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

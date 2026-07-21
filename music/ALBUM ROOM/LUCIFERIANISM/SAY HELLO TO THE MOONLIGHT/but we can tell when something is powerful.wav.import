@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ic2jiq4oxo86"
+path="res://.godot/imported/but we can tell when something is powerful.wav-0819d96c4f57d96b4dbd82ae76158e80.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/but we can tell when something is powerful.wav"
+dest_files=["res://.godot/imported/but we can tell when something is powerful.wav-0819d96c4f57d96b4dbd82ae76158e80.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

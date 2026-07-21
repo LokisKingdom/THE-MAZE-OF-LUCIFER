@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csfmigrndbhcx"
+path="res://.godot/imported/Qualis Artifex Pereo (35).mp3-cc57f866ce16dce27d8ba2c0b5885cd7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/Qualis Artifex Pereo/Qualis Artifex Pereo (35).mp3"
+dest_files=["res://.godot/imported/Qualis Artifex Pereo (35).mp3-cc57f866ce16dce27d8ba2c0b5885cd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

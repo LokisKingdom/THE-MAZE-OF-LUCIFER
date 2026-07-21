@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgwyhp8l56y2p"
+path="res://.godot/imported/between evil and weakness.wav-0dfca47662a2152be306e84926f94e3d.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/between evil and weakness.wav"
+dest_files=["res://.godot/imported/between evil and weakness.wav-0dfca47662a2152be306e84926f94e3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

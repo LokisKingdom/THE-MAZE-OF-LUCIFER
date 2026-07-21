@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfd1opcqoprys"
+path="res://.godot/imported/DEMENTIA DAN GOES TO THE STRIP CLUB.wav-3e4b2a858a10b9433ce536d6bd00031d.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/DEMENTIA DAN GOES TO THE STRIP CLUB.wav"
+dest_files=["res://.godot/imported/DEMENTIA DAN GOES TO THE STRIP CLUB.wav-3e4b2a858a10b9433ce536d6bd00031d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

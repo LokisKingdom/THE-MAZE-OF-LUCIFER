@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://m05ully4qqsl"
+path="res://.godot/imported/THE PRIZE OR THE PRICE.wav-9c40dfcd4cf47e21e4c90910d9ea98ed.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/THE PRIZE OR THE PRICE.wav"
+dest_files=["res://.godot/imported/THE PRIZE OR THE PRICE.wav-9c40dfcd4cf47e21e4c90910d9ea98ed.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

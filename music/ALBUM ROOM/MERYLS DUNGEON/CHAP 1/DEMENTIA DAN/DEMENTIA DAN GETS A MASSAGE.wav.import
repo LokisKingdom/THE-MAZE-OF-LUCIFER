@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ci732fopsf61d"
+path="res://.godot/imported/DEMENTIA DAN GETS A MASSAGE.wav-6826457b931932f1b9420961c10abfe2.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/DEMENTIA DAN GETS A MASSAGE.wav"
+dest_files=["res://.godot/imported/DEMENTIA DAN GETS A MASSAGE.wav-6826457b931932f1b9420961c10abfe2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

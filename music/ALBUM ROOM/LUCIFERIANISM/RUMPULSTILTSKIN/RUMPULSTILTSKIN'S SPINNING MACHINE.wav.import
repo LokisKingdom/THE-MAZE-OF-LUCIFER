@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ega8ibm1l2ov"
+path="res://.godot/imported/RUMPULSTILTSKIN'S SPINNING MACHINE.wav-f10650c7c651df3e0166e2fc9a8792b0.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/RUMPULSTILTSKIN/RUMPULSTILTSKIN'S SPINNING MACHINE.wav"
+dest_files=["res://.godot/imported/RUMPULSTILTSKIN'S SPINNING MACHINE.wav-f10650c7c651df3e0166e2fc9a8792b0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

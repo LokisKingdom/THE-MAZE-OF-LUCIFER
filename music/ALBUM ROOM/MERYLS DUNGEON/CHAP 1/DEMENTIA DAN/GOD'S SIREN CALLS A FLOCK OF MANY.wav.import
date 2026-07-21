@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://i67l4237pqwt"
+path="res://.godot/imported/GOD'S SIREN CALLS A FLOCK OF MANY.wav-cd666a66a5c0bed4c3c56336e9a6e6dd.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/GOD'S SIREN CALLS A FLOCK OF MANY.wav"
+dest_files=["res://.godot/imported/GOD'S SIREN CALLS A FLOCK OF MANY.wav-cd666a66a5c0bed4c3c56336e9a6e6dd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

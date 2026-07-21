@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://k5ibt8bs2c62"
+path="res://.godot/imported/GROK HER IN A BIKINI (6).wav-c7256967e371784849044a9024b56e18.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/FATHERS DAY/GROK HER IN A BIKINI (6).wav"
+dest_files=["res://.godot/imported/GROK HER IN A BIKINI (6).wav-c7256967e371784849044a9024b56e18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

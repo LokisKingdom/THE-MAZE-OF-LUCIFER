@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1mvk0ip5cvj5"
+path="res://.godot/imported/GENOCIDE NEWS EPISODE 12 - DEMENTIA DAN VISITS FOR A SEASON i.mp3-40c9cf136a5e61862fae80e5977d7775.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/GENOCIDE NEWS EPISODE 12 - DEMENTIA DAN VISITS FOR A SEASON i.mp3"
+dest_files=["res://.godot/imported/GENOCIDE NEWS EPISODE 12 - DEMENTIA DAN VISITS FOR A SEASON i.mp3-40c9cf136a5e61862fae80e5977d7775.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cldyngltobrwb"
+path="res://.godot/imported/LORD OF GOTHS.wav-c427c0c5e402d46b561f6c172fe3f22e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/PANDAMONIUM/LORD OF GOTHS.wav"
+dest_files=["res://.godot/imported/LORD OF GOTHS.wav-c427c0c5e402d46b561f6c172fe3f22e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

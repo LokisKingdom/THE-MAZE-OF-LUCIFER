@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu8mnyptt6oir"
+path="res://.godot/imported/MAX (4).mp3-d6957ae38b9a698112a7701f229de3f7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/MAX/MAX (4).mp3"
+dest_files=["res://.godot/imported/MAX (4).mp3-d6957ae38b9a698112a7701f229de3f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

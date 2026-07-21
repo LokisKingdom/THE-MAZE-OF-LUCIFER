@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dicl40c0wo4ks"
+path="res://.godot/imported/OHRC.mp3-01547e3e167c84c2c22220df9f599a28.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/MAX/OHRC.mp3"
+dest_files=["res://.godot/imported/OHRC.mp3-01547e3e167c84c2c22220df9f599a28.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

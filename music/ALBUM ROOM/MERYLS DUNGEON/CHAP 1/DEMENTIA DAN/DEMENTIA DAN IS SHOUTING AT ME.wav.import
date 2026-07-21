@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cafss4ol46rcf"
+path="res://.godot/imported/DEMENTIA DAN IS SHOUTING AT ME.wav-781c023861748c05b133da91b78dd9d1.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/DEMENTIA DAN IS SHOUTING AT ME.wav"
+dest_files=["res://.godot/imported/DEMENTIA DAN IS SHOUTING AT ME.wav-781c023861748c05b133da91b78dd9d1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

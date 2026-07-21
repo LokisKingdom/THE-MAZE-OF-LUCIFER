@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brs4l03u5iehd"
+path="res://.godot/imported/ANOTHER 500 DOLLARS STOLEN AGAIN.wav-539fc63d373df295ed9835e926ae54b1.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/ANOTHER 500 DOLLARS STOLEN AGAIN.wav"
+dest_files=["res://.godot/imported/ANOTHER 500 DOLLARS STOLEN AGAIN.wav-539fc63d373df295ed9835e926ae54b1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

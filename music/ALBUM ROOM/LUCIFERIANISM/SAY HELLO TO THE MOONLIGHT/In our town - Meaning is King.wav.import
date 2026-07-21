@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://p2w1ikxtjytj"
+path="res://.godot/imported/In our town - Meaning is King.wav-a19876e31f3ea8d2a0128ecc9e33b9ea.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/In our town - Meaning is King.wav"
+dest_files=["res://.godot/imported/In our town - Meaning is King.wav-a19876e31f3ea8d2a0128ecc9e33b9ea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn1aqupc6rwlo"
+path="res://.godot/imported/I'M MOVING TO LINUX.wav-9daae2eb17c151c99b32c8b83256db81.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THE DEVIL'S SHADOW (side b)/I'M MOVING TO LINUX.wav"
+dest_files=["res://.godot/imported/I'M MOVING TO LINUX.wav-9daae2eb17c151c99b32c8b83256db81.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

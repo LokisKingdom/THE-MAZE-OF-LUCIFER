@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drls2fvi6r814"
+path="res://.godot/imported/THAT CRAB CANCER (28).mp3-c1e223ed992a7f48433532f107d20c54.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THAT CRAB CANCER/THAT CRAB CANCER (28).mp3"
+dest_files=["res://.godot/imported/THAT CRAB CANCER (28).mp3-c1e223ed992a7f48433532f107d20c54.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

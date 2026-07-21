@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmbii4ekq0b5n"
+path="res://.godot/imported/DEMENTIA DAN IS GOING TO SUICIDE YOU.wav-d012c215db6a7ee3d1ad2a2d0245bd95.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/DEMENTIA DAN IS GOING TO SUICIDE YOU.wav"
+dest_files=["res://.godot/imported/DEMENTIA DAN IS GOING TO SUICIDE YOU.wav-d012c215db6a7ee3d1ad2a2d0245bd95.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

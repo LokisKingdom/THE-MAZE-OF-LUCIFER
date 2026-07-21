@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qqvsd67gwd0h"
+path="res://.godot/imported/DEMENTIA DAN IS DOING PSY-OPS AGAINST YOU.wav-5182bba1b3c89c9f48f4ec64d495a233.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/DEMENTIA DAN/DEMENTIA DAN IS DOING PSY-OPS AGAINST YOU.wav"
+dest_files=["res://.godot/imported/DEMENTIA DAN IS DOING PSY-OPS AGAINST YOU.wav-5182bba1b3c89c9f48f4ec64d495a233.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

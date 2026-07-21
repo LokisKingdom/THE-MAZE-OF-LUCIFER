@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://daycq3h3xwgk8"
+path="res://.godot/imported/SAY YOU'LL GO TO THE CEMENT.wav-6e27b4f2f572f96f764a936f9dc7be55.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/SAY YOU'LL GO TO THE CEMENT.wav"
+dest_files=["res://.godot/imported/SAY YOU'LL GO TO THE CEMENT.wav-6e27b4f2f572f96f764a936f9dc7be55.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

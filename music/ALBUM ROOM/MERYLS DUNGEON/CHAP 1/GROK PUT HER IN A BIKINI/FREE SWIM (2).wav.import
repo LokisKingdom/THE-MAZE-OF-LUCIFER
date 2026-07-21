@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cic7prp5i1ee7"
+path="res://.godot/imported/FREE SWIM (2).wav-15a4cb223d6b7b673a1876ee2b229a57.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/GROK PUT HER IN A BIKINI/FREE SWIM (2).wav"
+dest_files=["res://.godot/imported/FREE SWIM (2).wav-15a4cb223d6b7b673a1876ee2b229a57.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://54t1utwknbkl"
+path="res://.godot/imported/WHEN THEY JOLT UP IN THEIR CHAIR.wav-44700bc3f0b7b61d32b46afe5274d77e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/RUMPULSTILTSKIN/WHEN THEY JOLT UP IN THEIR CHAIR.wav"
+dest_files=["res://.godot/imported/WHEN THEY JOLT UP IN THEIR CHAIR.wav-44700bc3f0b7b61d32b46afe5274d77e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

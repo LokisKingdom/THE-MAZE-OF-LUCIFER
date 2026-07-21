@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm6caeb8bo5ug"
+path="res://.godot/imported/THE WALL IS COVERED IN GROTESQUE ARTWORK (15).mp3-6df8484affdce5625db8001fe0240bd3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/VILLAIN/THE WALL IS COVERED IN GROTESQUE ARTWORK (15).mp3"
+dest_files=["res://.godot/imported/THE WALL IS COVERED IN GROTESQUE ARTWORK (15).mp3-6df8484affdce5625db8001fe0240bd3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

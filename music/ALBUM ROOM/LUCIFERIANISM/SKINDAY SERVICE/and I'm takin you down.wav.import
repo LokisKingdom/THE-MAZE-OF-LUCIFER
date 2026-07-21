@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q0vsnpqkkoll"
+path="res://.godot/imported/and I'm takin you down.wav-5b0b7dc7b6e2a27c1eef7b35a19754fc.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/and I'm takin you down.wav"
+dest_files=["res://.godot/imported/and I'm takin you down.wav-5b0b7dc7b6e2a27c1eef7b35a19754fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

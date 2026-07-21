@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bialrs5sidug"
+path="res://.godot/imported/LONG LIVE THE NEW FLESH (6).mp3-9ae416f097dbfc0cb4232c628b7c6b8d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/LONG LIVE THE NEW FLESH 2/LONG LIVE THE NEW FLESH (6).mp3"
+dest_files=["res://.godot/imported/LONG LIVE THE NEW FLESH (6).mp3-9ae416f097dbfc0cb4232c628b7c6b8d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

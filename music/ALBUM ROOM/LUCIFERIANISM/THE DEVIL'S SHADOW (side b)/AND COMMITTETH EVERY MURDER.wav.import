@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmxx8m4rc20f7"
+path="res://.godot/imported/AND COMMITTETH EVERY MURDER.wav-4a3e434982dbcd3b3975da6b363d55f4.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THE DEVIL'S SHADOW (side b)/AND COMMITTETH EVERY MURDER.wav"
+dest_files=["res://.godot/imported/AND COMMITTETH EVERY MURDER.wav-4a3e434982dbcd3b3975da6b363d55f4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

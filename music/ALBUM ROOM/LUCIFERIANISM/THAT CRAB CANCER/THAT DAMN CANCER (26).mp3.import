@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqneelq42i6m3"
+path="res://.godot/imported/THAT DAMN CANCER (26).mp3-30eb320e2e77c158d21fd5c6829c8cec.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THAT CRAB CANCER/THAT DAMN CANCER (26).mp3"
+dest_files=["res://.godot/imported/THAT DAMN CANCER (26).mp3-30eb320e2e77c158d21fd5c6829c8cec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

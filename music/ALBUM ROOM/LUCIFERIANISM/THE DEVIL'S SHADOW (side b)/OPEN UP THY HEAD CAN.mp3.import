@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8op8tmtul8p1"
+path="res://.godot/imported/OPEN UP THY HEAD CAN.mp3-bc31cecdb6f1468eee802bc5179750f6.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/THE DEVIL'S SHADOW (side b)/OPEN UP THY HEAD CAN.mp3"
+dest_files=["res://.godot/imported/OPEN UP THY HEAD CAN.mp3-bc31cecdb6f1468eee802bc5179750f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

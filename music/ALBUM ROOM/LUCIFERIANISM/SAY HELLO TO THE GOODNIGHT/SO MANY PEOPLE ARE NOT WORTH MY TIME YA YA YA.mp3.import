@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjsra7rwdadum"
+path="res://.godot/imported/SO MANY PEOPLE ARE NOT WORTH MY TIME YA YA YA.mp3-f026b92b99f34c5fbe86045d2a37f126.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/SO MANY PEOPLE ARE NOT WORTH MY TIME YA YA YA.mp3"
+dest_files=["res://.godot/imported/SO MANY PEOPLE ARE NOT WORTH MY TIME YA YA YA.mp3-f026b92b99f34c5fbe86045d2a37f126.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

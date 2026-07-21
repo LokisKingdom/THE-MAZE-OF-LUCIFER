@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnqjm3745f0ox"
+path="res://.godot/imported/rock river (9).mp3-63c1af2cf3ea97651f10a5ed7e06d067.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ROCK RIVER/rock river (9).mp3"
+dest_files=["res://.godot/imported/rock river (9).mp3-63c1af2cf3ea97651f10a5ed7e06d067.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

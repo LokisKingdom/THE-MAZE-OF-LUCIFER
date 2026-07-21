@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl7ikkdnibryt"
+path="res://.godot/imported/Hey Deepdive.mp3-382a020abf422963c95935c46ece1abd.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/MAX/Hey Deepdive.mp3"
+dest_files=["res://.godot/imported/Hey Deepdive.mp3-382a020abf422963c95935c46ece1abd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

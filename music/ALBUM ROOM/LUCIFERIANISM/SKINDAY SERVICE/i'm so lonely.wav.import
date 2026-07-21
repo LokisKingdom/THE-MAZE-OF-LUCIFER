@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d06mn6jqxn1sf"
+path="res://.godot/imported/i'm so lonely.wav-1ba4a658aefe9d9bc9aa0f86399b363b.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/i'm so lonely.wav"
+dest_files=["res://.godot/imported/i'm so lonely.wav-1ba4a658aefe9d9bc9aa0f86399b363b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

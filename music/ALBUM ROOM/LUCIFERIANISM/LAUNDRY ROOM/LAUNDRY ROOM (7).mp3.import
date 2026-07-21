@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://du3uf1rpehkno"
+path="res://.godot/imported/LAUNDRY ROOM (7).mp3-c75e74519464b59c6317ba844bf47213.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/LAUNDRY ROOM/LAUNDRY ROOM (7).mp3"
+dest_files=["res://.godot/imported/LAUNDRY ROOM (7).mp3-c75e74519464b59c6317ba844bf47213.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://seg0dsuolk4b"
+path="res://.godot/imported/ONE PUNCH WOMAN NEON (1).mp3-c97c874613dd084f78d7a1e75d45e036.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ONE PUNCH WOMAN/ONE PUNCH WOMAN NEON (1).mp3"
+dest_files=["res://.godot/imported/ONE PUNCH WOMAN NEON (1).mp3-c97c874613dd084f78d7a1e75d45e036.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

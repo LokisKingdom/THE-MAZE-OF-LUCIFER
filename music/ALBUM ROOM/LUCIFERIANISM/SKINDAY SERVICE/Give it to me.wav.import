@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ow6opm7d7vai"
+path="res://.godot/imported/Give it to me.wav-bb15c2a1e8b58460ce40bba5721e6581.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/Give it to me.wav"
+dest_files=["res://.godot/imported/Give it to me.wav-bb15c2a1e8b58460ce40bba5721e6581.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

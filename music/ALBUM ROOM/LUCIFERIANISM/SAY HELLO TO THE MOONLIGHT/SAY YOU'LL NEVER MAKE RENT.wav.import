@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lnbclsy2lect"
+path="res://.godot/imported/SAY YOU'LL NEVER MAKE RENT.wav-85880c2a1abe3fbcf929dfa021a5144e.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE MOONLIGHT/SAY YOU'LL NEVER MAKE RENT.wav"
+dest_files=["res://.godot/imported/SAY YOU'LL NEVER MAKE RENT.wav-85880c2a1abe3fbcf929dfa021a5144e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

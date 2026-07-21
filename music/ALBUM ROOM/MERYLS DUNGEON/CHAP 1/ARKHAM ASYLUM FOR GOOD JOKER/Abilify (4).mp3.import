@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx0aytq4ega5t"
+path="res://.godot/imported/Abilify (4).mp3-4c132c2a2b143a2a714881900a0118e9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/ARKHAM ASYLUM FOR GOOD JOKER/Abilify (4).mp3"
+dest_files=["res://.godot/imported/Abilify (4).mp3-4c132c2a2b143a2a714881900a0118e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cci1l4h6kd801"
+path="res://.godot/imported/THE BRITISH ROBOT MAN (1).mp3-347edddc37f8a408bb80d6d4ae00fcc2.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ROCK RIVER/THE BRITISH ROBOT MAN (1).mp3"
+dest_files=["res://.godot/imported/THE BRITISH ROBOT MAN (1).mp3-347edddc37f8a408bb80d6d4ae00fcc2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

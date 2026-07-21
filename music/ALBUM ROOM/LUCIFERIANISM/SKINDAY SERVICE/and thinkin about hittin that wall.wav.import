@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://caqu7ksie1qan"
+path="res://.godot/imported/and thinkin about hittin that wall.wav-17002916637d273cbb399220347374c4.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SKINDAY SERVICE/and thinkin about hittin that wall.wav"
+dest_files=["res://.godot/imported/and thinkin about hittin that wall.wav-17002916637d273cbb399220347374c4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

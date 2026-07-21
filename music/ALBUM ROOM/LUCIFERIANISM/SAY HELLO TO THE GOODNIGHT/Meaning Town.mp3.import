@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr4guo1gskth"
+path="res://.godot/imported/Meaning Town.mp3-8f73f69f7dc6c63014a5df374a563ff6.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/SAY HELLO TO THE GOODNIGHT/Meaning Town.mp3"
+dest_files=["res://.godot/imported/Meaning Town.mp3-8f73f69f7dc6c63014a5df374a563ff6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
