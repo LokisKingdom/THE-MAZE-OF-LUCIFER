@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8igwf7k5eegd"
+path="res://.godot/imported/ANGAR (5).mp3-1e2dd48dc5192e64f9247815180df139.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/ANGAR (5).mp3"
+dest_files=["res://.godot/imported/ANGAR (5).mp3-1e2dd48dc5192e64f9247815180df139.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

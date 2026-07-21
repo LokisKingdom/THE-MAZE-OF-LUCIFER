@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwxrr3o3wqtmb"
+path="res://.godot/imported/THIS IS THE WAY IT SHOULD BE (basetrack).wav-90787a31731048c2b4c88e6407505d28.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/THIS IS THE WAY IT SHOULD BE/THIS IS THE WAY IT SHOULD BE (basetrack).wav"
+dest_files=["res://.godot/imported/THIS IS THE WAY IT SHOULD BE (basetrack).wav-90787a31731048c2b4c88e6407505d28.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

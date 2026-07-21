@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cm1ukdh2hi4bu"
+path="res://.godot/imported/GOD'S SIREN SUFFOCATES.wav-3d0279efde6fbf02555c1b5eb6a7b71d.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/THE SIMULTANEOUS SIP/GOD'S SIREN SUFFOCATES.wav"
+dest_files=["res://.godot/imported/GOD'S SIREN SUFFOCATES.wav-3d0279efde6fbf02555c1b5eb6a7b71d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

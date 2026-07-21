@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvxwl28ttelvv"
+path="res://.godot/imported/FIRE DISCO LIGHTS (6).mp3-e95b94f8c3a6dbf684386de16c657185.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/FIRE DISCO LIGHTS/FIRE DISCO LIGHTS (6).mp3"
+dest_files=["res://.godot/imported/FIRE DISCO LIGHTS (6).mp3-e95b94f8c3a6dbf684386de16c657185.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

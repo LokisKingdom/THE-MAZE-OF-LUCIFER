@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c52oek1dgks6h"
+path="res://.godot/imported/oful.mp3-7a4c71e44752fb7a456d87fa412e8b7f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/oful.mp3"
+dest_files=["res://.godot/imported/oful.mp3-7a4c71e44752fb7a456d87fa412e8b7f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

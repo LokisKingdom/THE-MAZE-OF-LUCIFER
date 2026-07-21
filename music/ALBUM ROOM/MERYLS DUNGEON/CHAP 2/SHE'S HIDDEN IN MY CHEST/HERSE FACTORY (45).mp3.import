@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6x46fbcdjril"
+path="res://.godot/imported/HERSE FACTORY (45).mp3-964e2ac1cb90c5d0371800bfaa5d85df.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE'S HIDDEN IN MY CHEST/HERSE FACTORY (45).mp3"
+dest_files=["res://.godot/imported/HERSE FACTORY (45).mp3-964e2ac1cb90c5d0371800bfaa5d85df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

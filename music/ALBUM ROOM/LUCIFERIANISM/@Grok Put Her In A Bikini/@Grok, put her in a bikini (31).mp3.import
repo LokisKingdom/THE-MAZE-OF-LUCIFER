@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://elrpuqwcpkhy"
+path="res://.godot/imported/@Grok, put her in a bikini (31).mp3-40f7c372e669538250a1e47ec6452a32.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/@Grok Put Her In A Bikini/@Grok, put her in a bikini (31).mp3"
+dest_files=["res://.godot/imported/@Grok, put her in a bikini (31).mp3-40f7c372e669538250a1e47ec6452a32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

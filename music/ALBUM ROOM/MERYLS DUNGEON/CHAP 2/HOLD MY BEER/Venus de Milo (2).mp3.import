@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cy2e0w1t6q84a"
+path="res://.godot/imported/Venus de Milo (2).mp3-3e037c843a664eda76f7f6fc5b19a901.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/Venus de Milo (2).mp3"
+dest_files=["res://.godot/imported/Venus de Milo (2).mp3-3e037c843a664eda76f7f6fc5b19a901.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

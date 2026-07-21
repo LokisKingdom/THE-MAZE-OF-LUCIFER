@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmetgr0wiobud"
+path="res://.godot/imported/ghost.mp3-72c4cf795dc68f7f23b101141c1b93d0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/ghost.mp3"
+dest_files=["res://.godot/imported/ghost.mp3-72c4cf795dc68f7f23b101141c1b93d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bydutuuedu4jo"
+path="res://.godot/imported/FRESH SWEETHEARTS (22).mp3-7d6723459ad709a32b9b31268e97733e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/FRESH SWEETHEARTS/FRESH SWEETHEARTS (22).mp3"
+dest_files=["res://.godot/imported/FRESH SWEETHEARTS (22).mp3-7d6723459ad709a32b9b31268e97733e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

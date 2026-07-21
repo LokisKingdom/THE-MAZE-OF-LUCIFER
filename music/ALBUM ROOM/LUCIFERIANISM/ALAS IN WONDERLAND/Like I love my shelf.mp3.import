@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://thxy6psq7kf1"
+path="res://.godot/imported/Like I love my shelf.mp3-0bbc5390d91233d472f86509e66646ae.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/Like I love my shelf.mp3"
+dest_files=["res://.godot/imported/Like I love my shelf.mp3-0bbc5390d91233d472f86509e66646ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

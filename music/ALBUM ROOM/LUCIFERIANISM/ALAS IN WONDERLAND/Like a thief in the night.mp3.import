@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2n715y3vpsab"
+path="res://.godot/imported/Like a thief in the night.mp3-e9b2cf7550e6fa565d53c2f043628809.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/Like a thief in the night.mp3"
+dest_files=["res://.godot/imported/Like a thief in the night.mp3-e9b2cf7550e6fa565d53c2f043628809.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

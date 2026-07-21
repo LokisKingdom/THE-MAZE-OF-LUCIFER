@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://itied8cc182d"
+path="res://.godot/imported/three's fine.mp3-1c929f3b83fc4556aa40fbee067fb6d7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/three's fine.mp3"
+dest_files=["res://.godot/imported/three's fine.mp3-1c929f3b83fc4556aa40fbee067fb6d7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

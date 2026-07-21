@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hfswp1wjyrw8"
+path="res://.godot/imported/ROSE IN A BOTTLE (23).mp3-4768c9d48c6d0cb11d6a5f29b96d45bc.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/ROSE IN A BOTTLE (23).mp3"
+dest_files=["res://.godot/imported/ROSE IN A BOTTLE (23).mp3-4768c9d48c6d0cb11d6a5f29b96d45bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

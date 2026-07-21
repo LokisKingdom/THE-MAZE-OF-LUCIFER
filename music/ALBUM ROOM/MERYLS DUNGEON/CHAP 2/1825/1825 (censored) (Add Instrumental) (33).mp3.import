@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df2vbjne6kmed"
+path="res://.godot/imported/1825 (censored) (Add Instrumental) (33).mp3-4acec1a8459ce552931b1124679acb91.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/1825/1825 (censored) (Add Instrumental) (33).mp3"
+dest_files=["res://.godot/imported/1825 (censored) (Add Instrumental) (33).mp3-4acec1a8459ce552931b1124679acb91.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

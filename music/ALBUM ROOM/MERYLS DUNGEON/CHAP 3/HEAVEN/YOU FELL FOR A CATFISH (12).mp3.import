@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6swm2x053iie"
+path="res://.godot/imported/YOU FELL FOR A CATFISH (12).mp3-1cab7dc1187c0ccea059c24b5cdf9a9b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/HEAVEN/YOU FELL FOR A CATFISH (12).mp3"
+dest_files=["res://.godot/imported/YOU FELL FOR A CATFISH (12).mp3-1cab7dc1187c0ccea059c24b5cdf9a9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

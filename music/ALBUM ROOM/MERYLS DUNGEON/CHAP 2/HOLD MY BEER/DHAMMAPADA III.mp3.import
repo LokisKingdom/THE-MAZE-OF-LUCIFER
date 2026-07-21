@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lhwxemv6n5vt"
+path="res://.godot/imported/DHAMMAPADA III.mp3-928cece45f2d5e69faab311f0bec2e32.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/DHAMMAPADA III.mp3"
+dest_files=["res://.godot/imported/DHAMMAPADA III.mp3-928cece45f2d5e69faab311f0bec2e32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

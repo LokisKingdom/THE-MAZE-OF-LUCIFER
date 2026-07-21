@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7g8bs5knlcnt"
+path="res://.godot/imported/GOD OF HUNGER (8).mp3-6d8f6f5aa7bc1b7908d03717acff1872.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/GOD OF HUNGER/GOD OF HUNGER (8).mp3"
+dest_files=["res://.godot/imported/GOD OF HUNGER (8).mp3-6d8f6f5aa7bc1b7908d03717acff1872.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwah86sp5xnj4"
+path="res://.godot/imported/MURDER MURDER (15).mp3-fb8204f1083ea0279b6ebc52f5a80f11.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/MURDER MURDER (15).mp3"
+dest_files=["res://.godot/imported/MURDER MURDER (15).mp3-fb8204f1083ea0279b6ebc52f5a80f11.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

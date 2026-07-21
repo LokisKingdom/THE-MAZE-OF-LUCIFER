@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r7g8gx41t75b"
+path="res://.godot/imported/FRESH OUT OF HUNGER.mp3-f694c5eca09a919fe5a4cc7800afb77a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/GOD OF HUNGER/FRESH OUT OF HUNGER.mp3"
+dest_files=["res://.godot/imported/FRESH OUT OF HUNGER.mp3-f694c5eca09a919fe5a4cc7800afb77a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djj0p60m2owsc"
+path="res://.godot/imported/DISCO BALL (15).mp3-0ebc60ec6b3fef78a6264948d29ee093.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/I WANT A KIRPAN TOO/DISCO BALL (15).mp3"
+dest_files=["res://.godot/imported/DISCO BALL (15).mp3-0ebc60ec6b3fef78a6264948d29ee093.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

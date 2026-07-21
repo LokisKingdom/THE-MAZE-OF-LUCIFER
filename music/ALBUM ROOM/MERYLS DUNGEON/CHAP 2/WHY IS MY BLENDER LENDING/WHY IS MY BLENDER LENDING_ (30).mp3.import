@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0yq28f365vo4"
+path="res://.godot/imported/WHY IS MY BLENDER LENDING_ (30).mp3-4d63a68bd579f45662d5b7be2512bc35.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/WHY IS MY BLENDER LENDING/WHY IS MY BLENDER LENDING_ (30).mp3"
+dest_files=["res://.godot/imported/WHY IS MY BLENDER LENDING_ (30).mp3-4d63a68bd579f45662d5b7be2512bc35.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

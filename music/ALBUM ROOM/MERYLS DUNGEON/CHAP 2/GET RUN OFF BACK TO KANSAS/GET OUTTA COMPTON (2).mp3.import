@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhh6buutx7mkp"
+path="res://.godot/imported/GET OUTTA COMPTON (2).mp3-7a2b8afcdc327ae65151a4d0d9b209b8.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/GET RUN OFF BACK TO KANSAS/GET OUTTA COMPTON (2).mp3"
+dest_files=["res://.godot/imported/GET OUTTA COMPTON (2).mp3-7a2b8afcdc327ae65151a4d0d9b209b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

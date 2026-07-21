@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0nu2ilt26x42"
+path="res://.godot/imported/PITY PARTY (4).mp3-9307acb171d48e23d95b9de35eca2242.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/PITY PARTY/PITY PARTY (4).mp3"
+dest_files=["res://.godot/imported/PITY PARTY (4).mp3-9307acb171d48e23d95b9de35eca2242.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

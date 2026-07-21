@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g7wbtcs3n1f8"
+path="res://.godot/imported/1825 (explicit).mp3-5cd36aeeeca6e301a29137a7b0cb225e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/1825/1825 (explicit).mp3"
+dest_files=["res://.godot/imported/1825 (explicit).mp3-5cd36aeeeca6e301a29137a7b0cb225e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

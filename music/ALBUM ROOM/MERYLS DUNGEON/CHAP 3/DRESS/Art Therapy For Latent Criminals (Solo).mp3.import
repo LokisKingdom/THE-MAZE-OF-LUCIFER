@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw4pg1t6vyt6g"
+path="res://.godot/imported/Art Therapy For Latent Criminals (Solo).mp3-dfaee69e9662fca916e23e136c7a0c6d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/DRESS/Art Therapy For Latent Criminals (Solo).mp3"
+dest_files=["res://.godot/imported/Art Therapy For Latent Criminals (Solo).mp3-dfaee69e9662fca916e23e136c7a0c6d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

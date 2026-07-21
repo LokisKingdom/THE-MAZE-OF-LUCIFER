@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlw85ix8w4s5r"
+path="res://.godot/imported/SIGNING OUT SCOTT ADAMS.wav-f66bc8c40aadfb28f7d80f6c50c21ac8.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/SIMULTANEOUS SIP/SIGNING OUT SCOTT ADAMS.wav"
+dest_files=["res://.godot/imported/SIGNING OUT SCOTT ADAMS.wav-f66bc8c40aadfb28f7d80f6c50c21ac8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

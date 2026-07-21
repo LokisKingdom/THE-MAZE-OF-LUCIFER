@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gihcpxru4jd7"
+path="res://.godot/imported/two treats.mp3-bcc07f37a3be4094e90b0dd6be995f02.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/two treats.mp3"
+dest_files=["res://.godot/imported/two treats.mp3-bcc07f37a3be4094e90b0dd6be995f02.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://26ou61iqfy25"
+path="res://.godot/imported/ANGELS IN HOUSES (3).mp3-0f611434bd6248a2e2ab122e72168fd7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ANGELS IN HOUSES/ANGELS IN HOUSES (3).mp3"
+dest_files=["res://.godot/imported/ANGELS IN HOUSES (3).mp3-0f611434bd6248a2e2ab122e72168fd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0xkfm5lijok1"
+path="res://.godot/imported/When I was weak (47).mp3-edc17e4312eec314667c7ed6dfaed0a5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/When I was weak/When I was weak (47).mp3"
+dest_files=["res://.godot/imported/When I was weak (47).mp3-edc17e4312eec314667c7ed6dfaed0a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc6ul4sye5w72"
+path="res://.godot/imported/FUNERAL DIRGE (Remix) (3).mp3-a5a6a0f02660c310f9a58999073d3fb9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/HEAVEN/FUNERAL DIRGE (Remix) (3).mp3"
+dest_files=["res://.godot/imported/FUNERAL DIRGE (Remix) (3).mp3-a5a6a0f02660c310f9a58999073d3fb9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

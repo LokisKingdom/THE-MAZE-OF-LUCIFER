@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5nejmipdsgka"
+path="res://.godot/imported/666 - EATING PATTERN (24).mp3-1c06bd542e4d997112084d0cbf5e5fe4.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/EATING PATTERN/666 - EATING PATTERN (24).mp3"
+dest_files=["res://.godot/imported/666 - EATING PATTERN (24).mp3-1c06bd542e4d997112084d0cbf5e5fe4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

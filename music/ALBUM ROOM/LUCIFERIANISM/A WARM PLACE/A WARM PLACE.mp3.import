@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://65wgbu8r80nx"
+path="res://.godot/imported/A WARM PLACE.mp3-79804c6e0de680241793d2c792fa6205.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/A WARM PLACE/A WARM PLACE.mp3"
+dest_files=["res://.godot/imported/A WARM PLACE.mp3-79804c6e0de680241793d2c792fa6205.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

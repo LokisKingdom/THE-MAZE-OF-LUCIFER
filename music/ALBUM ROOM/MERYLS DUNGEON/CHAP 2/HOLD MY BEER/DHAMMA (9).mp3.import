@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://q63ue0tewbwa"
+path="res://.godot/imported/DHAMMA (9).mp3-948e92759797f6e5a1b9b4953ec3553e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/DHAMMA (9).mp3"
+dest_files=["res://.godot/imported/DHAMMA (9).mp3-948e92759797f6e5a1b9b4953ec3553e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

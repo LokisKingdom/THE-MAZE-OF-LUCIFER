@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpao78r6aatbn"
+path="res://.godot/imported/THIS IS THE WAY IT SHOULD BE (6).wav-9c62cdae28fedbd42405495efecf2abd.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/THIS IS THE WAY IT SHOULD BE/THIS IS THE WAY IT SHOULD BE (6).wav"
+dest_files=["res://.godot/imported/THIS IS THE WAY IT SHOULD BE (6).wav-9c62cdae28fedbd42405495efecf2abd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

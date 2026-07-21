@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkei5varl6dg4"
+path="res://.godot/imported/HE WAS FOUND WANTING (000).mp3-c1c8d2eda34f565631ed3b7b03e27d94.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/HE WAS FOUND WANTING/HE WAS FOUND WANTING (000).mp3"
+dest_files=["res://.godot/imported/HE WAS FOUND WANTING (000).mp3-c1c8d2eda34f565631ed3b7b03e27d94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bln0a47c6i23y"
+path="res://.godot/imported/THE RED FOG (18).mp3-fd1d69fa503c823c3e41ccb3dfae48ee.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/THE RED FOG/THE RED FOG (18).mp3"
+dest_files=["res://.godot/imported/THE RED FOG (18).mp3-fd1d69fa503c823c3e41ccb3dfae48ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

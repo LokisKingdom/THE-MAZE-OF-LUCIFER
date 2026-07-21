@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://uhqdfoth6e0w"
+path="res://.godot/imported/CRYPTONITE (20).mp3-0bd08c7121d596494e1aaaf456e65adf.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/CRYPTONITE (20).mp3"
+dest_files=["res://.godot/imported/CRYPTONITE (20).mp3-0bd08c7121d596494e1aaaf456e65adf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

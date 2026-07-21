@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhncunilvvaxj"
+path="res://.godot/imported/BARNUM AND BAILEYS CIRCUS (11).mp3-8077ea565b4d2b477adcc3c294e05722.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/BARNUM AND BAILEYS CIRCUS/BARNUM AND BAILEYS CIRCUS (11).mp3"
+dest_files=["res://.godot/imported/BARNUM AND BAILEYS CIRCUS (11).mp3-8077ea565b4d2b477adcc3c294e05722.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

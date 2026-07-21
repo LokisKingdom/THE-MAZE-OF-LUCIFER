@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dscl5asji8gtf"
+path="res://.godot/imported/The Rotten Fish.mp3-a5340cc576655404a55fc18dd4d0c060.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/The Rotten Fish.mp3"
+dest_files=["res://.godot/imported/The Rotten Fish.mp3-a5340cc576655404a55fc18dd4d0c060.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

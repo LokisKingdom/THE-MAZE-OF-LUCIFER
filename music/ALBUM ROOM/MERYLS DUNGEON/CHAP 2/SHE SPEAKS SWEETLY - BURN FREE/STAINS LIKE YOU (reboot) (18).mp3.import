@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4g0t2oqfv2nq"
+path="res://.godot/imported/STAINS LIKE YOU (reboot) (18).mp3-efaf66e60c7684cc140a585c0a3d1770.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/STAINS LIKE YOU (reboot) (18).mp3"
+dest_files=["res://.godot/imported/STAINS LIKE YOU (reboot) (18).mp3-efaf66e60c7684cc140a585c0a3d1770.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

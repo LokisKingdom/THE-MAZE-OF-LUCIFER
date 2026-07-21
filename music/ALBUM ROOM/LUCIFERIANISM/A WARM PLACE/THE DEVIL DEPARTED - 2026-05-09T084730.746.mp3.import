@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dejrrp283ol6v"
+path="res://.godot/imported/THE DEVIL DEPARTED - 2026-05-09T084730.746.mp3-7c18a2f8c86dc5eec4aa7c8da48c577c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/A WARM PLACE/THE DEVIL DEPARTED - 2026-05-09T084730.746.mp3"
+dest_files=["res://.godot/imported/THE DEVIL DEPARTED - 2026-05-09T084730.746.mp3-7c18a2f8c86dc5eec4aa7c8da48c577c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

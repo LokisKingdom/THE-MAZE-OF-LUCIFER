@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://confocymq2tqs"
+path="res://.godot/imported/SHE'S HIDDEN IN MY CHEST (2).mp3-44b4c4c97997c16d3540df78b8e4a708.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE'S HIDDEN IN MY CHEST/SHE'S HIDDEN IN MY CHEST (2).mp3"
+dest_files=["res://.godot/imported/SHE'S HIDDEN IN MY CHEST (2).mp3-44b4c4c97997c16d3540df78b8e4a708.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

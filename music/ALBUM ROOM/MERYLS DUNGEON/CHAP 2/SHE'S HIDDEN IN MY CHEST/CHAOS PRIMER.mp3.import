@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu00b44l65m80"
+path="res://.godot/imported/CHAOS PRIMER.mp3-748cc53c41d87e34b1d80433ae1a8aa5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE'S HIDDEN IN MY CHEST/CHAOS PRIMER.mp3"
+dest_files=["res://.godot/imported/CHAOS PRIMER.mp3-748cc53c41d87e34b1d80433ae1a8aa5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

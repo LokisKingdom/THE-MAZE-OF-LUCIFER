@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://v5b22qmgqgsc"
+path="res://.godot/imported/snooping in heaven (23).mp3-e7905683c17fb302c7f813f4c30d1043.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/SNOOPING IN HEAVEN/snooping in heaven (23).mp3"
+dest_files=["res://.godot/imported/snooping in heaven (23).mp3-e7905683c17fb302c7f813f4c30d1043.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

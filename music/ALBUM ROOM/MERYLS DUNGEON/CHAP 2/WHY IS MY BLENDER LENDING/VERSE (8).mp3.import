@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caumpfpln7x2o"
+path="res://.godot/imported/VERSE (8).mp3-ec08c6df562fa59ec2276672606f1baf.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/WHY IS MY BLENDER LENDING/VERSE (8).mp3"
+dest_files=["res://.godot/imported/VERSE (8).mp3-ec08c6df562fa59ec2276672606f1baf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

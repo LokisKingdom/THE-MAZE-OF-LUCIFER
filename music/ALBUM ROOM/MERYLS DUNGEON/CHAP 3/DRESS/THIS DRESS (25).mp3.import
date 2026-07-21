@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bi5gebsyymp4c"
+path="res://.godot/imported/THIS DRESS (25).mp3-a9e0cbd6d1708367890501965746c87e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/DRESS/THIS DRESS (25).mp3"
+dest_files=["res://.godot/imported/THIS DRESS (25).mp3-a9e0cbd6d1708367890501965746c87e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

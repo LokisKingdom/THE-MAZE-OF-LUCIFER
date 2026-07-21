@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5cv7d44t2phc"
+path="res://.godot/imported/THIS IS THE WAY IT SHOULD BE (8).wav-519a04a2b61632f06bb737cf759a2de9.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/GROK PUT HER IN A BIKINI/THIS IS THE WAY IT SHOULD BE (8).wav"
+dest_files=["res://.godot/imported/THIS IS THE WAY IT SHOULD BE (8).wav-519a04a2b61632f06bb737cf759a2de9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

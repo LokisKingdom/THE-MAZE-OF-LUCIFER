@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3wbj1b2xd7i2"
+path="res://.godot/imported/THAT TRUE LOVE YONDER.wav-6749e7bbfb4af82567e566a5e2ad291f.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/GROK PUT HER IN A BIKINI/THAT TRUE LOVE YONDER.wav"
+dest_files=["res://.godot/imported/THAT TRUE LOVE YONDER.wav-6749e7bbfb4af82567e566a5e2ad291f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

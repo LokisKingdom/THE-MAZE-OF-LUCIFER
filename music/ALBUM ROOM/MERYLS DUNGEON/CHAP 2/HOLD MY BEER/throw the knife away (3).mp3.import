@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhwgw7um7hpdr"
+path="res://.godot/imported/throw the knife away (3).mp3-7e7562cf7403eba601c82a93fda93e64.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/throw the knife away (3).mp3"
+dest_files=["res://.godot/imported/throw the knife away (3).mp3-7e7562cf7403eba601c82a93fda93e64.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

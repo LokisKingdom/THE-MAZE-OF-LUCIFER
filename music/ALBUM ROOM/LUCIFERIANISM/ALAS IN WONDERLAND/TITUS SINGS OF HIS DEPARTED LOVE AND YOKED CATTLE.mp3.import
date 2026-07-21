@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://difo2v4f0ils0"
+path="res://.godot/imported/TITUS SINGS OF HIS DEPARTED LOVE AND YOKED CATTLE.mp3-fe9e2772d9b69bda06e8b3813a3f0f2c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/TITUS SINGS OF HIS DEPARTED LOVE AND YOKED CATTLE.mp3"
+dest_files=["res://.godot/imported/TITUS SINGS OF HIS DEPARTED LOVE AND YOKED CATTLE.mp3-fe9e2772d9b69bda06e8b3813a3f0f2c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

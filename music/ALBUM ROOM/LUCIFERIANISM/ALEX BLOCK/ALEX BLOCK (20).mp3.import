@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4d2pk8hor13h"
+path="res://.godot/imported/ALEX BLOCK (20).mp3-1c3332fb8c3b1d98f12cc12dce585422.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALEX BLOCK/ALEX BLOCK (20).mp3"
+dest_files=["res://.godot/imported/ALEX BLOCK (20).mp3-1c3332fb8c3b1d98f12cc12dce585422.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

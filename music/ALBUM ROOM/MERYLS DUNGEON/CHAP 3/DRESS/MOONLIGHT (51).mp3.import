@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://v1nt2b7syt73"
+path="res://.godot/imported/MOONLIGHT (51).mp3-cafe7e87e151b7794e42295474b7071d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/DRESS/MOONLIGHT (51).mp3"
+dest_files=["res://.godot/imported/MOONLIGHT (51).mp3-cafe7e87e151b7794e42295474b7071d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

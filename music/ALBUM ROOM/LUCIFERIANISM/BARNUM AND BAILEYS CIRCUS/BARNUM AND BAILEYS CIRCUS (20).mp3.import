@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxhx1v2wbxhyj"
+path="res://.godot/imported/BARNUM AND BAILEYS CIRCUS (20).mp3-f18f71298e18be3c8eaeb1b1dfde7d22.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/BARNUM AND BAILEYS CIRCUS/BARNUM AND BAILEYS CIRCUS (20).mp3"
+dest_files=["res://.godot/imported/BARNUM AND BAILEYS CIRCUS (20).mp3-f18f71298e18be3c8eaeb1b1dfde7d22.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

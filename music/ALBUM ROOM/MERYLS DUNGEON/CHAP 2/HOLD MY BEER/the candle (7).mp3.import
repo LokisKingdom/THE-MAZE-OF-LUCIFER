@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw6eaalkp72yk"
+path="res://.godot/imported/the candle (7).mp3-1388cd7ccbd27363be9987e5f05b924a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/the candle (7).mp3"
+dest_files=["res://.godot/imported/the candle (7).mp3-1388cd7ccbd27363be9987e5f05b924a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

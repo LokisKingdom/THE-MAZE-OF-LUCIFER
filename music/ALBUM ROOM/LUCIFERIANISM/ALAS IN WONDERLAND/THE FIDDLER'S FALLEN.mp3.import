@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxwcff7v8lhn2"
+path="res://.godot/imported/THE FIDDLER'S FALLEN.mp3-a1ae39007e40486fc45e8c21872e13ed.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/THE FIDDLER'S FALLEN.mp3"
+dest_files=["res://.godot/imported/THE FIDDLER'S FALLEN.mp3-a1ae39007e40486fc45e8c21872e13ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

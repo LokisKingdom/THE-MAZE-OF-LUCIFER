@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dk7l8k3gvsvwj"
+path="res://.godot/imported/burn free (2).mp3-c791d8c7ba644c6a552b2202caafda28.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/burn free (2).mp3"
+dest_files=["res://.godot/imported/burn free (2).mp3-c791d8c7ba644c6a552b2202caafda28.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cshuyf4ddlsrb"
+path="res://.godot/imported/Art Therapy For Latent Criminals (22).mp3-bf4eafe3b35dfa010ed3a5b59ef340a0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/Art Therapy For Latent Criminals/Art Therapy For Latent Criminals (22).mp3"
+dest_files=["res://.godot/imported/Art Therapy For Latent Criminals (22).mp3-bf4eafe3b35dfa010ed3a5b59ef340a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

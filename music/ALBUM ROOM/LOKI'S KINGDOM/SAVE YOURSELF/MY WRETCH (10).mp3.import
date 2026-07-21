@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbfq76kjhimfo"
+path="res://.godot/imported/MY WRETCH (10).mp3-f22897ddb151fe77e3b1bcc2613dc914.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/SAVE YOURSELF/MY WRETCH (10).mp3"
+dest_files=["res://.godot/imported/MY WRETCH (10).mp3-f22897ddb151fe77e3b1bcc2613dc914.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

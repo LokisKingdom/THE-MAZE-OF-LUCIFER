@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tcrpybpl4get"
+path="res://.godot/imported/UNMERCILESS COFFEE (12).mp3-2bbabc212736050b38ae52a5025572a5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/UNMERCILESS COFFEE (12).mp3"
+dest_files=["res://.godot/imported/UNMERCILESS COFFEE (12).mp3-2bbabc212736050b38ae52a5025572a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

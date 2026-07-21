@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b87or8c0kk5lu"
+path="res://.godot/imported/So kill them in the end.mp3-7da7b7e094e1d035f989b45bb8733c0d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/So kill them in the end.mp3"
+dest_files=["res://.godot/imported/So kill them in the end.mp3-7da7b7e094e1d035f989b45bb8733c0d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

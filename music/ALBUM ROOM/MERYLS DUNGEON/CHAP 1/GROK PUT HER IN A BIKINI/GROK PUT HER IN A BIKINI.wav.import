@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lggb1x0fpkiq"
+path="res://.godot/imported/GROK PUT HER IN A BIKINI.wav-cf7229e5e5f44294431eb4ce96eec844.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/GROK PUT HER IN A BIKINI/GROK PUT HER IN A BIKINI.wav"
+dest_files=["res://.godot/imported/GROK PUT HER IN A BIKINI.wav-cf7229e5e5f44294431eb4ce96eec844.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

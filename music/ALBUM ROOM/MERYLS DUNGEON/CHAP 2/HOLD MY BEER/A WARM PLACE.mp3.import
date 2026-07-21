@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://61y6ew0rhvw3"
+path="res://.godot/imported/A WARM PLACE.mp3-be6290167058aca48d82158994ba7e89.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/HOLD MY BEER/A WARM PLACE.mp3"
+dest_files=["res://.godot/imported/A WARM PLACE.mp3-be6290167058aca48d82158994ba7e89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

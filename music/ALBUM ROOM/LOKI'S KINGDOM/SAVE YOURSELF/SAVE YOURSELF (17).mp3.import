@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c160ol65qsb13"
+path="res://.godot/imported/SAVE YOURSELF (17).mp3-b8c4d5d87752c5c92b1e4c53f1f39f4b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/SAVE YOURSELF/SAVE YOURSELF (17).mp3"
+dest_files=["res://.godot/imported/SAVE YOURSELF (17).mp3-b8c4d5d87752c5c92b1e4c53f1f39f4b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bek0mi06vmxat"
+path="res://.godot/imported/IT'S MY TURN (8).mp3-a9ea40cd7c74cb88d1fa3f8bf348ffae.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/PITY PARTY/IT'S MY TURN (8).mp3"
+dest_files=["res://.godot/imported/IT'S MY TURN (8).mp3-a9ea40cd7c74cb88d1fa3f8bf348ffae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d6bcsuvj5q8e"
+path="res://.godot/imported/LOKI'S KINGDOM (53).mp3-1ac7aeea94c605530a369b738cca0db2.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/LOKI'S KINGDOM/LOKI'S KINGDOM (53).mp3"
+dest_files=["res://.godot/imported/LOKI'S KINGDOM (53).mp3-1ac7aeea94c605530a369b738cca0db2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

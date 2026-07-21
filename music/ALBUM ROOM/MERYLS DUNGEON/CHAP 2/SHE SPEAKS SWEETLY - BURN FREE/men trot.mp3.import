@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxcv00nloxeqe"
+path="res://.godot/imported/men trot.mp3-a9ee6c6af09be6859249ba3391c43119.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/men trot.mp3"
+dest_files=["res://.godot/imported/men trot.mp3-a9ee6c6af09be6859249ba3391c43119.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de5s32ah6607g"
+path="res://.godot/imported/GET RUN OFF BACK TO KANSAS (12).mp3-9a51c8475e55718b228ba065e9c51a8a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/GET RUN OFF BACK TO KANSAS/GET RUN OFF BACK TO KANSAS (12).mp3"
+dest_files=["res://.godot/imported/GET RUN OFF BACK TO KANSAS (12).mp3-9a51c8475e55718b228ba065e9c51a8a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

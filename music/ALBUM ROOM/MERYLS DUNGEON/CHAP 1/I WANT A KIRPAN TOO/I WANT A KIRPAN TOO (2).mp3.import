@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pou1wabvqepo"
+path="res://.godot/imported/I WANT A KIRPAN TOO (2).mp3-0d839b1d37aa16c7e4210f8ab1001e44.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/I WANT A KIRPAN TOO/I WANT A KIRPAN TOO (2).mp3"
+dest_files=["res://.godot/imported/I WANT A KIRPAN TOO (2).mp3-0d839b1d37aa16c7e4210f8ab1001e44.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

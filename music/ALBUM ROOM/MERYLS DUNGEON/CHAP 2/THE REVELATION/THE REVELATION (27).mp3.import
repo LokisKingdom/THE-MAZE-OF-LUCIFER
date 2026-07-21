@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wm02viqolh7j"
+path="res://.godot/imported/THE REVELATION (27).mp3-637691df05d335418e4defaa8bd5a8e7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/THE REVELATION/THE REVELATION (27).mp3"
+dest_files=["res://.godot/imported/THE REVELATION (27).mp3-637691df05d335418e4defaa8bd5a8e7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

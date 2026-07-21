@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fni2jcnoj1jc"
+path="res://.godot/imported/WEDNESDAY (22).mp3-d0a2cf2bf504d370e36ca17192fa3a49.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/I'VE NOTICED YOU'RE FOLLOWING ME/WEDNESDAY (22).mp3"
+dest_files=["res://.godot/imported/WEDNESDAY (22).mp3-d0a2cf2bf504d370e36ca17192fa3a49.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

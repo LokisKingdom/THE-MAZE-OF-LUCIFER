@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qonbvy7a8i02"
+path="res://.godot/imported/BEAT TOWER (6).mp3-6df65317b501ce81704ef44b8224625d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/BEAT TOWER/BEAT TOWER (6).mp3"
+dest_files=["res://.godot/imported/BEAT TOWER (6).mp3-6df65317b501ce81704ef44b8224625d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

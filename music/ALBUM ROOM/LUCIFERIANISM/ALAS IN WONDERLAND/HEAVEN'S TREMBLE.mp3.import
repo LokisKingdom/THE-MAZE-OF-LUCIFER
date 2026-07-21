@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwh8gm85vwtsc"
+path="res://.godot/imported/HEAVEN'S TREMBLE.mp3-c7cc5f5407a4d70caa6a8fc777f1eb6c.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/HEAVEN'S TREMBLE.mp3"
+dest_files=["res://.godot/imported/HEAVEN'S TREMBLE.mp3-c7cc5f5407a4d70caa6a8fc777f1eb6c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

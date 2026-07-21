@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckdaswimjtylq"
+path="res://.godot/imported/APPLICANT.mp3-aad0fb83dde230e5430ad1da66d5253e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/loose songs/APPLICANT.mp3"
+dest_files=["res://.godot/imported/APPLICANT.mp3-aad0fb83dde230e5430ad1da66d5253e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

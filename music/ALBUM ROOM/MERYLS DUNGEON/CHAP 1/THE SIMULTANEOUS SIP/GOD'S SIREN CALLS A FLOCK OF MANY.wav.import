@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4k816qfd1d5x"
+path="res://.godot/imported/GOD'S SIREN CALLS A FLOCK OF MANY.wav-822cd92fe16386ab2a6e69c325ffbcf6.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/THE SIMULTANEOUS SIP/GOD'S SIREN CALLS A FLOCK OF MANY.wav"
+dest_files=["res://.godot/imported/GOD'S SIREN CALLS A FLOCK OF MANY.wav-822cd92fe16386ab2a6e69c325ffbcf6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

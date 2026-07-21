@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://be5xwguqrjxbk"
+path="res://.godot/imported/Sligs Workday (17).mp3-ce4204c512cc06353f7982f8a12e44d5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LOKI'S KINGDOM/SLIGS WORKDAY/Sligs Workday (17).mp3"
+dest_files=["res://.godot/imported/Sligs Workday (17).mp3-ce4204c512cc06353f7982f8a12e44d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

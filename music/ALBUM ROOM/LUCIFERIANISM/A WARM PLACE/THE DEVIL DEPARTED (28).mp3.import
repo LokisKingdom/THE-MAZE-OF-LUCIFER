@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cevkk40d1ocm2"
+path="res://.godot/imported/THE DEVIL DEPARTED (28).mp3-63c7a2a3b960f3f5cd614c0a0e170d94.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/A WARM PLACE/THE DEVIL DEPARTED (28).mp3"
+dest_files=["res://.godot/imported/THE DEVIL DEPARTED (28).mp3-63c7a2a3b960f3f5cd614c0a0e170d94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

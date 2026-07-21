@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pfq6gvg4ie6s"
+path="res://.godot/imported/STAINS LIKE YOU.mp3-c2e2d2ae8557e97b85c890b0bb789943.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/STAINS LIKE YOU.mp3"
+dest_files=["res://.godot/imported/STAINS LIKE YOU.mp3-c2e2d2ae8557e97b85c890b0bb789943.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

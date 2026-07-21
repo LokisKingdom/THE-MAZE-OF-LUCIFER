@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c58hgvgt7ipa0"
+path="res://.godot/imported/GET OUT OF MR BURGER (15).mp3-3f12c040692f69d49928ccb07847e701.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE'S HIDDEN IN MY CHEST/GET OUT OF MR BURGER (15).mp3"
+dest_files=["res://.godot/imported/GET OUT OF MR BURGER (15).mp3-3f12c040692f69d49928ccb07847e701.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

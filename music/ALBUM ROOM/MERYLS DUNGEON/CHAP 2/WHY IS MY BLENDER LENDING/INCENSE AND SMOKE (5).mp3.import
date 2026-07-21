@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf2wke1nhdtpg"
+path="res://.godot/imported/INCENSE AND SMOKE (5).mp3-fd266b3946db33d46dac1db1dc475ca4.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/WHY IS MY BLENDER LENDING/INCENSE AND SMOKE (5).mp3"
+dest_files=["res://.godot/imported/INCENSE AND SMOKE (5).mp3-fd266b3946db33d46dac1db1dc475ca4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

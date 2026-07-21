@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxv17n4iiq5qc"
+path="res://.godot/imported/Inside the store.mp3-b59168a850c2e05479a4eae644246d44.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/Inside the store.mp3"
+dest_files=["res://.godot/imported/Inside the store.mp3-b59168a850c2e05479a4eae644246d44.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drbwfatk8mtk8"
+path="res://.godot/imported/I can give you this kiss on the cheek.mp3-e4ade87e9a7f773a395198515f2ef767.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/ALAS IN WONDERLAND/I can give you this kiss on the cheek.mp3"
+dest_files=["res://.godot/imported/I can give you this kiss on the cheek.mp3-e4ade87e9a7f773a395198515f2ef767.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

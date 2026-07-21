@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7uriig58jxef"
+path="res://.godot/imported/THIS IS THE WAY IT SHOULD BE (10).mp3-aa40dbf251ba0f0b86adb471d60a679a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/THIS IS THE WAY IT SHOULD BE/THIS IS THE WAY IT SHOULD BE (10).mp3"
+dest_files=["res://.godot/imported/THIS IS THE WAY IT SHOULD BE (10).mp3-aa40dbf251ba0f0b86adb471d60a679a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

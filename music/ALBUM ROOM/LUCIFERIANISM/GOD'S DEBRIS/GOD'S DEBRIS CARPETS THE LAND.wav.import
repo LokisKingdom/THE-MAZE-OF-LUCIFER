@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://biet1y2igvvrl"
+path="res://.godot/imported/GOD'S DEBRIS CARPETS THE LAND.wav-5cac9497184f9005d67851a2b24866a6.sample"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/GOD'S DEBRIS/GOD'S DEBRIS CARPETS THE LAND.wav"
+dest_files=["res://.godot/imported/GOD'S DEBRIS CARPETS THE LAND.wav-5cac9497184f9005d67851a2b24866a6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

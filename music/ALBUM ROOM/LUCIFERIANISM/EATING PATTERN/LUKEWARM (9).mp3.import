@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbntrmympblwr"
+path="res://.godot/imported/LUKEWARM (9).mp3-5efddbde386db73739dfc9edae0f68a9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/EATING PATTERN/LUKEWARM (9).mp3"
+dest_files=["res://.godot/imported/LUKEWARM (9).mp3-5efddbde386db73739dfc9edae0f68a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

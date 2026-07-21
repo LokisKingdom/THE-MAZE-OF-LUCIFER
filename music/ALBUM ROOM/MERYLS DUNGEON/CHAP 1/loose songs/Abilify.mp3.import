@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg5sjn6l2jebp"
+path="res://.godot/imported/Abilify.mp3-d378753c51f6b4825c82b561473db584.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 1/loose songs/Abilify.mp3"
+dest_files=["res://.godot/imported/Abilify.mp3-d378753c51f6b4825c82b561473db584.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

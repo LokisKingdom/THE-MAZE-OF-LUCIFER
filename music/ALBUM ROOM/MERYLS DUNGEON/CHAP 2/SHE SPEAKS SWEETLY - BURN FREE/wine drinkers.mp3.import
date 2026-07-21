@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3rgvs0c4ksde"
+path="res://.godot/imported/wine drinkers.mp3-ceb9bb203144ad5ac1b2fcef02e8d37e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/SHE SPEAKS SWEETLY - BURN FREE/wine drinkers.mp3"
+dest_files=["res://.godot/imported/wine drinkers.mp3-ceb9bb203144ad5ac1b2fcef02e8d37e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

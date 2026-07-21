@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxfv7mwpvy7rn"
+path="res://.godot/imported/WEAK I NEVER WAS (6).mp3-75d09dc667680bfa118551ea7214a7e1.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 2/When I was weak/WEAK I NEVER WAS (6).mp3"
+dest_files=["res://.godot/imported/WEAK I NEVER WAS (6).mp3-75d09dc667680bfa118551ea7214a7e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

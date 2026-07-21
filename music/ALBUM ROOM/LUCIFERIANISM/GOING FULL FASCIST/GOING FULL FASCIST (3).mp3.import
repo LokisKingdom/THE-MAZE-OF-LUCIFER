@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbnoam2bn8oxp"
+path="res://.godot/imported/GOING FULL FASCIST (3).mp3-e9bae7d5db3ad3ea1cad262a6fddb7d7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/LUCIFERIANISM/GOING FULL FASCIST/GOING FULL FASCIST (3).mp3"
+dest_files=["res://.godot/imported/GOING FULL FASCIST (3).mp3-e9bae7d5db3ad3ea1cad262a6fddb7d7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
