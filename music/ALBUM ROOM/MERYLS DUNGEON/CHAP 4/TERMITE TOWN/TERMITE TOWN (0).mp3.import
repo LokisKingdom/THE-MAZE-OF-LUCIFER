@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5m1mfm58xds"
+path="res://.godot/imported/TERMITE TOWN (0).mp3-05b7baaa8eef0a94d7dfeaf38dfa7569.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/TERMITE TOWN/TERMITE TOWN (0).mp3"
+dest_files=["res://.godot/imported/TERMITE TOWN (0).mp3-05b7baaa8eef0a94d7dfeaf38dfa7569.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu0e2kdm0jx4t"
+path="res://.godot/imported/SPECIAL FORCES (56).mp3-bbda7b3c4def2d5498f0d00664add624.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/SPECIAL FORCES/SPECIAL FORCES (56).mp3"
+dest_files=["res://.godot/imported/SPECIAL FORCES (56).mp3-bbda7b3c4def2d5498f0d00664add624.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

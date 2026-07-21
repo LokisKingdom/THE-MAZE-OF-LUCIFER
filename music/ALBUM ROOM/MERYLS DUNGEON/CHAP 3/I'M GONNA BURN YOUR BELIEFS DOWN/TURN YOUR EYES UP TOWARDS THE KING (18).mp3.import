@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cek7weiuemkro"
+path="res://.godot/imported/TURN YOUR EYES UP TOWARDS THE KING (18).mp3-ba4380318a9c60e300071a4d7277147e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/I'M GONNA BURN YOUR BELIEFS DOWN/TURN YOUR EYES UP TOWARDS THE KING (18).mp3"
+dest_files=["res://.godot/imported/TURN YOUR EYES UP TOWARDS THE KING (18).mp3-ba4380318a9c60e300071a4d7277147e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

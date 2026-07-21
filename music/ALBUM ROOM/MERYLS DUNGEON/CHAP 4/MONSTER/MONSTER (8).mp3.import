@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfl1kq5emxcq1"
+path="res://.godot/imported/MONSTER (8).mp3-80140f7c9c7060ba2137f621e5b8bda7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/MONSTER/MONSTER (8).mp3"
+dest_files=["res://.godot/imported/MONSTER (8).mp3-80140f7c9c7060ba2137f621e5b8bda7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

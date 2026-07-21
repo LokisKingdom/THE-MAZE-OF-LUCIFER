@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://degnq0bp4rvhw"
+path="res://.godot/imported/TURN YOUR EYES UP TOWARDS THE KING (Remix) (14).mp3-6f72a41c7180eec6dc6232271878faa9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/HOLE IN FACE/TURN YOUR EYES UP TOWARDS THE KING (Remix) (14).mp3"
+dest_files=["res://.godot/imported/TURN YOUR EYES UP TOWARDS THE KING (Remix) (14).mp3-6f72a41c7180eec6dc6232271878faa9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

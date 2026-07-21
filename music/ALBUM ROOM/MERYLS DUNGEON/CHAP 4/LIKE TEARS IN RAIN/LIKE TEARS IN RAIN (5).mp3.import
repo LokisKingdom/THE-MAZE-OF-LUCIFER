@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c46mjace0gvjf"
+path="res://.godot/imported/LIKE TEARS IN RAIN (5).mp3-f6297e7d0fe1a344660a3e99b2edae52.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/LIKE TEARS IN RAIN/LIKE TEARS IN RAIN (5).mp3"
+dest_files=["res://.godot/imported/LIKE TEARS IN RAIN (5).mp3-f6297e7d0fe1a344660a3e99b2edae52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

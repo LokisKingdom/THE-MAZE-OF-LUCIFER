@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://k5502b27fp2r"
+path="res://.godot/imported/REGINSMOL - The Ballad of Regin - INTRODUCTORY NOTE.mp3-6cf2ce34304b12032aa82dfd5bd6c6a1.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/HEIMDALL/REGINSMOL - The Ballad of Regin - INTRODUCTORY NOTE.mp3"
+dest_files=["res://.godot/imported/REGINSMOL - The Ballad of Regin - INTRODUCTORY NOTE.mp3-6cf2ce34304b12032aa82dfd5bd6c6a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

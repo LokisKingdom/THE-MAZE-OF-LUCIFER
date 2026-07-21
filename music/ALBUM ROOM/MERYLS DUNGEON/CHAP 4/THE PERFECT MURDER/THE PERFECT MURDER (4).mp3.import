@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnwcm74pcqc87"
+path="res://.godot/imported/THE PERFECT MURDER (4).mp3-b2620b3ffc1c2a6276011f822bb0824b.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/THE PERFECT MURDER/THE PERFECT MURDER (4).mp3"
+dest_files=["res://.godot/imported/THE PERFECT MURDER (4).mp3-b2620b3ffc1c2a6276011f822bb0824b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

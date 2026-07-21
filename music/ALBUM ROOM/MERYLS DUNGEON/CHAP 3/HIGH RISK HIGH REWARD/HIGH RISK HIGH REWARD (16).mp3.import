@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1uk7xlsdk00x"
+path="res://.godot/imported/HIGH RISK HIGH REWARD (16).mp3-88901ad61a5dbd9525b209fb5ebc458e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/HIGH RISK HIGH REWARD/HIGH RISK HIGH REWARD (16).mp3"
+dest_files=["res://.godot/imported/HIGH RISK HIGH REWARD (16).mp3-88901ad61a5dbd9525b209fb5ebc458e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://y0gkblr5blbh"
+path="res://.godot/imported/BURN THE INVESTIGATION (19).mp3-a52c490f4876f43b6814e720c91a7213.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/BURN THE INVESTIGATION/BURN THE INVESTIGATION (19).mp3"
+dest_files=["res://.godot/imported/BURN THE INVESTIGATION (19).mp3-a52c490f4876f43b6814e720c91a7213.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc41spuxn5sdb"
+path="res://.godot/imported/REAL INFANTRY (Remix).mp3-78036f248e67432e06b4f6eb291aafa7.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/IT'S ALREADY LATE/REAL INFANTRY (Remix).mp3"
+dest_files=["res://.godot/imported/REAL INFANTRY (Remix).mp3-78036f248e67432e06b4f6eb291aafa7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

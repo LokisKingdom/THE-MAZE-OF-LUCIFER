@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4d5v3buuvtmc"
+path="res://.godot/imported/YES I AM EVIL - re JordanOwen42.mp3-3f9954c930524083b330574a298d87c3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/THE GULLET/YES I AM EVIL - re JordanOwen42.mp3"
+dest_files=["res://.godot/imported/YES I AM EVIL - re JordanOwen42.mp3-3f9954c930524083b330574a298d87c3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

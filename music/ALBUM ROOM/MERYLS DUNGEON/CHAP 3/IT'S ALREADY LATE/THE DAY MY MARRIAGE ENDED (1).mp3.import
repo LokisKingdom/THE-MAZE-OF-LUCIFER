@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6yr05v8et6r"
+path="res://.godot/imported/THE DAY MY MARRIAGE ENDED (1).mp3-f6af1f0c2339edd5f9f81752de3ea840.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/IT'S ALREADY LATE/THE DAY MY MARRIAGE ENDED (1).mp3"
+dest_files=["res://.godot/imported/THE DAY MY MARRIAGE ENDED (1).mp3-f6af1f0c2339edd5f9f81752de3ea840.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

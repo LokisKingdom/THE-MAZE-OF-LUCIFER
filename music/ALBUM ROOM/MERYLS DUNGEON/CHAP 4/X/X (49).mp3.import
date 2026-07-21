@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btignqevd6qaw"
+path="res://.godot/imported/X (49).mp3-d8490fc970ef9ea1a7ddf1d92910e552.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/X/X (49).mp3"
+dest_files=["res://.godot/imported/X (49).mp3-d8490fc970ef9ea1a7ddf1d92910e552.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

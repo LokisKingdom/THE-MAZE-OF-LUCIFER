@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bju72o7eq6rv0"
+path="res://.godot/imported/JORDAN PETERSON PRISON OF HATE (46).mp3-2bcd95e13110ddd292ae26c493368d7d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/JORDAN PETERSON PRISON OF HATE/JORDAN PETERSON PRISON OF HATE (46).mp3"
+dest_files=["res://.godot/imported/JORDAN PETERSON PRISON OF HATE (46).mp3-2bcd95e13110ddd292ae26c493368d7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy6y7h3yvxhve"
+path="res://.godot/imported/I AM YOU - YOU ARE ME (25).mp3-2dac44a8fa4edd079283147b1e61ac11.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/I AM YOU YOU ARE ME/I AM YOU - YOU ARE ME (25).mp3"
+dest_files=["res://.godot/imported/I AM YOU - YOU ARE ME (25).mp3-2dac44a8fa4edd079283147b1e61ac11.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

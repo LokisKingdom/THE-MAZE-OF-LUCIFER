@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0d1dkhy84fae"
+path="res://.godot/imported/REGULARS (1).mp3-b4e520552fc4d2e3ac6a79707500bd32.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/REAL INFANTRY/REGULARS (1).mp3"
+dest_files=["res://.godot/imported/REGULARS (1).mp3-b4e520552fc4d2e3ac6a79707500bd32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

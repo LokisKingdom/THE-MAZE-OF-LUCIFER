@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d00um0ha0ui5t"
+path="res://.godot/imported/I NEVER CRY IN THE RAIN (3).mp3-e897d5b7922844d7837ab702d0befcd8.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/LIKE TEARS IN RAIN/I NEVER CRY IN THE RAIN (3).mp3"
+dest_files=["res://.godot/imported/I NEVER CRY IN THE RAIN (3).mp3-e897d5b7922844d7837ab702d0befcd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

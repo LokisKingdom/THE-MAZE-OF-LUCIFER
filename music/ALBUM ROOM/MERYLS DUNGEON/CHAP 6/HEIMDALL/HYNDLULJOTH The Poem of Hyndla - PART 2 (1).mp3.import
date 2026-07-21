@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3s1nnbgpn8nu"
+path="res://.godot/imported/HYNDLULJOTH The Poem of Hyndla - PART 2 (1).mp3-aca4886b4e45b01ac0cd2478f1112a95.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/HEIMDALL/HYNDLULJOTH The Poem of Hyndla - PART 2 (1).mp3"
+dest_files=["res://.godot/imported/HYNDLULJOTH The Poem of Hyndla - PART 2 (1).mp3-aca4886b4e45b01ac0cd2478f1112a95.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l6d3owu4mtk"
+path="res://.godot/imported/REGULARS [tiếng Việt] (20).mp3-7ea0340314ffc208f7ac20dc9db6f73e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 5/REGULARS [tiếng Việt]/REGULARS [tiếng Việt] (20).mp3"
+dest_files=["res://.godot/imported/REGULARS [tiếng Việt] (20).mp3-7ea0340314ffc208f7ac20dc9db6f73e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

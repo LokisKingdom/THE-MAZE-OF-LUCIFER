@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb3awgfpateb"
+path="res://.godot/imported/THAT CRAB CANCER (recover) (3).mp3-72d8ba3c5840c3ce8dcc76fc8000c59d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/РУЇНА ДІАВОЛА 一二警察/THAT CRAB CANCER (recover) (3).mp3"
+dest_files=["res://.godot/imported/THAT CRAB CANCER (recover) (3).mp3-72d8ba3c5840c3ce8dcc76fc8000c59d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

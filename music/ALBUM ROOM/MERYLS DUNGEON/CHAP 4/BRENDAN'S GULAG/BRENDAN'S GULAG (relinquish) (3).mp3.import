@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duptv6xjpl3n2"
+path="res://.godot/imported/BRENDAN'S GULAG (relinquish) (3).mp3-fb74c2e60faca7c63cb33c126a8fa672.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/BRENDAN'S GULAG/BRENDAN'S GULAG (relinquish) (3).mp3"
+dest_files=["res://.godot/imported/BRENDAN'S GULAG (relinquish) (3).mp3-fb74c2e60faca7c63cb33c126a8fa672.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

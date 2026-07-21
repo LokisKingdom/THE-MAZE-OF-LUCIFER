@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co56f473d3kgm"
+path="res://.godot/imported/THOU FOOL IN MY DESIGN (45).mp3-2b6b83f7277e06d833dc271d6246b007.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/THE GULLET/THOU FOOL IN MY DESIGN (45).mp3"
+dest_files=["res://.godot/imported/THOU FOOL IN MY DESIGN (45).mp3-2b6b83f7277e06d833dc271d6246b007.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

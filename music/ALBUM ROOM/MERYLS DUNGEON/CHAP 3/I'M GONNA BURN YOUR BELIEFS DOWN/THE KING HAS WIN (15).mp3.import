@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuqyorg68saoh"
+path="res://.godot/imported/THE KING HAS WIN (15).mp3-3f1fb5c81cb1da5f29fa43ab6e0263ef.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/I'M GONNA BURN YOUR BELIEFS DOWN/THE KING HAS WIN (15).mp3"
+dest_files=["res://.godot/imported/THE KING HAS WIN (15).mp3-3f1fb5c81cb1da5f29fa43ab6e0263ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

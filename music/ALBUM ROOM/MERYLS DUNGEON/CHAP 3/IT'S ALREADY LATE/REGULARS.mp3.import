@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4y4kbug52n7m"
+path="res://.godot/imported/REGULARS.mp3-a8ac4f1a75a5419832987b94d40fac48.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/IT'S ALREADY LATE/REGULARS.mp3"
+dest_files=["res://.godot/imported/REGULARS.mp3-a8ac4f1a75a5419832987b94d40fac48.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

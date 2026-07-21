@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://culdjslydf6ts"
+path="res://.godot/imported/FALL BEFORE THE LORD (84).mp3-b5f46ed0c4511584a9cd2a3a86af0d69.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/FALL BEFORE THE LORD/FALL BEFORE THE LORD (84).mp3"
+dest_files=["res://.godot/imported/FALL BEFORE THE LORD (84).mp3-b5f46ed0c4511584a9cd2a3a86af0d69.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

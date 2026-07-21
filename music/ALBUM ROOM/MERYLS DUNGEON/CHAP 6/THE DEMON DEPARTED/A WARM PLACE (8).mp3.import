@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cofnqelpuqydv"
+path="res://.godot/imported/A WARM PLACE (8).mp3-870239d470659e15361ba4e3aa841a47.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/THE DEMON DEPARTED/A WARM PLACE (8).mp3"
+dest_files=["res://.godot/imported/A WARM PLACE (8).mp3-870239d470659e15361ba4e3aa841a47.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

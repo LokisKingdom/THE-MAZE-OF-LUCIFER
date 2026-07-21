@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6bhwf7vwcwvo"
+path="res://.godot/imported/JEWEL THIEF (16).mp3-fb9429ef2d15298d4bf2f1b1578aaf49.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/HIGH RISK HIGH REWARD/JEWEL THIEF (16).mp3"
+dest_files=["res://.godot/imported/JEWEL THIEF (16).mp3-fb9429ef2d15298d4bf2f1b1578aaf49.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

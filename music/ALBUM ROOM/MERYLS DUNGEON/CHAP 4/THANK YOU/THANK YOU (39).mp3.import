@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drajk6jck6erd"
+path="res://.godot/imported/THANK YOU (39).mp3-aa4b0996618f871f9eea0f6a7a6ae627.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/THANK YOU/THANK YOU (39).mp3"
+dest_files=["res://.godot/imported/THANK YOU (39).mp3-aa4b0996618f871f9eea0f6a7a6ae627.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

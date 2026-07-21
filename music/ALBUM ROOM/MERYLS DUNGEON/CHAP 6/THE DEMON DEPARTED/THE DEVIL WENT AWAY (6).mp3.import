@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sddi0qrxg22o"
+path="res://.godot/imported/THE DEVIL WENT AWAY (6).mp3-cbcc360d61bdd716da713140eb8db8f6.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/THE DEMON DEPARTED/THE DEVIL WENT AWAY (6).mp3"
+dest_files=["res://.godot/imported/THE DEVIL WENT AWAY (6).mp3-cbcc360d61bdd716da713140eb8db8f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

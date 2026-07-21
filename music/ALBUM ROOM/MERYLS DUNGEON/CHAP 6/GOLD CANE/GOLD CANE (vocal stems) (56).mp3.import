@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hlw2eeunopyq"
+path="res://.godot/imported/GOLD CANE (vocal stems) (56).mp3-d3948a6135d6d55fe9693dccb2a66b7f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/GOLD CANE/GOLD CANE (vocal stems) (56).mp3"
+dest_files=["res://.godot/imported/GOLD CANE (vocal stems) (56).mp3-d3948a6135d6d55fe9693dccb2a66b7f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

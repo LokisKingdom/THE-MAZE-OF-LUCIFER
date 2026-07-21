@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj7w3ecnxwop4"
+path="res://.godot/imported/REAL INFANTRY (Remix) (1).mp3-e49b58354adba88e586824600507360a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/REAL INFANTRY/REAL INFANTRY (Remix) (1).mp3"
+dest_files=["res://.godot/imported/REAL INFANTRY (Remix) (1).mp3-e49b58354adba88e586824600507360a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

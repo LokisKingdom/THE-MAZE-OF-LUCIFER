@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bw4vv8g8h7tki"
+path="res://.godot/imported/一二警察 (40).mp3-23220aaa904a5653027b22a4c43c7852.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/РУЇНА ДІАВОЛА 一二警察/一二警察 (40).mp3"
+dest_files=["res://.godot/imported/一二警察 (40).mp3-23220aaa904a5653027b22a4c43c7852.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nvgg6f8r8arh"
+path="res://.godot/imported/Einz Zwei Polizei (Remake) (Remix) (5).mp3-a769c94e8bfdb3daa4c441e6c3ea1b15.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/IT'S ALREADY LATE/Einz Zwei Polizei (Remake) (Remix) (5).mp3"
+dest_files=["res://.godot/imported/Einz Zwei Polizei (Remake) (Remix) (5).mp3-a769c94e8bfdb3daa4c441e6c3ea1b15.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

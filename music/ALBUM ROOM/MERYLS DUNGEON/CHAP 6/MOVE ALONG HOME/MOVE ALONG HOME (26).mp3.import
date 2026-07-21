@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0ch10lkgalk8"
+path="res://.godot/imported/MOVE ALONG HOME (26).mp3-8d48db209363f80e1f9642808db5f3d3.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/MOVE ALONG HOME/MOVE ALONG HOME (26).mp3"
+dest_files=["res://.godot/imported/MOVE ALONG HOME (26).mp3-8d48db209363f80e1f9642808db5f3d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

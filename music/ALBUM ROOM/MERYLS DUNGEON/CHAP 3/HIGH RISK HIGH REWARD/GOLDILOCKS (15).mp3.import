@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://frt4hhvqf440"
+path="res://.godot/imported/GOLDILOCKS (15).mp3-51351bf4ebbf96c601d71e83978b3458.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/HIGH RISK HIGH REWARD/GOLDILOCKS (15).mp3"
+dest_files=["res://.godot/imported/GOLDILOCKS (15).mp3-51351bf4ebbf96c601d71e83978b3458.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

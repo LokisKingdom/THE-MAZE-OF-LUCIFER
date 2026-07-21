@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6px28hkiqrmh"
+path="res://.godot/imported/Tokyo (remake) (Remix) (1).mp3-61554672b0ca28944fcc1430a7119b38.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/IT'S ALREADY LATE/Tokyo (remake) (Remix) (1).mp3"
+dest_files=["res://.godot/imported/Tokyo (remake) (Remix) (1).mp3-61554672b0ca28944fcc1430a7119b38.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

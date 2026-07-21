@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3tiput2lxghc"
+path="res://.godot/imported/HEAVEN (10).mp3-3f7ec870e411daaa76135ead2d7349c5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/WOULD YOU RATHER/HEAVEN (10).mp3"
+dest_files=["res://.godot/imported/HEAVEN (10).mp3-3f7ec870e411daaa76135ead2d7349c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co6476m7pbvpi"
+path="res://.godot/imported/РУЇНА ДІАВОЛА (37).mp3-8de86146670c479ad5b78e8233cddb7f.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/РУЇНА ДІАВОЛА 一二警察/РУЇНА ДІАВОЛА (37).mp3"
+dest_files=["res://.godot/imported/РУЇНА ДІАВОЛА (37).mp3-8de86146670c479ad5b78e8233cddb7f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

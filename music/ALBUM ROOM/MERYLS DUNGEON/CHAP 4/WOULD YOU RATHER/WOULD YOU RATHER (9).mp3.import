@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chkjql32203i4"
+path="res://.godot/imported/WOULD YOU RATHER (9).mp3-e6be4968d8409d334ca91c2d974a596d.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/WOULD YOU RATHER/WOULD YOU RATHER (9).mp3"
+dest_files=["res://.godot/imported/WOULD YOU RATHER (9).mp3-e6be4968d8409d334ca91c2d974a596d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

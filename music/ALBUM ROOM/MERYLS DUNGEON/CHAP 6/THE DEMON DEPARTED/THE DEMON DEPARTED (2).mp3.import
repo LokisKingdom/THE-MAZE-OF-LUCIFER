@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fp5pp0hm0ysu"
+path="res://.godot/imported/THE DEMON DEPARTED (2).mp3-0a7135d67179bb8c315d689328a1f121.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/THE DEMON DEPARTED/THE DEMON DEPARTED (2).mp3"
+dest_files=["res://.godot/imported/THE DEMON DEPARTED (2).mp3-0a7135d67179bb8c315d689328a1f121.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

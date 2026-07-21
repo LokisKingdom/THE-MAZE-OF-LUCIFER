@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6q2sdjxlmhd2"
+path="res://.godot/imported/JUST WASTING TIME (34).mp3-5a4bb1480a0723ec0fcce456941b31a1.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/THE PERFECT MURDER/JUST WASTING TIME (34).mp3"
+dest_files=["res://.godot/imported/JUST WASTING TIME (34).mp3-5a4bb1480a0723ec0fcce456941b31a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

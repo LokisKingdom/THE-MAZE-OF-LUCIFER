@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c861s6yri8xsq"
+path="res://.godot/imported/THAT'S NOT THE POINT (15).mp3-e23a80d1821142da1af99cdad0d51a66.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/THAT'S NOT THE POINT/THAT'S NOT THE POINT (15).mp3"
+dest_files=["res://.godot/imported/THAT'S NOT THE POINT (15).mp3-e23a80d1821142da1af99cdad0d51a66.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxmvbljnr4v8b"
+path="res://.godot/imported/I'M KING - DON'T BOTHA (23).mp3-318e4995703bb6f5ce1963383bc656d5.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/BURN THE INVESTIGATION/I'M KING - DON'T BOTHA (23).mp3"
+dest_files=["res://.godot/imported/I'M KING - DON'T BOTHA (23).mp3-318e4995703bb6f5ce1963383bc656d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

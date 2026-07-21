@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6ecgretvx1p5"
+path="res://.godot/imported/THRYMSKVITHA - The Lay of Thrym (3).mp3-f94f7127705fe8b200912b9d104536a4.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/HEIMDALL/THRYMSKVITHA - The Lay of Thrym (3).mp3"
+dest_files=["res://.godot/imported/THRYMSKVITHA - The Lay of Thrym (3).mp3-f94f7127705fe8b200912b9d104536a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

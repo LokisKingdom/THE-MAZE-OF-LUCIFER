@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3nk5sk0cja47"
+path="res://.godot/imported/PERSONALITY INTERCOURSE BITCH 1_31.mp3-f5c6e7ec89b6e45f58793672be60fb26.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/JORDAN PETERSON PRISON OF HATE/PERSONALITY INTERCOURSE BITCH 1_31.mp3"
+dest_files=["res://.godot/imported/PERSONALITY INTERCOURSE BITCH 1_31.mp3-f5c6e7ec89b6e45f58793672be60fb26.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

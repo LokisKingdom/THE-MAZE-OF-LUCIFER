@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5o1rboarrsfv"
+path="res://.godot/imported/EAT MY ENTIRE GAT (5).mp3-bf7b201e3b748697a3726cc12c39c6b9.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/WOULD YOU RATHER/EAT MY ENTIRE GAT (5).mp3"
+dest_files=["res://.godot/imported/EAT MY ENTIRE GAT (5).mp3-bf7b201e3b748697a3726cc12c39c6b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

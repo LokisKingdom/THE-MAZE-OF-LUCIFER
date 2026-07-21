@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpjry2dq5mrd6"
+path="res://.godot/imported/I AM YOU YO - YOU ARE ME YO (5).mp3-b3d6a2c25832fa3655ea298f5641447e.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 4/I AM YOU YOU ARE ME/I AM YOU YO - YOU ARE ME YO (5).mp3"
+dest_files=["res://.godot/imported/I AM YOU YO - YOU ARE ME YO (5).mp3-b3d6a2c25832fa3655ea298f5641447e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

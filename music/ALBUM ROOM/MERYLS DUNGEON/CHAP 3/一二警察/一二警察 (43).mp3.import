@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ppsqc026lfb6"
+path="res://.godot/imported/一二警察 (43).mp3-06c17d30573916abd8db9af05c6a07a0.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 3/一二警察/一二警察 (43).mp3"
+dest_files=["res://.godot/imported/一二警察 (43).mp3-06c17d30573916abd8db9af05c6a07a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

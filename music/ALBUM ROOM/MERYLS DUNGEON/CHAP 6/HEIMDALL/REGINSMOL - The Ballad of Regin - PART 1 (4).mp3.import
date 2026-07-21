@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bha44uavmevjw"
+path="res://.godot/imported/REGINSMOL - The Ballad of Regin - PART 1 (4).mp3-0cf451d8aa1178e2993127cd918e272a.mp3str"
+
+[deps]
+
+source_file="res://music/ALBUM ROOM/MERYLS DUNGEON/CHAP 6/HEIMDALL/REGINSMOL - The Ballad of Regin - PART 1 (4).mp3"
+dest_files=["res://.godot/imported/REGINSMOL - The Ballad of Regin - PART 1 (4).mp3-0cf451d8aa1178e2993127cd918e272a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
