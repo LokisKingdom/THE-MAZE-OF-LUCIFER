@@ -1,3 +1,47 @@
+LUCIFER MEDIA GAME LICENSE v1.0
+
+Copyright (c) 2026 Lucifer Media Corporation
+
+You may copy and make new versions of this project, and it's game output,
+music is licensed separately under it's own terms, (see: "music" folder)
+I'd prefer if you make some significant changes to it before you sell it somewhere,
+but either way, please do not brand your version as the official version of THE MAZE OF LUCIFER,
+otherwise, you may make your version however you wish, and you can sell it.
+
+Include this License in your own derivitive version,
+or somehow accessable if you sell or use the songs.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software freely and without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+2. Any modified, forked, or derivative version of the Software must clearly
+   identify itself as an unofficial derivative and must not represent,
+   advertise, market, or imply that it is the official version of
+   THE MAZE OF LUCIFER or any other official Lucifer Media Corporation
+   product.
+
+3. Derivative works must not use the names "THE MAZE OF LUCIFER",
+   "Lucifer Media Corporation", or other official project branding in a
+   manner that is likely to cause confusion as to the source, sponsorship,
+   endorsement, or official status of the derivative work. This restriction
+   does not prohibit truthful statements such as "Based on THE MAZE OF
+   LUCIFER" or "Forked from THE MAZE OF LUCIFER."
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
 For Statico's Roguelike System for Godot
 
 MIT License
@@ -21,21 +65,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-THE MAZE OF LUCIFER
-
-Copyright © 2026 Lucifer Media Corporation.
-
-All Rights Reserved.
-
-This repository contains original software, artwork, writing, game
-design, and other creative works owned by Lucifer Media Corporation,
-except where otherwise noted.
-
-No permission is granted to copy, modify, redistribute, publish,
-or create derivative works from this project except as required by
-licenses accompanying third-party components.
-
-Third-party software included in this repository remains the property
-of its respective copyright holders and is licensed under its own
-terms.
