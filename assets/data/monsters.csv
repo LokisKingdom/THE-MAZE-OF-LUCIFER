@@ -3,10 +3,12 @@ spider,arachnid,spider,critters,,aggressive,"pest-17,pest-18",normal,20,40,12,#0
 coyote,dog,coyote,critters,,aggressive,dog-8,fast,7,10,6,#ff0000,4,false,false,false,false
 panther,feline,lynx,monsters,,aggressive,cat-2,fast,7,10,6,#ff0000,4,false,false,false,false
 knight,human,knight,human,HUMAN_SURVIVORS,aggressive,player-25,normal,15,50,8,#ff3333,8,true,true,true,true
+police,human,police,human,HUMAN_SURVIVORS,aggressive,police,normal,20,55,10,#ff3333,8,true,true,true,true
 monk,human,monk,human,HUMAN_SURVIVORS,aggressive,player-31,normal,15,50,8,#ff3333,8,true,true,true,true
 valkyrie,human,valkyrie,human,HUMAN_SURVIVORS,aggressive,player-4,normal,15,50,8,#ff3333,8,true,true,true,true
-snail,mollusk,snail,critters,,aggressive,pest-58,slow,20,40,12,#00ffff,4,false,false,false,false
-lizard,reptile,lizard,critters,,aggressive,reptile-64,normal,8,12,8,#ff0000,4,false,false,false,false
+wretch,human,wretch,human,HUMAN_SURVIVORS,aggressive,wretch,normal,9,39,7,#ff3333,8,true,true,true,true
+snail,mollusk,snail,critters,,passive,pest-58,slow,20,40,12,#00ffff,4,false,false,false,false
+lizard,reptile,lizard,critters,,passive,reptile-64,normal,8,12,8,#ff0000,4,false,false,false,false
 platino,reptile,platino,critters,,passive,reptile-99,normal,30,30,8,#cccccc,8,true,true,true,true
 rat,rodent,rat,critters,,aggressive,rodent-10,fast,7,10,6,#ff0000,4,false,false,false,false
 rabid-rat,rodent,rabid rat,critters,,aggressive,rodent-16,fast,7,12,6,#00ff00,4,false,false,false,false

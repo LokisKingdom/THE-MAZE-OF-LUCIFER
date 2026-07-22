@@ -36,7 +36,7 @@ script = ExtResource("3_kiqgm")
 [node name="Title" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=748826620]
 layout_mode = 2
 theme_type_variation = &"TitleLabel"
-text = "Godot Roguelike Example"
+text = "THE MAZE OF LUCIFER"
 label_settings = ExtResource("6_4mhxx")
 horizontal_alignment = 1
 
@@ -46,7 +46,7 @@ layout_mode = 2
 [node name="PlayButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=524628735]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Play"
+text = "Sell your Soul"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=500732407]
 custom_minimum_size = Vector2(200, 0)

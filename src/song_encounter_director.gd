@@ -267,8 +267,13 @@ static func _spawn_monsters(
 static func _get_monsters_for_danger(
 	danger_level: int
 ) -> Array[StringName]:
-	
-		# Z songs summon Satan exclusively.
+
+	# TEMPORARY POLICE TEST:
+	# Every G-Y song encounter will spawn only police.
+	if danger_level > 0 and danger_level < MAX_DANGER_LEVEL:
+		return [&"police"]
+
+	# Z songs summon Satan exclusively.
 	if danger_level == MAX_DANGER_LEVEL:
 		if MonsterFactory.monster_data.is_empty():
 			MonsterFactory._static_init()
@@ -276,9 +281,11 @@ static func _get_monsters_for_danger(
 		if MonsterFactory.monster_data.has(&"satan"):
 			return [&"satan"]
 
-		Log.e("Z encounter requested, but satan is missing from monsters.csv")
+		Log.e(
+			"Z encounter requested, but satan is missing from monsters.csv"
+		)
 		return []
-	
+		
 	if MonsterFactory.monster_data.is_empty():
 		MonsterFactory._static_init()
 
