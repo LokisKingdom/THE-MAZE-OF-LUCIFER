@@ -14,13 +14,13 @@ are free for use commercially, as outlined in the license found in the "music" r
 You may modify or change them, put my song lyrics into AI to make new versions (tos permitting),
 perform my lyrics yourself, use my songs commercially in your own projects or verbatim,
 with or without attribution, use the songs in any way you like, use them in games, movies, youtube videos, whatever you want,
-the full archive is yours to clone, and use however you wish.
+the full archive is yours to clone, and use however you wish. As governed by the terms of the LICENSE. ( https://github.com/LokisKingdom/THE-MAZE-OF-LUCIFER/blob/main/music/LICENSE )
 
-The Game Assets, are separate, Statico's Godot Roguelike Example has it's own terms,
-and I retain full control over the game aspect of this project's development.
-You may not sell games made from my project, as outlined in the terms..
+Statico's Godot Roguelike Example has it's own terms.
 
-(though you can use my music in your own game)
+You can clone and make games from my project folder, sell them commercially,
+make your own versions based on it, significant changes are preferred but not required,
+You can sell your own version on Steam, or wherever, as governed by the terms in the LICENSE. ( https://github.com/LokisKingdom/THE-MAZE-OF-LUCIFER/tree/main?tab=License-1-ov-file )
 
 The songs are really provocative,
 I hope they also make you think.
