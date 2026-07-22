@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bfslatuvr4fbb" path="res://scenes/ui/reticle.tscn" id="4_elgt6"]
 [ext_resource type="Script" uid="uid://buect6amyvpau" path="res://src/camera_controller.gd" id="4_jlmnd"]
 [ext_resource type="Script" uid="uid://8wuux8632dos" path="res://scenes/ui/reticle.gd" id="5_hrhsc"]
+[ext_resource type="Script" uid="uid://ckdwc0dxtrosm" path="res://src/book_reader.gd" id="8_4j704"]
 [ext_resource type="Material" uid="uid://jtcaw8hmu2ka" path="res://assets/particles/hit_particles.tres" id="8_87uf6"]
 [ext_resource type="Shader" uid="uid://mtyd2u0ryq75" path="res://assets/shaders/hit_vignette.gdshader" id="9_1xlxx"]
 [ext_resource type="Script" uid="uid://diw7a4gkr5ad" path="res://src/music_ui.gd" id="9_2a8rs"]
@@ -49,6 +50,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.62, 0.187137, 0.1798, 1)
+
+[node name="BookReader" type="Control" parent="UI" unique_id=666038577]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 452.0
+offset_top = 271.0
+offset_right = 452.0
+offset_bottom = 271.0
+script = ExtResource("8_4j704")
+
+[node name="PanelContainer2" type="PanelContainer" parent="UI/BookReader" unique_id=527692295]
+layout_mode = 0
+offset_left = -225.0
+offset_top = -150.0
+offset_right = 225.0
+offset_bottom = 150.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/BookReader/PanelContainer2" unique_id=260944460]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/BookReader/PanelContainer2/MarginContainer" unique_id=300080084]
+layout_mode = 2
+script = ExtResource("9_2a8rs")
+
+[node name="BookSelector" type="OptionButton" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1323545217]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=377582093]
+layout_mode = 2
+text = "Title"
+
+[node name="Author" type="Label" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1327905860]
+layout_mode = 2
+text = "Author"
+
+[node name="HSeparator" type="HSeparator" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1793535585]
+layout_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=792941255]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Text"
+
+[node name="HSeparator2" type="HSeparator" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1318990903]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="UI/BookReader/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1409135892]
+layout_mode = 2
+text = "Exit"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=1416610235]
 resources = [PackedStringArray("hit_particles"), [ExtResource("8_87uf6")]]
