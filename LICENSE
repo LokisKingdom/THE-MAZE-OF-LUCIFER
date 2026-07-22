@@ -1,46 +1,58 @@
 LUCIFER MEDIA GAME LICENSE v1.0
 
+THE MAZE OF LUCIFER / LOKIS AMAZING COPYRIGHT FREE JUKEBOX
+
 Copyright (c) 2026 Lucifer Media Corporation
 
-You may copy and make new versions of this project, and it's game output,
-music is licensed separately under it's own terms, (see: "music" folder)
-I'd prefer if you make some significant changes to it before you sell it somewhere,
-but either way, please do not brand your version as the official version of THE MAZE OF LUCIFER,
-otherwise, you may make your version however you wish, and you can sell it.
+This license applies only to the original game code, documentation, and other
+project material created by Lucifer Media Corporation and included with this
+project.
 
-Include this License in your own derivitive version,
-or somehow accessable if you sell or use the songs.
+Music, lyrics, lyrics sheets, and related audio materials are licensed
+separately under the terms found in the "music" folder.
+
+Third-party software and materials remain governed by their own licenses,
+including the MIT-licensed Godot Roguelike Example created by Ian Langworth.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software freely and without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+of the material covered by this license (the "Licensed Material"), to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies or
+derivative versions of the Licensed Material, and to permit others to do so.
 
-1. The above copyright notice and this permission notice shall be included in
-   all copies or substantial portions of the Software.
+Attribution to Lucifer Media Corporation is appreciated but is not required.
 
-2. Any modified, forked, or derivative version of the Software must clearly
-   identify itself as an unofficial derivative and must not represent,
-   advertise, market, or imply that it is the official version of
-   THE MAZE OF LUCIFER or any other official Lucifer Media Corporation
-   product.
+You are encouraged to make meaningful changes or additions before selling a
+derivative version, but this is a request and not a condition of this license.
 
-3. Derivative works must not use the names "THE MAZE OF LUCIFER",
-   "Lucifer Media Corporation", or other official project branding in a
-   manner that is likely to cause confusion as to the source, sponsorship,
-   endorsement, or official status of the derivative work. This restriction
-   does not prohibit truthful statements such as "Based on THE MAZE OF
-   LUCIFER" or "Forked from THE MAZE OF LUCIFER."
+Any modified, forked, redistributed, or derivative version must not represent,
+advertise, market, or imply that it is the official version of
+THE MAZE OF LUCIFER or any other official Lucifer Media Corporation product.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
-FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.
+Derivative versions must not use the names "THE MAZE OF LUCIFER",
+"Lucifer Media Corporation", or other official project branding in a manner
+likely to cause confusion regarding the source, sponsorship, endorsement, or
+official status of that version.
+
+This restriction does not prohibit truthful descriptive statements such as:
+
+"Based on THE MAZE OF LUCIFER"
+
+"Derived from THE MAZE OF LUCIFER"
+
+"Forked from THE MAZE OF LUCIFER"
+
+No person using the Licensed Material is required to reproduce this license,
+include a copyright notice, provide attribution, or publicly release their
+source code or modifications.
+
+THE LICENSED MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE LICENSED MATERIAL
+OR THE USE OR OTHER DEALINGS IN THE LICENSED MATERIAL.
 
 For Statico's Roguelike System for Godot
 
