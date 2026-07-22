@@ -159,15 +159,125 @@ class CheckHostileToPlayer:
 		Log.d("  CheckHostileToPlayer: Monster is not hostile")
 		return BTStatus.FAILURE
 
+# Find and engage the nearest hostile creature.
+#
+# This uses Monster.is_hostile_to(), so it respects:
+# - species relationships
+# - political/religious allegiances
+# - player faction affinity
+class EngageNearestHostile:
+	extends BTNode
 
-# Move randomly
+	func tick(actor: Monster, map: Map) -> BTStatus:
+		var actor_pos := map.find_monster_position(actor)
+
+		if actor_pos == Utils.INVALID_POS:
+			Log.d("  EngageNearestHostile: Actor position invalid")
+			return BTStatus.FAILURE
+
+		var nearest_target: Monster = null
+		var nearest_target_pos := Utils.INVALID_POS
+		var nearest_distance := INF
+
+		for candidate: Monster in map.get_monsters():
+			if candidate == actor:
+				continue
+
+			if candidate.is_dead:
+				continue
+
+			if not actor.is_hostile_to(candidate):
+				continue
+
+			var candidate_pos := map.find_monster_position(candidate)
+
+			if candidate_pos == Utils.INVALID_POS:
+				continue
+
+			var distance := actor_pos.distance_to(candidate_pos)
+
+			# Do not pursue creatures outside this actor's sight radius.
+			if distance > actor.sight_radius:
+				continue
+
+			if distance < nearest_distance:
+				nearest_target = candidate
+				nearest_target_pos = candidate_pos
+				nearest_distance = distance
+
+		if nearest_target == null:
+			Log.d("  EngageNearestHostile: No hostile creature nearby")
+			return BTStatus.FAILURE
+
+		# Attack only if the creature is actually hostile.
+		if actor.is_adjacent_to(actor_pos, nearest_target_pos):
+			var attack_direction := nearest_target_pos - actor_pos
+
+			actor.next_action = AttackMoveAction.new(
+				actor,
+				attack_direction
+			)
+
+			Log.d(
+				"  EngageNearestHostile: Attacking %s"
+				% nearest_target
+			)
+
+			return BTStatus.SUCCESS
+
+		# First try a route that avoids other creatures.
+		var move_direction := actor.get_next_step_towards_player(
+			map,
+			actor_pos,
+			nearest_target_pos,
+			true
+		)
+
+		# If blocked, try again without treating creatures as impassable.
+		if move_direction == Vector2i.ZERO:
+			move_direction = actor.get_next_step_towards_player(
+				map,
+				actor_pos,
+				nearest_target_pos,
+				false
+			)
+
+		if move_direction != Vector2i.ZERO:
+			# Use MoveAction here—not AttackMoveAction.
+			# This prevents attacking an ally who happens to block the path.
+			actor.next_action = MoveAction.new(
+				actor,
+				move_direction
+			)
+
+			Log.d(
+				"  EngageNearestHostile: Moving toward %s"
+				% nearest_target
+			)
+
+			return BTStatus.SUCCESS
+
+		Log.d("  EngageNearestHostile: No route to target")
+		return BTStatus.FAILURE
+
+
+# Move randomly without attacking creatures occupying the destination.
 class MoveRandomly:
 	extends BTNode
 
 	func tick(actor: Monster, _map: Map) -> BTStatus:
-		var move_dir := Utils.ALL_DIRECTIONS.pick_random() as Vector2i
-		actor.next_action = AttackMoveAction.new(actor, move_dir)
-		Log.d("  MoveRandomly: Moving in random direction %s" % move_dir)
+		var move_dir := (
+			Utils.ALL_DIRECTIONS.pick_random()
+			as Vector2i
+		)
+
+		actor.next_action = MoveAction.new(actor, move_dir)
+
+		Log.d(
+			"  MoveRandomly: Moving randomly in direction %s"
+			% move_dir
+		)
+
 		return BTStatus.SUCCESS
 
 
@@ -535,89 +645,54 @@ static func _convert_to_nodes(children: Array) -> Array[BTNode]:
 static func create_behavior_tree(monster: Monster) -> BTNode:
 	match monster.behavior:
 		Monster.Behavior.AGGRESSIVE:
-			return sequence(
-				selector(
-					# Try to attack player if visible and hostile
-					sequence(
-						CheckHostileToPlayer,
-						CheckPlayerVisible,
-						selector(
-							# Try ranged combat first
-							sequence(
-								CheckAndEquipRangedWeapon,
-								CheckHasRangedWeapon,
-								selector(
-									FireAtPlayer,
-									MoveTowardPlayer,
-								)
-							),
-							# Try melee combat with weapon seeking
-							sequence(
-								CheckIntelligentEnough,
-								# First try to get and use a melee weapon
-								selector(
-									CheckHasMeleeWeapon,  # Already have one equipped
-									EquipMeleeWeapon,  # Try to equip from inventory
-									# Need to find and get one - this whole sequence must complete
-									sequence(
-										FindNearbyMeleeWeapon,
-										MoveToAndPickupWeapon,
-									),
-								),
-								# Only try combat actions once we have a weapon
-								selector(
-									AttackPlayer,
-									MoveTowardPlayer,
-								)
-							),
-							# Fall back to basic melee combat
-							sequence(
-								selector(
-									AttackPlayer,
-									MoveTowardPlayer,
-								)
-							)
-						)
-					),
-					# If not hostile, move randomly sometimes
-					sequence(
-						CheckRandomChance.new(0.5),
-						MoveRandomly,
-					),
-					# Otherwise stay still
-					DoNothing
-				)
+			return selector(
+				# Attack or pursue the nearest creature this actor
+				# genuinely considers hostile.
+				EngageNearestHostile,
+
+				# Otherwise wander without attacking allies.
+				sequence(
+					CheckRandomChance.new(0.5),
+					MoveRandomly,
+				),
+
+				# Otherwise remain still.
+				DoNothing
 			)
 
 		Monster.Behavior.FEARFUL:
-			return sequence(
-				CheckPlayerVisible,
-				FleeFromPlayer,
-				# Otherwise stay still
+			return selector(
+				sequence(
+					CheckPlayerVisible,
+					FleeFromPlayer,
+				),
 				DoNothing
 			)
 
 		Monster.Behavior.CURIOUS:
-			return sequence(
-				CheckPlayerVisible,
-				selector(
+			return selector(
+				sequence(
+					CheckPlayerVisible,
 					MoveTowardPlayer,
-				)
+				),
+				DoNothing
 			)
 
 		Monster.Behavior.PASSIVE:
-			return sequence(
-				selector(
-					# 20% chance to move randomly
-					sequence(
-						CheckRandomChance.new(0.50),
-						MoveRandomly,
-					),
-					# Otherwise stay still
-					DoNothing
-				)
+			return selector(
+				# 50% chance to move randomly.
+				sequence(
+					CheckRandomChance.new(0.5),
+					MoveRandomly,
+				),
+
+				# Otherwise stay still.
+				DoNothing
 			)
 
 		_:
-			assert(false, "Invalid behavior: %s" % monster.behavior)
+			assert(
+				false,
+				"Invalid behavior: %s" % monster.behavior
+			)
 			return BTNode.new()
