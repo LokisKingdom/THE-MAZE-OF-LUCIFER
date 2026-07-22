@@ -1,3 +1,34 @@
+# LOKIS AMAZING COPYRIGHT FREE JUKEBOX
+
+AN AMAZING JUKEBOX FROM SATAN, THOUSANDS OF SATANIC AND LUCIFERIAN SONGS
+
+At this time, we have indexed:
+Albums: 93
+Songs: 5824
+On the Desktop Web App and Android App
+The full song archive located in the "music" room
+is far larger.
+
+All songs, lyrics sheets and mp3's created by me in these folders
+are free for use commercially, as outlined in the license found in the "music" room.
+You may modify or change them, put my song lyrics into AI to make new versions (tos permitting),
+perform my lyrics yourself, use my songs commercially in your own projects or verbatim,
+with or without attribution, use the songs in any way you like, use them in games, movies, youtube videos, whatever you want,
+the full archive is yours to clone, and use however you wish. As governed by the terms of the LICENSE. ( https://github.com/LokisKingdom/THE-MAZE-OF-LUCIFER/blob/main/music/LICENSE )
+
+Statico's Godot Roguelike Example has it's own terms.
+
+You can clone and make games from my project folder, sell them commercially,
+make your own versions based on it, significant changes are preferred but not required,
+You can sell your own version on Steam, or wherever, as governed by the terms in the LICENSE. ( https://github.com/LokisKingdom/THE-MAZE-OF-LUCIFER/tree/main?tab=License-1-ov-file )
+
+The songs are really provocative,
+I hope they also make you think.
+There is too much to talk about,
+RED APPLE, I liked that one......
+
+DEDICATED TO THE MOON GOD
+
 # Statico's Godot Roguelike Example
 
 This is an incomplete, copyable roguelike game made with Godot 4. It was originally going to be a sci-fi roguelike, but I decided to open-source it as a learning example. You can use it as a base for your own roguelike game. Play it [here](https://roguelike.statico.io), or play my original sci-fi themed roguelike [here](https://vesta.statico.io).
