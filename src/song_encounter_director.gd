@@ -11,7 +11,6 @@ const MAX_DANGER_LEVEL := 20
 # Keep special/player definitions out of random enemy encounters.
 const EXCLUDED_MONSTERS: Array[StringName] = [
 	&"human",
-	&"knight",
 ]
 
 # Prevent additional enemies from appearing directly beside the player.

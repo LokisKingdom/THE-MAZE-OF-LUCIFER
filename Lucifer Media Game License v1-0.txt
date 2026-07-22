@@ -1,0 +1,112 @@
+LOKIS AMAZING COPYRIGHT FREE JUKEBOX
+AN AMAZING JUKEBOX FROM SATAN, THOUSANDS OF SATANIC AND LUCIFERIAN SONGS
+
+At this time, we have indexed: Albums: 93 Songs: 5824 On the Desktop Web App and Android App The full song archive located in the "music" room is far larger.
+
+All songs, lyrics sheets and mp3's created by me in these folders are free for use commercially, as outlined in the license found in the "music" room. You may modify or change them, put my song lyrics into AI to make new versions (tos permitting), perform my lyrics yourself, use my songs commercially in your own projects or verbatim, with or without attribution, use the songs in any way you like, use them in games, movies, youtube videos, whatever you want, the full archive is yours to clone, and use however you wish. As governed by the terms of the LICENSE. ( https://github.com/LokisKingdom/THE-MAZE-OF-LUCIFER/blob/main/music/LICENSE )
+
+Statico's Godot Roguelike Example has it's own terms.
+
+You can clone and make games from my project folder, sell them commercially, make your own versions based on it, significant changes are preferred but not required, You can sell your own version on Steam, or wherever, as governed by the terms in the LICENSE. ( https://github.com/LokisKingdom/THE-MAZE-OF-LUCIFER/tree/main?tab=License-1-ov-file )
+
+The songs are really provocative, I hope they also make you think. There is too much to talk about, RED APPLE, I liked that one......
+
+DEDICATED TO THE MOON GOD
+
+LUCIFER MEDIA GAME LICENSE v1.0
+
+THE MAZE OF LUCIFER / LOKIS AMAZING COPYRIGHT FREE JUKEBOX
+
+Copyright (c) 2026 Lucifer Media Corporation
+
+THIS LICENSE APPLIES ONLY TO THE ORIGINAL GAME CODE, DOCUMENTATION, AND OTHER
+PROJECT MATERIAL CREATED BY LUCIFER MEDIA CORPORATION AND INCLUDED WITH THIS
+PROJECT.
+
+MUSIC, LYRICS, LYRICS SHEETS, AND RELATED AUDIO MATERIALS ARE LICENSED
+SEPARATELY UNDER THE TERMS FOUND IN THE "MUSIC" FOLDER.
+
+THIRD-PARTY SOFTWARE AND MATERIALS REMAIN GOVERNED BY THEIR OWN LICENSES,
+INCLUDING THE MIT-LICENSED GODOT ROGUELIKE EXAMPLE CREATED BY IAN LANGWORTH.
+
+PERMISSION IS HEREBY GRANTED, FREE OF CHARGE, TO ANY PERSON OBTAINING A COPY
+OF THE MATERIAL COVERED BY THIS LICENSE (THE "LICENSED MATERIAL"), TO USE,
+COPY, MODIFY, MERGE, PUBLISH, DISTRIBUTE, SUBLICENSE, AND/OR SELL COPIES OR
+DERIVATIVE VERSIONS OF THE LICENSED MATERIAL, AND TO PERMIT OTHERS TO DO SO.
+
+ATTRIBUTION TO LUCIFER MEDIA CORPORATION IS APPRECIATED BUT IS NOT REQUIRED.
+
+YOU ARE ENCOURAGED TO MAKE MEANINGFUL CHANGES OR ADDITIONS BEFORE SELLING A
+DERIVATIVE VERSION, BUT THIS IS A REQUEST AND NOT A CONDITION OF THIS LICENSE.
+
+ANY MODIFIED, FORKED, REDISTRIBUTED, OR DERIVATIVE VERSION MUST NOT REPRESENT,
+ADVERTISE, MARKET, OR IMPLY THAT IT IS THE OFFICIAL VERSION OF
+THE MAZE OF LUCIFER OR ANY OTHER OFFICIAL LUCIFER MEDIA CORPORATION PRODUCT.
+
+DERIVATIVE VERSIONS MUST NOT USE THE NAMES "THE MAZE OF LUCIFER",
+"LUCIFER MEDIA CORPORATION", OR OTHER OFFICIAL PROJECT BRANDING IN A MANNER
+LIKELY TO CAUSE CONFUSION REGARDING THE SOURCE, SPONSORSHIP, ENDORSEMENT, OR
+OFFICIAL STATUS OF THAT VERSION.
+
+THIS RESTRICTION DOES NOT PROHIBIT TRUTHFUL DESCRIPTIVE STATEMENTS SUCH AS:
+
+"BASED ON THE MAZE OF LUCIFER"
+"DERIVED FROM THE MAZE OF LUCIFER"
+"FORKED FROM THE MAZE OF LUCIFER"
+
+ANY PERSON REDISTRIBUTING OR PUBLISHING THE LICENSED MATERIAL, OR A DERIVATIVE
+VERSION OF THE LICENSED MATERIAL, SHALL INCLUDE A COPY OF THIS LICENSE IN A
+REASONABLY ACCESSIBLE LOCATION.
+
+THIS REQUIREMENT APPLIES ONLY TO THE LICENSED MATERIAL GOVERNED BY THIS
+LICENSE. MUSIC, LYRICS, LYRICS SHEETS, AND RELATED AUDIO MATERIALS REMAIN
+GOVERNED EXCLUSIVELY BY THE LICENSE CONTAINED IN THE "MUSIC" FOLDER AND ARE
+NOT SUBJECT TO THIS LICENSE DISTRIBUTION REQUIREMENT.
+
+THE LICENSED MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE LICENSED MATERIAL
+OR THE USE OR OTHER DEALINGS IN THE LICENSED MATERIAL.
+
+For Statico's Roguelike System for Godot
+
+MIT License
+
+Copyright (c) 2025 Ian Langworth
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+THE DEVIL'S SHADOW Music License
+
+Copyright © 2026 Lucifer Media Corporation.
+
+Permission is hereby granted to use, copy, modify, synchronize,
+perform, distribute, and commercially exploit these musical works,
+with or without attribution.
+
+This license applies only to the music contained in this directory,
+and to the text based lyrics sheets.
+
+It does not grant any rights to the source code, artwork, writing,
+characters, game design, trademarks, or any other assets contained
+elsewhere in this repository.

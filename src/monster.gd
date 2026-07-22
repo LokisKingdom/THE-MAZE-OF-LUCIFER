@@ -49,6 +49,7 @@ var status_effects: Array[StatusEffect] = []
 var behavior_tree: MonsterAI.BTNode
 var next_action: ActorAction
 var faction: Factions.Type = Factions.Type.NONE
+var allegiance: Factions.Allegiance = Factions.Allegiance.NONE
 var hates_player: bool = false
 
 # Body part properties that determine equipment usage
@@ -262,11 +263,12 @@ func is_hostile_to(other: Monster) -> bool:
 			return affinity < 0
 		return true
 
-	# Peaceful monsters are never hostile
-	if other.behavior == Behavior.PASSIVE:
-		return false
-
-	return Factions.are_hostile(faction, other.faction)
+	return Factions.are_hostile(
+		faction,
+		other.faction,
+		allegiance,
+		other.allegiance
+	)
 
 
 func add_item(item: Item) -> void:
