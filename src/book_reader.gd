@@ -57,17 +57,42 @@ func _ready() -> void:
 	exit_button.pressed.connect(close_book)
 	selector.item_selected.connect(_on_book_selected)
 
-	selector.clear()
-
-	for book in BOOKS:
-		selector.add_item(book["title"])
-
-	if BOOKS.size() > 0:
-		load_book(0)
+	refresh_book_selector()
 
 	hide()
+	
+	
+
+func refresh_book_selector() -> void:
+	selector.clear()
+
+	for book_index in Library.unlocked_books:
+		if book_index < 0 or book_index >= BOOKS.size():
+			continue
+
+		var book: Dictionary = BOOKS[book_index]
+
+		selector.add_item(book["title"])
+
+		var selector_index: int = selector.item_count - 1
+		selector.set_item_metadata(selector_index, book_index)
+
+	if selector.item_count > 0:
+		selector.select(0)
+
+		var first_book_index: int = selector.get_item_metadata(0)
+		load_book(first_book_index)
+	else:
+		title_label.text = "No Books Found"
+		author_label.text = ""
+		text_label.text = "You have not discovered any books yet."
 
 
+func _on_book_selected(selector_index: int) -> void:
+	var book_index: int = selector.get_item_metadata(selector_index)
+	load_book(book_index)
+	
+	
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and not event.echo:
@@ -83,10 +108,6 @@ func _input(event: InputEvent) -> void:
 			elif event.keycode == KEY_ESCAPE and visible:
 				close_book()
 				get_viewport().set_input_as_handled()
-
-
-func _on_book_selected(index: int) -> void:
-	load_book(index)
 
 
 func load_book(index: int) -> void:

@@ -29,6 +29,7 @@ ItemTiles="*res://src/item_tiles.gd"
 WorldTiles="*res://src/world_tiles.gd"
 CharacterTiles="*res://src/character_tiles.gd"
 MusicManager="*uid://crr28sufyb3sf"
+Library="*uid://3wvh5yo0l6wb"
 
 [debug]
 
