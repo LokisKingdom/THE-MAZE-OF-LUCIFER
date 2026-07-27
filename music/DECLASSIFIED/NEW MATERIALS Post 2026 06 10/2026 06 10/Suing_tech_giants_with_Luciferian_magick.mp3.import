@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://khvg38ckjt2n"
+path="res://.godot/imported/Suing_tech_giants_with_Luciferian_magick.mp3-6f08de489e79fd54f62608b0a80d0070.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/Suing_tech_giants_with_Luciferian_magick.mp3"
+dest_files=["res://.godot/imported/Suing_tech_giants_with_Luciferian_magick.mp3-6f08de489e79fd54f62608b0a80d0070.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

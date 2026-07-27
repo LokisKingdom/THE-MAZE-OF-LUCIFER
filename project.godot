@@ -40,8 +40,9 @@ gdscript/warnings/unsafe_call_argument=1
 
 [display]
 
-window/size/viewport_width=576
-window/size/viewport_height=324
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/size/window_width_override=1512
 window/size/window_height_override=949
 window/stretch/aspect="expand"

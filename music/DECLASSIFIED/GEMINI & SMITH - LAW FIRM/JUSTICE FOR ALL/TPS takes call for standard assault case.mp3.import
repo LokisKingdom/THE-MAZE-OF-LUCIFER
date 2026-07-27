@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6tif48qfesci"
+path="res://.godot/imported/TPS takes call for standard assault case.mp3-18c9f21131972f9601e2b6e9452e2c11.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/GEMINI & SMITH - LAW FIRM/JUSTICE FOR ALL/TPS takes call for standard assault case.mp3"
+dest_files=["res://.godot/imported/TPS takes call for standard assault case.mp3-18c9f21131972f9601e2b6e9452e2c11.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dch7fukvyugq0"
+path="res://.godot/imported/FIRE DISCO LIGHTS.mp3-b58f06a512a2f02536aaf574dc52c7dc.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/1 58 PM 2026 05 31 - SUNDAY/FIRE DISCO LIGHTS.mp3"
+dest_files=["res://.godot/imported/FIRE DISCO LIGHTS.mp3-b58f06a512a2f02536aaf574dc52c7dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

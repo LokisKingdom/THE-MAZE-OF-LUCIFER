@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq7n3wcxe21xp"
+path="res://.godot/imported/LOKI AND THE WINE JUG.mp3-c1ca6a86cde432934dceac9178d1c4dd.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/LOKI AND THE WINE JUG.mp3"
+dest_files=["res://.godot/imported/LOKI AND THE WINE JUG.mp3-c1ca6a86cde432934dceac9178d1c4dd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

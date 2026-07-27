@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ch6vcxgx7ayk2"
+path="res://.godot/imported/literally man - no idea what i said when i recorded for 10 hours - how genocidal was it.mp3-3100dc8578ec6932f143d4bf39ac8da6.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/literally man - no idea what i said when i recorded for 10 hours - how genocidal was it.mp3"
+dest_files=["res://.godot/imported/literally man - no idea what i said when i recorded for 10 hours - how genocidal was it.mp3-3100dc8578ec6932f143d4bf39ac8da6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

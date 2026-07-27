@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhlqp58fr5yv3"
+path="res://.godot/imported/SQUEE505.mp3-7628f6de34cd85e95369d59b9909f5d3.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/SQUEE505.mp3"
+dest_files=["res://.godot/imported/SQUEE505.mp3-7628f6de34cd85e95369d59b9909f5d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m0wn2gs4o6lw"
+path="res://.godot/imported/BRENDAN S ROSE - LAST WILL AND TESTAMENT.mp3-ef87f3cb5120082ae276ad2e28b427ed.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/BRENDAN S ROSE - LAST WILL AND TESTAMENT.mp3"
+dest_files=["res://.godot/imported/BRENDAN S ROSE - LAST WILL AND TESTAMENT.mp3-ef87f3cb5120082ae276ad2e28b427ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

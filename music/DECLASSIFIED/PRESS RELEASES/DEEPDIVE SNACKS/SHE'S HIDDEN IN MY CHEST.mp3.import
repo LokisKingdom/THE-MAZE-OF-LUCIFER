@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr0p5kl450uir"
+path="res://.godot/imported/SHE'S HIDDEN IN MY CHEST.mp3-3dc7325946d25f6688592a4c76f98153.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/SHE'S HIDDEN IN MY CHEST.mp3"
+dest_files=["res://.godot/imported/SHE'S HIDDEN IN MY CHEST.mp3-3dc7325946d25f6688592a4c76f98153.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

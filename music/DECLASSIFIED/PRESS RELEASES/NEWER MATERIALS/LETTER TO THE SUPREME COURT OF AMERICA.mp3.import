@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7hvsl1d7yeht"
+path="res://.godot/imported/LETTER TO THE SUPREME COURT OF AMERICA.mp3-ee2bc3050c7c73c551f75c85e3ca58ab.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/LETTER TO THE SUPREME COURT OF AMERICA.mp3"
+dest_files=["res://.godot/imported/LETTER TO THE SUPREME COURT OF AMERICA.mp3-ee2bc3050c7c73c551f75c85e3ca58ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

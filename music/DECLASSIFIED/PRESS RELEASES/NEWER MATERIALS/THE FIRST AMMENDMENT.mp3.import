@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://box2j3740c25m"
+path="res://.godot/imported/THE FIRST AMMENDMENT.mp3-ea5ae604e8c90dab319ba74c16eed6fc.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/THE FIRST AMMENDMENT.mp3"
+dest_files=["res://.godot/imported/THE FIRST AMMENDMENT.mp3-ea5ae604e8c90dab319ba74c16eed6fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

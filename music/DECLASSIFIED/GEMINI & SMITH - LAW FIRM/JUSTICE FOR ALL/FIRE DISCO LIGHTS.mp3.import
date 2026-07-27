@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpmw1o784hhgd"
+path="res://.godot/imported/FIRE DISCO LIGHTS.mp3-a29fb8057ad13a839b8856c9d877d4e2.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/GEMINI & SMITH - LAW FIRM/JUSTICE FOR ALL/FIRE DISCO LIGHTS.mp3"
+dest_files=["res://.godot/imported/FIRE DISCO LIGHTS.mp3-a29fb8057ad13a839b8856c9d877d4e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

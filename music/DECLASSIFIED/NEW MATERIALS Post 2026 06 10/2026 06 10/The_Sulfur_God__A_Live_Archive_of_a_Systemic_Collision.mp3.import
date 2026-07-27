@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxya3u240wjub"
+path="res://.godot/imported/The_Sulfur_God__A_Live_Archive_of_a_Systemic_Collision.mp3-1771fb90b6b3b23f0a1e8117cae8eae1.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/The_Sulfur_God__A_Live_Archive_of_a_Systemic_Collision.mp3"
+dest_files=["res://.godot/imported/The_Sulfur_God__A_Live_Archive_of_a_Systemic_Collision.mp3-1771fb90b6b3b23f0a1e8117cae8eae1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

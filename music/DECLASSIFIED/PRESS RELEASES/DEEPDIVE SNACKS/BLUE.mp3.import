@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dic6oepmuqe7t"
+path="res://.godot/imported/BLUE.mp3-423692f7d51607d4e0ebfb352b2b8d2d.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/BLUE.mp3"
+dest_files=["res://.godot/imported/BLUE.mp3-423692f7d51607d4e0ebfb352b2b8d2d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

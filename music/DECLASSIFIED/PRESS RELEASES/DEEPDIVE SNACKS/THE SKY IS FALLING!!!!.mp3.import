@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ch0pu0guj867p"
+path="res://.godot/imported/THE SKY IS FALLING!!!!.mp3-dd77a4290c285ee62f4419a019fe8beb.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/THE SKY IS FALLING!!!!.mp3"
+dest_files=["res://.godot/imported/THE SKY IS FALLING!!!!.mp3-dd77a4290c285ee62f4419a019fe8beb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

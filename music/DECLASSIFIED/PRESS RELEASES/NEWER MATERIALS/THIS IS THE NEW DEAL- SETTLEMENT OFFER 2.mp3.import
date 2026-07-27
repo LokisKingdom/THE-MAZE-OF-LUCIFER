@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://15me2jqias0e"
+path="res://.godot/imported/THIS IS THE NEW DEAL- SETTLEMENT OFFER 2.mp3-12ab9dd253de72963361a5c6c69b8595.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/THIS IS THE NEW DEAL- SETTLEMENT OFFER 2.mp3"
+dest_files=["res://.godot/imported/THIS IS THE NEW DEAL- SETTLEMENT OFFER 2.mp3-12ab9dd253de72963361a5c6c69b8595.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

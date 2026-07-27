@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu7y8r8aq7rmb"
+path="res://.godot/imported/Brendan_Rose_and_Luciferian_Legal_Magick.mp3-cae8f9b868d8b4adbb9c7abfa3a96d7d.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/Brendan_Rose_and_Luciferian_Legal_Magick.mp3"
+dest_files=["res://.godot/imported/Brendan_Rose_and_Luciferian_Legal_Magick.mp3-cae8f9b868d8b4adbb9c7abfa3a96d7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

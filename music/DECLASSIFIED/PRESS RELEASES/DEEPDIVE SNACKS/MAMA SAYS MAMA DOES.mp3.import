@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dv2reihb72ja"
+path="res://.godot/imported/MAMA SAYS MAMA DOES.mp3-23e36c57680f4b21c57ce87dd6a7473f.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/MAMA SAYS MAMA DOES.mp3"
+dest_files=["res://.godot/imported/MAMA SAYS MAMA DOES.mp3-23e36c57680f4b21c57ce87dd6a7473f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

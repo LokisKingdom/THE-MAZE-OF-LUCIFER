@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8chd6265alr1"
+path="res://.godot/imported/TPS TAKES 4 HOURS TO HANGUP ON A CALL TO FILE A REPORT (reduced file size).mp3-4027c140e8a3ff1706dfb50c1425d0c1.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/TPS TAKES 4 HOURS TO HANGUP ON A CALL TO FILE A REPORT (reduced file size).mp3"
+dest_files=["res://.godot/imported/TPS TAKES 4 HOURS TO HANGUP ON A CALL TO FILE A REPORT (reduced file size).mp3-4027c140e8a3ff1706dfb50c1425d0c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

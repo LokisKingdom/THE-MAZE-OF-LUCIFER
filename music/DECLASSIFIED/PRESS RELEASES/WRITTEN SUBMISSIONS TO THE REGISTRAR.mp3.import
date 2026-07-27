@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjvfibn7dkikh"
+path="res://.godot/imported/WRITTEN SUBMISSIONS TO THE REGISTRAR.mp3-1b5cd946e280a72fabdc67678711b4fc.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/WRITTEN SUBMISSIONS TO THE REGISTRAR.mp3"
+dest_files=["res://.godot/imported/WRITTEN SUBMISSIONS TO THE REGISTRAR.mp3-1b5cd946e280a72fabdc67678711b4fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

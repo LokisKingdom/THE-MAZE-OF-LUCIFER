@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://du22bmsma1w41"
+path="res://.godot/imported/Art Therapy For Latent Criminals.mp3-3e94e19243133284a54a913bdb85a25a.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/Art Therapy For Latent Criminals.mp3"
+dest_files=["res://.godot/imported/Art Therapy For Latent Criminals.mp3-3e94e19243133284a54a913bdb85a25a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

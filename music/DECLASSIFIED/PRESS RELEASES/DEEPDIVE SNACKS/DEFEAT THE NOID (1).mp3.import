@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://57027l6sxf8b"
+path="res://.godot/imported/DEFEAT THE NOID (1).mp3-2e35269c9f8767c313cd5363efdba75e.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/DEFEAT THE NOID (1).mp3"
+dest_files=["res://.godot/imported/DEFEAT THE NOID (1).mp3-2e35269c9f8767c313cd5363efdba75e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

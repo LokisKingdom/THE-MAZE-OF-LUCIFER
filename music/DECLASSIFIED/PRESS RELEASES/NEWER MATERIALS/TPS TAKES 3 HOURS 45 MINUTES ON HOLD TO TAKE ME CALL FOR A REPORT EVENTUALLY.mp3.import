@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://uwodjm557hg4"
+path="res://.godot/imported/TPS TAKES 3 HOURS 45 MINUTES ON HOLD TO TAKE ME CALL FOR A REPORT EVENTUALLY.mp3-fb8cac6675699c2a07519382d2889fac.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/TPS TAKES 3 HOURS 45 MINUTES ON HOLD TO TAKE ME CALL FOR A REPORT EVENTUALLY.mp3"
+dest_files=["res://.godot/imported/TPS TAKES 3 HOURS 45 MINUTES ON HOLD TO TAKE ME CALL FOR A REPORT EVENTUALLY.mp3-fb8cac6675699c2a07519382d2889fac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

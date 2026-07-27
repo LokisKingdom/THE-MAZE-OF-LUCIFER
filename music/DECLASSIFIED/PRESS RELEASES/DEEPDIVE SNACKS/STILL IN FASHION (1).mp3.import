@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcshx4f313p70"
+path="res://.godot/imported/STILL IN FASHION (1).mp3-5959a89b309ab1ee2a7d7861c9bbf2c4.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/STILL IN FASHION (1).mp3"
+dest_files=["res://.godot/imported/STILL IN FASHION (1).mp3-5959a89b309ab1ee2a7d7861c9bbf2c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

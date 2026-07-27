@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jkkuieagwdq5"
+path="res://.godot/imported/WITHOUT PREJUDICE - Martin Dymrkiv TPS.mp3-be06d2aeceed6b644eaabf040251bc6a.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/GEMINI & SMITH - LAW FIRM/JUSTICE FOR ALL/4 hour dropped call with TPS/WITHOUT PREJUDICE - Martin Dymrkiv TPS.mp3"
+dest_files=["res://.godot/imported/WITHOUT PREJUDICE - Martin Dymrkiv TPS.mp3-be06d2aeceed6b644eaabf040251bc6a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

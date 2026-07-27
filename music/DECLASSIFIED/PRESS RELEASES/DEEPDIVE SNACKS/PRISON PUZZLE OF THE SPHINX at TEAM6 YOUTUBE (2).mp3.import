@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8vjxifodekd4"
+path="res://.godot/imported/PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (2).mp3-13bc72c67dc41426489611d4584c34af.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (2).mp3"
+dest_files=["res://.godot/imported/PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (2).mp3-13bc72c67dc41426489611d4584c34af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

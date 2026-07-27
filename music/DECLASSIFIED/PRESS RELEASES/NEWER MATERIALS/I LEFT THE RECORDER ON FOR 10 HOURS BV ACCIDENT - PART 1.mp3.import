@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c56ds36gbkruj"
+path="res://.godot/imported/I LEFT THE RECORDER ON FOR 10 HOURS BV ACCIDENT - PART 1.mp3-6eb6997a1cad6c10c1baef6c6a7bb311.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/I LEFT THE RECORDER ON FOR 10 HOURS BV ACCIDENT - PART 1.mp3"
+dest_files=["res://.godot/imported/I LEFT THE RECORDER ON FOR 10 HOURS BV ACCIDENT - PART 1.mp3-6eb6997a1cad6c10c1baef6c6a7bb311.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

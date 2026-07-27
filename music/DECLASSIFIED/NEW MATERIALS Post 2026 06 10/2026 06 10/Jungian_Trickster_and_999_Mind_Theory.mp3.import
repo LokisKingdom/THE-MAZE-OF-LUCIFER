@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdka6a77byeid"
+path="res://.godot/imported/Jungian_Trickster_and_999_Mind_Theory.mp3-6b6d9cb4f66c6686425b3967b3258468.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/Jungian_Trickster_and_999_Mind_Theory.mp3"
+dest_files=["res://.godot/imported/Jungian_Trickster_and_999_Mind_Theory.mp3-6b6d9cb4f66c6686425b3967b3258468.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

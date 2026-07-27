@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beeiuexnom22g"
+path="res://.godot/imported/FIRE DISCO LIGHTS.mp3-af3f16f67305ba06a88a2ff006359aaf.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/GEMINI & SMITH - LAW FIRM/FIRE DISCO LIGHTS.mp3"
+dest_files=["res://.godot/imported/FIRE DISCO LIGHTS.mp3-af3f16f67305ba06a88a2ff006359aaf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

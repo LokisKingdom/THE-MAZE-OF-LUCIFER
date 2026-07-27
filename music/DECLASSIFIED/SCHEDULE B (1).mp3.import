@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqk3hkv0phcte"
+path="res://.godot/imported/SCHEDULE B (1).mp3-3dfad43bbbc6f4b58eb9fb8d899b1935.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/SCHEDULE B (1).mp3"
+dest_files=["res://.godot/imported/SCHEDULE B (1).mp3-3dfad43bbbc6f4b58eb9fb8d899b1935.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

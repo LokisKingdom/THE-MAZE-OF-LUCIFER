@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://81qsphqn41e5"
+path="res://.godot/imported/THE GLASS BOTTLE.mp3-41385e385266fd16ff6b9a63b1423ece.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/THE GLASS BOTTLE.mp3"
+dest_files=["res://.godot/imported/THE GLASS BOTTLE.mp3-41385e385266fd16ff6b9a63b1423ece.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

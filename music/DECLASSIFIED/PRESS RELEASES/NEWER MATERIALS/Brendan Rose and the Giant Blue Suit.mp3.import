@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duio7ll8qec3v"
+path="res://.godot/imported/Brendan Rose and the Giant Blue Suit.mp3-057faf1ff959d14aaaf38d061a52235d.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/Brendan Rose and the Giant Blue Suit.mp3"
+dest_files=["res://.godot/imported/Brendan Rose and the Giant Blue Suit.mp3-057faf1ff959d14aaaf38d061a52235d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

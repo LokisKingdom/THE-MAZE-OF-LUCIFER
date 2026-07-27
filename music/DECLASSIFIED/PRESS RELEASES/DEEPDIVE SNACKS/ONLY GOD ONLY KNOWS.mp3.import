@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvdc87178idle"
+path="res://.godot/imported/ONLY GOD ONLY KNOWS.mp3-d6790f24e38ea9a1fd5c345cd59f13ed.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/ONLY GOD ONLY KNOWS.mp3"
+dest_files=["res://.godot/imported/ONLY GOD ONLY KNOWS.mp3-d6790f24e38ea9a1fd5c345cd59f13ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

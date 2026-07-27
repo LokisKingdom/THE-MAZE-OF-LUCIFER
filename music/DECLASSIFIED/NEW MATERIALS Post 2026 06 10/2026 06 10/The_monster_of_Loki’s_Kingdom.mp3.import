@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8rbxkfae5s7a"
+path="res://.godot/imported/The_monster_of_Loki’s_Kingdom.mp3-5560a8200e8c0fb591f4f6e36bbf46ab.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/The_monster_of_Loki’s_Kingdom.mp3"
+dest_files=["res://.godot/imported/The_monster_of_Loki’s_Kingdom.mp3-5560a8200e8c0fb591f4f6e36bbf46ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

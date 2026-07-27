@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsun8os4c8ifi"
+path="res://.godot/imported/The_999_Mind_of_Brendan_S_Rose.mp3-6ece9437f0d32a000ab2b7ea7b1e0d47.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/The_999_Mind_of_Brendan_S_Rose.mp3"
+dest_files=["res://.godot/imported/The_999_Mind_of_Brendan_S_Rose.mp3-6ece9437f0d32a000ab2b7ea7b1e0d47.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

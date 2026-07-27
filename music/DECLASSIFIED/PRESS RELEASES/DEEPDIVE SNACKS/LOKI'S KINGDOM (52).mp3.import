@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dupk73xqw70dk"
+path="res://.godot/imported/LOKI'S KINGDOM (52).mp3-c7b43ccb1e7c4825206f5a96f373fdae.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/LOKI'S KINGDOM (52).mp3"
+dest_files=["res://.godot/imported/LOKI'S KINGDOM (52).mp3-c7b43ccb1e7c4825206f5a96f373fdae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://55amthu8nyyv"
+path="res://.godot/imported/Sligs Workday (0).mp3-892775c75d67e3ce67970fb9a6796a06.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/Sligs Workday (0).mp3"
+dest_files=["res://.godot/imported/Sligs Workday (0).mp3-892775c75d67e3ce67970fb9a6796a06.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

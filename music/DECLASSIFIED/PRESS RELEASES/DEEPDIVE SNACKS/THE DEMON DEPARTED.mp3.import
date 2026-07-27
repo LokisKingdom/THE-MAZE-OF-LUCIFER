@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctoy0vmqgn4is"
+path="res://.godot/imported/THE DEMON DEPARTED.mp3-18016587c8ceb7063a65d0d4504c1186.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/THE DEMON DEPARTED.mp3"
+dest_files=["res://.godot/imported/THE DEMON DEPARTED.mp3-18016587c8ceb7063a65d0d4504c1186.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

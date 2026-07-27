@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6pg7tpaksplf"
+path="res://.godot/imported/Save it for yourself.mp3-0377a975a90f95f7923a395936e1df7f.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/Save it for yourself.mp3"
+dest_files=["res://.godot/imported/Save it for yourself.mp3-0377a975a90f95f7923a395936e1df7f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

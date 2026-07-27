@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0i2nsxvfl2bu"
+path="res://.godot/imported/The_World_of_Luciferian_Legal_Magick.mp3-e0c8caf4daf87062ce449f972ae0b34a.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/The_World_of_Luciferian_Legal_Magick.mp3"
+dest_files=["res://.godot/imported/The_World_of_Luciferian_Legal_Magick.mp3-e0c8caf4daf87062ce449f972ae0b34a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3ts65wdl2jf5"
+path="res://.godot/imported/REGULARS [tiếng Việt] (3).mp3-2827698063cb7e3b9f863563f342bcf6.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/REGULARS [tiếng Việt] (3).mp3"
+dest_files=["res://.godot/imported/REGULARS [tiếng Việt] (3).mp3-2827698063cb7e3b9f863563f342bcf6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

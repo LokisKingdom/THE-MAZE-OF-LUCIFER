@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bclk0dtt0rfaw"
+path="res://.godot/imported/FIRE DISCO LIGHTS (1).mp3-c5ee0393347d2c9d070fde1d3cf63dc5.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/MUSIC/FIRE DISCO LIGHTS/FIRE DISCO LIGHTS (1).mp3"
+dest_files=["res://.godot/imported/FIRE DISCO LIGHTS (1).mp3-c5ee0393347d2c9d070fde1d3cf63dc5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

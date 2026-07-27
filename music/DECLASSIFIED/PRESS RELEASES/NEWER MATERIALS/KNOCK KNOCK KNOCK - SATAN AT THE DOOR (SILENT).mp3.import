@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hwannsc8jpld"
+path="res://.godot/imported/KNOCK KNOCK KNOCK - SATAN AT THE DOOR (SILENT).mp3-852af3357d7ea47964ec87fb2dac1d4d.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/NEWER MATERIALS/KNOCK KNOCK KNOCK - SATAN AT THE DOOR (SILENT).mp3"
+dest_files=["res://.godot/imported/KNOCK KNOCK KNOCK - SATAN AT THE DOOR (SILENT).mp3-852af3357d7ea47964ec87fb2dac1d4d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

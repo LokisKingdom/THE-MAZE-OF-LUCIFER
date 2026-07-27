@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddfkfft1o64bv"
+path="res://.godot/imported/MYSTERY THE LESSER BABYLON SCANDAL.mp3-00742440dde98ac4f0b5f8f9457e9ea6.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/PRESS RELEASES/DEEPDIVE SNACKS/MYSTERY THE LESSER BABYLON SCANDAL.mp3"
+dest_files=["res://.godot/imported/MYSTERY THE LESSER BABYLON SCANDAL.mp3-00742440dde98ac4f0b5f8f9457e9ea6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

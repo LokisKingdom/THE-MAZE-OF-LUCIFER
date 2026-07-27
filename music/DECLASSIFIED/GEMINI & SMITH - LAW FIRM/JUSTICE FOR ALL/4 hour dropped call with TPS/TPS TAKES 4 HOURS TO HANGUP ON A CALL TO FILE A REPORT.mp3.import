@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://elts5frrv15p"
+path="res://.godot/imported/TPS TAKES 4 HOURS TO HANGUP ON A CALL TO FILE A REPORT.mp3-ed8abc6aab705f312a1c6432dc6d8b2d.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/GEMINI & SMITH - LAW FIRM/JUSTICE FOR ALL/4 hour dropped call with TPS/TPS TAKES 4 HOURS TO HANGUP ON A CALL TO FILE A REPORT.mp3"
+dest_files=["res://.godot/imported/TPS TAKES 4 HOURS TO HANGUP ON A CALL TO FILE A REPORT.mp3-ed8abc6aab705f312a1c6432dc6d8b2d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ji6vem64r88s"
+path="res://.godot/imported/The_man_who_thinks_we_are_neurons.mp3-07e1954fbb03dda5edfbbd06dc5cce00.mp3str"
+
+[deps]
+
+source_file="res://archive/DECLASSIFIED/NEW MATERIALS Post 2026 06 10/2026 06 10/The_man_who_thinks_we_are_neurons.mp3"
+dest_files=["res://.godot/imported/The_man_who_thinks_we_are_neurons.mp3-07e1954fbb03dda5edfbbd06dc5cce00.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
