@@ -1,0 +1,460 @@
+---
+import { albums } from '../data/musicCatalog.js';
+
+const r2Base =
+  'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/';
+---
+
+<section class="desktop-music-app">
+  <h1>THE EFSMB JUKEBOX</h1>
+
+  <div class="desktop-app">
+    <aside class="album-list">
+      <h2>Albums</h2>
+      <div id="albums"></div>
+    </aside>
+
+    <main class="song-area">
+      <h2 id="albumTitle">Select an album</h2>
+      <h3 id="nowPlaying">Nothing playing</h3>
+
+      <audio
+        id="audioPlayer"
+        controls
+        style="width: 100%; margin: 1rem 0;"
+      ></audio>
+
+      <div class="controls">
+        <button id="prevBtn" type="button">Previous</button>
+        <button id="nextBtn" type="button">Next</button>
+      </div>
+
+      <div id="songs" class="song-list"></div>
+
+      <section class="lyrics-section">
+        <h2>LYRICS</h2>
+
+        <pre
+          id="albumLyrics"
+          class="album-lyrics"
+          aria-live="polite"
+        >Lyrics Unknown</pre>
+      </section>
+    </main>
+  </div>
+</section>
+
+<script define:vars={{ albums, r2Base }}>
+  let currentAlbumIndex = 0;
+  let currentSongIndex = 0;
+
+  /*
+   * This number changes whenever a new lyrics request begins.
+   * It prevents a slower, older request from replacing the lyrics
+   * for an album selected more recently.
+   */
+  let lyricsRequestNumber = 0;
+
+  const albumsEl = document.getElementById('albums');
+  const songsEl = document.getElementById('songs');
+  const albumTitleEl = document.getElementById('albumTitle');
+  const nowPlayingEl = document.getElementById('nowPlaying');
+  const albumLyricsEl = document.getElementById('albumLyrics');
+  const audio = document.getElementById('audioPlayer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function getSongUrl(song) {
+    if (song.file.startsWith('http')) {
+      return song.file;
+    }
+
+    return r2Base + song.file;
+  }
+
+  async function loadAlbumLyrics(album) {
+    const requestNumber = ++lyricsRequestNumber;
+
+    if (!album.lyricsFile) {
+      albumLyricsEl.textContent = 'Lyrics Unknown';
+      return;
+    }
+
+    albumLyricsEl.textContent = 'Loading lyrics...';
+
+    try {
+      const response = await fetch(album.lyricsFile);
+
+      if (!response.ok) {
+        throw new Error(
+          `Lyrics request failed with status ${response.status}`
+        );
+      }
+
+      const lyricsText = await response.text();
+
+      /*
+       * Ignore this result if another album was selected while
+       * this text file was still loading.
+       */
+      if (requestNumber !== lyricsRequestNumber) {
+        return;
+      }
+
+      albumLyricsEl.textContent =
+        lyricsText.trim().length > 0
+          ? lyricsText
+          : 'Lyrics Unknown';
+    } catch (error) {
+      console.error(
+        `Could not load lyrics for "${album.title}":`,
+        error
+      );
+
+      if (requestNumber === lyricsRequestNumber) {
+        albumLyricsEl.textContent = 'Lyrics Unknown';
+      }
+    }
+  }
+
+  function updateSelectedAlbumButton() {
+    const albumButtons =
+      albumsEl.querySelectorAll('.album-button');
+
+    albumButtons.forEach((button, index) => {
+      const isSelected = index === currentAlbumIndex;
+
+      button.classList.toggle('selected', isSelected);
+      button.setAttribute(
+        'aria-pressed',
+        isSelected ? 'true' : 'false'
+      );
+    });
+  }
+
+  function renderAlbums() {
+    albumsEl.innerHTML = '';
+
+    albums.forEach((album, index) => {
+      const button = document.createElement('button');
+
+      button.type = 'button';
+      button.textContent = album.title;
+      button.className = 'album-button';
+      button.setAttribute('aria-pressed', 'false');
+
+      button.addEventListener('click', () => {
+        currentAlbumIndex = index;
+        currentSongIndex = 0;
+
+        renderSongs();
+        updateSelectedAlbumButton();
+      });
+
+      albumsEl.appendChild(button);
+    });
+
+    updateSelectedAlbumButton();
+  }
+
+  function renderSongs() {
+    const album = albums[currentAlbumIndex];
+
+    if (!album) {
+      albumTitleEl.textContent = 'No albums available';
+      songsEl.innerHTML = '';
+      albumLyricsEl.textContent = 'Lyrics Unknown';
+      return;
+    }
+
+    albumTitleEl.textContent = album.title;
+    songsEl.innerHTML = '';
+
+    /*
+     * Selecting another album does not automatically start music.
+     * It also resets the Now Playing message until a song is chosen.
+     */
+    nowPlayingEl.textContent = 'Nothing playing';
+
+    loadAlbumLyrics(album);
+
+    if (!album.songs || album.songs.length === 0) {
+      const message = document.createElement('p');
+      message.textContent = 'No songs available.';
+      message.className = 'empty-message';
+      songsEl.appendChild(message);
+      return;
+    }
+
+    album.songs.forEach((song, index) => {
+      const button = document.createElement('button');
+
+      button.type = 'button';
+      button.textContent = song.title;
+      button.className = 'song-button';
+
+      button.addEventListener('click', () => {
+        playSong(index);
+      });
+
+      songsEl.appendChild(button);
+    });
+  }
+
+  function updateSelectedSongButton() {
+    const songButtons =
+      songsEl.querySelectorAll('.song-button');
+
+    songButtons.forEach((button, index) => {
+      const isSelected = index === currentSongIndex;
+
+      button.classList.toggle('selected', isSelected);
+      button.setAttribute(
+        'aria-current',
+        isSelected ? 'true' : 'false'
+      );
+    });
+  }
+
+  function playSong(index) {
+    const album = albums[currentAlbumIndex];
+
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    const song = album.songs[index];
+
+    if (!song) {
+      return;
+    }
+
+    currentSongIndex = index;
+    audio.src = getSongUrl(song);
+    nowPlayingEl.textContent = `Now Playing: ${song.title}`;
+
+    updateSelectedSongButton();
+
+    audio.play().catch((error) => {
+      console.error('Audio playback could not begin:', error);
+    });
+  }
+
+  function nextSong() {
+    const album = albums[currentAlbumIndex];
+
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    currentSongIndex =
+      (currentSongIndex + 1) % album.songs.length;
+
+    playSong(currentSongIndex);
+  }
+
+  function prevSong() {
+    const album = albums[currentAlbumIndex];
+
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    currentSongIndex =
+      (currentSongIndex - 1 + album.songs.length) %
+      album.songs.length;
+
+    playSong(currentSongIndex);
+  }
+
+  nextBtn.addEventListener('click', nextSong);
+  prevBtn.addEventListener('click', prevSong);
+  audio.addEventListener('ended', nextSong);
+
+  renderAlbums();
+  renderSongs();
+</script>
+
+<style>
+  .desktop-music-app {
+    margin-bottom: 2rem;
+    background: #080008;
+    border: 2px solid #8b0000;
+    padding: 1rem;
+  }
+
+  .desktop-music-app h1 {
+    text-align: center;
+    color: #ff3030;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+
+  .desktop-app {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 1rem;
+    min-height: 70vh;
+  }
+
+  .album-list,
+  .song-area {
+    border: 1px solid #cc0000;
+    padding: 1rem;
+    background: #000000;
+    color: #ff3030;
+  }
+
+  .album-list h2,
+  .song-area h2,
+  .song-area h3 {
+    color: #ff3030;
+  }
+
+  .album-button,
+  .song-button {
+    background: #090909;
+    color: #ff3030;
+    border: 1px solid #700000;
+    border-radius: 3px;
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: left;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .album-button {
+    display: block;
+    width: 100%;
+  }
+
+  .song-button {
+    display: inline-block;
+    width: auto;
+    margin-right: 0.25rem;
+  }
+
+  .album-button:hover,
+  .song-button:hover {
+    background: #280000;
+    color: #ff6060;
+    border-color: #ff3030;
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
+  }
+
+  .album-button:active,
+  .song-button:active {
+    background: #500000;
+  }
+
+  .album-button.selected,
+  .song-button.selected {
+    background: #500000;
+    color: #ffffff;
+    border-color: #ff3030;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.65);
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .controls button {
+    width: 100%;
+    padding: 0.65rem;
+    cursor: pointer;
+    background: #090909;
+    color: #ff3030;
+    border: 1px solid #8b0000;
+    border-radius: 3px;
+  }
+
+  .controls button:hover {
+    background: #280000;
+    border-color: #ff3030;
+  }
+
+  #audioPlayer {
+    background: #111111;
+    border-radius: 20px;
+  }
+
+  .song-list {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 0.4rem;
+    background: #050505;
+    border: 1px solid #500000;
+  }
+
+  .song-list::-webkit-scrollbar,
+  .album-lyrics::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .song-list::-webkit-scrollbar-track,
+  .album-lyrics::-webkit-scrollbar-track {
+    background: #080808;
+  }
+
+  .song-list::-webkit-scrollbar-thumb,
+  .album-lyrics::-webkit-scrollbar-thumb {
+    background: #700000;
+    border-radius: 6px;
+  }
+
+  .song-list::-webkit-scrollbar-thumb:hover,
+  .album-lyrics::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+  }
+
+  .lyrics-section {
+    margin-top: 1.5rem;
+    border-top: 1px solid #700000;
+    padding-top: 1rem;
+  }
+
+  .lyrics-section h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .album-lyrics {
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 65vh;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0d8d8;
+    background: #050505;
+    border: 1px solid #500000;
+    border-radius: 3px;
+  }
+
+  .empty-message {
+    margin: 0.5rem;
+    color: #f0d8d8;
+  }
+
+  @media (max-width: 800px) {
+    .desktop-app {
+      grid-template-columns: 1fr;
+    }
+
+    .album-lyrics {
+      max-height: 70vh;
+    }
+  }
+</style>

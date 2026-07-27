@@ -1,0 +1,1364 @@
+export function series(
+  folder,
+  baseTitle,
+  baseFile,
+  count,
+  includeBase = true,
+  start = 1
+) {
+  const songs = [];
+
+  if (includeBase) {
+    songs.push({
+      title: baseTitle,
+      file: `${folder}/${baseFile}.mp3`
+    });
+  }
+
+  for (let i = start; i < start + count; i++) {
+    songs.push({
+      title: `${baseTitle} (${i})`,
+      file: `${folder}/${baseFile}%20(${i}).mp3`
+    });
+  }
+
+  return songs;
+}
+
+export const albums = [
+  {
+    title: "SAVE YOURSELF",
+    songs: [
+      ...series(
+        "SAVE-YOURSELF",
+        "MY WRETCH",
+        "MY%20WRETCH",
+        53
+      ),
+
+      ...series(
+        "SAVE-YOURSELF",
+        "SAVE YOURSELF",
+        "SAVE%20YOURSELF",
+        59
+      )
+    ]
+  },
+
+  {
+    title: "MAX",
+    songs: [
+      ...series(
+        "MAX",
+        "MAX",
+        "MAX",
+        39
+      )
+    ]
+  },
+
+  {
+    title: "ONLY GOD ONLY KNOWS",
+    songs: [
+      ...series(
+        "ONLY%20GOD%20ONLY%20KNOWS",
+        "ONLY GOD ONLY KNOWS",
+        "ONLY%20GOD%20ONLY%20KNOWS",
+        59
+      )
+    ]
+  },
+    {
+    title: "SLIG'S WORKDAY",
+    songs: [
+      { title: "SLIG'S WORKDAY", file: "SLIGS%20WORKDAY/Sligs%20Workday.mp3" },
+      ...Array.from({ length: 61 }, (_, i) => ({
+        title: `SLIG'S WORKDAY (${i + 1})`,
+        file: `SLIGS%20WORKDAY/Sligs%20Workday%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "RED APPLE",
+    songs: [
+      ...Array.from({ length: 52 }, (_, i) => {
+        const n = 52 - i;
+        return {
+          title: `RED APPLE (${n})`,
+          file: `RED APPLE/RED%20APPLE%20(${n}).mp3`
+        };
+      }),
+      { title: "RED APPLE", file: "RED APPLE/RED%20APPLE.mp3" }
+    ]
+  },
+    {
+    title: "A WARM PLACE",
+    songs: [
+      ...Array.from({ length: 8 }, (_, i) => ({
+        title: `A Warm Place (${i + 1})`,
+        file: `A-WARM-PLACE/A%20WARM%20PLACE%20(${i + 1}).mp3`
+      })),
+
+      { title: "A Warm Place", file: "A-WARM-PLACE/A%20WARM%20PLACE.mp3" },
+      { title: "AND WITH THAT THE DEMON DEPARTED", file: "A-WARM-PLACE/AND%20WITH%20THAT%20THE%20DEMON%20DEPARTED.mp3" },
+
+      ...series("A-WARM-PLACE", "THE DEVIL DEPARTED", "THE%20DEVIL%20DEPARTED", 100),
+      ...series("A-WARM-PLACE", "THE DEMON DEPARTED", "THE%20DEMON%20DEPARTED", 53),
+
+      ...[
+        "084708.308", "084711.853", "084716.547", "084717.952", "084720.693",
+        "084723.822", "084727.763", "084730.746", "084734.350", "084737.725",
+        "084740.501", "084743.339", "084747.462", "084750.403", "084754.319",
+        "084757.213", "084759.339", "084802.314", "084805.549", "084812.731",
+        "084816.960", "084820.061", "084823.387", "084827.685", "084830.606",
+        "084833.726", "084836.584", "084839.651", "084842.546", "084845.940",
+        "084849.916", "084853.804", "084856.382", "084858.741", "084901.284",
+        "084904.864", "084908.843", "084913.267", "084916.532", "084918.807",
+        "084921.921", "084926.979", "084943.515", "084948.467", "085356.183",
+        "085400.586", "085411.362", "085421.168", "085428.322", "085435.679",
+        "085439.810", "085444.881", "085451.184", "085509.293", "085515.027",
+        "085519.634", "085524.249", "085530.592", "085534.770", "085540.236"
+      ].map((timestamp) => ({
+        title: `THE DEVIL DEPARTED - 2026-05-09T${timestamp.split(".")[0]}`,
+        file: `A-WARM-PLACE/THE%20DEVIL%20DEPARTED%20-%202026-05-09T${timestamp}.mp3`
+      })),
+
+      ...series("A-WARM-PLACE", "THE DEVIL WENT AWAY", "THE%20DEVIL%20WENT%20AWAY", 9),
+
+      {
+        title: "AND WITH THAT THE DEMON DEPARTED - Complex Deconstruction and Analytical Synthesis",
+        file: "A-WARM-PLACE/AND%20WITH%20THAT%20THE%20DEMON%20DEPARTED%20-%20Complex%20Deconstruction%20and%20Analytical%20Synthesis.mp3"
+      }
+    ]
+  },
+  
+    {
+    title: "HEAT",
+    songs: [
+      ...series(
+        "HEAT",
+        "HEAT",
+        "HEAT",
+        53
+      )
+    ]
+  },
+
+  {
+    title: "FIRE DISCO LIGHTS",
+    songs: [
+      ...series(
+        "FIRE%20DISCO%20LIGHTS",
+        "FIRE DISCO LIGHTS",
+        "FIRE%20DISCO%20LIGHTS",
+        10
+      )
+    ]
+  },
+  
+  {
+    title: "IN THE NAME OF GOOGLE NOTEBOOK LM AND THE DEEPDIVE CREW",
+
+    songs: [
+      ...[
+        "RED APPLE (9).mp3",
+        "the pissant is here - you're going in rooms now (35).mp3",
+        "SAY HELLO TO THE MOONLIGHT.mp3",
+        "HE WAS FOUND WANTING (00).mp3",
+        "1825 (explicit).mp3",
+        "FIRE DISCO LIGHTS (2).mp3",
+        "Please CC the Registrar.mp3",
+        "ONLY GOD ONLY KNOWS.mp3",
+        "DEFEAT THE NOID (1).mp3",
+        "Sligs Workday (0).mp3",
+        "LOKI'S KINGDOM (52).mp3",
+        "ANGELS IN HOUSES.mp3",
+        "Pretty Lies.mp3",
+        "KNOCK KNOCK KNOCK - SATAN HIMSELF AT THE DOOR (4).mp3",
+        "GOING FULL FASCIST (2).mp3",
+        "MAX.mp3",
+        "08 - Empowered Feminist Stole My Baby - ded enemy.mp3",
+        "PRISON PUZZLE OF THE SPHINX at TEAM6 YOUTUBE (2).mp3",
+        "THE LAST WILL AND TESTAMENT OF BRENDAN S. ROSE - Save Yourself, My Wretch.mp3",
+        "FREE US FROM FASCISM.mp3",
+        "MY WRETCH (3).mp3",
+        "A WARM PLACE (1).mp3",
+        "come be popped and then thrown away.mp3",
+        "1825.mp3",
+        "666 - EATING PATTERN.mp3",
+        "ALEX BLOCK.mp3",
+        "A STORY ABOUT A MONSTER FALLING IN LOVE (2).mp3",
+        "GREEN CANDY -  SMACK ME TO THE XENU DIMENSION.mp3",
+        "AND WITH THAT THE DEMON DEPARTED.mp3",
+        "Art Therapy For Latent Criminals.mp3",
+        "BLUE.mp3",
+        "dead enemy.mp3",
+        "GOLD CANE (1).mp3",
+        "INCENSE AND SMOKE (2).mp3",
+        "KING OF CANCER.mp3",
+        "LOKI AND THE WINE JUG.mp3",
+        "Loki Spake - LOKASENNA - Section 2.mp3",
+        "MAMA SAYS MAMA DOES.mp3",
+        "MELEK TAUS.mp3",
+        "MOVE ALONG HOME (3).mp3",
+        "MOVE ALONG HOME.mp3",
+        "MYSTERY THE LESSER BABYLON SCANDAL.mp3",
+        "PITY PARTY.mp3",
+        "PUT ALL YOUR WISHES INTO THY MAW.wav",
+        "REGULARS [tiếng Việt] (3).mp3",
+        "RUMPULSTILTSKIN.wav",
+        "SAY HELLO TO THE GOODNIGHT.wav",
+        "SHE'S HIDDEN IN MY CHEST.mp3",
+        "Simulation.mp3",
+        "SKINDAY SERVICE.mp3",
+        "snooping in heaven (1).mp3",
+        "SPECIAL FORCES.mp3",
+        "SQUEE505.mp3",
+        "STILL IN FASHION (1).mp3",
+        "THE CHATTERBOX.mp3",
+        "THE CHICKEN _based on the old legend_ (1).mp3",
+        "THE DEMON DEPARTED.mp3",
+        "THE DOOR THAT MUST NEVER BE OPENED.mp3",
+        "THE GLASS BOTTLE.mp3",
+        "THE PISSANT HAS RETURNED AND HE WANTS CLOWNS MAN.mp3",
+        "THE SKY IS FALLING!!!!.mp3",
+        "THE SONG OF SAYA.mp3",
+        "THE SPRITE TONITE.wav",
+        "WOULD YOU RATHER.mp3",
+        "THE TOWER IS WHAT WE WANT (1).mp3",
+        "THIS IS THE WAY IT SHOULD BE (4).mp3",
+        "TOWN OF SALEM.mp3",
+        "TURN YOUR EYES UP TOWARDS THE KING (Remix) (2).mp3",
+        "VERSE.mp3",
+        "WEDNESDAY.mp3",
+        "When I could still sleep at night.mp3",
+        "WHY IS MY BLENDER LENDING (2).mp3",
+        "LONG LIVE THE NEW FLESH 2.mp3"
+      ].map((fileName) => ({
+        title: fileName.replace(/\.(mp3|wav|m4a)$/i, ""),
+
+        file:
+          "IN%20THE%20NAME%20OF%20GOOGLE%20NOTEBOOK%20LM%20AND%20THE%20DEEPDIVE%20CREW/" +
+          encodeURIComponent(fileName)
+      }))
+    ]
+  },
+
+  {
+    title: "DEFEAT THE NOID",
+    songs: [
+      ...series(
+        "DEFEAT-THAT-NOID",
+        "DEFEAT THAT NOID",
+        "DEFEAT%20THE%20NOID",
+        9
+      )
+    ]
+  },
+
+  {
+    title: "Please CC the Registrar",
+    songs: [
+      { title: "Please CC the Registrar", file: "Please%20CC%20The%20Registrar/Please%20CC%20the%20Registrar.mp3" },
+      ...Array.from({ length: 40 }, (_, i) => ({
+        title: `Please CC the Registrar (${i + 1})`,
+        file: `Please%20CC%20The%20Registrar/Please%20CC%20the%20Registrar%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+    {
+    title: "THE YOKED WROTH DRAGGED TO HELL AND STAINED WITH CASH AND BLOOD",
+    songs: [
+      ...series(
+        "THE%20YOKED%20WROTH%20DRAGGED%20TO%20HELL%20AND%20STAINED%20WITH%20CASH%20AND%20BLOOD",
+        "THE YOKED WROTH DRAGGED TO HELL AND STAINED WITH CASH AND BLOOD",
+        "THE%20YOKED%20WROTH%20DRAGGED%20TO%20HELL%20AND%20STAI",
+        41
+      )
+    ]
+  },
+
+  {
+    title: "LUCIFER MEDIA CORPORATION",
+    songs: [
+      ...series(
+        "LUCIFER%20MEDIA%20CORPORATION",
+        "LUCIFER MEDIA CORPORATION",
+        "LUCIFER%20MEDIA%20CORPORATION",
+        58
+      )
+    ]
+  },
+
+  {
+    title: "AUTOMATION",
+    songs: [
+      ...series("AUTOMATION", "AUTOMATION", "AUTOMATION", 43)
+    ]
+  },
+
+  {
+    title: "CATHEDRAL OF XEEN",
+    songs: [
+      ...series(
+        "CATHEDRAL%20OF%20XEEN",
+        "CATHEDRAL OF XEEN",
+        "CATHEDRAL%20OF%20XEEN",
+        27
+      )
+    ]
+  },
+
+  {
+    title: "PRISON PUZZLE OF THE SPHINX",
+    songs: [
+      {
+        title: "PRISON PUZZLE OF THE SPHINX at TEAM 6 YOUTUBE",
+        file: "PRISON%20PUZZLE%20OF%20THE%20SPHINX/PRISON%20PUZZLE%20OF%20THE%20SPHINX%20at%20TEAM6%20YOUTUBE.mp3"
+      },
+      ...Array.from({ length: 31 }, (_, i) => ({
+        title: `PRISON PUZZLE OF THE SPHINX at TEAM 6 YOUTUBE (${i + 1})`,
+        file: `PRISON%20PUZZLE%20OF%20THE%20SPHINX/PRISON%20PUZZLE%20OF%20THE%20SPHINX%20at%20TEAM6%20YOUTUBE%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "GOING FULL FASCIST",
+    songs: [
+      {
+        title: "GOING FULL FASCIST",
+        file: "GOING FULL FASCIST/GOING%20FULL%20FASCIST.mp3"
+      },
+      ...Array.from({ length: 53 }, (_, i) => ({
+        title: `GOING FULL FASCIST (${i + 1})`,
+        file: `GOING FULL FASCIST/GOING%20FULL%20FASCIST%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "KNOCK KNOCK KNOCK - SATAN HIMSELF AT THE DOOR",
+    songs: [
+      {
+        title: "KNOCK KNOCK KNOCK - SATAN HIMSELF AT THE DOOR (Silent Old Song)",
+        file: "KNOCK%20KNOCK%20KNOCK%20-%20SATAN%20HIMSELF%20AT%20THE%20DOOR%20(SILENT).mp3"
+      },
+      ...series(
+        "Knock-Knock-Knock",
+        "KNOCK KNOCK KNOCK - SATAN HIMSELF AT THE DOOR",
+        "KNOCK%20KNOCK%20KNOCK%20-%20SATAN%20HIMSELF%20AT%20THE%20DOOR",
+        9
+      )
+    ]
+  },
+
+  {
+    title: "GREEN CANDY - SMACK ME TO THE XENU DIMENSION",
+    songs: [
+      ...Array.from({ length: 48 }, (_, i) => ({
+        title: `GREEN CANDY - SMACK ME TO THE XENU DIMENSION (${i + 1})`,
+        file: `GREEN-CANDY/GREEN%20CANDY%20-%20%20SMACK%20ME%20TO%20THE%20XENU%20DIMENSION%20(${i + 1}).mp3`
+      })),
+      {
+        title: "GREEN CANDY - SMACK ME TO THE XENU DIMENSION",
+        file: "GREEN-CANDY/GREEN%20CANDY%20-%20%20SMACK%20ME%20TO%20THE%20XENU%20DIMENSION.mp3"
+      }
+    ]
+  },
+
+  {
+    title: "PRETTY LIES",
+    songs: [
+      {
+        title: "PRETTY LIES",
+        file: "PRETTY%20LIES/Pretty%20Lies.mp3"
+      },
+      ...Array.from({ length: 50 }, (_, i) => ({
+        title: `PRETTY LIES (${i + 1})`,
+        file: `PRETTY%20LIES/Pretty%20Lies%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "ANGELS IN HOUSES",
+    songs: [
+      ...series(
+        "ANGELS%20IN%20HOUSES",
+        "ANGELS IN HOUSES",
+        "ANGELS%20IN%20HOUSES",
+        9
+      )
+    ]
+  },
+
+  {
+    title: "STILL IN FASHION",
+    songs: [
+      ...series(
+        "STILL-IN-FASHION",
+        "STILL IN FASHION",
+        "STILL%20IN%20FASHION",
+        68
+      )
+    ]
+  },
+
+  {
+    title: "TOWN OF SALEM",
+    songs: [
+      ...series(
+        "TOWN-OF-SALEM",
+        "TOWN OF SALEM",
+        "TOWN%20OF%20SALEM",
+        9
+      ),
+      {
+        title: "TOWN OF SALEM (Coven)",
+        file: "TOWN-OF-SALEM/TOWN%20OF%20SALEM%20(coven).mp3"
+      },
+      ...Array.from({ length: 100 }, (_, i) => ({
+        title: `TOWN OF SALEM 2 (${i + 1})`,
+        file: `TOWN-OF-SALEM/TOWN%20OF%20SALEM%202%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "MOVE ALONG HOME",
+    songs: [
+      {
+        title: "MOVE ALONG HOME",
+        file: "MOVE%20ALONG%20HOME.mp3"
+      },
+      ...Array.from({ length: 108 }, (_, i) => ({
+        title: `MOVE ALONG HOME (${i + 1})`,
+        file: `MOVE%20ALONG%20HOME%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "LOKI'S KINGDOM",
+    songs: [
+      ...series(
+        "LOKIS-KINGDOM",
+        "LOKI'S KINGDOM",
+        "LOKI'S%20KINGDOM",
+        57
+      )
+    ]
+  },
+
+  {
+    title: "WHY IS MY BLENDER LENDING",
+    songs: [
+      {
+        title: "WHY IS MY BLENDER LENDING",
+        file: "INCENSE-AND-SMOKE/WHY%20IS%20MY%20BLENDER%20LENDING.mp3"
+      },
+      ...Array.from({ length: 3 }, (_, i) => ({
+        title: `WHY IS MY BLENDER LENDING (${i + 1})`,
+        file: `INCENSE-AND-SMOKE/WHY%20IS%20MY%20BLENDER%20LENDING%20(${i + 1}).mp3`
+      })),
+      {
+        title: "WHY IS MY BLENDER LENDING by EFSMB",
+        file: "INCENSE-AND-SMOKE/WHY%20IS%20MY%20BLENDER%20LENDING%20by%20EFSMB.mp3"
+      },
+      ...series(
+        "INCENSE-AND-SMOKE",
+        "INCENSE AND SMOKE",
+        "INCENSE%20AND%20SMOKE",
+        14
+      ),
+      ...Array.from({ length: 15 }, (_, i) => ({
+        title: `VERSE (${i + 1})`,
+        file: `INCENSE-AND-SMOKE/VERSE%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+    {
+    title: "GOLD CANE",
+    songs: [
+      { title: "GOLD CANE", file: "GOLD-CANE/GOLD%20CANE.mp3" },
+      ...Array.from({ length: 80 }, (_, i) => ({
+        title: `GOLD CANE (vocal stems) (${i + 1})`,
+        file: `GOLD-CANE/GOLD%20CANE%20(vocal%20stems)%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "TURN YOUR EYES UP TOWARDS THE KING (Remix)",
+    songs: [2,3,4,5,6,7,8,9,10,11,14,15].map((i) => ({
+      title: `TURN YOUR EYES UP TOWARDS THE KING (Remix) (${i})`,
+      file: `TURN-YOUR-EYES-UP-TOWARDS-THE-KING/TURN%20YOUR%20EYES%20UP%20TOWARDS%20THE%20KING%20(Remix)%20(${i}).mp3`
+    }))
+  },
+
+  {
+    title: "THE SKY IS FALLING!!!!",
+    songs: [
+      ...series("THE-SKY-IS-FALLING", "THE SKY IS FALLING!!!!", "THE%20SKY%20IS%20FALLING!!!!", 54),
+      { title: "ADRIFT IN THAT SEA", file: "THE-SKY-IS-FALLING/ADRIFT%20IN%20THAT%20SEA.mp3" },
+      { title: "ADRIFT IN THAT SEA (1)", file: "THE-SKY-IS-FALLING/ADRIFT%20IN%20THAT%20SEA%20(1).mp3" },
+      ...series("THE-SKY-IS-FALLING", "RISING UP OUT OF THAT SEA", "RISING%20UP%20OUT%20OF%20THAT%20SEA", 13),
+      { title: "THE CHICKEN _based on the old legend_", file: "THE-SKY-IS-FALLING/THE%20CHICKEN%20_based%20on%20the%20old%20legend_.mp3" },
+      ...Array.from({ length: 19 }, (_, i) => ({
+        title: `THE CHICKEN _based on the old legend_ (${i + 1})`,
+        file: `THE-SKY-IS-FALLING/THE%20CHICKEN%20_based%20on%20the%20old%20legend_%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "THE PISSANT IS HERE AND HE WANTS CLOWNS MAN",
+    songs: [
+      ...series("THE-PISSANT", "THE PISSANT HAS RETURNED AND HE WANTS CLOWNS MAN", "THE%20PISSANT%20HAS%20RETURNED%20AND%20HE%20WANTS%20CLOWNS%20MAN", 93),
+      ...series("THE-PISSANT", "BLOCKED - DELETED", "BLOCKED%20-%20DELETED", 19),
+      ...series("THE-PISSANT", "I'M HONORED TO BE COMPARED TO CLOWNS", "I'M%20HONORED%20TO%20BE%20COMPARED%20TO%20CLOWNS", 16)
+    ]
+  },
+
+  {
+    title: "SNOOPING IN HEAVEN",
+    songs: [
+      ...series("SNOOPING-IN-HEAVEN", "SNOOPING IN HEAVEN", "snooping%20in%20heaven", 39)
+    ]
+  },
+
+  {
+    title: "WOULD YOU RATHER",
+    songs: [
+      ...series("WOULD-YOU-RATHER", "WOULD YOU RATHER", "WOULD%20YOU%20RATHER", 31),
+      ...series("WOULD-YOU-RATHER", "HEAVEN", "HEAVEN", 27),
+      ...Array.from({ length: 25 }, (_, i) => ({
+        title: `EAT MY ENTIRE GAT (${i + 1})`,
+        file: `WOULD-YOU-RATHER/EAT%20MY%20ENTIRE%20GAT%20(${i + 1}).mp3`
+      })),
+      { title: "EAT MY ENTIRE GAT", file: "WOULD-YOU-RATHER/EAT%20MY%20ENTIRE%20GAT.mp3" }
+    ]
+  },
+
+  {
+    title: "WEDNESDAY",
+    songs: [
+      { title: "I'VE NOTICED YOU'RE FOLLOWING ME", file: "I'VE%20NOTICED%20YOU'RE%20FOLLOWING%20ME/I'VE%20NOTICED%20YOU'RE%20FOLLOWING%20ME.mp3" },
+      { title: "I'VE NOTICED YOU'RE FOLLOWING ME (basetrack)", file: "I'VE%20NOTICED%20YOU'RE%20FOLLOWING%20ME/I'VE%20NOTICED%20YOU'RE%20FOLLOWING%20ME%20(basetrack).mp3" },
+      { title: "WEDNESDAY", file: "I'VE%20NOTICED%20YOU'RE%20FOLLOWING%20ME/WEDNESDAY.mp3" },
+      ...Array.from({ length: 28 }, (_, i) => ({
+        title: `WEDNESDAY (${i + 1})`,
+        file: `I'VE%20NOTICED%20YOU'RE%20FOLLOWING%20ME/WEDNESDAY%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "LOKI AND THE WINE JUG",
+    songs: [
+      ...series("LOKI%20AND%20THE%20WINE%20JUG", "LOKI AND THE WINE JUG", "LOKI%20AND%20THE%20WINE%20JUG", 71)
+    ]
+  },
+
+  {
+    title: "SQUEE505",
+    songs: [
+      ...series("SQUEE505", "SQUEE505", "SQUEE505", 46)
+    ]
+  },
+
+  {
+    title: "NO ANGEL",
+    songs: [
+      ...series("NO%20ANGEL", "NO ANGEL", "NO%20ANGEL", 23)
+    ]
+  },
+
+  {
+    title: "KING OF CANCER",
+    songs: [
+      { title: "THAT CRAB CANCER", file: "THAT%20CRAB%20CANCER/THAT%20CRAB%20CANCER.mp3" },
+      { title: "THAT CRAB CANCER (basetrack)", file: "THAT%20CRAB%20CANCER/THAT%20CRAB%20CANCER%20(basetrack).mp3" },
+      ...Array.from({ length: 29 }, (_, i) => ({
+        title: `THAT CRAB CANCER (${i + 1})`,
+        file: `THAT%20CRAB%20CANCER/THAT%20CRAB%20CANCER%20(${i + 1}).mp3`
+      })),
+      { title: "CANCER", file: "THAT%20CRAB%20CANCER/CANCER.mp3" },
+      { title: "CANCER2", file: "THAT%20CRAB%20CANCER/CANCER2.mp3" }
+    ]
+  },
+
+  {
+    title: "Art Therapy For Latent Criminals",
+    songs: [
+      ...series("Art%20Therapy%20For%20Latent%20Criminals", "Art Therapy For Latent Criminals", "Art%20Therapy%20For%20Latent%20Criminals", 26)
+    ]
+  },
+
+  {
+    title: "THIS IS THE WAY IT SHOULD BE",
+    songs: [
+      { title: "THIS IS THE WAY IT SHOULD BE", file: "THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE/THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE.mp3" },
+      { title: "THIS IS THE WAY IT SHOULD BE (basetrack)", file: "THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE/THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE%20(basetrack).mp3" },
+      ...Array.from({ length: 11 }, (_, i) => ({
+        title: `THIS IS THE WAY IT SHOULD BE (${i + 1})`,
+        file: `THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE/THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 79 }, (_, i) => ({
+        title: `@Grok put her in a bikini (${i + 1})`,
+        file: `THIS%20IS%20THE%20WAY%20IT%20SHOULD%20BE/%40Grok%2C%20put%20her%20in%20a%20bikini%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "CAPELLA",
+    songs: [
+      ...series("CAPELLA", "CAPELLA", "Capella", 9)
+    ]
+  },
+
+  {
+    title: "BLUE",
+    songs: [
+      ...series("BLUE", "BLUE", "BLUE", 23)
+    ]
+  },
+    {
+    title: "DIONYSUS' FLUTE",
+    songs: [
+      ...series("DIONYSUS'%20FLUTE", "A STORY ABOUT A MONSTER FALLING IN LOVE", "A%20STORY%20ABOUT%20A%20MONSTER%20FALLING%20IN%20LOVE", 27),
+      ...series("DIONYSUS'%20FLUTE", "VETOED", "VETOED", 9)
+    ]
+  },
+
+  {
+    title: "DIONYSUS' WINE FLASK",
+    songs: [
+      ...series("DIONYSUS'%20WINE%20FLASK", "I OPEN THAT DOOR", "I%20OPEN%20THAT%20DOOR", 39),
+      ...series("DIONYSUS'%20WINE%20FLASK", "THE DOOR THAT MUST NEVER BE OPENED", "THE%20DOOR%20THAT%20MUST%20NEVER%20BE%20OPENED", 47)
+    ]
+  },
+
+  {
+    title: "LOKASENNA",
+    songs: [
+      ...[
+        "Loki Spake - LOKASENNA - Bag of Dirt - Section 2 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Dirt - Section 2.mp3",
+        "Loki Spake - LOKASENNA - Bag of Dirt - Section 3 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Dirt - Section 3.mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand - Section 1 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand - Section 1.mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand - Section 2 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand - Section 2.mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand - Section 3 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand - Section 3.mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand 2 - Section 1 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand 2 - Section 1.mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand 2 - Section 2 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand 2 - Section 2.mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand 2 - Section 3 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Sand 2 - Section 3.mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 1 (1).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 1 (2).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 1 (3).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 1.mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 2 (1).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 2 (2).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 2 (3).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 2.mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 3 (1).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 3 (2).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 3 (3).mp3",
+        "Loki Spake - LOKASENNA - Lamentations - Section 3.mp3",
+        "Loki Spake - LOKASENNA - Section 1 (1).mp3",
+        "Loki Spake - LOKASENNA - Section 1.mp3",
+        "Loki Spake - LOKASENNA - Section 2 (1).mp3",
+        "Loki Spake - LOKASENNA - Section 2.mp3",
+        "Loki Spake - LOKASENNA - Section 3 (1).mp3",
+        "Loki Spake - LOKASENNA - Section 3.mp3",
+        "Loki Spake - LOKASENNA - TAKE YOUR SHOES OFF - Section 3 (1).mp3",
+        "Loki Spake - LOKASENNA - TAKE YOUR SHOES OFF - Section 3.mp3",
+        "Loki Spake - LOKASENNA -  TAKE YOUR SHOES OFF - Section 1 (1).mp3",
+        "Loki Spake - LOKASENNA -  TAKE YOUR SHOES OFF - Section 1.mp3",
+        "Loki Spake - LOKASENNA - Bag of Dirt - Section 1 (1).mp3",
+        "Loki Spake - LOKASENNA - Bag of Dirt - Section 1.mp3"
+      ].map((fileName) => ({
+        title: fileName.replace(".mp3", ""),
+        file: `LOKASENNA/${fileName.replaceAll(" ", "%20")}`
+      }))
+    ]
+  },
+
+  {
+    title: "MELEK TAUS",
+    songs: [
+      ...series("MELEK%20TAUS", "MELEK TAUS", "MELEK%20TAUS", 55),
+      ...series("MELEK%20TAUS", "THE WHITE PEARL", "THE%20WHITE%20PEARL", 15)
+    ]
+  },
+
+  {
+    title: "SEED OF RAGNAROK",
+    songs: [
+      ...series("SEED%20OF%20RAGNAROK", "SEED OF RAGNAROK", "Seed%20of%20Ragnarok", 92)
+    ]
+  },
+
+  {
+    title: "ROARKE",
+    songs: [
+      ...series("ROARKE", "When I could still sleep at night", "When%20I%20could%20still%20sleep%20at%20night", 75),
+      ...series("ROARKE", "DON'T THROW YOUR LIFE AWAY BEING A PIECE OF PORK", "DON'T%20THROW%20YOUR%20LIFE%20AWAY%20BEING%20A%20PIECE%20OF%20PORK", 9),
+      ...series("ROARKE", "THE DOOR IS A JAR", "THE%20DOOR%20IS%20A%20JAR", 15)
+    ]
+  },
+
+  {
+    title: "Simulation",
+    songs: [
+      ...series("Simulation", "Simulacrum", "Simulacrum", 19),
+      ...series("Simulation", "Simulation", "Simulation", 23),
+      ...series("Simulation", "Syeten", "Syeten", 44)
+    ]
+  },
+
+  {
+    title: "THE SONG OF SAYA",
+    songs: [
+      ...series("THE%20SONG%20OF%20SAYA", "THE SONG OF SAYA", "THE%20SONG%20OF%20SAYA", 61),
+      {
+        title: "Breaking Containment with my Friends",
+        file: "THE%20SONG%20OF%20SAYA/Breaking%20Containment%20with%20my%20Friends%20(audio).mp3"
+      }
+    ]
+  },
+
+  {
+    title: "THE CHATTERBOX",
+    songs: [
+      ...series("THE-CHATTERBOX", "SHUT THAT CHATTERBOX", "SHUT%20THAT%20CHATTERBOX", 23),
+      ...series("THE-CHATTERBOX", "THE CHATTERBOX", "THE%20CHATTERBOX", 83)
+    ]
+  },
+
+  {
+    title: "MAMA SAYS MAMA DOES",
+    songs: [
+      { title: "MAMA SAYS MAMA DOES", file: "MAMA-SAYS-MAMA-DOES/MAMA%20SAYS%20MAMA%20DOES.mp3" },
+      { title: "MAMA SAYS MAMA DOES (0)", file: "MAMA-SAYS-MAMA-DOES/MAMA%20SAYS%20MAMA%20DOES%20(0).mp3" },
+      { title: "MAMA SAYS MAMA DOES (00)", file: "MAMA-SAYS-MAMA-DOES/MAMA%20SAYS%20MAMA%20DOES%20(00).mp3" },
+      ...Array.from({ length: 53 }, (_, i) => ({
+        title: `MAMA SAYS MAMA DOES (${i + 1})`,
+        file: `MAMA-SAYS-MAMA-DOES/MAMA%20SAYS%20MAMA%20DOES%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "FOOLISH GIRL SHE VOMITED ON COMMAND",
+    songs: [
+      ...series("FOOLISH%20GIRL%20-%20SHE%20VOMITED%20ON%20COMMAND", "FOOLISH GIRL SHE VOMITED ON COMMAND", "FOOLISH%20GIRL%20-%20SHE%20VOMITED%20ON%20COMMAND", 39),
+      ...series("FOOLISH%20GIRL%20-%20SHE%20VOMITED%20ON%20COMMAND", "WHO YOU WANNA KILL???", "WHO%20YOU%20WANNA%20KILL", 15)
+    ]
+  },
+
+  {
+    title: "MYSTERY THE LESSER BABYLON SCANDAL",
+    songs: [
+      ...Array.from({ length: 49 }, (_, i) => ({
+        title: `MYSTERY THE LESSER BABYLON SCANDAL (${i + 1})`,
+        file: `MYSTERY-THE-LESSER-BABYLON-SCANDAL/MYSTERY%20THE%20LESSER%20BABYLON%20SCANDAL%20(SILENT)%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 19 }, (_, i) => ({
+        title: `謎團：小巴比倫醜聞 (${i + 1})`,
+        file: `MYSTERY-THE-LESSER-BABYLON-SCANDAL/謎團：小巴比倫醜聞%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 23 }, (_, i) => ({
+        title: `謎のレッサー・バビロン・スキャンダル (${i + 1})`,
+        file: `MYSTERY-THE-LESSER-BABYLON-SCANDAL/謎のレッサー・バビロン・スキャンダル%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 13 }, (_, i) => ({
+        title: `BÍ ẨN VỤ SCANDAL BABYLON NHỎ (${i + 1})`,
+        file: `MYSTERY-THE-LESSER-BABYLON-SCANDAL/BÍ%20ẨN%20VỤ%20SCANDAL%20BABYLON%20NHỎ%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 23 }, (_, i) => ({
+        title: `MYSTERY THE LESSER BABYLON SCANDAL (Cebuano) (${i + 1})`,
+        file: `MYSTERY-THE-LESSER-BABYLON-SCANDAL/MYSTERY%20THE%20LESSER%20BABYLON%20SCANDAL%20(Cebuano)%20(${i + 1}).mp3`
+      })),
+      {
+        title: "Kutsilyo ug shabito sa Disco ni EFSMB",
+        file: "MYSTERY-THE-LESSER-BABYLON-SCANDAL/Kutsilyo_ug_shabito_sa_Disco_ni_EFSMB.m4a"
+      }
+    ]
+  },
+
+  {
+    title: "REGULARS [tiếng Việt]",
+    songs: [
+      { title: "REGULARS [tiếng Việt]", file: "BOOK2/REGULARS%20[tiếng%20Việt]/REGULARS%20[tiếng%20Việt].mp3" },
+      { title: "REGULARS [tiếng Việt] (0)", file: "BOOK2/REGULARS%20[tiếng%20Việt]/REGULARS%20[tiếng%20Việt]%20(0).mp3" },
+      { title: "REGULARS [tiếng Việt] (00)", file: "BOOK2/REGULARS%20[tiếng%20Việt]/REGULARS%20[tiếng%20Việt]%20(00).mp3" },
+      { title: "REGULARS [tiếng Việt] (000)", file: "BOOK2/REGULARS%20[tiếng%20Việt]/REGULARS%20[tiếng%20Việt]%20(000).mp3" },
+      { title: "REGULARS [tiếng Việt] (0 0)", file: "BOOK2/REGULARS%20[tiếng%20Việt]/REGULARS%20[tiếng%20Việt]%20(0%200).mp3" },
+      ...Array.from({ length: 66 }, (_, i) => ({
+        title: `REGULARS [tiếng Việt] (${i + 1})`,
+        file: `BOOK2/REGULARS%20[tiếng%20Việt]/REGULARS%20[tiếng%20Việt]%20(${i + 1}).mp3`
+      })),
+      {
+        title: "AI franchises the plague doctor's trauma",
+        file: "BOOK2/REGULARS%20[tiếng%20Việt]/AI_franchises_the_plague_doctor_s_trauma.m4a"
+      }
+    ]
+  },
+
+  {
+    title: "SPECIAL FORCES",
+    songs: [
+      { title: "SPECIAL FORCES", file: "BOOK2/SPECIAL%20FORCES/SPECIAL%20FORCES.mp3" },
+      { title: "SPECIAL FORCES (0)", file: "BOOK2/SPECIAL%20FORCES/SPECIAL%20FORCES%20(0).mp3" },
+      { title: "SPECIAL FORCES (00)", file: "BOOK2/SPECIAL%20FORCES/SPECIAL%20FORCES%20(00).mp3" },
+      ...Array.from({ length: 69 }, (_, i) => ({
+        title: `SPECIAL FORCES (${i + 1})`,
+        file: `BOOK2/SPECIAL%20FORCES/SPECIAL%20FORCES%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "come be popped and then thrown away",
+    songs: [
+      ...Array.from({ length: 19 }, (_, i) => ({
+        title: `come be popped and then thrown away (${i + 1})`,
+        file: `BOOK2/come%20be%20popped%20and%20then%20thrown%20away/come%20be%20popped%20and%20then%20thrown%20away%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 3 }, (_, i) => ({
+        title: `DISCLAIMER (${i + 1})`,
+        file: `BOOK2/come%20be%20popped%20and%20then%20thrown%20away/DISCLAIMER%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+    {
+    title: "PITY PARTY",
+    songs: [
+      ...Array.from({ length: 9 }, (_, i) => ({
+        title: `IT'S MY TURN (${i + 1})`,
+        file: `BOOK2/PITY%20PARTY/IT'S%20MY%20TURN%20(${i + 1}).mp3`
+      })),
+      ...Array.from({ length: 35 }, (_, i) => ({
+        title: `PITY PARTY (${i + 1})`,
+        file: `BOOK2/PITY%20PARTY/PITY%20PARTY%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "SHE'S HIDDEN IN MY CHEST",
+    songs: [
+      ...Array.from({ length: 23 }, (_, i) => ({
+        title: `SHE'S HIDDEN IN MY CHEST (${i + 1})`,
+        file: `BOOK2/SHE'S%20HIDDEN%20IN%20MY%20CHEST/SHE'S%20HIDDEN%20IN%20MY%20CHEST%20(${i + 1}).mp3`
+      })),
+
+      ...Array.from({ length: 49 }, (_, i) => ({
+        title: `HERSE FACTORY (${i + 1})`,
+        file: `BOOK2/SHE'S%20HIDDEN%20IN%20MY%20CHEST/HERSE%20FACTORY%20(${i + 1}).mp3`
+      })),
+
+      ...Array.from({ length: 3 }, (_, i) => ({
+        title: `CHAOS PRIMER (${i + 1})`,
+        file: `BOOK2/SHE'S%20HIDDEN%20IN%20MY%20CHEST/CHAOS%20PRIMER%20(${i + 1}).mp3`
+      })),
+
+      ...Array.from({ length: 24 }, (_, i) => ({
+        title: `GET OUT OF MR BURGER (${i + 1})`,
+        file: `BOOK2/SHE'S%20HIDDEN%20IN%20MY%20CHEST/GET%20OUT%20OF%20MR%20BURGER%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "1825",
+    songs: [
+      {
+        title: "1825 (explicit)",
+        file: "BOOK2/1825/1825%20(explicit).mp3"
+      },
+      {
+        title: "1825 (basetrack)",
+        file: "BOOK2/1825/1825%20(basetrack).mp3"
+      },
+
+      ...Array.from({ length: 40 }, (_, i) => ({
+        title: `1825 (censored) (Add Instrumental) (${i + 1})`,
+        file: `BOOK2/1825/1825%20(censored)%20(Add%20Instrumental)%20(${i + 1}).mp3`
+      })),
+
+      ...Array.from({ length: 9 }, (_, i) => ({
+        title: `1825 (${i + 1})`,
+        file: `BOOK2/1825/1825%20(${i + 1}).mp3`
+      })),
+
+      {
+        title: "Hacking Suno AI with punctuation marks",
+        file: "BOOK2/1825/Hacking_Suno_AI_with_punctuation_marks.m4a"
+      }
+    ]
+  },
+
+  {
+    title: "MY MONKEY",
+    songs: [
+      ...series(
+        "MY%20MONKEY",
+        "MY MONKEY",
+        "MY%20MONKEY",
+        45
+      )
+    ]
+  },
+
+  {
+    title: "EATING PATTERN",
+    songs: [
+      {
+        title: "666 - EATING PATTERN",
+        file: "EATING%20PATTERN/666%20-%20EATING%20PATTERN.mp3"
+      },
+      {
+        title: "666 - EATING PATTERN (000)",
+        file: "EATING%20PATTERN/666%20-%20EATING%20PATTERN%20(000).mp3"
+      },
+      {
+        title: "666 - EATING PATTERN (00)",
+        file: "EATING%20PATTERN/666%20-%20EATING%20PATTERN%20(00).mp3"
+      },
+      {
+        title: "666 - EATING PATTERN (0 00)",
+        file: "EATING%20PATTERN/666%20-%20EATING%20PATTERN%20(0%2000).mp3"
+      },
+      {
+        title: "666 - EATING PATTERN (0 0)",
+        file: "EATING%20PATTERN/666%20-%20EATING%20PATTERN%20(0%200).mp3"
+      },
+      {
+        title: "666 - EATING PATTERN (0)",
+        file: "EATING%20PATTERN/666%20-%20EATING%20PATTERN%20(0).mp3"
+      },
+
+      ...[
+        ...Array.from({ length: 11 }, (_, i) => i + 1),
+        ...Array.from({ length: 15 }, (_, i) => i + 13),
+        ...Array.from({ length: 7 }, (_, i) => i + 29),
+        ...Array.from({ length: 2 }, (_, i) => i + 37),
+        ...Array.from({ length: 11 }, (_, i) => i + 41)
+      ].map((i) => ({
+        title: `666 - EATING PATTERN (${i})`,
+        file: `EATING%20PATTERN/666%20-%20EATING%20PATTERN%20(${i}).mp3`
+      })),
+
+      {
+        title: "LUKEWARM",
+        file: "EATING%20PATTERN/LUKEWARM.mp3"
+      },
+
+      ...Array.from({ length: 13 }, (_, i) => ({
+        title: `LUKEWARM (${i + 1})`,
+        file: `EATING%20PATTERN/LUKEWARM%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "ALEX BLOCK",
+    songs: [
+      {
+        title: "ALEX BLOCK",
+        file: "NO%20ONE%20WILL%20PRAISE%20YOU%20AS%20HEROES%20ANYMORE/ALEX%20BLOCK.mp3"
+      },
+
+      ...Array.from({ length: 23 }, (_, i) => ({
+        title: `ALEX BLOCK (${i + 1})`,
+        file: `NO%20ONE%20WILL%20PRAISE%20YOU%20AS%20HEROES%20ANYMORE/ALEX%20BLOCK%20(${i + 1}).mp3`
+      })),
+
+      {
+        title: "THE DEVILS WRECKAGE",
+        file: "NO%20ONE%20WILL%20PRAISE%20YOU%20AS%20HEROES%20ANYMORE/THE%20DEVILS%20WRECKAGE.mp3"
+      }
+    ]
+  },
+
+  {
+    title: "HE WAS FOUND WANTING",
+    songs: [
+      {
+        title: "HE WAS FOUND WANTING (basetrack)",
+        file: "HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING%20(basetrack).mp3"
+      },
+      {
+        title: "HE WAS FOUND WANTING (000)",
+        file: "HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING%20(000).mp3"
+      },
+      {
+        title: "HE WAS FOUND WANTING (00)",
+        file: "HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING%20(00).mp3"
+      },
+      {
+        title: "HE WAS FOUND WANTING (0 0)",
+        file: "HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING%20(0%200).mp3"
+      },
+      {
+        title: "HE WAS FOUND WANTING (0)",
+        file: "HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING%20(0).mp3"
+      },
+
+      ...[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 13,
+        15, 16, 17, 18, 19, 20, 21, 22, 23,
+        24, 25, 26, 27, 28, 30
+      ].map((i) => ({
+        title: `HE WAS FOUND WANTING (${i})`,
+        file: `HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING%20(${i}).mp3`
+      })),
+
+      {
+        title: "HE WAS FOUND WANTING",
+        file: "HE%20WAS%20FOUND%20WANTING/HE%20WAS%20FOUND%20WANTING.mp3"
+      },
+
+      {
+        title: "BRENDAN ROSE AND HIS 1600 AI SONG AVALANCHE",
+        file: "HE%20WAS%20FOUND%20WANTING/BRENDAN%20ROSE%20AND%20HIS%201600%20AI%20SONG%20AVALANCHE.mp3"
+      }
+    ]
+  },
+    {
+    title: "SAY HELLO THE MOONLIGHT",
+    songs: [
+      ...[
+        "SAY HELLO TO THE MOONLIGHT.wav",
+        "SAY HELLO TO THE GOODNIGHT.wav",
+        "SAY YOU'LL GO TO THE CEMENT.wav",
+        "SAY YOU'LL GO TO THE GOODNIGHT.wav",
+        "EXCUSE ME MAAM, YOU MAY HAVE NOTICED I'M NOT BEING EXTORTED _).wav",
+        "ANOTHER 500 DOLLARS STOLEN AGAIN.wav",
+        "ANOTHER 500 DOLLARS STOLEN.wav",
+        "SAY YOU'LL NEVER MAKE RENT.wav",
+        "SHE HAS A GOOD PERSONALITY.wav",
+        "so you see there's a duality.wav",
+        "THE GARBAGE CAN IS WATCHING ME.wav",
+        "SOMEONE'S GOTTEN TO IT.wav",
+        "SUCH A PRETTY MOON.wav",
+        "BLOOD FOR THE MOON GOD.wav",
+        "but we can tell when something is powerful.wav",
+        "can't even tell his boys apart.wav",
+        "for a man to forge his own path.wav",
+        "GOODNIGHT GOODNIGHT.wav",
+        "GOODNIGHT MOON LIGHT.wav",
+        "GOODNIGHT MOON NIGHT.wav",
+        "GOODNIGHT MOON.wav",
+        "I DON'T EVER WANNA DIE.wav",
+        "i try to put an array of meanings into everything.wav",
+        "I WOULDN'T WANT YOU TO EVER DIE.wav",
+        "I'M MOVING TO LINUX.wav",
+        "In our town - Meaning is King.wav",
+        "IN THIS CITY, THAT MEANS SOMETHING.wav",
+        "it's not acceptable to society.wav",
+        "MAYBE I SHOULD JUST ACCEPT IIT.wav",
+        "meaning takes on a whole new meaning here.wav",
+        "Meaning Town.wav",
+        "MOON GOODNIGHT.wav",
+        "MOON MOONLIGHT.wav",
+        "MOONLIGHT GOODNIGHT.wav",
+        "MOONLIGHT MOON.wav",
+        "MOONLIGHT MOONLIGHT.wav",
+        "often wrongs got a broken heart.wav",
+        "one thing can mean many things.wav",
+        "The Male Inference (1).wav",
+        "The Male Inference.wav",
+        "THE PRIZE OR THE PRICE.wav",
+        "THE SULFUR GOD.wav",
+        "thus ends this talk on meaning.wav",
+        "TRAPPED IN CHAINS OF FILTH.wav",
+        "YEAH THEY GOT ME GOOD - IM IN DEEP.wav",
+        "YOU CAN'T TRUST ANY UTILITIES ANYMORE.wav",
+        "YOU'LL GO INTO THE ACCOUNT.wav",
+        "a good meaningonly becomes apparent over time.wav",
+        "and a layer of subconscious.wav",
+        "and many things are often wrong.wav",
+        "and only one narrow path is true.wav",
+        "before throwing the dice for any thought of meaning.wav",
+        "between evil and weakness.wav"
+      ].map((fileName) => ({
+        title: fileName.replace(/\.(mp3|wav|m4a)$/i, ""),
+        file: `SAY%20HELLO%20TO%20THE%20MOONLIGHT/${fileName.replaceAll(" ", "%20")}`
+      })),
+
+      ...Array.from({ length: 51 }, (_, i) => ({
+        title: `SAY HELLO TO THE MOONLIGHT (${i + 1})`,
+        file: `SAY%20HELLO%20TO%20THE%20MOONLIGHT/SAY%20HELLO%20TO%20THE%20MOONLIGHT%20(recharge)%20(${i + 1}).mp3`
+      })),
+
+      {
+        title: "STONE CELL",
+        file: "A_PRIVATE_SONGS/STONE%20CELL.mp3"
+      }
+    ]
+  },
+
+  {
+    title: "DEAD ENEMY",
+    songs: [
+      {
+        title: "08 - Empowered Feminist Stole My Baby - ded enemy",
+        file: "DEAD%20ENEMY/08%20-%20Empowered%20Feminist%20Stole%20My%20Baby%20-%20ded%20enemy.mp3"
+      },
+      ...Array.from({ length: 70 }, (_, i) => ({
+        title: `08 - Empowered Feminist Stole My Baby - ded enemy (${i + 1})`,
+        file: `DEAD%20ENEMY/08%20-%20Empowered%20Feminist%20Stole%20My%20Baby%20-%20ded%20enemy%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "THE TOWER IS WHAT WE WANT",
+    songs: [
+      {
+        title: "THE TOWER IS WHAT WE WANT",
+        file: "THE%20TOWER%20IS%20WHAT%20WE%20WANT/THE%20TOWER%20IS%20WHAT%20WE%20WANT.mp3"
+      },
+      ...Array.from({ length: 61 }, (_, i) => ({
+        title: `THE TOWER IS WHAT WE WANT (${i + 1})`,
+        file: `THE%20TOWER%20IS%20WHAT%20WE%20WANT/THE%20TOWER%20IS%20WHAT%20WE%20WANT%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "FREE US FROM FASCISM",
+    songs: [
+      {
+        title: "FREE US FROM FASCISM",
+        file: "FREE%20US%20FROM%20FASCISM/FREE%20US%20FROM%20FASCISM.mp3"
+      },
+      ...Array.from({ length: 24 }, (_, i) => ({
+        title: `FREE US FROM FASCISM (${i + 1})`,
+        file: `FREE%20US%20FROM%20FASCISM/FREE%20US%20FROM%20FASCISM%20(${i + 1}).mp3`
+      })),
+      {
+        title: "FREE US FROM FASCISM (basetrack)",
+        file: "FREE%20US%20FROM%20FASCISM/FREE%20US%20FROM%20FASCISM%20(basetrack).mp3"
+      },
+      ...[2, 3, 4, 5].map((i) => ({
+        title: `FREE US FROM FASCISM (instrumental) (${i})`,
+        file: `FREE%20US%20FROM%20FASCISM/FREE%20US%20FROM%20FASCISM%20(instrumental)%20(${i}).mp3`
+      })),
+      ...Array.from({ length: 5 }, (_, i) => ({
+        title: `06 - Loki - The lamb who spake as a dragon (${i + 1})`,
+        file: `FREE%20US%20FROM%20FASCISM/06%20-%20Loki%20-%20The%20lamb%20who%20spake%20as%20a%20dragon%20(${i + 1}).mp3`
+      })),
+      {
+        title: "06 - Loki - The lamb who spake as a dragon [vocals]",
+        file: "FREE%20US%20FROM%20FASCISM/06%20-%20Loki%20-%20The%20lamb%20who%20spake%20as%20a%20dragon%20[vocals].mp3"
+      },
+      {
+        title: "06 - Loki - The lamb who spake as a dragon",
+        file: "FREE%20US%20FROM%20FASCISM/06%20-%20Loki%20-%20The%20lamb%20who%20spake%20as%20a%20dragon.mp3"
+      }
+    ]
+  },
+
+  {
+    title: "SKINDAY SERVICE",
+    songs: [
+      ...[
+        "SKINDAY SERVICE.mp3",
+        "THE SPRITE TONITE.wav",
+        "and it's 1 2 3 4.wav",
+        "you'll be goin' down.wav",
+        "you're fallin over.wav",
+        "and I'm takin you down.wav",
+        "you're falling low and early.wav",
+        "i'm takin advantage of your fall.wav",
+        "you're six ways from sunday.wav",
+        "and thinkin about hittin that wall.wav",
+        "Peeled and stretched skin.wav",
+        "I'm takin you over.wav",
+        "the needle is going in.wav",
+        "I'm takin you down.wav",
+        "there's no one here but that monster.wav",
+        "a pair of cuffs poorer.wav",
+        "and if you can't fly that's ok with me.wav",
+        "and if you can't fly.wav",
+        "at least it won't be empty when you reach inside your purse.wav",
+        "don't fly don't fly into the ground with thee.wav",
+        "don't fly shot down MFOSMOO.wav",
+        "everyone lives through the night tonight.wav",
+        "Give it to me cheap.wav",
+        "Give it to me clear.wav",
+        "Give it to me straight.wav",
+        "Give it to me.wav",
+        "i can feel them.wav",
+        "i guess this is my home.wav",
+        "i'm so lonely.wav",
+        "it could be worse.wav",
+        "it happens everynight.wav",
+        "its so lonely here.wav",
+        "the arresting officer is a metal door.wav"
+      ].map((fileName) => ({
+        title: fileName.replace(/\.(mp3|wav|m4a)$/i, ""),
+        file: `SKINDAY%20SERVICE/${fileName.replaceAll(" ", "%20")}`
+      }))
+    ]
+  },
+
+  {
+    title: "KING OF DEATH",
+    songs: [
+      ...series("KING%20OF%20DEATH", "KING OF DEATH", "KING%20OF%20DEATH", 39),
+      {
+        title: "King of Death 1",
+        file: "KING%20OF%20DEATH/King%20of%20Death%20(40).mp3"
+      },
+      {
+        title: "King of Death 2",
+        file: "KING%20OF%20DEATH/King%20of%20Death%20(41).mp3"
+      },
+      {
+        title: "Chair Wheel Broken 1",
+        file: "KING%20OF%20DEATH/L%20Chair%20Wheel%20Broken.mp3"
+      },
+      {
+        title: "Chair Wheel Broken 2",
+        file: "KING%20OF%20DEATH/L%20Chair%20Wheel%20Broken%20(1).mp3"
+      }
+    ]
+  },
+
+  {
+    title: "ROCK RIVER",
+    songs: [
+      {
+        title: "THE GLASS BOTTLE",
+        file: "ROCK%20RIVER/THE%20GLASS%20BOTTLE.mp3"
+      },
+      {
+        title: "THE BRITISH ROBOT MAN",
+        file: "ROCK%20RIVER/THE%20BRITISH%20ROBOT%20MAN.mp3"
+      },
+      ...Array.from({ length: 21 }, (_, i) => ({
+        title: `THE BRITISH ROBOT MAN (${i + 1})`,
+        file: `ROCK%20RIVER/THE%20BRITISH%20ROBOT%20MAN%20(${i + 1}).mp3`
+      })),
+      {
+        title: "rock river",
+        file: "ROCK%20RIVER/rock%20river.mp3"
+      },
+      ...Array.from({ length: 23 }, (_, i) => ({
+        title: `rock river (${i + 1})`,
+        file: `ROCK%20RIVER/rock%20river%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "RUMPULSTILTSKIN",
+    songs: [
+      ...[
+        "WHEN THEY JOLT UP IN THEIR CHAIR.wav",
+        "YOU CAN'T STOP THEM FROM COMIN IN.wav",
+        "BUT WHY MAKE THAT DEAL.wav",
+        "MUNCH MUNCH MUNCH.wav",
+        "NO PARTY SIR - NO PARTY.wav",
+        "NO YOU DAMN WELL BETTER GO PARTY.wav",
+        "PUT ALL YOUR WISHES INTO THY MAW.wav",
+        "RUMPULSTILTSKIN BRIDE.wav",
+        "RUMPULSTILTSKIN IS A CREEP.wav",
+        "RUMPULSTILTSKIN SAYS.wav",
+        "RUMPULSTILTSKIN.wav",
+        "RUMPULSTILTSKIN'S MAGIC.wav",
+        "RUMPULSTILTSKIN'S SAFE.wav",
+        "RUMPULSTILTSKIN'S SPINNING MACHINE.wav"
+      ].map((fileName) => ({
+        title: fileName.replace(/\.(mp3|wav|m4a)$/i, ""),
+        file: `RUMPULSTILTSKIN/${fileName.replaceAll(" ", "%20")}`
+      }))
+    ]
+  },
+
+	{
+    title: "THE LAST WILL AND TESTAMENT OF BRENDAN S. ROSE",
+    songs: [
+      {
+        title: "MY WRETCH (28)",
+        file: "SAVE-YOURSELF/MY%20WRETCH%20(28).mp3"
+      },
+
+      ...series(
+        "SAVE-YOURSELF",
+        "BRENDAN S ROSE - LAST WILL AND TESTAMENT",
+        "BRENDAN%20S%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT",
+        9
+      )
+    ]
+  },
+
+  {
+    title: "LONG LIVE THE NEW FLESH 2",
+    songs: [
+      {
+        title: "LONG LIVE THE NEW FLESH 2",
+        file: "LONG%20LIVE%20THE%20NEW%20FLESH%202/LONG%20LIVE%20THE%20NEW%20FLESH%202.mp3"
+      },
+      ...Array.from({ length: 9 }, (_, i) => {
+        const n = i + 3;
+        return {
+          title: `LONG LIVE THE NEW FLESH (${n})`,
+          file: `LONG%20LIVE%20THE%20NEW%20FLESH%202/LONG%20LIVE%20THE%20NEW%20FLESH%20(${n}).mp3`
+        };
+      }),
+      ...Array.from({ length: 69 }, (_, i) => ({
+        title: `LONG LIVE THE NEW FLESH 2 (${i + 1})`,
+        file: `LONG%20LIVE%20THE%20NEW%20FLESH%202/LONG%20LIVE%20THE%20NEW%20FLESH%202%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+
+  {
+    title: "the pissant is here - you're going in rooms now",
+    songs: [
+      ...Array.from({ length: 56 }, (_, i) => {
+        const n = i + 2;
+
+        return {
+          title: `the pissant is here - you're going in rooms now (${n})`,
+          file: `the%20pissant%20is%20here%20-%20you're%20going%20in%20rooms%20now/the%20pissant%20is%20here%20-%20you're%20going%20in%20rooms%20now%20(${n}).mp3`
+        };
+      })
+    ]
+  },
+
+  {
+    title: "COCKROACH JESUS",
+    songs: [
+      ...series("COCKROACH%20JESUS", "COCKROACH JESUS", "COCKROACH%20JESUS", 47)
+    ]
+  },
+
+  {
+    title: "STONE CELL",
+    songs: [
+      {
+        title: "STONE CELL",
+        file: "STONE%20CELL/STONE%20CELL.mp3"
+      },
+      ...Array.from({ length: 10 }, (_, i) => ({
+        title: `STONE CELL (${i + 1})`,
+        file: `STONE%20CELL/STONE%20CELL%20(${i + 1}).mp3`
+      }))
+    ]
+  },
+];

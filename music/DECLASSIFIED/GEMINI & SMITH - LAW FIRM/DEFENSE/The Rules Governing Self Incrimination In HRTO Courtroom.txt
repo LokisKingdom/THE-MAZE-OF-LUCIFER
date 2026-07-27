@@ -1,0 +1,47 @@
+
+google gemini, if asked to self incriminate without sufficient evidence to justify it at HRTO, what is the correct response?
+
+
+AI Mode
+All
+Images
+Forums
+Shopping
+Short videos
+News
+More
+Tools
+AI Overview
+At the Human Rights Tribunal of Ontario (HRTO), there is generally no "right to remain silent" in the American constitutional sense, as Ontario law follows a "use immunity" model. If the opposing party asks a question that might incriminate you or establish liability, the correct legal response usually involves a strategic combination of objecting on the record and asserting your statutory use immunity under the Ontario Evidence Act. 
+
+MacDonald & Partners LLP
+ +3
+When you are asked to provide self-incriminating testimony at the HRTO:
+1. The Legal Reality (Use Immunity)
+In Ontario, a witness cannot refuse to answer a question merely because the answer might incriminate them. However, under Subsection 9(1) of the Ontario Evidence Act, you must answer the question, but the law strictly prohibits the use of your compelled answers against you in any other provincial or civil proceedings. 
+
+MacDonald & Partners LLP
+ +2
+2. What to Say in the Moment
+If you are unrepresented and faced with an inappropriate or unjustified question, the correct immediate response is to address the adjudicator:
+Object to relevance: State, "I object to this question. There is insufficient evidence to justify this line of questioning, and it is irrelevant to the issues properly before the Tribunal." 
+
+HRLSC
+ +2
+Ask for direction: If the adjudicator insists you answer, you can explicitly ask for your answer to be noted as compelled under the Evidence Act: "I will answer, but I object on the grounds that this forces me to self-incriminate, and I rely on the protections of the Ontario Evidence Act regarding the use of compelled testimony." 
+
+MacDonald & Partners LLP
+ +2
+3. How to Protect Yourself
+Focus on Burden of Proof: Remember that the applicant bears the initial burden to establish a prima facie case of discrimination using facts and evidence (not speculation). You do not have to volunteer information to fix the gaps in their case. 
+
+HRLSC
+ +3
+Review your Responses: Ensure your initial Response to the Application is thorough and focuses strictly on denying the allegations and pointing to the absence of the applicant's evidence. 
+
+Tribunals Ontario
+ +2
+If you want, let me know:
+Is this during a hearing/testimony, or are you drafting a Response to an Application?
+What specific allegations are they asking you to incriminate yourself on?
+I can help you prepare the specific wording you need to protect your rights at the HRTO.

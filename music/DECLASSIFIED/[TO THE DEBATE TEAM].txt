@@ -1,0 +1,23 @@
+[TO THE DEBATE TEAM]
+
+ok, you were saying, when making the art is so easy,
+then the art is found in the curation. This is wrong,
+i don't curate my work almost at all, other than
+which songs to post publicly or not of course,
+When I make a series of songs, generally all of them
+are viable. If I make 100 songs, most of them are good,
+I would expect all of them to function. (I have only seen broken songs once or twice)
+
+The artistry, I reiterate, is twofold. It is in the lyrics writing, and the styles engineering and other settings,
+you call it a prompt, but it's more determining the style of music the lyrics will be sung in,
+It can be a very fast process, or a very slow and methodical one, you lose most of your settings
+when you restart so you need to do it in one big try. People dismiss this stage of the process as
+(A: the thing in itself) and (B: easy and meaningless), no Suno can take extremely complex inputs
+for it's style prompts, you can list genre, emotional character/mood, you can list specific instruments to include, you can include crowds in the background cheering or singing along, the styles of music are almost endless, so, even though it's technically easy to put in anything and get a good result,
+for the best music, you need (A: Good Well Written Lyrics - Note: HARD TO DO) and (A cohorerent and interesting well written style prompt, that makes a good sounding song, or makes a Good Lyrics sheet great). You can also work in audio sources, which is you singing the song, or performing the whole piece, and then the machine takes it in and sings their version in a similar style of singing and music. And you can also put in cloned voices of yourself. Choose from male female or both. I don't generate lyrics randomly but they have a random lyrics generator, you could make a hundred songs with 100 different sets of lyrics, i wish i could, but i want to maintain control over my lyrics. To me the artistry is clear, it's in the lyrics writing, and it's in the evolution of the styles prompts, over 50 or 100 generations, you have to choose good sounding styles prompts throughout that process, if you make it bad, the work will suffer, if you choose well written, good sounding styles prompts, then those 100 or 200 songs you just made, will sound good! There is artistry in it, there is such a thing as doing it good or bad. The Lyrics are the main source of artistry. I'm sorry I'm not explaining it well, the style prompts are very important, very hard to get right. If you just spam a genre tag, you'll get a song, even a good one, but the greats will elude you. You need to be able to write a great song, almost nobody can do this. It is an extraordinarily rare skill. The quality of the songs flows directly from the quality of the lyrics.
+The sound, the kick, the rise of the chorus, it's all based on your lyrics.
+
+When you abstract out generating the music into style prompts,
+you see that the only real artistry in music was always the lyrics,
+Everything else can be changed without issue.
+But the lyrics are immaculate, change the lyrics and it's no longer the same song.

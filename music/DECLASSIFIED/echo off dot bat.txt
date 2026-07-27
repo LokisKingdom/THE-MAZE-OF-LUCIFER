@@ -1,0 +1,15 @@
+@echo off
+cd /d "D:\lokis-kingdom"
+
+echo Generating music catalog JSON...
+echo.
+
+node generateMusicCatalog.mjs
+
+echo.
+echo ========================================
+echo DONE - Check the results above.
+echo ========================================
+echo.
+
+pause

@@ -1,0 +1,35 @@
+So today I'm working on a new game.
+Gonna use Godot to make a roguelike with 90 GB of music.
+I want to make it so every album is it's own biome or area,
+with different enemies, locations, drops, money, npc's, books, lyric's sheets, etc, etc, depending on what song is playing.
+So certain songs you'll just hear them start playing and you'll groan, oh no, they're coming.....
+Gonna be a one life roguelike, with a mirror system, where you can select to teleport to areas you've been in before, but you can also just type their name and go there, even if you never visited, they'll be the album names. You get locations from lyrics sheets you find lying around, but also from exploration.
+It should be pretty fun, and you will have a jukebox in the main menu where you can listen to all of my songs.
+It'll basically be a way for people to get a hardcopy of all my songs, even if the website and android app got taken down somehow.
+we've already got it selecting and playing a random song every time you start up.
+the roguelike template i'm working on seems strong.
+Grok found it for me,
+He tried to get me through the early stages but
+he got caught in a robot loop.
+Telling me to do 1 thing, then when it failed, do 2 thing, then when it failed, try 1 thing, then when it failed, try 2 thing.
+I was sad I had to do it but i took the project to ChatGPT,
+she quickly fixed the problem that was bedogging me,
+and we made a lot of progress,
+today we're uploading the whole 90 GB of songs to the
+github repository, i have gitLFS,
+so I can do this.
+Then I'll have my songs backed up in yet another uncensorsable, undeletable location.
+I think I have about 6 backups of those songs,
+across different platforms, maybe more
+and it'll also be cool because whenever i update with a new album, I'll put it in the game album folder, and then i'll be able to push each new album as a git update, preserving them.
+unless you get your account deleted or stiff them on a lot of money, they never delete your stuff.
+So today it's just a bit push to get that stuff uploaded to Git.
+I'm a little more than half done,
+we ran into some problems but ChatGPT is my Brah,
+She got through it no problem,
+there were some files being pushed to the standard git instead of GitLFS, an easy fix,
+So soon we'll have an even newer toy to mess with,
+this game. LUCIFERIANISM 2.
+I'm looking forward to building the lore,
+making new enemies, all that stuff,
+i've always wanted to make a roguelike.

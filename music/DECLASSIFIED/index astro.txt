@@ -1,0 +1,579 @@
+---
+const videos = [
+  {
+    title: "Please CC the Registrar",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/Please%20CC%20The%20Registrar%20(video).mp4",
+  },
+  {
+    title: "THE YOKED WROTH DRAGGED TO HELL AND STAINED WITH CASH AND BLOOD",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/THE%20YOKED%20WROTH%20DRAGGED%20TO%20HELL%20AND%20STAINED%20WITH%20CASH%20AND%20BLOOD.mp4",
+  },
+  {
+    title: "WHY IS MY BLENDER LENDING?",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/WHY%20IS%20MY%20BLENDER%20LENDING%20(funny%20video).mp4",
+  },   
+  {
+    title: "SAY HELLO TO THE MOONLIGHT",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/SAY%20HELLO%20TO%20THE%20MOONLIGHT%20(video).mp4",
+  }, 
+  {
+    title: "LUCIFER MEDIA CORPORATION",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/LUCIFER%20MEDIA%20CORPORATION%20(video).mp4",
+  },
+    {
+    title: "A WARM PLACE",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/A%20WARM%20PLACE%20(video).mp4",
+  },
+    {
+    title: "Pimp Slap",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/Pimp%20Slap.mp4",
+  },
+    {
+    title: "SAY HELLO TO THE MOONLIGHT 2",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/SAY%20HELLO%20TO%20THE%20GOODNIGHT%20-%20video.mp4",
+  },
+    {
+    title: "SAY HELLO TO THE GOODNIGHT",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/SAY%20HELLO%20TO%20THE%20MOONLIGHT%20-%20video.mp4",
+  },
+    {
+    title: "THE SPRITE TONITE",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/THE%20SPRITE%20TONITE%20(video).mp4",
+  },
+    {
+    title: "RED APPLE",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/RED%20APPLE.mp4",
+  },
+  {
+    title: "AND WITH THAT THE DEMON DEPARTED",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/AND%20WITH%20THAT%20THE%20DEMON%20DEPARTED.mp4",
+  },
+      {
+    title: "GOD'S DEBRIS",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/GOD'S%20DEBRIS.mp4",
+  },
+      {
+    title: "I'M MOVING TO LINUX",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/IM%20MOVING%20TO%20LINUX.mp4",
+  },
+      {
+    title: "MOVE ALONG HOME",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/MOVE%20ALONG%20HOME.mp4",
+  },
+      {
+    title: "RUMPULSTILTSKIN IS A CREEP",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/RUMPULSTILTSKIN%20IS%20A%20CREEP.mp4",
+  },
+      {
+    title: "there's no one here but that monster",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/there's%20no%20one%20here%20but%20that%20monster.mp4",
+  },
+  
+];
+
+const SITE_TITLE = "Loki's Kingdom";
+const SITE_DESCRIPTION = "The God of Mischief welcomes you...";
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import DesktopMusicApp from '../components/DesktopMusicApp.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+    <Header />
+    <!-- rest of your page -->
+    
+    <main>
+        <div class="hero" style="text-align: center; padding: 4rem 1rem; background: linear-gradient(#1a0033, #000); color: #ffd700;">
+		<h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #FF0000;">
+		<a href="https://drive.proton.me/urls/DRW5W97CRG#bk3SuHZ2QvE8">👑 Loki's Kingdom</a>
+		</h1>
+
+		<h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #FF0000;">
+		  "With no Eminems<br />
+		  ...<br />
+		  Not even one."
+		</h1>
+            
+            <p style="font-size: 1.4rem; max-width: 600px; margin: 0 auto 2rem;">
+                The God of Mischief welcomes you...
+
+                You fall before Loki.
+            </p>
+
+            <p> "UP!" he says, you Stand.
+            </p>
+            <p>
+                "Welcome to my Kingdom! 
+            </p>
+			
+			<p>
+			<a href="https://drive.google.com/drive/folders/1owgXpKtZRwi-jdRHJwdJsUqIg9-bgeM4?usp=sharing">Click Here For Our Revenge - GOODNIGHTISM - An Ideology of Evil, Death, Crime, Hate, Horror and Conflict</a>
+			</p>
+
+            <img 
+                src="/Loki.jpg" 
+                alt="Loki" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >
+			<DesktopMusicApp />			
+			<img 
+                src="/no noid on tps.png" 
+                alt="avoid the noid" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >			
+
+			<p>
+			This is The Official Religion of Lucifer. I am Lucifer's Representative on Earth.
+			</p>
+			<p>
+			THE THREE SINS:
+			</p>
+			<p>
+			1) Putting out a Fire
+			</p>
+			<p>
+			2) Tending to the Wounded
+			</p>
+			<p>
+			3) Enforcing the Law
+			</p>			
+			</n>
+            <p>
+			I am Loki, creator of EFSMB (Empowered Feminist Stole My Baby), it also functions as my origin story! I am the greatest musician in human history. I am THE DEVIL 666, Developer of LUCIFERIANISM, the best game in the world, ever. I am the author of among others, QUOTATIONS FROM BRENDAN S. ROSE 'the book of fire' SELECTED WORKS VOL.I and BIRD CAGE, as well as numerous BURNED and CENSORED WORKS. Published by The Czechoslovakian Secret Police, our publishing arm. Formally the most censored artist alive in the world today, I have broken containment on Soundcloud, earning 1.4 million hits in 3 months. This is my kingdom, I expect it will one day grow to outpace Soundcloud by orders of magnitude, but for now that is my biggest platform. My life story is fucked, I'm not even sure I can tell it, we'll see in the bio."
+            </p>
+
+            <img src="/LokiByArthurRackham.jpg" alt="Loki2" width="500" style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);">
+            <img src="/101.jpg" alt="Loki3" width="500" style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);">
+
+            <p>There’s a trail of green pills leading to the about section, something strange must be happening in that room.... Do you go there???? O_O</p>
+
+					<section
+		  style="
+			margin: 3rem auto;
+			padding: 2rem;
+			max-width: 700px;
+			text-align: center;
+			background: #111;
+			border: 2px solid #4B0082;
+			border-radius: 14px;
+			box-shadow: 0 0 20px rgba(75,0,130,0.4);
+		  "
+		>
+		  <h2
+			style="
+			  color: #FFD700;
+			  margin-bottom: 1rem;
+			  font-size: 2rem;
+			"
+		  >
+			Loki’s Kingdom Android App
+		  </h2>
+
+		  <p
+			style="
+			  color: #DDD;
+			  line-height: 1.7;
+			  margin-bottom: 2rem;
+			  font-size: 1.05rem;
+			"
+		  >
+			Native Android release featuring:
+			<br />
+
+			<style>
+			.android-app-box {
+				width: 100%;
+			}
+
+			.android-app-box pre {
+				display: block;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+
+				white-space: pre-wrap;
+				word-break: normal;
+				overflow-wrap: break-word;
+
+				text-align: left;
+				box-sizing: border-box;
+			}
+			</style>
+			
+					
+		<div style="
+		  background-color: #000000; 
+		  color: #ff0000; 
+		  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		  text-align: left; 
+		  white-space: pre-wrap; 
+		  padding: 40px 20px;
+		  box-sizing: border-box;
+		  width: 100%;
+		  max-width: 800px;
+		  margin: 0 auto;
+		  line-height: 1.6;
+		">	
+	
+			
+		<section class="android-app-box">
+		<div class="android-app-text">
+			
+Album selection, playlist swapping,
+song selection, shuffle, repeat,
+background playback, and Cloudflare-powered streaming,
+A Dark Symphony of Evil Sexy Boodstained Music From
+a real life authentic Nosferatu.
+
+(VERSION 4: added IN THE NAME OF GOOGLE NOTEBOOK LM AND THE DEEPDIVE CREW, 49 albums and growing, thousands of songs.... Please redownload if on version 2 or lower)
+(VERSION 5: added SAVE YOURSELF (series) (60 more songs) to the My Wretch (Album), 49 albums and growing, thousands of songs.... Please redownload if on version 3 or lower)
+(VERSION 6: the secret version for my ears only, not for public release, with GOING FULL FASCIST and 1825 (explicit), IN VOCAL DEFIANCE OF NETVERKKERGERKVERKERKERSHAFT (NetzDG) 
+The German 4th Reich Nazi Party's Global Anti-Music Extermination and Destruction Program, which Cloudflare Opposes!!! STAND WITH ME AND CLOUDFLARE AT MY MANY GROWING AND ENDLESS CASES 
+AT THE HRTO, SPECIALLY HRTO File No. 2026-67265-I AND ALSO EVEN BETTER - HRTO FILES : 2026-67449-I and 2026-67461-I WHICH THE JUDGE WILL SOON CONSOLIDATE INTO ONE, SINGLE, WAR, AGAINST, 
+THE CANADIAN GOVERNMENT, FOR BUTCHERING A FREE NATION TO DEATH IN FRONT OF IT'S FAMILY- TO INSTALL ME, WHEN I WIN. )
+(Sorry Nazi, I don't speak German, or follow it's brutal orders.....)
+(VERSION 7: Added DEFEAT THAT NOID, I have lost many friends, sad that i will kill the world because i am too sad, this is true, i will. The song pertains to a point in the case where legal
+filings were stalled or brewing, many deliberations were going on as the judgement should be in my favor, they were trying to disconfirm it, is my honest opinion. So i sent this noid
+a procedural fairness noid, standard now... though they're usually only granted early on like this, it is designed to dislodge the stall in talks, by introducing an element of chaos
+the continuing resolution on evidence submission, that when and if defeated (it is a hard noid to defeat, and easy to grant) they would have to give up their reasons for saying no,
+i think no reasonable prospect is not going to happen, for instance.... not tonight, so here's a song about the noid, if they file motion to dismiss again, i will meet them with another thesis,
+and move forward....)
+[VERSION 8: added THE LAST WILL AND TESTAMENT OF BRENDAN S. ROSE to SAY HELLO TO THE MOONLIGHT, this is my last will and testament, although I expect to live a long time, it's what I want done
+when I meet my fate, what I feel, I deserve, in return for giving up that great work to you Lord Lucifer. I will consider what you request, but you know I am a man of peace, for good or ill,
+however I am sure that you will be the steward of my wishes, and that the trove of music and other treasures we sacrifce going across the boat and over the river. I'll stay inside more,
+the humans as you know are vile, but I think I can match them, and evade their weak and feckless attacks, some simple Satanic wisdom, SAY NO TO PREDATORS, that kind of thing, will serve us well,
+and my will you can enact at any time, before during or after, please grand this gift Lord. It is what I request of you in my will, which as it is not bound by the laws of man, you are bound
+to obey it. So we'll teach them, teach them of Satan.)]
+[VERSION 9: added MY WILL.]
+[VERSION 10: added ANGELS IN HOUSES]
+[VERSION 11: Secret Version, for my ears only, and for my close friends and associate hangers on, so basically no one, public release, bunch of new songs, Good stuff, nice addition. Add's a progress bar you can click that lets you select from different parts of the song. All planned features implemented.]
+[VERSION 12: Added SLIG'S WORKDAY, PRETTY LIES, PRISON PUZZLE OF THE SPHINX, RED APPLE, Humiliated Teenagers in the Park at Midnight.]
+[VERSION 13: Added ONLY GOD ONLY KNOWS.]
+[VERSION 14: Added FIRE DISCO LIGHTS.]
+[VERSION 15: 2026 06 24 - Added Please CC the Registrar]
+[VERSION 16: 2026 06 27 - Added the pissant is here - you're going in rooms now, Added 19 new songs to IN THE NAME OF GOOGLE NOTEBOOK LM AND THE DEEPDIVE CREW, Added the Secret. Added 51 new versions of SAY HELLO TO THE MOONLIGHT.]
+[VERSION 17: 2026 06 28 - STONE CELL added. Food deposited.]
+[VERSION 18: 2026 06 29 - Added CAPELLA.]
+[VERSION 19: 2026 06 30 - INCORPORATING - Realized that I can't rely on anyone but myself, she burned guys..... added THE YOKED WROTH DRAGGED TO HELL AND STAINED WITH CASH AND BLOOD. Incorporated: Tuesday, June 30th, 2026 at 7:16 PM]
+[VERSION 20: 2026 07 02 - Added COCKROACH JESUS and SEED OF RAGNAROK. Memit Hai!!]
+[VERSION 21: 2026 07 02 - Added LUCIFER MEDIA CORPORATION. Memit Hai!!]
+[VERSION 22: 2026 07 03 - Added CATHEDRAL OF XEEN. Added FOOLISH GIRL - SHE VOMITED ON COMMAND. Added KING OF DEATH. MEMIT HAI!!!!]
+[VERSION 23: 2026 07 06 - Added AUTOMATION. MEMIT HAI!!!! MEMIT HAI!!!! HAI MEMNAKU!!!!]
+[VERSION 24: 2026 07 07 - Added MY MONKEY (JESUS FUCKING CHRIST) to the Lokiskingdom App.]
+[VERSION 25: 2026 07 09 - Added NO ANGEL to the Lokiskingdom App. MEMIT HAI!!!]
+[VERSION 26: 2026 07 10 - Added HEAT. HAI HAI MEMIT MAIVIET!!!!! SUMURAI SEN!!!!]
+[VERSION 27: 2026 07 12 - Today I killed all the men and put the women in cages!!! MEMIT HAI!!!! Also: Added THE WARMTH OF A HELLBOUND HOME, and FANGIRL to the Lokiskingdom App ]
+[VERSION 28: 2026 07 13 - I felt bad for one of the women so I released her, BUT SHE BETRAYED ME!!! So I put her back. Also added Pouring out a 40 oz of Colt 45 out onto the road for this hero, to both Lokiskingdom App and the Desktop Jukebox. Also added Install as App functionality for the Desktop Site.]
+[VERSION 29: 2026 07 14 - Now I have all the women, I flex on them allday. Completely reworked the entire album system, so that Desktop App and Mobile App both work off the same list of songs, added Lyrics to all songs on Desktop and Mobile App. ! ! !]
+[VERSION 30: 2026 07 14 - Added MEDIUM RED HOOD to Web Player and Android App with Lyrics. I'm starting to get to know them. I'm giving them names.]
+[VERSION 31: 2026 07 15 - Added User 892023534 to Desktop and Android Player with lyrics. Added 56 extra songs to WHY IS MY BLENDER LENDING?]
+[VERSION 32: 2026 07 16 - Added SATAN HIMSELF AT THE DOOR (series, 88 songs) to KNOCK KNOCK KNOCK - SATAN HIMSELF AT THE DOOR. I drove around the city like GTA V causing accidents and squishing people.]
+[VERSION 33: 2026 07 17 - JESUS DWELLED WITH ME AND DINED WITH ME, It was fun. Added a bunch of new THAT DAMN CANCER songs to THAT CRAB CANCER, also added THE RED FOG, and GET RUN OFF BACK TO KANSAS. The Cities and The Forests are Burning, The City is Covered in a Dense Red Fog that causes Cancer. I think I am mostly safe holed up in my room with the doors closed, it is cool and filtered, I'm getting food and stuff delivered, but that can only last for so long, depends now long the fires last, and the Red Smog Remains.... I did that.]
+[VERSION 34: 2026 07 17 - Added STALIN, BARNUM AND BAILEYS CIRCUS, Qualis Artifex Pereo, BEAT TOWER, VILLAIN, ONE PUNCH WOMAN to Web/Desktop Player, and to the Android App. Jesus eventually went home, it got awkward.]
+[VERSION 34: 2026 07 17 - After Jesus Left, he told me, I'm angry at you, so I'm just going to let the fires burn until you're consumed. The Flames Are Burning Everywhere Around Me, The Smoke Is Pouring Into the City Indescriminately killing everyone in the city I hate, and also all the people I like, but not me, I gotta good setup with my AC. I think I can survive a full burn with this. The Dead and the burning are everywhere, the air quality is THE WORST IN THE WORLD according to legitimate newspeople.... Did God send a fire to kill me??? Also Added A bunch of stuff to LOKASENNA, all the Thor in a dress stuff. And i added OF COURSE, CLOUD YELLS AT OLD MAN, which contains CLOUD DESTROYS THE WORLD - DATES YUFFIE, GOLD MINE, AND SOME OTHER DAMN THING. AND I added STAINS LIKE YOU. =) the flames are a beautiful death lord - slow and methodical - steady and consuming. the flames fill the land outside my city, sending toxic plumes of smoke to the people I abhor. And those I love as well. :)]
+		  </div>
+			</section>
+
+		  <a
+			href="https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/A_RELEASES/lokiskingdom.apk"
+			target="_blank"
+			rel="noopener noreferrer"
+			style="
+			  display: inline-block;
+			  padding: 14px 28px;
+			  background: #4B0082;
+			  color: white;
+			  border-radius: 10px;
+			  text-decoration: none;
+			  font-weight: bold;
+			  font-size: 1.1rem;
+			  transition: 0.2s ease;
+			"
+		  >
+			⬇ Download the LokisKingdom App, "No Eminems", Just Me, No bad music, none, 83+ ALBUMS, 5000+ SONGS
+		  </a>
+
+		  <p
+			style="
+			  color: #888;
+			  margin-top: 1.5rem;
+			  font-size: 0.9rem;
+			"
+		  >
+			Android may ask for permission to install apps from unknown sources.
+		  </p>
+		</section>
+
+		<h2 id="videoHeader">CHANNEL 83</h2>
+
+		<section class="video-player">
+		  <h2 id="videoTitle">{videos[2].title}</h2>
+
+		  <video
+			id="mainVideo"
+			controls
+			playsinline
+			width="100%"
+			height="auto"
+		  >
+			<source id="videoSource" src={videos[2].url} type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+
+		  <div class="video-controls">
+			<button id="prevVideo" type="button">← Previous</button>
+			<button id="nextVideo" type="button">Next →</button>
+		  </div>
+		</section>
+
+		<script define:vars={{ videos }}>
+		  let currentVideoIndex = 2;
+
+		  const video = document.getElementById("mainVideo");
+		  const source = document.getElementById("videoSource");
+		  const title = document.getElementById("videoTitle");
+		  const prevButton = document.getElementById("prevVideo");
+		  const nextButton = document.getElementById("nextVideo");
+
+		  function loadVideo(index) {
+			currentVideoIndex = index;
+
+			title.textContent = videos[currentVideoIndex].title;
+			source.src = videos[currentVideoIndex].url;
+
+			video.pause();
+			video.load();
+		  }
+
+		  prevButton.addEventListener("click", () => {
+			const nextIndex =
+			  currentVideoIndex === 0
+				? videos.length - 1
+				: currentVideoIndex - 1;
+
+			loadVideo(nextIndex);
+		  });
+
+		  nextButton.addEventListener("click", () => {
+			const nextIndex =
+			  currentVideoIndex === videos.length - 1
+				? 0
+				: currentVideoIndex + 1;
+
+			loadVideo(nextIndex);
+		  });
+		</script>
+
+		<style>
+		  #videoHeader,
+		  #videoTitle {
+			color: #ff3030;
+		  }
+
+		  .video-player {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+		  }
+
+		  video {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+			border-radius: 16px;
+			background: #000;
+		  }
+
+		  .video-controls {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-top: 1rem;
+		  }
+
+		  .video-controls button {
+			cursor: pointer;
+			padding: 0.75rem 1rem;
+			border-radius: 999px;
+		  }
+		</style>
+
+		<MusicPlayer 
+		  tracks={[
+			{
+			  title: "MY WRETCH",
+			  file: "SAVE-YOURSELF/MY%20WRETCH.mp3"
+			},
+
+			...Array.from({ length: 53 }, (_, i) => ({
+			  title: `MY WRETCH (${i + 1})`,
+			  file: `SAVE-YOURSELF/MY%20WRETCH%20(${i + 1}).mp3`
+			})),
+
+			{
+			  title: "SAVE YOURSELF",
+			  file: "SAVE-YOURSELF/SAVE%20YOURSELF.mp3"
+			},
+
+			...Array.from({ length: 59 }, (_, i) => ({
+			  title: `SAVE YOURSELF (${i + 1})`,
+			  file: `SAVE-YOURSELF/SAVE%20YOURSELF%20(${i + 1}).mp3`
+			})),
+			
+			{
+			  title: "THE NATIONAL ANTHEM",
+			  file: "SAVE-YOURSELF/MY%20WRETCH%20(28).mp3"
+			},
+			
+			{
+			  title: "BRENDAN S ROSE - LAST WILL AND TESTAMENT",
+			  file: "SAVE-YOURSELF/BRENDAN%20S%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT.mp3"
+			},
+						...Array.from({ length: 9 }, (_, i) => ({
+			  title: `BRENDAN S ROSE - LAST WILL AND TESTAMENT (${i + 1})`,
+			  file: `SAVE-YOURSELF/BRENDAN%20S%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT%20(${i + 1}).mp3`
+			}))
+
+		  ]}
+		/>
+		<a
+			href="https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/A_RELEASES/BRENDAN%20S.%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT%20(signed).pdf"
+			target="_blank"
+			rel="noopener noreferrer"
+			style="
+			  display: inline-block;
+			  padding: 14px 28px;
+			  background: #4B0082;
+			  color: white;
+			  border-radius: 10px;
+			  text-decoration: none;
+			  font-weight: bold;
+			  font-size: 1.1rem;
+			  transition: 0.2s ease;
+			"
+		  >
+		  
+						<img 
+                src="/no noid on tps.png" 
+                alt="Preface" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >		
+						<img 
+                src="/MY WILL 1.png" 
+                alt="Page 1" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >		
+						<img 
+                src="/Signing out.png" 
+                alt="Page 2" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >		
+            <p>THE LAST WILL AND TESTAMENT OF BRENDAN S. ROSE</p><p>
+		</p><p>
+		by BRENDAN S. ROSE, 1:55 PM 2026 06 06 </p><p>
+		</p><p>
+		</p><p>
+		I fully disinherit my wife Chia-Lin Yu,</p><p>
+		and my son may only inherit if a blood test</p><p>
+		is in the affirmative, I leave everything to my master as outlined below.....</p><p>
+		</p><p>
+		</p><p>
+		</p><p>
+		BEFORE WE BEGIN, A POEM</p><p>
+		</p><p>
+		SAY HELLO TO THE MOONLIGHT</p><p>
+		SAY HELLO TO THE GOODNIGHT</p><p>
+		I DON'T EVER WANNA DIE,</p><p>
+		SAY HELLO TO THE GOODNIGHT</p><p>
+		</p><p>
+		I HAD TO SWAY AWAY FROM YOU</p><p>
+		YOU WANTED TO KILL ME FIRST OF ALL</p><p>
+		I MADE SURE TO GIVE MY GIFT TO YOU SOMETHING</p><p>
+		IN THE WILL MY GIRL</p><p>
+		</p><p>
+		A LITTLE SOMETHING FOR OUR UKNOWN</p><p>
+		MONGREL.</p><p>
+		</p><p>
+		*spit*</p><p>
+		</p><p>
+		*THWACK!!!*</p><p>
+		</p><p>
+		Because there are no Humans I can trust,</p><p>
+		</p><p>
+		I leave my properties my IPs, my books, my records, my social media account</p><p>
+		passwords and my computers to Lucifer, the Angel of Light, a real demon</p><p>
+		who exists somewhere below the earth....</p><p>
+		</p><p>
+		To this purpose we must have three feasts,</p><p>
+		</p><p>
+		There is a sand desert with multicolored candycane buildings</p><p>
+		and gingerbread men and women boys and girls, we feast there</p><p>
+		three times every moon's yonder, and return again when the moon is gone.</p><p>
+		</p><p>
+		There is a square within a green, where some dwell for enjoyment,</p><p>
+		however I shouted at them, so they were indeed guilty, a hotdog stand</p><p> 
+		was there, we feast there 5 times before the moon was yonder, wandering sideways.</p><p>
+		</p><p>
+		There was a party there, in those towers, a wonderful party for guests</p><p>
+		and families of two and three, in there we feasted once,</p><p>
+		and celebrated greatly with our many thousands of friends,</p><p>
+		that we were free. The towers were littered with holes, bones,</p><p>
+		and dresses littering the pavement. the pavement covered in torn dresses.</p><p>
+		This was the night of the moon half empty, still just filling up with red.</p><p>
+		And four went missing before they'd noticed the moon had spun. </p><p>
+		Halfway t'wards yonder that moon in the night.</p><p>
+		</p><p>
+		Four bad men were found, criminals they were, away these men were taken,</p><p>
+		but where they went no-one knew. Many celebrated, as they were evil,</p><p>
+		and deserved their fate. That was on the morrow of the moon, by the night</p><p>
+		it was first beset.</p><p>
+		</p><p>
+		And they were rewarded again as well, given glass faces full of girls,</p><p>
+		beautiful girls, beautiful ones. Not mere attractiveness, beauty is rare</p><p>
+		and startling to the eye, two gold lambs were taken away somewhere,</p><p>
+		their "fate" was mostly pleasant, and later they returned.</p><p>
+		</p><p>
+		HA!! HA!! HA!!</p><p>
+		</p><p>
+		A dog was found, that was said to me mine, and not mine,</p><p>
+		because it was not mine, the dog died.</p><p>
+		</p><p>
+		Another dog was heard to laugh at me, so he died</p><p>
+		and a cat died. This was called the Germination Season.</p><p>
+		Many of them died in accidents, nothing malicious at all we heard.</p><p>
+		</p><p>
+		I make this will with a clear and calm mind,</p><p>
+		a rational sane mind, clear and lucid,</p><p>
+		knowing what must be done.</p><p>
+		</p><p>
+		Now quickly, I must go,</p><p>
+		When the cycles are done I will return to you, Justice and All.</p><p>
+		</p><p>
+		Kindest Regards,</p><p>
+		-Brendan S. Rose _________________________________________      </p><p>
+		</p><p>
+		</p><p>
+		witness ______________________________________________</p><p>
+		</p><p>
+		</p><p>
+		witness ______________________________________________	</p><p>
+					Copyright ©️ Brendan S. Rose, 2026</p>
+        </div>
+    </main>
+
+    <Footer />
+</body>
+</html>

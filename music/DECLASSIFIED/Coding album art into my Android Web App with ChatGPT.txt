@@ -1,0 +1,831 @@
+Today 6:50 AM
+ok, one thing that's been bothering me on mobile app, i'm not sure how i'd conceive of this, but all those mp3's from Suno, they all have these beautiful images associated with their metadata, each one has it's own special image, I can see it when the phone is sleeping, when i switch it on from sleep mode, the image is partially displayed. I would like those images to be visible in app. (I'm not sure where to put them, as they might get in the way of the site, or the UI)
+
+I actually think this would add a lot to the app. Right now your app is functionally strong, but visually every song looks the same. Those embedded Suno covers are already part of your music library, so letting them show gives each song its own identity without creating more work.
+
+There are a few ways to do it, in order of what I think would work best.
+
+Option 1 (my favorite): "Now Playing" artwork
+
+Put a square album cover directly above the song title.
+
++----------------------+
+|                      |
+|    [ 320x320 art ]   |
+|                      |
++----------------------+
+
+NOW PLAYING
+
+THE DEVIL HIMSELF
+
+Album: RED APPLE
+
+[Play]
+[Prev] [Next]
+
+Progress Bar
+
+Advantages:
+
+uses artwork you're already carrying in the MP3
+feels like Spotify/Poweramp
+doesn't interfere with controls
+immediately gives every song personality
+Option 2: Background blur
+
+Extract the artwork and blur it behind the interface.
+
+██████████████████
+██▓▓▒▒░░▒▒▓▓██████
+██      UI      ██
+██ Play  Next   ██
+██ Progress     ██
+██████████████████
+
+The cover is never really "in the way."
+
+Spotify does this on some screens.
+
+It makes the app feel dramatically more modern.
+
+Option 3: Small thumbnail
+
+Keep your current layout exactly as-is.
+
+Just place
+
+[80x80 cover]   Song Name
+                Album
+
+This requires almost no redesign.
+
+Option 4: Full-screen player
+
+The game screen stays the same.
+
+Tap the current song.
+
+It opens
+
+      Cover Art
+
+Song
+
+Album
+
+Progress
+
+Controls
+
+Lyrics
+
+Like almost every music player.
+
+Can Android read these images?
+
+Yes.
+
+They're inside the MP3 metadata.
+
+If you're already using Media3/ExoPlayer, Android can extract them.
+
+Typically you'd read the embedded artwork from the file's ID3 tags (the APIC frame). Libraries such as MediaMetadataRetriever or Media3's metadata support can provide the embedded image as a bitmap.
+
+No extra files are needed.
+
+Performance
+
+The only thing I'd avoid is loading every cover at startup.
+
+Instead:
+
+load artwork only for the currently playing song
+cache the last few covers
+recycle the bitmap when changing songs
+
+That keeps memory usage tiny.
+
+My recommendation
+
+I'd actually combine two ideas:
+
+----------------------------
+
+       [Album Cover]
+
+NOW PLAYING
+
+THE DEVIL'S SHADOW
+
+SAVE YOURSELF (17)
+
+═══════════════●══
+
+◀      ▶      ⏸
+
+----------------------------
+
+and use the same artwork as a very faint blurred background (perhaps 10–20% opacity).
+
+That way:
+
+the UI stays readable,
+every song suddenly has its own atmosphere,
+your thousands of Suno-generated images finally become part of the experience instead of remaining hidden in the metadata.
+
+Considering you have thousands of songs, this is one of the highest visual-impact features you could add because it effectively gives your entire catalog artwork "for free."
+
+ok let's proceed
+Worked for 12s
+
+Yes. Since the lock screen already receives the embedded Suno artwork, the cleanest approach is to use Media3’s parsed artworkData, rather than downloading the MP3 a second time with MediaMetadataRetriever.
+
+Your current player already listens for track transitions, so we can add artwork there.
+
+1. Add these imports to MainActivity.kt
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.ColorDrawable
+import android.widget.ImageButton
+import android.widget.ImageView
+import androidx.media3.common.MediaMetadata
+2. Add these variables inside MainActivity
+
+Place them underneath:
+
+private lateinit var progressBar: SeekBar
+
+Add:
+
+private lateinit var artworkImage: ImageView
+private lateinit var artworkExpandBtn: Button
+
+private var currentArtworkBitmap: Bitmap? = null
+3. Connect the new views
+
+Inside onCreate(), directly underneath:
+
+progressBar = findViewById(R.id.progressBar)
+
+add:
+
+artworkImage = findViewById(R.id.artworkImage)
+artworkExpandBtn = findViewById(R.id.artworkExpandBtn)
+
+artworkImage.visibility = View.GONE
+artworkExpandBtn.visibility = View.GONE
+
+artworkImage.setOnClickListener {
+    showFullscreenArtwork()
+}
+
+artworkExpandBtn.setOnClickListener {
+    showFullscreenArtwork()
+}
+4. Update the Media3 listener
+
+Find this part:
+
+mediaController?.addListener(object : Player.Listener {
+    override fun onMediaItemTransition(
+        mediaItem: MediaItem?,
+        reason: Int
+    ) {
+        updateNowPlayingFromController()
+    }
+
+    override fun onIsPlayingChanged(isPlaying: Boolean) {
+        playPauseBtn.text = if (isPlaying) "Pause" else "Play"
+    }
+})
+
+Replace it with:
+
+mediaController?.addListener(object : Player.Listener {
+
+    override fun onMediaItemTransition(
+        mediaItem: MediaItem?,
+        reason: Int
+    ) {
+        updateNowPlayingFromController()
+        updateArtworkFromController()
+    }
+
+    override fun onMediaMetadataChanged(
+        mediaMetadata: MediaMetadata
+    ) {
+        updateArtwork(mediaMetadata.artworkData)
+    }
+
+    override fun onIsPlayingChanged(isPlaying: Boolean) {
+        playPauseBtn.text = if (isPlaying) "Pause" else "Play"
+    }
+})
+5. Add the artwork functions
+
+Place these functions above setupButtons():
+
+private fun updateArtworkFromController() {
+    val artworkData = mediaController
+        ?.mediaMetadata
+        ?.artworkData
+
+    updateArtwork(artworkData)
+}
+
+private fun updateArtwork(artworkData: ByteArray?) {
+    if (artworkData == null || artworkData.isEmpty()) {
+        currentArtworkBitmap = null
+        artworkImage.setImageDrawable(null)
+        artworkImage.visibility = View.GONE
+        artworkExpandBtn.visibility = View.GONE
+        return
+    }
+
+    val bitmap = BitmapFactory.decodeByteArray(
+        artworkData,
+        0,
+        artworkData.size
+    )
+
+    if (bitmap == null) {
+        currentArtworkBitmap = null
+        artworkImage.setImageDrawable(null)
+        artworkImage.visibility = View.GONE
+        artworkExpandBtn.visibility = View.GONE
+        return
+    }
+
+    currentArtworkBitmap = bitmap
+
+    artworkImage.setImageBitmap(bitmap)
+    artworkImage.visibility = View.VISIBLE
+    artworkExpandBtn.visibility = View.VISIBLE
+}
+
+private fun showFullscreenArtwork() {
+    val bitmap = currentArtworkBitmap ?: return
+
+    val imageView = ImageView(this).apply {
+        setImageBitmap(bitmap)
+        adjustViewBounds = true
+        scaleType = ImageView.ScaleType.FIT_CENTER
+        setBackgroundColor(Color.BLACK)
+
+        setPadding(
+            dpToPx(8),
+            dpToPx(8),
+            dpToPx(8),
+            dpToPx(8)
+        )
+    }
+
+    val dialog = AlertDialog.Builder(this)
+        .setView(imageView)
+        .setNegativeButton("Close", null)
+        .create()
+
+    dialog.window?.setBackgroundDrawable(
+        ColorDrawable(Color.BLACK)
+    )
+
+    imageView.setOnClickListener {
+        dialog.dismiss()
+    }
+
+    dialog.setOnShowListener {
+        dialog.window?.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
+    }
+
+    dialog.show()
+
+    dialog.window?.setLayout(
+        ViewGroup.LayoutParams.MATCH_PARENT,
+        ViewGroup.LayoutParams.MATCH_PARENT
+    )
+}
+
+private fun dpToPx(dp: Int): Int {
+    return (dp * resources.displayMetrics.density).toInt()
+}
+
+The main artwork will be large inside the app, and tapping either the artwork or the Expand Artwork button will open the nearly full-screen version. Tapping the full-screen image or pressing Close dismisses it.
+
+6. Add this to activity_main.xml
+
+Place this immediately above your playback controls or immediately above the progress bar:
+
+<LinearLayout
+    android:id="@+id/artworkSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="6dp">
+
+    <ImageView
+        android:id="@+id/artworkImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="420dp"
+        android:minHeight="220dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Current song artwork"
+        android:background="#0A0807"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/artworkExpandBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expand Artwork"
+        android:textAllCaps="false"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+This makes the visible image almost the full width of the phone, with a maximum height of 420dp. It should feel like a real cover display rather than a thumbnail.
+
+One caveat: because the songs stream from Cloudflare R2, Media3 may not expose the embedded picture until it has read enough of that MP3’s metadata. That is fine; the artwork area begins hidden and appears when Media3 supplies it. If it never appears despite showing on the lock screen, we’ll retrieve the artwork from the active media session or adjust MusicService, rather than downloading every song twice.
+
+ok, two things, the expand button should be a minimize button that expands the image out once it's been minimized, so you can open and close the image, thing two, you can't browse the site, the image is in the way, thing three, I'd like the screen to be black, and the image to be CENTERED.
+
+You’re right—the artwork should not permanently consume the WebView’s space.
+
+A better design is:
+
+The site always keeps the full screen.
+Artwork opens as a black overlay above the site.
+The artwork is centered.
+A Minimize button closes the overlay.
+A small Artwork button remains available to reopen it.
+
+Replace the entire XML with this:
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true">
+
+    <!-- Main app interface -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:fillViewport="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/albumsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Albums" />
+
+                <Button
+                    android:id="@+id/songListBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Songs" />
+
+                <Button
+                    android:id="@+id/lyricsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lyrics" />
+
+                <Button
+                    android:id="@+id/playPauseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play" />
+
+                <Button
+                    android:id="@+id/prevBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prev" />
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next" />
+
+                <Button
+                    android:id="@+id/shuffleBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shuffle" />
+
+                <Button
+                    android:id="@+id/repeatBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat All" />
+
+                <!-- Reopens the artwork after it has been minimized -->
+                <Button
+                    android:id="@+id/artworkExpandBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Artwork"
+                    android:textAllCaps="false"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <SeekBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Full-screen artwork overlay -->
+    <FrameLayout
+        android:id="@+id/artworkOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <!-- Centered artwork -->
+        <ImageView
+            android:id="@+id/artworkImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="#000000"
+            android:contentDescription="Current song artwork"
+            android:padding="12dp"
+            android:scaleType="fitCenter" />
+
+        <!-- Closes artwork and returns to the site -->
+        <Button
+            android:id="@+id/artworkMinimizeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="12dp"
+            android:text="Minimize"
+            android:textAllCaps="false" />
+
+    </FrameLayout>
+
+</FrameLayout>
+
+Then change your artwork variables in MainActivity.kt to:
+
+private lateinit var artworkImage: ImageView
+private lateinit var artworkOverlay: View
+private lateinit var artworkExpandBtn: Button
+private lateinit var artworkMinimizeBtn: Button
+
+private var currentArtworkBitmap: Bitmap? = null
+
+Replace the artwork setup inside onCreate() with:
+
+artworkImage = findViewById(R.id.artworkImage)
+artworkOverlay = findViewById(R.id.artworkOverlay)
+artworkExpandBtn = findViewById(R.id.artworkExpandBtn)
+artworkMinimizeBtn = findViewById(R.id.artworkMinimizeBtn)
+
+artworkOverlay.visibility = View.GONE
+artworkExpandBtn.visibility = View.GONE
+
+artworkExpandBtn.setOnClickListener {
+    showArtwork()
+}
+
+artworkMinimizeBtn.setOnClickListener {
+    minimizeArtwork()
+}
+
+Add these functions:
+
+private fun showArtwork() {
+    if (currentArtworkBitmap == null) {
+        return
+    }
+
+    artworkOverlay.visibility = View.VISIBLE
+    artworkExpandBtn.visibility = View.GONE
+}
+
+private fun minimizeArtwork() {
+    artworkOverlay.visibility = View.GONE
+
+    if (currentArtworkBitmap != null) {
+        artworkExpandBtn.visibility = View.VISIBLE
+    }
+}
+
+Replace your existing updateArtwork() function with:
+
+private fun updateArtwork(artworkData: ByteArray?) {
+    if (artworkData == null || artworkData.isEmpty()) {
+        currentArtworkBitmap = null
+
+        artworkImage.setImageDrawable(null)
+        artworkOverlay.visibility = View.GONE
+        artworkExpandBtn.visibility = View.GONE
+
+        return
+    }
+
+    val bitmap = BitmapFactory.decodeByteArray(
+        artworkData,
+        0,
+        artworkData.size
+    )
+
+    if (bitmap == null) {
+        currentArtworkBitmap = null
+
+        artworkImage.setImageDrawable(null)
+        artworkOverlay.visibility = View.GONE
+        artworkExpandBtn.visibility = View.GONE
+
+        return
+    }
+
+    currentArtworkBitmap = bitmap
+    artworkImage.setImageBitmap(bitmap)
+
+    // Automatically show the artwork when a new song loads.
+    artworkOverlay.visibility = View.VISIBLE
+    artworkExpandBtn.visibility = View.GONE
+}
+
+This version gives you the behavior you described:
+
+New song begins
+       ↓
+Artwork fills the screen
+Centered on black
+       ↓
+Press Minimize
+       ↓
+Artwork disappears completely
+Site becomes fully browsable
+       ↓
+Press Artwork
+       ↓
+Artwork reopens
+
+The picture uses fitCenter, so the entire Suno image remains visible and centered without being cropped.
+
+2 quick things, the button, please make it orange like the others instead of purple as it stands out too much, i would also accept black with red text.
+
+second, not sure if this is an easy one to fix or not, I noticed when the song changes, it flashes the screen to web app, for about a fraction of a second, before switching to the next image, can we make that seamless? if it's hard to fix it doesn't matter.
+
+Both are easy.
+
+1. Make the Artwork button orange
+
+Update the artworkExpandBtn in your XML:
+
+<Button
+    android:id="@+id/artworkExpandBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#FF9800"
+    android:text="Artwork"
+    android:textColor="#000000"
+    android:textAllCaps="false"
+    android:visibility="gone" />
+
+For black with red text instead:
+
+android:backgroundTint="#000000"
+android:textColor="#FF3030"
+
+You can apply the same orange styling to artworkMinimizeBtn:
+
+<Button
+    android:id="@+id/artworkMinimizeBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|end"
+    android:layout_margin="12dp"
+    android:backgroundTint="#FF9800"
+    android:text="Minimize"
+    android:textColor="#000000"
+    android:textAllCaps="false" />
+2. Remove the WebView flash between songs
+
+The flash likely happens because the artwork is temporarily cleared while Media3 loads the next song’s metadata. The solution is to keep showing the old artwork until the new artwork is ready.
+
+Find your listener:
+
+override fun onMediaItemTransition(
+    mediaItem: MediaItem?,
+    reason: Int
+) {
+    updateNowPlayingFromController()
+    updateArtworkFromController()
+}
+
+Replace it with:
+
+override fun onMediaItemTransition(
+    mediaItem: MediaItem?,
+    reason: Int
+) {
+    updateNowPlayingFromController()
+
+    // Do not clear or reload the artwork here.
+    // Keep the previous image visible until Media3 supplies the next one.
+}
+
+Keep this listener:
+
+override fun onMediaMetadataChanged(
+    mediaMetadata: MediaMetadata
+) {
+    updateArtwork(mediaMetadata.artworkData)
+}
+
+Then replace updateArtwork() with this version:
+
+private fun updateArtwork(artworkData: ByteArray?) {
+    // Media3 may briefly report empty artwork while changing songs.
+    // Ignore that temporary state so the WebView does not flash.
+    if (artworkData == null || artworkData.isEmpty()) {
+        return
+    }
+
+    val bitmap = BitmapFactory.decodeByteArray(
+        artworkData,
+        0,
+        artworkData.size
+    ) ?: return
+
+    currentArtworkBitmap = bitmap
+    artworkImage.setImageBitmap(bitmap)
+
+    // If artwork mode is currently open, leave it open seamlessly.
+    if (artworkOverlay.visibility == View.VISIBLE) {
+        artworkExpandBtn.visibility = View.GONE
+    } else {
+        artworkExpandBtn.visibility = View.VISIBLE
+    }
+}
+
+The result should be:
+
+Old artwork remains visible
+        ↓
+Next song metadata loads
+        ↓
+Image changes directly to new artwork
+
+There should no longer be a brief return to the WebView. The only trade-off is that a rare song with no embedded image will continue displaying the previous song’s artwork rather than flashing or showing an empty screen. Given that your Suno files generally have artwork, that is probably the preferable behavior.
+
+revert to i mean, it WAS defaulting to on, that last update switched the default to off. i need it to show the image when it wakes.
+
+Ah, I see exactly what happened.
+
+The last change made the app remember the minimized state, so when it wakes back up it stays minimized. If you want to go back to the original behavior, it's just one small change.
+
+In updateArtwork() change:
+
+if (artworkOverlay.visibility == View.VISIBLE) {
+    artworkExpandBtn.visibility = View.GONE
+} else {
+    artworkExpandBtn.visibility = View.VISIBLE
+}
+
+back to simply:
+
+// Always show the artwork when a new song loads.
+artworkOverlay.visibility = View.VISIBLE
+artworkExpandBtn.visibility = View.GONE
+
+or, if you have the artworkVisible variable I suggested earlier, remove it entirely and have updateArtwork() end with:
+
+currentArtworkBitmap = bitmap
+artworkImage.setImageBitmap(bitmap)
+
+// Restore the original behaviour.
+artworkOverlay.visibility = View.VISIBLE
+artworkExpandBtn.visibility = View.GONE
+
+That restores the original UX:
+
+App launches → artwork visible.
+Phone sleeps/wakes → artwork still visible.
+Song changes → new artwork replaces the old artwork seamlessly.
+If you manually press Minimize, it hides.
+As soon as the next song starts, the artwork automatically comes back.
+
+I actually think that's the better experience for your app. The artwork is one of its standout features, so making it the default view every time a new song starts (or the app resumes) makes sense, while still giving people a temporary way to get to the website.
+
+one other quick thing, the button, please make the button black, and the LETTERING orange.
+
+Change both artwork buttons to black backgrounds with orange text.
+
+<Button
+    android:id="@+id/artworkExpandBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#000000"
+    android:text="Artwork"
+    android:textColor="#FF9800"
+    android:textAllCaps="false"
+    android:visibility="gone" />
+<Button
+    android:id="@+id/artworkMinimizeBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|end"
+    android:layout_margin="12dp"
+    android:backgroundTint="#000000"
+    android:text="Minimize"
+    android:textColor="#FF9800"
+    android:textAllCaps="false" />
+
+That should blend with the app while matching the orange lettering used by the other controls.
+
+ok, everything is working perfectly, I'll push a new version later today. :) thank you.
+
+That's excellent. 🙂
+
+This ended up being a much nicer feature than I initially expected. It started as "show the embedded album art," but it evolved into something that makes the app feel like a dedicated music player rather than just a wrapper around the website.
+
+The final flow is pretty polished:
+
+🎵 Song starts → artwork fills the upper portion of the screen.
+🟧 Playback controls always remain visible.
+🖼️ Embedded Suno artwork swaps seamlessly between songs.
+🌐 One tap on Minimize returns you to the website.
+🎨 Black/orange artwork controls match the rest of the app.
+
+Those are the kinds of details users notice even if they can't explain why the app feels polished.
+
+Good luck with the release later today. After that, I'd probably leave the Android app alone for a bit unless you find a bug. It sounds like it's reached the point where your time is better spent adding content—albums, lyrics, books, and game features—rather than continually tweaking the player.
+
+Nice work getting this across the finish line.
+
+Yes I agree, the android player is in it's final form, that was the last big feature on my agenda, i didn't..... i made allowances for it potentially taking longer than expected, it did not.
+
+That's a satisfying place to reach.
+
+You planned for the possibility that album art would turn into a rabbit hole—parsing tags manually, dealing with different image formats, layout issues, caching, transitions—and instead it came together in a relatively straightforward way. Those are the wins you hope for in software development.
+
+Looking back over the Android app, you've accumulated quite a few meaningful improvements:
+
+Album browser.
+Song browser.
+Embedded lyrics.
+Shuffle and repeat modes.
+Background playback.
+Progress bar and transport controls.
+Large embedded artwork viewer.
+Website integrated into the app.
+Polished transitions between songs.
+
+None of those features is huge by itself, but together they make it feel like a complete application rather than a prototype.
+
+The nice thing about calling it "final form" is that it changes your mindset. Instead of asking, "What feature should I add next?" you can ask, "Did I find a bug?" If the answer is no, the app has done its job and can simply accompany your future content updates.
+
+And since the app reads your catalog rather than hardcoding everything, future releases become much simpler. Most of your work from here is adding music, lyrics, books, and whatever else you create, rather than redesigning the player itself.
+
+I'd call that a good milestone to reach before turning your attention back to the Godot game. The app is now a stable companion to the rest of your projects rather than another project that constantly demands engineering time.

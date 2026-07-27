@@ -1,0 +1,11 @@
+ok, and the song series is now uploaded to my Lokiskingdom App,
+And available on the Jukebox at Lokiskingdom.com through the desktop browser....
+
+Jeez that was a lotta work........
+
+Now I have more work to do, I have a very long job ahead of me, adding lyrics sheets
+to my albums in the jukebox, we already have a good system (ChatGPT and me)
+I just need to add the file path to the lyrics sheets on Cloudflare,
+I got about 75+ albums to get through, so it's long tedious monotonous task,
+but the reward is real, having a lyrics sheet for every song makes a huge difference,
+so I'll be doing that.
