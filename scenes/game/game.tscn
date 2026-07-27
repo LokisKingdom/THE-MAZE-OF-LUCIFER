@@ -10,6 +10,7 @@
 [ext_resource type="Material" uid="uid://jtcaw8hmu2ka" path="res://assets/particles/hit_particles.tres" id="8_87uf6"]
 [ext_resource type="Shader" uid="uid://mtyd2u0ryq75" path="res://assets/shaders/hit_vignette.gdshader" id="9_1xlxx"]
 [ext_resource type="Script" uid="uid://diw7a4gkr5ad" path="res://src/music_ui.gd" id="9_2a8rs"]
+[ext_resource type="PackedScene" path="res://archive_browser/searchable_archive.tscn" id="10_kp23o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c4wvt"]
 shader = ExtResource("9_1xlxx")
@@ -100,10 +101,12 @@ layout_mode = 2
 layout_mode = 2
 text = "Exit"
 
+[node name="SearchableArchive" parent="UI" unique_id=1160083487 instance=ExtResource("10_kp23o")]
+
 [node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=1416610235]
 resources = [PackedStringArray("hit_particles"), [ExtResource("8_87uf6")]]
 
-[node name="MusicUI" type="CanvasLayer" parent="." unique_id=1320769607]
+[node name="MusicUI" type="CanvasLayer" parent="." unique_id=1320769607 groups=["MusicUI"]]
 script = ExtResource("9_2a8rs")
 
 [node name="AlbumSelector" type="OptionButton" parent="MusicUI" unique_id=725177820]
@@ -118,6 +121,7 @@ offset_bottom = 47.0
 grow_horizontal = 2
 scale = Vector2(0.75, 0.75)
 theme_override_font_sizes/font_size = 26
+metadata/_edit_use_anchors_ = true
 
 [node name="CurrentSongSelector" type="OptionButton" parent="MusicUI" unique_id=57048455]
 unique_name_in_owner = true

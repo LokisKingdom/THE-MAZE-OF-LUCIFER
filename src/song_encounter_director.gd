@@ -38,6 +38,8 @@ const HIGH_REWARD_ITEMS: Array[StringName] = [
 	&"green_scroll",
 ]
 
+const NOTE_ITEM_ID: StringName = &"lost_note"
+
 # Used to make sure a generated level receives its song encounter only once.
 static var processed_map_ids: Dictionary = {}
 
@@ -122,6 +124,16 @@ static func populate_from_song(
 		danger_level,
 		reward_count
 	)
+
+	# Place one collectible note on approximately half of dangerous maps.
+	var notes_spawned: int = 0
+
+	if _rng.randf() <= 1.0:
+		notes_spawned = _spawn_note_items(
+			map,
+			player,
+			1
+		)
 
 	result.monsters_spawned = monsters_spawned
 	result.items_spawned = items_spawned
@@ -402,6 +414,34 @@ static func _spawn_reward_items(
 
 		var item := ItemFactory.create_item(item_id)
 		map.add_item_with_stacking(position, item)
+		spawned += 1
+
+	return spawned
+
+
+## Spawn collectible notes at random valid floor locations.
+static func _spawn_note_items(
+	map: Map,
+	player: Monster,
+	count: int
+) -> int:
+	if ItemFactory.item_data.is_empty():
+		ItemFactory._static_init()
+
+	if not ItemFactory.item_data.has(NOTE_ITEM_ID):
+		Log.w("Could not spawn notes: lost_note is missing from items.csv")
+		return 0
+
+	var spawned: int = 0
+
+	for _index: int in range(count):
+		var position: Vector2i = _find_reward_position(map, player)
+
+		if position == Vector2i(-1, -1):
+			continue
+
+		var note_item = ItemFactory.create_item(NOTE_ITEM_ID)
+		map.add_item_with_stacking(position, note_item)
 		spawned += 1
 
 	return spawned
