@@ -112,7 +112,6 @@ text = "Exit"
 
 [node name="SearchableArchive" parent="." unique_id=1934148247 instance=ExtResource("5_xn6kt")]
 layout_mode = 1
-scale = Vector2(0.8, 0.8)
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
