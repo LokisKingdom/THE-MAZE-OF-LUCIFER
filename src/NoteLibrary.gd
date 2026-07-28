@@ -14,16 +14,24 @@ var rng := RandomNumberGenerator.new()
 # ------------------------------------------------------------
 
 func _ready() -> void:
-	NOTES_FOLDER = OS.get_executable_path().get_base_dir().path_join(
-		"music/DECLASSIFIED/"
-	)
+	if OS.has_feature("editor"):
+		NOTES_FOLDER = ProjectSettings.globalize_path(
+			"res://music/DECLASSIFIED/"
+		)
+	else:
+		NOTES_FOLDER = OS.get_executable_path().get_base_dir().path_join(
+			"music/DECLASSIFIED/"
+		)
 
 	print("Notes folder: ", NOTES_FOLDER)
+	print("Folder exists: ", DirAccess.dir_exists_absolute(NOTES_FOLDER))
 
 	rng.randomize()
 	load_all_notes()
 
-
+	print("NOTES LOADED: ", all_notes.size())
+	print("NOTES UNLOCKED: ", unlocked_notes.size())
+	print("NOTES AVAILABLE: ", all_notes.size() - unlocked_notes.size())
 # ------------------------------------------------------------
 # FUNCTION: load_all_notes()
 #
