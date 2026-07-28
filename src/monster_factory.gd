@@ -300,7 +300,9 @@ static func _equip_starting_monster(monster: Monster) -> void:
 			add.call(&"dagger")
 
 		&"satan":
-			add.call(&"blood_talon")
+			var blood_talon := ItemFactory.create_item(&"blood_talon")
+			monster.inventory.add(blood_talon)
+			monster.equipment.equip(blood_talon, Equipment.Slot.MELEE)
 
 	# Existing loot system.
 	match monster.species:
