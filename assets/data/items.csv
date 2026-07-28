@@ -24,6 +24,7 @@ tufted helm,hat-2,headwear,5,3,,,,,10,,,"resist_blunt,resist_pierce",3
 soldier helm,hat-3,headwear,4,2,,,,,10,,,"resist_blunt,resist_pierce",2
 crested helm,hat-4,headwear,6,4,,,,,10,,,"resist_blunt,resist_pierce",4
 longsword,longwep-10,sword,3,,"slash,pierce",1d7,sword,,10,,,,
+blood talon,longwep-10,sword,3,,"slash,pierce",5d7,sword,,0,,,,
 dagger,shortwep-9,knife,1,,"slash,pierce",1d4,knife,,10,,,,
 gold,money-9,misc,0.1,,,,,,100,,64,credits:100,
 crystal ball,tool-1,tool,1,,piercing,1d1,knife,,10,,,multitool,

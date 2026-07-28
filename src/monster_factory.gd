@@ -300,7 +300,7 @@ static func _equip_starting_monster(monster: Monster) -> void:
 			add.call(&"dagger")
 
 		&"satan":
-			add.call(&"longsword")
+			add.call(&"blood_talon")
 
 	# Existing loot system.
 	match monster.species:
