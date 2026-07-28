@@ -19,6 +19,7 @@ config/description="Thrown into a maze, from another dimension, you don't know w
 run/main_scene="res://scenes/menu/main_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.0852449, 0.0852449, 0.0852449, 1)
+config/icon="uid://cr1n3a83tmgum"
 
 [autoload]
 

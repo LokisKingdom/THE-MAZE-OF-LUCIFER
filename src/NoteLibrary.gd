@@ -1,7 +1,7 @@
 extends Node
 
 
-const NOTES_FOLDER := "res://music/DECLASSIFIED/"
+var NOTES_FOLDER := ""
 
 var all_notes: Array[Dictionary] = []
 var unlocked_notes: Array[Dictionary] = []
@@ -14,6 +14,12 @@ var rng := RandomNumberGenerator.new()
 # ------------------------------------------------------------
 
 func _ready() -> void:
+	NOTES_FOLDER = OS.get_executable_path().get_base_dir().path_join(
+		"music/DECLASSIFIED/"
+	)
+
+	print("Notes folder: ", NOTES_FOLDER)
+
 	rng.randomize()
 	load_all_notes()
 

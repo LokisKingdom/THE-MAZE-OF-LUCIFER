@@ -1,6 +1,6 @@
 extends Node
 
-var MUSIC_ROOT := ""
+const MUSIC_ROOT := "res://music/ALBUM ROOM/"
 
 var current_song_path: String = ""
 var current_song_title: String = ""
@@ -26,14 +26,9 @@ signal song_changed(title: String)
 func _ready() -> void:
 	player = AudioStreamPlayer.new()
 	add_child(player)
-
+	
 	# When a song ends naturally, move to the next song.
 	player.finished.connect(next_track)
-
-	if OS.has_feature("editor"):
-		MUSIC_ROOT = ProjectSettings.globalize_path("res://music/ALBUM ROOM/")
-	else:
-		MUSIC_ROOT = OS.get_executable_path().get_base_dir().path_join("music/ALBUM ROOM/")
 
 	print("MusicManager ready.")
 	print("Scanning: ", MUSIC_ROOT)
@@ -76,8 +71,10 @@ func scan_library() -> void:
 	library.clear()
 	album_names.clear()
 
-	print("Music path: ", MUSIC_ROOT)
-	_scan_folder(MUSIC_ROOT)
+	var physical_root := ProjectSettings.globalize_path(MUSIC_ROOT)
+
+	print("Physical music path: ", physical_root)
+	_scan_folder(physical_root)
 
 	# Make album selection deterministic.
 	album_names.assign(library.keys())
@@ -94,9 +91,8 @@ func scan_library() -> void:
 				) < 0
 		)
 
-func _scan_folder(folder_path: String) -> void:
-	print("Scanning folder: ", folder_path)
 
+func _scan_folder(folder_path: String) -> void:
 	var directory := DirAccess.open(folder_path)
 
 	if directory == null:
@@ -111,27 +107,22 @@ func _scan_folder(folder_path: String) -> void:
 	var file_name := directory.get_next()
 
 	while file_name != "":
-		print(
-			"FOUND: ",
-			file_name,
-			"  dir=",
-			directory.current_is_dir()
-		)
+		if file_name == "." or file_name == "..":
+			file_name = directory.get_next()
+			continue
 
-		if file_name != "." and file_name != "..":
-			var full_path := folder_path.path_join(file_name)
+		var full_path := folder_path.path_join(file_name)
 
-			if directory.current_is_dir():
-				_scan_folder(full_path)
+		if directory.current_is_dir():
+			_scan_folder(full_path)
 
-			elif _is_supported_audio_file(file_name):
-				print("ADDING TRACK: ", full_path)
-				_add_track(full_path)
+		elif _is_supported_audio_file(file_name):
+			_add_track(full_path)
 
 		file_name = directory.get_next()
 
 	directory.list_dir_end()
-	
+
 func _is_supported_audio_file(file_name: String) -> bool:
 	var extension := file_name.get_extension().to_lower()
 
