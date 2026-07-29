@@ -1,0 +1,19 @@
+I just sent you on this mission,
+with only eternalized.com and some other songs and notes,7 sources.....
+HERE IS YOUR MISSION:
+Go through the notes I've provided and point out anywhere I may have given away
+Passwords and API Keys, and other things like that,
+I am less concerned with things like "this could destroy your HRTO case!"
+or "this makes you look terrible, you need to remove this",
+primarily I am looking for security holes only,
+I do not want someone logging into my accounts,
+deleting all my songs and videos, and replacing them with contraband.
+I have tried to remove from your sources everything i removed from my game project folder,
+but no guarantees i may have missed one.
+Go through it all one more time, and tell me if you see any passwords given away,
+or API Keys, or things more important than passwords, secret access keys and things like that,
+did we get all of those after the last pass?
+then with that done, you can alert me to some of the other stuff, but I'm basically taking the position that
+this probably will implode my HRTO content, if they choose not to delete me from HRTO,
+that's a bonus, not our goal to avoid today, the goal is to make an interesting and fun exploration->Notes system for the game, to make the game more enjoyable and interesting,
+if HRTO requests me to takedown or private anything I will comply.
