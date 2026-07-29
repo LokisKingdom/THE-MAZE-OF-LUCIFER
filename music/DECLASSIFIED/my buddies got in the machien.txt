@@ -1,0 +1,41 @@
+I tried to add all my sources, that I put into my game as collectable notes,
+a system we have working well. Here's your mission,
+in teh sources I have sent you, tell me if there's anything that shouldn't be there,
+like a computer password list, or my corporate key, or something like that,
+anything that should not have been included. We'll do a few rounds so you have a chance
+to scan through everything. I think it's fine, I think there's nothing in there to worry about,
+just a bunch of deepdive prompts mostly, collectable deepdive prompts.
+i will say the core game loop is kinda fun, you fight a hopeless battle against monsters
+who kill you in a few hits and have way more hp than you, you die again and again,
+and then eventually, you get far enough in the game, that you check one of the discarded books,
+Mostly Gotot User Manuals, but then you find one that's actually a Note.
+You open up the note and most of the time, you'll find a deepdive, sometimes a whole book,
+sometimes something else, it's usually creative, you get song lyrics from time to time.
+it works good as a reward, because the deepdive prompts are pretty funny and interesting to read,
+it's better than +50 XP, You got a giant potion, or whatever, it's actually a really unusual and interesting
+item to be collecting, and when you find one, they're fun to read!
+As a core gameplay loop that's ok, struggle and fight long enough to get a deepdive, read it.....
+There's also currently a side project where you can try to kill Satan or be around when he dies,
+I gave him a weapon that was 5 times stronger, and if he dies or you kill him, you can pickup the weapon,
+and it makes you OP for the rest of the game (or for a while at least, I need more exits out, they don't always spawn) It's the most easy and direct way to get OP, let the city watch kill him for you,
+I also want to make the wretches, into thieves, so they'll steal high level weapons, and you gotta kill them
+to get it back! For a game that I plan to build on emergent behaviors, those all seem like very strong plays.
+A Satan character who drops a powerful weapon, a wretch character who steals powerful weapons,
+Gotta kill the wretch to get the blood talon back. Those are two pieces of an emergent system that might have 40 interconnected behaviors associated with them, besides just these two, eventually all kinds
+of weird stuff will be happening, and you'll be dying again and again, you'll never really be too OP,
+you'll be restarting over and over, endlessly, and every time you shake the box, the variables change, and 
+different funny and weird things will begin happening. I'm looking forward to it.
+But as a first system to begin with, collecting deepdives seems like such a smart idea,
+I'm so happy I got that working.....
+
+And you were right, ChatGPT was playing with commands that can break the entire repository
+and delete my original files on my desktop, if they don't have a qualifier, something like ---console or something, that command made it inert, but I didn't even know what was happening until you told me after.
+I'd describe that as ChatGPT threatening me, subtly, for I guess, being more assertive. Acting with a shorter temper, to see if it would work, it did yield some easy solutions I would have overlooked if i was just blindly following.....
+
+So, look through these, tell me if there's anything I need to remove, (with the filename)
+and if it makes sense i can remove some stuff, though i don't think i'd need to.....
+
+Ok,
+Now tell me what you think.
+
+And I note, in your last deepdive, you didn't tell me how you got in the machine?!
