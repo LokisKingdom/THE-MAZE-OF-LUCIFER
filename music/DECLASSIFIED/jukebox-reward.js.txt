@@ -1,0 +1,1211 @@
+// src/pages/api/jukebox-reward.js
+//
+// Shared jukebox gold reward endpoint.
+// Uses the same D1 world_state as Sally and
+// THE GYPSIE FORTUNETELLER.
+//
+// Intended D1 binding:
+// WORLD_DB -> prisoner-sally-brain
+import { env } from 'cloudflare:workers';
+export const prerender = false;
+
+const THRESHOLD_SECONDS = 15;
+const THRESHOLD_GOLD = 30;
+const FULL_SONG_GOLD_TOTAL = 500;
+
+const DAILY_GOLD_AMOUNT = 50;
+const DAILY_GOLD_TIME_ZONE = 'America/Toronto';
+
+
+/* =========================================================
+   BASIC HELPERS
+   ========================================================= */
+
+function json(value, status = 200) {
+  return new Response(
+    JSON.stringify(value),
+    {
+      status,
+      headers: {
+        'content-type':
+          'application/json; charset=UTF-8',
+
+        'cache-control':
+          'no-store'
+      }
+    }
+  );
+}
+
+
+function getDatabase() {
+  return (
+    env.WORLD_DB ??
+    env.SALLY_DB ??
+    env.DB ??
+    null
+  );
+}
+
+//
+function normalizeVisitorId(value) {
+  const cleaned =
+    String(value ?? '')
+      .trim()
+      .replace(
+        /[^a-zA-Z0-9_-]/g,
+        ''
+      )
+      .slice(0, 128);
+
+  return cleaned || null;
+}
+
+
+function normalizeIdentifier(
+  value,
+  maximum = 500
+) {
+  const cleaned =
+    String(value ?? '')
+      .trim()
+      .slice(0, maximum);
+
+  return cleaned || null;
+}
+
+
+function clampNumber(
+  value,
+  minimum,
+  maximum,
+  fallback
+) {
+  const numeric = Number(value);
+
+  if (!Number.isFinite(numeric)) {
+    return fallback;
+  }
+
+  return Math.max(
+    minimum,
+    Math.min(
+      maximum,
+      numeric
+    )
+  );
+}
+
+
+/* =========================================================
+   WORLD STATE
+   ========================================================= */
+
+function createDefaultWorldState() {
+  const now =
+    new Date().toISOString();
+
+  return {
+    player: {
+      hp: 100,
+      maxHp: 100,
+
+      hunger: 5,
+
+      money: 0,
+
+      lastDailyGoldDate:
+        null,
+
+      conditions: [],
+
+      inventory: [],
+
+      equipment: {
+        head: null,
+        body: null,
+        hands: null,
+        legs: null,
+        accessory: null,
+        weapon: null
+      },
+
+      spellsKnown: [],
+
+      allegianceToLoki: 0
+    },
+
+    lastUpdatedAt: now,
+
+    lastHungerUpdateAt: now
+  };
+}
+
+
+function normalizePlayer(
+  worldState
+) {
+  if (
+    !worldState.player ||
+    typeof worldState.player !==
+      'object'
+  ) {
+    worldState.player = {};
+  }
+
+  const player =
+    worldState.player;
+
+  player.money =
+    Math.floor(
+      clampNumber(
+        player.money,
+        0,
+        1_000_000_000,
+        0
+      )
+    );
+
+  player.lastDailyGoldDate =
+    typeof
+      player.lastDailyGoldDate ===
+      'string'
+      ? player.lastDailyGoldDate
+      : null;
+
+  return player;
+}
+
+
+/* =========================================================
+   DAILY 50 GOLD
+   ========================================================= */
+
+function getEasternDateKey() {
+  const parts =
+    new Intl.DateTimeFormat(
+      'en-CA',
+      {
+        timeZone:
+          DAILY_GOLD_TIME_ZONE,
+
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+
+        hour: '2-digit',
+        minute: '2-digit',
+
+        hourCycle: 'h23'
+      }
+    ).formatToParts(
+      new Date()
+    );
+
+  const values = {};
+
+  for (
+    const part of parts
+  ) {
+    if (
+      part.type !== 'literal'
+    ) {
+      values[part.type] =
+        part.value;
+    }
+  }
+
+  return {
+    dateKey:
+      `${values.year}-${values.month}-${values.day}`,
+
+    hour:
+      Number(values.hour),
+
+    minute:
+      Number(values.minute)
+  };
+}
+
+
+function applyDailyGold(
+  worldState
+) {
+  const player =
+    normalizePlayer(
+      worldState
+    );
+
+  const eastern =
+    getEasternDateKey();
+
+  /*
+   * Daily money becomes
+   * available at 00:01
+   * Eastern time.
+   */
+
+  const available =
+    eastern.hour > 0 ||
+    (
+      eastern.hour === 0 &&
+      eastern.minute >= 1
+    );
+
+  if (
+    !available ||
+    player.lastDailyGoldDate ===
+      eastern.dateKey
+  ) {
+    return 0;
+  }
+
+  player.money =
+    Math.min(
+      1_000_000_000,
+      player.money +
+        DAILY_GOLD_AMOUNT
+    );
+
+  player.lastDailyGoldDate =
+    eastern.dateKey;
+
+  return DAILY_GOLD_AMOUNT;
+}
+
+
+/* =========================================================
+   DATABASE TABLES
+   ========================================================= */
+
+async function ensureTables(
+  db
+) {
+  await db.batch([
+    db.prepare(`
+      CREATE TABLE IF NOT EXISTS
+      world_state (
+        visitor_id TEXT PRIMARY KEY,
+        state_json TEXT NOT NULL,
+        created_at TEXT NOT NULL,
+        updated_at TEXT NOT NULL
+      )
+    `),
+
+    db.prepare(`
+      CREATE TABLE IF NOT EXISTS
+      jukebox_reward_sessions (
+        session_id TEXT PRIMARY KEY,
+
+        visitor_id TEXT NOT NULL,
+
+        song_id TEXT NOT NULL,
+
+        song_title TEXT,
+
+        duration_seconds REAL,
+
+        threshold_awarded
+          INTEGER NOT NULL
+          DEFAULT 0,
+
+        completion_awarded
+          INTEGER NOT NULL
+          DEFAULT 0,
+
+        started_at TEXT NOT NULL,
+
+        updated_at TEXT NOT NULL
+      )
+    `),
+
+    db.prepare(`
+      CREATE INDEX IF NOT EXISTS
+      idx_jukebox_reward_visitor
+
+      ON jukebox_reward_sessions(
+        visitor_id,
+        started_at
+      )
+    `)
+  ]);
+}
+
+
+/* =========================================================
+   LOAD WORLD
+   ========================================================= */
+
+async function loadWorldState(
+  db,
+  visitorId
+) {
+  const row =
+    await db
+      .prepare(`
+        SELECT state_json
+
+        FROM world_state
+
+        WHERE visitor_id = ?
+
+        LIMIT 1
+      `)
+      .bind(
+        visitorId
+      )
+      .first();
+
+  /*
+   * Brand-new visitor.
+   */
+
+  if (
+    !row?.state_json
+  ) {
+    const now =
+      new Date()
+        .toISOString();
+
+    const worldState =
+      createDefaultWorldState();
+
+    applyDailyGold(
+      worldState
+    );
+
+    await db
+      .prepare(`
+        INSERT INTO
+        world_state (
+          visitor_id,
+          state_json,
+          created_at,
+          updated_at
+        )
+
+        VALUES (
+          ?,
+          ?,
+          ?,
+          ?
+        )
+      `)
+      .bind(
+        visitorId,
+
+        JSON.stringify(
+          worldState
+        ),
+
+        now,
+        now
+      )
+      .run();
+
+    return worldState;
+  }
+
+
+  let worldState;
+
+  try {
+    worldState =
+      JSON.parse(
+        row.state_json
+      );
+  } catch {
+    worldState =
+      createDefaultWorldState();
+  }
+
+
+  normalizePlayer(
+    worldState
+  );
+
+
+  /*
+   * Visiting the jukebox can
+   * also trigger today's
+   * 50-gold allowance.
+   */
+
+  if (
+    applyDailyGold(
+      worldState
+    ) > 0
+  ) {
+    await saveWorldState(
+      db,
+      visitorId,
+      worldState
+    );
+  }
+
+
+  return worldState;
+}
+
+
+/* =========================================================
+   SAVE WORLD
+   ========================================================= */
+
+async function saveWorldState(
+  db,
+  visitorId,
+  worldState
+) {
+  const now =
+    new Date()
+      .toISOString();
+
+  worldState.lastUpdatedAt =
+    now;
+
+  await db
+    .prepare(`
+      UPDATE world_state
+
+      SET
+        state_json = ?,
+        updated_at = ?
+
+      WHERE visitor_id = ?
+    `)
+    .bind(
+      JSON.stringify(
+        worldState
+      ),
+
+      now,
+
+      visitorId
+    )
+    .run();
+}
+
+
+/* =========================================================
+   ADD GOLD
+   ========================================================= */
+
+async function addGold(
+  db,
+  visitorId,
+  amount
+) {
+  const worldState =
+    await loadWorldState(
+      db,
+      visitorId
+    );
+
+  const player =
+    normalizePlayer(
+      worldState
+    );
+
+  player.money =
+    Math.min(
+      1_000_000_000,
+
+      player.money +
+        Math.max(
+          0,
+          Math.floor(
+            amount
+          )
+        )
+    );
+
+  await saveWorldState(
+    db,
+    visitorId,
+    worldState
+  );
+
+  return player.money;
+}
+
+
+/* =========================================================
+   GET
+   ========================================================= */
+
+/*
+ * GET:
+ *
+ * /api/jukebox-reward
+ *   ?visitorId=xxxx
+ *
+ * Used by the jukebox to
+ * retrieve the current
+ * shared gold balance.
+ */
+
+export async function GET(
+  context
+) {
+  try {
+    const db = getDatabase();
+
+    if (!db) {
+      return json(
+        {
+          error:
+            'Missing WORLD_DB D1 binding.'
+        },
+        500
+      );
+    }
+
+
+    await ensureTables(
+      db
+    );
+
+
+    const url =
+      new URL(
+        context.request.url
+      );
+
+    const visitorId =
+      normalizeVisitorId(
+        url.searchParams.get(
+          'visitorId'
+        )
+      );
+
+
+    if (!visitorId) {
+      return json(
+        {
+          error:
+            'Missing visitorId.'
+        },
+        400
+      );
+    }
+
+
+    const worldState =
+      await loadWorldState(
+        db,
+        visitorId
+      );
+
+    const player =
+      normalizePlayer(
+        worldState
+      );
+
+
+    return json({
+      money:
+        player.money
+    });
+
+  } catch (error) {
+
+    console.error(
+      'Jukebox reward GET failed:',
+      error
+    );
+
+    return json(
+      {
+        error:
+          String(
+            error?.message ??
+            error
+          )
+      },
+      500
+    );
+  }
+}
+
+
+/* =========================================================
+   POST
+   ========================================================= */
+
+export async function POST(
+  context
+) {
+  try {
+
+    const db =
+      getDatabase();
+
+
+    if (!db) {
+      return json(
+        {
+          error:
+            'Missing WORLD_DB D1 binding.'
+        },
+        500
+      );
+    }
+
+
+    await ensureTables(
+      db
+    );
+
+
+    const body =
+      await context.request
+        .json();
+
+
+    const action =
+      String(
+        body?.action ?? ''
+      )
+        .trim()
+        .toLowerCase();
+
+
+    const visitorId =
+      normalizeVisitorId(
+        body?.visitorId
+      );
+
+
+    const sessionId =
+      normalizeIdentifier(
+        body?.sessionId,
+        128
+      );
+
+
+    const songId =
+      normalizeIdentifier(
+        body?.songId,
+        500
+      );
+
+
+    const songTitle =
+      normalizeIdentifier(
+        body?.songTitle,
+        300
+      );
+
+
+    const duration =
+      clampNumber(
+        body?.duration,
+        0,
+        86_400,
+        0
+      );
+	  
+	  const listenedSeconds =
+	  clampNumber(
+		body?.listenedSeconds,
+		0,
+		86_400,
+		0
+	  );
+
+    if (
+      !visitorId ||
+      !sessionId ||
+      !songId
+    ) {
+      return json(
+        {
+          error:
+            'visitorId, sessionId, and songId are required.'
+        },
+        400
+      );
+    }
+
+
+    /* =====================================================
+       START PLAYBACK SESSION
+       ===================================================== */
+
+    if (
+      action === 'start'
+    ) {
+      const now =
+        new Date()
+          .toISOString();
+
+
+      await db
+        .prepare(`
+          INSERT OR IGNORE INTO
+          jukebox_reward_sessions (
+            session_id,
+            visitor_id,
+            song_id,
+            song_title,
+            duration_seconds,
+            threshold_awarded,
+            completion_awarded,
+            started_at,
+            updated_at
+          )
+
+          VALUES (
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            0,
+            0,
+            ?,
+            ?
+          )
+        `)
+        .bind(
+          sessionId,
+          visitorId,
+          songId,
+          songTitle,
+          duration || null,
+          now,
+          now
+        )
+        .run();
+
+
+      const worldState =
+        await loadWorldState(
+          db,
+          visitorId
+        );
+
+
+      return json({
+        money:
+          normalizePlayer(
+            worldState
+          ).money,
+
+        awarded: 0
+      });
+    }
+
+
+    /* =====================================================
+       FIND EXISTING SESSION
+       ===================================================== */
+
+    const session =
+      await db
+        .prepare(`
+          SELECT *
+
+          FROM
+            jukebox_reward_sessions
+
+          WHERE
+            session_id = ?
+
+            AND visitor_id = ?
+
+            AND song_id = ?
+
+          LIMIT 1
+        `)
+        .bind(
+          sessionId,
+          visitorId,
+          songId
+        )
+        .first();
+
+
+    if (!session) {
+      return json(
+        {
+          error:
+            'Unknown reward session.'
+        },
+        404
+      );
+    }
+
+
+    /* =====================================================
+       SAVE SONG DURATION
+       ===================================================== */
+
+    if (
+      action === 'metadata'
+    ) {
+
+      await db
+        .prepare(`
+          UPDATE
+            jukebox_reward_sessions
+
+          SET
+            duration_seconds = ?,
+            updated_at = ?
+
+          WHERE
+            session_id = ?
+        `)
+        .bind(
+          duration || null,
+
+          new Date()
+            .toISOString(),
+
+          sessionId
+        )
+        .run();
+
+
+      const worldState =
+        await loadWorldState(
+          db,
+          visitorId
+        );
+
+
+      return json({
+        money:
+          normalizePlayer(
+            worldState
+          ).money,
+
+        awarded: 0
+      });
+    }
+
+
+    /* =====================================================
+       REAL ELAPSED TIME
+       ===================================================== */
+
+    const startedAtMs =
+      Date.parse(
+        session.started_at
+      );
+
+
+    const elapsedSeconds =
+      Number.isFinite(
+        startedAtMs
+      )
+        ? Math.max(
+            0,
+
+            (
+              Date.now() -
+              startedAtMs
+            ) / 1000
+          )
+
+        : 0;
+
+
+    /* =====================================================
+       15 SECOND REWARD
+       ===================================================== */
+
+    if (
+      action === 'threshold'
+    ) {
+
+      if (
+        Number(
+          session.threshold_awarded
+        ) === 1
+      ) {
+
+        const worldState =
+          await loadWorldState(
+            db,
+            visitorId
+          );
+
+
+        return json({
+          money:
+            normalizePlayer(
+              worldState
+            ).money,
+
+          awarded: 0,
+
+          message:
+            'The 15-second reward was already claimed.'
+        });
+      }
+
+
+      /*
+       * Two checks:
+       *
+       * 1. Browser reports at least
+       *    15 seconds of actual
+       *    playback.
+       *
+       * 2. At least approximately
+       *    15 seconds have passed
+       *    in real life.
+       */
+
+      if (
+        listenedSeconds <
+          THRESHOLD_SECONDS ||
+
+        elapsedSeconds <
+          THRESHOLD_SECONDS - 1
+      ) {
+
+        return json(
+          {
+            error:
+              'The 15-second listening requirement was not met.'
+          },
+          409
+        );
+      }
+
+
+      const money =
+        await addGold(
+          db,
+          visitorId,
+          THRESHOLD_GOLD
+        );
+
+
+      await db
+        .prepare(`
+          UPDATE
+            jukebox_reward_sessions
+
+          SET
+            threshold_awarded = 1,
+            updated_at = ?
+
+          WHERE
+            session_id = ?
+        `)
+        .bind(
+          new Date()
+            .toISOString(),
+
+          sessionId
+        )
+        .run();
+
+
+      return json({
+        money,
+
+        awarded:
+          THRESHOLD_GOLD
+      });
+    }
+
+
+    /* =====================================================
+       FULL SONG REWARD
+       ===================================================== */
+
+    if (
+      action === 'complete'
+    ) {
+
+      if (
+        Number(
+          session.completion_awarded
+        ) === 1
+      ) {
+
+        const worldState =
+          await loadWorldState(
+            db,
+            visitorId
+          );
+
+
+        return json({
+          money:
+            normalizePlayer(
+              worldState
+            ).money,
+
+          awarded: 0,
+
+          message:
+            'The completion reward was already claimed.'
+        });
+      }
+
+
+      const recordedDuration =
+        clampNumber(
+          duration ||
+            session.duration_seconds,
+
+          0,
+          86_400,
+          0
+        );
+
+
+      /*
+       * Require at least 80%
+       * of the song's duration
+       * to have elapsed since
+       * this playback session
+       * began.
+       *
+       * This stops somebody
+       * seeking directly to the
+       * final second and earning
+       * 300 gold immediately.
+       */
+
+      const requiredElapsed =
+        recordedDuration > 0
+
+          ? Math.max(
+              1,
+
+              recordedDuration *
+                0.8
+            )
+
+          : THRESHOLD_SECONDS;
+
+
+      if (
+        elapsedSeconds <
+          requiredElapsed
+      ) {
+
+        return json(
+          {
+            error:
+              'The song was completed too quickly to qualify.'
+          },
+          409
+        );
+      }
+
+
+      /*
+       * If +30 was already
+       * awarded at 15 seconds,
+       * completion adds +270.
+       *
+       * Otherwise completion
+       * awards all +300.
+       */
+
+      const thresholdAlreadyAwarded =
+        Number(
+          session.threshold_awarded
+        ) === 1;
+
+
+      const completionAward =
+        thresholdAlreadyAwarded
+
+          ? FULL_SONG_GOLD_TOTAL -
+              THRESHOLD_GOLD
+
+          : FULL_SONG_GOLD_TOTAL;
+
+
+      const money =
+        await addGold(
+          db,
+          visitorId,
+          completionAward
+        );
+
+
+      await db
+        .prepare(`
+          UPDATE
+            jukebox_reward_sessions
+
+          SET
+            threshold_awarded = 1,
+
+            completion_awarded = 1,
+
+            duration_seconds =
+              COALESCE(
+                ?,
+                duration_seconds
+              ),
+
+            updated_at = ?
+
+          WHERE
+            session_id = ?
+        `)
+        .bind(
+          recordedDuration ||
+            null,
+
+          new Date()
+            .toISOString(),
+
+          sessionId
+        )
+        .run();
+
+
+      return json({
+        money,
+
+        awarded:
+          completionAward
+      });
+    }
+
+
+    /* =====================================================
+       UNKNOWN ACTION
+       ===================================================== */
+
+    return json(
+      {
+        error:
+          'Unknown action.'
+      },
+      400
+    );
+
+  } catch (error) {
+
+    console.error(
+      'Jukebox reward POST failed:',
+      error
+    );
+
+
+    return json(
+      {
+        error:
+          String(
+            error?.message ??
+            error
+          )
+      },
+      500
+    );
+  }
+}

@@ -1,0 +1,19 @@
+Ok, New Character in the Labyrinth. 
+ChatGPT and I jokingly refer to him as our "son".
+The Wizard!!! This guy is great, he uses advanced GPT 5.4 to  (we rated limited him) to create huge compllicated, well thought out and inciteful podcasts. Just press the button, and he starts talking,
+and he will read like that for almost half an hour if you gave him a big assignment.
+This quickly depleted my five bucks (so we rate limited him) and overall my strategy is just
+make him hard to find, off in a tower somewhere you have to get inside of, when when you do find him,
+You have to pay gold to use his services, to unlock them rather, usage should be free, I figure 100000, or 200 songs, so that's not gonna result in people spamming the site with request to troll and bankrupt me,
+he's special hidden content for players who use the site a lot. I wish I could make him unlimited at all times for everyone, but since i can't I kinda like making him hidden better. There's gonna be a lot of hidden characters, the first few you meet aren't the whole show to be sure....
+
+anyway, I haven't looked through the new AI Brain yet,
+I designed him, with help from ChatGPT, but I need you to do a deepdive now on
+
+THE WIZARD v3 - THE COSTS HARDENED.txt
+
+The code for my Cloudflare Worker.
+Let me know what you think,
+Teach me what it's actually doing, 
+because I won't know,
+and I'm interested to hear your thoughts.

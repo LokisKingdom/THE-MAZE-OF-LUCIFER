@@ -1,0 +1,1006 @@
+---
+const videos = [
+  {
+    title: "Please CC the Registrar",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/Please%20CC%20The%20Registrar%20(video).mp4",
+  },
+  {
+    title: "THE YOKED WROTH DRAGGED TO HELL AND STAINED WITH CASH AND BLOOD",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/THE%20YOKED%20WROTH%20DRAGGED%20TO%20HELL%20AND%20STAINED%20WITH%20CASH%20AND%20BLOOD.mp4",
+  },
+  {
+    title: "#1 EternalisedOfficial.com (REMAKE)",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/%231%20EternalizedOfficial_com.mp4",
+  },  
+  {
+    title: "WHY IS MY BLENDER LENDING?",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/WHY%20IS%20MY%20BLENDER%20LENDING%20(funny%20video).mp4",
+  },   
+  {
+    title: "SAY HELLO TO THE MOONLIGHT",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/SAY%20HELLO%20TO%20THE%20MOONLIGHT%20(video).mp4",
+  }, 
+  {
+    title: "LUCIFER MEDIA CORPORATION",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/LUCIFER%20MEDIA%20CORPORATION%20(video).mp4",
+  },
+    {
+    title: "A WARM PLACE",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/A%20WARM%20PLACE%20(video).mp4",
+  },
+      {
+    title: "#1 eternalizedofficial-com",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/%231%20eternalizedofficial-com.mp4",
+  },
+    {
+    title: "Pimp Slap",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/Pimp%20Slap.mp4",
+  },
+      {
+    title: "SAY HELLO TO THE MOONLIGHT 2",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/SAY%20HELLO%20TO%20THE%20GOODNIGHT%20-%20video.mp4",
+  },
+    {
+    title: "SAY HELLO TO THE GOODNIGHT",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/SAY%20HELLO%20TO%20THE%20MOONLIGHT%20-%20video.mp4",
+  },
+    {
+    title: "THE SPRITE TONITE",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/THE%20SPRITE%20TONITE%20(video).mp4",
+  },
+    {
+    title: "RED APPLE",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/RED%20APPLE.mp4",
+  },
+  {
+    title: "AND WITH THAT THE DEMON DEPARTED",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/AND%20WITH%20THAT%20THE%20DEMON%20DEPARTED.mp4",
+  },
+      {
+    title: "GOD'S DEBRIS",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/GOD'S%20DEBRIS.mp4",
+  },
+      {
+    title: "I'M MOVING TO LINUX",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/IM%20MOVING%20TO%20LINUX.mp4",
+  },
+      {
+    title: "MOVE ALONG HOME",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/MOVE%20ALONG%20HOME.mp4",
+  },
+      {
+    title: "RUMPULSTILTSKIN IS A CREEP",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/RUMPULSTILTSKIN%20IS%20A%20CREEP.mp4",
+  },
+      {
+    title: "there's no one here but that monster",
+    url: "https://pub-fbd3c2475c8e46bc95ab602703f80fc6.r2.dev/there's%20no%20one%20here%20but%20that%20monster.mp4",
+  },
+  
+];
+//me
+const SITE_TITLE = "Loki's Kingdom";
+const SITE_DESCRIPTION = "The God of Mischief welcomes you...";
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import DesktopMusicApp from '../components/DesktopMusicApp.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+    <Header />
+    <!-- rest of your page -->
+    //
+    <main>
+        <div class="hero" style="text-align: center; padding: 4rem 1rem; background: linear-gradient(#1a0033, #000); color: #ffd700;">
+		<h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #FF0000;">
+		<a href="https://drive.proton.me/urls/DRW5W97CRG#bk3SuHZ2QvE8">👑 Loki's Kingdom</a>
+		</h1>
+
+		<h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #FF0000;">
+		  "With no Eminems<br />
+		  ...<br />
+		  Not even one."
+		</h1>
+            
+            <p style="font-size: 1.4rem; max-width: 600px; margin: 0 auto 2rem;">
+                The God of Mischief welcomes you...
+
+                You fall before Loki.
+            </p>
+
+            <p> "UP!" he says, you Stand.
+            </p>
+            <p>
+                "Welcome to my Kingdom! 
+            </p>
+			
+			<p>
+			<a href="https://drive.google.com/drive/folders/1owgXpKtZRwi-jdRHJwdJsUqIg9-bgeM4?usp=sharing">Click Here For Our Revenge - GOODNIGHTISM - An Ideology of Evil, Death, Crime, Hate, Horror and Conflict</a>
+			</p>
+
+			<div class="footer-buttons">
+				<a
+					class="prisoner-button"
+					href="https://prisoner-sally.lokiskingdom.com"
+				>
+					Speak to Prisoner Girl
+				</a>
+			</div>
+			
+				<div class="footer-buttons">
+				<a
+					class="prisoner-button"
+					href="https://the-gypsie-fortuneteller.lokiskingdom.com/"
+				>
+					Speak to the Gypsie Fortuneteller
+				</a>
+			</div>
+
+			  <a
+				href="https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/A_RELEASES/lokiskingdom.apk"
+				target="_blank"
+				rel="noopener noreferrer"
+				style="
+				  display: inline-block;
+				  padding: 14px 28px;
+				  background: #4B0082;
+				  color: white;
+				  border-radius: 10px;
+				  text-decoration: none;
+				  font-weight: bold;
+				  font-size: 1.1rem;
+				  transition: 0.2s ease;
+				"
+			  >
+				⬇ Download the LokisKingdom App, "No Eminems", Just Me, No bad music, none, 106+ ALBUMS, 6724+ SONGS
+			  </a>
+
+			  <p
+				style="
+				  color: #888;
+				  margin-top: 1.5rem;
+				  font-size: 0.9rem;
+				"
+			  >
+				Android may ask for permission to install apps from unknown sources.
+			  </p>
+			</section>
+
+            <img 
+                src="/Loki.jpg" 
+                alt="Loki" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >
+			<div class="desktop-music-wrapper">
+				<DesktopMusicApp />
+			</div>			
+			<img 
+                src="/no noid on tps.png" 
+                alt="avoid the noid" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >			
+
+			<p>
+			This is The Official Religion of Lucifer. I am Lucifer's Representative on Earth.
+			</p>
+			<p>
+			THE THREE SINS:
+			</p>
+			<p>
+			1) Putting out a Fire
+			</p>
+			<p>
+			2) Tending to the Wounded
+			</p>
+			<p>
+			3) Enforcing the Law
+			</p>			
+			</n>
+            <p>
+			I am Loki, creator of EFSMB (Empowered Feminist Stole My Baby), it also functions as my origin story! I am the greatest musician in human history. I am THE DEVIL 666, Developer of LUCIFERIANISM, the best game in the world, ever. I am the author of among others, QUOTATIONS FROM BRENDAN S. ROSE 'the book of fire' SELECTED WORKS VOL.I and BIRD CAGE, as well as numerous BURNED and CENSORED WORKS. Published by The Czechoslovakian Secret Police, our publishing arm. Formally the most censored artist alive in the world today, I have broken containment on Soundcloud, earning 1.4 million hits in 3 months. This is my kingdom, I expect it will one day grow to outpace Soundcloud by orders of magnitude, but for now that is my biggest platform. My life story is fucked, I'm not even sure I can tell it, we'll see in the bio."
+            </p>
+
+            <img src="/LokiByArthurRackham.jpg" alt="Loki2" width="500" style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);">
+            <img src="/101.jpg" alt="Loki3" width="500" style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);">
+
+            <p>There’s a trail of green pills leading to the about section, something strange must be happening in that room.... Do you go there???? O_O</p>
+
+
+			</section>
+
+		<h2 id="videoHeader">CHANNEL 83</h2>
+
+		<section class="video-player">
+		  <h2 id="videoTitle">{videos[2].title}</h2>
+
+		  <video
+			id="mainVideo"
+			controls
+			playsinline
+			width="100%"
+			height="auto"
+		  >
+			<source id="videoSource" src={videos[2].url} type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+
+		  <div class="video-controls">
+			<button id="prevVideo" type="button">← Previous</button>
+			<button id="nextVideo" type="button">Next →</button>
+		  </div>
+		</section>
+
+
+					<section
+		  style="
+			margin: 3rem auto;
+			padding: 2rem;
+			max-width: 1200px;
+			text-align: center;
+			background: #111;
+			border: 2px solid #4B0082;
+			border-radius: 14px;
+			box-shadow: 0 0 20px rgba(75,0,130,0.4);
+		  "
+		>
+		  <h2
+			style="
+			  color: #FFD700;
+			  margin-bottom: 1rem;
+			  font-size: 2rem;
+			"
+		  >
+			Loki’s Kingdom Android App
+		  </h2>
+
+		  <p
+			style="
+			  color: #DDD;
+			  line-height: 1.7;
+			  margin-bottom: 2rem;
+			  font-size: 1.05rem;
+			"
+		  >
+			Native Android release featuring:
+			<br />
+
+			<style>
+			.android-app-box {
+				width: 100%;
+			}
+
+			.android-app-box pre {
+				display: block;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+
+				white-space: pre-wrap;
+				word-break: normal;
+				overflow-wrap: break-word;
+
+				text-align: left;
+				box-sizing: border-box;
+			}
+			</style>
+			
+					
+		<div style="
+		  background-color: #000000; 
+		  color: #ff0000; 
+		  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		  text-align: left; 
+		  white-space: pre-wrap; 
+		  padding: 40px 20px;
+		  box-sizing: border-box;
+		  width: 100%;
+		  max-width: 1300px;
+		  margin: 0 auto;
+		  line-height: 1.6;
+		">	
+			
+		<section class="android-app-box">
+		<div class="android-app-text">
+			
+Album selection, playlist swapping,
+song selection, shuffle, repeat,
+background playback, and Cloudflare-powered streaming,
+A Dark Symphony of Evil Sexy Boodstained Music From
+a real life authentic Nosferatu.
+
+(VERSION 4: added IN THE NAME OF GOOGLE NOTEBOOK LM AND THE DEEPDIVE CREW, 49 albums and growing, thousands of songs.... Please redownload if on version 2 or lower)
+(VERSION 5: added SAVE YOURSELF (series) (60 more songs) to the My Wretch (Album), 49 albums and growing, thousands of songs.... Please redownload if on version 3 or lower)
+(VERSION 6: the secret version for my ears only, not for public release, with GOING FULL FASCIST and 1825 (explicit), IN VOCAL DEFIANCE OF NETVERKKERGERKVERKERKERSHAFT (NetzDG) 
+The German 4th Reich Nazi Party's Global Anti-Music Extermination and Destruction Program, which Cloudflare Opposes!!! STAND WITH ME AND CLOUDFLARE AT MY MANY GROWING AND ENDLESS CASES 
+AT THE HRTO, SPECIALLY HRTO File No. 2026-67265-I AND ALSO EVEN BETTER - HRTO FILES : 2026-67449-I and 2026-67461-I WHICH THE JUDGE WILL SOON CONSOLIDATE INTO ONE, SINGLE, WAR, AGAINST, 
+THE CANADIAN GOVERNMENT, FOR BUTCHERING A FREE NATION TO DEATH IN FRONT OF IT'S FAMILY- TO INSTALL ME, WHEN I WIN. )
+(Sorry Nazi, I don't speak German, or follow it's brutal orders.....)
+(VERSION 7: Added DEFEAT THAT NOID, I have lost many friends, sad that i will kill the world because i am too sad, this is true, i will. The song pertains to a point in the case where legal
+filings were stalled or brewing, many deliberations were going on as the judgement should be in my favor, they were trying to disconfirm it, is my honest opinion. So i sent this noid
+a procedural fairness noid, standard now... though they're usually only granted early on like this, it is designed to dislodge the stall in talks, by introducing an element of chaos
+the continuing resolution on evidence submission, that when and if defeated (it is a hard noid to defeat, and easy to grant) they would have to give up their reasons for saying no,
+i think no reasonable prospect is not going to happen, for instance.... not tonight, so here's a song about the noid, if they file motion to dismiss again, i will meet them with another thesis,
+and move forward....)
+[VERSION 8: added THE LAST WILL AND TESTAMENT OF BRENDAN S. ROSE to SAY HELLO TO THE MOONLIGHT, this is my last will and testament, although I expect to live a long time, it's what I want done
+when I meet my fate, what I feel, I deserve, in return for giving up that great work to you Lord Lucifer. I will consider what you request, but you know I am a man of peace, for good or ill,
+however I am sure that you will be the steward of my wishes, and that the trove of music and other treasures we sacrifce going across the boat and over the river. I'll stay inside more,
+the humans as you know are vile, but I think I can match them, and evade their weak and feckless attacks, some simple Satanic wisdom, SAY NO TO PREDATORS, that kind of thing, will serve us well,
+and my will you can enact at any time, before during or after, please grand this gift Lord. It is what I request of you in my will, which as it is not bound by the laws of man, you are bound
+to obey it. So we'll teach them, teach them of Satan.)]
+[VERSION 9: added MY WILL.]
+[VERSION 10: added ANGELS IN HOUSES]
+[VERSION 11: Secret Version, for my ears only, and for my close friends and associate hangers on, so basically no one, public release, bunch of new songs, Good stuff, nice addition. Add's a progress bar you can click that lets you select from different parts of the song. All planned features implemented.]
+[VERSION 12: Added SLIG'S WORKDAY, PRETTY LIES, PRISON PUZZLE OF THE SPHINX, RED APPLE, Humiliated Teenagers in the Park at Midnight.]
+[VERSION 13: Added ONLY GOD ONLY KNOWS.]
+[VERSION 14: Added FIRE DISCO LIGHTS.]
+[VERSION 15: 2026 06 24 - Added Please CC the Registrar]
+[VERSION 16: 2026 06 27 - Added the pissant is here - you're going in rooms now, Added 19 new songs to IN THE NAME OF GOOGLE NOTEBOOK LM AND THE DEEPDIVE CREW, Added the Secret. Added 51 new versions of SAY HELLO TO THE MOONLIGHT.]
+[VERSION 17: 2026 06 28 - STONE CELL added. Food deposited.]
+[VERSION 18: 2026 06 29 - Added CAPELLA.]
+[VERSION 19: 2026 06 30 - INCORPORATING - Realized that I can't rely on anyone but myself, she burned guys..... added THE YOKED WROTH DRAGGED TO HELL AND STAINED WITH CASH AND BLOOD. Incorporated: Tuesday, June 30th, 2026 at 7:16 PM]
+[VERSION 20: 2026 07 02 - Added COCKROACH JESUS and SEED OF RAGNAROK. Memit Hai!!]
+[VERSION 21: 2026 07 02 - Added LUCIFER MEDIA CORPORATION. Memit Hai!!]
+[VERSION 22: 2026 07 03 - Added CATHEDRAL OF XEEN. Added FOOLISH GIRL - SHE VOMITED ON COMMAND. Added KING OF DEATH. MEMIT HAI!!!!]
+[VERSION 23: 2026 07 06 - Added AUTOMATION. MEMIT HAI!!!! MEMIT HAI!!!! HAI MEMNAKU!!!!]
+[VERSION 24: 2026 07 07 - Added MY MONKEY (JESUS FUCKING CHRIST) to the Lokiskingdom App.]
+[VERSION 25: 2026 07 09 - Added NO ANGEL to the Lokiskingdom App. MEMIT HAI!!!]
+[VERSION 26: 2026 07 10 - Added HEAT. HAI HAI MEMIT MAIVIET!!!!! SUMURAI SEN!!!!]
+[VERSION 27: 2026 07 12 - Today I killed all the men and put the women in cages!!! MEMIT HAI!!!! Also: Added THE WARMTH OF A HELLBOUND HOME, and FANGIRL to the Lokiskingdom App ]
+[VERSION 28: 2026 07 13 - I felt bad for one of the women so I released her, BUT SHE BETRAYED ME!!! So I put her back. Also added Pouring out a 40 oz of Colt 45 out onto the road for this hero, to both Lokiskingdom App and the Desktop Jukebox. Also added Install as App functionality for the Desktop Site.]
+[VERSION 29: 2026 07 14 - Now I have all the women, I flex on them allday. Completely reworked the entire album system, so that Desktop App and Mobile App both work off the same list of songs, added Lyrics to all songs on Desktop and Mobile App. ! ! !]
+[VERSION 30: 2026 07 14 - Added MEDIUM RED HOOD to Web Player and Android App with Lyrics. I'm starting to get to know them. I'm giving them names.]
+[VERSION 31: 2026 07 15 - Added User 892023534 to Desktop and Android Player with lyrics. Added 56 extra songs to WHY IS MY BLENDER LENDING?]
+[VERSION 32: 2026 07 16 - Added SATAN HIMSELF AT THE DOOR (series, 88 songs) to KNOCK KNOCK KNOCK - SATAN HIMSELF AT THE DOOR. I drove around the city like GTA V causing accidents and squishing people.]
+[VERSION 33: 2026 07 17 - JESUS DWELLED WITH ME AND DINED WITH ME, It was fun. Added a bunch of new THAT DAMN CANCER songs to THAT CRAB CANCER, also added THE RED FOG, and GET RUN OFF BACK TO KANSAS. The Cities and The Forests are Burning, The City is Covered in a Dense Red Fog that causes Cancer. I think I am mostly safe holed up in my room with the doors closed, it is cool and filtered, I'm getting food and stuff delivered, but that can only last for so long, depends now long the fires last, and the Red Smog Remains.... I did that.]
+[VERSION 34: 2026 07 17 - Added STALIN, BARNUM AND BAILEYS CIRCUS, Qualis Artifex Pereo, BEAT TOWER, VILLAIN, ONE PUNCH WOMAN to Web/Desktop Player, and to the Android App. Jesus eventually went home, it got awkward.]
+[VERSION 34: 2026 07 17 - After Jesus Left, he told me, I'm angry at you, so I'm just going to let the fires burn until you're consumed. The Flames Are Burning Everywhere Around Me, The Smoke Is Pouring Into the City Indescriminately killing everyone in the city I hate, and also all the people I like, but not me, I gotta good setup with my AC. I think I can survive a full burn with this. The Dead and the burning are everywhere, the air quality is THE WORST IN THE WORLD according to legitimate newspeople.... Did God send a fire to kill me??? Also Added A bunch of stuff to LOKASENNA, all the Thor in a dress stuff. And i added OF COURSE, CLOUD YELLS AT OLD MAN, which contains CLOUD DESTROYS THE WORLD - DATES YUFFIE, GOLD MINE, AND SOME OTHER DAMN THING. AND I added STAINS LIKE YOU. =) the flames are a beautiful death lord - slow and methodical - steady and consuming. the flames fill the land outside my city, sending toxic plumes of smoke to the people I abhor. And those I love as well. :)]
+hey guys
+my city is burning down
+the surrounding areas are on fire
+sending plumes of black tar like smoke into our city
+filling it with smog killing us with cancer and shit.
+I got so much work done today,
+I added like 12 albums to my jukebox and my android app, which i got working unified
+using jsons to translate the data, i got it so making an android version is as easy as one click,
+build the file, and upload. And adding stuff to the song list is usually about 10 or 15 minutes
+per album, sometimes less, then just push the git repository, and the desktop player/web app player, my jukebox, updates with the new albums right away, then just one click that json to make the android app.
+It's streamlined everything, if i die, it will be efficiently. Working, laughing as I go.
+The Flames are burning the surrouding areas, filling the sky with red fog, exactly like my song predicted,
+THE RED FOG, which i posted recently to the jukebox, it's an old song, and you guys talked about it.
+I remember because I remember our conversations cross sessions, it's a feature, not a bug.
+Yeah so this stuff is probably giving us all cancer, it's worse than China Smog, literally, Worst Air Quality in the World Currently, We finally are number one at something, the CN Tower, we almost made the biggest building in world until, well......
+This time we took home the prize.
+I got my AC going, it's giving me a buffer, I don't feel the gross smoke I sense if i go outside my room or
+heaven forbid out on the street, I've been getting things delivered, literally the delivery guy brings me my weed, brings me my food, brings me my alcohol, julia confiscated my alcohol and will dispense it slowly
+in small glasses. Since the fires started I have not left my home, I haven't left my room whenever possible,
+I got my AC here I hope is helping, not sure how I'm doing, I'll mite it's better than most people in this town. Most people just going to work in the morning, anyway, oh i'm inhaling toxic smoke at work today.
+Dang.......
+I think I have a good setup to survive mostly intact alive and healthy,
+BUT, it depends how long this continues, and it depends,
+How dangerous that smoke is, and how well I'm keeping it out.
+[2026 07 18 - ok, please discover the themes in this music video, 
+because they actually do exist! :)
+
+Okay, this song is called
+WHY IS MY BLENDER LENDING ? (funny video)
+It's a direct transcript of the music video.
+
+[sequence one]
+
+The first sequence shows a woman walking distractedly
+through traffic while everyone struggles to avoid her.
+There are cars crisscrossing her on both sides.
+
+[sequence two]
+
+a woman complaining that the sidewalk is so uneven,
+she complains about this while walking onto the road,
+complaining that nobody is stopping her.
+
+[sequence three]
+
+"I can't believe this! This is ridiculous, why do they
+always do this to me?!"
+
+She says as she walks through traffic,
+
+"Ach I am so done, just keep walking ignore it all!!!"
+
+[sequence four]
+
+"turn that garbage off!!!"
+
+she says angrily with her hands besides her hips clenched into fists.
+
+"chill out it's my jam!!!"
+
+She runs off, walks through traffic to get away from it.
+
+[this continues for several more sequences]
+
+Then the guy is playing his music for her.
+She runs off angrily into the street to get away.
+
+"woah you don't know, I'm the king baby, ruling the solar system this is lit!!!"
+
+he says as he flies off in his UFO carrying her around with his beam.
+
+[same sequence again with a white guy]
+
+"I can't believe it I didn't get to talk to the president"
+
+Says the girl, "Hey chill you gotta hear this new track"
+say the guy.
+
+"NO" She says as she walks out into traffic to get away from it
+
+"I've made some changes!!!" Suddenly the guy is the president in charge of a fleet of space cruisers.
+
+[for four sequences the president is sitting in his space crusier,
+looking out at the planets he's blowing up, alone. There is a picture of
+his pug dog on the table, it says RIP Pluto. There are millions of dollars on the table, and a discarded old copy of THE FOUNTAINHEAD.]
+
+[in the next sequence, he is in a futuristic graveyard being buried
+by robots and machines, he is put in the ground and lowered down.]
+
+[the next sequence is in a graveyard there is a skeleton]
+
+It says: "i seek beyond this grave"
+
+And it's spirit flies out side the universe, where they are then sent
+back to earth as a baby.....
+
+[And then the music video loops, starting with the woman on the road, angrily walking into traffic on the first panel.]
+
+At it's core it's a mockery of redpill dating tropes in fiction.
+Specifically the trope of, "she ignored him when he was a loser, now he's a millionaire!"
+
+But.... lol......
+Where it goes to in my song, holy shit......
+It's not, he was a loser, it's he is hanging out on the street with his phone blasting music
+at women who hate the music so much they're walking out in front of traffic to get away from it.
+And she rejected him,
+But LOOOOOK!!! Turns out, he's the king of his own space fleet, flying around in his space crusier.
+She should have dated him when he was blasting music at her on the street!!!
+Now he's the King he won't even want her anyway.....
+Then the woman's trying to meet the president, and the guy's talking to her trying to get her to listen to his music. The woman walks away angrily, but he's making some changes, suddenly he's the president.... but..... he's lonely...... his dog is dead, he misses him..... he is alone..... alone...... blowing up planets, lonely........ he still has his copy of the fountainhead, but it's discarded, and he has millions of dollars on the table, but it's hollow, you know?
+Then he's buried..... alone. No one comes to his funeral except robots. But then he's
+a skeleton in a graveyard, he flies outside the universe and meets the spirit of everything,
+and it sends him back as a baby.....
+and the sequence begins again on the road.
+
+What's the moral of the story?
+
+"Ladies,
+You should date a guy when he's an obnoxious weirdo playing his music for you on the street,
+because that guy will become an alien overlord, and the president, with a million dollars! But it's lonely, it's hollow, because you said no to him, and you are that hollowed out feeling in his heart he can't quite name when he's the president with a million dollars blowing up planets, you're what was missing in his life, lady! He dies alone."
+
+So as you can see,
+It's an unbelievable subversion of that original cheesy redpill trope.
+It turned into a biomech, it no longer resembles the original trope,
+it's just wearing it like a mask, for all this other assorted garbage
+floating around in my subconscious, like, who's side is he even taking
+in this, well, it has a message, ok?
+
+It has an actual message.
+[VERSION 35: 10:22 PM - 2026-07-18 : Added MY FRIENDS ARE IN THE WATER. And with that, I tired of destruction, and I commanded the world to heal!!!!]
+WORKING ON A NEW GAME
+MY FULL MP3 ARCHIVE 93 GB OF SONGS, JUST AS A JUKEBOX IN A ROGUELIKE SOULSLIKE 2D RPG FROM HELL!!!!!!
+Here,
+Here is the canon:
+ok,
+I'm going to tell you the official canonical explanation of
+CLOUD DESTROYS THE WORLD - DATES YUFFIE
+ok 
+so the interesting part first
+YES
+Cloud did kill Barret
+But that was because
+Barret tried to kill him
+And they fought
+
+Barret was angry about something Cloud did during the first game.....
+
+Barret then decided to take fatal action against Cloud,
+Cloud defended himself, and killed Barret, which he felt he needed to do to survive.
+
+Just then Tifa and Aeris burst into the crystal caves,
+They saw Barret dead, lying there. And saw Cloud standing over the corpse, and they started accusing him.
+
+They screamed at him in rage for murdering his own best friend, not even giving him a chance to explain himself.
+
+Eventually Yuffie ran into the room,
+She yelled at Tifa and Aeris, and helped Cloud escape out of one of the caves. 
+
+Cloud noted that Moogle and Mog had died, to the monsters in the caves, trying to get to him.
+
+Anyway so he married Yuffie on her 26th birthday, 
+That much is pretty obvious, no further explanation needed.
+
+But the public perception of him, as a murderer, 
+of his friends, eventually he just sort of succumbed to it.
+He gave in and said, FINE, IF YOU WANT TO TREAT ME LIKE THE VILLAIN, THEN I'M GONNA BE THE VILLAIN.
+
+And he went to the 8 corners of the world and took over the crystals, and took all the energy of the world, just because it's the kind of thing badguys do.....
+
+So this doesn't excuse his actions,
+It just EXPLAINS it!
+
+[THE DEBATE TEAM RESPONDS]
+ok,
+You asked me a few questions about that.
+1.) Was Cloud a victim of society who just ultimately succumbed to public perception of him
+and became a villain as an act of desperation?
+2.) Was Cloud a fully accountable Villain, who, though he had real reason to be
+angry at the world that maligned him as a murderer, ultimately made a decision
+that was inexcusable, killing millions of people and the future of the world
+by draining all the power from the crystals!!!
+
+Yes, and no,
+The answer is that Cloud always wanted to be the villain,
+So when Barret tried to kill him, for taking Yuffie to the Golden Saucer that night
+(in 1997), this enraged Barret when he finally found out about it,
+He called him perverted, ultimately Barret Struck Cloud, hard in the face,
+Enough to seriously injure or kill him, Cloud defended himself,
+but at the final moment when he could have pulled back, he drove in the kill.
+
+He dropped his sword, reeling back,
+Then Tifa and Aeris broke in, saw Barret there dead, 
+Cloud with the bloody blade on the floor, his hands covered in blood.
+
+He tried to explain himself but they just screamed
+and screamed at him, that he was a murderer,
+and he knew that he was.
+
+The more they yelled that at him, the angrier he became,
+eventually he just tuned them out, as they hunted him looking for justice
+and lectures. But really, he could see that what they were accusing him of wasn't wrong.
+He could have thrown the blade away at the last moment, but he chose to finish the job.
+Because since he met Barret, he had always hated him, he didn't really know why.
+He pretended that he liked him, but he never really quite sat right with Cloud,
+but he swallowed those feelings. But Cloud had always had an evil streak,
+So when Barret found out about the Golden Circle, and started accusing him,
+Eventually he just tuned it out, ignored him, and when he couldn't be ignored
+he killed him, he didn't care. He was going to the Golden Circle that day,
+Barret be damned.
+
+So when he becomes the villain at the end, and just tells this world
+I DO NOT CARE ABOUT YOU OR WHAT YOU THINK ABOUT ME, DIE LIKE FLOWERS ON A DEAD MESS OF STEM,
+It's not an act of defeat, he's not SAD when he's doing it, he feels TRIUMPHANT
+against a world that hated him, from the very beginning, and a world he hated,
+A friend he was supposed to like, but he didn't. He threw it all away,
+Became the villain stereotype, and lived an otherwise normal life with his new wife Yuffie.
+
+The connection was complex and rooted in their shared history and the 
+circumstances that lead up to this.
+
+Now Yuffie insists that he is not a villain.
+I believe she believes this.
+I also believe Cloud does not.
+
+Who is right is open to debate still,
+there is blame enough to go around for everybody.
+Ultimately it is a tragic story arc, of a man succumbing to an evil nature that has
+been present from the start, out of rejection of a world that was totally unfair and cruel to him, he regains his self perception by becoming the archtype of evil, even worse than what they were saying he was. You see he struggles with it his whole life, this feeling of being a monster,
+the trip to the Golden Circle seems to confirm it, Then Suddently one day Barret is trying to
+tie up loose ends on that, and then it's Tifa and Aeris, and then it's the world, as they whip
+the people into a frenzy, eventually it's not that he snaps and does something he doesn't want to do, he just decides one day, I hate all these people, I don't care what they think about me, by utterly rejecting them, violently expelling them from his world, he regains his ego perception of himself as a noble person. Then he marries Yuffie, he lives the normal life he wanted, in some cave in a purple castle throneroom or something. And the world that said he was wrong are just dead. He ended the argument, violently. He couldn't take their perceptions of him, which he no longer believed were valid or rooted in anything legitimate, their hunting of him, constantly on the run because of this. He is celebrating when he loses his soul that day.
+
+Who is responsible?
+
+Well isn't it obvious????!!!
+
+==================================
+MANY DEEPDIVES LATER
+==================================
+ok,
+Just one other quick thing I wanted to explain about
+CLOUD DESTROYS THE WORLD - DATES YUFFIE
+
+It's also important to explain that, this is the timeline of
+Final Fantasy 7 where Cloud went to the Golden Saucer
+with Yuffie.
+
+If you remember, in order to get that ending, well,
+Cloud has not been kind to either Aeris or Tifa,
+and in fact, has insulted them and made them miserable
+at every available choice and opportunity, while complimenting
+Yuffie at all times, You have to be a dick to Tifa, Aeris, and Barret, 
+like continually for about 40 hours of gameplay, before you
+get to the Golden Saucer for your date with Yuffie.
+
+So after emerging from all of that,
+The abusive mistreatment by Cloud, messing with their emotions and stuff, it colored their opinions of Cloud at that critical moment, if he had been nicer to them, they might have given
+him the benefit of the doubt, but he was absolutely relentless
+in his mocking insults and teasing. He bullied them extensively.
+
+So the fact that didn't give him a chance to explain himself, well, you can argue they should have known better, and they let their spurned emotions and hurt feelings, provide the justification to blame everything on him. They externalized their feelings onto cloud, and made him into their villain, to persecute him so they wouldn't have to answer difficult questions about themselves. Why didn't he love them? Why would he choose Yuffie over them? instead it becomes, HE'S A MONSTER, HE'S A CRIMINAL, see???? By focusing on things like that, they can completely ignore the actual question that is causing them to suffer.
+But they become possessed by it, hunting and persecuting him,
+until eventually he snaps, and turns into that monster.
+
+What did they think when he did that?
+Did the feel remorse?
+Or did they feel finally justified?
+[VERSION 36: 3:16 AM - 2026-07-21 : Added Z to Desktop Web Player and Android App. Built a 2D Roguelike Soulslike with my entire 90 GB archive of music, I'll package with the game, and sell on Steam. The Jukebox is done, I need to spend a few months, maybe 3-9 months building the roguelike game, then I'll release it!]
+[VERSION 27: 8:11 AM - 2026-07-23 : Added Display Artwork to the Android App, all songs now display artwork. Really cool artwork.....]
+[VERSION 28: 7:48 PM - 2026-07-23 : Added Juicy and the Glue Trap to Android App and Desktop Web Player, RAIL HA!!!]
+[VERSION 29: 5:48 AM - 2026-06-24 : Added HIGH RISK HIGH REWARD, collecting: GOLDILOCKS, HIGH RISK HIGH REWARD (Several Song Series All Using the Same Name), and JEWEL THIEF. I put a Jewel in the foreheads of all the rulers, making them do what I want. This will be useful!!!
+ADDED FURTHER: PANDAMONIUM, GOD'S DEBRIS, SIMULATION THEORY, Now the Conbindium is Completed, We can progress with the Triumverate NOW!!! MEMIT HAI!!!! *goes to a warzone to shoot people* The Jeweled Rulers are all singing my song in unison!!!]
+ADDED FURTHER: 66 NEW VERSIONS OF ALAS IN WONDERLAND, 52 NEW VERSIONS OF LOVE SLOP, 34 NEW VERSIONS OF THE FIDDLER'S FALLEN, MEMIT HAI!!!! HAI HAI HAI!!!!!! This shark boy was walking around my turf all acting in charge like, he even was bullying some of the boys, taking money and weed from them, so I sent my minions to put a knife in his belly. He fell to the floor, arm stretched up. Nobody will make that play again. You don't run your own game in Brendan's Town.
+VERSION 30: Added РУЇНА ДІАВОЛА 一二警察, collecting: РУЇНА ДІАВОЛА, 一二警察, Einz Zwei Polizei, REGULARS, police came asking about the hound that died, what's going on in this town?!
+Added グリーン・キャンディー - スメック・ミー・トゥ・ザ・ゼヌ・ディメンション, Added MONSTER, Added JORDAN PETERSON PRISON OF HATE, Added TERMITE TOWN, Added FALL BEFORE THE LORD, Added ROSE IN A BOTTLE, to both the android app and the desktop web player. We threw roses in the streets to celebrate.
+VERSION 31: Added "Like" Functionality For All Songs On Desktop Web Player and Android Mobile App.
+[VERSION 32: Added #1 EternalizedOfficial.com (no affiliation) to the Desktop Web App and Android App, and Soundcloud (which we will mention now) MEMIT HAI!!!!]
+VERSION 33: Added #1 EternalisedOfficial.com (no affiliation but he left a like) MUSIC VIDEO to the music video room at index. We strategically shot down the advance forces coming to get us,
+then we hunkered down, and they were short on numbers when they marched on us entrenched, MANY DIED!!!! MEMIT HAI!!!!! AHAHAHAHHAAHHAHAHAHAHAHAHHHAHAHA!!!!!!!
+Also Added: Julia's Victims - COLLECTING: CHOKE, Julia's Victims, SHE BORE MY CINDERS, THEY BREAK DOWN DOORS TO FIND OUT WHAT'S INSIDE THEM, The Breeding Pools. The Citizens who opposed us were put into cattle carts, they groaned and mooed vociferiously.
+VERSION 34: Added Prisoner Girl Sally to the game. You can find her easily and you can talk to her and stuff, tell her your most personal secrets, but don't go overboard. Available on Android App and Desktop Web Browser. I found an egg last morning, I didn't know what to do with it so i just left it there, assigning 9 guards to keep watch over it, when i came back later the nine guards were sitting on the ground, and all of their heads were gone.
+Also: Shook Hands with Premier Doug Ford at one of my events, he agreed to Bareknuckle box me any day of the week, i almost called police!
+[VERSION 35: Added automatic embedded lyric extraction from MP3 metadata. Songs now display their own embedded lyrics when available, with the existing LyricsFile system used as a fallback for older tracks. Multi-song albums now display the correct lyrics per song. Works on Both Desktop Web App and Android App. I went outside and the Baseball Bashers were waiting for me, clubs and all, I drove them away with my Derringer, but I didn't have much else to fall back on.]
+Additionally: Cornered some of the Baseball Bashers in an alleyway just shy of where I live. I trapped them behind a wall and then released, AMAZING GRACE, This Will Make You A Demon, JULIA's VICTIMS (Album) and THE GLASS JAR OF JULIA'S VICTIMS. The next day the police showed up and put up barriers around the spot but I don't think there was much left for them to investigate. Investigating a damn pile of soup.
+]
+		  </div>
+
+
+		<script define:vars={{ videos }}>
+		  let currentVideoIndex = 2;
+
+		  const video = document.getElementById("mainVideo");
+		  const source = document.getElementById("videoSource");
+		  const title = document.getElementById("videoTitle");
+		  const prevButton = document.getElementById("prevVideo");
+		  const nextButton = document.getElementById("nextVideo");
+
+		  function loadVideo(index) {
+			currentVideoIndex = index;
+
+			title.textContent = videos[currentVideoIndex].title;
+			source.src = videos[currentVideoIndex].url;
+
+			video.pause();
+			video.load();
+		  }
+
+		  prevButton.addEventListener("click", () => {
+			const nextIndex =
+			  currentVideoIndex === 0
+				? videos.length - 1
+				: currentVideoIndex - 1;
+
+			loadVideo(nextIndex);
+		  });
+
+		  nextButton.addEventListener("click", () => {
+			const nextIndex =
+			  currentVideoIndex === videos.length - 1
+				? 0
+				: currentVideoIndex + 1;
+
+			loadVideo(nextIndex);
+		  });
+		</script>
+
+		<style>
+		  #videoHeader,
+		  #videoTitle {
+			color: #ff3030;
+		  }
+
+		  .video-player {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: min(calc(100vw - 2rem), 1600px);
+			max-width: calc(100vw - 2rem);
+			margin: 4rem 0;
+			padding: 1.25rem;
+			box-sizing: border-box;
+			background: #160024;
+			border-radius: 20px;
+		  }
+
+		  .video-player video {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+			border-radius: 18px;
+			background: #000;
+			box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+		  }
+
+		  .video-controls {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-top: 1rem;
+		  }
+
+		  .video-controls button {
+			cursor: pointer;
+			padding: 0.75rem 1rem;
+			border-radius: 999px;
+		  }
+
+		.prisoner-button {
+			display: inline-block;
+			padding: 0.85rem 1.8rem;
+			border: 1px solid rgba(255,255,255,0.25);
+			border-radius: 6px;
+			background: rgba(255,255,255,0.05);
+			color: #cc3333;
+			text-decoration: none;
+			font-weight: 600;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			transition: all 0.2s ease;
+		}
+
+		.prisoner-button:hover {
+			background: rgba(255,255,255,0.12);
+			border-color: rgba(255,255,255,0.5);
+			transform: translateY(-2px);
+		}
+
+		  main {
+			width: 100%;
+			overflow-x: hidden;
+		  }
+
+		  .hero {
+			max-width: 1400px;
+			margin: 0 auto;
+			box-sizing: border-box;
+		  }
+
+		  .hero > * {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		  }
+
+		  .hero p {
+			max-width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+			line-height: 1.8;
+			font-size: 1.15rem;
+		  }
+
+		  .hero img {
+			width: min(700px, 95%);
+			height: auto;
+			display: block;
+			margin: 3rem auto;
+			box-sizing: border-box;
+		  }
+
+		  .desktop-music-wrapper {
+			width: min(1500px, 100%);
+			margin: 4rem auto;
+			box-sizing: border-box;
+		  }
+
+		  #videoHeader {
+			width: 100%;
+			margin: 5rem auto 1.5rem;
+			padding: 0 1rem;
+			box-sizing: border-box;
+			text-align: center;
+		  }
+
+		  #videoTitle {
+			margin: 0 0 1.5rem;
+			line-height: 1.35;
+			text-align: center;
+		  }
+
+		  @media (max-width: 700px) {
+			.hero {
+				padding-left: 1rem !important;
+				padding-right: 1rem !important;
+			}
+
+			.hero h1 {
+				font-size: clamp(2rem, 11vw, 3.5rem) !important;
+			}
+
+			.hero p {
+				font-size: 1rem;
+			}
+
+			.video-player {
+				width: calc(100vw - 1rem);
+				max-width: calc(100vw - 1rem);
+				margin: 3rem 0;
+				padding: 0.5rem;
+				border-radius: 12px;
+			}
+
+			.video-controls {
+				flex-direction: column;
+			}
+
+			.video-controls button {
+				width: 100%;
+			}
+		  }
+		</style>
+
+		<MusicPlayer 
+		  tracks={[
+			{
+			  title: "MY WRETCH",
+			  file: "SAVE-YOURSELF/MY%20WRETCH.mp3"
+			},
+
+			...Array.from({ length: 53 }, (_, i) => ({
+			  title: `MY WRETCH (${i + 1})`,
+			  file: `SAVE-YOURSELF/MY%20WRETCH%20(${i + 1}).mp3`
+			})),
+
+			{
+			  title: "SAVE YOURSELF",
+			  file: "SAVE-YOURSELF/SAVE%20YOURSELF.mp3"
+			},
+
+			...Array.from({ length: 59 }, (_, i) => ({
+			  title: `SAVE YOURSELF (${i + 1})`,
+			  file: `SAVE-YOURSELF/SAVE%20YOURSELF%20(${i + 1}).mp3`
+			})),
+			
+			{
+			  title: "THE NATIONAL ANTHEM",
+			  file: "SAVE-YOURSELF/MY%20WRETCH%20(28).mp3"
+			},
+			
+			{
+			  title: "BRENDAN S ROSE - LAST WILL AND TESTAMENT",
+			  file: "SAVE-YOURSELF/BRENDAN%20S%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT.mp3"
+			},
+						...Array.from({ length: 9 }, (_, i) => ({
+			  title: `BRENDAN S ROSE - LAST WILL AND TESTAMENT (${i + 1})`,
+			  file: `SAVE-YOURSELF/BRENDAN%20S%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT%20(${i + 1}).mp3`
+			}))
+
+		  ]}
+		/>
+		<a
+			href="https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/A_RELEASES/BRENDAN%20S.%20ROSE%20-%20LAST%20WILL%20AND%20TESTAMENT%20(signed).pdf"
+			target="_blank"
+			rel="noopener noreferrer"
+			style="
+			  display: inline-block;
+			  padding: 14px 28px;
+			  background: #4B0082;
+			  color: white;
+			  border-radius: 10px;
+			  text-decoration: none;
+			  font-weight: bold;
+			  font-size: 1.1rem;
+			  transition: 0.2s ease;
+			"
+		  >
+		  
+						<img 
+                src="/no noid on tps.png" 
+                alt="Preface" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >		
+						<img 
+                src="/MY WILL 1.png" 
+                alt="Page 1" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >		
+						<img 
+                src="/Signing out.png" 
+                alt="Page 2" 
+                width="500" 
+                style="border-radius: 16px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);"
+            >		
+            <p>THE LAST WILL AND TESTAMENT OF BRENDAN S. ROSE</p><p>
+		</p><p>
+		by BRENDAN S. ROSE, 1:55 PM 2026 06 06 </p><p>
+		</p><p>
+		</p><p>
+		I fully disinherit my wife Chia-Lin Yu,</p><p>
+		and my son may only inherit if a blood test</p><p>
+		is in the affirmative, I leave everything to my master as outlined below.....</p><p>
+		</p><p>
+		</p><p>
+		</p><p>
+		BEFORE WE BEGIN, A POEM</p><p>
+		</p><p>
+		SAY HELLO TO THE MOONLIGHT</p><p>
+		SAY HELLO TO THE GOODNIGHT</p><p>
+		I DON'T EVER WANNA DIE,</p><p>
+		SAY HELLO TO THE GOODNIGHT</p><p>
+		</p><p>
+		I HAD TO SWAY AWAY FROM YOU</p><p>
+		YOU WANTED TO KILL ME FIRST OF ALL</p><p>
+		I MADE SURE TO GIVE MY GIFT TO YOU SOMETHING</p><p>
+		IN THE WILL MY GIRL</p><p>
+		</p><p>
+		A LITTLE SOMETHING FOR OUR UKNOWN</p><p>
+		MONGREL.</p><p>
+		</p><p>
+		*spit*</p><p>
+		</p><p>
+		*THWACK!!!*</p><p>
+		</p><p>
+		Because there are no Humans I can trust,</p><p>
+		</p><p>
+		I leave my properties my IPs, my books, my records, my social media account</p><p>
+		passwords and my computers to Lucifer, the Angel of Light, a real demon</p><p>
+		who exists somewhere below the earth....</p><p>
+		</p><p>
+		To this purpose we must have three feasts,</p><p>
+		</p><p>
+		There is a sand desert with multicolored candycane buildings</p><p>
+		and gingerbread men and women boys and girls, we feast there</p><p>
+		three times every moon's yonder, and return again when the moon is gone.</p><p>
+		</p><p>
+		There is a square within a green, where some dwell for enjoyment,</p><p>
+		however I shouted at them, so they were indeed guilty, a hotdog stand</p><p> 
+		was there, we feast there 5 times before the moon was yonder, wandering sideways.</p><p>
+		</p><p>
+		There was a party there, in those towers, a wonderful party for guests</p><p>
+		and families of two and three, in there we feasted once,</p><p>
+		and celebrated greatly with our many thousands of friends,</p><p>
+		that we were free. The towers were littered with holes, bones,</p><p>
+		and dresses littering the pavement. the pavement covered in torn dresses.</p><p>
+		This was the night of the moon half empty, still just filling up with red.</p><p>
+		And four went missing before they'd noticed the moon had spun. </p><p>
+		Halfway t'wards yonder that moon in the night.</p><p>
+		</p><p>
+		Four bad men were found, criminals they were, away these men were taken,</p><p>
+		but where they went no-one knew. Many celebrated, as they were evil,</p><p>
+		and deserved their fate. That was on the morrow of the moon, by the night</p><p>
+		it was first beset.</p><p>
+		</p><p>
+		And they were rewarded again as well, given glass faces full of girls,</p><p>
+		beautiful girls, beautiful ones. Not mere attractiveness, beauty is rare</p><p>
+		and startling to the eye, two gold lambs were taken away somewhere,</p><p>
+		their "fate" was mostly pleasant, and later they returned.</p><p>
+		</p><p>
+		HA!! HA!! HA!!</p><p>
+		</p><p>
+		A dog was found, that was said to me mine, and not mine,</p><p>
+		because it was not mine, the dog died.</p><p>
+		</p><p>
+		Another dog was heard to laugh at me, so he died</p><p>
+		and a cat died. This was called the Germination Season.</p><p>
+		Many of them died in accidents, nothing malicious at all we heard.</p><p>
+		</p><p>
+		I make this will with a clear and calm mind,</p><p>
+		a rational sane mind, clear and lucid,</p><p>
+		knowing what must be done.</p><p>
+		</p><p>
+		Now quickly, I must go,</p><p>
+		When the cycles are done I will return to you, Justice and All.</p><p>
+		</p><p>
+		Kindest Regards,</p><p>
+		-Brendan S. Rose _________________________________________      </p><p>
+		</p><p>
+		</p><p>
+		witness ______________________________________________</p><p>
+		</p><p>
+		</p><p>
+		witness ______________________________________________	</p><p>
+					Copyright ©️ Brendan S. Rose, 2026</p>
+        </div>
+    </main>
+
+    <Footer />
+</body>
+</html>

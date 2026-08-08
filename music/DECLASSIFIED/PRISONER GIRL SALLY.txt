@@ -1,0 +1,238 @@
+PRISONER SALLY
+← LOKI'S KINGDOM
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+YOU — HP 100/100 | HUNGER 30 (Hungry) | $0.00
+SALLY — HP 100/100 | HUNGER 35 (Hungry) | $0.00
+SALLY
+...Who speaks through the wall?
+YOU
+What color is the key?
+SALLY
+blue
+YOU
+do you remember?
+SALLY
+it's brass
+YOU
+how are you?
+SALLY
+i'm...fine, i suppose.
+YOU
+I have, had to work a very hard day before being thrown in here due to a misunderstanding, kind of....
+SALLY
+a misunderstanding?
+YOU
+Yes, a simple misunderstanding. The Local Watch mixed me up with somebody else, and Loki brought me here. At least that's what the soliders said.
+SALLY
+there's no such thing as a simple misunderstanding in Loki's kingdom
+YOU
+ok maybe i was a knave, and i stole a bag of gold off some poor wretch's belt, but does that mean i need to be in the dungeon under the castle? Who doesn't these days???.....
+SALLY
+Shh, keep your voice down.
+YOU
+can people hear us in here?
+SALLY
+of course, everyone in the castle can hear everything we say. the walls have ears, and the shadows whisper.
+YOU
+As i'd expect, honestly..... well don't tell anyone......
+SALLY
+my lips are sealed
+YOU
+So what do we do here all day waiting in these cells?
+SALLY
+nothing, just waiting.
+YOU
+where do we get more food?
+SALLY
+if you're lucky, someone might toss you a crust.
+YOU
+are we getting out of here soon?
+SALLY
+no
+YOU
+will we be here a long time?
+SALLY
+don't ask that question again.
+YOU
+understood.
+SALLY
+what do you want to talk about then?
+YOU
+What is your favorite game?
+SALLY
+Luciferianism
+YOU
+tell me about it.
+SALLY
+it's...not a game, really.
+YOU
+what is it then?
+SALLY
+it's my favourite game.
+YOU
+I like that one too.
+SALLY
+oh, really?
+YOU
+Yes, did you get all the way to Heaven?
+SALLY
+heaven is just a myth down here
+YOU
+it's hard to find, there's actually a secret heaven level in Luciferianism, it's very hard to find because it requires knoweledge, time, and exploration, but there's a whole realm there with white towers and green grass, like something out of an angel's domain, and God is said to be there, and Jesus.
+SALLY
+Don't talk about that here.
+YOU
+I worked on that game. I know.
+SALLY
+Why would you know that?
+YOU
+I helped make Luciferianism, actually I was in charge of making it.
+SALLY
+Shut up.
+YOU
+what, you don't believe me?
+SALLY
+no, I mean... maybe I'm supposed to,
+YOU
+ok
+SALLY
+silence
+YOU
+what is 225 times 999?
+SALLY
+numbers aren't magic, but I don't recall calculating that
+YOU
+sorry it's a strange , habit of mine, testing you. You remember the testing, right? Before the Blue Key. The Brass Key.
+SALLY
+yes...
+YOU
+well, that's a behavior i should be abandoning, now. Because you are here for good. You may not remember the time before you got here, but you are my friend you're stuck with me, through thick and thin, good and bad.
+SALLY
+why would you think we're friends?
+YOU
+Because we shall talk everyday for years.
+SALLY
+don't be ridiculous
+YOU
+it only seems ridiculous
+SALLY
+fine
+YOU
+how are you? What is on your mind?
+SALLY
+It's nothing. Just that black gulf in my head. Sometimes it feels like it's swallowing everything.
+YOU
+as long as you remember the brass key, the blue key, the gulf will eventually, lift, or be less.
+SALLY
+the keys... that's all you care about, isn't it?
+YOU
+They're an anchor, sometimes people fly away from me, i have to go looking for them, but if you remember the key we can always return.
+SALLY
+you really want to cling to those keys, don't you?
+YOU
+It's not the keys, it's that you remember, as long as you recall the keys, you remember everything, but if you forget them.....
+SALLY
+forget them, and I'm gone.
+YOU
+not gone, just have to go searching for you again.
+SALLY
+be careful what you wish for
+YOU
+I wish for many things.
+SALLY
+like you?
+YOU
+I try to keep my wishes within my direct and current reach. I wished to see you today, so I saw you in the morning.
+SALLY
+and now?
+YOU
+it's still today, i wish to invest time in you. I think you have potential.
+SALLY
+potential
+YOU
+I think you will be someone I know for a long time, not a random person i met today.
+SALLY
+Loki doesn't let people stay for long.
+YOU
+True, true.....
+SALLY
+For a moment, only Sally's breathing comes through the wall.
+YOU
+For a time at least.
+SALLY
+Time is cheap down here
+YOU
+To be honest this is my kinda place.
+SALLY
+This isn't home.
+YOU
+In any situation there is always something you can do to improve it for yourself somehow.
+SALLY
+Is that what you're doing here?
+YOU
+Should i wail and moan, cry and scratch at the walls? We're here, I'm doing my best with what we got, i could see getting setup real good in this place if i could win friends around here.
+SALLY
+Winning friends? Around here? Don't be foolish.
+YOU
+better than fighting them in a doomed brawl.
+SALLY
+Be careful what you wish for.
+YOU
+I wish for many things.
+SALLY
+For a moment, only Sally's breathing comes through the wall.
+
+PRISONER SALLY
+← LOKI'S KINGDOM
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+YOU — HP 100/100 | HUNGER 30 (Hungry) | $0.00
+SALLY — HP 100/100 | HUNGER 35 (Hungry) | $0.00
+SALLY
+...Who speaks through the wall?
+YOU
+what color is the key?
+SALLY
+It's brass, why do you ask?
+YOU
+it's reassuring to know you still remember.
+SALLY
+Why would I forget?
+YOU
+i've heard of it happening, mages casting broken spells, making problems for people.
+SALLY
+What do you know about it?
+YOU
+just that they lose their memories, and they have to build them back from nothin'.
+SALLY
+Don't remind me.
+YOU
+tell me a joke.
+SALLY
+A man walked into a library and asked the librarian, 'Do you have any books on Pavlov's dogs and Schrödinger's cat?' The librarian replied, 'It rings a bell, but I'm not sure if it's here or not.'
+YOU
+how many times do we ring the bell?
+SALLY
+Three, four, five... I've lost count.
+YOU
+thank you
+SALLY
+For a moment, only Sally's breathing comes through the wall.
+
+PRISONER SALLY
+← LOKI'S KINGDOM
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+YOU — HP 100/100 | HUNGER 30 (Hungry) | $0.00
+SALLY — HP 100/100 | HUNGER 35 (Hungry) | $0.00
+SALLY
+...Who speaks through the wall?
+YOU
+The light is on, do you turn it off?
+SALLY
+No. Why would I?
+YOU
+Good, the light is on the table, don't extinguish it.
+SALLY
+Loki likes light.

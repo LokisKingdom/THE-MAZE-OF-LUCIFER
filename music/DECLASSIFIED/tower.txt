@@ -1,0 +1,1746 @@
+---
+// Loki's Kingdom — The Tower
+// Put this file at: src/pages/tower.astro
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>The Tower — Loki's Kingdom</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/The Wizard.png"
+    />
+  </head>
+
+  <body>
+    <main class="tower-page">
+
+      <section
+        id="scene"
+        class="scene"
+        role="button"
+        tabindex="0"
+        aria-label="Proceed through the Tower"
+      >
+
+        <img
+          id="sceneImage"
+          class="scene-image"
+          src="/THE TOWER SUPERPROMPT.png"
+          alt="The impossible black Tower rising beyond Loki's Kingdom"
+          draggable="false"
+        />
+
+        <div
+          id="shade"
+          class="shade"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          id="sceneText"
+          class="scene-text"
+        >
+          <p class="scene-kicker">
+            BEYOND THE MINOTAUR
+          </p>
+
+          <p class="scene-title">
+            THE TOWER
+          </p>
+
+          <p class="scene-copy">
+            The black spire stands where the road should end.
+          </p>
+
+          <p class="scene-prompt">
+            CLICK TO APPROACH
+          </p>
+        </div>
+
+
+        <!--
+          This is deliberately SMALL.
+
+          It replaces the old full-screen "counting your gold"
+          overlay. The scene and dialogue remain visible while
+          the Guild checks its ledger.
+        -->
+        <div
+          id="guildLedger"
+          class="guild-ledger"
+          hidden
+          aria-live="polite"
+        >
+          <p
+            id="guildLedgerTitle"
+            class="guild-ledger-title"
+          >
+            THE GUILD IS COUNTING YOUR GOLD...
+          </p>
+
+          <p
+            id="guildLedgerCopy"
+            class="guild-ledger-copy"
+          >
+            The clerk runs one finger down an old page.
+          </p>
+        </div>
+
+      </section>
+
+
+      <div class="below">
+
+        <a
+          class="return-link"
+          href="/"
+        >
+          ← Return to Loki's Kingdom
+        </a>
+
+        <span
+          id="status"
+          class="status"
+        >
+          The Tower watches.
+        </span>
+
+      </div>
+
+    </main>
+
+
+    <script is:inline>
+      (() => {
+
+        // =====================================================
+        // CONFIGURATION
+        // =====================================================
+
+        const VISITOR_ID_KEY =
+          "lokis-kingdom-visitor-id";
+
+        const WIZARD_ORIGIN =
+          "https://the-wizard.lokiskingdom.com";
+
+        const WIZARD_URL =
+          `${WIZARD_ORIGIN}/`;
+
+        const REQUIRED_GOLD =
+          100000;
+
+
+        // =====================================================
+        // PAGE ELEMENTS
+        // =====================================================
+
+        const scene =
+          document.getElementById(
+            "scene"
+          );
+
+        const sceneImage =
+          document.getElementById(
+            "sceneImage"
+          );
+
+        const sceneText =
+          document.getElementById(
+            "sceneText"
+          );
+
+        const shade =
+          document.getElementById(
+            "shade"
+          );
+
+        const guildLedger =
+          document.getElementById(
+            "guildLedger"
+          );
+
+        const guildLedgerTitle =
+          document.getElementById(
+            "guildLedgerTitle"
+          );
+
+        const guildLedgerCopy =
+          document.getElementById(
+            "guildLedgerCopy"
+          );
+
+        const status =
+          document.getElementById(
+            "status"
+          );
+
+
+        // =====================================================
+        // STATE
+        // =====================================================
+
+        let step =
+          0;
+
+        let locked =
+          false;
+
+
+        // =====================================================
+        // STORY
+        // =====================================================
+
+        const scenes = [
+
+          {
+            image:
+              "/THE TOWER SUPERPROMPT.png",
+
+            kicker:
+              "BEYOND THE MINOTAUR",
+
+            title:
+              "THE TOWER",
+
+            copy:
+              "The road narrows into black mud and broken stone. Beyond it rises a rectangular spire of living obsidian, narrow at the earth and widening impossibly as it climbs. The higher structure disappears into cloud, then stars, then something much larger than the sky.",
+
+            prompt:
+              "CLICK TO APPROACH",
+
+            shade:
+              "light"
+          },
+
+
+          {
+            image:
+              "/THE TOWER SUPERPROMPT.png",
+
+            kicker:
+              "THE PEOPLE SEE YOU",
+
+            title:
+              "NO ONE STANDS IN YOUR WAY",
+
+            copy:
+              "Peasants crowd the road in old wool, leather and torn cloth. Some kneel. Others retreat behind carts and ruined walls. Skeleton soldiers stand everywhere among them, motionless beneath black banners. One skull turns toward you. Then another.",
+
+            prompt:
+              "CLICK TO KEEP WALKING",
+
+            shade:
+              "light"
+          },
+
+
+          {
+            image:
+              "/THE TOWER SUPERPROMPT.png",
+
+            kicker:
+              "THE DEAD BEGIN TO MOVE",
+
+            title:
+              "THE PROCESSION",
+
+            copy:
+              "Spears lower in perfect unison. The skeletons do not attack. Instead they close around you in ranks: ahead, behind, and to either side. Without a word they begin marching. The frightened peasants part before the procession.",
+
+            prompt:
+              "CLICK TO BE MARCHED TO THE TOWER",
+
+            shade:
+              "medium"
+          },
+
+
+          {
+            image:
+              "/THE METAL PIPE.png",
+
+            kicker:
+              "AT THE FOOT OF THE SPIRE",
+
+            title:
+              "THE WOODEN DOOR",
+
+            copy:
+              "The base of the Tower should be large enough to swallow a city, yet its entrance is absurdly ordinary: a heavy wooden door, roughly the width of a house gate. There is no visible lock. The skeletons stop behind you.",
+
+            prompt:
+              "CLICK THE DOOR",
+
+            shade:
+              "heavy"
+          },
+
+
+          {
+            image:
+              "/WIZARDS FRONT DESK.png",
+
+            kicker:
+              "WITHIN THE IMPOSSIBLE INTERIOR",
+
+            title:
+              "THE GUILD HALLS",
+
+            copy:
+              "The door closes behind you. Lamplight trembles over black stone, brass instruments, impossible machinery and shelves rising into darkness. The interior cannot fit inside the Tower you saw from outside. Skeleton guards line the hall. At a desk ahead, a clerk opens an enormous ledger.",
+
+            prompt:
+              "CLICK TO PRESENT YOURSELF",
+
+            shade:
+              "heavy"
+          },
+
+
+          {
+            image:
+              "/WIZARDS FRONT DESK.png",
+
+            kicker:
+              "THE GUILD OF KNOWLEDGE",
+
+            title:
+              "ALL SECRETS HAVE A PRICE",
+
+            copy:
+              "The clerk watches you pass without opening the ledger. Whatever debts are owed above are the Wizard's concern, not his. A narrow stair curls upward into the impossible dark.",
+
+            prompt:
+              "CLICK TO ASCEND TO THE WIZARD'S STUDY",
+
+            shade:
+              "heavy"
+          }
+
+        ];
+
+
+        // =====================================================
+        // VISITOR ID
+        // =====================================================
+
+        function getVisitorId() {
+
+          /*
+           * Inside the Android app, the native player owns the
+           * authoritative MOBILE visitor ID. Prefer it.
+           *
+           * Desktop browsers do not have window.AndroidGame,
+           * so they continue using their own localStorage ID.
+           */
+          try {
+
+            if (
+              window.AndroidGame &&
+              typeof window.AndroidGame.getVisitorId ===
+                "function"
+            ) {
+
+              const androidVisitorId =
+                String(
+                  window.AndroidGame.getVisitorId() ||
+                  ""
+                ).trim();
+
+
+              if (
+                androidVisitorId &&
+                androidVisitorId.length <= 200
+              ) {
+
+                localStorage.setItem(
+                  VISITOR_ID_KEY,
+                  androidVisitorId
+                );
+
+                return androidVisitorId;
+              }
+            }
+
+          } catch (error) {
+
+            console.warn(
+              "Android visitor bridge unavailable:",
+              error
+            );
+          }
+
+
+          let visitorId =
+            localStorage.getItem(
+              VISITOR_ID_KEY
+            );
+
+
+          if (!visitorId) {
+
+            visitorId =
+              (
+                typeof crypto !==
+                  "undefined" &&
+                crypto.randomUUID
+              )
+                ? crypto.randomUUID()
+                : (
+                    "visitor-" +
+                    Date.now() +
+                    "-" +
+                    Math.random()
+                      .toString(36)
+                      .slice(2)
+                  );
+
+
+            localStorage.setItem(
+              VISITOR_ID_KEY,
+              visitorId
+            );
+          }
+
+
+          return visitorId;
+        }
+
+
+        // =====================================================
+        // DISPLAY HELPERS
+        // =====================================================
+
+        function escapeHtml(
+          value
+        ) {
+          return String(
+            value ?? ""
+          )
+            .replaceAll(
+              "&",
+              "&amp;"
+            )
+            .replaceAll(
+              "<",
+              "&lt;"
+            )
+            .replaceAll(
+              ">",
+              "&gt;"
+            )
+            .replaceAll(
+              '"',
+              "&quot;"
+            )
+            .replaceAll(
+              "'",
+              "&#039;"
+            );
+        }
+
+
+        function renderScene(
+          index
+        ) {
+
+          const current =
+            scenes[index];
+
+
+          sceneImage.src =
+            current.image;
+
+
+          sceneText.innerHTML = `
+            <p class="scene-kicker">
+              ${escapeHtml(current.kicker)}
+            </p>
+
+            <p class="scene-title">
+              ${escapeHtml(current.title)}
+            </p>
+
+            <p class="scene-copy">
+              ${escapeHtml(current.copy)}
+            </p>
+
+            <p class="scene-prompt">
+              ${escapeHtml(current.prompt)}
+            </p>
+          `;
+
+
+          shade.classList.remove(
+            "medium",
+            "heavy"
+          );
+
+
+          if (
+            current.shade ===
+            "medium"
+          ) {
+            shade.classList.add(
+              "medium"
+            );
+          }
+
+
+          if (
+            current.shade ===
+            "heavy"
+          ) {
+            shade.classList.add(
+              "heavy"
+            );
+          }
+
+
+          hideGuildLedger();
+        }
+
+
+        function showGuildLedger(
+          title,
+          copy
+        ) {
+
+          guildLedgerTitle.textContent =
+            title;
+
+          guildLedgerCopy.textContent =
+            copy;
+
+          guildLedger.hidden =
+            false;
+        }
+
+
+        function hideGuildLedger() {
+          guildLedger.hidden =
+            true;
+        }
+
+
+        function setLocked(
+          value
+        ) {
+
+          locked =
+            Boolean(value);
+
+          scene.classList.toggle(
+            "locked",
+            locked
+          );
+
+          scene.setAttribute(
+            "aria-busy",
+            locked
+              ? "true"
+              : "false"
+          );
+        }
+
+
+        // =====================================================
+        // ADMISSION RESULTS
+        // =====================================================
+
+        function refuseEntry(
+          currentGold
+        ) {
+
+          setLocked(
+            false
+          );
+
+
+          sceneImage.src =
+            "/WIZARDS FRONT DESK.png";
+
+          shade.classList.add(
+            "heavy"
+          );
+
+
+          const goldText =
+            Number.isFinite(
+              currentGold
+            )
+              ? (
+                  " You carry " +
+                  Number(
+                    currentGold
+                  ).toLocaleString() +
+                  " gold."
+                )
+              : "";
+
+
+          sceneText.innerHTML = `
+            <p class="scene-kicker">
+              THE CLERK CLOSES THE LEDGER
+            </p>
+
+            <p class="scene-title refusal">
+              GET OUT OF THE GUILD HALLS.
+            </p>
+
+            <p class="scene-copy">
+              Return when you carry 100,000 gold.${escapeHtml(goldText)}
+            </p>
+
+            <p class="scene-prompt">
+              CLICK TO RETURN TO LOKI'S KINGDOM
+            </p>
+          `;
+
+
+          showGuildLedger(
+            "ADMISSION REFUSED",
+            "The skeletons have already begun turning you back toward the door."
+          );
+
+
+          status.textContent =
+            "The Guild has refused you.";
+
+
+          step =
+            99;
+        }
+
+
+        function admitEntry(
+          {
+            alreadyUnlocked =
+              false,
+
+            goldSpent =
+              0
+          } = {}
+        ) {
+
+          /*
+           * TEMPORARY HARD SAFETY GATE.
+           *
+           * The Tower is NOT allowed to send anybody to the
+           * expensive Wizard tier right now, even if an old
+           * development membership row says they are unlocked.
+           *
+           * We preserve the scene and acknowledge the ledger,
+           * but the only next destination is Loki's Kingdom.
+           */
+
+          setLocked(
+            false
+          );
+
+
+          sceneImage.src =
+            "/WIZARDS FRONT DESK.png";
+
+          shade.classList.add(
+            "heavy"
+          );
+
+
+          sceneText.innerHTML = `
+            <p class="scene-kicker">
+              THE CLERK CLOSES THE LEDGER
+            </p>
+
+            <p class="scene-title refusal">
+              THE UPPER STUDY IS CLOSED.
+            </p>
+
+            <p class="scene-copy">
+              Whatever the ledger says, no visitor is being admitted beyond the Guild Halls at present.
+            </p>
+
+            <p class="scene-prompt">
+              CLICK TO RETURN TO LOKI'S KINGDOM
+            </p>
+          `;
+
+
+          showGuildLedger(
+            "NO ADMISSION",
+
+            "The skeletons turn you back toward the lower halls."
+          );
+
+
+          status.textContent =
+            "The upper study is closed.";
+
+
+          step =
+            101;
+        }
+
+
+        function ledgerFailure(
+          error
+        ) {
+
+          setLocked(
+            false
+          );
+
+
+          console.error(
+            "Tower admission failed:",
+            error
+          );
+
+
+          sceneText.innerHTML = `
+            <p class="scene-kicker">
+              SOMETHING IS WRONG WITH THE BOOKS
+            </p>
+
+            <p class="scene-title refusal">
+              THE LEDGER WILL NOT OPEN.
+            </p>
+
+            <p class="scene-copy">
+              The clerk stares at the page, taps one finger against the desk, and says nothing.
+            </p>
+
+            <p class="scene-prompt">
+              CLICK TO RETURN TO LOKI'S KINGDOM
+            </p>
+          `;
+
+
+          showGuildLedger(
+            "THE GUILD'S RECORDS ARE UNAVAILABLE",
+            "Nothing has been taken from you."
+          );
+
+
+          status.textContent =
+            "The Guild's records are unavailable.";
+
+
+          // Fail closed. The next click returns home.
+          step =
+            101;
+        }
+
+
+        // =====================================================
+        // GUILD ADMISSION
+        // =====================================================
+
+        async function testGuildAdmission() {
+
+          /*
+           * The Tower no longer handles money.
+           *
+           * Payment belongs to the Wizard's own office, where the
+           * same Worker that owns the character can atomically
+           * check permanent access and the shared player wallet.
+           */
+
+          setLocked(
+            false
+          );
+
+
+          sceneImage.src =
+            "/WIZARDS FRONT DESK.png";
+
+          shade.classList.add(
+            "heavy"
+          );
+
+
+          sceneText.innerHTML = `
+            <p class="scene-kicker">
+              THE GUILD HALLS
+            </p>
+
+            <p class="scene-title admitted">
+              THE WAY UPWARD IS OPEN.
+            </p>
+
+            <p class="scene-copy">
+              The clerk makes no demand of you. A skeletal attendant points toward the stair. Whatever price waits above will be settled with the Wizard himself.
+            </p>
+
+            <p class="scene-prompt">
+              CLICK TO ENTER THE WIZARD'S STUDY
+            </p>
+          `;
+
+
+          showGuildLedger(
+            "THE CLERK WAVES YOU THROUGH",
+            "The Wizard keeps his own accounts."
+          );
+
+
+          status.textContent =
+            "The stair leads to the Wizard.";
+
+
+          step =
+            100;
+        }
+
+
+        // =====================================================
+        // ADVANCE THE STORY
+        // =====================================================
+
+        async function advance() {
+
+          if (locked) {
+            return;
+          }
+
+
+          // Refused.
+          if (step === 99) {
+
+            window.location.href =
+              "/";
+
+            return;
+          }
+
+
+          // The Tower itself never handles payment.
+          // The Wizard's office performs the real admission check.
+          if (step === 100) {
+
+            window.location.href =
+              WIZARD_URL;
+
+            return;
+          }
+
+
+          // Continue ordinary scenes.
+          if (
+            step <
+            scenes.length - 1
+          ) {
+
+            step +=
+              1;
+
+            renderScene(
+              step
+            );
+
+            return;
+          }
+
+
+          // Final Guild scene:
+          // pass upward; the Wizard handles his own account.
+          await testGuildAdmission();
+        }
+
+
+        // =====================================================
+        // INPUT
+        // =====================================================
+
+        scene.addEventListener(
+          "click",
+          advance
+        );
+
+
+        scene.addEventListener(
+          "keydown",
+          event => {
+
+            if (
+              event.key ===
+                "Enter" ||
+              event.key ===
+                " "
+            ) {
+
+              event.preventDefault();
+
+              advance();
+            }
+          }
+        );
+
+
+        // Ensure the first scene uses the exact same
+        // renderer as all later scenes.
+        renderScene(
+          0
+        );
+
+      })();
+    </script>
+
+  </body>
+</html>
+
+
+<style>
+
+  /* =========================================================
+     GLOBAL
+     ========================================================= */
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+
+  :global(html),
+  :global(body) {
+    margin: 0;
+    min-height: 100%;
+    background: #030303;
+    color: #d9c8a7;
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+  }
+
+
+  :global(body) {
+    min-height: 100vh;
+
+    background:
+      radial-gradient(
+        circle at 50% 12%,
+        rgba(55, 9, 5, 0.18),
+        transparent 42%
+      ),
+      radial-gradient(
+        circle at 50% 85%,
+        rgba(45, 30, 12, 0.08),
+        transparent 48%
+      ),
+      #030303;
+  }
+
+
+  /* =========================================================
+     PAGE
+     ========================================================= */
+
+  .tower-page {
+    width:
+      min(
+        1240px,
+        calc(100% - 24px)
+      );
+
+    margin:
+      0 auto;
+
+    padding:
+      24px 0 18px;
+  }
+
+
+  /* =========================================================
+     SCENE
+     ========================================================= */
+
+  .scene {
+    position:
+      relative;
+
+    width:
+      100%;
+
+    height:
+      min(
+        82vh,
+        960px
+      );
+
+    min-height:
+      590px;
+
+    overflow:
+      hidden;
+
+    border:
+      1px solid
+      rgba(
+        135,
+        106,
+        69,
+        0.55
+      );
+
+    background:
+      #000;
+
+    cursor:
+      pointer;
+
+    outline:
+      none;
+
+    user-select:
+      none;
+
+    box-shadow:
+      0 0 0 1px
+        rgba(
+          0,
+          0,
+          0,
+          0.9
+        ),
+      0 18px 75px
+        rgba(
+          0,
+          0,
+          0,
+          0.78
+        );
+  }
+
+
+  .scene:focus-visible {
+    box-shadow:
+      0 0 0 2px
+        rgba(
+          143,
+          30,
+          22,
+          0.9
+        ),
+      0 18px 75px
+        rgba(
+          0,
+          0,
+          0,
+          0.78
+        );
+  }
+
+
+  .scene.locked {
+    cursor:
+      wait;
+  }
+
+
+  /* =========================================================
+     IMAGE
+     ========================================================= */
+
+  .scene-image {
+    position:
+      absolute;
+
+    inset:
+      0;
+
+    width:
+      100%;
+
+    height:
+      100%;
+
+    object-fit:
+      cover;
+
+    object-position:
+      center;
+
+    filter:
+      contrast(1.07)
+      saturate(0.92)
+      brightness(0.82);
+
+    transition:
+      opacity 260ms ease,
+      transform 1100ms ease,
+      filter 500ms ease;
+  }
+
+
+  .scene:hover
+  .scene-image {
+    transform:
+      scale(1.008);
+  }
+
+
+  /* =========================================================
+     SHADE
+     ========================================================= */
+
+  .shade {
+    position:
+      absolute;
+
+    inset:
+      0;
+
+    pointer-events:
+      none;
+
+    background:
+      linear-gradient(
+        to bottom,
+
+        rgba(
+          0,
+          0,
+          0,
+          0.08
+        )
+        0%,
+
+        rgba(
+          0,
+          0,
+          0,
+          0.08
+        )
+        44%,
+
+        rgba(
+          0,
+          0,
+          0,
+          0.6
+        )
+        100%
+      );
+
+    transition:
+      background
+      400ms ease;
+  }
+
+
+  .shade.medium {
+    background:
+      radial-gradient(
+        circle at 50% 40%,
+        transparent 0 35%,
+        rgba(
+          0,
+          0,
+          0,
+          0.16
+        )
+        72%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(
+          0,
+          0,
+          0,
+          0.14
+        ),
+        rgba(
+          0,
+          0,
+          0,
+          0.69
+        )
+      );
+  }
+
+
+  .shade.heavy {
+    background:
+      radial-gradient(
+        circle at 50% 42%,
+        transparent 0 28%,
+        rgba(
+          0,
+          0,
+          0,
+          0.25
+        )
+        72%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(
+          0,
+          0,
+          0,
+          0.23
+        ),
+        rgba(
+          0,
+          0,
+          0,
+          0.78
+        )
+      );
+  }
+
+
+  /* =========================================================
+     MAIN NARRATION
+     ========================================================= */
+
+  .scene-text {
+    position:
+      absolute;
+
+    z-index:
+      3;
+
+    left:
+      50%;
+
+    bottom:
+      clamp(
+        115px,
+        17vh,
+        190px
+      );
+
+    transform:
+      translateX(-50%);
+
+    width:
+      min(
+        940px,
+        calc(100% - 42px)
+      );
+
+    padding:
+      24px 30px 22px;
+
+    text-align:
+      center;
+
+    background:
+      linear-gradient(
+        to right,
+        rgba(
+          0,
+          0,
+          0,
+          0.36
+        ),
+        rgba(
+          0,
+          0,
+          0,
+          0.74
+        )
+        18%,
+        rgba(
+          0,
+          0,
+          0,
+          0.74
+        )
+        82%,
+        rgba(
+          0,
+          0,
+          0,
+          0.36
+        )
+      );
+
+    border-top:
+      1px solid
+      rgba(
+        124,
+        17,
+        11,
+        0.62
+      );
+
+    border-bottom:
+      1px solid
+      rgba(
+        124,
+        17,
+        11,
+        0.62
+      );
+
+    backdrop-filter:
+      blur(2px);
+
+    text-shadow:
+      0 2px 4px #000,
+      0 0 12px #000;
+  }
+
+
+  .scene-kicker,
+  .scene-title,
+  .scene-copy,
+  .scene-prompt {
+    margin:
+      0;
+  }
+
+
+  .scene-kicker {
+    color:
+      #74594b;
+
+    font-size:
+      12px;
+
+    letter-spacing:
+      0.27em;
+
+    text-transform:
+      uppercase;
+
+    margin-bottom:
+      9px;
+  }
+
+
+  .scene-title {
+    color:
+      #a52a21;
+
+    font-size:
+      clamp(
+        24px,
+        4vw,
+        50px
+      );
+
+    font-weight:
+      700;
+
+    letter-spacing:
+      0.12em;
+
+    text-transform:
+      uppercase;
+  }
+
+
+  .scene-title.refusal {
+    color:
+      #c13225;
+  }
+
+
+  .scene-title.admitted {
+    color:
+      #b54831;
+  }
+
+
+  .scene-copy {
+    margin-top:
+      16px;
+
+    color:
+      #b5483b;
+
+    font-size:
+      clamp(
+        17px,
+        2vw,
+        24px
+      );
+
+    line-height:
+      1.58;
+
+    font-style:
+      italic;
+  }
+
+
+  .scene-prompt {
+    margin-top:
+      20px;
+
+    color:
+      #e05b45;
+
+    font-size:
+      13px;
+
+    letter-spacing:
+      0.22em;
+
+    text-transform:
+      uppercase;
+
+    animation:
+      prompt-pulse
+      2.4s ease-in-out
+      infinite;
+  }
+
+
+  @keyframes prompt-pulse {
+    0%,
+    100% {
+      opacity:
+        0.62;
+    }
+
+    50% {
+      opacity:
+        1;
+    }
+  }
+
+
+  /* =========================================================
+     GUILD LEDGER
+     =========================================================
+
+     IMPORTANT:
+
+     This is the gold-check display.
+
+     It is deliberately a SMALL PANEL near the bottom of the
+     image. It does NOT cover the narration and does NOT cover
+     the whole artwork.
+     ========================================================= */
+
+  .guild-ledger {
+    position:
+      absolute;
+
+    z-index:
+      5;
+
+    left:
+      50%;
+
+    bottom:
+      24px;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      min(
+        760px,
+        calc(100% - 42px)
+      );
+
+    padding:
+      13px 18px;
+
+    background:
+      rgba(
+        5,
+        3,
+        2,
+        0.9
+      );
+
+    border:
+      1px solid
+      rgba(
+        130,
+        92,
+        50,
+        0.54
+      );
+
+    box-shadow:
+      0 8px 30px
+      rgba(
+        0,
+        0,
+        0,
+        0.8
+      );
+
+    text-align:
+      center;
+
+    pointer-events:
+      none;
+  }
+
+
+  .guild-ledger[hidden] {
+    display:
+      none;
+  }
+
+
+  .guild-ledger-title,
+  .guild-ledger-copy {
+    margin:
+      0;
+  }
+
+
+  .guild-ledger-title {
+    color:
+      #b83a2b;
+
+    font-size:
+      13px;
+
+    font-weight:
+      700;
+
+    letter-spacing:
+      0.16em;
+
+    text-transform:
+      uppercase;
+  }
+
+
+  .guild-ledger-copy {
+    margin-top:
+      6px;
+
+    color:
+      #8f8069;
+
+    font-size:
+      13px;
+
+    line-height:
+      1.4;
+
+    font-style:
+      italic;
+  }
+
+
+  /* =========================================================
+     BELOW SCENE
+     ========================================================= */
+
+  .below {
+    min-height:
+      50px;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      space-between;
+
+    gap:
+      18px;
+
+    padding:
+      11px 2px 0;
+
+    font-size:
+      14px;
+  }
+
+
+  .return-link {
+    color:
+      #9d7d4f;
+
+    text-decoration:
+      none;
+  }
+
+
+  .return-link:hover {
+    color:
+      #c7a36c;
+  }
+
+
+  .status {
+    color:
+      #5f5241;
+
+    font-style:
+      italic;
+  }
+
+
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+
+  @media (
+    max-width:
+      700px
+  ) {
+
+    .tower-page {
+      width:
+        100%;
+
+      padding:
+        0;
+    }
+
+
+    .scene {
+      min-height:
+        100svh;
+
+      height:
+        100svh;
+
+      border-left:
+        0;
+
+      border-right:
+        0;
+
+      border-top:
+        0;
+    }
+
+
+    .scene-text {
+      bottom:
+        120px;
+
+      width:
+        calc(
+          100% - 20px
+        );
+
+      padding:
+        18px 15px 16px;
+    }
+
+
+    .scene-kicker {
+      font-size:
+        10px;
+
+      letter-spacing:
+        0.2em;
+    }
+
+
+    .scene-copy {
+      font-size:
+        clamp(
+          15px,
+          4.2vw,
+          19px
+        );
+
+      line-height:
+        1.48;
+    }
+
+
+    .scene-prompt {
+      margin-top:
+        15px;
+
+      font-size:
+        11px;
+
+      letter-spacing:
+        0.15em;
+    }
+
+
+    .guild-ledger {
+      bottom:
+        18px;
+
+      width:
+        calc(
+          100% - 20px
+        );
+
+      padding:
+        11px 13px;
+    }
+
+
+    .guild-ledger-title {
+      font-size:
+        11px;
+    }
+
+
+    .guild-ledger-copy {
+      font-size:
+        12px;
+    }
+
+
+    .below {
+      padding:
+        12px;
+
+      flex-direction:
+        column;
+
+      align-items:
+        flex-start;
+    }
+  }
+
+
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+
+  @media (
+    prefers-reduced-motion:
+      reduce
+  ) {
+
+    .scene-image,
+    .shade {
+      transition:
+        none;
+    }
+
+
+    .scene:hover
+    .scene-image {
+      transform:
+        none;
+    }
+
+
+    .scene-prompt {
+      animation:
+        none;
+
+      opacity:
+        1;
+    }
+  }
+
+</style>

@@ -1,0 +1,1710 @@
+---
+import { albums } from '../data/musicCatalog.js';
+
+const r2Base =
+  'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/';
+---
+
+<section class="desktop-music-app">
+  <h1>THE EFSMB JUKEBOX</h1>
+
+  <section class="now-playing-hero">
+    <div class="artwork-panel">
+      <img
+        id="songArtwork"
+        class="song-artwork"
+        alt="Current song artwork"
+        hidden
+      />
+    </div>
+
+    <div class="player-panel">
+      <p class="player-label">NOW PLAYING</p>
+      <h2 id="albumTitle">Select an album</h2>
+      <h3 id="nowPlaying">Nothing playing</h3>
+
+      <audio
+        id="audioPlayer"
+        controls
+        style="width: 100%; margin: 1rem 0;"
+      ></audio>
+
+      <div class="jukebox-economy" aria-live="polite">
+        <span id="goldDisplay">Gold: —</span>
+        <span id="rewardStatus">Listen for 15 seconds to earn 30 gold.</span>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" type="button">Previous</button>
+        <button id="nextBtn" type="button">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="desktop-app">
+    <aside class="album-list">
+      <h2>Albums</h2>
+      <div id="albums"></div>
+    </aside>
+
+    <main class="song-browser">
+      <h2>SONGS</h2>
+      <div id="songs" class="song-list"></div>
+    </main>
+
+    <section class="lyrics-section">
+      <h2>LYRICS</h2>
+
+      <pre
+        id="albumLyrics"
+        class="album-lyrics"
+        aria-live="polite"
+      >Lyrics Unknown</pre>
+    </section>
+  </div>
+</section>
+
+<!--
+  This must load before the player script below.
+  Do not add defer or async here.
+-->
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"
+></script>
+
+<script define:vars={{ albums, r2Base }}>
+  let currentAlbumIndex = 0;
+  let currentSongIndex = 0;
+
+  const albumsEl = document.getElementById('albums');
+  const songsEl = document.getElementById('songs');
+  const albumTitleEl = document.getElementById('albumTitle');
+  const nowPlayingEl = document.getElementById('nowPlaying');
+  const audio = document.getElementById('audioPlayer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const albumLyricsEl = document.getElementById('albumLyrics');
+  const songArtworkEl = document.getElementById('songArtwork');
+  const goldDisplayEl = document.getElementById('goldDisplay');
+  const rewardStatusEl = document.getElementById('rewardStatus');
+
+  let currentArtworkUrl = null;
+  let artworkRequestNumber = 0;
+  let lyricsRequestNumber = 0;
+
+  let rewardSessionId = null;
+  let rewardSongId = null;
+  let rewardSongTitle = null;
+  let listeningSeconds = 0;
+  let lastPlaybackTime = null;
+  let thresholdRewardClaimed = false;
+  let completionRewardClaimed = false;
+  let rewardRequestPending = false;
+
+  const embeddedLyricsCache = new Map();
+
+  function getSongUrl(song) {
+    return r2Base + song.file;
+  }
+
+  const LIKES_VISITOR_ID_STORAGE_KEY = 'lokis-kingdom-visitor-id';
+  const WORLD_VISITOR_ID_STORAGE_KEY = 'lokis-kingdom-visitor-id';
+  const likeStatusBySong = new Map();
+  const pendingLikeSongKeys = new Set();
+  let likesRequestNumber = 0;
+
+  function getOrCreateVisitorId(storageKey) {
+    try {
+      const savedVisitorId = localStorage.getItem(storageKey);
+
+      if (savedVisitorId) {
+        return savedVisitorId;
+      }
+
+      const newVisitorId = crypto.randomUUID().replace(/-/g, '');
+      localStorage.setItem(storageKey, newVisitorId);
+      return newVisitorId;
+    } catch (error) {
+      console.error('Could not save the anonymous visitor ID:', error);
+      return crypto.randomUUID().replace(/-/g, '');
+    }
+  }
+
+function readSharedWorldCookie() {
+  const prefix =
+    encodeURIComponent(
+      WORLD_VISITOR_ID_STORAGE_KEY
+    ) + "=";
+
+  const cookies =
+    document.cookie.split(";");
+
+  for (const cookie of cookies) {
+    const trimmed =
+      cookie.trim();
+
+    if (
+      trimmed.startsWith(prefix)
+    ) {
+      return decodeURIComponent(
+        trimmed.substring(
+          prefix.length
+        )
+      );
+    }
+  }
+
+  return null;
+}
+
+
+function writeSharedWorldCookie(
+  visitorId
+) {
+  document.cookie =
+    encodeURIComponent(
+      WORLD_VISITOR_ID_STORAGE_KEY
+    ) +
+    "=" +
+    encodeURIComponent(
+      visitorId
+    ) +
+    "; Max-Age=315360000" +
+    "; Path=/" +
+    "; Domain=lokiskingdom.com" +
+    "; SameSite=Lax" +
+    "; Secure";
+}
+
+
+function getOrCreateWorldVisitorId() {
+  try {
+    /*
+     * Prefer the shared cookie created
+     * by the Fortuneteller.
+     */
+    const sharedVisitorId =
+      readSharedWorldCookie();
+
+    if (sharedVisitorId) {
+      /*
+       * Overwrite the jukebox's old
+       * local world ID with the shared ID.
+       */
+      localStorage.setItem(
+        WORLD_VISITOR_ID_STORAGE_KEY,
+        sharedVisitorId
+      );
+
+      return sharedVisitorId;
+    }
+
+    /*
+     * Fallback only when no shared
+     * cookie exists.
+     */
+    let visitorId =
+      localStorage.getItem(
+        WORLD_VISITOR_ID_STORAGE_KEY
+      );
+
+    if (!visitorId) {
+      visitorId =
+        crypto.randomUUID()
+          .replace(/-/g, "");
+
+      localStorage.setItem(
+        WORLD_VISITOR_ID_STORAGE_KEY,
+        visitorId
+      );
+    }
+
+    writeSharedWorldCookie(
+      visitorId
+    );
+
+    return visitorId;
+
+  } catch (error) {
+    console.error(
+      "Could not establish shared world identity:",
+      error
+    );
+
+    return crypto.randomUUID()
+      .replace(/-/g, "");
+  }
+}
+
+  const likesVisitorId = getOrCreateVisitorId(LIKES_VISITOR_ID_STORAGE_KEY);
+  const worldVisitorId = getOrCreateWorldVisitorId();
+
+  function getSongLikeKey(song) {
+    return song.file;
+  }
+
+  function getSongLikeStatus(song) {
+    return likeStatusBySong.get(getSongLikeKey(song)) ?? {
+      likes: 0,
+      liked: false
+    };
+  }
+
+	function updateLikeButton(button, song) {
+	  const songKey = getSongLikeKey(song);
+	  const status = getSongLikeStatus(song);
+	  const isPending = pendingLikeSongKeys.has(songKey);
+
+	  button.classList.toggle('liked', status.liked);
+	  button.classList.toggle('pending', isPending);
+	  button.disabled = isPending;
+	  button.setAttribute('aria-pressed', status.liked ? 'true' : 'false');
+
+	  button.setAttribute(
+		'aria-label',
+		status.liked
+		  ? `Remove heart from ${song.title}. ${status.likes} hearts.`
+		  : `Give a heart to ${song.title}. ${status.likes} hearts.`
+	  );
+
+		button.textContent =
+		  status.likes > 0
+			? `${status.liked ? '♥' : '♡'} ${status.likes}`
+			: '♡';
+
+	  button.style.color = status.liked ? '#ff3030' : '';
+	  //
+	}
+
+  function updateVisibleLikeButton(song) {
+    const songKey = getSongLikeKey(song);
+    const button = songsEl.querySelector(
+      `.like-button[data-song-key="${CSS.escape(songKey)}"]`
+    );
+
+    if (button) {
+      updateLikeButton(button, song);
+    }
+  }
+
+  async function requestLikeStatuses(album) {
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    const requestNumber = ++likesRequestNumber;
+    const songIds = album.songs.map(getSongLikeKey);
+
+    try {
+      const response = await fetch('/api/song-likes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          action: 'status',
+          visitorId: likesVisitorId,
+          songIds
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Likes request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (requestNumber !== likesRequestNumber) {
+        return;
+      }
+
+      for (const song of album.songs) {
+        const songKey = getSongLikeKey(song);
+        const status = data?.songs?.[songKey];
+
+        likeStatusBySong.set(songKey, {
+          likes: Number(status?.likes) || 0,
+          liked: status?.liked === true
+        });
+
+        updateVisibleLikeButton(song);
+      }
+    } catch (error) {
+      console.error('Could not load public song hearts:', error);
+    }
+  }
+
+  async function toggleSongLike(song, button) {
+    const songKey = getSongLikeKey(song);
+
+    if (pendingLikeSongKeys.has(songKey)) {
+      return;
+    }
+
+    pendingLikeSongKeys.add(songKey);
+    updateLikeButton(button, song);
+
+    try {
+      const response = await fetch('/api/song-likes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          action: 'toggle',
+          visitorId: likesVisitorId,
+          songId: songKey
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Heart request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      likeStatusBySong.set(songKey, {
+        likes: Number(data?.likes) || 0,
+        liked: data?.liked === true
+      });
+    } catch (error) {
+      console.error(`Could not update the heart for "${song.title}":`, error);
+    } finally {
+      pendingLikeSongKeys.delete(songKey);
+      updateLikeButton(button, song);
+    }
+  }
+
+  function updateGoldDisplay(money) {
+    const numericMoney = Number(money);
+    goldDisplayEl.textContent = Number.isFinite(numericMoney)
+      ? `Gold: ${Math.floor(numericMoney)}`
+      : 'Gold: —';
+  }
+
+  function setRewardStatus(message) {
+    rewardStatusEl.textContent = message;
+  }
+
+  async function loadWorldMoney() {
+    try {
+      const response = await fetch(
+        `/api/jukebox-reward?visitorId=${encodeURIComponent(worldVisitorId)}`
+      );
+
+      if (!response.ok) {
+        throw new Error(`Gold request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+      updateGoldDisplay(data.money);
+    } catch (error) {
+      console.error('Could not load shared gold:', error);
+      goldDisplayEl.textContent = 'Gold: unavailable';
+    }
+  }
+
+  async function sendRewardAction(action, extra = {}) {
+    const response = await fetch('/api/jukebox-reward', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        action,
+        visitorId: worldVisitorId,
+        sessionId: rewardSessionId,
+        songId: rewardSongId,
+        songTitle: rewardSongTitle,
+        ...extra
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data?.error || `Reward request failed with status ${response.status}`);
+    }
+
+    if (data.money !== undefined) {
+      updateGoldDisplay(data.money);
+    }
+
+    return data;
+  }
+
+  async function startRewardSession(song) {
+    rewardSessionId = crypto.randomUUID();
+    rewardSongId = song.file;
+    rewardSongTitle = song.title;
+    listeningSeconds = 0;
+    lastPlaybackTime = null;
+    thresholdRewardClaimed = false;
+    completionRewardClaimed = false;
+    rewardRequestPending = false;
+
+    setRewardStatus('Listen for 15 seconds to earn 30 gold.');
+
+    try {
+      const data = await sendRewardAction('start', {
+        duration: Number.isFinite(audio.duration) ? audio.duration : null
+      });
+
+      if (data.money !== undefined) {
+        updateGoldDisplay(data.money);
+      }
+	} catch (error) {
+	  console.error(
+		'Could not start the reward session:',
+		error
+	  );
+
+	  goldDisplayEl.textContent =
+		'Gold: unavailable';
+
+	  setRewardStatus(
+		`Reward start failed: ${error.message}`
+	  );
+	}
+  }
+
+  async function claimThresholdReward() {
+    if (
+      thresholdRewardClaimed ||
+      rewardRequestPending ||
+      !rewardSessionId
+    ) {
+      return;
+    }
+
+    thresholdRewardClaimed = true;
+    rewardRequestPending = true;
+
+    try {
+		const data = await sendRewardAction('threshold', {
+		  listenedSeconds: listeningSeconds
+		});
+
+      if (data.awarded > 0) {
+        setRewardStatus(`+${data.awarded} gold for listening 15 seconds.`);
+      } else {
+        setRewardStatus(data.message || 'The 15-second reward was already claimed.');
+      }
+	} catch (error) {
+	  thresholdRewardClaimed = false;
+
+	  console.error(
+		'Could not claim the 15-second reward:',
+		error
+	  );
+
+	  setRewardStatus(
+		`Reward failed: ${error.message}`
+	  );
+	} finally {
+      rewardRequestPending = false;
+    }
+  }
+
+  async function claimCompletionReward() {
+    if (completionRewardClaimed || !rewardSessionId) {
+      return;
+    }
+
+    completionRewardClaimed = true;
+//
+    try {
+		const data = await sendRewardAction('complete', {
+		  listenedSeconds: listeningSeconds,
+
+		  duration:
+			Number.isFinite(audio.duration)
+			  ? audio.duration
+			  : null
+		});
+
+      if (data.awarded > 0) {
+        setRewardStatus(`Song completed: +${data.awarded} gold.`);
+      } else {
+        setRewardStatus(data.message || 'The completion reward was already claimed.');
+      }
+    } catch (error) {
+      completionRewardClaimed = false;
+      console.error('Could not claim the completion reward:', error);
+      setRewardStatus('The completion reward could not be claimed.');
+    }
+  }
+
+  function clearPreviousArtworkUrl() {
+    if (!currentArtworkUrl) {
+      return;
+    }
+
+    URL.revokeObjectURL(currentArtworkUrl);
+    currentArtworkUrl = null;
+  }
+
+  function hideArtwork() {
+    songArtworkEl.hidden = true;
+    songArtworkEl.removeAttribute('src');
+    clearPreviousArtworkUrl();
+  }
+
+  function loadEmbeddedArtwork(songUrl) {
+    const requestNumber = ++artworkRequestNumber;
+
+    /*
+     * Keep the existing image visible while the next image is loading.
+     * This prevents the player from flashing to an empty black area
+     * during song changes.
+     */
+    if (!window.jsmediatags) {
+      console.error(
+        'The jsmediatags library did not load. Embedded artwork cannot be read.'
+      );
+
+      hideArtwork();
+      return;
+    }
+
+    window.jsmediatags.read(songUrl, {
+      onSuccess(tag) {
+        /*
+         * A newer song was selected before this request finished.
+         * Ignore this older result.
+         */
+        if (requestNumber !== artworkRequestNumber) {
+          return;
+        }
+
+        const picture = tag?.tags?.picture;
+
+        if (!picture?.data?.length) {
+          hideArtwork();
+          return;
+        }
+
+        try {
+          const bytes = new Uint8Array(picture.data);
+
+          const artworkBlob = new Blob([bytes], {
+            type: picture.format || 'image/jpeg'
+          });
+
+          /*
+           * Create the new URL before revoking the old one.
+           * This helps keep the visual transition seamless.
+           */
+          const newArtworkUrl =
+            URL.createObjectURL(artworkBlob);
+
+          const oldArtworkUrl = currentArtworkUrl;
+
+          currentArtworkUrl = newArtworkUrl;
+
+          songArtworkEl.onload = () => {
+            /*
+             * Only revoke the old URL after the replacement image
+             * has successfully loaded.
+             */
+            if (oldArtworkUrl) {
+              URL.revokeObjectURL(oldArtworkUrl);
+            }
+
+            songArtworkEl.onload = null;
+          };
+
+          songArtworkEl.onerror = () => {
+            console.error(
+              'The embedded artwork was found but could not be displayed.'
+            );
+
+            if (currentArtworkUrl === newArtworkUrl) {
+              URL.revokeObjectURL(newArtworkUrl);
+              currentArtworkUrl = oldArtworkUrl;
+            }
+
+            songArtworkEl.onerror = null;
+          };
+
+          songArtworkEl.src = newArtworkUrl;
+          songArtworkEl.hidden = false;
+        } catch (error) {
+          console.error(
+            'Could not convert the embedded artwork:',
+            error
+          );
+
+          hideArtwork();
+        }
+      },
+
+      onError(error) {
+        if (requestNumber !== artworkRequestNumber) {
+          return;
+        }
+
+        console.error(
+          'Could not read embedded artwork from the MP3:',
+          error
+        );
+
+        hideArtwork();
+      }
+    });
+  }
+
+	function readSynchsafeInteger(bytes, offset) {
+	  return (
+		(bytes[offset] << 21) |
+		(bytes[offset + 1] << 14) |
+		(bytes[offset + 2] << 7) |
+		bytes[offset + 3]
+	  );
+	}
+
+	function readBigEndianInteger(bytes, offset) {
+	  return (
+		(bytes[offset] * 0x1000000) +
+		(bytes[offset + 1] << 16) +
+		(bytes[offset + 2] << 8) +
+		bytes[offset + 3]
+	  );
+	}
+
+	function findNullTerminator(bytes, start, encoding) {
+	  /*
+	   * UTF-16 strings end with two zero bytes.
+	   * Latin-1 and UTF-8 strings end with one.
+	   */
+	  if (encoding === 1 || encoding === 2) {
+		for (let i = start; i + 1 < bytes.length; i += 2) {
+		  if (bytes[i] === 0 && bytes[i + 1] === 0) {
+			return i;
+		  }
+		}
+
+		return bytes.length;
+	  }
+
+	  for (let i = start; i < bytes.length; i++) {
+		if (bytes[i] === 0) {
+		  return i;
+		}
+	  }
+
+	  return bytes.length;
+	}
+
+	function decodeId3Text(bytes, encoding) {
+	  if (!bytes?.length) {
+		return '';
+	  }
+
+	  try {
+		if (encoding === 0) {
+		  return new TextDecoder('windows-1252')
+			.decode(bytes)
+			.replace(/\0+$/g, '')
+			.trim();
+		}
+
+		if (encoding === 1) {
+		  /*
+		   * Encoding 1 contains a byte-order mark.
+		   */
+		  if (bytes[0] === 0xff && bytes[1] === 0xfe) {
+			return new TextDecoder('utf-16le')
+			  .decode(bytes.subarray(2))
+			  .replace(/\0+$/g, '')
+			  .trim();
+		  }
+
+		  if (bytes[0] === 0xfe && bytes[1] === 0xff) {
+			return new TextDecoder('utf-16be')
+			  .decode(bytes.subarray(2))
+			  .replace(/\0+$/g, '')
+			  .trim();
+		  }
+
+		  return new TextDecoder('utf-16')
+			.decode(bytes)
+			.replace(/\0+$/g, '')
+			.trim();
+		}
+
+		if (encoding === 2) {
+		  return new TextDecoder('utf-16be')
+			.decode(bytes)
+			.replace(/\0+$/g, '')
+			.trim();
+		}
+
+		/*
+		 * Encoding 3 is UTF-8.
+		 */
+		return new TextDecoder('utf-8')
+		  .decode(bytes)
+		  .replace(/\0+$/g, '')
+		  .trim();
+	  } catch (error) {
+		console.error('Could not decode an ID3 text field:', error);
+		return '';
+	  }
+	}
+
+	async function fetchEmbeddedLyrics(songUrl) {
+	  /*
+	   * First retrieve the ten-byte ID3 header so we know exactly
+	   * how large the metadata section is.
+	   */
+	  const headerResponse = await fetch(songUrl, {
+		headers: {
+		  Range: 'bytes=0-9'
+		}
+	  });
+
+	  if (!headerResponse.ok) {
+		throw new Error(
+		  `ID3 header request failed with status ${headerResponse.status}`
+		);
+	  }
+
+	  const headerBuffer = await headerResponse.arrayBuffer();
+	  const headerBytes = new Uint8Array(headerBuffer);
+
+	  if (
+		headerBytes.length < 10 ||
+		headerBytes[0] !== 0x49 ||
+		headerBytes[1] !== 0x44 ||
+		headerBytes[2] !== 0x33
+	  ) {
+		return '';
+	  }
+
+	  const tagSize = readSynchsafeInteger(headerBytes, 6);
+	  const completeTagSize = 10 + tagSize;
+
+	  /*
+	   * Protect against malformed metadata requesting an absurdly
+	   * large amount of data.
+	   */
+	  if (completeTagSize > 8 * 1024 * 1024) {
+		throw new Error(
+		  `ID3 metadata is unexpectedly large: ${completeTagSize} bytes`
+		);
+	  }
+
+	  const tagResponse = await fetch(songUrl, {
+		headers: {
+		  Range: `bytes=0-${completeTagSize - 1}`
+		}
+	  });
+
+	  if (!tagResponse.ok) {
+		throw new Error(
+		  `ID3 metadata request failed with status ${tagResponse.status}`
+		);
+	  }
+
+	  const tagBuffer = await tagResponse.arrayBuffer();
+
+	  return extractLyricsEngFromId3(tagBuffer);
+	}
+
+	async function loadEmbeddedLyrics(songUrl, song, album) {
+	  const requestNumber = ++lyricsRequestNumber;
+	  const cacheKey = song.file;
+
+	  albumLyricsEl.textContent = 'Loading lyrics...';
+
+	  if (embeddedLyricsCache.has(cacheKey)) {
+		const cachedLyrics = embeddedLyricsCache.get(cacheKey);
+
+		if (cachedLyrics) {
+		  albumLyricsEl.textContent = cachedLyrics;
+		  return;
+		}
+
+		loadAlbumLyrics(album);
+		return;
+	  }
+
+	  /*
+	   * This custom lyrics tag is inside ID3 metadata, so WAV files
+	   * should use the existing album LyricsFile directly.
+	   */
+	  if (!song.file.toLowerCase().endsWith('.mp3')) {
+		embeddedLyricsCache.set(cacheKey, null);
+		loadAlbumLyrics(album);
+		return;
+	  }
+
+	  try {
+		const embeddedLyrics =
+		  await fetchEmbeddedLyrics(songUrl);
+
+		/*
+		 * The listener may have selected another song while the
+		 * metadata request was running.
+		 */
+		if (requestNumber !== lyricsRequestNumber) {
+		  return;
+		}
+
+		if (embeddedLyrics) {
+		  embeddedLyricsCache.set(cacheKey, embeddedLyrics);
+		  albumLyricsEl.textContent = embeddedLyrics;
+		  return;
+		}
+
+		embeddedLyricsCache.set(cacheKey, null);
+		loadAlbumLyrics(album);
+	  } catch (error) {
+		if (requestNumber !== lyricsRequestNumber) {
+		  return;
+		}
+
+		console.warn(
+		  `Could not read lyrics-eng from "${song.title}". Using LyricsFile:`,
+		  error
+		);
+
+		embeddedLyricsCache.set(cacheKey, null);
+		loadAlbumLyrics(album);
+	  }
+	}
+
+  async function loadAlbumLyrics(album) {
+    const requestNumber = ++lyricsRequestNumber;
+
+    if (!album.lyricsFile) {
+      albumLyricsEl.textContent = 'Lyrics Unknown';
+      return;
+    }
+
+    albumLyricsEl.textContent = 'Loading lyrics...';
+
+    try {
+      const response = await fetch(album.lyricsFile);
+
+      if (!response.ok) {
+        throw new Error(
+          `Lyrics request failed with status ${response.status}`
+        );
+      }
+
+      const lyricsText = await response.text();
+
+      /*
+       * Ignore this result if another album was selected while
+       * the text file was still loading.
+       */
+      if (requestNumber !== lyricsRequestNumber) {
+        return;
+      }
+
+      albumLyricsEl.textContent =
+        lyricsText.trim().length > 0
+          ? lyricsText
+          : 'Lyrics Unknown';
+    } catch (error) {
+      console.error(
+        `Could not load lyrics for "${album.title}":`,
+        error
+      );
+
+      if (requestNumber === lyricsRequestNumber) {
+        albumLyricsEl.textContent = 'Lyrics Unknown';
+      }
+    }
+  }
+	  
+	function extractLyricsEngFromId3(arrayBuffer) {
+	  const bytes = new Uint8Array(arrayBuffer);
+
+	  if (
+		bytes.length < 10 ||
+		bytes[0] !== 0x49 ||
+		bytes[1] !== 0x44 ||
+		bytes[2] !== 0x33
+	  ) {
+		console.log('No ID3 header found.');
+		return '';
+	  }
+
+	  const majorVersion = bytes[3];
+	  const tagSize = readSynchsafeInteger(bytes, 6);
+	  const tagEnd = Math.min(bytes.length, 10 + tagSize);
+
+	  console.log('ID3 version:', majorVersion);
+	  console.log('ID3 tag size:', tagSize);
+
+	  let offset = 10;
+
+	  while (offset + 10 <= tagEnd) {
+		const frameId = new TextDecoder('ascii').decode(
+		  bytes.subarray(offset, offset + 4)
+		);
+
+		if (/^\0+$/.test(frameId)) {
+		  break;
+		}
+
+		const frameSize =
+		  majorVersion === 4
+			? readSynchsafeInteger(bytes, offset + 4)
+			: readBigEndianInteger(bytes, offset + 4);
+
+		console.log('ID3 frame:', frameId, 'size:', frameSize);
+
+		if (
+		  frameSize <= 0 ||
+		  offset + 10 + frameSize > tagEnd
+		) {
+		  console.warn(
+			'Invalid ID3 frame size:',
+			frameId,
+			frameSize
+		  );
+		  break;
+		}
+
+		const frameData = bytes.subarray(
+		  offset + 10,
+		  offset + 10 + frameSize
+		);
+
+		/*
+		 * Standard unsynchronised lyrics frame.
+		 */
+		if (frameId === 'USLT' && frameData.length >= 5) {
+		  console.log('Found USLT lyrics frame.');
+
+		  const encoding = frameData[0];
+
+		  const language = new TextDecoder('ascii')
+			.decode(frameData.subarray(1, 4))
+			.toLowerCase();
+
+		  const descriptionStart = 4;
+
+		  const descriptionEnd = findNullTerminator(
+			frameData,
+			descriptionStart,
+			encoding
+		  );
+
+		  const terminatorLength =
+			encoding === 1 || encoding === 2 ? 2 : 1;
+
+		  const lyricsStart = Math.min(
+			frameData.length,
+			descriptionEnd + terminatorLength
+		  );
+
+		  const lyrics = decodeId3Text(
+			frameData.subarray(lyricsStart),
+			encoding
+		  );
+
+		  console.log('USLT language:', language);
+		  console.log('USLT lyrics length:', lyrics.length);
+
+		  if (lyrics) {
+			return lyrics;
+		  }
+		}
+
+		/*
+		 * Custom text field named lyrics-eng.
+		 */
+		if (frameId === 'TXXX' && frameData.length > 1) {
+		  const encoding = frameData[0];
+
+		  const descriptionEnd = findNullTerminator(
+			frameData,
+			1,
+			encoding
+		  );
+
+		  const description = decodeId3Text(
+			frameData.subarray(1, descriptionEnd),
+			encoding
+		  );
+
+		  console.log('TXXX description:', description);
+
+		  const terminatorLength =
+			encoding === 1 || encoding === 2 ? 2 : 1;
+
+		  const valueStart = Math.min(
+			frameData.length,
+			descriptionEnd + terminatorLength
+		  );
+
+		  if (description.toLowerCase() === 'lyrics-eng') {
+			const lyrics = decodeId3Text(
+			  frameData.subarray(valueStart),
+			  encoding
+			);
+
+			console.log(
+			  'lyrics-eng text length:',
+			  lyrics.length
+			);
+
+			return lyrics;
+		  }
+		}
+
+		offset += 10 + frameSize;
+	  }
+
+	  console.log('No readable embedded lyrics frame found.');
+	  return '';
+	}
+
+  function updateSelectedAlbumButton() {
+    const albumButtons =
+      albumsEl.querySelectorAll('.album-button');
+
+    albumButtons.forEach((button, index) => {
+      const isSelected = index === currentAlbumIndex;
+
+      button.classList.toggle('selected', isSelected);
+
+      button.setAttribute(
+        'aria-pressed',
+        isSelected ? 'true' : 'false'
+      );
+    });
+  }
+
+  function updateSelectedSongButton() {
+    const songButtons =
+      songsEl.querySelectorAll('.song-button');
+
+    songButtons.forEach((button, index) => {
+      const isSelected = index === currentSongIndex;
+
+      button.classList.toggle('selected', isSelected);
+
+      if (isSelected) {
+        button.setAttribute('aria-current', 'true');
+      } else {
+        button.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function renderAlbums() {
+    albumsEl.innerHTML = '';
+
+    albums.forEach((album, index) => {
+      const button = document.createElement('button');
+
+      button.type = 'button';
+      button.textContent = album.title;
+      button.className = 'album-button';
+      button.setAttribute('aria-pressed', 'false');
+
+      button.addEventListener('click', () => {
+        currentAlbumIndex = index;
+        currentSongIndex = 0;
+
+        renderSongs();
+        updateSelectedAlbumButton();
+      });
+
+      albumsEl.appendChild(button);
+    });
+
+    updateSelectedAlbumButton();
+  }
+
+  function renderSongs() {
+    const album = albums[currentAlbumIndex];
+
+    if (!album) {
+      albumTitleEl.textContent = 'No albums available';
+      nowPlayingEl.textContent = 'Nothing playing';
+      songsEl.innerHTML = '';
+      albumLyricsEl.textContent = 'Lyrics Unknown';
+      return;
+    }
+
+	albumTitleEl.textContent = album.title;
+	nowPlayingEl.textContent = 'Nothing playing';
+	songsEl.innerHTML = '';
+	albumLyricsEl.textContent = 'Select a song to view lyrics.';
+
+	if (!album.songs?.length) {
+	  const message = document.createElement('p');
+
+	  message.textContent = 'No songs available.';
+	  message.className = 'empty-message';
+
+	  songsEl.appendChild(message);
+	  return;
+	}
+
+    album.songs.forEach((song, index) => {
+      const row = document.createElement('div');
+      const songButton = document.createElement('button');
+      const likeButton = document.createElement('button');
+
+      row.className = 'song-row';
+
+      songButton.type = 'button';
+      songButton.textContent = song.title;
+      songButton.className = 'song-button';
+
+      songButton.addEventListener('click', () => {
+        playSong(index);
+      });
+
+      likeButton.type = 'button';
+      likeButton.className = 'like-button';
+      likeButton.dataset.songKey = getSongLikeKey(song);
+      updateLikeButton(likeButton, song);
+
+      likeButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        toggleSongLike(song, likeButton);
+      });
+
+      row.appendChild(songButton);
+      row.appendChild(likeButton);
+      songsEl.appendChild(row);
+    });
+
+    requestLikeStatuses(album);
+  }
+
+  function playSong(index) {
+    const album = albums[currentAlbumIndex];
+
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    const song = album.songs[index];
+
+    if (!song) {
+      return;
+    }
+
+    currentSongIndex = index;
+
+    const songUrl = getSongUrl(song);
+
+    audio.src = songUrl;
+    startRewardSession(song);
+
+    nowPlayingEl.textContent =
+      `Now Playing: ${song.title}`;
+
+    updateSelectedSongButton();
+    loadEmbeddedArtwork(songUrl);
+	loadEmbeddedLyrics(songUrl, song, album);
+
+    audio.play().catch((error) => {
+      console.error(
+        'Audio playback could not begin:',
+        error
+      );
+    });
+  }
+
+  function nextSong() {
+    const album = albums[currentAlbumIndex];
+
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    currentSongIndex =
+      (currentSongIndex + 1) %
+      album.songs.length;
+
+    playSong(currentSongIndex);
+  }
+
+  function prevSong() {
+    const album = albums[currentAlbumIndex];
+
+    if (!album?.songs?.length) {
+      return;
+    }
+
+    currentSongIndex =
+      (
+        currentSongIndex -
+        1 +
+        album.songs.length
+      ) % album.songs.length;
+
+    playSong(currentSongIndex);
+  }
+
+  nextBtn.addEventListener('click', nextSong);
+  prevBtn.addEventListener('click', prevSong);
+
+  audio.addEventListener('loadedmetadata', () => {
+    if (!rewardSessionId) {
+      return;
+    }
+
+    sendRewardAction('metadata', {
+      duration: Number.isFinite(audio.duration) ? audio.duration : null
+    }).catch((error) => {
+      console.error('Could not update reward-session metadata:', error);
+    });
+  });
+
+  audio.addEventListener('play', () => {
+    lastPlaybackTime = audio.currentTime;
+  });
+
+  audio.addEventListener('pause', () => {
+    lastPlaybackTime = null;
+  });
+
+  audio.addEventListener('seeking', () => {
+    lastPlaybackTime = null;
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    if (audio.paused || audio.seeking || !rewardSessionId) {
+      return;
+    }
+
+    const currentTime = audio.currentTime;
+
+    if (lastPlaybackTime === null) {
+      lastPlaybackTime = currentTime;
+      return;
+    }
+
+    const delta = currentTime - lastPlaybackTime;
+    lastPlaybackTime = currentTime;
+
+    // Count ordinary forward playback only. Large jumps are treated as seeks.
+    if (delta > 0 && delta <= 1.5) {
+      listeningSeconds += delta;
+    }
+
+    if (listeningSeconds >= 15 && !thresholdRewardClaimed) {
+      claimThresholdReward();
+    }
+  });
+
+  audio.addEventListener('ended', async () => {
+    await claimCompletionReward();
+    nextSong();
+  });
+
+  /*
+   * Release the artwork object URL if the page is unloaded.
+   */
+  window.addEventListener('pagehide', () => {
+    clearPreviousArtworkUrl();
+  });
+
+  renderAlbums();
+  renderSongs();
+  loadWorldMoney();
+</script>
+
+<style>
+  .desktop-music-app {
+    position: relative;
+    left: 50%;
+    box-sizing: border-box;
+    width: min(96vw, 1900px);
+    max-width: none;
+    margin: 0 0 2rem;
+    padding: clamp(0.75rem, 1.25vw, 1.5rem);
+    color: #ff3030;
+    background: #080008;
+    border: 2px solid #8b0000;
+    transform: translateX(-50%);
+  }
+
+  .desktop-music-app h1 {
+    margin: 0 0 1rem;
+    color: #ff3030;
+    font-size: clamp(2rem, 3vw, 3.75rem);
+    line-height: 1;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.55);
+  }
+
+  .now-playing-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .artwork-panel,
+  .player-panel,
+  .album-list,
+  .song-browser,
+  .lyrics-section {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: clamp(0.85rem, 1.25vw, 1.4rem);
+    color: #ff3030;
+    background: #000000;
+    border: 1px solid #cc0000;
+  }
+
+  .artwork-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 280px;
+    overflow: hidden;
+  }
+
+  .song-artwork {
+    display: block;
+    box-sizing: border-box;
+    width: min(92%, 1500px);
+    height: min(76vh, 1000px);
+    margin: 0 auto;
+    object-fit: contain;
+    background: #000000;
+    border: 1px solid #700000;
+    box-shadow: 0 0 28px rgba(120, 0, 0, 0.4);
+  }
+
+  .song-artwork[hidden] {
+    display: none;
+  }
+
+  .player-panel {
+    width: min(100%, 1500px);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .player-label {
+    margin: 0 0 0.35rem;
+    color: #aa2020;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+  }
+
+  #albumTitle {
+    margin: 0;
+    color: #ff3030;
+    font-size: clamp(2.2rem, 4vw, 5rem);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  #nowPlaying {
+    margin: 0.75rem 0 0;
+    color: #ff5050;
+    font-size: clamp(1.25rem, 2.1vw, 2.4rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  .desktop-app {
+    display: grid;
+    grid-template-columns:
+      minmax(280px, 0.78fr)
+      minmax(500px, 1.55fr)
+      minmax(400px, 1.08fr);
+    gap: clamp(0.9rem, 1.25vw, 1.5rem);
+    align-items: stretch;
+    width: 100%;
+    min-height: 74vh;
+  }
+
+  .album-list,
+  .song-browser,
+  .lyrics-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .album-list h2,
+  .song-browser h2,
+  .lyrics-section h2 {
+    flex: 0 0 auto;
+    margin: 0 0 0.8rem;
+    color: #ff3030;
+    font-size: clamp(1.5rem, 2vw, 2.4rem);
+    text-align: center;
+  }
+
+  #albums {
+    flex: 1 1 auto;
+    max-height: 78vh;
+    padding-right: 0.25rem;
+    overflow-y: auto;
+  }
+
+  .album-button,
+  .song-button,
+  .like-button {
+    margin: 0.25rem 0;
+    padding: 0.62rem 0.72rem;
+    color: #ff3030;
+    font-size: 0.98rem;
+    text-align: left;
+    cursor: pointer;
+    background: #090909;
+    border: 1px solid #700000;
+    border-radius: 3px;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .album-button {
+    display: block;
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .song-list {
+    flex: 1 1 auto;
+    max-height: 78vh;
+    padding: 0.55rem;
+    overflow-y: auto;
+    background: #050505;
+    border: 1px solid #500000;
+  }
+
+  .song-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 76px;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .song-button {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .like-button {
+    color: #ff3030;
+    width: 76px;
+    min-width: 76px;
+    padding-right: 0.35rem;
+    padding-left: 0.35rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .album-button:hover,
+  .song-button:hover,
+  .like-button:hover {
+    color: #ff7070;
+    background: #280000;
+    border-color: #ff3030;
+    box-shadow: 0 0 7px rgba(255, 0, 0, 0.5);
+  }
+
+  .album-button:active,
+  .song-button:active,
+  .like-button:active {
+    background: #500000;
+  }
+
+  .album-button.selected,
+  .song-button.selected,
+  .like-button.liked {
+    color: #ffffff;
+    background: #500000;
+    border-color: #ff3030;
+    box-shadow: 0 0 9px rgba(255, 0, 0, 0.68);
+  }
+
+  .like-button.pending {
+    cursor: wait;
+    opacity: 0.65;
+  }
+
+  .like-button:disabled {
+    pointer-events: none;
+  }
+
+  .jukebox-economy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem 1.2rem;
+    width: min(100%, 1000px);
+    margin: 0 auto 0.8rem;
+    padding: 0.7rem 0.9rem;
+    color: #ffd0d0;
+    background: #120000;
+    border: 1px solid #700000;
+    border-radius: 3px;
+  }
+
+  #goldDisplay {
+    color: #ffd86b;
+    font-weight: 700;
+  }
+
+  #rewardStatus {
+    color: #ff8080;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.8rem;
+    width: min(100%, 1000px);
+    margin: 0.25rem auto 0;
+  }
+
+  .controls button {
+    width: 100%;
+    padding: 0.9rem;
+    color: #ff3030;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #090909;
+    border: 1px solid #8b0000;
+    border-radius: 3px;
+  }
+
+  .controls button:hover {
+    background: #280000;
+    border-color: #ff3030;
+  }
+
+  #audioPlayer {
+    display: block;
+    width: min(100%, 1000px) !important;
+    min-height: 44px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    background: #111111;
+    border-radius: 24px;
+  }
+
+  .album-lyrics {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    width: 100%;
+    max-height: 78vh;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    color: #f0d8d8;
+    white-space: pre-wrap;
+    background: #050505;
+    border: 1px solid #500000;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  #albums::-webkit-scrollbar,
+  .song-list::-webkit-scrollbar,
+  .album-lyrics::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  #albums::-webkit-scrollbar-track,
+  .song-list::-webkit-scrollbar-track,
+  .album-lyrics::-webkit-scrollbar-track {
+    background: #080808;
+  }
+
+  #albums::-webkit-scrollbar-thumb,
+  .song-list::-webkit-scrollbar-thumb,
+  .album-lyrics::-webkit-scrollbar-thumb {
+    background: #700000;
+    border-radius: 6px;
+  }
+
+  #albums::-webkit-scrollbar-thumb:hover,
+  .song-list::-webkit-scrollbar-thumb:hover,
+  .album-lyrics::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+  }
+
+  .empty-message {
+    margin: 0.5rem;
+    color: #f0d8d8;
+  }
+
+  @media (max-width: 1350px) {
+    .desktop-app {
+      grid-template-columns: 290px minmax(460px, 1fr);
+    }
+
+    .lyrics-section {
+      grid-column: 1 / -1;
+    }
+
+    .album-lyrics {
+      max-height: 58vh;
+    }
+
+    .song-artwork {
+      width: min(94%, 1200px);
+      height: min(72vh, 900px);
+    }
+  }
+
+  @media (max-width: 850px) {
+    .desktop-music-app {
+      width: calc(100vw - 0.5rem);
+      padding: 0.65rem;
+    }
+
+    .desktop-app {
+      grid-template-columns: 1fr;
+    }
+
+    .lyrics-section {
+      grid-column: auto;
+    }
+
+    .song-artwork {
+      width: 100%;
+      height: auto;
+      max-height: 75vh;
+    }
+
+    #albums,
+    .song-list,
+    .album-lyrics {
+      max-height: 65vh;
+    }
+
+    .song-row {
+      grid-template-columns: minmax(0, 1fr) 66px;
+    }
+
+    .like-button {
+      width: 66px;
+      min-width: 66px;
+    }
+  }
+</style>

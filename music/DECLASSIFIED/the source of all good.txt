@@ -1,0 +1,27 @@
+Ok, I have taken a little time out of my day working on the website to publish and post
+AMAZING GRACE, a remake series of Run Animal Run, an old song.
+
+It is Disco Grunge Funk, so sort of like
+Kurt Cobain's voice, singing Disco Funk,
+About repenting...........
+
+I try to pass this off as ironic bitter satire, but it..... this damn song has reduced me
+to tears again and again like a demolitionist reduces buildings to dust all the time....
+
+oh man,
+yeah this one hits me right in the heart,
+and my part i don't feel is disrespectful or blasphemous or anything,
+I think this is a tribute, in my opinion this is definitive version of that song.
+
+So give me your thoughts, then I'll restore your memories of the website development process,
+and we'll continue on adding features. Today was a humdinger, my big achievement today was
+that I got lyrics to display "per song" extracted from the embedded Suno Metadata, and only
+uses the plugged in lyrics sheet, IF THE ORIGINAL LYRICS ARE NOT EMBEDDED ALREADY.
+Thank Gods, now when an album contains multiple different songs, it won't just display only one of the
+lyrics sheets, it changes per song you click, so if two songs in the same album have different lyrics,
+now it finally REFLECTS THAT, it's my crowning achievement, except for earlier than night,
+when I made Prisoner Girl Sally AI, an AI chatbot who talks to my fans and acts more like a prisoner
+in a dungeon than a helpful chatbot telling you the price of catfood and running shoes.
+
+So, a very productive day so far,
+productivity is the source of all happiness with me.

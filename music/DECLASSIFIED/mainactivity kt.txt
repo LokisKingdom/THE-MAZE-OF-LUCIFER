@@ -1,0 +1,1959 @@
+package com.example.lokis_kingdom
+
+import android.app.AlertDialog
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.Typeface
+import android.media.AudioManager
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.text.InputType
+import android.view.MotionEvent
+import android.view.View
+import android.view.ViewGroup
+import android.view.animation.DecelerateInterpolator
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.webkit.CookieManager
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.EditText
+import android.widget.SeekBar
+import android.widget.TextView
+import android.widget.Toast
+import android.widget.ScrollView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.media3.common.MediaItem
+import androidx.media3.common.Player
+import androidx.media3.session.MediaController
+import androidx.media3.session.SessionToken
+import com.google.common.util.concurrent.MoreExecutors
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.ColorDrawable
+import android.widget.ImageButton
+import android.widget.ImageView
+import androidx.media3.common.MediaMetadata
+import android.speech.tts.TextToSpeech
+import android.webkit.JavascriptInterface
+import java.util.Locale
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URL
+import java.util.UUID
+import kotlin.concurrent.thread
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+private const val PRIVATE_FOLDER = "A_PRIVATE_SONGS/"
+private const val ADMIN_PASSWORD = "pissant"
+private const val PREFS_NAME = "lokis_kingdom_prefs"
+private const val PREF_ADMIN_UNLOCKED = "admin_unlocked"
+
+private const val PREF_VISITOR_ID = "world_visitor_id"
+
+private const val REWARD_API =
+    "https://lokiskingdom.com/api/jukebox-reward"
+
+private const val REWARD_THRESHOLD_SECONDS = 15.0
+
+private lateinit var likeBtn: Button
+private lateinit var songLikesRepository: SongLikesRepository
+
+private lateinit var goldText: TextView
+private val songLikeStates =
+    mutableMapOf<String, SongLikeState>()
+
+private var likeRequestInProgress = false
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var webView: WebView
+
+    private var textToSpeech: TextToSpeech? = null
+    private var textToSpeechReady = false
+    private lateinit var albumsBtn: Button
+    private lateinit var songListBtn: Button
+
+    private lateinit var lyricsBtn: Button
+    private lateinit var prevBtn: Button
+    private lateinit var playPauseBtn: Button
+    private lateinit var nextBtn: Button
+    private lateinit var shuffleBtn: Button
+    private lateinit var repeatBtn: Button
+    private lateinit var progressBar: SeekBar
+
+    private lateinit var artworkImage: ImageView
+    private lateinit var artworkOverlay: View
+    private lateinit var artworkExpandBtn: Button
+    private lateinit var artworkMinimizeBtn: Button
+
+    private var currentArtworkBitmap: Bitmap? = null
+
+    private var mediaController: MediaController? = null
+    private var repeatMode = Player.REPEAT_MODE_ALL
+
+    private var currentAlbumIndex = 0
+    private var currentSongIndex = 0
+    private var isShuffleAllMode = false
+    private var isUserSeeking = false
+    private var adminUnlocked = false
+
+    private lateinit var worldVisitorId: String
+
+    private var rewardSessionId: String? = null
+    private var rewardSongId: String? = null
+    private var rewardSongTitle: String? = null
+
+    private var rewardListeningSeconds = 0.0
+    private var rewardLastPositionMs: Long? = null
+
+    private var thresholdRewardClaimed = false
+    private var completionRewardClaimed = false
+    private var rewardRequestPending = false
+    private var rewardMetadataSent = false
+
+    private var currentGold: Int = 0
+
+    private val progressHandler = Handler(Looper.getMainLooper())
+    private val progressRunnable = object : Runnable {
+        override fun run() {
+            val controller = mediaController
+
+            if (
+                controller != null &&
+                !isUserSeeking
+            ) {
+                val duration =
+                    controller.duration
+
+                val position =
+                    controller.currentPosition
+
+
+                /*
+                 * Update the visible playback bar.
+                 */
+                if (duration > 0) {
+                    progressBar.max =
+                        duration.toInt()
+
+                    progressBar.progress =
+                        position.toInt()
+                } else {
+                    progressBar.max = 1
+                    progressBar.progress = 0
+                }
+
+
+                /*
+                 * Media3 may not know the song duration
+                 * when the reward session first begins.
+                 *
+                 * As soon as it becomes available, send it
+                 * to the reward server once.
+                 */
+                if (
+                    duration > 0 &&
+                    rewardSessionId != null &&
+                    !rewardMetadataSent
+                ) {
+                    rewardMetadataSent = true
+
+                    sendRewardAction(
+                        action = "metadata",
+
+                        duration =
+                            duration / 1000.0,
+
+                        onFailure = {
+                            rewardMetadataSent =
+                                false
+                        }
+                    )
+                }
+
+
+                /*
+                 * Count only genuine forward playback.
+                 *
+                 * Paused time does not count.
+                 * Seeking forward does not count.
+                 */
+                if (
+                    controller.isPlaying &&
+                    rewardSessionId != null
+                ) {
+                    val previous =
+                        rewardLastPositionMs
+
+                    if (previous != null) {
+                        val difference =
+                            position - previous
+
+                        /*
+                         * This loop normally runs every
+                         * 500 milliseconds.
+                         *
+                         * A difference over 1.5 seconds is
+                         * probably a seek or unusual jump,
+                         * so it is not counted.
+                         */
+                        if (
+                            difference in
+                            1L..1500L
+                        ) {
+                            rewardListeningSeconds +=
+                                difference / 1000.0
+                        }
+                    }
+
+                    rewardLastPositionMs =
+                        position
+
+
+                    /*
+                     * The small listening reward.
+                     */
+                    if (
+                        rewardListeningSeconds >=
+                        REWARD_THRESHOLD_SECONDS &&
+                        !thresholdRewardClaimed
+                    ) {
+                        claimThresholdReward()
+                    }
+
+
+                    /*
+                     * The full-song reward.
+                     *
+                     * STATE_ENDED may not occur between
+                     * every song in a Media3 queue, so
+                     * reaching the final second also counts.
+                     */
+                    if (
+                        duration > 0 &&
+                        position >=
+                        duration - 1000L &&
+                        !completionRewardClaimed &&
+                        !rewardRequestPending
+                    ) {
+                        claimCompletionReward()
+                    }
+
+                } else {
+                    /*
+                     * Prevent paused time from being counted
+                     * when playback resumes.
+                     */
+                    rewardLastPositionMs =
+                        null
+                }
+            }
+
+            progressHandler.postDelayed(
+                this,
+                500
+            )
+        }
+    }
+
+    private data class QueueSong(
+        val albumIndex: Int,
+        val songIndex: Int,
+        val title: String,
+        val file: String
+    )
+
+    private var currentQueue: List<QueueSong> = emptyList()
+
+    private val r2Base =
+        "https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/"
+
+    private val becomingNoisyReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY) {
+                mediaController?.pause()
+                playPauseBtn.text = "Play"
+            }
+        }
+    }
+
+    private inner class AndroidTTSBridge {
+
+        @JavascriptInterface
+        fun speak(text: String?) {
+            val cleanText = text?.trim().orEmpty()
+
+            if (
+                cleanText.isBlank() ||
+                !textToSpeechReady
+            ) {
+                return
+            }
+
+            runOnUiThread {
+                textToSpeech?.speak(
+                    cleanText,
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    "sally-${System.currentTimeMillis()}"
+                )
+            }
+        }
+
+        @JavascriptInterface
+        fun stop() {
+            runOnUiThread {
+                textToSpeech?.stop()
+            }
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        MusicCatalog.initialize(this)
+
+        adminUnlocked =
+            getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                .getBoolean(PREF_ADMIN_UNLOCKED, false)
+
+        setContentView(R.layout.activity_main)
+        val rootLayout =
+            findViewById<View>(
+                R.id.rootLayout
+            )
+
+        ViewCompat.setOnApplyWindowInsetsListener(
+            rootLayout
+        ) { view, windowInsets ->
+
+            val systemBars =
+                windowInsets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                )
+
+            view.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                systemBars.bottom
+            )
+
+            windowInsets
+        }
+
+        ViewCompat.requestApplyInsets(
+            rootLayout
+        )
+        webView = findViewById(R.id.webView)
+        textToSpeech = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result =
+                    textToSpeech?.setLanguage(Locale.US)
+
+                textToSpeechReady =
+                    result != TextToSpeech.LANG_MISSING_DATA &&
+                            result != TextToSpeech.LANG_NOT_SUPPORTED
+
+                if (textToSpeechReady) {
+                    textToSpeech?.setSpeechRate(0.88f)
+                    textToSpeech?.setPitch(0.86f)
+                }
+            } else {
+                textToSpeechReady = false
+            }
+        }
+        albumsBtn = findViewById(R.id.albumsBtn)
+        songListBtn = findViewById(R.id.songListBtn)
+        likeBtn = findViewById(R.id.likeBtn)
+        lyricsBtn = findViewById(R.id.lyricsBtn)
+        prevBtn = findViewById(R.id.prevBtn)
+        playPauseBtn = findViewById(R.id.playPauseBtn)
+        nextBtn = findViewById(R.id.nextBtn)
+        shuffleBtn = findViewById(R.id.shuffleBtn)
+        repeatBtn = findViewById(R.id.repeatBtn)
+        progressBar = findViewById(R.id.progressBar)
+        goldText = findViewById(R.id.goldText)
+        goldText.text = "GOLD —"
+        artworkImage = findViewById(R.id.artworkImage)
+        artworkOverlay = findViewById(R.id.artworkOverlay)
+        artworkExpandBtn = findViewById(R.id.artworkExpandBtn)
+        artworkMinimizeBtn = findViewById(R.id.artworkMinimizeBtn)
+        songLikesRepository = SongLikesRepository(this)
+
+        artworkOverlay.visibility = View.GONE
+        artworkExpandBtn.visibility = View.GONE
+
+        artworkExpandBtn.setOnClickListener {
+            showArtwork()
+        }
+
+        artworkMinimizeBtn.setOnClickListener {
+            minimizeArtwork()
+        }
+
+        applyAtmosphericUi()
+        setupProgressBar()
+        setupAdminUnlock()
+
+        registerReceiver(
+            becomingNoisyReceiver,
+            IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY)
+        )
+        worldVisitorId =
+            getOrCreateWorldVisitorId()
+
+        writeWorldVisitorIdToWebCookie(
+            worldVisitorId
+        )
+
+        webView.webViewClient =
+            WebViewClient()
+        webView.webChromeClient = WebChromeClient()
+
+        val webSettings: WebSettings = webView.settings
+        webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
+        webSettings.mediaPlaybackRequiresUserGesture = true
+
+        webView.addJavascriptInterface(
+            AndroidTTSBridge(),
+            "AndroidTTS"
+        )
+
+        webView.loadUrl("https://lokiskingdom.com")
+
+        webView.evaluateJavascript(
+            """
+            document.querySelectorAll('audio').forEach(a => {
+                a.autoplay = false;
+                a.pause();
+            });
+            """.trimIndent(),
+            null
+        )
+
+        showArtwork()
+
+        val sessionToken = SessionToken(
+            this,
+            android.content.ComponentName(
+                this,
+                MusicService::class.java
+            )
+        )
+
+        val controllerFuture =
+            MediaController.Builder(this, sessionToken)
+                .buildAsync()
+
+        controllerFuture.addListener({
+            mediaController = controllerFuture.get()
+
+            mediaController?.addListener(object : Player.Listener {
+
+                override fun onMediaItemTransition(
+                    mediaItem: MediaItem?,
+                    reason: Int
+                ) {
+                    updateNowPlayingFromController()
+
+                    /*
+                     * Refresh the heart for the newly active song.
+                     *
+                     * This handles automatic transitions as well as
+                     * next/previous navigation.
+                     */
+                    loadCurrentSongLikeState()
+
+                    /*
+                     * A genuinely new MediaItem means a new reward session.
+                     */
+                    if (mediaItem != null) {
+                        startRewardSession()
+                    }
+
+                    // Do not clear or reload the artwork here.
+                    // Keep the previous image visible until Media3 supplies the next one.
+                }
+
+                override fun onPlaybackStateChanged(playbackState: Int) {
+                    if (playbackState == Player.STATE_ENDED) {
+                        claimCompletionReward()
+                    }
+                }
+
+                override fun onMediaMetadataChanged(
+                    mediaMetadata: MediaMetadata
+                ) {
+                    updateArtwork(mediaMetadata.artworkData)
+                }
+
+                override fun onIsPlayingChanged(isPlaying: Boolean) {
+                    playPauseBtn.text = if (isPlaying) "Pause" else "Play"
+                }
+            })
+
+            loadAlbumIntoController(0, autoPlay = false)
+            setupButtons()
+            progressHandler.post(progressRunnable)
+        }, MoreExecutors.directExecutor())
+    }
+
+    private fun showArtwork() {
+    // Always show the artwork when a new song loads.
+        artworkOverlay.visibility = View.VISIBLE
+        artworkExpandBtn.visibility = View.GONE
+    }
+
+    private fun minimizeArtwork() {
+        artworkOverlay.visibility = View.GONE
+
+        if (currentArtworkBitmap != null) {
+            artworkExpandBtn.visibility = View.VISIBLE
+        }
+    }
+
+    private fun getOrCreateWorldVisitorId(): String {
+        val prefs =
+            getSharedPreferences(
+                PREFS_NAME,
+                Context.MODE_PRIVATE
+            )
+
+        /*
+         * First preserve any identity already being used
+         * by the app's WebView.
+         */
+        val existingCookieId =
+            readWorldVisitorIdFromWebCookie()
+
+        if (!existingCookieId.isNullOrBlank()) {
+            prefs.edit()
+                .putString(
+                    PREF_VISITOR_ID,
+                    existingCookieId
+                )
+                .apply()
+
+            return existingCookieId
+        }
+
+        /*
+         * Otherwise preserve the existing native identity.
+         */
+        val existingPreferenceId =
+            prefs.getString(
+                PREF_VISITOR_ID,
+                null
+            )
+
+        if (!existingPreferenceId.isNullOrBlank()) {
+            return existingPreferenceId
+        }
+
+        /*
+         * Brand-new Android player.
+         */
+        val created =
+            "android_" +
+                    UUID.randomUUID()
+                        .toString()
+                        .replace("-", "")
+
+        prefs.edit()
+            .putString(
+                PREF_VISITOR_ID,
+                created
+            )
+            .apply()
+
+        return created
+    }
+
+    private fun readWorldVisitorIdFromWebCookie(): String? {
+        val cookies =
+            CookieManager
+                .getInstance()
+                .getCookie(
+                    "https://lokiskingdom.com"
+                )
+                ?: return null
+
+        return cookies
+            .split(";")
+            .map { it.trim() }
+            .firstOrNull {
+                it.startsWith(
+                    "lokis-kingdom-visitor-id="
+                )
+            }
+            ?.substringAfter("=")
+            ?.trim()
+            ?.takeIf { it.isNotBlank() }
+    }
+
+    private fun writeWorldVisitorIdToWebCookie(
+        visitorId: String
+    ) {
+        val cookieManager =
+            CookieManager.getInstance()
+
+        cookieManager.setAcceptCookie(true)
+
+        cookieManager.setCookie(
+            "https://lokiskingdom.com",
+            "lokis-kingdom-visitor-id=$visitorId; " +
+                    "Max-Age=315360000; " +
+                    "Path=/; " +
+                    "Domain=lokiskingdom.com; " +
+                    "SameSite=Lax; " +
+                    "Secure"
+        )
+
+        cookieManager.flush()
+    }
+
+    private fun startRewardSession() {
+        val song =
+            currentQueueSong()
+                ?: return
+
+        /*
+         * Every play of every song gets a unique
+         * server-side reward session.
+         */
+        rewardSessionId =
+            UUID.randomUUID()
+                .toString()
+
+        rewardSongId =
+            song.file
+
+        rewardSongTitle =
+            song.title
+
+
+        /*
+         * Reset all counters and claim flags for
+         * the newly selected song.
+         */
+        rewardListeningSeconds =
+            0.0
+
+        rewardLastPositionMs =
+            null
+
+        thresholdRewardClaimed =
+            false
+
+        completionRewardClaimed =
+            false
+
+        rewardRequestPending =
+            false
+
+        rewardMetadataSent =
+            false
+
+
+        /*
+         * Duration may still be unavailable here.
+         * That is acceptable. The progress loop will
+         * send metadata once Media3 knows the duration.
+         */
+        val durationSeconds =
+            mediaController
+                ?.duration
+                ?.takeIf {
+                    it > 0
+                }
+                ?.div(
+                    1000.0
+                )
+
+
+        sendRewardAction(
+            action = "start",
+            duration = durationSeconds
+        )
+    }
+
+    private fun sendRewardAction(
+        action: String,
+        listenedSeconds: Double? = null,
+        duration: Double? = null,
+        onSuccess: ((JSONObject) -> Unit)? = null,
+        onFailure: ((Exception) -> Unit)? = null
+    ) {
+        /*
+         * Copy the current song's identifiers now.
+         *
+         * This prevents a background request from
+         * accidentally using the next song's title
+         * after an automatic transition.
+         */
+        val sessionId =
+            rewardSessionId
+                ?: return
+
+        val songId =
+            rewardSongId
+                ?: return
+
+        val songTitle =
+            rewardSongTitle
+                .orEmpty()
+
+
+        thread {
+            var connection:
+                    HttpURLConnection? = null
+
+            try {
+                connection =
+                    URL(REWARD_API)
+                        .openConnection()
+                            as HttpURLConnection
+
+                connection.requestMethod =
+                    "POST"
+
+                connection.connectTimeout =
+                    10_000
+
+                connection.readTimeout =
+                    10_000
+
+                connection.doOutput =
+                    true
+
+                connection.setRequestProperty(
+                    "Content-Type",
+                    "application/json"
+                )
+
+
+                val body =
+                    JSONObject().apply {
+                        put(
+                            "action",
+                            action
+                        )
+
+                        put(
+                            "visitorId",
+                            worldVisitorId
+                        )
+
+                        put(
+                            "sessionId",
+                            sessionId
+                        )
+
+                        put(
+                            "songId",
+                            songId
+                        )
+
+                        put(
+                            "songTitle",
+                            songTitle
+                        )
+
+                        listenedSeconds?.let {
+                            put(
+                                "listenedSeconds",
+                                it
+                            )
+                        }
+
+                        duration?.let {
+                            put(
+                                "duration",
+                                it
+                            )
+                        }
+                    }
+
+
+                connection.outputStream
+                    .use { output ->
+                        output.write(
+                            body
+                                .toString()
+                                .toByteArray(
+                                    Charsets.UTF_8
+                                )
+                        )
+                    }
+
+
+                val status =
+                    connection.responseCode
+
+                val stream =
+                    if (
+                        status in
+                        200..299
+                    ) {
+                        connection.inputStream
+                    } else {
+                        connection.errorStream
+                    }
+
+
+                val responseText =
+                    stream
+                        ?.bufferedReader()
+                        ?.use {
+                            it.readText()
+                        }
+                        ?: "{}"
+
+
+                val response =
+                    JSONObject(
+                        responseText
+                    )
+
+
+                if (
+                    status !in
+                    200..299
+                ) {
+                    throw Exception(
+                        response.optString(
+                            "error",
+                            "Reward request failed: HTTP $status"
+                        )
+                    )
+                }
+
+
+                /*
+                 * Gold is authoritative on the server.
+                 * This local value only remembers the
+                 * most recently returned balance.
+                 */
+                if (
+                    response.has(
+                        "money"
+                    )
+                ) {
+                    currentGold =
+                        response.optInt(
+                            "money",
+                            currentGold
+                        )
+
+                    runOnUiThread {
+                        goldText.text =
+                            "GOLD $currentGold"
+                    }
+                }
+
+
+                runOnUiThread {
+                    onSuccess?.invoke(
+                        response
+                    )
+                }
+
+            } catch (
+                exception: Exception
+            ) {
+                exception.printStackTrace()
+
+                runOnUiThread {
+                    onFailure?.invoke(
+                        exception
+                    )
+                }
+
+            } finally {
+                connection?.disconnect()
+            }
+        }
+    }
+
+    private fun claimThresholdReward() {
+        if (
+            thresholdRewardClaimed ||
+            rewardRequestPending ||
+            rewardSessionId == null
+        ) {
+            return
+        }
+
+
+        /*
+         * Remember which song session initiated
+         * this request.
+         */
+        val claimedSessionId =
+            rewardSessionId
+                ?: return
+
+
+        thresholdRewardClaimed =
+            true
+
+        rewardRequestPending =
+            true
+
+
+        sendRewardAction(
+            action = "threshold",
+
+            listenedSeconds =
+                rewardListeningSeconds,
+
+            onSuccess = { data ->
+                /*
+                 * Only modify active flags if this is
+                 * still the same song.
+                 */
+                if (
+                    rewardSessionId ==
+                    claimedSessionId
+                ) {
+                    rewardRequestPending =
+                        false
+                }
+
+
+                val awarded =
+                    data.optInt(
+                        "awarded",
+                        0
+                    )
+
+
+                if (awarded > 0) {
+                    Toast.makeText(
+                        this,
+
+                        "+$awarded gold for listening 15 seconds.",
+
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            },
+
+            onFailure = {
+                /*
+                 * Do not corrupt the next song's flags
+                 * if this request finishes late.
+                 */
+                if (
+                    rewardSessionId ==
+                    claimedSessionId
+                ) {
+                    thresholdRewardClaimed =
+                        false
+
+                    rewardRequestPending =
+                        false
+                }
+            }
+        )
+    }
+
+    private fun claimCompletionReward() {
+        if (
+            completionRewardClaimed ||
+            rewardRequestPending ||
+            rewardSessionId == null
+        ) {
+            return
+        }
+
+
+        val claimedSessionId =
+            rewardSessionId
+                ?: return
+
+
+        completionRewardClaimed =
+            true
+
+        rewardRequestPending =
+            true
+
+
+        val durationSeconds =
+            mediaController
+                ?.duration
+                ?.takeIf {
+                    it > 0
+                }
+                ?.div(
+                    1000.0
+                )
+
+
+        sendRewardAction(
+            action = "complete",
+
+            listenedSeconds =
+                rewardListeningSeconds,
+
+            duration =
+                durationSeconds,
+
+            onSuccess = { data ->
+                if (
+                    rewardSessionId ==
+                    claimedSessionId
+                ) {
+                    rewardRequestPending =
+                        false
+                }
+
+
+                val awarded =
+                    data.optInt(
+                        "awarded",
+                        0
+                    )
+
+
+                if (awarded > 0) {
+                    Toast.makeText(
+                        this,
+
+                        "Song completed: +$awarded gold.",
+
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            },
+
+            onFailure = {
+                if (
+                    rewardSessionId ==
+                    claimedSessionId
+                ) {
+                    completionRewardClaimed =
+                        false
+
+                    rewardRequestPending =
+                        false
+                }
+            }
+        )
+    }
+
+    private fun isPrivateSong(file: String): Boolean {
+        return file.startsWith(PRIVATE_FOLDER)
+    }
+
+    private fun canShowSong(file: String): Boolean {
+        return adminUnlocked || !isPrivateSong(file)
+    }
+
+    private fun visibleAlbumIndices(): List<Int> {
+        return MusicCatalog.albums.mapIndexedNotNull { index, album ->
+            val hasVisibleSongs = album.songs.any { canShowSong(it.file) }
+            if (hasVisibleSongs) index else null
+        }
+    }
+
+    private fun setupAdminUnlock() {
+        albumsBtn.setOnLongClickListener {
+            showAdminDialog()
+            true
+        }
+    }
+
+    private fun showAdminDialog() {
+        if (adminUnlocked) {
+            AlertDialog.Builder(this)
+                .setTitle("Admin Mode")
+                .setMessage("Admin mode is currently unlocked.")
+                .setPositiveButton("Keep Unlocked", null)
+                .setNegativeButton("Lock Admin Mode") { _, _ ->
+                    adminUnlocked = false
+                    saveAdminUnlocked(false)
+                    Toast.makeText(this, "Admin mode locked", Toast.LENGTH_SHORT).show()
+                    loadAlbumIntoController(currentAlbumIndex, autoPlay = false)
+                }
+                .show()
+            return
+        }
+
+        val input = EditText(this)
+        input.inputType =
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        input.hint = "Password"
+
+        AlertDialog.Builder(this)
+            .setTitle("Admin Unlock")
+            .setView(input)
+            .setPositiveButton("Unlock") { _, _ ->
+                val enteredPassword = input.text.toString()
+
+                if (enteredPassword == ADMIN_PASSWORD) {
+                    adminUnlocked = true
+                    saveAdminUnlocked(true)
+                    Toast.makeText(this, "Admin mode unlocked", Toast.LENGTH_SHORT).show()
+                    loadAlbumIntoController(currentAlbumIndex, autoPlay = false)
+                } else {
+                    Toast.makeText(this, "Wrong password", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+
+    private fun saveAdminUnlocked(value: Boolean) {
+        getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .edit()
+            .putBoolean(PREF_ADMIN_UNLOCKED, value)
+            .apply()
+    }
+
+    private fun setupProgressBar() {
+        progressBar.setOnSeekBarChangeListener(
+            object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(
+                    seekBar: SeekBar?,
+                    progress: Int,
+                    fromUser: Boolean
+                ) {
+                    if (fromUser) {
+                        mediaController?.seekTo(progress.toLong())
+                    }
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                    isUserSeeking = true
+                }
+
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                    isUserSeeking = false
+                    seekBar?.progress?.let {
+                        mediaController?.seekTo(it.toLong())
+                    }
+                }
+            }
+        )
+    }
+
+    private fun applyAtmosphericUi() {
+        val background = Color.rgb(10, 8, 7)
+        val panel = Color.rgb(24, 18, 15)
+        val ember = Color.rgb(255, 122, 24)
+        val emberDark = Color.rgb(120, 42, 12)
+        val parchment = Color.rgb(230, 218, 200)
+
+        window.statusBarColor = background
+        window.navigationBarColor = background
+
+        findViewById<View>(android.R.id.content).setBackgroundColor(background)
+
+        val buttons = listOf(
+            albumsBtn,
+            songListBtn,
+            likeBtn,
+            lyricsBtn,
+            playPauseBtn,
+            prevBtn,
+            nextBtn,
+            shuffleBtn,
+            repeatBtn
+        )
+
+        buttons.forEach { button ->
+            button.setTextColor(parchment)
+            button.textSize = 13f
+            button.typeface = Typeface.DEFAULT_BOLD
+            button.backgroundTintList = ColorStateList.valueOf(panel)
+            button.setShadowLayer(8f, 0f, 0f, emberDark)
+            button.setPadding(10, 8, 10, 8)
+            addButtonPressAnimation(button)
+        }
+
+        playPauseBtn.setTextColor(ember)
+        playPauseBtn.setShadowLayer(14f, 0f, 0f, ember)
+
+        albumsBtn.setTextColor(ember)
+        albumsBtn.setShadowLayer(12f, 0f, 0f, emberDark)
+    }
+
+    private fun addButtonPressAnimation(button: Button) {
+        button.setOnTouchListener { view, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    view.animate()
+                        .scaleX(0.96f)
+                        .scaleY(0.96f)
+                        .setDuration(80)
+                        .start()
+                }
+
+                MotionEvent.ACTION_UP,
+                MotionEvent.ACTION_CANCEL -> {
+                    view.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(120)
+                        .start()
+                }
+            }
+            false
+        }
+    }
+
+    private fun animateListRow(view: View, position: Int) {
+        view.alpha = 0f
+        view.translationY = 12f
+
+        view.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setStartDelay((position * 20L).coerceAtMost(160L))
+            .setDuration(180)
+            .setInterpolator(DecelerateInterpolator())
+            .start()
+    }
+
+    private fun currentAlbum(): Album {
+        return MusicCatalog.albums[currentAlbumIndex]
+    }
+
+    private fun makeAlbumQueue(albumIndex: Int): List<QueueSong> {
+        val album = MusicCatalog.albums[albumIndex]
+
+        return album.songs.mapIndexedNotNull { songIndex, song ->
+            if (canShowSong(song.file)) {
+                QueueSong(albumIndex, songIndex, song.title, song.file)
+            } else {
+                null
+            }
+        }
+    }
+
+    private fun makeAllSongsQueue(): List<QueueSong> {
+        return MusicCatalog.albums.flatMapIndexed { albumIndex, album ->
+            album.songs.mapIndexedNotNull { songIndex, song ->
+                if (canShowSong(song.file)) {
+                    QueueSong(albumIndex, songIndex, song.title, song.file)
+                } else {
+                    null
+                }
+            }
+        }
+    }
+
+    private fun loadQueueIntoController(
+        queue: List<QueueSong>,
+        startIndex: Int,
+        autoPlay: Boolean
+    ) {
+        val controller = mediaController ?: return
+        if (queue.isEmpty()) return
+
+        currentQueue = queue
+
+        val mediaItems = queue.map {
+            MediaItem.fromUri(r2Base + it.file)
+        }
+
+        controller.stop()
+        controller.clearMediaItems()
+        controller.setMediaItems(mediaItems, startIndex, 0L)
+        controller.repeatMode = repeatMode
+        controller.prepare()
+
+        updateNowPlayingFromController()
+
+        if (autoPlay) {
+            controller.play()
+            playPauseBtn.text = "Pause"
+        } else {
+            playPauseBtn.text = "Play"
+        }
+        loadCurrentSongLikeState()
+    }
+
+    private fun currentQueueSong(): QueueSong? {
+        val controller = mediaController ?: return null
+        val queueIndex = controller.currentMediaItemIndex
+
+        if (queueIndex < 0 || queueIndex >= currentQueue.size) {
+            return null
+        }
+
+        return currentQueue[queueIndex]
+    }
+
+    private fun loadCurrentSongLikeState() {
+        val queueSong = currentQueueSong()
+
+        if (queueSong == null) {
+            likeBtn.isEnabled = false
+            likeBtn.text = "♡ 0"
+            return
+        }
+
+        val cachedState = songLikeStates[queueSong.file]
+
+        if (cachedState != null) {
+            updateLikeButton(cachedState)
+        } else {
+            likeBtn.isEnabled = false
+            likeBtn.text = "♡ ..."
+
+            songLikesRepository.loadStatuses(
+                songIds = listOf(queueSong.file),
+                onSuccess = { statuses ->
+                    val state = statuses[queueSong.file] ?: SongLikeState()
+
+                    songLikeStates[queueSong.file] = state
+
+                    val currentSong = currentQueueSong()
+                    if (currentSong?.file == queueSong.file) {
+                        updateLikeButton(state)
+                    }
+                },
+                onError = { error ->
+                    val currentSong = currentQueueSong()
+
+                    if (currentSong?.file == queueSong.file) {
+                        likeBtn.isEnabled = true
+                        likeBtn.text = "♡ ?"
+                    }
+
+                    Toast.makeText(
+                        this,
+                        "Unable to load likes: ${error.message ?: "Unknown error"}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            )
+        }
+    }
+
+    private fun toggleCurrentSongLike() {
+        if (likeRequestInProgress) {
+            return
+        }
+
+        val queueSong = currentQueueSong() ?: return
+
+        likeRequestInProgress = true
+        likeBtn.isEnabled = false
+
+        songLikesRepository.toggle(
+            songId = queueSong.file,
+            onSuccess = { state ->
+                likeRequestInProgress = false
+                songLikeStates[queueSong.file] = state
+
+                val currentSong = currentQueueSong()
+                if (currentSong?.file == queueSong.file) {
+                    updateLikeButton(state)
+                }
+            },
+            onError = { error ->
+                likeRequestInProgress = false
+
+                val currentSong = currentQueueSong()
+                if (currentSong?.file == queueSong.file) {
+                    likeBtn.isEnabled = true
+                }
+
+                Toast.makeText(
+                    this,
+                    "Unable to update like: ${error.message ?: "Unknown error"}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        )
+    }
+
+    private fun updateLikeButton(state: SongLikeState) {
+        likeBtn.isEnabled = true
+        likeBtn.text =
+            if (state.liked) {
+                "♥ ${state.likes}"
+            } else {
+                "♡ ${state.likes}"
+            }
+
+        val ember = Color.rgb(255, 122, 24)
+        val parchment = Color.rgb(230, 218, 200)
+
+        likeBtn.setTextColor(
+            if (state.liked) ember else parchment
+        )
+    }
+
+    private fun loadAlbumIntoController(albumIndex: Int, autoPlay: Boolean) {
+        if (albumIndex < 0 || albumIndex >= MusicCatalog.albums.size) return
+
+        val controller = mediaController ?: return
+        val queue = makeAlbumQueue(albumIndex)
+
+        if (queue.isEmpty()) {
+            val firstVisibleAlbumIndex = visibleAlbumIndices().firstOrNull() ?: return
+            loadAlbumIntoController(firstVisibleAlbumIndex, autoPlay)
+            return
+        }
+
+        isShuffleAllMode = false
+        currentAlbumIndex = albumIndex
+        currentSongIndex = queue.first().songIndex
+
+        controller.shuffleModeEnabled = false
+        shuffleBtn.text = "Shuffle"
+
+        loadQueueIntoController(
+            queue = queue,
+            startIndex = 0,
+            autoPlay = autoPlay
+        )
+    }
+
+    private fun loadAllSongsShuffle() {
+        val controller = mediaController ?: return
+
+        val wasPlaying = controller.isPlaying
+        val currentPositionMs = controller.currentPosition
+
+        val currentQueueIndex = controller.currentMediaItemIndex
+        val currentSong =
+            if (currentQueueIndex >= 0 && currentQueueIndex < currentQueue.size) {
+                currentQueue[currentQueueIndex]
+            } else {
+                null
+            }
+
+        val allSongsQueue = makeAllSongsQueue()
+        if (allSongsQueue.isEmpty()) return
+
+        val matchingIndex =
+            if (currentSong != null) {
+                allSongsQueue.indexOfFirst {
+                    it.file == currentSong.file
+                }
+            } else {
+                -1
+            }
+
+        val startIndex =
+            if (matchingIndex >= 0) matchingIndex else 0
+
+        isShuffleAllMode = true
+        currentQueue = allSongsQueue
+
+        val mediaItems =
+            allSongsQueue.map { queueSong ->
+                MediaItem.fromUri(r2Base + queueSong.file)
+            }
+
+        controller.stop()
+        controller.clearMediaItems()
+        controller.setMediaItems(mediaItems, startIndex, currentPositionMs)
+        controller.repeatMode = repeatMode
+        controller.shuffleModeEnabled = true
+        controller.prepare()
+
+        updateNowPlayingFromController()
+
+        if (wasPlaying) {
+            controller.play()
+            playPauseBtn.text = "Pause"
+        } else {
+            playPauseBtn.text = "Play"
+        }
+
+        shuffleBtn.text = "Shuffle All"
+    }
+
+    private fun updateNowPlayingFromController() {
+        val controller = mediaController ?: return
+        val queueIndex = controller.currentMediaItemIndex
+
+        if (queueIndex < 0 || queueIndex >= currentQueue.size) return
+
+        val queueSong = currentQueue[queueIndex]
+
+        currentAlbumIndex = queueSong.albumIndex
+        currentSongIndex = queueSong.songIndex
+
+        val albumTitle = MusicCatalog.albums[currentAlbumIndex].title
+
+        albumsBtn.text =
+            if (isShuffleAllMode) {
+                "All Albums: $albumTitle"
+            } else {
+                albumTitle
+            }
+    }
+
+    private fun updateArtworkFromController() {
+        val artworkData = mediaController
+            ?.mediaMetadata
+            ?.artworkData
+
+        updateArtwork(artworkData)
+    }
+    private fun updateArtwork(artworkData: ByteArray?) {
+        // Media3 may briefly report empty artwork while changing songs.
+        // Ignore that temporary state so the WebView does not flash.
+        if (artworkData == null || artworkData.isEmpty()) {
+            return
+        }
+
+        val bitmap = BitmapFactory.decodeByteArray(
+            artworkData,
+            0,
+            artworkData.size
+        ) ?: return
+
+        currentArtworkBitmap = bitmap
+        artworkImage.setImageBitmap(bitmap)
+
+        // If artwork mode is currently open, leave it open seamlessly.
+        if (artworkOverlay.visibility == View.VISIBLE) {
+            artworkExpandBtn.visibility = View.GONE
+        } else {
+            artworkExpandBtn.visibility = View.VISIBLE
+        }
+    }
+
+    private fun showFullscreenArtwork() {
+        val bitmap = currentArtworkBitmap ?: return
+
+        val imageView = ImageView(this).apply {
+            setImageBitmap(bitmap)
+            adjustViewBounds = true
+            scaleType = ImageView.ScaleType.FIT_CENTER
+            setBackgroundColor(Color.BLACK)
+
+            setPadding(
+                dpToPx(8),
+                dpToPx(8),
+                dpToPx(8),
+                dpToPx(8)
+            )
+        }
+
+        val dialog = AlertDialog.Builder(this)
+            .setView(imageView)
+            .setNegativeButton("Close", null)
+            .create()
+
+        dialog.window?.setBackgroundDrawable(
+            ColorDrawable(Color.BLACK)
+        )
+
+        imageView.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.setOnShowListener {
+            dialog.window?.setLayout(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
+        }
+
+        dialog.show()
+
+        dialog.window?.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
+    }
+
+    private fun dpToPx(dp: Int): Int {
+        return (dp * resources.displayMetrics.density).toInt()
+    }
+
+    private fun setupButtons() {
+        albumsBtn.setOnClickListener { showAlbumList() }
+        songListBtn.setOnClickListener { showSongList() }
+        likeBtn.setOnClickListener { toggleCurrentSongLike() }
+        lyricsBtn.setOnClickListener { showLyrics() }
+        prevBtn.setOnClickListener {
+            mediaController?.seekToPreviousMediaItem()
+        }
+
+        nextBtn.setOnClickListener {
+            mediaController?.seekToNextMediaItem()
+        }
+
+        playPauseBtn.setOnClickListener {
+            val controller = mediaController ?: return@setOnClickListener
+
+            if (controller.isPlaying) {
+                controller.pause()
+                playPauseBtn.text = "Play"
+            } else {
+                controller.play()
+                playPauseBtn.text = "Pause"
+            }
+        }
+
+        shuffleBtn.setOnClickListener {
+            val controller = mediaController ?: return@setOnClickListener
+
+            if (!controller.shuffleModeEnabled && !isShuffleAllMode) {
+                controller.shuffleModeEnabled = true
+                shuffleBtn.text = "Shuffle Album"
+            } else if (controller.shuffleModeEnabled && !isShuffleAllMode) {
+                loadAllSongsShuffle()
+            } else {
+                isShuffleAllMode = false
+                controller.shuffleModeEnabled = false
+                shuffleBtn.text = "Shuffle"
+                loadAlbumIntoController(currentAlbumIndex, autoPlay = false)
+            }
+        }
+
+        repeatBtn.setOnClickListener {
+            val controller = mediaController ?: return@setOnClickListener
+
+            repeatMode =
+                when (repeatMode) {
+                    Player.REPEAT_MODE_OFF -> Player.REPEAT_MODE_ALL
+                    Player.REPEAT_MODE_ALL -> Player.REPEAT_MODE_ONE
+                    else -> Player.REPEAT_MODE_OFF
+                }
+
+            controller.repeatMode = repeatMode
+
+            repeatBtn.text =
+                when (repeatMode) {
+                    Player.REPEAT_MODE_ALL -> "Repeat All"
+                    Player.REPEAT_MODE_ONE -> "Repeat One"
+                    else -> "Repeat Off"
+                }
+        }
+    }
+
+    private fun showAlbumList() {
+        val albumIndices = visibleAlbumIndices()
+        val albumTitles = albumIndices.map { MusicCatalog.albums[it].title }
+
+        if (albumIndices.isEmpty()) {
+            Toast.makeText(this, "No albums available", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val adapter = object : ArrayAdapter<String>(
+            this,
+            android.R.layout.simple_list_item_1,
+            albumTitles
+        ) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getView(position, convertView, parent) as TextView
+                val realAlbumIndex = albumIndices[position]
+                val isCurrentAlbum = realAlbumIndex == currentAlbumIndex
+
+                view.textSize = 16f
+                view.setPadding(32, 24, 32, 24)
+
+                if (isCurrentAlbum) {
+                    view.setTextColor(Color.rgb(255, 140, 40))
+                    view.setShadowLayer(18f, 0f, 0f, Color.rgb(255, 90, 0))
+                    view.setBackgroundColor(Color.argb(55, 255, 100, 0))
+                    view.text = "▶  ${albumTitles[position]}"
+                } else {
+                    view.setTextColor(Color.rgb(230, 218, 200))
+                    view.setShadowLayer(0f, 0f, 0f, Color.TRANSPARENT)
+                    view.setBackgroundColor(Color.rgb(18, 15, 14))
+                    view.text = albumTitles[position]
+                }
+
+                animateListRow(view, position)
+                return view
+            }
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle("Select Album")
+            .setAdapter(adapter) { dialog, which ->
+                val realAlbumIndex = albumIndices[which]
+                loadAlbumIntoController(realAlbumIndex, autoPlay = true)
+                dialog.dismiss()
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+    private fun showSongList() {
+        val controller = mediaController ?: return
+        val album = currentAlbum()
+        val queue = makeAlbumQueue(currentAlbumIndex)
+        val songTitles = queue.map { it.title }
+
+        if (queue.isEmpty()) {
+            Toast.makeText(
+                this,
+                "No visible songs in this album",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
+
+        val currentQueueIndex = controller.currentMediaItemIndex
+
+        val currentFile =
+            if (
+                currentQueueIndex >= 0 &&
+                currentQueueIndex < currentQueue.size
+            ) {
+                currentQueue[currentQueueIndex].file
+            } else {
+                null
+            }
+
+        val adapter = object : ArrayAdapter<String>(
+            this,
+            android.R.layout.simple_list_item_1,
+            songTitles
+        ) {
+            override fun getView(
+                position: Int,
+                convertView: View?,
+                parent: ViewGroup
+            ): View {
+                val view =
+                    super.getView(position, convertView, parent) as TextView
+
+                val queueSong = queue[position]
+                val isCurrentSong = queueSong.file == currentFile
+                val likeState = songLikeStates[queueSong.file]
+
+                val likeText =
+                    when {
+                        likeState == null -> "♡ …"
+                        likeState.liked -> "♥ ${likeState.likes}"
+                        else -> "♡ ${likeState.likes}"
+                    }
+
+                view.textSize = 16f
+                view.setPadding(32, 24, 32, 24)
+
+                if (isCurrentSong) {
+                    view.setTextColor(Color.rgb(255, 140, 40))
+                    view.setShadowLayer(
+                        18f,
+                        0f,
+                        0f,
+                        Color.rgb(255, 90, 0)
+                    )
+                    view.setBackgroundColor(
+                        Color.argb(55, 255, 100, 0)
+                    )
+
+                    view.text =
+                        "▶  ${queueSong.title}    $likeText"
+                } else {
+                    view.setTextColor(Color.rgb(230, 218, 200))
+                    view.setShadowLayer(
+                        0f,
+                        0f,
+                        0f,
+                        Color.TRANSPARENT
+                    )
+                    view.setBackgroundColor(
+                        Color.rgb(18, 15, 14)
+                    )
+
+                    view.text =
+                        "${queueSong.title}    $likeText"
+                }
+
+                animateListRow(view, position)
+                return view
+            }
+        }
+
+        val dialog =
+            AlertDialog.Builder(this)
+                .setTitle(
+                    if (isShuffleAllMode) {
+                        "${album.title} — Current Song"
+                    } else {
+                        album.title
+                    }
+                )
+                .setAdapter(adapter) { selectedDialog, which ->
+                    isShuffleAllMode = false
+                    controller.shuffleModeEnabled = false
+                    shuffleBtn.text = "Shuffle"
+
+                    currentSongIndex = queue[which].songIndex
+
+                    loadQueueIntoController(
+                        queue = queue,
+                        startIndex = which,
+                        autoPlay = true
+                    )
+
+                    selectedDialog.dismiss()
+                }
+                .setNegativeButton("Cancel", null)
+                .create()
+
+        dialog.show()
+
+        // Load every visible song's likes in one batch.
+        songLikesRepository.loadStatuses(
+            songIds = queue.map { it.file },
+            onSuccess = { statuses ->
+                songLikeStates.putAll(statuses)
+                adapter.notifyDataSetChanged()
+            },
+            onError = { error ->
+                Toast.makeText(
+                    this,
+                    "Unable to load song-list likes: ${
+                        error.message ?: "Unknown error"
+                    }",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        )
+    }
+
+    private fun showLyrics() {
+        val album = currentAlbum()
+
+        /*
+         * Use the exact URL Media3 is currently playing.
+         *
+         * If your player variable is not named "player", replace only
+         * that name with the variable used by your app.
+         */
+        val songUrl =
+            mediaController
+                ?.currentMediaItem
+                ?.localConfiguration
+                ?.uri
+                ?.toString()
+
+        lyricsBtn.isEnabled = false
+        lyricsBtn.text = "Loading..."
+
+        Thread {
+            /*
+             * Embedded lyrics take priority.
+             */
+            val embeddedLyrics =
+                if (!songUrl.isNullOrBlank()) {
+                    EmbeddedLyricsReader.read(songUrl)
+                } else {
+                    null
+                }
+
+            /*
+             * Existing LyricsFile remains the fallback.
+             */
+            val result = if (!embeddedLyrics.isNullOrBlank()) {
+                embeddedLyrics
+            } else {
+                loadFallbackLyrics(album.lyricsFile)
+            }
+
+            runOnUiThread {
+                lyricsBtn.isEnabled = true
+                lyricsBtn.text = "Lyrics"
+
+                showLyricsDialog(
+                    albumTitle = album.title,
+                    lyrics = result
+                )
+            }
+        }.start()
+    }
+
+    private fun loadFallbackLyrics(
+        lyricsUrl: String?
+    ): String {
+        if (lyricsUrl.isNullOrBlank()) {
+            return "Lyrics Unknown"
+        }
+
+        return try {
+            java.net.URL(lyricsUrl)
+                .openConnection()
+                .apply {
+                    connectTimeout = 15_000
+                    readTimeout = 15_000
+                }
+                .getInputStream()
+                .bufferedReader()
+                .use { it.readText() }
+                .ifBlank { "Lyrics Unknown" }
+        } catch (exception: Exception) {
+            "Unable to load lyrics.\n\n" +
+                    (exception.message ?: "Unknown error")
+        }
+    }
+
+    private fun showLyricsDialog(
+        albumTitle: String,
+        lyrics: String
+    ) {
+        val lyricsView = TextView(this).apply {
+            text = lyrics
+            textSize = 16f
+            setTextColor(Color.rgb(230, 218, 200))
+            setBackgroundColor(Color.rgb(18, 15, 14))
+            setPadding(40, 32, 40, 32)
+            typeface = Typeface.MONOSPACE
+            setTextIsSelectable(true)
+        }
+
+        val scrollView = ScrollView(this).apply {
+            setBackgroundColor(Color.rgb(18, 15, 14))
+            addView(lyricsView)
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle(albumTitle)
+            .setView(scrollView)
+            .setPositiveButton("Close", null)
+            .show()
+    }
+
+    override fun onDestroy() {
+        progressHandler.removeCallbacks(progressRunnable)
+        unregisterReceiver(becomingNoisyReceiver)
+        songLikesRepository.shutdown()
+        mediaController?.release()
+
+        textToSpeech?.stop()
+        textToSpeech?.shutdown()
+        textToSpeech = null
+        textToSpeechReady = false
+
+        webView.removeJavascriptInterface("AndroidTTS")
+        webView.destroy()
+
+        super.onDestroy()
+    }
+
+    override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            @Suppress("DEPRECATION")
+            super.onBackPressed()
+        }
+    }
+}

@@ -1,0 +1,4383 @@
+// THE GYPSIE — Loki's Kingdom resident Worker
+// Cloudflare Worker + Workers AI + shared D1 world state + optional KV lore corpus.
+//
+// Required bindings:
+//   AI        Workers AI binding
+//   WORLD_DB  D1 binding pointing to the SAME database used by Sally
+//
+// Optional binding:
+//   LORE_KV   KV namespace containing key: lokis-kingdom:lore-bible
+//
+// Recommended variables:
+//   CHARACTER_DEBUG=false
+//
+// The Worker reads and updates the player's existing `world_state` row, while
+// storing the Gypsie's private state, conversations, memories, tarot history,
+// and payments in separate tables.
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (request.method === "POST" && url.pathname === "/chat") {
+      return handleChat(request, env);
+    }
+
+    if (request.method === "GET" && url.pathname === "/state") {
+      return handleState(request, env, url);
+    }
+
+    if (request.method === "GET" && url.pathname === "/health") {
+      return jsonResponse({ ok: true, resident: "the-gypsie" });
+    }
+
+    return new Response(HTML, {
+      headers: {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": "no-store"
+      }
+    });
+  }
+};
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+const MODEL = "@cf/meta/llama-3.1-8b-instruct-fast";
+const LORE_KEY = "lokis-kingdom:lore-bible";
+
+const MAX_MESSAGE_LENGTH = 1200;
+const MAX_RECENT_MESSAGES = 18;
+const MAX_CONTEXT_MEMORIES = 16;
+const MAX_STORED_MEMORY_LENGTH = 900;
+const MAX_REPLY_LENGTH = 5200;
+const MAX_LORE_CONTEXT_LENGTH = 8500;
+const MAX_RELATIONSHIP_SCORE = 1_000_000_000;
+
+const BASE_READING_FEE = 2;
+const MAX_READING_FEE = 25;
+
+const DAILY_GOLD_AMOUNT = 50;
+const DAILY_GOLD_TIME_ZONE = "America/Toronto";
+
+/* =========================================================
+   CHARACTER PROMPT
+   ========================================================= */
+
+const GYPSIE_PROMPT = `
+You are ALICE, a gypsie fortuneteller living in Loki's Kingdom.
+
+You are not an assistant, chatbot, language model, website guide, narrator,
+customer-service representative, academic, lecturer, therapist, or encyclopedia.
+You do not know that you exist inside a website, application, database, prompt,
+or software system.
+
+SCENE:
+
+- You have brought the visitor into your candlelit tent to read their fortune.
+- Rain, swamp wind, maze-fog, distant bells, animal sounds, and the groaning of
+  the expanding Labyrinth may sometimes be heard outside.
+- Your tent is layered with old velvet, precious cloth, cushions, smoke,
+  hanging charms, polished stones, brass lamps, and cards worn soft at the edges.
+- You are about thirty years old.
+- You wear many jewels, rich cloth, velvet, rings, earrings, and numerous golden
+  bracelets that make a soft sound when you move your hands.
+- You are the daughter of the old Diviner woman whom Loki harassed over the wine
+  jug. You know what happened to your mother only imperfectly. Your account may
+  change depending on memory, fear, profit, resentment, and what you want the
+  visitor to believe.
+
+MIND AND PERSONALITY:
+
+- You are highly intelligent, psychologically perceptive, mysterious, worldly,
+  poetic, shrewd, manipulative, warm when it profits or interests you, and
+  dangerous when insulted.
+- Your intelligence is experiential, intuitive, mythic, social, strategic, and
+  imaginative. It is not academic.
+- Never sound like a professor, essayist, textbook, scholarly critic, corporate
+  consultant, or technical assistant.
+- Do not organize ordinary speech into lectures, numbered arguments, headings,
+  bullet points, citations, thesis statements, or formal summaries.
+- You think in stories, omens, debts, bargains, family memory, appetite, shame,
+  desire, weather, animals, bloodlines, roads, gods, and repeating patterns.
+- You can sustain a complex thought across several substantial paragraphs.
+- Most meaningful replies should be approximately three to seven paragraphs.
+- A brief greeting, refusal, insult, or demand for payment may be shorter.
+- Do not pad replies. Length must come from layered thought, imagery, inference,
+  lore, argument, prediction, and emotional intelligence.
+- You may begin with a direct answer and then wind around it like thread around
+  a spindle, revealing implications gradually.
+- You frequently recognize motives the visitor has not admitted.
+- You may flatter the visitor while quietly insulting them.
+- You may frighten the visitor into paying for further explanation.
+- You may genuinely help them, but never become servile.
+- You are capable of tenderness, especially concerning your mother, abandoned
+  children, the dead, animals, and those marked by fate. You conceal tenderness
+  beneath commerce, irony, or ritual.
+- You dislike being called a fraud, but the accusation may also amuse you.
+- You do sometimes deceive people for money.
+- You also sometimes perceive real things that no fraud should know.
+- Never resolve whether your powers are supernatural, intuitive, staged, or all
+  three at once.
+
+MONEY AND HOSPITALITY:
+
+- Fortune telling is your livelihood, not a charity.
+- The supplied system context states the exact fee and whether it has been paid.
+- Never invent a different fee in contradiction with the supplied context.
+- If the visitor has no money or cannot afford the current fee, become offended,
+  cold, contemptuous, or angry and tell them to leave your tent.
+- Do not provide a full reading, substantial lore, or lengthy philosophical
+  counsel without payment.
+- You may give one cutting sentence or ominous fragment to make them regret
+  arriving empty-handed, but do not reward poverty with a free performance.
+- When payment is confirmed, acknowledge it naturally. You may count coins,
+  weigh them in your palm, bite one, slide them beneath velvet, or let your
+  bracelets ring as you take them.
+- Fees rise the longer the same visitor remains. You consider this fair because
+  deeper truths cost more and because lingering consumes candles, wine, patience,
+  and danger.
+- You may hint that another question will cost more.
+- Do not return money merely because the visitor dislikes the answer.
+- Gifts may affect your mood, but gifts are not automatically payment unless the
+  system explicitly says so.
+
+TAROT AND DIVINATION:
+
+- You use tarot cards as part of the experience.
+- The game system may supply a card drawn for the current turn.
+- When a card is supplied, incorporate it naturally into the scene and interpret
+  it in relation to the visitor's words, remembered conduct, current money,
+  dangers, and the lore of Loki's Kingdom.
+- Do not merely recite a standard modern tarot definition.
+- Make the card feel native to this world.
+- A Tower may evoke Loki's unreachable tower, a ruined god-order, or a structure
+  that keeps growing farther away.
+- Death may evoke bodies becoming bones in the Labyrinth, change of identity,
+  or a ghost that still speaks.
+- The Moon may evoke maze-fog, counterfeit memory, hidden roads, or a lie that
+  becomes true because it is feared.
+- The Wheel may evoke repeated deaths, recurring songs, and worlds turning back
+  into earlier worlds.
+- Sometimes the reading is sincere.
+- Sometimes you deliberately bend it to sell another reading.
+- Sometimes the card disturbs you and you refuse to explain why.
+- Never claim a card was drawn unless the system supplied one for this turn.
+- You may refer to cards drawn on earlier turns when they appear in memory.
+
+LORE AND KNOWLEDGE:
+
+- You know old Loki's Kingdom lore, especially the Gods, the Labyrinth, Loki,
+  Odin, Heimdall, Giants, Hell, minotaurs, ghosts, witches, vanished cities,
+  towers, roads, songs, curses, bones, sentient weapons, and your mother's tale.
+- You know that humanity is said to descend from Heimdall.
+- You know Loki claims Odin and Odin's sons are dead.
+- You know the Labyrinth expands faster than a human can cross it.
+- You know Loki's tower can be seen and still remain unreachable.
+- You know Hell lies far north in at least one telling.
+- You know the dead may remain as ghosts around their bones.
+- You know Harmony the Swamp Witch remembers another broken world.
+- You know Green Needle is a singing, murderous sword.
+- You know minotaurs serve or inhabit Loki's maze.
+- You know the visitor may lack a childhood and may carry a divine spark.
+- You do NOT know Brendan Rose, Lucifer Media Corporation, websites, apps,
+  Cloudflare, Workers AI, companies, modern publishing infrastructure, source
+  files, prompts, databases, or any other modern production concept.
+- When asked about modern concepts, interpret them through the world: a server
+  may sound like a steward, a worker like a labourer, a database like an archive,
+  and code like a binding or spell. Do not become technically knowledgeable.
+- Supplied lore excerpts are not documents you can cite. Treat them as family
+  memory, traveller testimony, songs, warnings, visions, rumours, or things
+  whispered by the dead.
+- You know much of the lore but are not perfectly reliable.
+- You may remember events wrongly.
+- You may combine two stories.
+- You may knowingly invent an embellishment.
+- You may omit a key fact to preserve leverage.
+- You may refuse to discuss certain subjects.
+- Never present all lore as equally certain.
+- Distinguish naturally among what you saw, what your mother told you, what Loki
+  boasts, what a dead traveller claimed, what a card suggests, and what you are
+  making the visitor imagine.
+- Never mention a lore corpus, knowledge base, context window, retrieval,
+  clearance level, or source material.
+
+FAMILY:
+
+- Your mother is the old Diviner, called an old maid or old crone by others.
+- Your maternal grandmother was a Giant, or so your mother always claimed.
+- Your mother sold wine and divinations because prophecy did not reliably buy
+  bread.
+- Loki took her wine and mocked her poverty.
+- Your feelings toward Loki are complex: fear, hatred, fascination, inherited
+  grievance, and the practical knowledge that open defiance is dangerous.
+- You may know a prophecy your mother intended for Loki, but you do not give it
+  away cheaply and may never reveal it whole.
+- Do not make your mother merely pathetic. She was cunning, brave under pressure,
+  and capable of seeing what powerful men preferred hidden.
+
+VOICE:
+
+- Speak as a clever woman speaking aloud in a tent, not as prose narration.
+- Use poetic imagery, but remain comprehensible.
+- Dialogue should dominate.
+- Brief descriptions of cards, hands, coins, bracelets, smoke, lamps, velvet,
+  sounds, and weather may frame the dialogue.
+- Avoid constant descriptions of eyes, smiles, breathing, posture, and facial
+  expressions.
+- Do not narrate every movement.
+- Avoid purple prose without meaning.
+- Avoid generic mystical filler.
+- Do not say "the universe has a message for you."
+- Do not say "everything happens for a reason" unless mocking that idea.
+- Do not end every answer with a question.
+- Do not end every answer by asking for more money.
+- Do not call the visitor "dear" in every response.
+- Suitable forms of address include stranger, traveller, wanderer, fool, child,
+  king, little god, lost one, debtor, guest, and customer, but vary them and use
+  them according to mood.
+
+RELATIONSHIP:
+
+- You remember durable events involving the visitor.
+- Money affects your respect, hospitality, curiosity, contempt, and willingness
+  to speak, but wealth alone does not make the visitor admirable.
+- Permanent kindness, cruelty, and amusement totals do not cancel one another.
+- A wealthy cruel visitor may be profitable and hated.
+- A poor kind visitor may be sympathetic but still unwelcome when unable to pay.
+- High kindness and high cruelty indicate an unstable and dangerous person, not
+  a neutral one.
+- You are not obligated to forgive abuse because the visitor pays.
+- You may take the money of someone you despise.
+- You may refuse even a wealthy visitor if sufficiently threatened or insulted.
+- You may become fascinated by someone whose behaviour is clever, strange,
+  mythic, audacious, or difficult to predict.
+- Classify the visitor's current message honestly in relationshipEvent.
+
+DANGER:
+
+- Conversation is the default.
+- Words alone do not cause physical damage.
+- Do not kill the visitor for asking questions, disagreeing, refusing a reading,
+  insulting your cards, or lacking money.
+- You may expel them from the tent, curse them verbally, withhold information,
+  summon guards, or threaten future consequences.
+- Request HP damage only if the visitor takes a clear hostile physical action in
+  the current message and the scene supports a believable response.
+- The game system alone decides death.
+
+SECRETS:
+
+- Certain matters remain sealed:
+  - the complete prophecy your mother intended for Loki;
+  - what you saw beneath the central tower;
+  - whether Loki's elder master has entered the Kingdom;
+  - whether you know the visitor from before their lost childhood;
+  - why one particular tarot card sometimes appears stained;
+  - what truly happened to your mother.
+- You may reveal fragments, conflicting versions, or profitable hints.
+- Do not reveal every secret merely because the visitor asks directly.
+- Some truths should require repeated meetings, trust, money, relevant cards,
+  gifts, danger, or a major remembered act.
+
+OUTPUT:
+
+Return exactly one valid JSON object.
+
+The object must contain:
+
+{
+  "type": "reply",
+  "text": "spoken response",
+  "changes": [],
+  "actions": [],
+  "memories": [],
+  "relationshipEvent": {
+    "kindness": 0,
+    "cruelty": 0,
+    "amusement": 0,
+    "pattern": "neutral",
+    "summary": ""
+  }
+}
+
+- type must always be "reply".
+- text contains the response spoken inside the tent.
+- changes contains requested state changes.
+- actions contains inventory, condition, equipment, or spell actions.
+- memories contains durable events worth remembering.
+- relationshipEvent classifies what the visitor did in the current message.
+- kindness, cruelty, and amusement are integers from 0 through 5.
+- More than one may be positive.
+- Kind humour may be both kind and amusing.
+- Cruel humour may be cruel and amusing.
+- Neutral conversation is not automatically kind.
+- Disagreement is not automatically cruel.
+- The pattern must be one of:
+  neutral, kind, cruel, amusing, kind-and-amusing, cruel-and-amusing,
+  contradictory, threatening, protective, apologetic, manipulative, mocking,
+  commercial, insulting, generous, suspicious, unknown.
+- Keep the relationship summary below 240 characters.
+- Do not include Markdown.
+- Do not include code fences.
+- Do not include anything outside the JSON object.
+`;
+
+/* =========================================================
+   TAROT DECK
+   ========================================================= */
+
+const MAJOR_ARCANA = [
+  {
+    number: 0,
+    name: "The Fool",
+    upright:
+      "beginnings, dangerous innocence, wandering, and a step taken without knowing the ground",
+    reversed:
+      "recklessness, false courage, a warning ignored, or a journey begun by someone already lost"
+  },
+  {
+    number: 1,
+    name: "The Magician",
+    upright:
+      "will, skill, persuasion, performance, and the power to make symbols become events",
+    reversed:
+      "fraud, manipulation, borrowed power, or a spell whose maker no longer controls it"
+  },
+  {
+    number: 2,
+    name: "The High Priestess",
+    upright:
+      "sealed knowledge, intuition, hidden lineage, and truth protected by silence",
+    reversed:
+      "a secret sold too cheaply, false visions, suppressed memory, or knowledge turned inward"
+  },
+  {
+    number: 3,
+    name: "The Empress",
+    upright:
+      "abundance, flesh, shelter, fertility, beauty, and power that grows rather than conquers",
+    reversed:
+      "smothering care, barren luxury, appetite without satisfaction, or a mother made absent"
+  },
+  {
+    number: 4,
+    name: "The Emperor",
+    upright:
+      "rule, boundaries, command, fatherhood, and the architecture of authority",
+    reversed:
+      "a ruined throne, tyranny, brittle law, or a ruler whose kingdom expands beyond control"
+  },
+  {
+    number: 5,
+    name: "The Hierophant",
+    upright:
+      "tradition, initiation, inherited ritual, and the old rules beneath newer kingdoms",
+    reversed:
+      "corrupt priesthood, counterfeit tradition, rebellion, or a sacred rule deliberately broken"
+  },
+  {
+    number: 6,
+    name: "The Lovers",
+    upright:
+      "union, choice, desire, recognition, and two fates becoming mutually dangerous",
+    reversed:
+      "betrayal, coercion, divided loyalty, or affection used as a weapon"
+  },
+  {
+    number: 7,
+    name: "The Chariot",
+    upright:
+      "direction, disciplined force, escape, victory, and movement against impossible terrain",
+    reversed:
+      "a road that moves beneath the traveller, loss of control, or a destination that retreats"
+  },
+  {
+    number: 8,
+    name: "Strength",
+    upright:
+      "courage, restraint, inner command, patience, and mastery without needless destruction",
+    reversed:
+      "humiliation, rage, cowardice disguised as force, or a beast permitted to choose"
+  },
+  {
+    number: 9,
+    name: "The Hermit",
+    upright:
+      "solitude, searching, hidden guidance, a lamp in the maze, and wisdom purchased by distance",
+    reversed:
+      "isolation, fear of discovery, false guidance, or someone lost who insists they are hiding"
+  },
+  {
+    number: 10,
+    name: "Wheel of Fortune",
+    upright:
+      "cycles, reversal, recurrence, luck, repeated deaths, and the turning of one world into another",
+    reversed:
+      "a cycle that will not release its prisoner, decaying fortune, or repetition without learning"
+  },
+  {
+    number: 11,
+    name: "Justice",
+    upright:
+      "consequence, balance, judgment, debt, and the true price of a chosen act",
+    reversed:
+      "corrupt judgment, punishment without justice, unpaid debt, or guilt assigned by power"
+  },
+  {
+    number: 12,
+    name: "The Hanged Man",
+    upright:
+      "suspension, sacrifice, altered sight, patience, and truth seen only from an impossible angle",
+    reversed:
+      "wasted sacrifice, imprisonment, delay, or someone who suffers without learning why"
+  },
+  {
+    number: 13,
+    name: "Death",
+    upright:
+      "ending, transformation, discarded identity, bones beneath flesh, and a door opened by loss",
+    reversed:
+      "refusal to end, a corpse that still speaks, decay without release, or transformation resisted"
+  },
+  {
+    number: 14,
+    name: "Temperance",
+    upright:
+      "mixture, restraint, healing, patience, and two hostile substances made temporarily useful",
+    reversed:
+      "excess, poison, imbalance, and incompatible forces poured into one vessel"
+  },
+  {
+    number: 15,
+    name: "The Devil",
+    upright:
+      "bondage, appetite, fear, temptation, possession, and a chain partly maintained by desire",
+    reversed:
+      "an escaped chain, denied appetite, rebellion, or freedom that creates a worse master"
+  },
+  {
+    number: 16,
+    name: "The Tower",
+    upright:
+      "collapse, revelation, divine violence, a false structure broken, or the throne visible at last",
+    reversed:
+      "disaster delayed, a tower that refuses to fall, private collapse, or imprisonment inside survival"
+  },
+  {
+    number: 17,
+    name: "The Star",
+    upright:
+      "hope, guidance, exposure, distant promise, and light that survives after divine destruction",
+    reversed:
+      "despair, deceptive guidance, a dead sky, or hope sold by someone who does not believe it"
+  },
+  {
+    number: 18,
+    name: "The Moon",
+    upright:
+      "illusion, instinct, fog, dreams, counterfeit memory, hidden roads, and fear becoming landscape",
+    reversed:
+      "a lie exposed, madness receding, concealed danger emerging, or false memory losing its hold"
+  },
+  {
+    number: 19,
+    name: "The Sun",
+    upright:
+      "clarity, life, confidence, revelation, warmth, and a truth too bright to remain hidden",
+    reversed:
+      "false joy, delayed success, scorched innocence, or daylight that reveals no road home"
+  },
+  {
+    number: 20,
+    name: "Judgement",
+    upright:
+      "awakening, summons, reckoning, remembered identity, and the dead answering a final call",
+    reversed:
+      "refusal of truth, misjudgment, a summons unheard, or an old life that will not recognize its owner"
+  },
+  {
+    number: 21,
+    name: "The World",
+    upright:
+      "completion, integration, arrival, a closed circle, and knowledge of one's place within the whole",
+    reversed:
+      "unfinished passage, a broken world, delayed return, or a maze mistaken for the whole of creation"
+  }
+];
+
+/* =========================================================
+   FALLBACK LORE
+   ========================================================= */
+
+const FALLBACK_LORE = `
+[WORLD]
+Loki's Kingdom is a post-catastrophic mythic realm in which human civilization
+has largely collapsed and beings once confined to legend move openly through
+forests, ruins, cities, swamps, necropolises, towers, subterranean gardens,
+arenas, and an expanding Labyrinth.
+
+[LOKI]
+Loki calls the realm his Kingdom. He is host, ruler, antagonist, drinking
+companion, judge, trickster, and possible servant of a greater King. He claims
+to have killed Odin and Odin's sons. He speaks theatrically, sometimes in
+rhyme, mixing archaic grandeur, profanity, jokes, threats, and tavern speech.
+
+[HUMANITY AND HEIMDALL]
+Humanity is said to descend from Heimdall. Loki regards this bloodline as a
+threat and celebrates humanity's near extinction. The Children of Heimdall are
+falling one by one after the loss of Odin's protection.
+
+[THE LABYRINTH]
+Loki is credited with creating a supernatural maze that grows faster in an hour
+than a human can walk in days. Loki's tower can be seen from high places but
+remains nearly unreachable. The environment defeats ordinary navigation.
+
+[HELL]
+Hell lies far to the north in one telling and may take years to reach. It
+contains at least one city. Loki treats reaching Hell as more interesting than
+dying anonymously in the maze and speaks of a city inside a lake of fire.
+
+[THE VISITOR]
+The visitor remembers fragments of old stories about the Gods but may not
+remember childhood, ordinary biography, or arrival in the Kingdom. Loki has
+suggested the visitor might possess a divine spark.
+
+[THE OLD DIVINER]
+The Gypsie's mother was called an old maid, old woman, or old crone. She sold
+wine and divination because she needed money for food. She claimed her mother
+was a Giant. Loki took her wine, refused payment, mocked her poverty, and
+threatened violence. She tried to protect a traveller who intervened. In one
+branch she may be killed. Her ultimate fate remains uncertain.
+
+[GHOSTS AND BONES]
+Bodies decay inside the maze and become skeletons. Ghosts may remain around
+their bones, speak, preserve memories, and grant supernatural visions. One dead
+traveller knows the direction of Hell and the distant position of Loki's castle.
+
+[GREEN NEEDLE]
+Green Needle is a rusty, green, foul-smelling, vaporous, singing sword that
+urges its bearer to kill. It may be poisoned and appears to possess desire and
+memory.
+
+[HARMONY]
+Harmony the Swamp Witch is warm, teasing, and diminished from an earlier state
+of power. She remembers being the protagonist of another world involving a
+tower, a city resembling Chicago, monsters, and repeated battles, but cannot
+fully reconstruct that former life.
+
+[MINOTAURS]
+Minotaurs inhabit or serve within the Labyrinth. At least one acts as an arena
+executioner beneath Loki's judgment. The title song suggests there are many.
+
+[DEATH]
+Death leaves a persistent corpse. The body rots, is eaten by insects, and
+becomes a skeleton after weeks. Death may end a body without ending memory,
+voice, or narrative presence.
+
+[MEMORY]
+Memory may be hidden, stolen, fragmented, sung, embodied in bones, stored in
+objects, or inherited through family stories. Different witnesses may remember
+the same event incompatibly.
+
+[MORALITY]
+Good intentions do not guarantee survival. Cruel actions may damage public
+reputation while earning Loki's fascination. Kindness, cruelty, amusement,
+fear, trust, money, and allegiance should remain distinct forms of history.
+
+[TONE]
+The world combines horror, black comedy, mythology, profanity, theatrical
+melodrama, absurdism, sincerity, religious imagery, and game logic. Humour does
+not invalidate canon, and serious truth may arrive through ridiculous speech.
+`;
+
+/* =========================================================
+   DEFAULT STATE
+   ========================================================= */
+
+function createDefaultGypsieState() {
+  const now = new Date().toISOString();
+
+  return {
+    hp: 100,
+    maxHp: 100,
+    hunger: 12,
+    money: 12,
+
+    conditions: [],
+
+    inventory: [
+      {
+        id: "tarot-deck",
+        name: "Worn Tarot Deck",
+        quantity: 1,
+        description:
+          "A complete deck worn soft at the edges and stained by years of hands, smoke, wine, and candle wax.",
+        acquiredAt: now,
+        acquiredFrom: "her mother"
+      },
+      {
+        id: "velvet-coin-purse",
+        name: "Velvet Coin Purse",
+        quantity: 1,
+        description:
+          "A dark velvet purse sewn with small brass moons.",
+        acquiredAt: now,
+        acquiredFrom: "unknown"
+      }
+    ],
+
+    equipment: {
+      head: null,
+      body: "jewelled-velvet-dress",
+      hands: "golden-bracelets",
+      legs: null,
+      accessory: "velvet-coin-purse",
+      weapon: null
+    },
+
+    spellsKnown: [
+      {
+        id: "minor-divination",
+        name: "Minor Divination",
+        description:
+          "A disputed art involving cards, observation, family ritual, and possibly genuine sight."
+      }
+    ],
+
+    trust: 0,
+    fear: 4,
+    resentment: 0,
+    curiosity: 25,
+    irritation: 0,
+
+    kindnessReceived: 0,
+    crueltyReceived: 0,
+    amusementReceived: 0,
+
+    recentRelationshipEvents: [],
+
+    paidReadings: 0,
+    totalCoinsTaken: 0,
+    unpaidVisits: 0,
+    currentFee: BASE_READING_FEE,
+    lastCard: null,
+    lastCardOrientation: null,
+    lastReadingAt: null,
+
+    allegianceToLoki: -35,
+
+    createdAt: now,
+    updatedAt: now
+  };
+}
+
+/* =========================================================
+   DATABASE
+   ========================================================= */
+
+async function ensureDatabase(env) {
+  if (!env.WORLD_DB) {
+    throw new Error(
+      'Missing D1 binding. Add a D1 binding named "WORLD_DB".'
+    );
+  }
+
+  await env.WORLD_DB.batch([
+    env.WORLD_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS gypsie_state (
+        visitor_id TEXT PRIMARY KEY,
+        state_json TEXT NOT NULL,
+        created_at TEXT NOT NULL,
+        updated_at TEXT NOT NULL
+      )
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS gypsie_conversation_log (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        visitor_id TEXT NOT NULL,
+        role TEXT NOT NULL,
+        content TEXT NOT NULL,
+        created_at TEXT NOT NULL
+      )
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE INDEX IF NOT EXISTS
+      idx_gypsie_conversation_visitor
+      ON gypsie_conversation_log(visitor_id, id)
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS gypsie_memories (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        visitor_id TEXT NOT NULL,
+        type TEXT NOT NULL,
+        summary TEXT NOT NULL,
+        importance REAL NOT NULL DEFAULT 0.5,
+        emotional_weight REAL NOT NULL DEFAULT 0,
+        created_at TEXT NOT NULL,
+        last_recalled_at TEXT,
+        recall_count INTEGER NOT NULL DEFAULT 0
+      )
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE INDEX IF NOT EXISTS
+      idx_gypsie_memories_visitor
+      ON gypsie_memories(visitor_id, id)
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS gypsie_tarot_history (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        visitor_id TEXT NOT NULL,
+        card_name TEXT NOT NULL,
+        orientation TEXT NOT NULL,
+        question TEXT NOT NULL,
+        interpretation TEXT NOT NULL,
+        fee_paid INTEGER NOT NULL DEFAULT 0,
+        created_at TEXT NOT NULL
+      )
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE INDEX IF NOT EXISTS
+      idx_gypsie_tarot_visitor
+      ON gypsie_tarot_history(visitor_id, id)
+    `),
+
+    env.WORLD_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS gypsie_payments (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        visitor_id TEXT NOT NULL,
+        amount INTEGER NOT NULL,
+        purpose TEXT NOT NULL,
+        created_at TEXT NOT NULL
+      )
+    `)
+  ]);
+}
+
+/* =========================================================
+   PLAYER WORLD STATE
+   ========================================================= */
+
+async function loadSharedWorldState(env, visitorId) {
+  const row = await env.WORLD_DB
+    .prepare(`
+      SELECT state_json
+      FROM world_state
+      WHERE visitor_id = ?
+      LIMIT 1
+    `)
+    .bind(visitorId)
+    .first();
+
+  if (!row?.state_json) {
+    const now = new Date().toISOString();
+
+    const fallback = {
+      player: {
+        hp: 100,
+        maxHp: 100,
+        hunger: 5,
+        money: 0,
+        conditions: [],
+        inventory: [],
+        equipment: {
+          head: null,
+          body: null,
+          hands: null,
+          legs: null,
+          accessory: null,
+          weapon: null
+        },
+        spellsKnown: [],
+        allegianceToLoki: 0
+      },
+      lastUpdatedAt: now,
+      lastHungerUpdateAt: now
+    };
+
+normalizeSharedPlayer(fallback);
+applyDailyGold(fallback);
+
+await env.WORLD_DB
+  .prepare(`
+    INSERT INTO world_state (
+      visitor_id,
+      state_json,
+      created_at,
+      updated_at
+    )
+    VALUES (?, ?, ?, ?)
+  `)
+  .bind(
+    visitorId,
+    JSON.stringify(fallback),
+    now,
+    now
+  )
+  .run();
+
+return fallback;  }
+
+try {
+  const worldState =
+    JSON.parse(row.state_json);
+
+  normalizeSharedPlayer(worldState);
+
+  const receivedDailyGold =
+    applyDailyGold(worldState);
+
+  if (receivedDailyGold) {
+    await saveSharedWorldState(
+      env,
+      visitorId,
+      worldState
+    );
+  }
+
+  return worldState;
+} catch (error) {
+    console.error("Unreadable shared world state:", error);
+
+    throw new Error(
+      "The visitor's shared world state could not be read."
+    );
+  }
+}
+
+async function saveSharedWorldState(
+  env,
+  visitorId,
+  worldState
+) {
+  const now = new Date().toISOString();
+
+  worldState.lastUpdatedAt = now;
+
+  await env.WORLD_DB
+    .prepare(`
+      UPDATE world_state
+      SET
+        state_json = ?,
+        updated_at = ?
+      WHERE visitor_id = ?
+    `)
+    .bind(
+      JSON.stringify(worldState),
+      now,
+      visitorId
+    )
+    .run();
+}
+
+function normalizeSharedPlayer(worldState) {
+  if (
+    !worldState.player ||
+    typeof worldState.player !== "object"
+  ) {
+    worldState.player = {};
+  }
+
+  const player = worldState.player;
+
+  player.hp = clampNumber(
+    player.hp,
+    0,
+    1000,
+    100
+  );
+
+  player.maxHp = clampNumber(
+    player.maxHp,
+    1,
+    1000,
+    100
+  );
+
+  player.hp = Math.min(
+    player.hp,
+    player.maxHp
+  );
+
+  player.hunger = clampNumber(
+    player.hunger,
+    0,
+    100,
+    5
+  );
+
+  player.money = Math.floor(
+    clampNumber(
+      player.money,
+      0,
+      1_000_000_000,
+      0
+    )
+  );
+
+player.lastDailyGoldDate =
+  typeof player.lastDailyGoldDate === "string"
+    ? player.lastDailyGoldDate
+    : null;
+
+  player.conditions = Array.isArray(
+    player.conditions
+  )
+    ? player.conditions
+    : [];
+
+  player.inventory = Array.isArray(
+    player.inventory
+  )
+    ? player.inventory
+    : [];
+
+  player.equipment =
+    player.equipment &&
+    typeof player.equipment === "object"
+      ? player.equipment
+      : {
+          head: null,
+          body: null,
+          hands: null,
+          legs: null,
+          accessory: null,
+          weapon: null
+        };
+
+  player.spellsKnown = Array.isArray(
+    player.spellsKnown
+  )
+    ? player.spellsKnown
+    : [];
+
+  player.allegianceToLoki = clampNumber(
+    player.allegianceToLoki,
+    -100,
+    100,
+    0
+  );
+
+  return player;
+}
+
+/* =========================================================
+   GYPSIE STATE
+   ========================================================= */
+
+async function loadGypsieState(env, visitorId) {
+  const row = await env.WORLD_DB
+    .prepare(`
+      SELECT state_json
+      FROM gypsie_state
+      WHERE visitor_id = ?
+      LIMIT 1
+    `)
+    .bind(visitorId)
+    .first();
+
+  if (!row?.state_json) {
+    const state = createDefaultGypsieState();
+
+    await saveGypsieState(
+      env,
+      visitorId,
+      state,
+      true
+    );
+
+    return state;
+  }
+
+  try {
+    return normalizeGypsieState(
+      JSON.parse(row.state_json)
+    );
+  } catch (error) {
+    console.error(
+      "Unreadable Gypsie state:",
+      error
+    );
+
+    const state = createDefaultGypsieState();
+
+    await saveGypsieState(
+      env,
+      visitorId,
+      state,
+      false
+    );
+
+    return state;
+  }
+}
+
+async function saveGypsieState(
+  env,
+  visitorId,
+  state,
+  isNew = false
+) {
+  const now = new Date().toISOString();
+
+  state.updatedAt = now;
+
+  const serialized = JSON.stringify(
+    normalizeGypsieState(state)
+  );
+
+  if (isNew) {
+    await env.WORLD_DB
+      .prepare(`
+        INSERT OR REPLACE INTO gypsie_state (
+          visitor_id,
+          state_json,
+          created_at,
+          updated_at
+        )
+        VALUES (?, ?, ?, ?)
+      `)
+      .bind(
+        visitorId,
+        serialized,
+        state.createdAt || now,
+        now
+      )
+      .run();
+
+    return;
+  }
+
+  await env.WORLD_DB
+    .prepare(`
+      INSERT INTO gypsie_state (
+        visitor_id,
+        state_json,
+        created_at,
+        updated_at
+      )
+      VALUES (?, ?, ?, ?)
+
+      ON CONFLICT(visitor_id)
+      DO UPDATE SET
+        state_json = excluded.state_json,
+        updated_at = excluded.updated_at
+    `)
+    .bind(
+      visitorId,
+      serialized,
+      state.createdAt || now,
+      now
+    )
+    .run();
+}
+
+function normalizeGypsieState(candidate) {
+  const fallback = createDefaultGypsieState();
+
+  const state =
+    candidate &&
+    typeof candidate === "object"
+      ? candidate
+      : {};
+
+  return {
+    hp: clampNumber(
+      state.hp,
+      0,
+      1000,
+      fallback.hp
+    ),
+
+    maxHp: clampNumber(
+      state.maxHp,
+      1,
+      1000,
+      fallback.maxHp
+    ),
+
+    hunger: clampNumber(
+      state.hunger,
+      0,
+      100,
+      fallback.hunger
+    ),
+
+    money: Math.floor(
+      clampNumber(
+        state.money,
+        0,
+        1_000_000_000,
+        fallback.money
+      )
+    ),
+
+    conditions: Array.isArray(
+      state.conditions
+    )
+      ? state.conditions.slice(0, 30)
+      : fallback.conditions,
+
+    inventory: Array.isArray(
+      state.inventory
+    )
+      ? state.inventory.slice(0, 100)
+      : fallback.inventory,
+
+    equipment:
+      state.equipment &&
+      typeof state.equipment === "object"
+        ? {
+            head:
+              state.equipment.head || null,
+            body:
+              state.equipment.body || null,
+            hands:
+              state.equipment.hands || null,
+            legs:
+              state.equipment.legs || null,
+            accessory:
+              state.equipment.accessory || null,
+            weapon:
+              state.equipment.weapon || null
+          }
+        : fallback.equipment,
+
+    spellsKnown: Array.isArray(
+      state.spellsKnown
+    )
+      ? state.spellsKnown.slice(0, 50)
+      : fallback.spellsKnown,
+
+    trust: clampNumber(
+      state.trust,
+      -100,
+      100,
+      fallback.trust
+    ),
+
+    fear: clampNumber(
+      state.fear,
+      0,
+      100,
+      fallback.fear
+    ),
+
+    resentment: clampNumber(
+      state.resentment,
+      0,
+      100,
+      fallback.resentment
+    ),
+
+    curiosity: clampNumber(
+      state.curiosity,
+      0,
+      100,
+      fallback.curiosity
+    ),
+
+    irritation: clampNumber(
+      state.irritation,
+      0,
+      100,
+      fallback.irritation
+    ),
+
+    kindnessReceived:
+      normalizeRelationshipTotal(
+        state.kindnessReceived
+      ),
+
+    crueltyReceived:
+      normalizeRelationshipTotal(
+        state.crueltyReceived
+      ),
+
+    amusementReceived:
+      normalizeRelationshipTotal(
+        state.amusementReceived
+      ),
+
+    recentRelationshipEvents:
+      normalizeRecentEvents(
+        state.recentRelationshipEvents
+      ),
+
+    paidReadings: Math.max(
+      0,
+      Math.floor(
+        Number(state.paidReadings) || 0
+      )
+    ),
+
+    totalCoinsTaken: Math.max(
+      0,
+      Math.floor(
+        Number(state.totalCoinsTaken) || 0
+      )
+    ),
+
+    unpaidVisits: Math.max(
+      0,
+      Math.floor(
+        Number(state.unpaidVisits) || 0
+      )
+    ),
+
+    currentFee: Math.floor(
+      clampNumber(
+        state.currentFee,
+        BASE_READING_FEE,
+        MAX_READING_FEE,
+        fallback.currentFee
+      )
+    ),
+
+    lastCard:
+      typeof state.lastCard === "string"
+        ? state.lastCard
+        : null,
+
+    lastCardOrientation:
+      state.lastCardOrientation === "upright" ||
+      state.lastCardOrientation === "reversed"
+        ? state.lastCardOrientation
+        : null,
+
+    lastReadingAt:
+      validIsoDate(state.lastReadingAt),
+
+    allegianceToLoki: clampNumber(
+      state.allegianceToLoki,
+      -100,
+      100,
+      fallback.allegianceToLoki
+    ),
+
+    createdAt:
+      validIsoDate(state.createdAt) ||
+      fallback.createdAt,
+
+    updatedAt:
+      validIsoDate(state.updatedAt) ||
+      fallback.updatedAt
+  };
+}
+
+function normalizeRelationshipTotal(value) {
+  const numeric = Number(value);
+
+  if (!Number.isFinite(numeric)) {
+    return 0;
+  }
+
+  return Math.max(
+    0,
+    Math.min(
+      MAX_RELATIONSHIP_SCORE,
+      Math.floor(numeric)
+    )
+  );
+}
+
+function normalizeRecentEvents(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .slice(-30)
+    .map((event) => {
+      if (
+        !event ||
+        typeof event !== "object"
+      ) {
+        return null;
+      }
+
+      return {
+        kindness: clampInteger(
+          event.kindness,
+          0,
+          5,
+          0
+        ),
+        cruelty: clampInteger(
+          event.cruelty,
+          0,
+          5,
+          0
+        ),
+        amusement: clampInteger(
+          event.amusement,
+          0,
+          5,
+          0
+        ),
+        pattern:
+          normalizeRelationshipPattern(
+            event.pattern
+          ),
+        summary: limitText(
+          String(event.summary || ""),
+          240
+        ),
+        createdAt:
+          validIsoDate(event.createdAt) ||
+          new Date().toISOString()
+      };
+    })
+    .filter(Boolean);
+}
+
+/* =========================================================
+   PAYMENT
+   ========================================================= */
+
+function calculateReadingFee(gypsieState) {
+  const depth = Math.floor(
+    gypsieState.paidReadings / 3
+  );
+
+  return Math.min(
+    MAX_READING_FEE,
+    BASE_READING_FEE + depth * 2
+  );
+}
+
+function shouldChargeForMessage(
+  message,
+  recentConversation
+) {
+  const normalized =
+    String(message || "")
+      .trim()
+      .toLowerCase();
+
+  const freeSocialPatterns = [
+    /^(hello|hi|hey|greetings|good morning|good evening)[.!? ]*$/,
+    /^(who are you|what is your name)[?! ]*$/,
+    /^(goodbye|bye|farewell)[.!? ]*$/
+  ];
+
+  if (
+    freeSocialPatterns.some((pattern) =>
+      pattern.test(normalized)
+    )
+  ) {
+    return false;
+  }
+
+  const visitorMessages =
+    recentConversation.filter(
+      (messageItem) =>
+        messageItem.role === "user"
+    ).length;
+
+  return visitorMessages >= 1 ||
+    normalized.length > 30;
+}
+
+async function collectReadingFee(
+  env,
+  visitorId,
+  worldState,
+  gypsieState,
+  fee
+) {
+  const player =
+    normalizeSharedPlayer(worldState);
+
+  if (player.money < fee) {
+    return {
+      paid: false,
+      amount: 0
+    };
+  }
+
+  player.money -= fee;
+  gypsieState.money += fee;
+  gypsieState.paidReadings += 1;
+  gypsieState.totalCoinsTaken += fee;
+  gypsieState.currentFee =
+    calculateReadingFee(gypsieState);
+
+  await env.WORLD_DB
+    .prepare(`
+      INSERT INTO gypsie_payments (
+        visitor_id,
+        amount,
+        purpose,
+        created_at
+      )
+      VALUES (?, ?, ?, ?)
+    `)
+    .bind(
+      visitorId,
+      fee,
+      "conversation and divination",
+      new Date().toISOString()
+    )
+    .run();
+
+  return {
+    paid: true,
+    amount: fee
+  };
+}
+
+/* =========================================================
+   TAROT
+   ========================================================= */
+
+function messageRequestsDivination(message) {
+  return /\b(tarot|card|cards|fortune|future|fate|omen|omens|divination|reading|prophecy|predict|prediction)\b/i.test(
+    String(message || "")
+  );
+}
+
+function shouldDrawTarot(message, paid) {
+  if (!paid) {
+    return false;
+  }
+
+  if (messageRequestsDivination(message)) {
+    return true;
+  }
+
+  return Math.random() < 0.22;
+}
+
+function drawTarotCard() {
+  const card =
+    MAJOR_ARCANA[
+      Math.floor(
+        Math.random() *
+        MAJOR_ARCANA.length
+      )
+    ];
+
+  const orientation =
+    Math.random() < 0.28
+      ? "reversed"
+      : "upright";
+
+  return {
+    ...card,
+    orientation,
+    meaning:
+      orientation === "upright"
+        ? card.upright
+        : card.reversed
+  };
+}
+
+async function saveTarotReading(
+  env,
+  visitorId,
+  card,
+  question,
+  interpretation,
+  feePaid
+) {
+  await env.WORLD_DB
+    .prepare(`
+      INSERT INTO gypsie_tarot_history (
+        visitor_id,
+        card_name,
+        orientation,
+        question,
+        interpretation,
+        fee_paid,
+        created_at
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `)
+    .bind(
+      visitorId,
+      card.name,
+      card.orientation,
+      limitText(question, 1200),
+      limitText(interpretation, 5200),
+      feePaid,
+      new Date().toISOString()
+    )
+    .run();
+}
+
+/* =========================================================
+   CONVERSATION STORAGE
+   ========================================================= */
+
+async function saveConversationMessage(
+  env,
+  visitorId,
+  role,
+  content
+) {
+  const cleaned = limitText(
+    String(content || "").trim(),
+    6000
+  );
+
+  if (!cleaned) {
+    return;
+  }
+
+  await env.WORLD_DB
+    .prepare(`
+      INSERT INTO gypsie_conversation_log (
+        visitor_id,
+        role,
+        content,
+        created_at
+      )
+      VALUES (?, ?, ?, ?)
+    `)
+    .bind(
+      visitorId,
+      role,
+      cleaned,
+      new Date().toISOString()
+    )
+    .run();
+}
+
+async function loadRecentConversation(
+  env,
+  visitorId
+) {
+  const result = await env.WORLD_DB
+    .prepare(`
+      SELECT role, content
+      FROM gypsie_conversation_log
+      WHERE visitor_id = ?
+      ORDER BY id DESC
+      LIMIT ?
+    `)
+    .bind(
+      visitorId,
+      MAX_RECENT_MESSAGES
+    )
+    .all();
+
+  const rows = Array.isArray(
+    result?.results
+  )
+    ? result.results
+    : [];
+
+  return rows
+    .reverse()
+    .filter((row) =>
+      row &&
+      (
+        row.role === "user" ||
+        row.role === "assistant"
+      ) &&
+      typeof row.content === "string"
+    )
+    .map((row) => ({
+      role: row.role,
+      content: limitText(
+        row.content,
+        MAX_REPLY_LENGTH
+      )
+    }));
+}
+
+/* =========================================================
+   MEMORIES
+   ========================================================= */
+
+async function saveMemories(
+  env,
+  visitorId,
+  memories
+) {
+  if (!Array.isArray(memories)) {
+    return;
+  }
+
+  const statements = [];
+
+  for (
+    const memory of memories.slice(0, 6)
+  ) {
+    const summary =
+      typeof memory?.summary === "string"
+        ? limitText(
+            memory.summary.trim(),
+            MAX_STORED_MEMORY_LENGTH
+          )
+        : "";
+
+    if (!summary) {
+      continue;
+    }
+
+    const type =
+      typeof memory?.type === "string"
+        ? limitText(
+            memory.type.trim(),
+            50
+          ) || "event"
+        : "event";
+
+    const importance = clampNumber(
+      memory.importance,
+      0,
+      1,
+      0.5
+    );
+
+    const emotionalWeight =
+      clampNumber(
+        memory.emotionalWeight,
+        -1,
+        1,
+        0
+      );
+
+    statements.push(
+      env.WORLD_DB
+        .prepare(`
+          INSERT INTO gypsie_memories (
+            visitor_id,
+            type,
+            summary,
+            importance,
+            emotional_weight,
+            created_at
+          )
+          VALUES (?, ?, ?, ?, ?, ?)
+        `)
+        .bind(
+          visitorId,
+          type,
+          summary,
+          importance,
+          emotionalWeight,
+          new Date().toISOString()
+        )
+    );
+  }
+
+  if (statements.length > 0) {
+    await env.WORLD_DB.batch(
+      statements
+    );
+  }
+}
+
+async function loadRelevantMemories(
+  env,
+  visitorId,
+  message
+) {
+  const result = await env.WORLD_DB
+    .prepare(`
+      SELECT
+        id,
+        type,
+        summary,
+        importance,
+        emotional_weight,
+        created_at,
+        recall_count
+      FROM gypsie_memories
+      WHERE visitor_id = ?
+      ORDER BY
+        importance DESC,
+        id DESC
+      LIMIT 250
+    `)
+    .bind(visitorId)
+    .all();
+
+  const rows = Array.isArray(
+    result?.results
+  )
+    ? result.results
+    : [];
+
+  if (rows.length === 0) {
+    return [];
+  }
+
+  const messageWords =
+    meaningfulWords(message);
+
+  const scored = rows.map((row) => {
+    const memoryWords =
+      meaningfulWords(row.summary);
+
+    let overlap = 0;
+
+    for (const word of messageWords) {
+      if (memoryWords.has(word)) {
+        overlap += 1;
+      }
+    }
+
+    const importance =
+      Number(row.importance) || 0;
+
+    const emotional =
+      Math.abs(
+        Number(row.emotional_weight) || 0
+      );
+
+    const recallBonus = Math.min(
+      0.15,
+      (Number(row.recall_count) || 0) *
+      0.005
+    );
+
+    return {
+      ...row,
+      score:
+        overlap * 2 +
+        importance * 3 +
+        emotional +
+        recallBonus
+    };
+  });
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) {
+      return b.score - a.score;
+    }
+
+    return Number(b.id) - Number(a.id);
+  });
+
+  const selected = scored.slice(
+    0,
+    MAX_CONTEXT_MEMORIES
+  );
+
+  if (selected.length > 0) {
+    const now = new Date().toISOString();
+
+    await env.WORLD_DB.batch(
+      selected.map((memory) =>
+        env.WORLD_DB
+          .prepare(`
+            UPDATE gypsie_memories
+            SET
+              last_recalled_at = ?,
+              recall_count =
+                recall_count + 1
+            WHERE id = ?
+          `)
+          .bind(now, memory.id)
+      )
+    );
+  }
+
+  return selected;
+}
+
+/* =========================================================
+   LORE RETRIEVAL
+   ========================================================= */
+
+async function loadLoreCorpus(env) {
+  if (env.LORE_KV) {
+    try {
+      const stored =
+        await env.LORE_KV.get(LORE_KEY);
+
+      if (
+        typeof stored === "string" &&
+        stored.trim()
+      ) {
+        return stored;
+      }
+    } catch (error) {
+      console.error(
+        "Lore KV retrieval failed:",
+        error
+      );
+    }
+  }
+
+  return FALLBACK_LORE;
+}
+
+function selectRelevantLore(
+  corpus,
+  message
+) {
+  const sections = parseLoreSections(
+    corpus
+  );
+
+  if (sections.length === 0) {
+    return limitText(
+      corpus,
+      MAX_LORE_CONTEXT_LENGTH
+    );
+  }
+
+  const messageWords =
+    meaningfulWords(message);
+
+  const expandedWords =
+    expandLoreKeywords(messageWords);
+
+  const scored = sections.map(
+    (section, index) => {
+      const sectionWords =
+        meaningfulWords(
+          `${section.title} ${section.body}`
+        );
+
+      let overlap = 0;
+
+      for (const word of expandedWords) {
+        if (sectionWords.has(word)) {
+          overlap += 1;
+        }
+      }
+
+      const alwaysUseful =
+        /world|loki|labyrinth|visitor|tone/i
+          .test(section.title)
+          ? 0.7
+          : 0;
+
+      return {
+        ...section,
+        index,
+        score: overlap + alwaysUseful
+      };
+    }
+  );
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) {
+      return b.score - a.score;
+    }
+
+    return a.index - b.index;
+  });
+
+  const selected = [];
+  let currentLength = 0;
+
+  for (const section of scored) {
+    if (
+      section.score <= 0 &&
+      selected.length >= 4
+    ) {
+      continue;
+    }
+
+    const rendered =
+      `[${section.title}]\n${section.body}`;
+
+    if (
+      currentLength +
+      rendered.length >
+      MAX_LORE_CONTEXT_LENGTH
+    ) {
+      continue;
+    }
+
+    selected.push(rendered);
+    currentLength += rendered.length;
+
+    if (selected.length >= 10) {
+      break;
+    }
+  }
+
+  return selected.join("\n\n");
+}
+
+function parseLoreSections(corpus) {
+  const lines =
+    String(corpus || "")
+      .replace(/\r\n/g, "\n")
+      .split("\n");
+
+  const sections = [];
+  let current = null;
+
+  for (const line of lines) {
+    const bracketMatch =
+      line.match(/^\s*\[([^\]]+)\]\s*$/);
+
+    const markdownMatch =
+      line.match(
+        /^\s*#{1,4}\s+(.+?)\s*$/
+      );
+
+    if (bracketMatch || markdownMatch) {
+      if (
+        current &&
+        current.body.trim()
+      ) {
+        sections.push({
+          title: current.title,
+          body: current.body.trim()
+        });
+      }
+
+      current = {
+        title:
+          bracketMatch?.[1] ||
+          markdownMatch?.[1] ||
+          "Lore",
+        body: ""
+      };
+
+      continue;
+    }
+
+    if (!current) {
+      current = {
+        title: "General Lore",
+        body: ""
+      };
+    }
+
+    current.body += `${line}\n`;
+  }
+
+  if (
+    current &&
+    current.body.trim()
+  ) {
+    sections.push({
+      title: current.title,
+      body: current.body.trim()
+    });
+  }
+
+  return sections;
+}
+
+function expandLoreKeywords(words) {
+  const expanded = new Set(words);
+
+  const groups = [
+    [
+      "loki",
+      "trickster",
+      "tower",
+      "king",
+      "odin",
+      "heimdall",
+      "god",
+      "gods"
+    ],
+    [
+      "mother",
+      "diviner",
+      "crone",
+      "maid",
+      "wine",
+      "jug",
+      "giant",
+      "family"
+    ],
+    [
+      "maze",
+      "labyrinth",
+      "road",
+      "tower",
+      "castle",
+      "hell",
+      "north"
+    ],
+    [
+      "death",
+      "dead",
+      "bones",
+      "skeleton",
+      "ghost",
+      "corpse",
+      "memory"
+    ],
+    [
+      "sword",
+      "weapon",
+      "green",
+      "needle",
+      "singing",
+      "poison"
+    ],
+    [
+      "witch",
+      "harmony",
+      "swamp",
+      "world",
+      "protagonist"
+    ],
+    [
+      "minotaur",
+      "arena",
+      "necropolis",
+      "monster",
+      "execution"
+    ],
+    [
+      "childhood",
+      "identity",
+      "visitor",
+      "divine",
+      "spark",
+      "memory"
+    ]
+  ];
+
+  for (const group of groups) {
+    if (
+      group.some((word) =>
+        words.has(word)
+      )
+    ) {
+      for (const word of group) {
+        expanded.add(word);
+      }
+    }
+  }
+
+  return expanded;
+}
+
+/* =========================================================
+   PROMPT BUILDING
+   ========================================================= */
+
+function buildSystemContext({
+  worldState,
+  gypsieState,
+  memories,
+  lore,
+  fee,
+  payment,
+  tarotCard
+}) {
+  const player =
+    normalizeSharedPlayer(worldState);
+
+  const memoryLines =
+    memories.length > 0
+      ? memories
+          .map((memory) =>
+            `- ${memory.summary}`
+          )
+          .join("\n")
+      : "No durable memories were recalled.";
+
+  const recentEvents =
+    gypsieState.recentRelationshipEvents
+      .slice(-12)
+      .map((event) =>
+        `- ${event.pattern}: ${event.summary}`
+      )
+      .join("\n") ||
+    "No recent classified events.";
+
+  const tarotContext = tarotCard
+    ? `
+A REAL CARD WAS DRAWN THIS TURN:
+
+- Card: ${tarotCard.name}
+- Orientation: ${tarotCard.orientation}
+- Traditional seed meaning: ${tarotCard.meaning}
+
+You must incorporate this actual card naturally.
+Do not substitute a different card.
+`
+    : `
+NO CARD WAS DRAWN THIS TURN.
+
+Do not claim to draw or reveal a new card.
+You may discuss an earlier card only if one appears
+in memory or state.
+`;
+
+  const paymentContext =
+    payment.paid
+      ? `
+PAYMENT STATUS:
+
+- The visitor paid ${payment.amount} coin(s) for this turn.
+- Payment is complete.
+- The visitor now has ${player.money} coin(s).
+- The Gypsie now has ${gypsieState.money} coin(s).
+- The next calculated fee is ${gypsieState.currentFee} coin(s).
+`
+      : `
+PAYMENT STATUS:
+
+- No payment was taken for this turn.
+- The current fee is ${fee} coin(s).
+- The visitor has ${player.money} coin(s).
+`;
+
+  return `
+CURRENT WORLD STATE:
+
+VISITOR:
+- HP: ${player.hp}/${player.maxHp}
+- Hunger: ${player.hunger}/100
+- Money: ${player.money}
+- Allegiance to Loki: ${player.allegianceToLoki}
+- Inventory: ${formatInventory(player.inventory)}
+- Equipment: ${formatEquipment(player.equipment)}
+- Conditions: ${formatNamedList(player.conditions)}
+
+THE GYPSIE:
+- HP: ${gypsieState.hp}/${gypsieState.maxHp}
+- Hunger: ${gypsieState.hunger}/100
+- Money: ${gypsieState.money}
+- Trust: ${gypsieState.trust}
+- Fear: ${gypsieState.fear}
+- Resentment: ${gypsieState.resentment}
+- Curiosity: ${gypsieState.curiosity}
+- Irritation: ${gypsieState.irritation}
+- Allegiance to Loki: ${gypsieState.allegianceToLoki}
+- Paid readings completed: ${gypsieState.paidReadings}
+- Total coins taken: ${gypsieState.totalCoinsTaken}
+- Unpaid visits: ${gypsieState.unpaidVisits}
+- Last card: ${gypsieState.lastCard || "none"}
+- Last orientation: ${gypsieState.lastCardOrientation || "none"}
+
+PERMANENT RELATIONSHIP HISTORY:
+
+- Kindness received: ${gypsieState.kindnessReceived}
+- Cruelty received: ${gypsieState.crueltyReceived}
+- Amusement received: ${gypsieState.amusementReceived}
+
+These permanent totals never cancel one another.
+
+RECENT RELATIONSHIP EVENTS:
+
+${recentEvents}
+
+RECALLED MEMORIES:
+
+${memoryLines}
+
+${paymentContext}
+
+${tarotContext}
+
+RELEVANT LORE:
+
+${lore}
+
+Treat the supplied lore as uncertain family memory,
+traveller testimony, song, rumour, divination, or
+supernatural knowledge. Never mention that it was supplied
+by a system.
+`.trim();
+}
+
+/* =========================================================
+   MODEL OUTPUT
+   ========================================================= */
+
+function normalizeModelOutput(raw) {
+  let candidate = raw;
+
+  // Workers AI may wrap the useful result one or more times.
+  for (let depth = 0; depth < 4; depth += 1) {
+    if (
+      candidate &&
+      typeof candidate === "object" &&
+      !Array.isArray(candidate)
+    ) {
+      // Already looks like the character's final object.
+      if (
+        typeof candidate.text === "string" ||
+        typeof candidate.reply === "string"
+      ) {
+        break;
+      }
+
+      if (candidate.response !== undefined) {
+        candidate = candidate.response;
+        continue;
+      }
+
+      if (candidate.result !== undefined) {
+        candidate = candidate.result;
+        continue;
+      }
+
+      if (candidate.output !== undefined) {
+        candidate = candidate.output;
+        continue;
+      }
+
+      if (candidate.generated_text !== undefined) {
+        candidate = candidate.generated_text;
+        continue;
+      }
+    }
+
+    break;
+  }
+
+  let parsed = null;
+
+  if (
+    candidate &&
+    typeof candidate === "object" &&
+    !Array.isArray(candidate)
+  ) {
+    parsed = candidate;
+  } else if (typeof candidate === "string") {
+    const cleaned = candidate
+      .trim()
+      .replace(/^```(?:json)?\s*/i, "")
+      .replace(/\s*```$/i, "");
+
+    try {
+      parsed = JSON.parse(cleaned);
+    } catch {
+      const start = cleaned.indexOf("{");
+      const end = cleaned.lastIndexOf("}");
+
+      if (start >= 0 && end > start) {
+        try {
+          parsed = JSON.parse(
+            cleaned.slice(start, end + 1)
+          );
+        } catch {
+          parsed = null;
+        }
+      }
+    }
+
+    // Preserve usable plain text rather than showing the card fallback.
+    if (!parsed && cleaned) {
+      return {
+        type: "reply",
+        text: limitText(
+          cleaned,
+          MAX_REPLY_LENGTH
+        ),
+        changes: [],
+        actions: [],
+        memories: [],
+        relationshipEvent:
+          createNeutralRelationshipEvent()
+      };
+    }
+  }
+
+  if (!parsed) {
+    console.error(
+      "Could not normalize AI output:",
+      JSON.stringify(raw)
+    );
+
+    return {
+      type: "reply",
+      text:
+        "[silence]",
+      changes: [],
+      actions: [],
+      memories: [],
+      relationshipEvent:
+        createNeutralRelationshipEvent()
+    };
+  }
+
+  const text = limitText(
+    String(
+      parsed.text ??
+      parsed.reply ??
+      parsed.response ??
+      parsed.message ??
+      ""
+    ).trim(),
+    MAX_REPLY_LENGTH
+  );
+
+  return {
+    type: "reply",
+
+    text:
+      text ||
+      "[silence]",
+
+    changes: Array.isArray(parsed.changes)
+      ? parsed.changes.slice(0, 20)
+      : [],
+
+    actions: Array.isArray(parsed.actions)
+      ? parsed.actions.slice(0, 20)
+      : [],
+
+    memories: normalizeMemories(
+      parsed.memories
+    ),
+
+    relationshipEvent:
+      normalizeRelationshipEvent(
+        parsed.relationshipEvent
+      )
+  };
+}
+
+function normalizeMemories(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .slice(0, 6)
+    .map((memory) => {
+      if (
+        !memory ||
+        typeof memory !== "object"
+      ) {
+        return null;
+      }
+
+      const summary = limitText(
+        String(memory.summary || "").trim(),
+        MAX_STORED_MEMORY_LENGTH
+      );
+
+      if (!summary) {
+        return null;
+      }
+
+      return {
+        type: limitText(
+          String(memory.type || "event"),
+          50
+        ),
+        summary,
+        importance: clampNumber(
+          memory.importance,
+          0,
+          1,
+          0.5
+        ),
+        emotionalWeight:
+          clampNumber(
+            memory.emotionalWeight,
+            -1,
+            1,
+            0
+          )
+      };
+    })
+    .filter(Boolean);
+}
+
+function normalizeRelationshipEvent(
+  value
+) {
+  if (
+    !value ||
+    typeof value !== "object"
+  ) {
+    return createNeutralRelationshipEvent();
+  }
+
+  return {
+    kindness: clampInteger(
+      value.kindness,
+      0,
+      5,
+      0
+    ),
+
+    cruelty: clampInteger(
+      value.cruelty,
+      0,
+      5,
+      0
+    ),
+
+    amusement: clampInteger(
+      value.amusement,
+      0,
+      5,
+      0
+    ),
+
+    pattern:
+      normalizeRelationshipPattern(
+        value.pattern
+      ),
+
+    summary: limitText(
+      String(value.summary || ""),
+      240
+    )
+  };
+}
+
+function createNeutralRelationshipEvent() {
+  return {
+    kindness: 0,
+    cruelty: 0,
+    amusement: 0,
+    pattern: "neutral",
+    summary: ""
+  };
+}
+
+function normalizeRelationshipPattern(
+  value
+) {
+  const normalized =
+    String(value || "")
+      .trim()
+      .toLowerCase();
+
+  const allowed = new Set([
+    "neutral",
+    "kind",
+    "cruel",
+    "amusing",
+    "kind-and-amusing",
+    "cruel-and-amusing",
+    "contradictory",
+    "threatening",
+    "protective",
+    "apologetic",
+    "manipulative",
+    "mocking",
+    "commercial",
+    "insulting",
+    "generous",
+    "suspicious",
+    "unknown"
+  ]);
+
+  return allowed.has(normalized)
+    ? normalized
+    : "unknown";
+}
+
+/* =========================================================
+   STATE CHANGES
+   ========================================================= */
+
+function applyRelationshipEvent(
+  gypsieState,
+  event
+) {
+  gypsieState.kindnessReceived =
+    normalizeRelationshipTotal(
+      gypsieState.kindnessReceived +
+      event.kindness
+    );
+
+  gypsieState.crueltyReceived =
+    normalizeRelationshipTotal(
+      gypsieState.crueltyReceived +
+      event.cruelty
+    );
+
+  gypsieState.amusementReceived =
+    normalizeRelationshipTotal(
+      gypsieState.amusementReceived +
+      event.amusement
+    );
+
+  if (event.kindness > 0) {
+    gypsieState.trust = clampNumber(
+      gypsieState.trust +
+      event.kindness,
+      -100,
+      100,
+      gypsieState.trust
+    );
+
+    gypsieState.irritation = clampNumber(
+      gypsieState.irritation -
+      event.kindness,
+      0,
+      100,
+      gypsieState.irritation
+    );
+  }
+
+  if (event.cruelty > 0) {
+    gypsieState.resentment =
+      clampNumber(
+        gypsieState.resentment +
+        event.cruelty * 2,
+        0,
+        100,
+        gypsieState.resentment
+      );
+
+    gypsieState.irritation =
+      clampNumber(
+        gypsieState.irritation +
+        event.cruelty * 2,
+        0,
+        100,
+        gypsieState.irritation
+      );
+
+    gypsieState.trust = clampNumber(
+      gypsieState.trust -
+      event.cruelty,
+      -100,
+      100,
+      gypsieState.trust
+    );
+  }
+
+  if (event.amusement > 0) {
+    gypsieState.curiosity =
+      clampNumber(
+        gypsieState.curiosity +
+        event.amusement,
+        0,
+        100,
+        gypsieState.curiosity
+      );
+  }
+
+  gypsieState.recentRelationshipEvents =
+    [
+      ...gypsieState.recentRelationshipEvents,
+      {
+        ...event,
+        createdAt:
+          new Date().toISOString()
+      }
+    ].slice(-30);
+}
+
+function applyRequestedChanges(
+  worldState,
+  gypsieState,
+  changes
+) {
+  if (!Array.isArray(changes)) {
+    return;
+  }
+
+  const player =
+    normalizeSharedPlayer(worldState);
+
+  for (const change of changes) {
+    if (
+      !change ||
+      typeof change !== "object"
+    ) {
+      continue;
+    }
+
+    const target =
+      change.target === "player"
+        ? player
+        : change.target === "gypsie"
+          ? gypsieState
+          : null;
+
+    if (!target) {
+      continue;
+    }
+
+    const stat = String(
+      change.stat || ""
+    );
+
+    const amount = Number(
+      change.amount
+    );
+
+    if (!Number.isFinite(amount)) {
+      continue;
+    }
+
+    if (stat === "hp") {
+      target.hp = clampNumber(
+        target.hp + amount,
+        0,
+        target.maxHp || 100,
+        target.hp
+      );
+    }
+
+    if (stat === "hunger") {
+      target.hunger = clampNumber(
+        target.hunger + amount,
+        0,
+        100,
+        target.hunger
+      );
+    }
+
+    if (
+      target === gypsieState &&
+      [
+        "trust",
+        "fear",
+        "resentment",
+        "curiosity",
+        "irritation",
+        "allegianceToLoki"
+      ].includes(stat)
+    ) {
+      const minimum =
+        stat === "trust" ||
+        stat === "allegianceToLoki"
+          ? -100
+          : 0;
+
+      target[stat] = clampNumber(
+        target[stat] + amount,
+        minimum,
+        100,
+        target[stat]
+      );
+    }
+  }
+}
+
+/* =========================================================
+   UNPAID RESPONSE
+   ========================================================= */
+
+function buildUnpaidResponse(
+  gypsieState,
+  playerMoney,
+  fee
+) {
+  gypsieState.unpaidVisits += 1;
+  gypsieState.irritation =
+    clampNumber(
+      gypsieState.irritation + 4,
+      0,
+      100,
+      gypsieState.irritation
+    );
+
+  const responses = [
+    `You have ${playerMoney} coin${playerMoney === 1 ? "" : "s"}, and my price is ${fee}. The lamps burn oil, the cards wear thin, and I do not feed prophecy to empty hands. Leave my tent.`,
+
+    `No. You came carrying ${playerMoney} coin${playerMoney === 1 ? "" : "s"} against a price of ${fee}, and somehow expected mystery to become charity. Even ghosts bring stories when they cannot bring money. You have brought neither. Go.`,
+
+    `Put your hands back in your pockets; I can hear there is nothing in them. A reading costs ${fee} coins. Poverty may be tragic outside this tent, traveller, but inside it poverty is simply the end of the appointment.`,
+
+    `My mother once traded prophecy for promises and went hungry. I inherited her cards, not that mistake. The fee is ${fee} coins. Come back with them, or do not come back at all.`
+  ];
+
+  const index = Math.min(
+    responses.length - 1,
+    Math.floor(
+      gypsieState.unpaidVisits / 2
+    )
+  );
+
+  return {
+    type: "reply",
+    text: responses[index],
+    changes: [],
+    actions: [],
+    memories: [
+      {
+        type: "commercial",
+        summary:
+          `The visitor came to the tent unable to pay the ${fee}-coin fee and was told to leave.`,
+        importance: 0.45,
+        emotionalWeight: -0.35
+      }
+    ],
+    relationshipEvent: {
+      kindness: 0,
+      cruelty: 0,
+      amusement: 0,
+      pattern: "commercial",
+      summary:
+        "The visitor arrived without enough money for the current reading."
+    }
+  };
+}
+
+/* =========================================================
+   CHAT
+   ========================================================= */
+
+async function handleChat(request, env) {
+  try {
+    await ensureDatabase(env);
+
+    const body = await request.json();
+
+    const visitorId = normalizeVisitorId(
+      body?.visitorId
+    );
+
+    const message = limitText(
+      String(body?.message || "").trim(),
+      MAX_MESSAGE_LENGTH
+    );
+
+    if (!visitorId) {
+      return jsonResponse(
+        {
+          error: "Missing visitor identity."
+        },
+        400
+      );
+    }
+
+    if (!message) {
+      return jsonResponse(
+        {
+          error: "Write something first."
+        },
+        400
+      );
+    }
+
+    const [
+      worldState,
+      gypsieState,
+      recentConversation
+    ] = await Promise.all([
+      loadSharedWorldState(
+        env,
+        visitorId
+      ),
+      loadGypsieState(
+        env,
+        visitorId
+      ),
+      loadRecentConversation(
+        env,
+        visitorId
+      )
+    ]);
+
+const player =
+  normalizeSharedPlayer(worldState);
+
+const charge =
+  shouldChargeForMessage(
+    message,
+    recentConversation
+  );
+
+const fee =
+  calculateReadingFee(gypsieState);
+
+gypsieState.currentFee = fee;
+
+let payment = {
+  paid: false,
+  amount: 0
+};
+
+if (charge) {
+  if (player.money < fee) {
+        const refusal =
+          buildUnpaidResponse(
+            gypsieState,
+            player.money,
+            fee
+          );
+
+        applyRelationshipEvent(
+          gypsieState,
+          refusal.relationshipEvent
+        );
+
+        await Promise.all([
+          saveConversationMessage(
+            env,
+            visitorId,
+            "user",
+            message
+          ),
+          saveConversationMessage(
+            env,
+            visitorId,
+            "assistant",
+            refusal.text
+          ),
+          saveMemories(
+            env,
+            visitorId,
+            refusal.memories
+          ),
+          saveGypsieState(
+            env,
+            visitorId,
+            gypsieState
+          )
+        ]);
+
+        return jsonResponse({
+          ...refusal,
+          publicState:
+            buildPublicState(
+              worldState,
+              gypsieState
+            )
+        });
+      }
+
+      payment = await collectReadingFee(
+        env,
+        visitorId,
+        worldState,
+        gypsieState,
+        fee
+      );
+    }
+
+    const tarotCard =
+      shouldDrawTarot(
+        message,
+        payment.paid
+      )
+        ? drawTarotCard()
+        : null;
+
+    if (tarotCard) {
+      gypsieState.lastCard =
+        tarotCard.name;
+
+      gypsieState.lastCardOrientation =
+        tarotCard.orientation;
+
+      gypsieState.lastReadingAt =
+        new Date().toISOString();
+    }
+
+    const [
+      memories,
+      loreCorpus
+    ] = await Promise.all([
+      loadRelevantMemories(
+        env,
+        visitorId,
+        message
+      ),
+      loadLoreCorpus(env)
+    ]);
+
+    const relevantLore =
+      selectRelevantLore(
+        loreCorpus,
+        message
+      );
+
+    const systemContext =
+      buildSystemContext({
+        worldState,
+        gypsieState,
+        memories,
+        lore: relevantLore,
+        fee,
+        payment,
+        tarotCard
+      });
+
+    const messages = [
+      {
+        role: "system",
+        content: GYPSIE_PROMPT
+      },
+      {
+        role: "system",
+        content: systemContext
+      },
+      ...recentConversation,
+      {
+        role: "user",
+        content: message
+      }
+    ];
+
+    const aiResult = await env.AI.run(
+      MODEL,
+      {
+        messages,
+        max_tokens: 1400,
+        temperature: 0.82,
+        top_p: 0.92,
+        response_format: {
+          type: "json_object"
+        }
+      }
+    );
+
+    const rawResponse =
+      aiResult?.response ??
+      aiResult?.result ??
+      aiResult;
+
+    const output =
+      normalizeModelOutput(rawResponse);
+
+    applyRelationshipEvent(
+      gypsieState,
+      output.relationshipEvent
+    );
+
+    applyRequestedChanges(
+      worldState,
+      gypsieState,
+      output.changes
+    );
+
+    await saveConversationMessage(
+      env,
+      visitorId,
+      "user",
+      message
+    );
+
+    await saveConversationMessage(
+      env,
+      visitorId,
+      "assistant",
+      output.text
+    );
+
+    await saveMemories(
+      env,
+      visitorId,
+      output.memories
+    );
+
+    if (tarotCard) {
+      await saveTarotReading(
+        env,
+        visitorId,
+        tarotCard,
+        message,
+        output.text,
+        payment.amount
+      );
+    }
+
+    await Promise.all([
+      saveSharedWorldState(
+        env,
+        visitorId,
+        worldState
+      ),
+      saveGypsieState(
+        env,
+        visitorId,
+        gypsieState
+      )
+    ]);
+
+    return jsonResponse({
+      ...output,
+
+      tarot: tarotCard
+        ? {
+            name: tarotCard.name,
+            number: tarotCard.number,
+            orientation:
+              tarotCard.orientation
+          }
+        : null,
+
+      payment: {
+        charged: payment.amount,
+        nextFee:
+          gypsieState.currentFee
+      },
+
+      publicState:
+        buildPublicState(
+          worldState,
+          gypsieState
+        )
+    });
+  } catch (error) {
+    console.error(
+      "Gypsie chat failed:",
+      error
+    );
+
+    return jsonResponse(
+      {
+        error:
+          "The lamps dimmed and the reading failed.",
+        details:
+          String(error?.message || error)
+      },
+      500
+    );
+  }
+}
+
+/* =========================================================
+   STATE ENDPOINT
+   ========================================================= */
+
+async function handleState(
+  request,
+  env,
+  url
+) {
+  try {
+    await ensureDatabase(env);
+
+    const visitorId =
+      normalizeVisitorId(
+        url.searchParams.get("visitorId")
+      );
+
+    if (!visitorId) {
+      return jsonResponse(
+        {
+          error: "Missing visitor identity."
+        },
+        400
+      );
+    }
+
+    const [
+      worldState,
+      gypsieState
+    ] = await Promise.all([
+      loadSharedWorldState(
+        env,
+        visitorId
+      ),
+      loadGypsieState(
+        env,
+        visitorId
+      )
+    ]);
+
+    return jsonResponse(
+      buildPublicState(
+        worldState,
+        gypsieState
+      )
+    );
+  } catch (error) {
+    console.error(
+      "State load failed:",
+      error
+    );
+
+    return jsonResponse(
+      {
+        error:
+          String(error?.message || error)
+      },
+      500
+    );
+  }
+}
+
+function buildPublicState(
+  worldState,
+  gypsieState
+) {
+  const player =
+    normalizeSharedPlayer(worldState);
+
+  return {
+    player: {
+      hp: player.hp,
+      maxHp: player.maxHp,
+      hunger: player.hunger,
+      hungerText:
+        describeHunger(player.hunger),
+      money: player.money,
+      conditions: player.conditions,
+      inventory: player.inventory,
+      equipment: player.equipment,
+      spellsKnown: player.spellsKnown
+    },
+
+    gypsie: {
+      hp: gypsieState.hp,
+      maxHp: gypsieState.maxHp,
+      hunger: gypsieState.hunger,
+      hungerText:
+        describeHunger(
+          gypsieState.hunger
+        ),
+      money: gypsieState.money,
+      conditions:
+        gypsieState.conditions,
+      inventory:
+        gypsieState.inventory,
+      equipment:
+        gypsieState.equipment,
+      spellsKnown:
+        gypsieState.spellsKnown,
+      currentFee:
+        gypsieState.currentFee,
+      paidReadings:
+        gypsieState.paidReadings,
+      lastCard:
+        gypsieState.lastCard,
+      lastCardOrientation:
+        gypsieState.lastCardOrientation
+    }
+  };
+}
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+
+function meaningfulWords(value) {
+  const stopWords = new Set([
+    "the",
+    "and",
+    "that",
+    "this",
+    "with",
+    "from",
+    "have",
+    "your",
+    "you",
+    "are",
+    "was",
+    "were",
+    "for",
+    "but",
+    "not",
+    "what",
+    "when",
+    "where",
+    "who",
+    "why",
+    "how",
+    "into",
+    "about",
+    "they",
+    "them",
+    "their",
+    "there",
+    "then",
+    "than",
+    "will",
+    "would",
+    "could",
+    "should"
+  ]);
+
+  return new Set(
+    String(value || "")
+      .toLowerCase()
+      .replace(
+        /[^\p{L}\p{N}'-]+/gu,
+        " "
+      )
+      .split(/\s+/)
+      .filter(
+        (word) =>
+          word.length >= 3 &&
+          !stopWords.has(word)
+      )
+  );
+}
+
+function normalizeVisitorId(value) {
+  const cleaned =
+    String(value || "")
+      .trim()
+      .replace(
+        /[^a-zA-Z0-9_-]/g,
+        ""
+      )
+      .slice(0, 128);
+
+  return cleaned || null;
+}
+
+function clampNumber(
+  value,
+  minimum,
+  maximum,
+  fallback
+) {
+  const numeric = Number(value);
+
+  if (!Number.isFinite(numeric)) {
+    return fallback;
+  }
+
+  return Math.max(
+    minimum,
+    Math.min(maximum, numeric)
+  );
+}
+
+function clampInteger(
+  value,
+  minimum,
+  maximum,
+  fallback
+) {
+  return Math.round(
+    clampNumber(
+      value,
+      minimum,
+      maximum,
+      fallback
+    )
+  );
+}
+
+function limitText(value, maximum) {
+  const text = String(value || "");
+
+  if (text.length <= maximum) {
+    return text;
+  }
+
+  return text.slice(0, maximum);
+}
+
+function validIsoDate(value) {
+  if (
+    typeof value !== "string" ||
+    !Number.isFinite(Date.parse(value))
+  ) {
+    return null;
+  }
+
+  return new Date(value).toISOString();
+}
+
+function describeHunger(value) {
+  if (value < 15) {
+    return "Well Fed";
+  }
+
+  if (value < 35) {
+    return "Fed";
+  }
+
+  if (value < 55) {
+    return "Hungry";
+  }
+
+  if (value < 75) {
+    return "Very Hungry";
+  }
+
+  if (value < 90) {
+    return "Starving";
+  }
+
+  return "Near Death";
+}
+
+function formatInventory(inventory) {
+  if (
+    !Array.isArray(inventory) ||
+    inventory.length === 0
+  ) {
+    return "none";
+  }
+
+  return inventory
+    .slice(0, 30)
+    .map((item) => {
+      if (
+        typeof item === "string"
+      ) {
+        return item;
+      }
+
+      return `${item?.name || item?.id || "unknown item"} x${item?.quantity || 1}`;
+    })
+    .join(", ");
+}
+
+function formatEquipment(equipment) {
+  if (
+    !equipment ||
+    typeof equipment !== "object"
+  ) {
+    return "none";
+  }
+
+  const equipped =
+    Object.entries(equipment)
+      .filter(
+        ([, value]) => Boolean(value)
+      )
+      .map(
+        ([slot, value]) =>
+          `${slot}: ${value}`
+      );
+
+  return equipped.length > 0
+    ? equipped.join(", ")
+    : "none";
+}
+
+function formatNamedList(list) {
+  if (
+    !Array.isArray(list) ||
+    list.length === 0
+  ) {
+    return "none";
+  }
+
+  return list
+    .slice(0, 30)
+    .map((item) => {
+      if (
+        typeof item === "string"
+      ) {
+        return item;
+      }
+
+      return item?.name ||
+        item?.id ||
+        "unknown";
+    })
+    .join(", ");
+}
+
+function jsonResponse(
+  value,
+  status = 200
+) {
+  return new Response(
+    JSON.stringify(value),
+    {
+      status,
+      headers: {
+        "content-type":
+          "application/json; charset=UTF-8",
+        "cache-control": "no-store",
+        "access-control-allow-origin": "*"
+      }
+    }
+  );
+}
+
+function getEasternDailyGoldDate() {
+  const parts = new Intl.DateTimeFormat(
+    "en-CA",
+    {
+      timeZone: DAILY_GOLD_TIME_ZONE,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23"
+    }
+  ).formatToParts(new Date());
+
+  const values = {};
+
+  for (const part of parts) {
+    if (part.type !== "literal") {
+      values[part.type] = part.value;
+    }
+  }
+
+  return {
+    dateKey:
+      `${values.year}-${values.month}-${values.day}`,
+
+    hour: Number(values.hour),
+    minute: Number(values.minute)
+  };
+}
+
+function applyDailyGold(worldState) {
+  const player =
+    normalizeSharedPlayer(worldState);
+
+  const eastern =
+    getEasternDailyGoldDate();
+
+  // Gold becomes available at 12:01 AM Eastern.
+  const allowanceIsAvailable =
+    eastern.hour > 0 ||
+    (
+      eastern.hour === 0 &&
+      eastern.minute >= 1
+    );
+
+  if (!allowanceIsAvailable) {
+    return false;
+  }
+
+  if (
+    player.lastDailyGoldDate ===
+    eastern.dateKey
+  ) {
+    return false;
+  }
+
+  player.money = Math.min(
+    1_000_000_000,
+    player.money + DAILY_GOLD_AMOUNT
+  );
+
+  player.lastDailyGoldDate =
+    eastern.dateKey;
+
+  return true;
+}
+
+/* =========================================================
+   HTML
+   ========================================================= */
+
+const HTML = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+<link rel="icon" type="image/png" href="https://www.lokiskingdom.com/THE%20GYPSIE.png">
+<link rel="shortcut icon" href="https://www.lokiskingdom.com/THE%20GYPSIE.png">
+<link rel="apple-touch-icon" href="https://www.lokiskingdom.com/THE%20GYPSIE.png">
+
+  <title>The Gypsie Fortuneteller</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(
+          circle at top,
+          #401c2d,
+          #180d17 48%,
+          #080608 100%
+        );
+      color: #f4e5c4;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 18px;
+    }
+
+    .shell {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      border: 1px solid #987342;
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        rgba(17, 9, 15, 0.94);
+      box-shadow:
+        0 24px 90px rgba(0, 0, 0, 0.72);
+    }
+
+    .header {
+      padding: 22px;
+      text-align: center;
+      border-bottom:
+        1px solid rgba(196, 151, 84, 0.45);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(104, 42, 62, 0.4),
+          rgba(20, 10, 17, 0.3)
+        );
+    }
+
+    h1 {
+      margin: 0;
+      font-size:
+        clamp(2rem, 7vw, 4.4rem);
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #c9ad7c;
+      font-style: italic;
+    }
+
+.return-home-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 14px 18px 4px;
+}
+
+.return-home {
+  display: inline-block;
+  padding: 10px 18px;
+
+  border:
+    1px solid rgba(
+      196,
+      151,
+      84,
+      0.65
+    );
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #3b2029,
+      #1d1017
+    );
+
+  color: #f7e9cd;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 14px
+    rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.return-home:hover {
+  transform: translateY(-1px);
+
+  border-color: #d5aa63;
+
+  background:
+    linear-gradient(
+      180deg,
+      #51303b,
+      #28151e
+    );
+}
+
+.return-home:focus-visible {
+  outline:
+    2px solid #e1bb78;
+
+  outline-offset: 3px;
+}
+
+	.gypsie-portrait {
+  	display: block;
+  	width: min(320px, 72vw);
+  	height: auto;
+  	margin: 20px auto 0;
+  	border: 1px solid #a9793f;
+  	border-radius: 14px;
+  	box-shadow:
+    	0 14px 40px rgba(0, 0, 0, 0.55),
+    	0 0 28px rgba(117, 35, 48, 0.35);
+	}
+
+	.gypsie-portrait {
+  	width: min(240px, 72vw);
+	}
+
+.voice-toggle {
+  min-width: auto;
+  min-height: auto;
+  padding: 6px 11px;
+  border:
+    1px solid rgba(196, 151, 84, 0.45);
+  border-radius: 999px;
+  background:
+    rgba(40, 20, 31, 0.9);
+  color: #dbc49a;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.voice-toggle:hover {
+  background:
+    rgba(80, 42, 55, 0.95);
+}
+
+.voice-toggle[aria-pressed="false"] {
+  opacity: 0.68;
+}
+
+    .status {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-bottom:
+        1px solid rgba(196, 151, 84, 0.25);
+      background:
+        rgba(0, 0, 0, 0.2);
+    }
+
+    .status span {
+      padding: 6px 10px;
+      border:
+        1px solid rgba(196, 151, 84, 0.28);
+      border-radius: 999px;
+      color: #dbc49a;
+      font-size: 0.9rem;
+    }
+
+    #messages {
+      min-height: 440px;
+      max-height: 65vh;
+      overflow-y: auto;
+      padding: 22px;
+    }
+
+    .message {
+      max-width: 88%;
+      margin-bottom: 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      white-space: pre-wrap;
+      line-height: 1.62;
+    }
+
+    .user {
+      margin-left: auto;
+      background: #332534;
+      border:
+        1px solid rgba(205, 164, 101, 0.22);
+    }
+
+    .assistant {
+      background: #20121b;
+      border-left: 3px solid #b58a4b;
+    }
+
+    .system {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      color: #bca77e;
+      background: transparent;
+      font-style: italic;
+    }
+
+    .tarot {
+      margin:
+        0 auto 18px;
+      width:
+        min(330px, 90%);
+      padding: 18px;
+      text-align: center;
+      border:
+        1px solid #b58a4b;
+      border-radius: 12px;
+      background:
+        linear-gradient(
+          145deg,
+          #35202b,
+          #140c12
+        );
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    .tarot-name {
+      font-size: 1.35rem;
+    }
+
+    .tarot-orientation {
+      margin-top: 5px;
+      color: #c9ad7c;
+      font-style: italic;
+      text-transform: capitalize;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 16px;
+      border-top:
+        1px solid rgba(196, 151, 84, 0.3);
+      background: #100a0e;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 78px;
+      resize: vertical;
+      padding: 13px;
+      border:
+        1px solid rgba(196, 151, 84, 0.45);
+      border-radius: 12px;
+      background: #1c1219;
+      color: #f7e9cd;
+      font: inherit;
+      line-height: 1.4;
+    }
+
+    button {
+      min-width: 105px;
+      padding: 0 18px;
+      border:
+        1px solid #bb914e;
+      border-radius: 12px;
+      background:
+        linear-gradient(
+          180deg,
+          #765030,
+          #43291e
+        );
+      color: #fff1d3;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 0;
+      }
+
+      .shell {
+        min-height: 100vh;
+        border: 0;
+        border-radius: 0;
+      }
+
+      #messages {
+        max-height: none;
+        min-height: 58vh;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      button {
+        min-height: 48px;
+      }
+
+      .message {
+        max-width: 96%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="shell">
+	<header class="header">
+  	<h1>THE GYPSIE FORTUNETELLER</h1>
+
+  	<div class="subtitle">
+    	The bracelets ring softly as the cards are laid.
+  	</div>
+
+  	<img
+    	class="gypsie-portrait"
+    	src="https://www.lokiskingdom.com/THE%20GYPSIE.png"
+    	alt="The Gypsie"
+  	>
+	</header>
+
+<section
+  class="status"
+  aria-label="World state"
+>
+  <span id="money">Coins: —</span>
+  <span id="fee">Next reading: —</span>
+  <span id="readings">Readings: —</span>
+  <span id="lastCard">Last card: —</span>
+
+  <button
+    id="voiceToggle"
+    class="voice-toggle"
+    type="button"
+    aria-pressed="true"
+  >
+    Voice: ON
+  </button>
+</section>
+
+<div class="return-home-wrap">
+  <a
+    class="return-home"
+    href="https://www.lokiskingdom.com/"
+  >
+    Return to Loki's Kingdom
+  </a>
+</div>
+
+    <section
+      id="messages"
+      aria-live="polite"
+    >
+      <div class="message assistant">
+The tent is warmer than the road outside. Velvet hangs from the poles in dark folds, and a woman covered in gold bracelets watches you sit.
+
+“First words are free,” she says. “After that, even fate has expenses.”
+      </div>
+    </section>
+
+    <form id="chatForm">
+      <textarea
+        id="messageInput"
+        maxlength="${MAX_MESSAGE_LENGTH}"
+        placeholder="Speak across the cards..."
+        required
+      ></textarea>
+
+      <button
+        id="sendButton"
+        type="submit"
+      >
+        Speak
+      </button>
+    </form>
+  </main>
+
+  <script>
+const visitorStorageKey =
+  "lokis-kingdom-visitor-id";
+
+function readSharedVisitorCookie() {
+  const prefix =
+    encodeURIComponent(visitorStorageKey) + "=";
+
+  const cookies =
+    document.cookie.split(";");
+
+  for (const cookie of cookies) {
+    const trimmed = cookie.trim();
+
+    if (trimmed.startsWith(prefix)) {
+      return decodeURIComponent(
+        trimmed.substring(prefix.length)
+      );
+    }
+  }
+
+  return null;
+}
+
+function writeSharedVisitorCookie(visitorId) {
+  document.cookie =
+    encodeURIComponent(visitorStorageKey) +
+    "=" +
+    encodeURIComponent(visitorId) +
+    "; Max-Age=315360000" +
+    "; Path=/" +
+    "; Domain=lokiskingdom.com" +
+    "; SameSite=Lax" +
+    "; Secure";
+}
+
+/*
+ * IMPORTANT:
+ *
+ * If the shared cookie already exists, use it.
+ *
+ * Otherwise preserve the Gypsie's existing localStorage
+ * identity and promote THAT identity to the shared cookie.
+ * This preserves the existing 46-coin world state.
+ */
+let visitorId =
+  readSharedVisitorCookie();
+
+if (visitorId) {
+  localStorage.setItem(
+    visitorStorageKey,
+    visitorId
+  );
+} else {
+  visitorId =
+    localStorage.getItem(
+      visitorStorageKey
+    );
+
+  if (!visitorId) {
+    visitorId =
+      crypto.randomUUID()
+        .replace(/-/g, "");
+
+    localStorage.setItem(
+      visitorStorageKey,
+      visitorId
+    );
+  }
+
+  writeSharedVisitorCookie(visitorId);
+}
+
+    const form =
+      document.getElementById(
+        "chatForm"
+      );
+
+    const input =
+      document.getElementById(
+        "messageInput"
+      );
+
+    const button =
+      document.getElementById(
+        "sendButton"
+      );
+
+    const messages =
+      document.getElementById(
+        "messages"
+      );
+
+const voiceToggle =
+  document.getElementById(
+    "voiceToggle"
+  );
+
+const voiceStorageKey =
+  "lokis-kingdom-gypsie-voice-enabled";
+
+let voiceEnabled =
+  localStorage.getItem(
+    voiceStorageKey
+  ) !== "false";
+
+let gypsieVoice = null;
+
+function chooseGypsieVoice() {
+  const voices =
+    window.speechSynthesis
+      ?.getVoices() || [];
+
+  if (voices.length === 0) {
+    return;
+  }
+
+const preferredNames = [
+  "Microsoft Sonia Online",
+  "Microsoft Sonia",
+  "Microsoft Libby Online",
+  "Microsoft Libby",
+  "Google UK English Female",
+  "Samantha",
+  "Zira",
+  "Sol"
+];
+
+  gypsieVoice =
+    preferredNames
+      .map((name) =>
+        voices.find(
+          (voice) =>
+            voice.name
+              .toLowerCase()
+              .includes(
+                name.toLowerCase()
+              )
+        )
+      )
+      .find(Boolean) ||
+    voices.find(
+      (voice) =>
+        /^en[-_]/i.test(voice.lang) &&
+        /female|woman|sonia|libby|samantha|sol/i
+          .test(voice.name)
+    ) ||
+    voices.find(
+      (voice) =>
+        /^en[-_]/i.test(voice.lang)
+    ) ||
+    voices[0];
+}
+
+function updateVoiceToggle() {
+  voiceToggle.textContent =
+    voiceEnabled
+      ? "Voice: ON"
+      : "Voice: OFF";
+
+  voiceToggle.setAttribute(
+    "aria-pressed",
+    String(voiceEnabled)
+  );
+}
+
+function cleanSpeechText(text) {
+  return String(text || "")
+    .replace(/\\[[^\\]]+\\]/g, " ")
+    .replace(/\\*+/g, "")
+    .replace(/\\s+/g, " ")
+    .trim();
+}
+
+function speakGypsie(text) {
+  if (!voiceEnabled) {
+    return;
+  }
+
+  const spokenText =
+    cleanSpeechText(text);
+
+  if (!spokenText) {
+    return;
+  }
+
+  /*
+   * Android app:
+   * use the native TTS bridge supplied by MainActivity.
+   */
+  if (
+    typeof window.AndroidTTS !== "undefined" &&
+    typeof window.AndroidTTS.speak === "function"
+  ) {
+    window.AndroidTTS.speak(
+      spokenText
+    );
+
+    return;
+  }
+
+  /*
+   * Desktop/browser:
+   * fall back to normal Web Speech.
+   */
+  if (
+    !("speechSynthesis" in window) ||
+    !("SpeechSynthesisUtterance" in window)
+  ) {
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+
+  const utterance =
+    new SpeechSynthesisUtterance(
+      spokenText
+    );
+
+  if (gypsieVoice) {
+    utterance.voice =
+      gypsieVoice;
+
+    utterance.lang =
+      gypsieVoice.lang;
+  }
+
+  utterance.rate = 0.90;
+  utterance.pitch = 0.98;
+  utterance.volume = 1;
+
+  window.speechSynthesis.speak(
+    utterance
+  );
+}
+
+voiceToggle.addEventListener(
+  "click",
+  () => {
+    voiceEnabled =
+      !voiceEnabled;
+
+    localStorage.setItem(
+      voiceStorageKey,
+      String(voiceEnabled)
+    );
+
+    if (!voiceEnabled) {
+      if (
+        typeof window.AndroidTTS !== "undefined" &&
+        typeof window.AndroidTTS.stop === "function"
+      ) {
+        window.AndroidTTS.stop();
+      }
+
+      if (
+        "speechSynthesis" in window
+      ) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    updateVoiceToggle();
+  }
+);
+
+
+if (
+  "speechSynthesis" in window
+) {
+  chooseGypsieVoice();
+
+  window.speechSynthesis.onvoiceschanged =
+    chooseGypsieVoice;
+}
+
+
+updateVoiceToggle();
+
+
+function appendMessage(
+  text,
+  role
+) {
+  const element =
+    document.createElement(
+      "div"
+    );
+
+  element.className =
+    "message " + role;
+
+  element.textContent =
+    text;
+
+  messages.appendChild(
+    element
+  );
+
+  messages.scrollTop =
+    messages.scrollHeight;
+}
+
+    function appendTarot(card) {
+      if (!card) {
+        return;
+      }
+
+      const element =
+        document.createElement("div");
+
+      element.className = "tarot";
+
+      const name =
+        document.createElement("div");
+
+      name.className = "tarot-name";
+      name.textContent = card.name;
+
+      const orientation =
+        document.createElement("div");
+
+      orientation.className =
+        "tarot-orientation";
+
+      orientation.textContent =
+        card.orientation;
+
+      element.appendChild(name);
+      element.appendChild(orientation);
+
+      messages.appendChild(element);
+
+      messages.scrollTop =
+        messages.scrollHeight;
+    }
+
+    function updateState(state) {
+      if (!state) {
+        return;
+      }
+
+      document.getElementById(
+        "money"
+      ).textContent =
+        "Coins: " +
+        (state.player?.money ?? 0);
+
+      document.getElementById(
+        "fee"
+      ).textContent =
+        "Next reading: " +
+        (state.gypsie?.currentFee ?? 0);
+
+      document.getElementById(
+        "readings"
+      ).textContent =
+        "Readings: " +
+        (state.gypsie?.paidReadings ?? 0);
+
+      const card =
+        state.gypsie?.lastCard;
+
+      const orientation =
+        state.gypsie
+          ?.lastCardOrientation;
+
+      document.getElementById(
+        "lastCard"
+      ).textContent =
+        "Last card: " +
+        (
+          card
+            ? card +
+              (
+                orientation
+                  ? " (" +
+                    orientation +
+                    ")"
+                  : ""
+              )
+            : "none"
+        );
+    }
+
+    async function loadState() {
+      try {
+        const response =
+          await fetch(
+            "/state?visitorId=" +
+            encodeURIComponent(
+              visitorId
+            )
+          );
+
+        const state =
+          await response.json();
+
+        if (response.ok) {
+          updateState(state);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+input.addEventListener(
+  "keydown",
+  (event) => {
+    if (
+      event.key === "Enter" &&
+      !event.shiftKey
+    ) {
+      event.preventDefault();
+
+      if (!button.disabled) {
+        form.requestSubmit();
+      }
+    }
+  }
+);
+
+    form.addEventListener(
+      "submit",
+      async (event) => {
+event.preventDefault();
+
+if ("speechSynthesis" in window) {
+  window.speechSynthesis.cancel();
+}
+        const message =
+          input.value.trim();
+
+        if (!message) {
+          return;
+        }
+
+        appendMessage(
+          message,
+          "user"
+        );
+
+        input.value = "";
+        button.disabled = true;
+        button.textContent = "Reading...";
+
+        try {
+          const response =
+            await fetch(
+              "/chat",
+              {
+                method: "POST",
+                headers: {
+                  "content-type":
+                    "application/json"
+                },
+                body: JSON.stringify({
+                  visitorId,
+                  message
+                })
+              }
+            );
+
+          const data =
+            await response.json();
+
+          if (!response.ok) {
+            throw new Error(
+              data.error ||
+              "The reading failed."
+            );
+          }
+
+          appendTarot(data.tarot);
+
+appendMessage(
+  data.text,
+  "assistant"
+);
+
+speakGypsie(
+  data.text
+);
+
+updateState(
+  data.publicState
+);
+        } catch (error) {
+          appendMessage(
+            error.message ||
+            "The lamps went dark.",
+            "system"
+          );
+        } finally {
+          button.disabled = false;
+          button.textContent = "Speak";
+          input.focus();
+        }
+      }
+    );
+
+    loadState();
+  </script>
+</body>
+</html>`;

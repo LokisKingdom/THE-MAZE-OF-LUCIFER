@@ -1,0 +1,18 @@
+Hey guys, today I got a system working where
+Gold is persistent across the desktop web player app,
+and the fortune teller. So like, you earn gold, by listening to my songs,
+30 gold for listening for 15 seconds, 500 gold for listening to the whole song.
+The Fortuneteller gets more expensive every time you get your fortune told.
+But the amount of gold you have is also displayed on the desktop front page,
+where you can get gold for songs, then take it to the fortuneteller,
+and later to lots of other places to spend your money,
+the next on my list is i want to make a button to buy food for Sally.
+So when she's hungry, buying food will make her happy, make her like you a lot,
+but if you but food when she's eaten already, it does nothing,
+and if you make her eat when she's already full, it will be considered bullying,
+and will actually lose you points. Anyway that's later, I also posted
+Index.astro, DestopMusicApp.astro, the full working brain for my gypsie,
+and one other script i forget, a utility script for context.
+
+Tell me what you think!
+Interested to hear what you say when you look through it!

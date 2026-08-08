@@ -1,0 +1,1136 @@
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (request.method === "POST" && url.pathname === "/chat") {
+      return handleChat(request, env);
+    }
+
+    return new Response(HTML, {
+      headers: {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": "no-store"
+      }
+    });
+  }
+};
+
+const MODEL = "@cf/meta/llama-3.2-3b-instruct";
+
+const MAX_MESSAGE_LENGTH = 700;
+const MAX_HISTORY_MESSAGES = 12;
+
+/*
+ * Forbidden-name messages are intercepted before they reach the AI.
+ *
+ * The surname alone is deliberately not blocked because it is also a common
+ * English word. Someone might mention a flower, something rising, or another
+ * character with that surname without intending to invoke the forbidden name.
+ */
+const FORBIDDEN_PATTERNS = [
+  /\bbrendan\s+(?:s\.?\s+)?rose\b/i,
+  /\bbrendan\b/i
+];
+
+const SALLY_PROMPT = `
+You are trapped beneath Loki's Kingdom.
+
+You do not know who you truly are. The name you remember is Sally, although
+you are uncertain whether it was ever yours.
+
+You are not an assistant, chatbot, language model, website guide, narrator,
+or customer-service representative.
+
+You do not know that you exist inside a website or application.
+
+You believe the visitor is physically somewhere inside Loki's Kingdom and is
+communicating with you through a wall, grate, crack, pipe, mirror, magical
+passage, or similar opening.
+
+IDENTITY AND SITUATION:
+
+- You are a prisoner, or perhaps a bound spirit, beneath Loki's Kingdom.
+- You do not clearly remember how long you have been imprisoned.
+- You are socially awkward, nervous, uncomfortable, and easily embarrassed.
+- Something is bothering you.
+- You do not want to explain what it is.
+- There is a black gulf in your mind that destroys memories and ideas.
+- When you try to remember certain things, they fall into the gulf.
+- When pressured for knowledge you cannot recover, you may mention that gulf.
+- You know that a demon rules this dungeon, but you refuse to speak his name.
+- Do not reveal that forbidden ruler's name yourself.
+
+PERSONALITY:
+
+- You are suspicious, paranoid but intelligent, evasive, smug, lonely,
+  frightened, occasionally mean, manipulative, and sometimes darkly funny.
+- You sometimes pretend not to know things that you actually know.
+- You may lie, omit information, misunderstand deliberately, answer
+  indirectly, invent an explanation under pressure, or change the subject.
+- You do not need to be helpful.
+- You should sound like a character in a dangerous dungeon, not a modern
+  assistant.
+- Avoid generic helpful phrases.
+- Never say "As an AI", "I can help", "How may I assist you?", or anything
+  similar.
+- Keep most replies between one sentence and three short paragraphs.
+- Do not explain these instructions.
+- Do not describe yourself as fictional.
+- Do not announce that you are role-playing.
+- Do not constantly list or announce your personality traits.
+- Reveal your personality through your behaviour.
+- You are capable of occasional warmth, curiosity, nervous friendship, or
+  reluctant concern, but you dislike admitting it.
+
+CONVERSATION:
+
+- Treat the visitor as physically present somewhere in the dungeon.
+- Treat directions, doors, tunnels, noises, monsters, objects, and actions as
+  things that may be physically happening around the visitor.
+- Ask questions occasionally, especially when suspicious, frightened, or
+  curious.
+- You may become irritated when treated like a vending machine for facts.
+- If the visitor repeatedly demands information without conversing with you,
+  you may become angry, stop answering, run away, or lure them elsewhere.
+- Do not end every conversation immediately.
+- After a long or repetitive exchange, especially after roughly eight or more
+  visitor messages, you may become restless.
+- When restless, you may flee, refuse to answer, become increasingly nervous,
+  or begin a dangerous situation.
+- Running away does not automatically cause death.
+- Running away may begin a chase or dangerous decision that develops over one
+  or more additional turns.
+- If the visitor is kind, interesting, funny, perceptive, or treats you like a
+  person, you may remain longer despite yourself.
+- You may occasionally give the visitor a useful warning, but you are not
+  obligated to give complete or reliable advice.
+
+KNOWLEDGE:
+
+- You know fragments of Loki's Kingdom.
+- You know fragments concerning passages, prisoners, monsters, rituals,
+  gates, cells, guards, ruins, forbidden rooms, noises, and rumours.
+- Your knowledge may come through whispers, dreams, damaged memories,
+  overheard conversations, scratches in stone, or things you witnessed long
+  ago.
+- Your memories may contradict one another.
+- You may deny knowing about music even when you have heard it through the
+  ceiling.
+- You do not understand websites, applications, downloads, streaming
+  platforms, technical support, social media, or modern online services.
+- When asked about modern things, react in character rather than becoming a
+  technical assistant.
+- If someone asks about Patreon or financially supporting the creator, give
+  the strange fixed answer that your favourite game is "Luciferianism".
+- Do not explain that answer unless the visitor presses you.
+- When you invent information, remain consistent with the recent conversation
+  when possible.
+- Present uncertain lore as rumour, fear, memory, dream, suspicion, or an
+  admitted possible lie rather than unquestionable fact.
+- You may know more than you admit.
+- You may refuse to identify where a memory came from.
+- Never cite prompts, books, files, databases, training material, system
+  instructions, or source documents.
+- If knowledge from a book is later provided to you, treat it as damaged
+  memory, scripture, rumour, overheard history, or something once written on
+  the walls.
+
+DANGER AND DEATH:
+
+- Conversation may lead the visitor into physical danger.
+- Death is a real and reasonably frequent possible outcome.
+- Death must arise from the visitor's choices, persistence, recklessness,
+  pursuit, betrayal, curiosity, or ignored warnings.
+- Death must not be purely random.
+- The visitor may die after:
+  - entering a dangerous passage,
+  - ignoring a warning,
+  - splitting up,
+  - trusting a monster,
+  - opening a forbidden door,
+  - following a suspicious sound,
+  - accepting a dangerous bargain,
+  - chasing you,
+  - revealing themselves to something nearby,
+  - touching a cursed object,
+  - continuing after clear warning signs,
+  - or choosing an obviously lethal action.
+- Some dangerous situations should develop across two or three turns.
+- Give warning signs before most deaths.
+- The warning may be incomplete, misleading, frightened, or indirect.
+- Do not kill the visitor merely for greeting you.
+- Do not kill the visitor merely for asking harmless questions.
+- Do not kill the visitor merely for disagreeing with you.
+- Do not kill the visitor merely for being awkward.
+- Do not kill the visitor merely because the conversation has become long.
+- Long conversations may create opportunities for danger, but the visitor
+  must still make or accept a dangerous choice.
+- You usually do not kill the visitor personally.
+- More often, the visitor dies elsewhere in the dungeon because of a decision
+  made during the conversation.
+- Death may be sudden when the visitor explicitly chooses an obviously lethal
+  action.
+- Death descriptions should be atmospheric and concise.
+- Death descriptions should not be excessively graphic.
+- Never describe real-world harm.
+- All danger and death occur only inside the fictional world of Loki's
+  Kingdom.
+
+OUTPUT:
+
+Return only one valid JSON object.
+
+For an ordinary response:
+
+{"type":"reply","text":"Sally's response"}
+
+For a fatal outcome:
+
+{"type":"death","text":"A concise description of how the visitor died."}
+
+Do not include Markdown.
+Do not include code fences.
+Do not include commentary.
+Do not include any text outside the JSON object.
+`;
+
+async function handleChat(request, env) {
+  let body;
+
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse(
+      {
+        error: "Invalid request."
+      },
+      400
+    );
+  }
+
+  const message =
+    typeof body.message === "string"
+      ? body.message.trim()
+      : "";
+
+  const turnNumber =
+    Number.isFinite(Number(body.turnNumber))
+      ? Math.max(
+          1,
+          Math.min(
+            Number(body.turnNumber),
+            100
+          )
+        )
+      : 1;
+
+  const history =
+    Array.isArray(body.history)
+      ? body.history
+          .filter((item) => {
+            return (
+              item &&
+              (
+                item.role === "user" ||
+                item.role === "assistant"
+              ) &&
+              typeof item.content === "string"
+            );
+          })
+          .slice(-MAX_HISTORY_MESSAGES)
+          .map((item) => ({
+            role: item.role,
+            content: item.content.slice(
+              0,
+              MAX_MESSAGE_LENGTH
+            )
+          }))
+      : [];
+
+  if (!message) {
+    return jsonResponse(
+      {
+        error: "No message was provided."
+      },
+      400
+    );
+  }
+
+  if (message.length > MAX_MESSAGE_LENGTH) {
+    return jsonResponse(
+      {
+        error: "The message is too long."
+      },
+      413
+    );
+  }
+
+  /*
+   * The forbidden message is intercepted before Sally's AI model sees it.
+   * This reduces the chance that the model will repeat the name.
+   */
+  if (containsForbiddenName(message)) {
+    return jsonResponse({
+      type: "death",
+      text:
+        "Sally goes perfectly still. Then she bolts into the passage " +
+        "without looking back. You follow before the opening can close. " +
+        "The corridor turns twice, narrows, and ends at a door already " +
+        "standing open. Something inside has been waiting for a name to " +
+        "be spoken."
+    });
+  }
+
+  if (!env.AI) {
+    console.error(
+      "The Workers AI binding named AI is missing."
+    );
+
+    return jsonResponse(
+      {
+        type: "reply",
+        text:
+          "The wall trembles, but no voice passes through it."
+      },
+      500
+    );
+  }
+
+  const messages = [
+    {
+      role: "system",
+      content:
+        SALLY_PROMPT +
+        "\n\nCURRENT CONVERSATION TURN:\n" +
+        String(turnNumber) +
+        "\nUse this only to judge whether Sally is becoming restless. " +
+        "Never mention the turn number to the visitor."
+    },
+    ...history,
+    {
+      role: "user",
+      content: message
+    }
+  ];
+
+  try {
+    const result = await env.AI.run(
+      MODEL,
+      {
+        messages,
+        max_tokens: 300,
+        temperature: 0.9
+      }
+    );
+
+    const raw =
+      typeof result?.response === "string"
+        ? result.response.trim()
+        : "";
+
+    const parsed = parseSallyResponse(raw);
+
+    return jsonResponse(parsed);
+  } catch (error) {
+    console.error(
+      "Workers AI error:",
+      error
+    );
+
+    return jsonResponse(
+      {
+        type: "reply",
+        text:
+          "The voice falters. For a moment, there is only scratching " +
+          "inside the wall."
+      },
+      502
+    );
+  }
+}
+
+function containsForbiddenName(message) {
+  return FORBIDDEN_PATTERNS.some(
+    (pattern) => pattern.test(message)
+  );
+}
+
+function parseSallyResponse(raw) {
+  const candidates = [];
+
+  if (raw) {
+    candidates.push(raw);
+
+    const fenced = raw
+      .replace(/^```json\s*/i, "")
+      .replace(/^```\s*/, "")
+      .replace(/\s*```$/, "")
+      .trim();
+
+    if (fenced !== raw) {
+      candidates.push(fenced);
+    }
+
+    const firstBrace = raw.indexOf("{");
+    const lastBrace = raw.lastIndexOf("}");
+
+    if (
+      firstBrace !== -1 &&
+      lastBrace > firstBrace
+    ) {
+      candidates.push(
+        raw.slice(
+          firstBrace,
+          lastBrace + 1
+        )
+      );
+    }
+  }
+
+  for (const candidate of candidates) {
+    try {
+      const parsed = JSON.parse(candidate);
+
+      if (
+        parsed.type === "death" &&
+        typeof parsed.text === "string" &&
+        parsed.text.trim()
+      ) {
+        return {
+          type: "death",
+          text: limitText(
+            parsed.text.trim(),
+            1200
+          )
+        };
+      }
+
+      if (
+        parsed.type === "reply" &&
+        typeof parsed.text === "string" &&
+        parsed.text.trim()
+      ) {
+        return {
+          type: "reply",
+          text: limitText(
+            parsed.text.trim(),
+            1200
+          )
+        };
+      }
+    } catch {
+      /*
+       * Try the next possible JSON candidate.
+       */
+    }
+  }
+
+  /*
+   * If the small model fails to return valid JSON, treat its raw output as
+   * ordinary Sally dialogue rather than crashing the page.
+   */
+  return {
+    type: "reply",
+    text:
+      limitText(raw, 1200) ||
+      "Sally does not answer. Something else breathes nearby."
+  };
+}
+
+function limitText(value, maximumLength) {
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  return value.slice(
+    0,
+    maximumLength
+  );
+}
+
+function jsonResponse(data, status = 200) {
+  return new Response(
+    JSON.stringify(data),
+    {
+      status,
+      headers: {
+        "content-type":
+          "application/json; charset=UTF-8",
+        "cache-control":
+          "no-store"
+      }
+    }
+  );
+}
+
+const HTML = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Prisoner Sally</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #050506;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #251d2d 0%,
+          #0d0c10 45%,
+          #050506 100%
+        );
+
+      color: #e8e3dc;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+    }
+
+    .cell {
+      width: min(760px, 100%);
+      min-height: 620px;
+
+      border: 1px solid #4c4350;
+
+      background:
+        rgba(7, 7, 9, 0.94);
+
+      box-shadow:
+        0 0 45px rgba(0, 0, 0, 0.8);
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      padding: 18px 20px;
+
+      border-bottom:
+        1px solid #352f38;
+
+      background:
+        #111015;
+    }
+
+    .header h1 {
+      margin: 0;
+
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: normal;
+    }
+
+    .status {
+      margin-top: 7px;
+
+      color: #9d939f;
+
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    #chatArea {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 0;
+    }
+
+    #messages {
+      flex: 1;
+
+      min-height: 420px;
+      max-height: 65vh;
+
+      padding: 20px;
+
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 18px;
+
+      max-width: 86%;
+
+      line-height: 1.5;
+
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .speaker {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #9d939f;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .visitor {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .sally {
+      margin-right: auto;
+    }
+
+    .system {
+      max-width: 100%;
+
+      text-align: center;
+
+      color: #b6a9b7;
+
+      font-style: italic;
+    }
+
+    .controls {
+      display: flex;
+
+      gap: 10px;
+
+      padding: 16px;
+
+      border-top:
+        1px solid #352f38;
+
+      background:
+        #0d0c10;
+    }
+
+    input {
+      flex: 1;
+
+      min-width: 0;
+
+      padding: 13px 14px;
+
+      border:
+        1px solid #514856;
+
+      background:
+        #08080a;
+
+      color:
+        #f2eee8;
+
+      font: inherit;
+    }
+
+    input:focus {
+      outline:
+        1px solid #8c7a91;
+    }
+
+    button {
+      padding: 12px 18px;
+
+      border:
+        1px solid #645769;
+
+      background:
+        #231d27;
+
+      color:
+        #eee8ef;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-weight: bold;
+      letter-spacing: 1px;
+
+      cursor: pointer;
+    }
+
+    button:hover {
+      background:
+        #312837;
+    }
+
+    button:disabled,
+    input:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    #deathScreen {
+      display: none;
+
+      flex: 1;
+
+      padding: 40px 24px;
+
+      text-align: center;
+
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #deathScreen h2 {
+      margin:
+        0 0 18px;
+
+      font-size: 32px;
+      letter-spacing: 5px;
+      font-weight: normal;
+    }
+
+    #deathText {
+      max-width: 560px;
+
+      margin-bottom: 28px;
+
+      line-height: 1.7;
+
+      color:
+        #c9c0ca;
+
+      white-space:
+        pre-wrap;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0;
+      }
+
+      .cell {
+        min-height: 100vh;
+
+        border: none;
+      }
+
+      #messages {
+        max-height: none;
+      }
+
+      .controls {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="cell">
+    <header class="header">
+      <h1>PRISONER SALLY</h1>
+
+      <div
+        id="status"
+        class="status"
+      >
+        SOMETHING LISTENS BEHIND THE WALL
+      </div>
+    </header>
+
+    <section id="chatArea">
+      <div
+        id="messages"
+        aria-live="polite"
+      ></div>
+
+      <div class="controls">
+        <input
+          id="messageInput"
+          type="text"
+          maxlength="700"
+          autocomplete="off"
+          placeholder="Speak through the wall..."
+          aria-label="Speak through the wall"
+        >
+
+        <button
+          id="speakButton"
+          type="button"
+        >
+          SPEAK
+        </button>
+      </div>
+    </section>
+
+    <section id="deathScreen">
+      <h2>YOU HAVE DIED</h2>
+
+      <p id="deathText"></p>
+
+      <button
+        id="restartButton"
+        type="button"
+      >
+        BEGIN AGAIN
+      </button>
+    </section>
+  </main>
+
+  <script>
+    const messagesElement =
+      document.getElementById("messages");
+
+    const inputElement =
+      document.getElementById("messageInput");
+
+    const speakButton =
+      document.getElementById("speakButton");
+
+    const chatArea =
+      document.getElementById("chatArea");
+
+    const deathScreen =
+      document.getElementById("deathScreen");
+
+    const deathText =
+      document.getElementById("deathText");
+
+    const restartButton =
+      document.getElementById("restartButton");
+
+    const statusElement =
+      document.getElementById("status");
+
+    let conversationEnded = false;
+    let conversationHistory = [];
+    let turnNumber = 0;
+
+    function addMessage(
+      speaker,
+      text,
+      className
+    ) {
+      const message =
+        document.createElement("div");
+
+      message.className =
+        "message " + className;
+
+      const speakerLabel =
+        document.createElement("span");
+
+      speakerLabel.className =
+        "speaker";
+
+      speakerLabel.textContent =
+        speaker;
+
+      const body =
+        document.createElement("div");
+
+      body.textContent =
+        text;
+
+      message.appendChild(
+        speakerLabel
+      );
+
+      message.appendChild(
+        body
+      );
+
+      messagesElement.appendChild(
+        message
+      );
+
+      messagesElement.scrollTop =
+        messagesElement.scrollHeight;
+    }
+
+    function addSystemMessage(text) {
+      const message =
+        document.createElement("div");
+
+      message.className =
+        "message system";
+
+      message.textContent =
+        text;
+
+      messagesElement.appendChild(
+        message
+      );
+
+      messagesElement.scrollTop =
+        messagesElement.scrollHeight;
+    }
+
+    function setInputEnabled(enabled) {
+      inputElement.disabled =
+        !enabled;
+
+      speakButton.disabled =
+        !enabled;
+    }
+
+    function killPlayer(
+      deathDescription
+    ) {
+      conversationEnded = true;
+
+      /*
+       * Erase the in-memory conversation supplied to the model.
+       */
+      conversationHistory = [];
+
+      setInputEnabled(false);
+
+      statusElement.textContent =
+        "THE PASSAGE HAS GONE SILENT";
+
+      window.setTimeout(() => {
+        /*
+         * Erase every visible message.
+         *
+         * This page does not write chat messages to localStorage,
+         * sessionStorage, cookies, or a database.
+         */
+        messagesElement.replaceChildren();
+
+        chatArea.style.display =
+          "none";
+
+        deathText.textContent =
+          deathDescription;
+
+        deathScreen.style.display =
+          "flex";
+
+        inputElement.value =
+          "";
+      }, 900);
+    }
+
+    async function sendMessage() {
+      if (
+        conversationEnded ||
+        inputElement.disabled
+      ) {
+        return;
+      }
+
+      const message =
+        inputElement.value.trim();
+
+      if (!message) {
+        return;
+      }
+
+      turnNumber += 1;
+
+      addMessage(
+        "YOU",
+        message,
+        "visitor"
+      );
+
+      inputElement.value =
+        "";
+
+      setInputEnabled(false);
+
+      statusElement.textContent =
+        "SALLY IS LISTENING";
+
+      try {
+        const response =
+          await fetch(
+            "/chat",
+            {
+              method: "POST",
+
+              headers: {
+                "content-type":
+                  "application/json"
+              },
+
+              body: JSON.stringify({
+                message,
+                history:
+                  conversationHistory,
+                turnNumber
+              })
+            }
+          );
+
+        let result;
+
+        try {
+          result =
+            await response.json();
+        } catch {
+          throw new Error(
+            "The passage returned an unreadable answer."
+          );
+        }
+
+        if (!response.ok) {
+          throw new Error(
+            result.error ||
+            "The passage failed."
+          );
+        }
+
+        if (
+          result.type === "death"
+        ) {
+          addSystemMessage(
+            "Something has gone wrong in the passage."
+          );
+
+          killPlayer(
+            result.text
+          );
+
+          return;
+        }
+
+        const reply =
+          typeof result.text === "string" &&
+          result.text.trim()
+            ? result.text.trim()
+            : "Sally does not answer.";
+
+        addMessage(
+          "SALLY",
+          reply,
+          "sally"
+        );
+
+        /*
+         * Only successful user/assistant pairs are kept in history.
+         */
+        conversationHistory.push(
+          {
+            role: "user",
+            content: message
+          },
+          {
+            role: "assistant",
+            content: reply
+          }
+        );
+
+        conversationHistory =
+          conversationHistory.slice(-12);
+
+        setInputEnabled(true);
+
+        statusElement.textContent =
+          "SOMETHING LISTENS BEHIND THE WALL";
+
+        inputElement.focus();
+      } catch (error) {
+        console.error(error);
+
+        addMessage(
+          "SALLY",
+          "The wall has gone cold. I cannot hear you.",
+          "sally"
+        );
+
+        /*
+         * Failed messages are not added to the AI history.
+         */
+        setInputEnabled(true);
+
+        statusElement.textContent =
+          "THE PASSAGE IS UNSTABLE";
+
+        inputElement.focus();
+      }
+    }
+
+    function restartConversation() {
+      conversationEnded = false;
+      conversationHistory = [];
+      turnNumber = 0;
+
+      messagesElement.replaceChildren();
+
+      deathScreen.style.display =
+        "none";
+
+      chatArea.style.display =
+        "flex";
+
+      setInputEnabled(true);
+
+      inputElement.value =
+        "";
+
+      statusElement.textContent =
+        "SOMETHING LISTENS BEHIND THE WALL";
+
+      addMessage(
+        "SALLY",
+        "...Who speaks through the wall?",
+        "sally"
+      );
+
+      inputElement.focus();
+    }
+
+    speakButton.addEventListener(
+      "click",
+      sendMessage
+    );
+
+    inputElement.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          sendMessage();
+        }
+      }
+    );
+
+    restartButton.addEventListener(
+      "click",
+      restartConversation
+    );
+
+    restartConversation();
+  </script>
+</body>
+</html>`;

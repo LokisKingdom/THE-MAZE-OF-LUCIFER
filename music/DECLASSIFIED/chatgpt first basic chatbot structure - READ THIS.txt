@@ -1,0 +1,559 @@
+export default {
+  async fetch(request) {
+    return new Response(HTML, {
+      headers: {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": "no-store"
+      }
+    });
+  }
+};
+
+const HTML = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Prisoner Sally</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #251d2d 0%, #0d0c10 45%, #050506 100%);
+      color: #e8e3dc;
+      font-family: Georgia, "Times New Roman", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .cell {
+      width: min(760px, 100%);
+      min-height: 620px;
+      border: 1px solid #4c4350;
+      background: rgba(7, 7, 9, 0.94);
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #352f38;
+      background: #111015;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: normal;
+    }
+
+    .status {
+      margin-top: 7px;
+      color: #9d939f;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    #messages {
+      flex: 1;
+      min-height: 420px;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 18px;
+      max-width: 86%;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .speaker {
+      display: block;
+      margin-bottom: 5px;
+      color: #9d939f;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .visitor {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .sally {
+      margin-right: auto;
+    }
+
+    .system {
+      max-width: 100%;
+      text-align: center;
+      color: #b6a9b7;
+      font-style: italic;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      padding: 16px;
+      border-top: 1px solid #352f38;
+      background: #0d0c10;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      padding: 13px 14px;
+      border: 1px solid #514856;
+      background: #08080a;
+      color: #f2eee8;
+      font: inherit;
+    }
+
+    input:focus {
+      outline: 1px solid #8c7a91;
+    }
+
+    button {
+      padding: 12px 18px;
+      border: 1px solid #645769;
+      background: #231d27;
+      color: #eee8ef;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #312837;
+    }
+
+    button:disabled,
+    input:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    #deathScreen {
+      display: none;
+      flex: 1;
+      padding: 40px 24px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #deathScreen h2 {
+      margin: 0 0 18px;
+      font-size: 32px;
+      letter-spacing: 5px;
+      font-weight: normal;
+    }
+
+    #deathText {
+      max-width: 560px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+      color: #c9c0ca;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0;
+      }
+
+      .cell {
+        min-height: 100vh;
+        border: none;
+      }
+
+      .controls {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="cell">
+    <header class="header">
+      <h1>PRISONER SALLY</h1>
+      <div id="status" class="status">SOMETHING LISTENS BEHIND THE WALL</div>
+    </header>
+
+    <section id="chatArea">
+      <div id="messages"></div>
+
+      <div class="controls">
+        <input
+          id="messageInput"
+          type="text"
+          maxlength="500"
+          autocomplete="off"
+          placeholder="Speak through the wall..."
+        >
+
+        <button id="speakButton" type="button">
+          SPEAK
+        </button>
+      </div>
+    </section>
+
+    <section id="deathScreen">
+      <h2>YOU HAVE DIED</h2>
+
+      <p id="deathText"></p>
+
+      <button id="restartButton" type="button">
+        BEGIN AGAIN
+      </button>
+    </section>
+  </main>
+
+  <script>
+    const messagesElement = document.getElementById("messages");
+    const inputElement = document.getElementById("messageInput");
+    const speakButton = document.getElementById("speakButton");
+    const chatArea = document.getElementById("chatArea");
+    const deathScreen = document.getElementById("deathScreen");
+    const deathText = document.getElementById("deathText");
+    const restartButton = document.getElementById("restartButton");
+    const statusElement = document.getElementById("status");
+
+    let conversationEnded = false;
+    let turnNumber = 0;
+
+    function addMessage(speaker, text, className) {
+      const message = document.createElement("div");
+      message.className = "message " + className;
+
+      const speakerLabel = document.createElement("span");
+      speakerLabel.className = "speaker";
+      speakerLabel.textContent = speaker;
+
+      const body = document.createElement("div");
+      body.textContent = text;
+
+      message.appendChild(speakerLabel);
+      message.appendChild(body);
+      messagesElement.appendChild(message);
+
+      messagesElement.scrollTop = messagesElement.scrollHeight;
+    }
+
+    function addSystemMessage(text) {
+      const message = document.createElement("div");
+      message.className = "message system";
+      message.textContent = text;
+      messagesElement.appendChild(message);
+
+      messagesElement.scrollTop = messagesElement.scrollHeight;
+    }
+
+    function normalize(text) {
+      return text
+        .toLowerCase()
+        .replace(/[^a-z0-9\\s']/g, " ")
+        .replace(/\\s+/g, " ")
+        .trim();
+    }
+
+    function includesAny(text, phrases) {
+      return phrases.some((phrase) => text.includes(phrase));
+    }
+
+    function choose(options) {
+      return options[Math.floor(Math.random() * options.length)];
+    }
+
+    function getSallyResponse(originalMessage) {
+      const message = normalize(originalMessage);
+      turnNumber += 1;
+
+      if (!message) {
+        return {
+          type: "reply",
+          text: "You opened your mouth, but nothing came through."
+        };
+      }
+
+      if (includesAny(message, ["hello", "hi", "hey", "greetings"])) {
+        return {
+          type: "reply",
+          text: choose([
+            "Keep your voice down. Things live in the passages.",
+            "I heard you before you spoke.",
+            "You should not be here.",
+            "Hello? No. Do not speak to me as though this were ordinary."
+          ])
+        };
+      }
+
+      if (includesAny(message, ["who are you", "your name", "who is sally"])) {
+        return {
+          type: "reply",
+          text:
+            "They called me Sally before the doors closed. " +
+            "I do not know whether that is still my name."
+        };
+      }
+
+      if (includesAny(message, ["where are you", "where is this", "what is this place"])) {
+        return {
+          type: "reply",
+          text:
+            "Below the rooms you know. Beyond the rusted gate. " +
+            "Somewhere the guards no longer visit."
+        };
+      }
+
+      if (includesAny(message, ["music", "song", "goldilocks"])) {
+        return {
+          type: "reply",
+          text: choose([
+            "I don't know what music is.",
+            "Sometimes the ceiling trembles. I thought it was machinery.",
+            "They don't let me into places like that.",
+            "I have heard voices above me. I do not listen."
+          ])
+        };
+      }
+
+      if (includesAny(message, ["escape", "free you", "release you", "open the door"])) {
+        return {
+          type: "reply",
+          text: choose([
+            "Do not touch the lock.",
+            "Everyone says that before they see what is chained beside me.",
+            "You assume the door was built to keep me in.",
+            "Walk away while the corridor still remembers where you came from."
+          ])
+        };
+      }
+
+      if (includesAny(message, ["left passage", "left tunnel", "go left"])) {
+        return {
+          type: "reply",
+          text:
+            "The left passage descends toward water. " +
+            "If you hear splashing, stop moving."
+        };
+      }
+
+      if (includesAny(message, ["right passage", "right tunnel", "go right"])) {
+        return {
+          type: "reply",
+          text:
+            "The right passage is shorter. That does not make it safer."
+        };
+      }
+
+      if (
+        includesAny(message, [
+          "follow the blood",
+          "walk into the dark",
+          "enter the pit",
+          "open the black door",
+          "go toward the screaming"
+        ])
+      ) {
+        return {
+          type: "death",
+          text:
+            "Sally tells you not to continue. You mistake fear for deception. " +
+            "The passage narrows behind you, and something begins walking " +
+            "at exactly the same pace as you.\\n\\n" +
+            "You never return to the wall."
+        };
+      }
+
+      if (
+        turnNumber >= 8 &&
+        includesAny(message, [
+          "split up",
+          "i will go alone",
+          "leave sally",
+          "leave you",
+          "continue alone"
+        ])
+      ) {
+        return {
+          type: "death",
+          text:
+            "You leave the voice behind and continue alone. " +
+            "At the next junction, the torchlight reveals several sets " +
+            "of footprints surrounding your own.\\n\\n" +
+            "The conversation ends there."
+        };
+      }
+
+      if (includesAny(message, ["monster", "monsters", "creature", "creatures"])) {
+        return {
+          type: "reply",
+          text: choose([
+            "Do not name them. Names make them curious.",
+            "Some crawl. Some pretend to be prisoners.",
+            "Most monsters announce themselves. Fear the quiet ones.",
+            "You have already passed one."
+          ])
+        };
+      }
+
+      if (includesAny(message, ["loki", "kingdom"])) {
+        return {
+          type: "reply",
+          text: choose([
+            "This is Loki's Kingdom. Even the stones know that.",
+            "Ownership is a word used by those outside the cells.",
+            "Do not confuse the kingdom with the rooms you have seen.",
+            "There are laws here. You will learn them by breaking them."
+          ])
+        };
+      }
+
+      if (includesAny(message, ["are you lying", "you are lying", "liar"])) {
+        return {
+          type: "reply",
+          text: choose([
+            "Of course I am.",
+            "Would the truth improve your position?",
+            "I lie when honesty would open doors.",
+            "You noticed. That is better than most."
+          ])
+        };
+      }
+
+      return {
+        type: "reply",
+        text: choose([
+          "I do not know what you expect me to say.",
+          "Ask something safer.",
+          "There are words moving behind yours.",
+          "Perhaps I know. Perhaps I am pretending not to.",
+          "You speak as if we have time.",
+          "Explain what you mean. Slowly."
+        ])
+      };
+    }
+
+    function killPlayer(deathDescription) {
+      conversationEnded = true;
+
+      inputElement.disabled = true;
+      speakButton.disabled = true;
+
+      statusElement.textContent = "THE PASSAGE HAS GONE SILENT";
+
+      window.setTimeout(() => {
+        /*
+         * This deletes every visible message node.
+         * No chat messages are stored in localStorage, cookies,
+         * sessionStorage, or on the Worker.
+         */
+        messagesElement.replaceChildren();
+
+        chatArea.style.display = "none";
+        deathText.textContent = deathDescription;
+        deathScreen.style.display = "flex";
+
+        inputElement.value = "";
+      }, 900);
+    }
+
+    function sendMessage() {
+      if (conversationEnded) {
+        return;
+      }
+
+      const message = inputElement.value.trim();
+
+      if (!message) {
+        return;
+      }
+
+      addMessage("YOU", message, "visitor");
+      inputElement.value = "";
+
+      inputElement.disabled = true;
+      speakButton.disabled = true;
+      statusElement.textContent = "SALLY IS LISTENING";
+
+      window.setTimeout(() => {
+        const result = getSallyResponse(message);
+
+        if (result.type === "death") {
+          addSystemMessage("Something has gone wrong in the passage.");
+          killPlayer(result.text);
+          return;
+        }
+
+        addMessage("SALLY", result.text, "sally");
+
+        inputElement.disabled = false;
+        speakButton.disabled = false;
+        statusElement.textContent = "SOMETHING LISTENS BEHIND THE WALL";
+
+        inputElement.focus();
+      }, 500);
+    }
+
+    function restartConversation() {
+      conversationEnded = false;
+      turnNumber = 0;
+
+      messagesElement.replaceChildren();
+
+      deathScreen.style.display = "none";
+      chatArea.style.display = "block";
+
+      inputElement.disabled = false;
+      speakButton.disabled = false;
+      inputElement.value = "";
+
+      statusElement.textContent = "SOMETHING LISTENS BEHIND THE WALL";
+
+      addMessage(
+        "SALLY",
+        "...Who speaks through the wall?",
+        "sally"
+      );
+
+      inputElement.focus();
+    }
+
+    speakButton.addEventListener("click", sendMessage);
+
+    inputElement.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
+
+    restartButton.addEventListener("click", restartConversation);
+
+    restartConversation();
+  </script>
+</body>
+</html>`;
