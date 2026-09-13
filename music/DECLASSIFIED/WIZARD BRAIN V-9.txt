@@ -560,35 +560,10 @@ async function loadWizardAccess(
   visitorId
 ) {
 
-  /*
-   * FAIL CLOSED.
-   *
-   * If ENABLE_WIZARD_UNLOCK is missing or incorrectly
-   * configured, the Wizard does not become free.
-   */
-  if (!wizardUnlockEnabled(env)) {
-
-    return {
-      unlocked:
-        false,
-
-      unlockRequired:
-        true,
-
-      goldPaid:
-        0,
-
-      unlockedAt:
-        null
-    };
-  }
-
-
   const db =
     requireWorldDatabase(
       env
     );
-
 
   const row =
     await db
@@ -608,7 +583,6 @@ async function loadWizardAccess(
       )
       .first();
 
-
   const goldPaid =
     Math.max(
       0,
@@ -617,23 +591,17 @@ async function loadWizardAccess(
       ) || 0
     );
 
-
-  /*
-   * Old development/test access rows with gold_paid = 0
-   * do not count as a genuine paid membership.
-   */
   const legitimatelyUnlocked =
     Boolean(row) &&
     goldPaid >=
       WIZARD_UNLOCK_GOLD_COST;
-
 
   return {
     unlocked:
       legitimatelyUnlocked,
 
     unlockRequired:
-      true,
+      !legitimatelyUnlocked,
 
     goldPaid,
 
@@ -646,8 +614,6 @@ async function loadWizardAccess(
         : null
   };
 }
-
-
 
 function makeWizardAccessPublicState(
   access
@@ -682,6 +648,17 @@ async function handleWizardUnlock(
       env
     );
 
+if (!wizardUnlockEnabled(env)) {
+  return jsonResponse(
+    {
+      ok: false,
+      type: "unlock-disabled",
+      error:
+        "Wizard admission is not enabled."
+    },
+    503
+  );
+}
 
     let body;
 
@@ -1576,7 +1553,7 @@ const WIZARD_GLOBAL_PRO_REQUESTS_PER_DAY =
 
 
 const WIZARD_UNLOCK_GOLD_COST =
-  100_000;
+  100000;
 
 
 const ENABLE_WIZARD_UNLOCK_ENV_KEY =
@@ -9360,6 +9337,8 @@ const HTML = `
   var currentState =
     null;
 
+var currentAccess =
+  null;
 
   var sending =
     false;
@@ -9473,11 +9452,25 @@ const HTML = `
       chooseVoice;
   }
 
-
 (async function openWizardStudy() {
 
   await loadState();
 
+  /*
+   * The state endpoint is authoritative for
+   * visitors who have already purchased access.
+   */
+  if (
+    currentAccess &&
+    currentAccess.unlocked === true
+  ) {
+    return;
+  }
+
+  /*
+   * Only visitors who are not already unlocked
+   * need to enter the purchase/admission flow.
+   */
   await checkWizardAdmission();
 
 })();
@@ -9800,6 +9793,9 @@ function getOrCreateVisitorId() {
 
       currentState =
         data.publicState;
+
+currentAccess =
+  data.access || null;
 
 
       updateStateDisplay(

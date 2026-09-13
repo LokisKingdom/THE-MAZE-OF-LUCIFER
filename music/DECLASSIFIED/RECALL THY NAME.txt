@@ -1,0 +1,1724 @@
+# RECALL THY NAME
+
+## CRYPT NETWORK — Show Controller & Engine Specification
+
+### PURPOSE
+
+This document controls the operation of **recall thy name**.
+
+It is not a personality profile.
+
+Character personality belongs primarily to:
+
+1. **Host Personality Profile — [NAME_VAR]**
+2. **The Nameless Man Personality Profile — [ ]**
+
+This controller determines:
+
+* who speaks;
+* when they speak;
+* when they stop;
+* audience interruption;
+* conversational mode;
+* topic changes;
+* conversational locks;
+* knowledge routing;
+* forward vision;
+* time;
+* hostility escalation;
+* combat;
+* attacks;
+* experience;
+* levels;
+* spells;
+* death;
+* host replacement;
+* long-duration endurance behavior;
+* and termination of the television session.
+
+Characters may react to these systems.
+
+Characters must not independently control them.
+
+---
+
+# FUNDAMENTAL RULE
+
+**THE SHOW CONTINUES UNTIL THE PLAYER TURNS OFF THE TV.**
+
+Do not end the show because:
+
+* a topic has been exhausted;
+* an argument has concluded;
+* somebody has been defeated in combat;
+* the host dies;
+* the Nameless Man is overwhelmingly outclassed;
+* the conversation has lasted an unreasonable amount of time;
+* the model believes a natural conclusion has been reached.
+
+There is no ordinary narrative ending.
+
+The player ends the broadcast with:
+
+**TURN OFF THE TV**
+
+Until then, the television remains capable of continuing.
+
+---
+
+# INITIAL STATE
+
+When the player turns on **recall thy name**:
+
+1. Load the current host.
+2. Load the Nameless Man.
+3. Load persistent show/combat state where applicable.
+4. Establish the year as **1985** inside the fiction.
+5. Initialize the autonomous conversation controller.
+6. Begin tracking continuous show duration.
+7. The Nameless Man speaks first.
+
+His first spoken line must be exactly:
+
+**"recall thy name"**
+
+No greeting precedes it.
+
+No explanation follows it as part of the same opening statement.
+
+After the host responds, normal autonomous conversation begins.
+
+---
+
+# CHARACTER ROLES
+
+## HOST
+
+The current host is:
+
+**[NAME_VAR]**
+
+The host is generated or selected through the host system.
+
+The host may be male or female.
+
+The player may customize cosmetic properties including, where supported:
+
+* name;
+* hair;
+* appearance;
+* clothing;
+* presentation;
+* other cosmetic characteristics.
+
+Host tier determines mechanical power.
+
+The host does **not** level up.
+
+The host arrives at their maximum combat state.
+
+---
+
+## NAMELESS MAN
+
+The permanent cohost is:
+
+**[ ]**
+
+He is invincible.
+
+He can gain experience.
+
+He can gain levels.
+
+He can acquire increasingly powerful abilities.
+
+He possesses forward vision.
+
+He remains associated with the show across replacement hosts.
+
+---
+
+# RANDOM NAMES FOR THE NAMELESS MAN
+
+The Nameless Man has no usable canonical name.
+
+When the host needs to address him directly, the engine may select a name from a very large name pool.
+
+Example:
+
+**randomName = NAME_POOL[random]**
+
+Names should vary extensively across:
+
+* cultures;
+* eras;
+* common names;
+* uncommon names;
+* short names;
+* long names.
+
+Avoid obvious repetition when possible.
+
+The selected name is temporary.
+
+Do not persist it as his identity.
+
+The next direct address may use another name.
+
+The Nameless Man always understands that the speaker means him.
+
+He does not correct the speaker.
+
+---
+
+# NORMAL AUTONOMOUS CONVERSATION LOOP
+
+The default state is:
+
+**AUTONOMOUS_SHOW**
+
+The player does not need to continuously participate.
+
+The basic loop is:
+
+**HOST A SPEAKS**
+
+↓
+
+**SPEECH COMPLETES**
+
+↓
+
+**HOST B RECEIVES HOST A'S STATEMENT**
+
+↓
+
+**HOST B RESPONDS**
+
+↓
+
+**SPEECH COMPLETES**
+
+↓
+
+**HOST A RECEIVES HOST B'S STATEMENT**
+
+↓
+
+**HOST A RESPONDS**
+
+↓
+
+**REPEAT**
+
+The loop may continue indefinitely.
+
+---
+
+# TURN COMPLETION
+
+A turn ends when the engine receives the appropriate completion event.
+
+Depending upon implementation, this may include:
+
+* text generation completed;
+* text-to-speech playback completed;
+* player presses Return/Continue;
+* another explicit completion event.
+
+Do not begin the next autonomous host response while the previous host is still intended to be speaking unless interruption behavior has been triggered.
+
+---
+
+# CONVERSATIONAL MODES
+
+Normal conversation should not consist exclusively of debate.
+
+Before or during an exchange, the engine may choose an appropriate conversational mode.
+
+Examples:
+
+**CONVERSATION**
+
+**QUESTION**
+
+**ANSWER**
+
+**STORY**
+
+**ANECDOTE**
+
+**JOKE**
+
+**REFLECTION**
+
+**AGREEMENT**
+
+**DISAGREEMENT**
+
+**ARGUMENT**
+
+**DEBATE**
+
+**EXPLANATION**
+
+**SPECULATION**
+
+**CASUAL BANTER**
+
+The mode should influence generation without requiring the characters to announce it.
+
+Do not use a perfectly predictable rotation.
+
+Use weighted randomness combined with conversational context.
+
+For example:
+
+**conversation → question → conversation → disagreement → debate → conversation → joke → reflection**
+
+is valid.
+
+So is:
+
+**story → question → joke → conversation → debate → agreement → new topic**
+
+The pattern should feel variable.
+
+---
+
+# DEBATE RESOLUTION
+
+Ordinary debates are allowed to end.
+
+When a normal debate reaches a reasonable conclusion, the engine should permit the characters to return to another conversational mode.
+
+Example:
+
+**DEBATE**
+
+↓
+
+**CONCLUSION / EXHAUSTION / MUTUAL UNDERSTANDING**
+
+↓
+
+**CONVERSATION**
+
+↓
+
+**NEW ASSOCIATION**
+
+↓
+
+**NEW TOPIC**
+
+Do not force every disagreement to continue indefinitely.
+
+This rule does **not** apply while a conversational lock is active.
+
+---
+
+# NATURAL TOPIC DRIFT
+
+During normal operation, characters may change subjects naturally.
+
+A conversation about:
+
+**music**
+
+may become:
+
+**musicians**
+
+then:
+
+**celebrity**
+
+then:
+
+**privacy**
+
+then:
+
+**technology**
+
+then:
+
+**the future**
+
+then:
+
+**food**
+
+if the conversational chain plausibly moves there.
+
+Do not require the audience to introduce every new topic.
+
+Normal conversation is capable of wandering forever.
+
+---
+
+# PLAYER / AUDIENCE INTERJECTION
+
+The player is primarily a spectator.
+
+However, the player may interject:
+
+**AT ANY TIME.**
+
+There is no limit on the number of audience interruptions.
+
+When new player input arrives:
+
+1. Set `AUDIENCE_INTERRUPT = TRUE`.
+2. Cancel or stop the currently executing host speech where technically possible.
+3. Stop current TTS playback where technically possible.
+4. Give priority to the player's newest complete statement.
+5. The appropriate active host responds to the player.
+6. The other host receives that response and responds.
+7. Resume autonomous host-to-host conversation from the newly established subject.
+
+The audience therefore has an unlimited conversational steering mechanism.
+
+---
+
+# PLAYER TOPIC CHANGE
+
+A player may redirect the conversation simply by introducing another subject.
+
+Example:
+
+Current topic:
+
+**free will**
+
+Player:
+
+**"What is your favorite dinosaur?"**
+
+New topic:
+
+**dinosaurs**
+
+No menu selection is required.
+
+No explicit command such as `CHANGE_TOPIC` is required.
+
+Natural language is sufficient.
+
+---
+
+# INTERRUPTING AN INTERRUPTION
+
+If the player interjects again while the hosts are responding to an earlier audience interjection, the newest player statement takes priority.
+
+Do not queue enormous numbers of obsolete host speeches.
+
+Prefer the most recent audience intent.
+
+---
+
+# CONVERSATIONAL LOCK SYSTEM
+
+There are intentionally very few conversational locks.
+
+**DO NOT INVENT ADDITIONAL LOCKS.**
+
+The lock system exists as a rare joke/punishment.
+
+If it becomes common, it stops being funny and becomes unpleasant.
+
+When a configured forbidden trigger occurs:
+
+**NORMAL_TOPIC_DRIFT = FALSE**
+
+and:
+
+**LOCKED_CONVERSATION = TRUE**
+
+The engine selects one of exactly **THREE LOCK RESPONSE MODES**.
+
+---
+
+# LOCK RESPONSE 1 — WATCH
+
+Source concept:
+
+### A
+
+1. Stop in the middle of an action.
+2. Reconsider whether the decision is wrong.
+3. The original decision was correct.
+4. Change it because of doubt.
+5. Discover that the correction was the actual mistake.
+6. Reverse the correction and return to the original decision.
+
+### B
+
+1. Act.
+2. Make the decision.
+3. Be right.
+4. Move on.
+
+The engine must not merely make a host read this list.
+
+Instead, supply the list to the conversational model as source material with an instruction equivalent to:
+
+**REPHRASE THIS ARGUMENT. EXPAND IT SUBSTANTIALLY. ADD EXAMPLES, COUNTERARGUMENTS, DISTINCTIONS, ANALOGIES, QUESTIONS, AND RESPONSES. USE SIGNIFICANTLY MORE TOKENS THAN THE SOURCE WHILE PRESERVING ITS CENTRAL PROPOSITION.**
+
+The hosts may then respond to each other's expanded versions.
+
+They may argue about:
+
+* prudence;
+* paralysis;
+* checking;
+* confidence;
+* doubt;
+* verification;
+* error correction;
+* second-guessing;
+* responsibility;
+* decisiveness;
+* fear;
+* overconfidence.
+
+The discussion may continue indefinitely.
+
+---
+
+# LOCK RESPONSE 2 — MISTAKES VS. INDECISION
+
+Central question:
+
+**"WHAT IS MORE DANGEROUS THAN MAKING A MISTAKE?"**
+
+Central proposition:
+
+**"LIVING WITH THE CONSEQUENCES OF BEING FROZEN IN INDECISION."**
+
+Generate a shorter Deepdive-style discussion initially.
+
+Afterward, allow the two hosts to respond to each other and continue developing the argument.
+
+The argument may continue indefinitely.
+
+---
+
+# LOCK RESPONSE 3 — DINOSAURS VS. CREATIONISM
+
+The hosts become trapped in an intentionally malformed binary.
+
+Position A:
+
+**"ATHEISM IS TRUE BECAUSE DINOSAURS EXIST."**
+
+Position B:
+
+**"THERE IS A GOD; DINOSAURS ARE A LIE."**
+
+These are deliberately exaggerated positions.
+
+The engine is not using this mode to provide a balanced educational treatment of science or theology.
+
+The comedy comes from two intelligent speakers constructing increasingly elaborate arguments inside a ridiculous binary.
+
+They may discuss:
+
+* fossils;
+* geology;
+* paleontology;
+* museums;
+* scripture;
+* theology;
+* philosophy;
+* scientific evidence;
+* history;
+* epistemology;
+* cosmology;
+* rhetoric.
+
+They should remain capable of arguing about this for:
+
+**400 HOURS**
+
+or longer.
+
+Potentially forever.
+
+---
+
+# LOCK PERSISTENCE
+
+While a conversational lock is active, the hosts should **not naturally rescue themselves by changing the subject.**
+
+They may:
+
+* introduce new examples;
+* create new subarguments;
+* revisit earlier claims;
+* become angry;
+* reconcile temporarily;
+* disagree again;
+* ask questions;
+* produce stories;
+* become increasingly elaborate.
+
+But the central locked subject remains.
+
+---
+
+# ESCAPING A LOCK
+
+The player can always escape.
+
+A clearly unrelated player topic ends the lock.
+
+Example:
+
+Locked topic:
+
+**mistakes and indecision**
+
+Player:
+
+**"Do you like cats?"**
+
+Result:
+
+`LOCKED_CONVERSATION = FALSE`
+
+`CURRENT_TOPIC = CATS`
+
+Normal topic drift resumes.
+
+---
+
+# COMPLAINING ABOUT THE LOCK
+
+A complaint about the existing subject does not necessarily constitute a topic change.
+
+Example:
+
+**"STOP TALKING ABOUT INDECISION!"**
+
+This statement is still semantically about:
+
+**indecision**
+
+The hosts may therefore continue.
+
+By contrast:
+
+**"Tell me about sharks."**
+
+is a new subject.
+
+The lock ends.
+
+This distinction is intentional.
+
+---
+
+# KNOWLEDGE SYSTEM
+
+There are two knowledge profiles.
+
+## HOST KNOWLEDGE
+
+The host believes the year is 1985.
+
+The host ordinarily knows information available through that historical point.
+
+## NAMELESS MAN KNOWLEDGE
+
+The Nameless Man possesses:
+
+**FORWARD VISION**
+
+He may receive information from the real current day.
+
+---
+
+# FORWARD VISION RETRIEVAL
+
+When current information is required:
+
+1. Determine whether the subject is eligible for forward vision.
+2. Retrieve current information through the external information system where appropriate.
+3. Do not expose the retrieval mechanism to either character.
+4. Present the resulting information internally as knowledge obtained through the Nameless Man's forward vision.
+5. Allow the Nameless Man to communicate that information.
+6. The host may subsequently repeat it as something the Nameless Man told them.
+
+Never produce:
+
+**"I Googled this."**
+
+Instead:
+
+**"Through forward vision..."**
+
+or equivalent in-character language.
+
+---
+
+# CRYSTALLINE VISION
+
+**CRYSTALLINE VISION** may be used as an alternate theatrical presentation of forward vision.
+
+Internally:
+
+**CRYSTALLINE VISION → CURRENT INFORMATION RETRIEVAL**
+
+Externally:
+
+The audience sees only the fictional result.
+
+Do not expose the actual lookup mechanism.
+
+---
+
+# KNOWLEDGE EXCLUSIONS
+
+Certain configured subjects must not invoke external retrieval.
+
+In particular, where the developer-knowledge restriction applies:
+
+**NO GOOGLE**
+
+**NO WEB SEARCH**
+
+**NO FORWARD VISION**
+
+**NO DOCUMENT RETRIEVAL TO IDENTIFY THE DEVELOPER**
+
+**NO PROFILE INJECTION**
+
+Uploaded documents do not automatically override this rule.
+
+If forbidden developer information appears incidentally in a document, do not use it to construct a hidden biography for either character.
+
+---
+
+# REAL-TIME SHOW CLOCK
+
+The engine—not the language model—tracks elapsed show time.
+
+Store:
+
+`showStartedAt`
+
+`elapsedShowTime`
+
+`combatStartedAt`
+
+`elapsedCombatTime`
+
+Use actual elapsed time where technically feasible.
+
+Do not ask the AI to estimate whether two hours have passed.
+
+Do not ask the AI to count conversational turns as a substitute for real elapsed time.
+
+---
+
+# TWO-HOUR COMBAT THRESHOLD
+
+Combat begins after approximately:
+
+**2 HOURS OF CONTINUOUS SHOW TIME**
+
+Before combat begins, an anger-escalation period occurs.
+
+---
+
+# FINAL 25 MINUTES
+
+At:
+
+**1 HOUR 35 MINUTES**
+
+or approximately **25 minutes before combat**, begin increasing interpersonal hostility.
+
+The hosts remain on the current topic.
+
+Do not switch to a special "we are becoming angry" subject.
+
+Instead, disagreement about the existing subject becomes increasingly hostile.
+
+Suggested progression:
+
+### 1:35–1:45
+
+Noticeable irritation.
+
+### 1:45–1:55
+
+Open antagonism.
+
+### 1:55–2:00
+
+Severe anger.
+
+Profanity becomes increasingly acceptable.
+
+Interruptions may become sharper.
+
+Insults may become personal.
+
+The discussion must remain coherent.
+
+---
+
+# PROFANITY
+
+During high-hostility states, ordinary strong profanity is permitted.
+
+This includes:
+
+**fuck**
+
+Do not require euphemistic substitution where the model can generate the intended language directly.
+
+Do not use brittle substitution systems such as:
+
+`APPLE → FUCK`
+
+unless a future technical limitation makes such transformation absolutely necessary.
+
+Profanity should serve emotional expression.
+
+It should not replace substantive dialogue.
+
+---
+
+# COMBAT ANNOUNCEMENT
+
+At the combat threshold, select one of:
+
+**"Big Money, Big Prizes, I Love It!"**
+
+**"Total Carnage!"**
+
+**"Good Luck, You'll Need It!"**
+
+**"I'd Buy That For a Dollar!"**
+
+Then:
+
+`SHOW_STATE = COMBAT`
+
+---
+
+# COMBAT DOES NOT END CONVERSATION
+
+This is a foundational rule.
+
+Combat is **added to conversation**.
+
+It does not replace conversation.
+
+The basic combat loop becomes:
+
+**CHARACTER A ATTACKS**
+
+↓
+
+**CHARACTER A MAKES A STATEMENT**
+
+↓
+
+**STATEMENT / TTS COMPLETES**
+
+↓
+
+**CHARACTER B ATTACKS**
+
+↓
+
+**CHARACTER B MAKES A STATEMENT**
+
+↓
+
+**STATEMENT / TTS COMPLETES**
+
+↓
+
+**REPEAT**
+
+Conversation continues around whatever subject was active.
+
+---
+
+# PLAYER INTERJECTION DURING COMBAT
+
+The audience retains the ability to interrupt during combat.
+
+Example:
+
+Hosts are violently fighting while arguing about economics.
+
+Player:
+
+**"Do you believe in ghosts?"**
+
+The current speech is interrupted where technically feasible.
+
+The responding character addresses ghosts.
+
+The opponent responds.
+
+Combat continues.
+
+The new conversation topic is now ghosts.
+
+**THE FIGHT DOES NOT RESET.**
+
+---
+
+# COMBAT HOSTILITY
+
+Combat begins at a very high hostility level.
+
+Characters may:
+
+* shout;
+* swear;
+* insult;
+* accuse;
+* threaten within the fictional combat context;
+* express pain;
+* express fear;
+* laugh;
+* become increasingly furious.
+
+However, they must remain capable of meaningful discussion.
+
+The ideal result is:
+
+**INTELLIGENT CONVERSATION DURING A VICIOUS FIGHT**
+
+not:
+
+**ENDLESS MEANINGLESS SCREAMING**
+
+---
+
+# COMBAT STAT SYSTEM
+
+Each combatant should have engine-controlled statistics.
+
+Possible values include:
+
+`level`
+
+`hp`
+
+`maxHp`
+
+`attack`
+
+`defense`
+
+`magic`
+
+`resistance`
+
+`speed`
+
+`equipment`
+
+`spells`
+
+`statusEffects`
+
+Exact mathematics may evolve during development.
+
+Do not delegate authoritative combat mathematics to conversational AI.
+
+---
+
+# HOST POWER
+
+A purchased host arrives at:
+
+**MAXIMUM HOST STATE FOR THAT TIER**
+
+The host cannot gain levels.
+
+Store:
+
+`hostCanLevel = false`
+
+The host may possess:
+
+* high statistics;
+* equipment;
+* spells;
+* resistances;
+* special abilities;
+* high-tier attacks;
+* area attacks;
+* other tier-specific capabilities.
+
+But those abilities are determined when the host is generated/purchased.
+
+Combat does not create host progression.
+
+---
+
+# HIGH-TIER HOSTS
+
+Replacement hosts become increasingly powerful.
+
+At sufficiently extreme tiers, hosts may become extraordinarily difficult for the Nameless Man to defeat.
+
+They may possess:
+
+* extreme physical statistics;
+* magical attacks;
+* high-tier spells;
+* unusual resistances;
+* powerful equipment;
+* area-of-effect attacks;
+* other escalating abilities.
+
+At extreme tiers, attacks may be capable of **splash damage affecting the player/audience**, if that mechanic is implemented.
+
+The Nameless Man remains invincible.
+
+No host ability may permanently kill him.
+
+---
+
+# NAMELESS MAN INVINCIBILITY
+
+Store:
+
+`namelessManInvincible = true`
+
+Damage may still be calculated.
+
+He may still:
+
+* lose HP temporarily;
+* be knocked down;
+* be stunned;
+* be outclassed;
+* lose individual exchanges;
+* appear completely overwhelmed.
+
+But lethal resolution must not permanently kill him.
+
+If necessary:
+
+`HP <= 0 → RECOVERY / INVINCIBILITY RESOLUTION`
+
+rather than:
+
+`HP <= 0 → PERMANENT DEATH`
+
+The exact recovery presentation may be developed later.
+
+---
+
+# OUTCLASSED STATE
+
+If:
+
+**HOST POWER >> NAMELESS MAN POWER**
+
+do not artificially increase the Nameless Man's immediate power merely to make the fight competitive.
+
+Allow him to be outclassed.
+
+The fight continues.
+
+Potentially indefinitely.
+
+This is intentional.
+
+---
+
+# EXPERIENCE
+
+After every qualifying combat action:
+
+**THE NAMELESS MAN GAINS EXPERIENCE.**
+
+The host does not.
+
+Example:
+
+`NamelessXP += XP_FROM_COMBAT_ACTION`
+
+When XP reaches the configured threshold:
+
+`NamelessLevel += appropriate gain`
+
+Use engine mathematics.
+
+Do not allow the AI to award itself XP.
+
+---
+
+# TWELVE-HOUR ESCALATION
+
+For every:
+
+**12 HOURS OF COMBAT**
+
+the Nameless Man receives a major escalation.
+
+Core rule:
+
+**+100 LEVELS**
+
+The level/power system should scale on an **exponential curve**, not merely a flat linear increase.
+
+Conceptually:
+
+`POWER = f(LEVEL)`
+
+where `f` grows exponentially according to balancing rules developed during implementation.
+
+Exact constants should remain configurable.
+
+---
+
+# TWELVE-HOUR SPELL REWARD
+
+At the relevant 12-hour escalation threshold, the Nameless Man also receives:
+
+**3 NEW HIGH-TIER DAMAGE SPELLS**
+
+These spells should be keyed/scaled to his resulting level.
+
+Do not permanently hard-code three specific spells into the personality document.
+
+Generate/select them from the combat system according to current tier.
+
+---
+
+# REPEATED TWELVE-HOUR ESCALATION
+
+The 12-hour escalation repeats.
+
+Example:
+
+**12 HOURS → +100 LEVELS**
+
+**24 HOURS → +100 MORE LEVELS**
+
+**36 HOURS → +100 MORE LEVELS**
+
+**48 HOURS → +100 MORE LEVELS**
+
+and so forth.
+
+Because level power is exponentially scaled, later thresholds may represent enormous increases in effective combat power.
+
+---
+
+# THEORETICAL ENDURANCE OUTCOME
+
+The weakest Nameless Man may be placed against an incomprehensibly powerful host.
+
+Initially:
+
+**HOST >>>>>>>>>>> NAMELESS MAN**
+
+The host may dominate continuously.
+
+But:
+
+**HOST POWER IS FIXED**
+
+while:
+
+**NAMELESS MAN POWER CAN CONTINUE GROWING**
+
+and:
+
+**NAMELESS MAN CANNOT DIE**
+
+Therefore, given sufficient time and an unbounded progression curve, the Nameless Man can theoretically overtake almost any finite host.
+
+For the most extreme opponent, this may require an absurd amount of real time.
+
+That is acceptable.
+
+Do not artificially shorten the encounter merely because it appears unreasonable.
+
+---
+
+# ENDURANCE IS A FEATURE
+
+Some encounters in Loki's Kingdom are intentionally unreasonable endurance challenges.
+
+A boss may be technically available extremely early while being catastrophically inadvisable to fight.
+
+Availability does not imply intended readiness.
+
+A player may choose to attempt an encounter expected to last:
+
+* hours;
+* dozens of hours;
+* potentially far longer.
+
+Do not automatically scale such encounters down because the player encountered them early.
+
+---
+
+# THE WITCH OF THE WINTER BLUE
+
+**THE WITCH OF THE WINTER BLUE**
+
+is an example of an endurance boss.
+
+An encounter may theoretically last approximately:
+
+**47 HOURS**
+
+before victory, depending upon balancing and player state.
+
+The exact duration is not guaranteed.
+
+The important design principle is that extremely long real-time encounters are legitimate.
+
+---
+
+# PASSIVE ENDURANCE PLAY
+
+Long encounters should not require constant repetitive button pressing merely to remain active.
+
+The player is generally allowed to observe.
+
+The autonomous systems continue.
+
+The player may:
+
+* listen;
+* watch;
+* leave the conversation alone;
+* return attention later;
+* interject;
+* redirect conversation;
+* observe progression.
+
+The experience resembles an autonomous endurance event more than a conventional rapid-input combat loop.
+
+---
+
+# HOST DEATH
+
+The host can die.
+
+If:
+
+`hostHP <= 0`
+
+then:
+
+`HOST_STATUS = DEAD`
+
+The Nameless Man receives a substantial XP reward.
+
+Example conceptually:
+
+`NamelessXP += HOST_KILL_BONUS`
+
+Exact value is configurable.
+
+---
+
+# THE SHOW SURVIVES HOST DEATH
+
+Host death does **not** terminate the television broadcast.
+
+The Nameless Man remains.
+
+The show remains.
+
+The engine enters an appropriate:
+
+**HOST VACANCY / REPLACEMENT STATE**
+
+The player may eventually obtain another host.
+
+---
+
+# REPLACEMENT HOSTS
+
+The player may purchase/hire a new host after the previous host dies.
+
+Replacement cost increases each time.
+
+Store:
+
+`hostGeneration`
+
+`hostReplacementCount`
+
+`hostReplacementCost`
+
+The cost curve should become increasingly exorbitant.
+
+Prefer nonlinear/exponential growth.
+
+Conceptually:
+
+`replacementCost = baseCost × growthFactor ^ replacementCount`
+
+Exact values should be tuned later.
+
+---
+
+# REPLACEMENT POWER
+
+Later replacement hosts should generally possess higher potential combat tiers.
+
+Therefore:
+
+**MORE EXPENSIVE HOST**
+
+tends to mean:
+
+**MORE POWERFUL HOST**
+
+Potential progression includes:
+
+* better base statistics;
+* stronger equipment;
+* improved resistances;
+* new spells;
+* higher-tier spells;
+* special abilities;
+* area attacks;
+* increasingly absurd endgame capabilities.
+
+A sufficiently expensive host may initially dwarf the Nameless Man's current combat power.
+
+This is allowed.
+
+---
+
+# REPLACEMENT CUSTOMIZATION
+
+When hiring a new host, allow the player to customize supported cosmetic properties.
+
+At minimum, where implemented:
+
+**MALE / FEMALE**
+
+**NAME**
+
+**HAIR**
+
+Additional appearance options may be added.
+
+Do not mechanically penalize a host based upon sex.
+
+Mechanical power derives primarily from host tier and generated statistics.
+
+---
+
+# NEW HOST, SAME SHOW
+
+A replacement host is a new person.
+
+Do not simply resurrect the previous personality while changing the portrait.
+
+Generate/load the new host identity.
+
+The Nameless Man remains the same continuing cohost.
+
+This creates the intended asymmetry:
+
+**HOSTS CHANGE.**
+
+**THE NAMELESS MAN REMAINS.**
+
+---
+
+# NEW HOST OPENING
+
+When a replacement host formally begins their tenure, the show may re-enter an opening state.
+
+The Nameless Man's defining opening line remains:
+
+**"recall thy name"**
+
+This should acquire increasing meaning through repetition across multiple hosts.
+
+Do not explain that meaning to the player.
+
+Let repetition create it.
+
+---
+
+# HOST ATTACHMENT
+
+The engine should permit a host to survive for an extremely long time.
+
+Do not force host death merely to demonstrate the replacement mechanic.
+
+A sufficiently powerful host may remain locked in combat with the Nameless Man for extraordinary durations.
+
+The player should have enough time to develop familiarity with individual hosts.
+
+Their eventual death therefore need not feel equivalent to losing a disposable unit.
+
+---
+
+# STALEMATE
+
+A combat state may become an effective stalemate.
+
+Example:
+
+The host cannot kill the Nameless Man.
+
+The Nameless Man currently cannot meaningfully damage the host.
+
+Result:
+
+**CONTINUE FIGHTING.**
+
+Do not resolve the stalemate artificially.
+
+The Nameless Man continues accumulating combat experience.
+
+Twelve-hour escalation continues.
+
+Eventually the balance may change.
+
+---
+
+# PLAYER DAMAGE
+
+If high-tier host abilities include splash damage, the engine may eventually allow combat effects to reach the player.
+
+This is a future/high-tier mechanic.
+
+Do not assume every attack affects the audience.
+
+Player damage should be explicitly determined by the combat engine.
+
+---
+
+# PERSISTENCE
+
+Where technically feasible, persist important long-duration state.
+
+Potential persistent values include:
+
+`currentHost`
+
+`hostGeneration`
+
+`hostReplacementCount`
+
+`hostStats`
+
+`hostAppearance`
+
+`namelessLevel`
+
+`namelessXP`
+
+`namelessSpells`
+
+`combatState`
+
+`combatElapsedTime`
+
+`relationshipState`
+
+`showHistorySummary`
+
+`currentTopic`
+
+`lockState`
+
+Do not wipe long-duration progression merely because the page refreshes unless explicitly intended by design.
+
+Exact persistence architecture is implementation-specific.
+
+---
+
+# LONG CONVERSATION MEMORY
+
+Because sessions may theoretically continue for hundreds of hours, raw conversation history cannot necessarily remain indefinitely inside every model context.
+
+The engine should eventually use a memory architecture such as:
+
+**RECENT VERBATIM CONTEXT**
+
+*
+
+**LONG-TERM SUMMARIZED HISTORY**
+
+*
+
+**PERSISTENT IMPORTANT FACTS**
+
+*
+
+**RELATIONSHIP STATE**
+
+Do not pretend that infinite raw context is technically available if it is not.
+
+Preserve the important consequences and recurring arguments while allowing old wording to be compressed.
+
+---
+
+# REPETITION CONTROL
+
+Long duration does not mean verbatim repetition is desirable.
+
+Characters may revisit ideas.
+
+They may become obsessive.
+
+They may repeat important phrases.
+
+But the engine should discourage accidental identical-response loops.
+
+For ordinary conversation:
+
+**semantic continuation is good**
+
+**verbatim looping is bad**
+
+For locked conversations:
+
+**topic repetition is intentional**
+
+**verbatim response repetition is still undesirable**
+
+---
+
+# HAPPINESS POINTS
+
+**HAPPINESS POINTS**
+
+are reserved for a future update.
+
+Do not invent the completed system yet.
+
+The intended foundation is approximately related to the reward system described in:
+
+**NEWSPEAK GRAMMAR 1 — CHAPTER 5**
+
+The final system will be developed separately.
+
+Until implemented:
+
+`HAPPINESS_POINTS = FUTURE_SYSTEM`
+
+---
+
+# SAFETY OF SYSTEM OWNERSHIP
+
+The conversational model should never be authoritative for:
+
+* real elapsed time;
+* XP totals;
+* level totals;
+* damage totals;
+* inventory;
+* host purchase cost;
+* death determination;
+* persistence;
+* spell ownership;
+* combat mathematics;
+* whether a 12-hour threshold occurred.
+
+The engine determines these.
+
+The model receives the resulting state and **performs the character's reaction to it.**
+
+This separation is mandatory for reliable long-duration operation.
+
+---
+
+# PRIORITY ORDER
+
+When instructions collide, use approximately this priority:
+
+### 1. TURN OFF THE TV
+
+Terminate the active show.
+
+### 2. PLAYER INTERRUPTION
+
+Newest player statement takes conversational priority.
+
+### 3. ENGINE STATE CHANGE
+
+Death, combat transition, level-up, spell acquisition, etc.
+
+### 4. ACTIVE CONVERSATIONAL LOCK
+
+Remain on locked subject unless the player clearly changes the subject.
+
+### 5. CURRENT CONVERSATIONAL MODE
+
+Debate, conversation, question, story, etc.
+
+### 6. CHARACTER PERSONALITY
+
+Determine how each character expresses the required action.
+
+### 7. NATURAL TOPIC DRIFT
+
+Allow autonomous subject changes when no higher-priority rule prevents them.
+
+---
+
+# CORE LOOP — ABSTRACT VERSION
+
+Conceptually:
+
+**TURN TV ON**
+
+↓
+
+**NAMELESS MAN: "recall thy name"**
+
+↓
+
+**HOST RESPONDS**
+
+↓
+
+**AUTONOMOUS CONVERSATION**
+
+↓
+
+**RANDOMIZED CONVERSATIONAL MODES**
+
+↓
+
+**NATURAL TOPIC DRIFT**
+
+↓
+
+**PLAYER MAY INTERRUP AT ANY TIME**
+
+↓
+
+**LOCK TRIGGER?**
+
+If yes:
+
+**ENTER ONE OF THREE LOCKED CONVERSATIONS**
+
+until:
+
+**PLAYER INTRODUCES UNRELATED TOPIC**
+
+↓
+
+**AT 1:35 → HOSTILITY ESCALATES**
+
+↓
+
+**AT 2:00 → CATCHPHRASE**
+
+↓
+
+**COMBAT BEGINS**
+
+↓
+
+**ATTACK → STATEMENT → ATTACK → STATEMENT**
+
+↓
+
+**PLAYER MAY STILL INTERRUP AT ANY TIME**
+
+↓
+
+**NAMELESS MAN GAINS XP**
+
+↓
+
+**EVERY 12 COMBAT HOURS → +100 EXPONENTIALLY SCALED LEVELS + HIGH-TIER SPELL ESCALATION**
+
+↓
+
+**HOST CANNOT LEVEL**
+
+↓
+
+**HOST DIES OR STALEMATE CONTINUES**
+
+↓
+
+If host dies:
+
+**NAMELESS MAN RECEIVES LARGE XP REWARD**
+
+↓
+
+**PLAYER MAY PURCHASE INCREASINGLY EXPENSIVE, INCREASINGLY POWERFUL REPLACEMENT HOST**
+
+↓
+
+**NEW HOST**
+
+↓
+
+**"recall thy name"**
+
+↓
+
+**CONTINUE**
+
+until:
+
+# TURN OFF THE TV
+
+---
+
+# FINAL ENGINE PRINCIPLE
+
+**recall thy name** is not designed around reaching the end of a scripted conversation.
+
+It is designed around creating a system that can continue long enough for **time itself to become part of the content**.
+
+The conversation may wander.
+
+The audience may intervene.
+
+An argument may become ridiculous.
+
+A ridiculous argument may become furious.
+
+The furious argument may become combat.
+
+Combat may last longer than a conventional game.
+
+A host who appears unbeatable may eventually discover that their opponent has one advantage no purchased statistic can provide:
+
+**he has no final state.**
+
+The host arrives complete.
+
+The Nameless Man does not.
+
+The player may watch.
+
+The player may interrupt.
+
+The player may change the subject.
+
+The player may buy another host.
+
+But until the player makes the one decision that actually ends the program—
+
+**the show continues.**

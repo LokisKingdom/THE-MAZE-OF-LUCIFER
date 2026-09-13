@@ -1,0 +1,397 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header_LMC.astro';
+import Footer from '../components/Footer.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+
+const lmcTracks = [
+  {
+    title: "LUCIFER MEDIA CORPORATION",
+    file: "LUCIFER%20MEDIA%20CORPORATION/LUCIFER%20MEDIA%20CORPORATION.mp3",
+  },
+  ...Array.from({ length: 58 }, (_, i) => ({
+    title: `LUCIFER MEDIA CORPORATION (${i + 1})`,
+    file: `LUCIFER%20MEDIA%20CORPORATION/LUCIFER%20MEDIA%20CORPORATION%20(${i + 1}).mp3`,
+  })),
+  {
+    title: "MAX",
+    file: "MAX/MAX.mp3",
+  },
+  ...Array.from({ length: 39 }, (_, i) => ({
+    title: `MAX (${i + 1})`,
+    file: `MAX/MAX%20(${i + 1}).mp3`,
+  })),
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="LUCIFER MEDIA CORPORATION (LMC)"
+      description="Headquarters"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <section class="recall">
+        <a
+          class="recall-image-link"
+          href="https://recall-thy-name.lokiskingdom.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="recall-image"
+            src="https://www.lokiskingdom.com/recall%20thy%20name.png"
+            alt="Recall Thy Name"
+          />
+        </a>
+
+        <div class="recall-info">
+          <h1>RECALL THY NAME — CRYPT NETWORK</h1>
+          <p>
+            Autonomous television. Two AI characters converse continuously.
+            The audience may interrupt at any time.
+          </p>
+          <a
+            class="recall-button"
+            href="https://recall-thy-name.lokiskingdom.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ENTER RECALL THY NAME
+          </a>
+        </div>
+      </section>
+
+      <div class="hero">
+        <section class="intro">
+          <h1>👑 LUCIFER MEDIA CORPORATION 👑</h1>
+
+          <p class="door">[YOU OPEN THE DOOR]</p>
+
+          <p>COME ON IN WE'VE BEEN WAITING TO MEET YOU!!!! JOIN THE OTHERS!!!!</p>
+
+          <p>WE'D LOVE TO BRAINWASH YOU WITH MANY A SONG!!!!</p>
+
+          <p>"Welcome to LUCIFER MEDIA CORPORATION!!!</p>
+        </section>
+
+        <section class="corporate">
+          <img
+            src="/LMC (header).jpg"
+            alt="LMC"
+            class="large-image"
+          />
+
+          <p>[Incorporated : Tuesday, June 30th, 2026 at 7:16 PM]</p>
+
+          <p class="description">
+            WE ARE A MEDIA CORPORATION, SPECIALIZING IN THE CREATION OF SONGS,
+            GAMES, BOOKS, LITERATURE AND WEBSITES, ANDROID APPS, AS WELL AS
+            VIDEOS, AND DEEPDIVE COMMENTARIES.
+            OUR MAIN PROPERTIES ARE:
+          </p>
+        </section>
+
+        <section class="properties">
+          <p>1) WE ARE THE OWNER AND PUBLISHER OF THE LUCIFERIANISM SERIES OF GAMES ON STEAM AND EPIC GAMES, PROGRAMMED IN UNREAL 5.4.</p>
+          <p>2) WE ARE THE COPYRIGHT HOLDER FOR EFSMB (Empowered Feminist Stole My Baby), A LUCIFERIAN CYBERPUNK BAND, WITH 9000+ SONGS, A ONE MAN NIN STYLE PROJECT.</p>
+          <p>3) WE ARE THE COPYRIGHT HOLDER ON DOZENS OF BOOKS, MOST SPECIALIZING IN OCCULT AND HORROR THEMES, BUT ALSO RELIGIOUS WORKS.</p>
+          <p>4) WE ARE THE DEVIL 666 ON YOUTUBE, OUR DEVELOPER HANDLE.</p>
+          <p>5) WE ARE THE DEVIL 666 ON RUMBLE, OUR OLD SONG ARCHIVE.</p>
+          <p>6) WE ARE LOKISKINGDOM ON BITCHUTE, AN ACCOUNT I LOCKED MYSELF OUT OF DURING THE HORROR AT KINGSTON ROAD WHICH GAINED MASSIVE POPULARITY.</p>
+          <p>7) I AM THE HORROR AT KINGSTON ROAD.</p>
+          <p>8) I AM GENOCIDE NEWS ON BITCHUTE.</p>
+          <p>9) MY ARCHIVE.ORG COLLECTION IS THE LUCIFERIAN CATHEDRAL (LINKED IN THE HEADER)</p>
+          <p>10) I AM EFSMB ON SOUNDCLOUD, WITH OVER 1.78 MILLION HITS AND COUNTING!!!</p>
+          <p>11) I AM THE @TheDevil666_BSR ON X.</p>
+          <p>12) I AM BRENDAN S. ROSE ON FACEBOOK.</p>
+          <p>13) I AM THE CREATOR OF AN 1800+ PART LECTURE/COMMENTARY SERIES MADE WITH GOOGLE NOTEBOOK LM AND THE DEEPDIVE CREW!!!! THE OFFICIAL COMMETARIES OF THIS RELIGION!!!</p>
+          <p>14) A ONLINE LEGACY STRETCHING BACK TO 2007, AND THE BIRTH OF COMPUTERS AND THE INTERNET, A CYBERPUNK CULT!!!! I SAW IT ALL HAPPEN, ACTUALLY I CREATED IT!</p>
+          <p>15) I AM LUCIFER'S REPRESENTATIVE ON EARTH</p>
+          <p>16) I AM THE CREATOR OF THE LUCIFERIANISM/GOODNIGHTISM CULTS. WE WORSHIP THE MOON GOD RHER!</p>
+          <p>17) A RELIGION OF ONE, NO ONE ELSE MAY JOIN. (THOUGH YOU CAN SPLINTER OFF)</p>
+          <p>18) ONE DAY MY RELIGION WILL TAKE OVER THE WORLD. AND I WILL BE REBORN AS AN IMMORTAL MACHIIIINE!!!!</p>
+          <p>19) IN A WORLD OF PURE ANARCHY. WE PRACTISE ANARCHY, WITH OR WITHOUT THAT WORLD.</p>
+          <p>20) WE ARE THE CREATOR AND OWNER OF WWW.LOKISKINGDOM.COM , and the LOKISKINGDOM android app.</p>
+        </section>
+
+        <section class="gallery">
+          <img src="/LMC.jpg" alt="LMC" class="gallery-image" />
+          <img src="/GGCRfD4XMAA48wJ.jpg" alt="Loki3" class="gallery-image" />
+        </section>
+
+        <section class="quote">
+          <p>
+            There's a trail of suicides, wherever I go. I go, wherever I wanted.
+            There's a long road there, covered in suicides, I walk by, they die,
+            there's a trail of purple angels gathering their harps up above,
+            I sing, in suicides....
+          </p>
+        </section>
+
+        <section class="android-box">
+          <h2>Loki’s Kingdom Android App</h2>
+
+          <p>
+            Native Android release featuring:
+            <br />
+            Album selection, playlist swapping,
+            song selection, shuffle, repeat,
+            background playback, and Cloudflare-powered streaming,
+            A Dark Symphony of Evil Sexy Boodstained Music From
+            a real life authentic Nosferatu.
+            <br /><br />
+            [VERSION NOTES ON INDEX PAGE]
+          </p>
+
+          <a
+            class="apk-button"
+            href="https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/A_RELEASES/lokiskingdom.apk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ⬇ Download the Android APK - VERSION 5 - 49 ALBUMS, THOUSANDS OF SONGS
+          </a>
+
+          <p class="android-note">
+            Android may ask for permission to install apps from unknown sources.
+          </p>
+        </section>
+
+        <section class="music">
+          <MusicPlayer tracks={lmcTracks} />
+        </section>
+
+        <p class="copyright">Copyright ©️ Brendan S. Rose, 2026</p>
+      </div>
+    </main>
+
+    <Footer />
+
+    <style>
+      :global(body) {
+        margin: 0;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+      }
+
+      .recall {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 1.5rem;
+        text-align: center;
+        background: #000;
+      }
+
+      .recall-image-link {
+        display: block;
+        width: 100%;
+      }
+
+      .recall-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 92vh;
+        margin: 0 auto;
+        object-fit: contain;
+        background: #000;
+      }
+
+      .recall-info {
+        width: calc(100% - 2rem);
+        max-width: 850px;
+        margin: 1rem auto 0;
+      }
+
+      .recall-info h1 {
+        margin: 0 0 0.75rem;
+        font-size: 1.6rem;
+      }
+
+      .recall-info p {
+        line-height: 1.6;
+      }
+
+      .recall-button {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 0.9rem 1.6rem;
+        border: 1px solid #666;
+        border-radius: 8px;
+        background: #111;
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 4rem 1rem;
+        background: linear-gradient(#1a0033, #000);
+        color: #ffd700;
+      }
+
+      .intro,
+      .corporate,
+      .properties,
+      .quote,
+      .music {
+        width: 100%;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .intro h1 {
+        margin: 0 0 1rem;
+        color: #ff0000;
+        font-size: 3.5rem;
+      }
+
+      .door {
+        max-width: 700px;
+        margin: 0 auto 1rem;
+        font-size: 1.4rem;
+      }
+
+      .large-image {
+        display: block;
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        margin: 2rem auto;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      }
+
+      .description {
+        max-width: 950px;
+        margin: 1.5rem auto;
+        line-height: 1.7;
+      }
+
+      .properties {
+        max-width: 1000px;
+        margin-top: 2rem;
+        text-align: left;
+        line-height: 1.65;
+      }
+
+      .properties p {
+        margin: 1rem 0;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 1100px;
+        margin: 3rem auto;
+      }
+
+      .gallery-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      }
+
+      .quote {
+        max-width: 900px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        line-height: 1.7;
+        font-size: 1.1rem;
+      }
+
+      .android-box {
+        max-width: 700px;
+        margin: 3rem auto;
+        padding: 2rem;
+        text-align: center;
+        background: #111;
+        border: 2px solid #4B0082;
+        border-radius: 14px;
+        box-shadow: 0 0 20px rgba(75, 0, 130, 0.4);
+      }
+
+      .android-box h2 {
+        margin: 0 0 1rem;
+        color: #ffd700;
+        font-size: 2rem;
+      }
+
+      .android-box p {
+        color: #ddd;
+        line-height: 1.7;
+        font-size: 1.05rem;
+      }
+
+      .apk-button {
+        display: inline-block;
+        padding: 14px 28px;
+        background: #4B0082;
+        color: #fff;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .android-note {
+        margin-top: 1.5rem;
+        color: #888 !important;
+        font-size: 0.9rem !important;
+      }
+
+      .music {
+        margin-top: 3rem;
+      }
+
+      .copyright {
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+        }
+
+        .intro h1 {
+          font-size: 2.25rem;
+        }
+
+        .recall-image {
+          max-height: none;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .properties {
+          text-align: center;
+        }
+
+        .android-box {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 1.25rem;
+        }
+      }
+    </style>
+  </body>
+</html>

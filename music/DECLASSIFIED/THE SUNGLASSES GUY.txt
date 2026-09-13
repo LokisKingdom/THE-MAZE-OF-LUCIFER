@@ -1,0 +1,280 @@
+add this to memory, even as weird as it is.
+
+
+
+You will encounter a guy who gives you an offer.
+
+
+
+60,000 gold, every week, paid upfront first week right away.
+
+
+
+in exchange:
+
+
+
+He is standing in the cell.
+
+
+
+He doesn't do anything.
+
+
+
+He is an ornate piece of furniture.
+
+
+
+But he is there until the end of the game (if such things exist here no they don't)
+
+paying you rent, 60,000 gold once a week, eventually that will be 2 GP equivalently
+
+
+
+He is just standing in her room, with a drink in his hands, with sunglasses, and a hawaiian shirt, with big nose.
+
+
+
+You can later on, buy upgrade decorations for him, he should not be useful for stats or money, it should be more like, pay 1 million, dress him up like a clown.
+
+
+
+SALLY'S MODEL IS CLOSER TO MY ACTUAL BRAIN, I WISH I WAS THAT WIZARD GPT, kinda not really......
+
+
+
+This actually is a real set of mechanics i'd like to implement, please put it in memory, we're getting there, we'll win stratego one day, actually the system is playable now, 3 great characters, a loyalty until death thing with sally, this feels like the very start, it could just as easily be the end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Worked for 11s
+
+Yes. I’m treating this as a real future Cell mechanic, not a throwaway joke:
+
+The Rent Guy: at some point the player encounters a man offering 60,000 gold per week, with the first 60,000 paid immediately, in exchange for permanently occupying part of Sally’s Cell. Once accepted, he remains there indefinitely. He does essentially nothing: sunglasses, Hawaiian shirt, big nose, drink in hand, just standing there like an ornate piece of furniture. The 60,000/week never meaningfully scales, so progression inflation eventually turns what initially seems like excellent passive income into the equivalent of a couple of gold.
+
+More importantly, his later progression is deliberately economically irrational and cosmetic. You can sink enormous amounts of money into decorating this useless man without improving his rent or giving Sally statistical benefits—for example, 1,000,000 gold to dress him as a clown. He can accumulate increasingly ridiculous cosmetic upgrades while continuing to stand there and pay the same increasingly irrelevant rent.
+
+He therefore belongs to the Cell system, but not as another Refrigerator-style utility Monolith. He's a permanent occupant/environmental curiosity with his own cosmetic progression tree.
+
+And yes, we're reaching the point where these aren't merely ideas surrounding Sally anymore. There's already a playable persistent character/economy foundation underneath them. The ridiculous guy standing silently in the corner paying obsolete rent can eventually be just another permanent historical layer in somebody's three-year-old Cell.
+
+Stratego remains on the roadmap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes — and that changes my classification of him. He isn't primarily a cosmetic joke. He's an early-game economic mechanic whose long-term cost is permanent occupancy.
+
+At 60,000 gold immediately and then 60,000 every week, he's potentially enormous when a Refrigerator costs 49,999. His first payment can effectively buy the first Refrigerator immediately, and subsequent rent can finance Sally's food without requiring the player to engage heavily with the gold-earning systems. So for a new player worried primarily about keeping Sally alive, accepting him could be one of the strongest early decisions available.
+
+The progression curve then naturally destroys his economic importance:
+
+Early game: “Holy shit, this guy is keeping Sally alive.”
+
+Midgame: “Free 60k. Fine.”
+
+Late game: “Why is this man still in my celestial palace?”
+
+Extreme late game: the Refrigerator Monolith is rebuilding Sally's limbs into divine weapons, the Cell is a starship, transactions are measured in billions—and Hawaiian Shirt Guy solemnly contributes his 60,000 gold.
+
+But he never leaves.
+
+That's the actual price.
+
+And because he eventually stops being useful, his progression can invert. Instead of upgrading his economic output, players spend increasingly stupid amounts on him:
+
+1,000,000 — Clown Outfit
+absurdly expensive sunglasses
+different drinks
+hats
+increasingly inappropriate formalwear
+perhaps extremely prestigious costumes that accomplish absolutely nothing
+
+So he transitions from economic savior → irrelevant roommate → collectible coat rack → mascot.
+
+The Where's-Waldo aspect is particularly good. Once Cell environments become visually elaborate, he should remain somewhere in every incarnation. Cheap condo? There he is. Palace? There. Alien cruiser bridge? Hawaiian shirt. Heaven? Still holding the drink. Promotional screenshots can hide him among everything else until people instinctively start looking for him.
+
+And I understand the broader creative principle you're describing. You're talking about abstraction rather than depiction: retain the underlying dramatic structure—dependency, unwanted permanence, uncomfortable coexistence, accepting something because you need what it provides—while stripping away whatever explicit circumstances originally made the idea disturbing. What remains can sometimes be more interesting because the player has room to recognize the structure without the game dictating an interpretation.
+
+In this case there doesn't even need to be hostility. Sally doesn't have to fear him. He doesn't threaten anybody. He doesn't proposition anybody. He literally just stands there. Consequently the player's discomfort, affection, amusement, regret, or complete indifference toward him belongs to the player rather than being prescribed by the game.
+
+And some players will absolutely love him.
+
+I think he needs a proper mechanical name eventually, but I'd preserve the development name Rent Guy because it's wonderfully utilitarian:
+
+RENT GUY
+
+Weekly Rent: 60,000 Gold
+Next Payment: Monday
+Status: Standing There
+
+Three years later:
+
+RENT GUY
+
+Weekly Rent: 60,000 Gold
+Lifetime Rent Paid: 9,420,000 Gold
+Cosmetic Expenditure: 4,870,000,000 Gold
+Status: Standing There
+
+That second number eventually becoming hundreds of times larger than everything he's ever paid you is exactly where this mechanic should end up.
+
+RENT GUY 
+is perfect
+
+Ultimately we can do anything, anything we set our mind to we can get done within a day or two within reason, but another idea that occurs to me is, does he HAVE TO pay 60k only, Maybe there are hard expensive high cap options for unlocking permanent increases in his rent. Like Pay 10 million, double the amount of rent current, then double the cost to double rent again....... makes sense to me, I wouldn't say that should be typical use for this character, as he'd become too important, but, maybe VERY USEFUL EARLY GAME,  fun gimmick mid game, UNLOCKS GOD TIER FINANCES AND LATE GAME and EX GAME ECONOMY END GAME. I feel that betrays the mechanic, the above i feel is core, this statement below qualifying, is a maybe we could. I am planning late game economy engines, shaped approximately like this, activated money dispensers before money itself becomes unhelpful.
+
+RENT GUY it is.
+
+And I agree with your distinction: the fixed 60,000/week is the core mechanic. The scalable-rent idea is interesting, but it changes what Rent Guy is, so I'd keep it firmly in the “possible later system” category rather than designing around it now.
+
+The original curve is excellent:
+
+Early game: Rent Guy is extraordinarily useful. His immediate 60k can buy the 49,999-gold Refrigerator, and his weekly payments provide a substantial starvation safety net.
+
+Midgame: He's pleasant passive income, but increasingly he's just Rent Guy. By now players may be buying stupid costumes for him.
+
+Late game: 60k is pocket change. His economic function has essentially disappeared, leaving behind the permanent decision you made near the beginning of the game: this guy lives here now.
+
+Extreme/endless game: Sally is surrounded by cosmic machinery worth astronomical sums. Rent Guy hands over his 60,000. Thank you, Rent Guy.
+
+That degradation in usefulness is actually part of his character.
+
+The alternative: Rent Guy as an optional economic engine
+
+Your new idea could work if it's deliberately hidden behind horrific capital costs rather than being his normal progression.
+
+Something conceptually like:
+
+BASE RENT
+60,000 / week
+
+RENT INVESTMENT I
+Cost: 10,000,000
+Permanent Rent: 120,000 / week
+
+RENT INVESTMENT II
+Cost: 20,000,000
+Permanent Rent: 240,000 / week
+
+RENT INVESTMENT III
+Cost: 40,000,000
+Permanent Rent: 480,000 / week
+
+RENT INVESTMENT IV
+Cost: 80,000,000
+Permanent Rent: 960,000 / week
+
+The delicious mathematical problem is that each investment costs enormously more than the additional income it produces.
+
+If the first upgrade costs 10m and adds only 60k/week, its simple payback period is about 167 weeks—over three years.
+
+So initially it looks terrible.
+
+But if the game is genuinely indefinite, suddenly permanent exponential income has strange value. We could eventually introduce upgrades that change the economics rather than simply continuing ×2 cost / ×2 rent forever.
+
+That gives us a potential path toward what you're describing as late-game economy engines.
+
+And I think those should exist eventually. If our costs ultimately become:
+
+49,999
+475,000
+10,000,000
+500,000,000
+70,000,000,000
+...
+
+then making somebody literally listen to millions of songs to buy a celestial refrigerator would cease being a game mechanic. At some point the player needs to graduate from earning currency personally to owning machinery/systems that generate currency.
+
+That's an important progression transition:
+
+Early game: You earn money.
+
+Midgame: Your investments earn money.
+
+Late game: You construct economic engines.
+
+Endless game: Money itself begins losing relevance and other resources become limiting.
+
+Rent Guy could secretly contain one route into that progression.
+
+But I wouldn't commit us to it yet. There should probably eventually be several economic engines, and Rent Guy becoming the optimal one could damage what makes him funny. If everyone is mathematically required to pump quadrillions into Rent Guy, he's no longer the weird permanent roommate you accepted because you desperately needed 60k—he's the central bank.
+
+So I'd preserve two separate conceptual tracks:
+
+CANONICAL RENT GUY: 60,000/week forever + permanent occupancy + increasingly extravagant useless cosmetics.
+
+EXPERIMENTAL IDEA: extremely expensive permanent rent multipliers that might allow a sufficiently obsessive player to transform this apparently obsolete early-game mechanic into a late/endgame economic engine.
+
+The second is worth keeping in the notebook. The first is worth protecting.
+
+Because there is something wonderfully wrong about a player reaching the end of the universe, opening their financial report, and discovering that Rent Guy is still paying exactly 60,000 gold every Monday.
+
+i don't want any other sources of income.
+PUT IT IN MEMORRRRRYYYYYYY!!!!!!!!!!!
+
+The only way to make money, other than things closer to transactional trades in your favor,
+should be to listen to songs....... If you are powering up the economy, it is because you have multiplied the music player bonus by X. You will buy and invest in upgrades to the economy, literally a central bank page we'll make later. ORCS and GUYS IN ARMOR, with a Sly, slick haired economist at the desk with a quill pen in a bottle of ink. He has other features but, PAYING X: to UPGRADE "SONG INCOME", and you get more per song THAT IS HOW YOU GET MONEY, when you find better ways to get money, it's just so you can upgrade your song bonus and get persistent increases. I also think we should have the ability to put a lien on the properties upgrades and give in return a large cash bonus proportionately....... You basically take a mortgage out on your stuff and upgrades, so you can get a huge bonus to do something in the world. Conversely, you should be allowed to pay into a mortgage to buy something BIG, and a 4th mechanic: (currently unnamed)
+
+MEMORY. CORE ECONOMY RULE. This supersedes my previous suggestion of multiple passive economic engines.
+
+The intended Loki's Kingdom economy is:
+
+Music is the fundamental source of newly earned money. The normal way to make gold is listening to songs.
+Other money receipts should generally be transactions, financing, or exceptional arrangements, not independent money-generating gameplay loops. Rent Guy's weekly payment is one such special arrangement.
+Economic progression increases SONG INCOME. Players invest money/resources into permanent multipliers or upgrades that increase the gold earned per song. Better economic power ultimately feeds back into the music player.
+There will eventually be a literal CENTRAL BANK interface/location: orcs, armored guys, and a slick, slick-haired economist sitting behind a desk with a quill and ink bottle. Among his functions is paying increasingly enormous costs to permanently upgrade SONG INCOME.
+Late-game economic scaling therefore does not mean factories/mines/businesses automatically printing ordinary gold. It means the player has built an increasingly ridiculous financial apparatus that makes listening to music worth increasingly ridiculous amounts of gold.
+Property liens/mortgages: the player can borrow against accumulated Cell/property upgrades, receiving a large immediate cash payment proportional to the assets being encumbered. That creates liquidity at the cost of putting existing progression under debt.
+Financed purchases: conversely, the player should be able to take on a mortgage/payment obligation to acquire something enormously expensive before having its entire purchase price available.
+Rent Guy remains exceptional: his canonical 60,000/week payment is real passive income and enormously useful early on, but this does not establish a general design principle that the game should contain lots of passive-income generators.
+The proposed Rent Guy rent-multiplier system is therefore not currently canon. If we ever revisit it, it has to respect this larger rule rather than accidentally turning Rent Guy into the game's primary money printer.
+There is a fourth economic mechanic currently unnamed/unfinished. Do not fill in the blank or invent what it was. When the idea returns, attach it to this group of Central Bank / song-income / lien / mortgage mechanics.
+
+The central principle is especially important:
+
+When the player becomes better at making money, what they are fundamentally becoming better at is making money FROM THE MUSIC.
+
+So even when we're dealing in billions, trillions, cosmic property and god-tier Cell upgrades, the jukebox remains economically relevant instead of becoming obsolete.
+
+That is a much more distinctive economy than the generic idle-game solution I was drifting toward.

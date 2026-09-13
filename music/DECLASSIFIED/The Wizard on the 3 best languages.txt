@@ -1,0 +1,130 @@
+The Wizard
+The Wizard
+Scholar, magician, engineer of strange mechanisms.
+
+Voice: On
+Statistics
+Wizard HP
+25 / 25
+Your Gold
+1,797
+Condition
+Frail, but alive
+The study smells of paper, candle smoke, dust and old bindings. Books occupy nearly every available surface.
+The Wizard looks up from a book.
+You
+Please give me a brief overview of the top 3 programming languages, what makes them different, which is best, and provide a few examples of code from each. Been waiting so long to ask you this.
+The Wizard
+Ah, good. A sensible question at last.
+
+There is no single **best** programming language in all cases. That is like asking whether a chisel, a lathe, and a compass are the best tool. Best **for what** matters.
+
+If you want a **brief practical top three** for the modern world of men, I would name:
+
+## 1. Python
+**What it is:** A language prized for clarity and speed of development.
+
+**What makes it different:**
+- Very readable
+- Excellent for scripting, automation, data work, AI, and backend services
+- Usually slower than lower-level languages, but much faster to write
+
+**Best for:**
+- Beginners
+- Automation
+- Data science
+- Prototypes
+- General-purpose backend work
+
+**Example:**
+def greet(name):
+    return f"Hello, {name}!"
+
+for person in ["Ada", "Linus", "Grace"]:
+    print(greet(person))
+
+
+---
+
+## 2. JavaScript
+**What it is:** The language of the web browser, and also widely used on servers.
+
+**What makes it different:**
+- Runs in browsers, which makes it nearly unavoidable for web frontends
+- Event-driven and asynchronous by nature
+- Can be used for both frontend and backend, which is convenient
+- Can become disorderly in careless hands
+
+**Best for:**
+- Interactive websites
+- Full-stack web development
+- APIs
+- Applications that live in or around the browser
+
+**Example:**
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+["Ada", "Linus", "Grace"].forEach(person => {
+  console.log(greet(person));
+});
+
+
+---
+
+## 3. Java
+**What it is:** A strongly structured language used heavily in large systems.
+
+**What makes it different:**
+- More verbose than Python or JavaScript
+- Strongly typed
+- Excellent tooling
+- Common in large companies, Android history, enterprise systems, and long-lived codebases
+
+**Best for:**
+- Large backend systems
+- Enterprise software
+- Teams that want strict structure
+- Applications where maintainability matters over clever brevity
+
+**Example:**
+public class Main {
+    public static String greet(String name) {
+        return "Hello, " + name + "!";
+    }
+
+    public static void main(String[] args) {
+        String[] people = {"Ada", "Linus", "Grace"};
+        for (String person : people) {
+            System.out.println(greet(person));
+        }
+    }
+}
+
+
+---
+
+## How they differ, very briefly
+- **Python:** easiest to read, fastest to write
+- **JavaScript:** essential for browser work, highly flexible
+- **Java:** stricter, heavier, excellent for large long-lived systems
+
+## Which is best?
+If you force me to choose by purpose:
+- **Best for beginners:** Python
+- **Best for web development:** JavaScript
+- **Best for large structured business systems:** Java
+
+## If you want only one to start with
+I would usually recommend:
+1. **Python** if you want the gentlest beginning
+2. **JavaScript** if your goal is websites or web apps
+
+If you like, I can next give you a sharper guide: **which language you should learn first based on what you want to build**.
+Attach .txt Manuscript
+No manuscript attached. Maximum size: 300 KB.
+Speak to The Wizard...
+Send
+← Return to Loki's Kingdom
+The Wizard is listening.
