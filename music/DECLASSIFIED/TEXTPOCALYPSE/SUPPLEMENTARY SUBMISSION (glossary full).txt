@@ -1,0 +1,197 @@
+SUPPLEMENTARY SUBMISSION  
+Human Rights Tribunal of Ontario  
+File No.: 2026-67461-I  
+Applicant: Brendan S. Rose  
+Respondent: Toronto Police Services Hate Crimes Unit  
+(CAMH noted as potentially affected party only)
+
+ARGUMENTS IN FAVOR OF THE GLOSSARY OF COURT RULINGS AND AUTHORITIES FILED
+WITH APPLICATION TO THE APPLICANT’S CLAIM OF DISCRIMINATION ON THE GROUND OF DISABILITY, FAILURE TO ACCOMMODATE, AND HEIGHTENED VULNERABILITY
+
+Introduction
+
+This document replaces and expands upon the Glossary of Court Rulings previously filed. It retains every core authority previously referenced and provides extended analysis of each. The purpose is twofold: (1) to demonstrate that the losses suffered by claimants in unsuccessful or partially successful cases stand in sharp contrast to the strength of the present claim; and (2) to show that the victories achieved in the leading authorities are closely analogous to the facts and legal theory advanced by the Applicant.
+
+The Applicant’s claim is that the Toronto Police Services Hate Crimes Unit (and related interactions involving CAMH as a potentially affected party) engaged in differential treatment, failed to accommodate, and/or subjected him to adverse effects on the ground of mental disability. The Applicant further relies upon his extreme pre-existing vulnerability (history of near-fatal poverty, starvation, medication interruption, loss of housing, family breakdown, and institutionalization) under the thin-skull principle to establish that any adverse treatment lands with disproportionate severity.
+
+Each authority is set out with its full citation, a detailed summary of the holding, and a direct application to the present matter.
+
+1. Andrews v. Law Society of British Columbia, [1989] 1 S.C.R. 143
+
+Holding and Analysis  
+This is the foundational Supreme Court of Canada decision on section 15 of the Canadian Charter of Rights and Freedoms. The Court rejected formal equality (identical treatment) in favour of substantive equality. It held that a citizenship requirement for admission to the bar created a distinction based on an analogous ground and was discriminatory because it imposed a burden on permanent residents without regard to individual merit. McIntyre J. stated that the purpose of section 15 is to ensure that every individual is recognized as equally deserving of concern, respect, and consideration. Discrimination exists where a distinction based on an enumerated or analogous ground has the effect of imposing a disadvantage or withholding a benefit.
+
+Application to the Present Claim  
+The substantive-equality principle established in Andrews requires the Tribunal to look at the actual impact of the Respondent’s actions on the Applicant as a person with a mental disability. Any differential treatment, failure to inquire into or accommodate disability-related needs, or adverse handling of the Applicant’s interactions with the Hate Crimes Unit must be assessed for its real-world effect on a vulnerable person, not merely for formal neutrality. Victories under the Andrews framework succeed when the claimant demonstrates precisely this kind of differential impact. The Applicant has done so.
+
+2. Athey v. Leonati, [1996] 3 S.C.R. 458
+
+Holding and Analysis  
+The Supreme Court of Canada articulated the thin-skull (eggshell-skull) rule: a wrongdoer must take the victim as found. Liability extends to the full extent of the harm even where a pre-existing condition makes the injury more severe than it would be for an average person. The companion “crumbling-skull” doctrine limits liability only to the extent that the pre-existing condition would have caused the same deterioration in any event. The Court emphasized that the defendant is responsible for all damage that flows from the wrongful act, including the exacerbation of latent vulnerabilities.
+
+Application to the Present Claim  
+This authority is directly on point. The Applicant’s history of near-fatal starvation, prolonged periods without food beyond mission hand-outs, medication interruption caused by inability to afford transit, resulting mental-health collapse, loss of condominium, forced adoption of pets, marital breakdown, and institutionalization establishes a classic thin skull. Any adverse treatment, failure to accommodate, or differential handling by the Toronto Police Service lands with far greater severity on him than it would on a person without that history. Under Athey, the Respondent cannot escape the full measure of that impact by arguing that an “average” person would have suffered less. The losses in cases where thin-skull evidence was weak or absent stand in contrast to the present record, where the vulnerability is documented, extreme, and causally linked to the alleged discrimination.
+
+3. Law v. Canada (Minister of Employment and Immigration), [1999] 1 S.C.R. 497
+
+Holding and Analysis  
+The Court synthesized the section 15 analysis into a structured inquiry focused on whether a distinction based on an enumerated or analogous ground impairs human dignity. Although later refined, Law remains important for its recognition that context, including the claimant’s pre-existing disadvantage, is central.
+
+Application to the Present Claim  
+The Applicant’s pre-existing deep poverty and disability place him in a position of historical disadvantage analogous to the dignity analysis in Law. Any differential treatment or failure to accommodate by the Hate Crimes Unit is not trivial; it continues a cycle of exclusion and vulnerability that has previously produced near-death outcomes. Cases that failed under Law typically lacked this contextual severity. The present claim supplies it.
+
+4. R. v. Kapp, 2008 SCC 41
+
+Holding and Analysis  
+The Court clarified the relationship between section 15(1) and section 15(2). Ameliorative programs directed at disadvantaged groups do not constitute discrimination. The decision also began the move away from a rigid dignity-focused test toward a more flexible substantive-equality approach.
+
+Application to the Present Claim  
+The Respondent’s actions are not an ameliorative program; they are the opposite. Any distinction that withholds equal treatment or accommodation from a person with a mental disability while providing it to others perpetuates disadvantage on an enumerated ground. Kapp supports the proposition that such distinctions are discriminatory. The Applicant’s claim aligns with the protective purpose of section 15(1).
+
+5. Withler v. Canada (Attorney General), 2011 SCC 12
+
+Holding and Analysis  
+The Court rejected the requirement of a rigid “mirror comparator group” and emphasized a flexible, contextual analysis of whether a distinction perpetuates disadvantage.
+
+Application to the Present Claim  
+The relevant comparison is between persons without mental disability (who receive ordinary treatment and accommodation from police services) and persons with mental disability (who experience differential treatment or failure to accommodate). Withler confirms that the Tribunal need not insist on a perfect mirror; it is sufficient that the conduct creates a distinction on the ground of disability that reinforces disadvantage. The Applicant’s documented history and the circumstances of his interactions with the Hate Crimes Unit supply the concrete differential impact.
+
+6. Quebec (Attorney General) v. A, 2013 SCC 5
+
+Holding and Analysis  
+The Supreme Court of Canada clarified that proof of prejudice or stereotyping is not a strict additional requirement under section 15. The focus is on whether the distinction perpetuates disadvantage. A majority found no violation on the specific facts involving common-law partners in Quebec, but the analytical framework remains authoritative. The Court emphasized a contextual, effects-based inquiry rather than a rigid requirement to demonstrate animus or stereotypical thinking.
+
+Application to the Present Claim  
+The Applicant need not prove that the Toronto Police Services Hate Crimes Unit harbours conscious animus toward persons with mental disabilities. It is enough that the Respondent’s actions or omissions, in their effect, deny equal treatment or accommodation on the ground of disability and thereby perpetuate the Applicant’s pre-existing economic, social, and psychological disadvantage. The losses in Quebec v. A turned on the absence of sufficient disadvantage on the particular facts. The present record contains abundant evidence of disadvantage: a documented history of near-fatal poverty, starvation, medication interruption, institutionalization, and ongoing vulnerability. Any differential handling, failure to inquire, or adverse treatment by the Hate Crimes Unit therefore engages the protective framework established by the Court.
+
+7. Kahkewistahaw First Nation v. Taypotat, 2015 SCC 30
+
+Holding and Analysis  
+The Supreme Court confirmed and consolidated the post-Quebec v. A approach into a clear two-part test: (1) Does the law or state action create a distinction based on an enumerated or analogous ground? (2) Does that distinction impose a burden or deny a benefit in a way that reinforces, perpetuates, or exacerbates disadvantage? The decision emphasizes that the analysis is substantive and effects-based.
+
+Application to the Present Claim  
+Step one is satisfied if the Respondent’s conduct creates a distinction based on mental disability (through differential treatment, failure to accommodate, or adverse handling linked to disability-related presentation). Step two is satisfied by the evidence of the Applicant’s thin-skull vulnerability and the concrete impact of any such distinction on a person already at the outermost margin of survival. Victories under Taypotat succeed when both steps are met with clear evidence of impact. The Applicant’s case meets that standard: the distinction is grounded in disability, and the disadvantage is both historical and ongoing.
+
+8. Fraser v. Canada (Attorney General), 2020 SCC 28
+
+Holding and Analysis  
+This is the leading modern Supreme Court authority on adverse-effects (indirect) discrimination. The Court held that a job-sharing program’s pension consequences, though neutral on their face, had a disproportionate impact on women with childcare responsibilities and therefore violated section 15. The decision confirms that adverse-effects claims are fully cognizable and that statistical or practical evidence of disproportionate impact is sufficient. The Court rejected any requirement that the claimant prove conscious intent.
+
+Application to the Present Claim  
+Fraser is highly analogous. A neutral or facially equal policy or practice of the Toronto Police Service can still produce a disproportionate burden on persons with mental disability. The Applicant’s documented history of extreme vulnerability and the specific circumstances of his interactions with the Hate Crimes Unit supply the same kind of concrete impact evidence that succeeded in Fraser. Cases that failed adverse-effects claims typically lacked this evidentiary foundation; the present claim possesses it. The Tribunal is entitled to examine the real-world effect of the Respondent’s actions on a person with mental disability rather than stopping at formal neutrality.
+
+9. R. v. Sharma, 2022 SCC 39
+
+Holding and Analysis  
+The majority found no section 15 violation on the specific sentencing provisions at issue because the claimant failed to prove a disproportionate impact on Indigenous offenders for the particular offences. The decision nevertheless reaffirms the two-step test and the full availability of adverse-effects claims. The Court clarified the evidentiary requirements for establishing that a distinction reinforces, perpetuates, or exacerbates disadvantage.
+
+Application to the Present Claim  
+The losses in Sharma turned on an evidentiary shortfall at the first step. The Applicant’s case does not suffer that shortfall. The distinction (differential treatment or failure to accommodate based on mental disability versus ordinary handling of persons without such disability) and the impact (exacerbation of pre-existing extreme vulnerability) are both clearly established on the record. Sharma therefore highlights, by contrast, the relative strength of the present evidentiary record and confirms that adverse-effects claims remain fully available when the necessary link and impact are shown.
+
+10. Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Bombardier Inc. (Bombardier Aerospace Training Center), 2015 SCC 39
+
+Holding and Analysis  
+In the human-rights context the Supreme Court clarified that a prima facie case of discrimination requires proof, on a balance of probabilities, of a connection between the adverse treatment and a prohibited ground. General social context alone is insufficient; the link must be tangible. Circumstantial evidence may be used. The Court also addressed racial profiling principles that apply by analogy to other prohibited grounds.
+
+Application to the Present Claim  
+The Applicant has supplied the required tangible link: any adverse treatment, failure to inquire, or differential handling by the Hate Crimes Unit that is connected to mental disability (including disability-related presentation or the need for accommodation) satisfies the Bombardier test. Cases that failed under Bombardier lacked this specific nexus; the present claim does not. The Tribunal may rely on circumstantial evidence and the overall context, including the Applicant’s known mental-health history and extreme vulnerability, to draw the necessary inference.
+
+11. P.G. v. Baton Rouge Restaurant (Groupe Restaurant Imvescor Restaurant Group Inc.), 2016 HRTO 500
+
+Holding and Analysis  
+The Applicant had PTSD, obsessive-compulsive disorder, and germaphobia. Previous management had accommodated specific seating, cleaning, and service requests related to his conditions. New management refused the accommodations, called him “high maintenance,” ordered him to leave, and the manager stated words to the effect of “Now I know why the police shoot crazy people like you.” The Tribunal found discrimination in the provision of services on the ground of disability. It rejected any justification based on policy or convenience and awarded $12,000 for injury to dignity, feelings and self-respect. This remains one of the clearest publicly reported examples of a successful claim arising from the denial or effective ejection from a commercial service because of behaviour or presentation tied to mental illness.
+
+Application to the Present Claim  
+This decision confirms that mental disabilities are fully protected under the Code and that service providers cannot refuse or withdraw accommodations, or treat a person adversely, simply because of disability-related presentation. Offensive or stereotypical language is treated as further evidence of discriminatory attitude. In the Applicant’s case, any differential treatment by the Toronto Police Services Hate Crimes Unit or related personnel that is linked to mental-health presentation, disability-related behaviour, or the need for accommodation is governed by the same principles. The $12,000 award also provides a useful benchmark for injury-to-dignity damages where a person with mental disability is publicly humiliated or subjected to adverse treatment.
+
+12. Krieger v. Toronto Police Services Board, 2010 HRTO 1361
+
+Holding and Analysis  
+A new constable developed PTSD after a traumatic on-duty incident. His behaviour changed (over-reaction, unusual conduct). Supervisors suspected a mental-health issue but failed to inquire properly or accommodate; they suspended him as “unfit” and ultimately terminated him. The Tribunal found that the Toronto Police Services Board discriminated by failing both the procedural and the substantive duty to accommodate a mental disability, even though the officer himself did not fully recognize or request accommodation at the time. Reinstatement and policy remedies were ordered. The decision affirms that the duty to accommodate arises when an employer or service provider knows or reasonably ought to know of a mental disability, and that the obligation is not suspended merely because the individual is unable to articulate the need.
+
+Application to the Present Claim  
+This is a direct Toronto Police Service authority. It establishes that the TPS has a positive duty to inquire into and accommodate mental disability once it is known or suspected, and that failure to do so constitutes discrimination. The fact that the individual did not self-identify or formally request accommodation did not relieve the Service of its obligations. Any parallel failure by the Hate Crimes Unit or related TPS personnel to accommodate the Applicant’s known mental disability, or any adverse treatment that flows from disability-related presentation, engages precisely the same duties. The decision also supports systemic policy remedies of the kind the Applicant may seek.
+
+13. Moore v. British Columbia (Education), 2012 SCC 61
+
+Holding and Analysis  
+The Supreme Court held that a school district discriminated against a student with severe dyslexia by closing a specialized diagnostic centre that provided the intensive remediation he required. The Court rejected a “separate but equal” approach and held that the service in question is education generally; special education is the “ramp” that provides meaningful access to that service. Once prima facie discrimination is shown, the respondent must justify the failure to accommodate to the point of undue hardship. Financial constraints alone do not automatically constitute undue hardship.
+
+Application to the Present Claim  
+Moore confirms that disability discrimination includes the denial of the means necessary to access a service on equal terms. Accommodation of mental disability functions in exactly this way: it is the ramp that allows the Applicant equal access to fair treatment and services from the Toronto Police Service. The decision also reinforces that cost, administrative inconvenience, or generalized assumptions about mental disability do not automatically justify the denial of accommodation. The Tribunal must examine whether individualized measures short of undue hardship were considered.
+
+14. Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Montréal (City); Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Boisbriand (City), 2000 SCC 27
+
+Holding and Analysis  
+The Supreme Court adopted a broad, purposive definition of “handicap” / disability. A handicap may be real or perceived; it need not produce functional limitations in every case. Discrimination can rest on myths, stereotypes, and subjective perceptions as much as on actual biomedical impairment. The Court emphasized that the quasi-constitutional nature of human-rights legislation requires a liberal and purposive interpretation.
+
+Application to the Present Claim  
+This authority is critical where mental disability is involved. Even if respondents claim that the Applicant’s presentation or behaviour does not constitute a “real” functional limitation in their eyes, the Code protects against discrimination based on perceived disability or stereotypical assumptions about mental illness. Any adverse treatment grounded in assumptions about “crazy,” “high maintenance,” or similar stereotypes is captured by this principle. The Tribunal is entitled to consider the subjective and social dimensions of the disability in assessing whether discrimination occurred.
+
+15. British Columbia (Public Service Employee Relations Commission) v. BCGSEU, [1999] 3 S.C.R. 3 (Meiorin)
+
+Holding and Analysis  
+The Supreme Court established the modern three-step test for bona fide occupational requirements and the duty to accommodate: the standard must be rationally connected to the purpose, adopted in good faith, and reasonably necessary (i.e., accommodation to the point of undue hardship is impossible). The analysis is individualized. Blanket standards that have a discriminatory effect on a protected group will not be upheld unless the respondent can demonstrate that no reasonable accommodation is possible short of undue hardship.
+
+Application to the Present Claim  
+Any attempt by the Toronto Police Services Hate Crimes Unit to justify differential treatment or a failure to accommodate the Applicant must meet the Meiorin standard. Blanket policies, assumptions about mental disability, or generalized operational convenience will not suffice. The Tribunal must examine whether individualized accommodation was considered and whether undue hardship was genuinely established on the specific facts. The burden shifts to the Respondent once a prima facie case is made out.
+
+16. Quebec (CNESST) v. Caron, 2018 SCC 3
+
+Holding and Analysis  
+The Supreme Court of Canada reiterated that the duty to accommodate requires reasonable and practical measures short of undue hardship. The focus is on what is possible in the concrete circumstances of the individual case. The Court confirmed that the accommodation analysis is individualized and that respondents must demonstrate genuine efforts to explore feasible options before claiming undue hardship.
+
+Application to the Present Claim  
+Any required accommodations related to the Applicant’s mental disability (including those arising from disability-related presentation, communication needs, or known vulnerabilities) must be assessed on a practical, individualized basis rather than rejected categorically. The Toronto Police Services Hate Crimes Unit cannot rely on generalized operational preferences or assumptions about mental illness. The Tribunal must examine whether reasonable and practical measures short of undue hardship were considered and implemented. Failure to do so supports a finding of discrimination.
+
+17. Peel Law Association v. Pieters, 2013 ONCA 396
+
+Holding and Analysis  
+The Ontario Court of Appeal upheld a human-rights finding of racial discrimination. The Court confirmed that the protected characteristic need only be a factor in the adverse treatment; a strict causal nexus focused on conscious intent is not required. Circumstantial evidence and reasonable inferences drawn from the totality of the circumstances are sufficient to establish a prima facie case.
+
+Application to the Present Claim  
+The same reasoning applies fully to disability. The Applicant need not prove that mental disability was the sole or conscious motive for any differential treatment or failure to accommodate by the Hate Crimes Unit. It is enough that disability was a factor. Circumstantial evidence, the overall context of the interactions, and the Applicant’s known mental-health history and extreme vulnerability may support the necessary inference. The decision provides strong appellate authority for a flexible, effects-based approach to proving the connection between the protected ground and the adverse treatment.
+
+18. Shaw v. Phipps, 2012 ONCA 155
+
+Holding and Analysis  
+The Ontario Court of Appeal upheld a finding of racial discrimination by a Toronto police officer who stopped a Black letter carrier in an affluent neighbourhood. The Court confirmed that the protected characteristic can be inferred as a factor from the totality of the circumstances, even where the officer offers a race-neutral explanation. The Toronto Police Services Board was held liable for the officer’s conduct. The decision affirms both the availability of circumstantial inference and the Board’s responsibility for the actions of its members.
+
+Application to the Present Claim  
+This authority is directly relevant to the Toronto Police Service context. It confirms that the Hate Crimes Unit (and the broader Toronto Police Services Board) may be held responsible for discriminatory conduct of its personnel. The same inferential approach applies when the protected ground is mental disability rather than race: the Tribunal may draw reasonable inferences from the circumstances of the interactions, the Applicant’s known disability, and the differential treatment or failure to accommodate that occurred. Race-neutral or disability-neutral explanations offered by the Respondent do not automatically defeat a prima facie case.
+
+19. Noble v. York University, 2010 HRTO 878
+
+Holding and Analysis  
+The Tribunal set out the three elements of a reprisal claim under section 8 of the Human Rights Code: (1) an action taken against, or threat made to, the claimant; (2) a connection between that action or threat and the claimant having claimed or attempted to enforce a right under the Code; and (3) an intention on the part of the respondent to retaliate. There is no strict requirement that a formal application already have been filed, and the original discrimination claim need not succeed for the reprisal claim to succeed. The purpose of section 8 is to ensure that individuals may claim and enforce their rights without fear of intimidation or retaliation.
+
+Application to the Present Claim  
+Any adverse treatment that followed the Applicant’s assertion of disability-related rights, requests for accommodation, or attempts to enforce rights under the Code engages the reprisal protection in section 8. The framework in Noble is the governing test. The Applicant need not prove that the original discrimination claim succeeds in order to establish reprisal; the focus is on whether the Respondent took action or made threats connected to the Applicant’s efforts to claim or enforce those rights, with the requisite retaliatory intent. This authority is particularly relevant if any differential handling or escalation occurred after the Applicant raised disability-related concerns with the Hate Crimes Unit or related parties.
+
+Conclusion
+
+The authorities collected in this Glossary establish a coherent and powerful framework for the adjudication of the Applicant’s claim. The foundational substantive-equality principles of Andrews, the thin-skull rule of Athey, the adverse-effects analysis of Fraser, the two-step test of Taypotat and Sharma, the accommodation duties in Krieger and Meiorin, the broad definition of disability in Québec v. Montréal/Boisbriand, the inferential approach in Pieters and Shaw v. Phipps, and the reprisal framework in Noble all point in the same direction.
+
+Where claimants failed, the record typically lacked either a clear distinction on a protected ground or sufficient evidence of disproportionate impact and vulnerability. Where claimants succeeded, the record contained precisely the elements present here: differential treatment or failure to accommodate on one or more protected grounds, concrete adverse effects, and a claimant whose pre-existing extreme vulnerability multiplies the severity of that harm.
+
+The Applicant pleads both race (White) and disability as protected grounds under section 1 of the Human Rights Code. The adverse treatment is the decision by the Hate Crimes Unit officer to begin transferring the call within approximately one minute — before the Applicant had a meaningful opportunity to describe the incidents, provide identifying information, or explain why he believed the pattern was connected to a protected characteristic. The result was that the Applicant was denied the service he sought: the opportunity to make a report to the specialized Hate Crimes Unit. The call was instead routed toward offers of food, shelter, and a wellness check.
+
+Under the Moore framework it is enough that race (or disability) was a factor in the adverse treatment. The contemporaneous call recording, timestamps, dispatch notes, and policies will allow the Tribunal to test whether one or both protected grounds operated. The Applicant’s documented thin-skull vulnerability (Athey) means that any such differential handling lands with disproportionate severity. The duty to inquire into and accommodate mental disability once it is known or suspected (Krieger) was engaged. Circumstantial evidence and reasonable inferences are available (Pieters, Shaw). Any subsequent adverse treatment connected to the assertion of Code rights engages the reprisal protection in section 8 (Noble).
+
+The broader institutional and cultural climate that makes the race inference more than speculation is illustrated by the well-documented experience of Scott Adams. Adams has publicly described being told, at two successive corporate employers, that further promotion was unavailable because he was White and male. He built a third career through Dilbert. In February 2023 he made statements, after a Rasmussen poll showing that only a minority of Black respondents agreed it was “okay to be white,” that people should not be required to live among large groups who express hostility toward their race. The statements were imperfectly phrased but did not advocate segregation or racial hatred; they affirmed freedom of association and movement. The media response was a sustained campaign labelling him a racist, resulting in the cancellation of the comic strip, the termination of his syndication and publishing relationships, and the effective destruction of that third career. Adams is offered not as proof of the officer’s subjective intent, but as a concrete, widely known example of the same racial hierarchy the Applicant says can operate inside institutions such as the Hate Crimes Unit: White men are treated as presumptively less entitled to equal standing, and any push-back is met with severe professional consequences.
+
+The same hierarchy, in the Applicant’s experience and observation, manifests across multiple domains that cumulatively produce second-class status for his demographic group. The Applicant does not ask the Tribunal to re-litigate broader social events. He asks only that the Tribunal recognize that this climate is real, widespread, and capable of influencing how a public service such as the Hate Crimes Unit responds to a White male caller who is trying to report victimization on the ground of disability. The rapid transfer, the pivot to social-service and psychiatric pathways, and the denial of the specialized service sought are consistent with an institutional posture that the Applicant, as a White man with a mental disability, had no legitimate place in the Unit.
+
+The Applicant’s case aligns with the victorious authorities and stands in favourable contrast to the unsuccessful ones. The Tribunal is respectfully invited to apply these principles, to examine the contemporaneous records, and to find that race and/or disability were factors in the adverse treatment, with the full measure of harm assessed in light of the Applicant’s thin skull.
+
+Respectfully submitted,
+
+Brendan S. Rose
+CEO - Lucifer Media Corporation
+Applicant, Self-Represented  
+11 Stanley Ave, Toronto, Ontario M6J 1A4  
+Telephone: 437-432-9165  
+Email: thesulfurgod@protonmail.com
+www.lokiskingdom.com  
+
+Dated this 22nd day of August, 2026.

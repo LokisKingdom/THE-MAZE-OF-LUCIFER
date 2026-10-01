@@ -1,0 +1,91 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+WELL BRAIN, WHAT DO YOU WANNA DO TONIGHT???
+
+THE SAME THING WE DO EVERY NIGHT PINKY.....
+
+========================================
+STEP 1 - GENERATING MUSIC CATALOG JSON
+========================================
+
+Generated: D:\lokis-kingdom\public\musicCatalog.json
+Generated: D:\THE NERVOUS SYSTEM\USER_KC\QUOTATIONS FROM BRENDAN S ROSE\BRENDAN'S INFERNAL BIBLE\THE GLOT\THE GULLET\loki\loki\lokis-kingdom\loki\app\src\main\assets\musicCatalog.json
+Albums: 134
+Songs: 10017
+
+MWAHAHAHAHaHAAHAHAahhahHAHahHaHHaaHAah!!!!!
+
+========================================
+STEP 2 - BUILDING ANDROID APK
+========================================
+
+
+Welcome to Gradle 9.4.1!
+
+Here are the highlights of this release:
+ - Java 26 support
+ - Non-class-based JVM tests
+ - Enhanced console progress bar
+
+For more details see https://docs.gradle.org/9.4.1/release-notes.html
+
+
+BUILD SUCCESSFUL in 9s
+44 actionable tasks: 12 executed, 32 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+
+ANDROID BUILD COMPLETE.
+
+========================================
+STEP 3 - LOCATING NEW APK
+========================================
+
+FOUND:
+D:\THE NERVOUS SYSTEM\USER_KC\QUOTATIONS FROM BRENDAN S ROSE\BRENDAN'S INFERNAL BIBLE\THE GLOT\THE GULLET\loki\loki\lokis-kingdom\loki\app\release\lokiskingdom.apk
+
+========================================
+STEP 4 - ARCHIVING CURRENT RELEASE
+========================================
+
+ARCHIVING CURRENT RELEASE AS:
+lokiskingdom(1).apk
+
+========================================
+STEP 5 - INSTALLING NEW RELEASE LOCALLY
+========================================
+
+NEW RELEASE INSTALLED:
+D:\THE_MAZE_OF_LUCIFER\THE MAZE OF LUCIFER\music\ALBUM ROOM\APP RELEASES\lokiskingdom.apk
+
+========================================
+STEP 6 - UPLOADING TO CLOUDFLARE R2
+========================================
+
+
+ ⛅️ wrangler 4.56.0 (update available 4.125.0)
+──────────────────────────────────────────────
+Resource location: remote
+
+Creating object "A_RELEASES/lokiskingdom.apk" in bucket "efsmb-music".
+Upload complete.
+npm notice
+npm notice New major version of npm available! 11.12.1 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+
+========================================
+SUCCESS
+========================================
+
+JSON GENERATED.
+ANDROID APK BUILT.
+OLD APK ARCHIVED.
+NEW lokiskingdom.apk INSTALLED.
+R2 RELEASE UPDATED.
+
+[Lightning Bolt!!!]
+
+PRESS ENTER TO CLOSE:

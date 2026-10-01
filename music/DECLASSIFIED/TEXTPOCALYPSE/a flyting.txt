@@ -1,0 +1,50 @@
+ALBUM NAME: a flyting
+
+PATH:
+efsmb-music/A_HRTO FILE 2026-67265-I and HRTO FILE 2026-67461-I/COMMUNICATIONS FROM THE REGISTRAR/REPONSES/TPS Summary Hearing/
+
+Lyrics:
+https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/A_HRTO%20FILE%202026-67265-I%20and%20HRTO%20FILE%202026-67461-I/COMMUNICATIONS%20FROM%20THE%20REGISTRAR/REPONSES/TPS%20Summary%20Hearing/THE%20BRAND%20NEW%20CONDO%20BOARD.txt
+
+THE BRAND NEW CONDO BOARD (1).mp3
+to
+THE BRAND NEW CONDO BOARD (100).mp3
+
+THE BRAND NEW CONDO BOARD - 2026-09-05T010101.748.mp3
+9 MB
+
+THE BRAND NEW CONDO BOARD - 2026-09-05T010114.438.mp3
+9 MB
+
+THE BRAND NEW CONDO BOARD - 2026-09-05T010129.772.mp3
+10 MB
+
+THE BRAND NEW CONDO BOARD.mp3
+8 MB
+
+THE BRAND NEW CONDO BOARD.txt
+5 kB
+
+The New Condo Board (1).mp3
+9 MB
+
+The New Condo Board.mp3
+9 MB
+
+
+
+
+in the form of:
+
+    songs: [
+      ...series(
+        "Three%20Blind%20Mice",
+        "Three Blind Mice",
+        "Three%20Blind%20Mice",
+        100
+      ),
+    { title: "Three Blind Mice - 2026-09-02T010240.685", file: "Three%20Blind%20Mice%20-%202026-09-02T010240.685.mp3" },
+    { title: "Three Blind Mice - 2026-09-02T010235.017", file: "Three%20Blind%20Mice%20-%202026-09-02T010235.017.mp3" },
+    { title: "Three Blind Mice - 2026-09-02T010234.047", file: "Three%20Blind%20Mice%20-%202026-09-02T010234.047.mp3" }
+
+[fix brackets at the end obviously........]

@@ -1,0 +1,109 @@
+Subject: HRTO File No. 2026-67265-I - Brendan Rose - Regarding Requested
+Remedies
+From Thesulfurgod@protonmail.com <thesulfurgod@protonmail.com>
+To hrto.registrar@Ontario.ca <hrto.registrar@ontario.ca>,
+SoundCloud Support <support@support.soundcloud.com>
+Date Friday, August 21st, 2026 at 5:50 PM
+Subject: HRTO File No. 2026-67265-I - Brendan Rose - Regarding Requested Remedies
+Dear Registrar and Soundcloud Support,
+Case Number: 2026-67265-I
+Applicant / Filer: Brendan S. Rose
+Mailing Address: 11 Stanley Ave, Toronto, Ontario, Canada, M6J1A4
+Telephone: 437-432-9165
+Email: thesulfurgod@protonmail.com
+Now, to begin, in more legal terms, here's Grok:
+SUPPLEMENTARY SUBMISSION
+In the Matter of the Complaint of Brendan S. Rose (Self-Represented Applicant)
+against SoundCloud
+Before the Registrar / Adjudicator
+Re: Update to Quantum of Damages Sought and Clarification of Adverse Effects Discrimination Claim
+Dear Registrar and SoundCloud Support,
+Please accept this correspondence as a formal supplementary submission to be placed on the record in advance of the hearing.
+The Applicant hereby clarifies and updates the quantum of damages sought, and elaborates upon the central claim of adverse
+effects discrimination arising from SoundCloud’s policies as applied to the use of artificial intelligence as a disability-related
+accommodation.
+1. Updated Quantum of Damages
+In the original Form 1, the Applicant quantified damages at USD $6,000. That figure was calculated by reference to the
+approximate standard remuneration paid by SoundCloud (or industry-comparable platforms) to neurotypical artists employing
+traditional instruments or production methods, upon reaching approximately one million streams. As of the date of this
+submission, the Applicant’s relevant catalogue has attained approximately 2.25 million streams. Applying the same proportional
+metric yields an updated claim of USD $13,500 (being $6,000 × 2.25). The Applicant respectfully requests that any award of
+monetary compensation be tethered to the prevailing standard rate of remuneration per million streams applicable to non-disabled
+artists, and that the final quantum be calculated by reference to the actual stream count as of the date of decision or final
+accounting. In addition, the Applicant seeks an order for the reinstatement of monetization privileges in respect of the AI-assisted
+songs and hymns that form the subject of this complaint, together with such further and other relief as the adjudicator may deem
+just. As remedies remain within the exclusive jurisdiction of the Registrar to determine upon a finding of liability, the Applicant
+does not propose to amend Form 1 at this juncture. The quantum remains fluid pending final stream tallies, and the adjudicator
+retains full authority to assess and award appropriate compensation.
+2. Nature of the Claim: Adverse Effects Discrimination
+The Applicant is a human artist living with a mental disability. The artificial intelligence tools employed in the creation of the
+disputed works function as a disability-related accommodation that enables the Applicant to overcome barriers associated with
+that disability and to participate meaningfully in artistic and commercial activity on the platform. SoundCloud’s current policies,
+while facially neutral, have the effect of denying equal benefit of the platform’s monetization regime to artists who rely upon AI
+as a disability aid, while continuing to afford full monetization rights and standard per-stream remuneration to neurotypical artists
+who employ traditional band-based or instrumental methods. The result is differential treatment that perpetuates disadvantage on
+the basis of disability. Canadian law prohibits such adverse effects discrimination. Section 15 of the Canadian Charter of Rights
+and Freedoms and the corresponding provisions of human rights legislation (including the Ontario Human Rights Code, R.S.O.
+1990, c. H.19, and analogous provincial statutes) protect against both direct and adverse-effects discrimination on the enumerated
+ground of disability, which encompasses mental disability. The Supreme Court of Canada has repeatedly affirmed that
+substantive equality requires scrutiny of the actual impact of a rule or practice, not merely its formal neutrality:
+In Andrews v. Law Society of British Columbia, [1989] 1 S.C.R. 143, the Court established that discrimination includes
+distinctions that impose burdens or withhold benefits on the basis of personal characteristics, and that identical treatment
+may itself produce inequality.
+In Fraser v. Canada (Attorney General), 2020 SCC 28, the Court confirmed that adverse-effects discrimination arises where
+a seemingly neutral rule has a disproportionate impact on members of a protected group and perpetuates disadvantage.
+The analytical framework crystallized in Kahkewistahaw First Nation v. Taypotat, 2015 SCC 30, and reaffirmed in
+subsequent authorities requires only that the claimant demonstrate (1) a distinction based on an enumerated or analogous
+ground (here, disability) and (2) that the distinction has the effect of reinforcing, perpetuating, or exacerbating disadvantage.
+The Applicant’s success in generating substantial streams and associated advertiser revenue demonstrates that the AI
+accommodation is effective. To withhold standard remuneration and monetization on the basis that the creative process
+incorporates a disability aid is to penalize the very accommodation that enables equal participation. Such a result is antithetical to
+the remedial purpose of human rights legislation and the duty to accommodate to the point of undue hardship. The Applicant has
+conferred measurable commercial value upon SoundCloud through streams and advertising revenue. Fair compensation
+commensurate with that value, and with the treatment accorded to non-disabled artists, is therefore required. The fear that
+recognition of disability accommodations will somehow overwhelm the platform or displace neurotypical artists is speculative
+and does not constitute a defense to a prima facie case of discrimination.
+3. Requested Disposition
+The Applicant therefore seeks:(a) a declaration that the impugned policies, as applied, constitute adverse effects discrimination
+on the ground of disability;
+(b) monetary compensation calculated at the standard rate per million streams, updated to the final stream count (currently
+quantified at USD $13,500 for 2.25 million streams, subject to adjustment);
+(c) an order reinstating monetization privileges for the affected AI-assisted works; and
+(d) such further and other relief as the adjudicator considers just and appropriate. The Applicant remains available to provide any
+additional particulars or evidence the Registrar may require.
+And now the translation into the human:
+My apologies I am still getting together my list of Court Precedent for the hearing,
+But I just briefly wanted to clarify, please add this email to my submissions before the deadline for the Hearing. As my case
+primarily involves adverse affect discrimination against my AI disability aid, The number listed ($6000 USD) was crafted when I
+only just reached 1 million streams,
+which is the approximate standard payment for a neurotypical artist using traditional instruments,
+as the number is now 2.25 million streams [6000 x 2.25 = 13500],
+the current amount I'm requesting is now 13500 USD, and of course future reinstatement of my AI songs and hymns for
+monetization.
+and my request is merely that the number should be tied to standard payments per million streams
+and updated at the final tally, to however many millions of Streams I'm at by the end of this.
+I really don't think you will end up with an army of disabled people drowning out Eminem,
+and rendering him bankrupt, as you seem to fear. The fact that I have found success using this AI disability aid is evidence only
+that the aid, the accommodation, works. It allows me to overcome my disability and achieve success, granting this to me or other
+disabled people, should have no particular impact on your business, and instances of disabled people finding massive success
+with AI is relatively rare, in any case we have brought value and advertiser revenue to your company, we have created music
+your customers enjoy, and should be paid fairly, as others are.
+As remedies are to be determined by the Registrar later, I see no purpose in Amending my Form 1 to include the updated amount,
+especially when it's in flux. The Registrar can decide what to award, if and assuming I win.
+I am a human artist, currently the only human being denied a living here is me, ironically that term has been used to create the
+exact situation it was purported to fix, a human artist being unable to make a living, as well as others using AI for their disability
+to make their music on Soundcloud.
+I merely request that I am paid fairly, without discrimination, for the value and advertiser revenue
+I have brough to the company, as the current rules inadvertently discriminate against my disability aid, in stern contrast to the
+way a neurotypical '"band based" artist is treated by Soundcloud. In Canada Adverse Effect Discrimination is Illegal, you are
+subject to our laws when doing business in our country.
+The current policy discriminates against the mentally ill.
+I assume this is a mistake and will be resolved soon.
+Respectfully submitted,
+Regards,
+Brendan S. Rose
+CEO - Lucifer Media Corporation
+Self-Represented Applicant
+437-432-9165
+thesulfurgod@protonmail.com (mailto:thesulfurgod@protonmail.com)
+www.lokiskingdom.com

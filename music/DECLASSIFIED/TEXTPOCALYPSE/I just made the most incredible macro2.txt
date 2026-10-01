@@ -1,0 +1,158 @@
+i just made the most incredible MACRO with CRUELTY ENGINE
+
+This thing does so much so fast.
+
+It's a one click android build.
+
+
+First I do the hard part of the process which is make new songs,
+Upload them to R2, go to my musiccatalog.js file,
+Add all the song entries and song loops,
+Save, upload to GitHub, in terms of uploading a new album
+The Desktop version, this was the first half....
+
+
+Now for making an uploading the ANDROID APP, using the same musiccatalog.js
+entries.... the process is:
+
+Generate New JSON with .bat
+Go to Android Studio
+Make a new version
+Go to the output folder
+Change the name of the file to lokiskingdom.apk
+Go to the destination folder
+Change the current one to lokiskingdom(X).apk (x being the current number of same sitting there)
+Copy the new one into it's place
+then go to R2
+Upload the new file
+
+and it's replaced......
+
+THIS AMAZING JSON DOES THE WHOLE SECOND HALF OF THAT IN ABOUT 15 SECONDS
+INCREDIBLE
+THEN IT JUST UPLOADS AUTOMATICALLY AND YOU CAN DOWNLOAD THE APK FROM MY SITE
+
+BADASSS!!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+indows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS D:\lokis-kingdom> & "D:\lokis-kingdom\BUILD-LOKIS-KINGDOM.ps1"
+
+WELL BRAIN, WHAT DO YOU WANNA DO TONIGHT???
+
+THE SAME THING WE DO EVERY NIGHT PINKY.....
+
+========================================
+STEP 1 - GENERATING MUSIC CATALOG JSON
+========================================
+
+Generated: D:\lokis-kingdom\public\musicCatalog.json
+Generated: D:\THE NERVOUS SYSTEM\USER_KC\QUOTATIONS FROM BRENDAN S ROSE\BRENDAN'S INFERNAL BIBLE\THE GLOT\THE GULLET\loki\loki\lokis-kingdom\loki\app\src\main\assets\musicCatalog.json
+Albums: 134
+Songs: 10017
+
+MWAHAHAHAHaHAAHAHAahhahHAHahHaHHaaHAah!!!!!
+
+========================================
+STEP 2 - BUILDING ANDROID APK
+========================================
+
+
+BUILD SUCCESSFUL in 3s
+44 actionable tasks: 8 executed, 36 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+
+ANDROID BUILD COMPLETE.
+
+========================================
+STEP 3 - LOCATING BUILT APK
+========================================
+
+FOUND:
+D:\THE NERVOUS SYSTEM\USER_KC\QUOTATIONS FROM BRENDAN S ROSE\BRENDAN'S INFERNAL BIBLE\THE GLOT\THE GULLET\loki\loki\lokis-kingdom\loki\app\release\app-release.apk
+
+APK SIZE:
+8871880 bytes
+
+========================================
+STEP 4 - CALCULATING ARCHIVE NUMBER
+========================================
+
+NEXT ARCHIVE:
+lokiskingdom(4).apk
+
+========================================
+STEP 5 - ARCHIVING CURRENT RELEASE
+========================================
+
+ARCHIVED AS:
+D:\THE_MAZE_OF_LUCIFER\THE MAZE OF LUCIFER\music\ALBUM ROOM\APP RELEASES\lokiskingdom(4).apk
+
+========================================
+STEP 6 - INSTALLING NEW RELEASE
+========================================
+
+INSTALLED:
+D:\THE_MAZE_OF_LUCIFER\THE MAZE OF LUCIFER\music\ALBUM ROOM\APP RELEASES\lokiskingdom.apk
+
+========================================
+STEP 7 - UPLOADING TO CLOUDFLARE R2
+========================================
+
+
+ ⛅️ wrangler 4.56.0 (update available 4.125.0)
+──────────────────────────────────────────────
+Resource location: remote
+
+Creating object "A_RELEASES/lokiskingdom.apk" in bucket "efsmb-music".
+Upload complete.
+
+========================================
+SUCCESS
+========================================
+
+JSON GENERATED.
+ANDROID APK BUILT.
+OLD APK ARCHIVED.
+NEW lokiskingdom.apk INSTALLED.
+R2 RELEASE UPDATED.
+
+[Lightning Bolt!!!]
+
+PRESS ENTER TO CLOSE:
+
+
+
+
+
+
+
+
+Thank you. It works perfectly. The song's there.
+You have saved me a great deal of time and effort, it's as simple as one click now........
+
+
+
+
+
+
+
+Excellent. ⚡
+
+That's exactly the payoff we wanted:
+
+ONE CLICK → regenerate 10,000+ song catalog → inject Android assets → force fresh APK build → archive previous release → install new release file → upload to R2.
+
+No more manually bouncing between the JSON generator, Android Studio, Explorer, renaming APKs, and R2.
+
+And now we know why the final piece mattered: clean assembleRelease --rerun-tasks. The automation wasn't useful if Gradle could quietly hand us yesterday's contents.
+
+This one is finished. The button actually does the job. 😆

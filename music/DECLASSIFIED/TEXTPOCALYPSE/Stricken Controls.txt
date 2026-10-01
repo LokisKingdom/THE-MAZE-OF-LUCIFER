@@ -1,0 +1,55 @@
+========================================================
+--------------------STRICKEN CONTROLS-------------------
+========================================================
+
+WSAD to move selector Up/Down/Left/Right
+Q/E to move selector forward and backward along the Z Axis
+
+T and G to change your selected piece (Clicking The Pieces On The Sides Will Also Do This)
+
+K for next song
+L for random song
+
+P to change the Skybox
+
+Backspace to cycle through selector modes
+
+Arrow Keys to move camera forward, backward, left, and right
+
+[You may also move the camera with the numpad]
+Numpad 8(forward)/5(backward)/4(left)/6(right)
+Numpad 9(move camera vertically upward)
+Numpad 7(move camera vertically downward)
+
+Numpad:
+/ * - + . 0
+(Rotate Pieces On The Board)
+Numpad enter:
+(Return Pieces To Normal)
+
+Hold Left Click to Rotate the Camera
+
+========================================================
+----------------KINGDOM OF LIES CONTROLS----------------
+========================================================
+WSAD to move.
+Mouse to Aim.
+Left Click to Attack.
+Right Click to Change Weapons.
+
+Escape to exit out of the level,
+or to quit the game if you are in the main menu.
+
+========================================================
+--------------INVASION OF STUPID CONTROLS---------------
+========================================================
+
+Mouse to Aim.
+Left Click to Attack.
+T and G to Change Weapon.
+Backspace to Upgrade Weapon.
+
+First Weapon Upgrade costs 100000 points.
+Second Weapon Upgrade costs 300000 points.
+
+Escape to exit out of the level.

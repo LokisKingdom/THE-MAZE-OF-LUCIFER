@@ -1,0 +1,335 @@
+can i post date a form 10 in HRTO? So it comes into effect later[a different date]?
+
+Thoughts
+
+No. You generally cannot post-date Form 10 so the request “comes into effect later.”Form 10 is a Request for an Order During Proceedings. The date next to the signature is the date you signed the declaration that the information is complete and accurate—not an effective date for the order itself. 
+
+tribunalsontario.ca
+
+Filing the form (after you deliver it to the other parties and file Form 23) starts the request immediately. The Tribunal then decides whether to grant the order and on what terms, including any future effective date if that is part of what you asked for.Putting a future date on the signature line would be inaccurate and can create problems with service, response deadlines, and how the Tribunal treats the request.If you want the order to take effect on a later date (for example, an adjournment or extension starting on a specific day), describe that clearly in section 3 of the form and explain why in section 4. Do not change the signature date.This is not legal advice. For your specific file, contact the Human Rights Legal Support Centre or a lawyer.
+
+35 web pages
+
+ok, i'll give the mpp until tuesday to reply, then i'll add him as a respondent along with the ombudsman.
+
+Thoughts
+
+You can ask the HRTO to add parties later, but an MPP and the Ombudsman are very likely to be refused, and waiting until Tuesday does not change that.How adding a respondent actually works
+You do not just name them. After an application is already filed, you must use Form 10 (Request to add a party / amend the application), deliver it to every current party and the person/office you want to add, then file Form 23 (Statement of Delivery) with the Tribunal. The proposed new respondents get a chance to object. 
+
+hrlsc.on.ca
+
+The Tribunal uses a three-part test:  Do the allegations, if proven, show that person/office could have violated the Human Rights Code?  
+If you already named an organization, is there a compelling reason to add the individual?  
+Is it fair in all the circumstances to add them now? 
+
+archdisabilitylaw.ca
+
+Why an MPP and the Ombudsman are usually not proper respondents
+The HRTO only has jurisdiction over discrimination in the Code’s social areas (employment, services, housing, contracts, unions). It does not supervise politicians’ legislative work or the Ombudsman’s investigations.MPPs have parliamentary privilege over their official functions. The Tribunal has repeatedly declined jurisdiction over elected officials acting in that capacity.  
+The Ontario Ombudsman is an officer of the Legislature. The Ombudsman’s own mandate excludes complaints about individual elected officials, and the HRTO is not the forum for reviewing how the Ombudsman handled (or declined) a complaint. 
+
+ombudsman.on.ca
+
+Giving someone “until Tuesday to reply” is not a recognized HRTO step. It does not create a right to add them later, and a delay in requesting the amendment can itself be a reason the Tribunal refuses.Practical next step
+If you still want to try, complete Form 10 now, explain in detail how the MPP and Ombudsman personally engaged in discrimination within a Code social area, serve everyone including them, and file it. Expect a jurisdictional challenge.This is not legal advice. Speak to the Human Rights Legal Support Centre or a lawyer before you file; adding improper respondents usually just delays the case and can hurt credibility.
+
+26 web pages
+
+the ombudsman refused service apparently i have a mental disability, my disability presentation, now nobody is there to help me when ODSP PARKDALE is refusing a written request for internal review, i have  right to one, but they're ignoring the portal emails, because of my disability presentation.
+I have sent a polite letter to the MPP, an NDP guy, a very polite letter, no disability visible in it,
+which i expect him to ignore.... =/
+I am being failed on 3 levels and my odsp is being cutoff despite being under the gift limit, her math was wrong, period end of story, no one has interpreted the rules like this anymore......If ODSP parkdale cuts me off unfairly,
+I have a right to written request for internal review under the law.
+When that fails i can escalate to the ombudsman,
+but he cuts me off for the same reason,
+and when that fails, I can escalate to the MPP because the ombudsman isn't doing his job,
+When that also fails yes i will try to add them, even if it seems like it would fail, frankly i'll try, these are important roles locking me out on disability grounds alone. I think there's more of a chance than you think but either way i will try if he doesn't write back.
+
+Thoughts
+
+You’re in a hard spot. Here’s the actual process, what each office can and cannot do, and why adding the Ombudsman and an MPP to an HRTO file is still a long shot.ODSP internal review is a legal right
+You have 30 days from the day you are deemed to have received the decision (usually 3 business days after it was mailed) to ask in writing for an internal review. A portal email can be ignored; a signed letter or Form 2878 sent by mail or fax with proof of delivery is harder to ignore. The request must say you want an internal review, include your name, member ID, the decision date, and why the math/gift-limit interpretation is wrong. If your disability makes writing hard, the office can start from a verbal request but you still have to follow up in writing. If they give you no written decision within 30 days of a proper request, you can go straight to the Social Benefits Tribunal. 
+
+ontario.ca
+
+Keep copies of everything you send and any “undeliverable” or read receipts.Ombudsman Ontario
+They regularly take ODSP complaints about delays, ignored requests, and calculation errors and often get files unstuck. They also have a legal discretion to refuse a complaint if they think you still have an adequate remedy (internal review + SBT), if the complaint is old, or if they decide it is not made in good faith. When they refuse they must tell you in writing. They say they accommodate disabilities and use a trauma-informed approach; “disability presentation” alone is not a listed ground for refusal. They cannot investigate an MPP. 
+
+ontario.ca
+
+MPP
+An MPP can write a letter or make a call. They have no legal power to reverse an ODSP decision or to force the Ombudsman to reopen a file. Parliamentary privilege also makes them a very poor respondent at the HRTO.HRTO
+The Tribunal can hear claims that ODSP (as a government “service”) discriminated against you on the ground of disability in how it delivered the service—for example, refusing to accept a written review request or treating you differently because of how your disability presents. There are existing HRTO cases against the Ministry over ODSP policies. What the HRTO generally will not do is sit as a second Social Benefits Tribunal and re-decide whether the gift-limit calculation was correct. Adding the Ombudsman and the MPP as respondents because they declined to intervene is the weakest part of the plan: those offices are not delivering the ODSP “service” and the MPP has privilege. The Tribunal can still refuse to add them. 
+
+incomesecurity.org
+
+What to do this week, in order  Get the internal-review request on paper and delivered to Parkdale ODSP with proof. Use the CLEO letter tool if it helps: stepstojustice.ca/ask-odsp-review.  
+Call a community legal clinic today. Parkdale Community Legal Services and other Toronto clinics help with ODSP reviews and SBT appeals for free. They can also look at whether an HRTO application against the Ministry (not the MPP/Ombudsman) has any chance.  
+If the clinic agrees there is a Code issue in how the office treated you, they can help draft a focused Form 1 or Form 10. Do not add parties just to “try.”
+
+You have a real statutory right to the internal review. Use that first and get a clinic involved; that is the path that actually moves ODSP files. I am not a lawyer and this is not legal advice. Call a clinic or the Human Rights Legal Support Centre before you file anything else.
+
+37 web pages
+
+Lawyers fail me 100% of the time,
+I'm afraid i'm on my own.So a written letter, sending it to them, ok, a letter to ODSP Parkdale,
+a separate letter on a different matter to TPS Headquarters (A request for bodycams and squad car cams from an incident 2 days ago) ok, we're doing those two today, that should be good.......
+
+Thoughts
+
+Doing those two as separate letters is the right call. Keep them short, dated, and factual. Send each in a way that creates proof.1. ODSP Parkdale – internal review
+Treat this as a formal request, not a conversation.Include:Today’s date  
+Your full name and 9-digit member ID  
+Date of the decision letter and the date you received it  
+The words “I request an internal review”  
+One or two sentences on why the gift-limit math is wrong (under the limit; their calculation is incorrect)  
+Your mailing address and a phone/email they can use
+
+Send it three ways if you can: fax to 416-531-2280, email to ODSP.Parkdale@ontario.ca, and a paper copy to the office at 340 Dufferin St, Toronto ON M6K 1Z9. Keep the fax confirmation and a photo of the sealed envelope. If you mail it, use something trackable.
+You can also use CLEO’s letter tool: stepstojustice.ca/ask-odsp-review.
+Office phone if you need it: 416-531-6001. 
+
+niagara.211centralsouth.ca
+
+2. TPS bodycam / in-car camera – do not send a plain letter to “Headquarters”
+A general letter is easy to lose. Camera footage is requested under MFIPPA through the Access & Privacy section, with a $5 non-refundable fee and their Access/Correction Request form (or a letter that has the same information).Mail or drop off:
+Toronto Police Service
+Information Privacy Section, 4th Floor
+40 College Street
+Toronto ON M5G 2J3  In person: HQ lobby, 40 College St. Hours are 7 a.m.–4:30 p.m. Monday, Tuesday, Thursday, Friday (closed Wednesday). Phone: 416-808-7850. 
+
+tps.ca
+
+In the request list:Date, approximate time, and exact location of the incident (2 days ago)  
+Occurrence / event number if you have it  
+Officer names or badge numbers if you have them  
+“Body-worn camera and in-car camera recordings of all officers who attended”  
+Ask for electronic copies if possible
+
+Footage is not kept forever. Two days ago is still recent, so get this in today if you can.Same rules for both letters  Date and sign them.  
+Keep a copy of every page.  
+Do not mix ODSP and police in one envelope.  
+Write “Request for Internal Review” or “MFIPPA access request – body-worn and in-car camera” on the envelope.
+
+I am not a lawyer. This is practical filing help, not legal advice. If energy allows later, Parkdale Community Legal Services (1229 Queen St W, 416-531-2411) still handles ODSP files for people in that area even when other lawyers have not worked out. You do not have to use them today. Get the two letters out first.
+
+29 web pages
+
+HRTO FILE- 2026-68793-I - Brendan Rose - To Chris Glover (NDP) MPP and the Ombudsman - ODSP PARKDALE is still refusing WRITTEN REQUEST FOR INTERNAL REVIEW - AUDIO BREAKDOWN.pdf
+File
+
+Please review this letter I already sent just now, don't bother telling me what i got wrong, at all, just remove things you think would hurt me and rewrite it as the letter i'll need to send for internal review request in writing.....
+
+ODSP Parkdale – Request for Internal ReviewDate: September 12, 2026Ontario Disability Support Program – Parkdale Office
+340 Dufferin Street
+Toronto, ON M6K 1Z9
+Fax: 416-531-2280
+Email: ODSP.Parkdale@ontario.ca  Re: Request for Internal Review
+Name: Brendan S. Rose
+Member ID: [put your 9-digit ID here]
+File / decision: cancellation or reduction of ODSP income support and related benefits, including coverage that pays for Abilify  I request an internal review of the decision to cut off or reduce my ODSP income support and related benefits.I disagree with the decision for these reasons:The amount treated as gifts is below the annual gift limit. The gifts average $7,200 per year, which is under the limit.  
+Rent paid on my behalf is not a gift. Rent receipts were provided. Previous workers accepted those receipts for many years.  
+The decision was made without a correct application of the gift and shelter rules.  
+The result is the loss of income support and the medication Abilify, which I take as prescribed.
+
+I already sent a written request through the My Benefits portal on September 8, 2026, subject line: “I REQUEST AN INTERNAL REVIEW IN WRITING.” I also advised the office by phone that the request was in the portal inbox. I am sending this letter so the request is on the office file in writing.Please confirm in writing that this internal review request has been received and is being processed. Please send the internal review decision to me at the address and email below.Mailing address: [your address]
+Email: thesulfurgod@protonmail.com  Brendan S. RoseSend this by fax and by mail (keep the fax confirmation). Put your member ID and mailing address in the blanks. Do not attach the HRTO package, audio file, or Ombudsman/MPP emails to this letter. Those are separate files.
+
+if i admit to committing a crime in a communication with the police, are they obligated to make an arrest, even if the crime was very long ago, and a decision was already rendered by the police chief that it was a mental health incident, if something changes that, potentially, do they have a requirement to arrest, can they use discresion if arrest is clearly unnecessary?
+
+Thoughts
+
+No. In Canada the police are not required to arrest you just because you admit something in a letter or email.Arrest is a power, not an automatic duty.
+Section 495(1) of the Criminal Code says a peace officer may arrest without a warrant if they have reasonable grounds to believe an indictable offence was committed. “May” means discretion. 
+
+laws-lois.justice.gc.ca
+
+For many less serious offences (summary, hybrid, and some lower indictable offences), section 495(2) goes further: the officer shall not arrest without a warrant if they reasonably believe the public interest can be met without an arrest (identity known, evidence already secured, no ongoing risk) and there is no reason to think you would fail to attend court. That is an express limit on unnecessary arrests. 
+
+canlii.org
+
+Even when they could arrest, they can instead:take no further action
+document the file and close it
+refer it as a mental-health matter
+recommend charges later without an immediate arrest (summons / appearance notice)
+leave the charging decision to the Crown
+
+Toronto Police procedure on persons in crisis says that if a criminal offence appears to have been committed, officers assess the circumstances and consider charges; if they do not charge, they still complete a report. That is discretion, not a mandatory arrest. 
+
+tps.ca
+
+A prior “mental health incident” decision does not lock the file forever.
+If new information appears, police can reopen an investigation. They still do not have to arrest. Age of the event, prior finding that it was a crisis, current risk, and whether a charge is even legally available all go into that decision.Time limits matter.  Pure summary offences generally must be charged within 12 months.  
+Indictable offences have no limitation period.  
+Most offences are hybrid; after 12 months the Crown can often still proceed by indictment.
+So “it was long ago” blocks some charges and not others. It does not create a duty to arrest. 
+
+bcdlaw.ca
+
+An admission to police is evidence.
+Anything you tell police can be used. It does not force an arrest, but it can give them grounds they did not have before. You have the right to remain silent. You do not have to explain, confess, or “update” them.This is general information about the Criminal Code, not advice about your situation and not a prediction of what any officer will do. If you are thinking of sending police a statement about past conduct, speak to a criminal defence lawyer first and do not send the statement until you have that advice.
+
+30 web pages
+
+if i tell them this, they probably won't arrest, if i withhold this information in my report to them, in my opinion only then am i in hot water. It should be the truth, the whole truth, and nothing but the truth, if i'm hiding things and THAT comes out, then in my opinion I'm fucked.
+
+That instinct is backwards for a voluntary report to police.You are not on a witness stand. “The truth, the whole truth, and nothing but the truth” is an oath in court. It is not the rule for a letter you choose to send to TPS. You have no duty to give them a complete account of your life or of old events.Three different things get mixed together:1. Staying silent or leaving something out
+If you are not under a legal duty to speak, not volunteering extra facts is usually just the right to silence. That is not, by itself, a crime.2. Lying
+Making a false statement to police who are investigating can be obstruction. Do not invent facts.3. Volunteering an admission
+If you write “I did X,” that statement can be used as evidence. It does not force an arrest, but it can give them grounds they did not have. A past “mental health incident” finding does not erase that.So the risky move is not “I didn’t dump every past detail into this FOI / camera request.” The risky move is sending a narrative that admits an offence you were never required to admit.For the TPS letter you planned (bodycam / in-car camera), you only need enough to identify the incident: date, time, location, occurrence number if you have it, and that you want the recordings. You do not need a confession, a medical history, or a theory of why they should not arrest you.If the thing you are thinking of “telling them” is an old alleged crime, do not put it in writing to police without a criminal defence lawyer. A clinic or duty counsel can tell you whether that topic even belongs in the request. I am not that lawyer, and this is not a green light to confess or to hide a current investigation.Keep today’s letters narrow: ODSP internal review in one envelope, camera FOI in another. Nothing else.
+
+can i post it in here, and when you a--- I AM DESPERATE TO CONFESSS!!!! I AM DESPERATE TO!!!!!! I WANT PEOPLE TO KNOOOWW!!!!!!!!!!!!! ---- I'm halfway prepared to face real consequences for this, even then at least the truth would be told...........If you don't approve this for sending which you almost certainly wont, rewrite it in way that will get me the body cam tapes of arresting officers (I think it was Fernando and someone else, not sure on Fernando either) Rewrite this in a way that gets me the tapes without putting me in danger. and still somehow explains why photos full of blood were sent to the tribunal as evidence for liability against the Kinston Road Condo Board in 2026-68924-I - KINGSTON ROAD CONDO BOARD OF DIRECTORS HEAD vs Brendan Rose, currently awaiting service. 
+[no placeholders of any kind] [keep my sig exactly the same]On the 9th Month of September 2026 on September 10th,
+I had a phonecall with Patrick Newland, of CAMH, a Social Worker
+under a very successful Dr. Martin Rotenberg. I am currently involved
+in legal action at HRTO against Martin's Employer Camh, Michele.Warner@camh.ca (Their Counsel)
+and Toronto Police Services, Hate Crimes Unit, Molly.Lowson@toronto.ca (Your Counsel) and the mood has grown quite, frankly hostile at CAMH, people have been ignoring my communications, deflecting away calls and problems, and generally acting paranoid and weird around me when I come in to get my Injection of Abilify Maintaina 400 mg. Which I attend regularly.I had sent out some photos from Kingston Road, to tell the lady (board of directors head- respondent in case past confirmation) what she had done to me,
+why I think she's liable, and express an intent to pursue her legally over the issue.So i get the call from Patrick, and just listen to the tape (available on request)
+This is not a friendly discussion about medicine that he's pretending.....
+This was more like a hostage negotiation where the badguys are gettting rid of us and the negotiation is over. I asked him very politely, if he's concerned about me? (officers gonna be dispatched? Right? Concern, got it) He told me he doesn't have the power to do it. He told me my Aunt Christine sends her concerns. He told be Shoppers Drug Mart were very concerned about, something about the tribunal- i interrupted him.......So you guys came on that call.
+The officers were not too bad this time, they didn't manhandle me, they let me get my steam deck
+for what i assumed and was resigned to being a 1 month stay in that ward, where i would have high likelihood of being suicidal and maybe actually doing it this time after a month more in that thing. (You know what they are, those are no hospitals ​*shiver*​) [Hint: You are doing the thing that makes people suicidal, while telling them you're concerned. You gotta change your society, or something really evil is about to occur and you know what that is. This needs to stop.]So the Cops practically did a brofist when they got me in the car,
+said "that was way easier than i was expecting" Yeah man, 
+probably because i was sane. They checked for wounds on my hands,
+only found a scar worth 4 years old. They took me to Queen Street Site, Emergency.Thank God, it wasn't a busy day, no long wait, everyone was absolutely terrified,
+so they were on their best behavior, no one punching me to get me put in iso or
+something like that other time.Doctor eventually saw me after about an hour and a half to 2 hours.In retrospect the officers did nothing wrong, after what my insane Aunt lied to them about,
+(possibly by not even reading the email, which has always been a challenge for her,
+she may have thought those pictures were recent---> NOT UNLESS I WAS PUT IN THE WARD FOR ANOTHER MONTH,
+then as soon as I get out I'm leaving, done with this world you put me in that s*** again.....)ATTACHMENTS:
+PATRICK'S THREATENING PHONECALL.txt
+            11.16 KB
+            In this exchange on SEPT 10th 2026 at 12:29 PM
+             Patrick Calls to relay the concerns about my tribunal filings previous that day,
+             I was just making a cheeseburger and enjoying my day.
+             Someone gave them the impression I had cut myself savagely,
+              The tape and the images posted, are there to establish the severity of what happened
+              to me at Kingston Road, for the purposes of establishing Liability, (a guilty conscience)
+              Against the Kingston Heights Board of Directors Head, Sam Suttle, His Lawyer TDuggan,
+              and The Cedarhurst home for dementia care, who were provided the same pictures
+              and asked to disassociate with him, which they refused, and continued working with Sam,
+               as if the photos were not an issue. I place the blame squarely on Sam Suttle's head
+               for enforcing a budget of 150 dollars per month for food, or about 5 days food a month,
+               for three months, refusing requests for bus far to get to my medication, direly needed,
+               and then he allowed me to starve, the first month passed, i barely survived,
+               then month two began, I bought what little groceries I could, I ate for 5 days, and 
+               began to starve, around the end of October 2022 I slashed an artery in my hand open
+               out of pure despair at being starved like this. I told Sam I would keep the rent, 650 a month he
+               imposed on about 1050-1100 a month from ODSP, After a 200 dollars a month phonebill,
+               he threatened eviction if I didn't pay, which is why I attribute this to malice, he had to have 
+               known, he was told repeatedly what was going on (except the wound I was hiding)    
+               the result on me was murderous, and i begged him to give me food to make it stop,
+               (I was also making rock music songs the entire time, this probably confused the issue for  
+               many people) anyway over the course of being murdered by this man and bleeding out
+                like a murder victim off my meds and painting the walls with my blood,
+                eventually my mind just snapped, I attempted 3 times to murder someone,
+                one at a tim hortons, which locked the door when they saw me coming,
+                The Kingston Heights Board of Directors Head, who I didn't know who she was,
+                 turns out she was the woman responsible for sending nobody to come check on me
+                 and see how i was doing. Attempts to bust me were failing, mental health calls got
+                 talked away, officers arrived to check on me, they got talked away, seen as threats,
+                  I did not want anyone to interrupt my planned attack.
+                  My contention is, and what I would argue is, If Thomas the super had been sent,
+                  Rather than shaking a hammer or a drill or something i forget, yelling at me in anger,
+                  If he had arrived with a bottle of wine, some marijuana, some nice cheese and crackers,
+                  and said "Brendan how are you doing? Would you like something to eat?"
+                  I suspect i would have let him in instantly at the first talk of food,
+                  Any Maybe someone would have saved me.
+                  It was logged correctly as a mental health incident, but honestly there was intent there,
+                  the plans were there for a long time, being starved to death activated them.
+                  In a sense it was self defense, it was November 18th, I was on the verge of death,
+                  any longer and I would have passed out, and died thinking of my Dog Loki and my wife  
+                  and baby, while Sam got the call a few days later and walked.... Walked out of there
+                  I had to help win it for his lawyer because the damn woman sued us both together,
+                  and Sam losing would literally just take money from me I'd need to survive one day,
+                  he shielded himself with my own money. I wonder what my mom was thinkin putting
+                  this guy in charge, it was like being killed by Hitler, (I know you hate that comparison)
+                  It was being starved to the point of death over three agonizing months at the end of which
+                  when my ODSP arrived month 3 it would have been deposited into a corpse.               So you can say that was me, you can say that was Sam, you can say that was mental health,
+               I note I was sitting in the lotus postion naked perfectly calm, (this was to confuse                                   		   investigators) when your officers finally cut open my door (different division but still your                     		   officers), on an eye from the Baby from Naoki Urasawa's Monster, a character i was                               		   identifying with a lot.
+
+                I swear to God if you guys just gave me food and medicine that would have been
+                month 3 in my peaceful new condo. I was mismanaged into absolute destruction
+                and I would plead insanity in any hearing or trial. That was probably the worst
+                mental breakdown that hospital had ever seen, so yeah i think it qualifies,
+                but if you wanna be technical yes the evil was there and the plans were longstanding.
+                 For what it's worth I've moved past that and I now see anything like that as a loss,
+                 not a win. Honestly I don't think i needed the lotus position at that point,
+                 I was naked and throwing bottles at the cruisers. Pretty crazy,
+                 Chief looked at that and said, "Hospital" and I wouldn't override that.
+                 But the situation is pretty murkey so...... I hope charges don't roll in after this email.
+                 If so that'd be pretty unfair, but I'm actually more afraid of lying to you,
+                 that I'd have no excuse for, and I'm perfectly lucid currently.
+                 In my defense, Abilify was stopped the first month, month 3 without it
+                 you're just insane, there's no going back from that, it would be a hospital or a grave.
+                 flat out.Transcript of the Call with Eman 7-59 AM - 2026-09-12.txt
+            4.77 KB        Here it sounds like Eman is saying she never complained about the Tribunal Emails,
+        that's fine if it's true, but I'm confused, so I'd like to call her to the stand during this thing
+        at some point.SEPTEMBER 11th 2026 - Patrick Gaslights me and pretends the last call never happened.txt
+            7.24 KB         Yeah at this point Patrick is just like, telling me the previous call never happened,
+         when it's recorded, and he clearly said that Eman was complaining about the Tribunal emails
+         if he was something else, he can get on the stand and tell me, I wouldn't accept a different
+         answer as readily as you might think just because one's provided. Arguably between these 
+         three calls, if i get them on the stand, at least one of them is committing perjury,
+         almost certainly, but I'm not saying we have it now.Regards,
+Brendan S. Rose
+Head Litigant, Sole-Owner
+GROK & SMITH
+thesulfurgod@protonmail.com (mailto:thesulfurgod@protonmail.com)
+www.lokiskingdom.comGROK: if possible use my own voice, cut for content that could hurt me, not style, cut and replace where a statement could hurt me, otherwise leave all statements the same where doing so is possible. I want them to hear my voice, not grok the genius ultimate superintelligence.
+
+Do not send the draft you pasted. It is a confession. I will not tidy that version or leave those admissions in.Send only a records request. Do not attach the call transcripts, the “threatening phonecall” file, or any narrative about 2022 intent, attacks, or “plans.” Those files would put the same material in the police file.Use this instead. Signature left as you asked.Toronto Police Service
+Information Privacy Section, 4th Floor
+40 College Street
+Toronto, ON M5G 2J3  Re: Access request under the Municipal Freedom of Information and Protection of Privacy Act
+Body-worn camera and in-car camera recordings
+Incident date: September 10, 2026  I am requesting copies of all body-worn camera recordings and in-car camera recordings of the Toronto Police officers who attended me on September 10, 2026, including an officer I believe was named Fernando and the other attending officer or officers.That day I received a phone call from Patrick Newland, a social worker at CAMH under Dr. Martin Rotenberg. Officers then attended, checked my hands, and took me to CAMH Queen Street Site Emergency. I was seen by a doctor after about one and a half to two hours. I am not complaining in this letter that those officers assaulted me. I want the recordings of that attendance and transport.I also need these recordings because photos of an old injury were sent in Human Rights Tribunal of Ontario file 2026-68924-I, Kingston Road Condo Board of Directors Head v. Brendan Rose, which is awaiting service. Those photos are from Kingston Road in 2022. They were sent as evidence of conditions I say the condo board is liable for. They were not photos of a new injury on September 10, 2026. Officers who attended on September 10, 2026 checked my hands and found an old scar. The recordings will show the condition of my hands that day and that this was a mental-health attendance, not a new wound from September 2026.Please treat this as a request for my personal information and for the video of that call for service. I ask for electronic copies if possible.The $5 application fee is enclosed.Regards,
+Brendan S. Rose
+Head Litigant, Sole-Owner
+GROK & SMITH
+thesulfurgod@protonmail.com (mailto:thesulfurgod@protonmail.com)
+www.lokiskingdom.com  Mail or drop this at 40 College Street with five dollars. Do not cc CAMH counsel, HRTO, or the condo board on this envelope. Do not add the 2022 story. If you want the photos explained to the Tribunal, that belongs in the HRTO file, not in a letter to police.
+
+yeah i wanted to confess, anyway i'll do your plan. They gave me accommodations to submit via email. I can just send this in and pay the fee later, and then it's good, should i do that?
+
+Thoughts
+
+Yes — if Access and Privacy told you in writing that you may file by email and pay the $5 later, use that. That is an accommodation for how you file. It does not change what you should put in the email.Do this:Email only the short request I gave you.  
+Subject line: MFIPPA access request – BWC and in-car camera – September 10, 2026 – Brendan S. Rose  
+In one line at the top: you were told you may submit by email and pay the $5 application fee after filing.  
+Send the $5 as soon as you can (money order or in person at 40 College Street). The $5 application fee is normally required with the request and is not waivable under the Act; their accommodation is about timing and method, not skipping it forever. 
+
+tps.ca
+
+Do not attach the call transcripts, the long 2022 story, or anything about intent or attacks. Those do not help you get the tapes.Send it only to the Access and Privacy / Information Privacy address they gave you for accommodations — not to Molly Lowson, not to CAMH counsel, not to HRTO.After you send it, keep the sent email. That is the filing. Then get the $5 to them. That is enough for this piece.
+
+20 web pages
+
+yeah...... it's just i wanted to confess,
+because i'm lying everyday. i did that,
+i don't feel guilt about what i did, i think i did the right thing,
+i feel about covering it up, holding that in......
+
+Wanting the weight off is real. Handing that story to the police is not the same thing as “finally being honest.”Silence with police is not the same as lying. Lying is making up facts. Not volunteering an old incident they already treated as a mental-health call is using a right you actually have. The sick feeling is about carrying it, not about failing a legal duty to write them a confession.If you need to say it somewhere safer than a TPS inbox:A criminal defence lawyer. What you tell them for legal advice is privileged. They can tell you whether that history is even still live and what happens if you speak.
+Your doctor or a clinician you trust, as medical history, not as a statement for the file.
+If tonight the urge to send it or to harm yourself spikes: 988 (Suicide Crisis Helpline) or 911 if you are in immediate danger.
+
+Do not use the bodycam email as the place you “come clean.” That email has one job. Send only the short request. Pay the fee when you can.You can want the truth known and still refuse to give the police a statement that can be used as evidence. Those two things are not a moral failure. They are different rooms. Keep the confession out of the police room.
+
+I'll tell it to the deepdive
+
+A public deep dive is still a statement. If you put the 2022 story on a recording, blog, or interview, police and a Crown can use that the same way they can use an email.If “deep dive” means talking it through privately with a lawyer or a clinician, that is the safer room. If it means posting or recording it for an audience, wait. Get advice first.The TPS email stays the short request only.
+
+deepdives are private, it's not a public forum, Google Gemini Notebook LM, not public unless you release em
+
+NotebookLM is not a courtroom and it is not a public feed. It is also not privileged.What you type there is stored on Google’s systems under their terms. It is not the same protection as talking to a lawyer. If you later export it, share the notebook, screenshot it, or it turns up in a device search or a records demand, it can still be used.Use it if you need a private place to sort your own thoughts. Do not treat it as “I told the truth so the legal risk is gone.” Do not paste the confession into the TPS email, HRTO filings, or anything you send to CAMH or the condo board.The police request stays the short letter. The 2022 story stays out of those inboxes.
+
+they already have the story
+
+If they already attended in 2022, cut the door, and logged it as a mental-health incident, they already have that file: the call, the attendance, the hospital. You do not need to send them a new essay to “complete” it.What they may not have is a fresh, signed statement from you in 2026 spelling out intent, plans, and who you say you tried to go after. That is the part that can change a closed crisis file into new evidence. Do not add that.They have the old story as they wrote it down then. Leave it there. Send only the short bodycam request for September 10, 2026.
+
+ok
+
+Good. Short bodycam email only. Fee when you can. Nothing else in that message.
+

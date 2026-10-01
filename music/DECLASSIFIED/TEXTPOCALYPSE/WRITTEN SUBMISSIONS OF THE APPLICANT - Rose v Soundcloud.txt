@@ -1,0 +1,557 @@
+
+## PART I — WRITTEN SUBMISSIONS OF THE APPLICANT
+
+HRTO FILE: 2026-67265-I Brendan S. Rose v Soundcloud 
+2026-08-17 4:12 PM
+
+### A. Overview
+
+1. The Applicant submits that this Application has a reasonable prospect of success and should proceed to a hearing on its merits.
+
+2. At its core, this is a case about equality of access to economic participation in a modern digital music service. The Applicant is an Ontario artist with a disability who uses artificial intelligence as a disability-related aid in the creation and production of music.
+
+3. The Applicant alleges that SoundCloud applies a rule or practice that prevents or restricts monetization of music because it was created using artificial intelligence. Whatever the purpose of that rule may be, its effect upon the Applicant is not neutral.
+
+4. The Applicant's disability creates substantial barriers to conventional methods of professional music production. Traditional production ordinarily requires sustained interpersonal collaboration with musicians, bands, producers and others. Those methods have repeatedly proven inaccessible or ineffective for the Applicant because of disability-related limitations affecting sustained interpersonal and professional relationships.
+
+5. Artificial intelligence removed that barrier. It enabled the Applicant to transform his writing, compositions, concepts and artistic direction into completed musical works without depending upon a conventional band structure that he has been unable to maintain.
+
+6. The Applicant puts the matter simply:
+
+> **I am a human artist.**
+
+7. Artificial intelligence does not change that fact. The Applicant conceives the works, writes and directs his artistic output, selects what is produced and published, develops the corpus in which those works exist, and presents those works to an audience. AI is the instrument and disability-related aid through which the Applicant is able to participate meaningfully in music production.
+
+8. The Applicant therefore rejects any suggestion that accommodating his use of AI would improperly divert money away from “human artists.” The Applicant is himself the human artist seeking equal access to monetization. The distinction created by the challenged policy is not, in his circumstances, between human creativity and non-human creativity. It is between a human artist able to work through conventional production methods and a human artist who alleges that disability requires him to work through an alternative technological method.
+
+### B. Adverse-Effect Discrimination Based on Disability
+
+9. The Applicant does not need to establish that SoundCloud adopted its AI policy because it intended to discriminate against persons with disabilities. That is not the principal theory advanced here.
+
+10. The Application concerns adverse-effect or constructive discrimination: a requirement that may appear neutral but allegedly produces unequal consequences when applied to the Applicant because of a characteristic protected by the Ontario Human Rights Code.
+
+11. Section 11 of the Code addresses requirements, qualifications or factors that are neutral on their face but result in exclusion, restriction or preference affecting persons identified by prohibited grounds. Ontario human-rights guidance likewise recognizes that discrimination need not be intentional and that service providers have obligations concerning disability-related barriers. ([Ontario Human Rights Commission][2])
+
+12. The Applicant's position can therefore be expressed as a straightforward chain:
+
+**Disability → disability-related barrier to conventional music production → AI as a means of overcoming that barrier → successful participation in music production → exclusion of AI-assisted works from monetization → adverse economic effect.**
+
+13. Before the availability of generative music technology, the Applicant spent many years attempting to make music through methods that did not provide a viable route to independent professional participation. Among other things, he created vocals over existing copyrighted recordings because he could not independently produce the underlying musical performances and could not reliably obtain them through conventional collaboration.
+
+14. Generative music technology fundamentally changed that situation. For the first time, the Applicant had an instrument capable of addressing the particular barrier preventing independent production.
+
+15. The Applicant describes Suno in functional terms as **“my guitar.”** The analogy is not intended to suggest that the technology is literally equivalent to a guitar. It describes its role: it is the means through which the Applicant can translate human authorship, writing, direction and creative decisions into music without requiring a conventional collaborative structure that disability makes substantially inaccessible to him.
+
+16. The resulting productivity is not evidence that accommodation is unnecessary. On the contrary, the Applicant submits that his productivity demonstrates that the accommodation works.
+
+17. A person does not cease to have a disability-related need merely because the technology addressing that need enables the person to perform successfully.
+
+18. Ontario human-rights principles recognize that accommodation exists to remove barriers so that people with Code-related needs can have equal opportunities, access and benefits. Accommodation can require adjustment of policies or rules rather than requiring the affected person simply to function through the conventional method. ([Ontario Human Rights Commission][3])
+
+19. The Applicant alleges that SoundCloud's monetization practice produces the opposite result. He can use technology to overcome the disability-related barrier and participate creatively, but the resulting works are then excluded from meaningful economic participation because of the technological method that enabled him to produce them.
+
+20. On the Applicant's case, this is not a request for preferential royalties, guaranteed commercial success, or payment for work that would otherwise be ineligible for legitimate reasons.
+
+21. It is a request for an opportunity to participate in the same monetization system available to other eligible artists, without being excluded merely because disability-related needs resulted in the use of AI in producing the work.
+
+22. The Applicant has generated millions of listens. The precise economic loss resulting from the alleged exclusion will ultimately depend upon evidence concerning SoundCloud's monetization system, the streams that would otherwise have qualified, applicable royalty calculations, and other relevant factors.
+
+23. The exact quantum need not be exaggerated to establish the alleged adverse effect. The essential allegation is that substantial listening activity occurred while the Applicant was denied the economic opportunity ordinarily associated with eligible monetized listening.
+
+### C. Creed and the Religious Corpus
+
+24. The Application independently raises discrimination based upon creed.
+
+25. The Applicant's music forms part of a sincerely held religious corpus. The fact that the works may outwardly resemble rap, electronic music, popular music or other secular artistic forms does not determine their religious significance to the Applicant.
+
+26. The Applicant's creed is unconventional and has evolved over time. Neither fact, by itself, establishes insincerity.
+
+27. The Applicant relies upon *Syndicat Northcrest v. Amselem* for the principle that the assessment of religious belief focuses upon the individual's sincerely held belief rather than requiring the claimant to establish that the practice is objectively mandatory according to an external religious authority. The jurisprudence cautions against turning courts into arbiters of religious orthodoxy. ([SCC CSC Lexum][4])
+
+28. Ontario human-rights guidance similarly recognizes that a sincerely held creed belief need not be an essential element of a creed or recognized as valid by religious officials. ([Ontario Human Rights Commission][1])
+
+29. There is substantial evidence available concerning sincerity in this case. The Applicant has created an extraordinarily large corpus of works over an extended period and has consistently attributed profound religious significance to the creation and preservation of that corpus.
+
+30. The Applicant's historical conduct also includes extraordinary personal sacrifices associated with continuing this work under extremely adverse circumstances.
+
+31. The Applicant does **not** contend that such sacrifice is required to establish religious sincerity. It plainly is not.
+
+32. Rather, that history is evidence available in this particular case supporting the proposition that the Applicant's characterization of the corpus as religious is sincerely held and is not a belief manufactured for purposes of litigation.
+
+33. The Applicant further submits that where unusually substantial evidence of sincerity exists, that evidence cannot rationally be discounted merely because the particular creed or its means of artistic expression appears strange or unfamiliar to an outside observer. To do so would effectively subject an unconventional creed to a more demanding sincerity standard than a familiar creed.
+
+34. That latter proposition is advanced as the Applicant's argument. It does not depend upon claiming that *Amselem* expressly formulated that precise evidentiary rule.
+
+35. Ontario's adverse-effect framework is particularly relevant to this aspect of the case. The OHRC expressly recognizes that an organizational rule may constitute creed discrimination through its unintended effect and that accommodation seeks to permit people with different sincerely held creed beliefs to participate equally in services. ([Ontario Human Rights Commission][5])
+
+36. The Applicant alleges that the challenged monetization rule adversely affects the very works through which he creates and disseminates his religious corpus.
+
+37. Accordingly, the disability and creed allegations are distinct but intersect:
+
+**The Applicant uses AI because of disability-related needs.**
+
+**The Applicant uses that means of production to create works forming part of his religious corpus.**
+
+**The challenged monetization rule allegedly attaches an economic disadvantage to those works because of that means of production.**
+
+38. One apparently neutral rule therefore allegedly produces adverse effects engaging two protected characteristics in the Applicant's particular circumstances: disability and creed.
+
+### D. This Is an Equality Claim, Not an Attack on SoundCloud
+
+39. The Applicant does not allege that SoundCloud is inherently hostile to persons with disabilities or to his creed.
+
+40. Nor is this proceeding motivated by personal hostility toward SoundCloud.
+
+41. The Applicant regards SoundCloud as a valuable service. It has enabled his music to reach listeners and has facilitated interactions with an audience that would otherwise have been difficult or impossible for him to develop.
+
+42. The Applicant's objection is narrower: he believes the monetization policy is wrong because, as applied to his circumstances, it permits him to contribute music, audience engagement and listening activity to the platform while preventing him from participating equally in the corresponding economic opportunity.
+
+43. The remedy sought should therefore be understood principally as an equality remedy. The Applicant wants the opportunity to work, compete and receive monetization without a disability-related means of production automatically disqualifying his work.
+
+44. Human-rights accommodation is not a demand for special privilege. Its purpose is substantive equality: addressing rules or structures that may function adequately for most people while creating barriers for people protected by the Code. ([Ontario Human Rights Commission][6])
+
+45. Again:
+
+> **I am a human artist.**
+
+46. The Applicant does not accept that recognizing his disability-related use of AI takes an opportunity away from human artists. Accommodating the Applicant would provide an opportunity **to** a human artist who alleges that conventional production methods are inaccessible because of disability.
+
+### E. Reasonable Prospect of Success
+
+47. The Tribunal is not presently being asked to determine every disputed fact or finally quantify the Applicant's damages.
+
+48. The immediate question is whether the Application should be terminated at the summary stage notwithstanding the factual and legal foundation available to the Applicant.
+
+49. The Applicant can identify evidence concerning his disability; the functional barriers affecting conventional music production; his historical attempts to make music before generative technology became available; his use of AI in overcoming those barriers; his extensive musical output; SoundCloud's treatment of AI-assisted works; the listening activity generated by those works; the religious corpus and its development; and the sincerity of the beliefs associated with that corpus.
+
+50. There are consequently genuine factual and legal questions concerning whether the challenged policy produces adverse-effect discrimination and, if so, whether the Applicant's disability- and creed-related needs could be accommodated without undue hardship.
+
+51. Those questions warrant determination on a proper evidentiary record rather than dismissal on the premise that AI-assisted music necessarily represents something other than human artistic participation.
+
+52. The Applicant respectfully submits that the Application therefore has a reasonable prospect of success and should be permitted to proceed.
+
+---
+
+[1]: https://www.ohrc.on.ca/en/policy-preventing-discrimination-based-creed/9-duty-accommodate?utm_source=chatgpt.com "9. The duty to accommodate | Ontario Human Rights Commission"
+[2]: https://www.ohrc.on.ca/en/v-creed-accommodation-and-inclusive-design/2-legal-framework?utm_source=chatgpt.com "2. Legal framework | Ontario Human Rights Commission"
+[3]: https://www.ohrc.on.ca/en/policy-statement-duty-accommodate-under-ontario-human-rights-code?utm_source=chatgpt.com "Policy statement on the duty to accommodate under the Ontario Human Rights Code | Ontario Human Rights Commission"
+[4]: https://scc-csc.lexum.com/scc-csc/scc-csc/fr/2161/1/document.do?utm_source=chatgpt.com "[2004] 2 R.C.S."
+[5]: https://www.ohrc.on.ca/en/creed-and-duty-accommodate-checklist-accommodation-providers?utm_source=chatgpt.com "Creed and the duty to accommodate: A checklist for accommodation providers | Ontario Human Rights Commission"
+[6]: https://www.ohrc.on.ca/en/human-rights-and-creed-research-and-consultation-report/v-creed-accommodation-and-inclusive-design?utm_source=chatgpt.com "V. Creed accommodation and inclusive design | Ontario Human Rights Commission"
+[7]: https://www.ohrc.on.ca/en/guide-your-rights-and-responsibilities-under-human-rights-code/part-i-freedom-discrimination?utm_source=chatgpt.com "Part I – Freedom from discrimination | Ontario Human Rights Commission"
+
+
+QUESTIONS REGARDING JURISDICTION:
+
+
+Were you living in Ontario throughout the entire period relevant to the SoundCloud dispute?
+
+1) Yes
+
+Were essentially all of the disputed tracks written/created while you were physically in Ontario?
+
+2) Yes
+
+Were the tracks uploaded to SoundCloud from Ontario?
+
+3) Yes
+
+Did you operate/manage the SoundCloud account from Ontario?
+
+4) Yes
+
+5) Yes, there was the option to monatize, AI Tracks are not eligible for monetization by default, so attempting to monetize them, while physically possible, is in violation of the SOUNDCLOUD TOS 
+(which our position is the Laws of Canada Supercede the TOS of Soundcloud when doing business within the borders of our nation.) As it is against the rules, I never tried to monatize.
+I try to follow the Soundcloud rules.
+
+6) Were monetization applications or submissions made from Ontario?
+
+No, I was informed by Soundcloud Support that Monatization and Distribution of AI tracks was against Soundcloud's TOS,
+when I attempted succesfully to publish an AI generated album (THE DEVIL'S SHADOW), which was approved, then when I learned about the against AI Monatization and Distribution,
+I reported my mistake to Soundcloud Support. My ability to post Vinyl's was removed, as I was attempting to purchase one. I later was told that moves like this are a 
+prelude to a ban and eseentially operate as 1st strikes under a 3 strike policy (although I cannot confirm the details as it is internal company policy as far as I'm aware.)
+meaning when my satricial song (or hymn) GOING FULL FASCIST (A satire of fascism written in 2018) was taken down under NETZDG, A law which claims jurisdiction over me although I am not a German,
+As i do business with Germany, I am subject to that rule. The Company recived at report from some enterprising young individual, that my song (A series I had recently remade with Suno on Soundcloud) 
+was breaking German law, I disagree, the song seeks to humiliate and oppose fascism, by showing how bad it is, arguably almost by definition, you would have to be thinking like a fascist to want to
+ban it at all. But in any case, the report was filed, the German Government gave Soundcloud if I'm not mistaken 24 hours to remove my "offending content" [my satire opposing fascism]
+or a 50 million Euro fine would have been imposed, and other measures should they refuse compliance. This resulted in a strike on my account, and technically, under my understanding,
+with the vinyls acting as the first strike, the satire the second, I was one strike away from termination. I was in Ontario when it happened.
+
+7) Did you receive SoundCloud's decisions/notices while in Ontario?
+
+Yes. They continued sending these notices, throughout the proceedings, at no time CC'ing the Registrar and me, and continued this behavior even after the case was frozen.
+
+8) Where would SoundCloud royalties have been received?
+
+Here in Ontario. Under approximate numbers provided by Google, 1 million streams is approximately $6000 US Dollars. I have 2,140,188 plays in the last 12 months (+100%) since December 2025,
+When I began actively posting. That's a 100% increase year over year so in effect, that was from nothing, from zero to this in 9 months. According to standard payouts, I believe I am owed
+a bit over $12000, and I would like to be able to actively pursue my career moving forward without these obstructions.
+
+9) If there was economic loss from demonetization, where was that loss experienced?
+
+In my house, at Stanley Ave, it was experienced as, some non-trivial periods of food insecurity, although i am living and getting by ok now, it was much worse before.
+I believe my mental health diagnosis and past history make this a good candidate for the Thin Skull Rule, as I am disproportionately affected by decisions that limit 
+or remove my income, as I am totally reliant on ODSP and Family Income (which ultimately we cannot afford in a sustainable way. It leaves my old age severely in question.)
+
+10) Were there any materially relevant activities in another province or country?
+
+Soundcloud Operates it's headquarters out of Karl Marx Street in Germany.
+
+11) Is there anything about the actual dispute that physically occurred in Germany, other than SoundCloud or related corporate operations being located there?
+
+The activation of NETZDG.
+
+B. Your relationship with SoundCloud
+
+12) They are the primary distribution platform on the Internet, they are where most of most of the money is made in music, they are where new stars rise up, and old ones fall,
+I was drawn to them because they have a reputation for allowing for mature musical acts to prosper too, it's a good place for gangster rappers, and other outcasts, whom I admire.
+I actually had 2 or 3 Soundcloud accounts before this one, posting some of the most extreme music ever made, but as it was copyrighted music, nobody saw it, except briefly the lawyer for Eminem,
+as i kept stealing his backtracks, which I would have to go back to without Suno. I actually built a non-trivial fanbase, though nothing like i have now, the music made was
+wonderful if your goal is pushing boundaries, or pure aesthetics, or intellectual stimulation, but it was not moral, they were evil works, full of all my worst instincts,
+If i recall neither account was shut down, I shut them down, mostly out of shame. But I remembered that Soundcloud had let me run wild and I thought, well, I have Suno,
+Maybe we can make it work this time. I toned it down a lot, steered clear of topics that would cause trouble, GOING FULL FASCIST was a mistake, I was compliance testing them for content guidelines,
+to see what they would tolerate, I thought the song was risky but probably ok, I was very wrong. It almost terminated my account.
+
+I consider them a useful service. I do not think they are malicious.
+I believe they made that policy hastily and in err, and ultimately
+it would be better for them, me, us, and everyone if they change this rule against AI Monatization and Distribution.
+
+13) When did you create your SoundCloud account?
+
+The first two were created between approximately fourth quarter 2023 and April 2024 mid month.
+The current Soundcloud acccount was created in or around December 2025, during a mostly unrelated matter regarding another HRTO file that was withdrawn prior to service.
+
+14) Were you living in Ontario when you created it?
+
+Yes.
+
+15) What kind of account was it originally?
+
+It originally housed what I thought was my lifetime body of work,
+Songs violating copyright law, which I feel should be granted religious accommodations to excempt them of this.
+They were commercial songs, chopped and spliced up with movie and tv show and youtube clips, and other singers and songs,
+with me narrating generally or singing over the tracks. They beautiful and profoundly dark works of art,
+I do not make works like that anymore, I do not wish to, I feel they were too negative,
+and a spoonful of compromise can often do what a bucket of "truth" can win.
+
+My second or third account was primarily an AI music channel, i was still learning Suno then,
+Eventually i stopped uploading my old arcs, and switched to Suno, this was supposed to secure legitimacy,
+and it did to an extent, it brought legitimacy to the music, for once I wasn't being squashed in the algorithm.
+Suno offers a song promotion service with their pro accounts, it gives songs about 100-150 hits of promoted traffic each,
+when you have thousands of tracks this adds up, and I got my 2 million.
+
+16) What kind of account do you have now?
+
+The Same Soundcloud Pro Account.
+
+17) Have you ever purchased a SoundCloud subscription?
+
+Yes, many times.
+
+18) If yes, which product?
+
+Their pro service, with unlimited song uploads and tracks promoted in Related Tracks.
+
+19) Approximately how much have you paid?
+
+0, though the number was technically 35 cents at last count. it is not enough for one payout so it cannot be withdrawn.
+
+20) Was payment made from Ontario?
+
+Yes i paid with my BMO Bank Account Debit Card, as I did today.
+
+21) Canadian dollars or another currency?
+
+It is paid in USD.
+
+22) What payment method?
+
+Debit Card.
+
+23) Was a Canadian/Ontario billing address associated with it?
+
+Yes.
+
+24) Did SoundCloud know from ordinary account/payment information that it was dealing with a Canadian/Ontario customer?
+
+Yes
+
+Have you entered into separate SoundCloud for Artists terms?
+
+Artist Pro
+Unlimited upload time, fan-powered royalties, advanced analytics and more
+
+Separate monetization terms?
+
+Yes under their terms an AI Musician makes zero, fullstop. Essentially if you make 1 song they'll give you money, if you make 100 songs, you get zero.
+
+Distribution terms?
+
+Yes Distribution is also prohibited, which they told me after accidentally publishing THE DEVIL'S SHADOW. It remains on Youtube and other platforms. I am proud of it. My son is on the cover.
+
+Any artist agreement beyond the ordinary Terms of Use?
+
+No 
+
+Did you affirmatively click/accept any of those agreements while in Ontario?
+
+Yes. I do not think they supercede Canadian law at all, I claim all of my rights under Canadian law with Germans doing business in our country.
+
+Do we still have copies/screenshots/emails documenting any of this?
+
+Yes I still have the email chains, although I cannot document the old accounts.
+
+C. SoundCloud's provision of services in Ontario
+Can an Ontario resident simply create a SoundCloud account?
+Can Ontario residents purchase SoundCloud's paid products?
+Can Ontario artists upload music?
+Can Ontario artists participate in SoundCloud's artist services?
+Can eligible Ontario artists monetize music?
+Can Canadian listeners receive advertising through SoundCloud?
+Does SoundCloud derive revenue from Canadian/Ontario listeners?
+Does SoundCloud actively solicit Canadian customers?
+Does it quote Canadian pricing?
+Does it process Canadian payment methods?
+Does it have Canadian tax arrangements reflected on invoices?
+Does it offer Canadian artists distribution/monetization services?
+Does it have Canadian-specific policies, contractual provisions, or support?
+Does anything in SoundCloud's terms expressly address Canada/Ontario?
+Does anything in its terms purport to choose German law or German courts?
+If so, exactly what does that clause say?
+Does the agreement distinguish ordinary contractual disputes from mandatory local consumer/human-rights laws?
+
+I can research most of 29–45. You don't need to become SoundCloud's corporate historian.
+
+D. The monetization relationship
+How did you first attempt to monetize?
+Approximately when?
+What did SoundCloud require you to do?
+Did you successfully enroll in monetization at any point?
+Did SoundCloud ever approve any of your tracks?
+Have you ever actually received money from SoundCloud?
+You previously mentioned approximately 35 cents—what generated that?
+Is there a dashboard showing earnings?
+What happens when you submit an AI-assisted track for monetization?
+Is it automatically rejected?
+Manually rejected?
+Does SoundCloud prevent submission altogether?
+What exact reason is displayed?
+Does it expressly say AI-generated, AI-assisted, Suno, or something similar?
+Does the rule apply to all AI involvement or particular AI providers?
+Is there a percentage/degree of AI involvement test?
+Does SoundCloud distinguish human-written lyrics with AI-generated instrumentation from wholly generated material?
+Does it distinguish AI assistance from AI authorship?
+Is there an appeal?
+Did you appeal?
+What happened?
+Did you request an exception/accommodation?
+If so, when?
+Did you explain that AI was disability-related?
+What did SoundCloud say?
+Do we have those communications?
+Has SoundCloud's AI monetization policy changed since the dispute began?
+E. The alleged adverse effect
+Precisely what opportunity do conventional eligible artists receive that you don't?
+Is your allegation that all qualifying revenue from the affected tracks becomes unavailable to you?
+Where does that money go instead?
+Does SoundCloud retain it?
+Is it redistributed?
+Is it simply never generated?
+What did you mean when you said money is effectively funnelled toward conventional artists?
+Can we document how SoundCloud's royalty pool actually works?
+Approximately how many affected streams have there now been?
+Which tracks generated them?
+Over what period?
+What portion would otherwise have qualified for monetization?
+How did you calculate approximately $12,000?
+Is that based on SoundCloud's historical payout rates, your dashboard, comparable artists, published rates, or something else?
+Is there a more conservative minimum loss we could establish confidently?
+Is the alleged exclusion continuing today?
+Is your catalogue continuing to generate streams while excluded?
+Is the alleged loss therefore increasing?
+F. Ontario economic effect
+Had monetization been available, where would you have received the money?
+Canadian/Ontario bank account?
+Would you report that income in Canada?
+Is the music business you're operating based in Ontario?
+Are the relevant business/company operations based here?
+Are your production infrastructure and equipment here?
+Is the economic activity we're discussing fundamentally an Ontario activity conducted through an international platform?
+
+This section could matter because we're trying to characterize the dispute as more than:
+
+German company made decision in Germany.
+
+Our proposed characterization is:
+
+International platform supplied a commercial service into Ontario; an Ontario artist used that service here; the allegedly discriminatory condition operated upon that Ontario relationship; and its adverse effect occurred here.
+
+Whether the law accepts that characterization is what our case research must establish.
+
+G. The contract
+What do you mean specifically when you say “the contract was signed in Ontario”?
+Was that the ordinary Terms of Use?
+Artist monetization agreement?
+Distribution agreement?
+Paid subscription?
+Several agreements?
+Where were you physically when you accepted them?
+Did SoundCloud provide contractual performance to you in Ontario afterward?
+Did you perform your obligations from Ontario?
+What obligations did each side undertake?
+Did the agreement contemplate you uploading content from Canada?
+Did SoundCloud know your country?
+Does the agreement contain a governing-law clause?
+Forum-selection clause?
+Arbitration clause?
+Human-rights/equality provision?
+AI provision?
+Monetization provision?
+Modification-of-terms provision?
+
+We should eventually obtain the actual applicable agreement rather than arguing from memory.
+
+H. Service versus contract versus employment
+Is our strongest Code characterization services?
+Contracts?
+Both?
+Is there any genuine reason to argue employment?
+Or is “unpaid employee” simply your analogy for the economic relationship?
+Does anything actually give SoundCloud employer-like control over your work?
+Are you free to publish elsewhere?
+Do you set your own schedule?
+Does SoundCloud commission work?
+Does SoundCloud direct production?
+
+My current expectation is that we probably don't need employment at all. Services/contracts may give us a much cleaner case. But we'll test it rather than assume.
+
+I. Foreign respondent / Germany
+What is the correct legal entity we're actually proceeding against?
+SoundCloud Inc.?
+SoundCloud Global Limited & Co. KG?
+Another entity?
+Which entity owns/operates the service?
+Which entity contracted with you?
+Which entity operates monetization?
+Which entity issued the challenged decision?
+Where is that entity legally domiciled?
+Does it have Canadian subsidiaries/offices/agents?
+Does it have assets/business operations in Canada?
+Who is authorized to receive legal documents for it?
+Is support@support.soundcloud.com actually capable of receiving anything meaningful?
+Has SoundCloud demonstrated actual knowledge of the HRTO proceeding?
+Has anybody human responded?
+Has anything bounced?
+Has the HRTO attempted another method of service?
+If SoundCloud ignores the proceeding, what do the HRTO Rules permit the Tribunal to do?
+J. The actual jurisdiction test
+
+This is my research assignment, not yours.
+
+What is the Ontario HRTO's territorial-jurisdiction test?
+Does the Code require the respondent to be physically located in Ontario?
+What constitutes a sufficient Ontario nexus?
+How does HRTO distinguish an Ontario event from an extraterritorial event?
+Are effects experienced in Ontario sufficient?
+Is provision of an Internet service into Ontario relevant?
+Is formation/performance of a contract in Ontario relevant?
+Is the applicant's Ontario residence relevant, and how much weight does it receive?
+Is the location where work was performed relevant?
+What happens when the decision-maker is abroad but the regulated service is delivered here?
+Are there HRTO cases involving foreign corporations?
+Multinational Internet platforms?
+Online services?
+Foreign employers with Ontario workers?
+Cross-border contracts?
+Digital discrimination?
+Are there Divisional Court decisions reviewing HRTO territorial jurisdiction?
+Court of Appeal?
+Supreme Court cases offering an applicable territorial/nexus framework?
+Which precedents most closely resemble our actual facts?
+
+We want precedent, not rhetoric, for this section.
+
+K. The TOS / German-law problem
+Does SoundCloud say German law governs?
+If so, does that actually oust mandatory Ontario human-rights legislation?
+Can parties contract out of Code protections?
+Does a forum-selection clause affect HRTO statutory jurisdiction?
+What's the Canadian authority?
+Does SoundCloud's decision to offer services here subject some aspects of that relationship to Ontario mandatory law notwithstanding contractual choice of law?
+
+Again: research questions. We don't simply assert the answers.
+
+L. What actually happened in Ontario
+
+This will probably become a very important paragraph.
+
+Applicant was physically where when he created the works?
+Where when he uploaded them?
+Where when he entered the SoundCloud relationship?
+Where when he attempted monetization?
+Where when monetization was refused?
+Where were the services consumed?
+Where was the catalogue administered?
+Where was the business activity conducted?
+Where was the financial opportunity lost?
+Where did the allegedly discriminatory policy affect the Applicant?
+
+If the truthful answer to essentially all of those is Ontario, that becomes our factual territorial nexus.
+
+M. Relationship between jurisdiction and merits
+What exactly did the HRTO's original jurisdiction notice question?
+What did you answer?
+Why did the Tribunal proceed from that stage to a summary hearing instead of immediately dismissing?
+What jurisdictional question remains before the adjudicator?
+What does the summary-hearing letter specifically ask you to establish?
+Is jurisdiction being considered alongside reasonable prospect of success?
+What burden applies at this stage?
+Which facts must merely have a reasonable evidentiary foundation versus which jurisdictional facts must actually be established now?
+
+This section will be driven heavily by the Tribunal's own correspondence already in our record.
+
+N. The human-rights argument
+If SoundCloud can supply monetized music services to Ontario creators, what is the principled reason Ontario equality law would not regulate the Ontario portion of that service?
+If foreign incorporation alone defeated jurisdiction, what would that mean for Ontario residents increasingly receiving essential/commercial services through multinational digital companies?
+Conversely, where must Ontario's legitimate territorial authority end?
+What limiting principle can we offer so we're not arguing that Ontario law governs the entire planet?
+Can we say we're asking Ontario to regulate only the allegedly discriminatory effect of the service relationship occurring in Ontario, rather than regulating SoundCloud globally?
+Would accommodation of this particular Ontario artist require a global policy change, or could SoundCloud accommodate the individual account?
+If global technical changes were required, does that go to undue hardship/remedy rather than territorial jurisdiction?
+
+That limiting principle could become extremely important. We don't want:
+
+“SoundCloud operates internationally, therefore Ontario controls SoundCloud.”
+
+We want:
+
+“The Applicant asks Ontario to protect an Ontario resident against alleged discrimination arising from a service and contractual relationship carried on with him in Ontario.”
+
+Much narrower. Much more defensible.
+
+O. What do you actually want?
+Do you principally want access to monetization going forward?
+Individual accommodation?
+Policy modification?
+Lost income?
+Human-rights damages?
+A declaration that the policy discriminated?
+Something else?
+Would an individual AI-related accommodation resolve the ongoing problem?
+Or is your position that the general policy itself must change?
+If SoundCloud offered monetization tomorrow, what parts of the dispute would remain?
+Is changing the future more important to you than compensation for the past?
+
+Your answer here will eventually help make the entire case feel proportionate and comprehensible.
+
+And one final question sits above all 206:
+
+What exactly is the Ontario event we say the HRTO has jurisdiction over?
+
+I think our eventual answer may be:
+
+The event is not the internal creation of a corporate policy in Germany. The alleged discriminatory event is the application of that policy to an Ontario artist's Ontario-based use of SoundCloud's services and contractual monetization relationship, producing an alleged Code-related adverse effect in Ontario.
+
+That is presently an argument, not a conclusion of law. My job in the next phase is to find out whether Ontario precedent lets us say it.
+
+You don't need to answer 206 questions individually. When you're rested, tell me the story that answers them. I'll extract the answers and identify whatever holes remain.

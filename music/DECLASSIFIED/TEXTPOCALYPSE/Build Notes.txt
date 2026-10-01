@@ -1,0 +1,393 @@
+
+========================================================
+----------------------BUILD NOTES-----------------------
+========================================================
+
+The Videogame Jihad has begun.
+
+========================================================
+
+The First Arc of the Story is Finished, we have a complete
+path to an ending, Kingdom of Lies is now in Beta,
+The game has a few different states.
+
+Twelve levels have been included, including eleven full chapters of the
+main game complete with story. The story so far has 4 outcomes,
+as well as branching plotlines, and numerous hidden story segments,
+minigames and easter eggs.
+
+========================================================
+DISCLAIMERS
+========================================================
+
+WARNING: This game contains patterns which
+may be harmful to people with certain conditions
+such as epilepsy.
+
+This game contains subliminal messages,
+instructing the user to kill themselves,
+while manipulating their urges to have
+sex and eat, as well as exploiting their
+paranoia about the police, interspersed
+with images of Hitler to encourage
+a general insanity.
+
+This game can cause mild hallucinations,
+if you wish to hallucinate, go to Chapter
+3, and drink the water.
+========================================================
+Although this game deals with dark subject matter,
+the makers of this game do not endorse any illegal
+activity, the makers of this game do not endorse
+any hateful attitudes and those who commit
+crimes should be punished to the full extent
+of the law.
+
+I expect you to be a normal thinking human being,
+if you're not, it's not my problem...
+========================================================
+Do not pick up more than one weapon at the same time,
+no matter how fun it is, don't do it, if you do it,
+I won't be held responsible. I'm working on a solution,
+but it is a difficult problem conceptually.
+========================================================
+
+========================================================
+STATES
+========================================================
+
+1: Menu State
+
+The player is in his apartment, if he uses the toilet he quits
+the game, if he uses the Stricken Cube he is teleported to the
+Stricken Main Menu, if he talks to the rat he opens the front
+door after a short story sequence, if he leaves through the
+front door he is teleported to the next level, or rather to
+the story segment for the next level, if he opens the fridge
+he is teleported to the level select screen. If he plays the
+game console he is transported to Invasion of Stupid.
+
+The Room will become messier and messier as the game progresses
+until it is a complete warzone, after which it will begin to warp
+in strange and unnatural ways.
+
+The Rat will slowly rot as the game progresses, until by the end
+it is just a skeleton covered in jelly.
+
+Although this is not extant in this build, the bathroom will also
+deteriorate as the game progresses.
+
+2: The Stricken Cube [4D CHESS]
+
+The Player is in the Stricken Main Menu, from here you can start a game,
+which I would encourage you to do because the game is at least as good
+as Kingdom of Lies itself. It is my favorite board game. From the Stricken
+Menu you can change various Stricken parameters, which will have an impact
+on the game. As of now, a Black Score at 20 or above will give the player
+extra weapons, a White Score of 20 or above will spawn a few new enemies,
+an even score between the two will result in a huge amount of new enemies.
+If I have time I would like to make a large amount of hidden content based
+on the menu choices, all of these features will be hidden from the player and
+will only be discovered through experimentation. Exiting Stricken will return
+the player to the Kingdom of Lies Menu State.
+
+3: The Story Sequence
+
+Press any button to advance to the next story bubble, the game displays story objects
+until it runs out, then loads the next level. An extensive story is planned, I would
+also like the story bubbles to be usable mid level in a later build.
+
+4: The Game Sequence
+
+The player is in a level, usually a large house, the player uses one of three weapons
+to kill everybody in the house, then exits via walking outside the bounds of the level.
+You can return to the Menu State by pressing escape twice, a message will appear to confirm.
+Move with WSAD and change direction with the mouse. Left Click to attack, Right Click to change
+weapons. If a melee enemy gets too close to the player spawn point, they will die, but if an
+enemy spawn camps you with a gun, too bad, you lose. The game functions on a one hit kill system,
+if the player dies 7 times he is returned to the Stricken Main Menu.
+
+I like the way the movement system works, the character has weight, and there's momentum.
+I think the controls are pretty good, and the gameplay is pretty fun.
+
+5: The Level Select Screen
+
+By accessing the fridge, the player will open the level select screen.
+Levels unlock as the player progresses. Click a button to go to that chapter.
+
+6: Invasion of Stupid
+
+Fight against wave after wave of social justice warriors in a hopeless
+attempt to survive. This will be developed over the course of the project.
+
+7: Alpha Resurrection
+
+I have completely ported over Alpha Resurrection from Renpy into Fungus in Unity.
+Now that it is completed, my next goal will be to finish both games.
+I have currently completed one half of one path in AR. There are 3.
+As of right now, it has 18 endings, with choices that are actually
+meaningful to the story. Alpha Resurrection will be the True Ending of
+Kingdom of Lies, but for now, I'm putting it in Chapter 3, top left TV.
+
+============================================================
+-------------------------LEFT TO DO-------------------------
+============================================================
+STRICKEN FINAL RELEASE GOALS
+============================================================
+
+Begin work on second act.
+
+============================================================
+KINGDOM OF LIES
+============================================================
+MAIN RELEASE GOALS
+============================================================
+
+66: Try to fix the persistant save window bleeding into my main game.
+667: Try to fix up the controls so left trigger and left bumper
+result in upgrading/changing the weapon in the TV MINIGAME in hub world.
+
+=============================================================
+SUB GOALS
+=============================================================
+10: Make Chapter 12 - 20
+=============================================================
+DONE
+=============================================================
+VERSION 27
+=============================================================
+1: Make Chapter 1
+4: A level select screen.
+3: Stricken Grid Selector.
+5: Flat Plane Selector.
+2: Make Chapter 2
+1: Variable with arrows to change Othello price and value.
+6: Add toggler for 2D mode.
+9: Nuke mode breaks the game.
+2: 2D Mode.
+7: Fix Piece Selectors only working in 3D Mode
+(go into blackbishop and convert it to work with the new 2D mode.)
+2: Your Bonus is your Score / Time Taken in Minutes {A float}
+[floor the bonus to the nearest int]
+[On the Highscore page, you have the score, bonus, total, 
+highest combo, and time taken]
+1: High Score Menu;
+5: Top 10 instead of Top 6
+6: No highscore if score is too low.
+7: Better instructions when setting highscore.
+3: A speed page ranked entirely on speed.
+8: Debug the piece placement. Make sure every piece behaves properly.
+5: Debug main game and leaderboards.
+9: Add Invasion of Stupid.
+3: Make Chapter 3
+7: Omae/Anata becomes overpowered too. (2 to cast)
+6: Change number to letter in 2nd version of save and load
+so that going to 20, will not spawn 2 + 0
+7: Exit from main menu with escape key.
+13: Add Loading Screen.
+14: Adjust default values for Othello and 2D Mode.
+15: Make Rat Speech 4 visible.
+4: Tooltips.
+99: Shotgun Added for Player and Enemies.
+10: Add Grenade Launcher.
+8: Draw 3 New Drawings for Character Gore, also fix Invasion of Stupid Gore.
+5: Make Points Even Such That No Piece Is Worth More Than It's Cost.
+6: Hmm.... O_O It is impossible to kill a drone by surrounding it.
+9: Instead of Numbers Followed by Numbers in file naming, try number + "_" + number
+666: (Gibs)
+4: Make Chapter 4
+1786: Added Weapon Upgrades, Super Shotgun, Aerial Bombardment, and Machine Guns.
+1787: Added Upgrade Sound
+1788: Added New Enemy Type, Machine, and Machine God with Phalanx of Enemies Following.
+5: Make Chapter 5
+769: Added 3 Hidden Enforcer Zero Episodes to Chapter 4.
+341: Added Rock Addict Minigame in Chapter 1.
+399: Added Succubus Demons
+6: Make Chapter 6
+99996666: Added the Cursed Town to Chapter 4, Created Simple AI interactions
+between the enemies.
+9458383499: Added Feminist Woman - Episode 1 to Chapter 1.
+42632: Improved AI Interactions.
+7: Make Chapter 7
+9: Added Digital Sewer Minigame to Chapter 4 in place of The Cursed Town, made it CH 7.
+655: Finished Lockpicking Minigame
+45: Added Random Speech to the Chapter 7 AI Bots.
+8: Make Chapter 8
+9: Make Chapter 9
+659: Press Escape to Exit Cutscene
+4: Added Godmode with great reluctance.
+646: Added Tic Tac Total Annihilation to the recycle bin in Chapter 1.
+666: Improved the offensiveness of Meme City and Chapter 7.
+757: Added Jihadist to Chapter 9.
+777: Added Hallucinagenic Water to Chapter 3.
+600: Added The Mark of the Beast Subplot to Chapter 2.
+60: Added Talking Heads to Chapter 10.
+6: Completed Chapter 10.
+7: Added Alex Botten to Chapter 3
+99: Added President Trump to Chapter 9
+587676: Added Enforcer Zero Episode 4 to Chapter 9
+642: Added Chapter 11.
+7: Added Curling minigame to Chapter 2.
+797: Minor bug fixes to curling game, Added Art Gallery to Chapter 8
+798: Added Trump Minigame to Chapter 2.
+799: Improved Art Gallery.
+800: Added Infinity Zero to Chapter 2, bottom left TV.
+666: Added Little Red Hood to Chapter 1, bottom right TV.
+667: Added Little Red Hood 2 to Chapter 8, bottom left TV.
+668: Added the Ending to Little Red Hood 2, for good or ill.
+669: I have slain the Multiple Weapon Bug, and improved the
+functionality of weapon switching. The game no longer has
+any game breaking bugs.
+700: Added the First Room of Alpha Resurrection to CH 3 TV,
+top left corner. I have fully integrated Fungus into Kingdom of Lies.
+May as well just throw out my old system for cutscenes, but I'm
+not 100% sure yet.
+701: Built the first major branch in Alpha Resurrection,
+added a save system, save system created an annoying little
+save icon that persists across scenes. I only need it in one
+scene, and I certainly don't need it in my main game.
+702: Added the America room and the start of the Yuzu Path
+to Alpha Resurrection.
+703: Filled in the start of the evil path, including the entire
+Earth Room Branch.
+704: Finished Porting over Alpha Resurrection.
+666: ADDED CONTROLLER SUPPORT!!! THE GAME CAN NOW
+USE A GAMEPAD, OR A GAMEPAD AND MOUSE, OR A MOUSE AND KEYBOARD,
+IT DOES ALL OF THIS WITHOUT ANY SETTINGS, MERELY DETECTING
+IT'S USE.
+999: ADDED THE BOOK TO ALL LEVELS OF THE GAME
+
+=============================================================
+-------------------------BUGS/ERRORS-------------------------
+=============================================================
+
+Very few noticeable bugs, it appears to run quite well.
+
+1: Sometimes when mouse and keyboard is being used,
+the player will jut off to one side as the gamepad is being
+used, even when it is not. It is still very playable, but this
+can be an annoyance.
+
+MOUSE AND GAMEPAD: Unaffected and Perfect
+GAMEPAD: Unaffected and Perfect
+
+[Mouse and Keyboard functions perfectly when gamepad is not plugged in.]
+
+2: Sometimes when there's a lot of action the player's knife can
+become dislodged and he winds up swinging the knife behind his back.
+I have no idea why this happens or how to fix it, but it seems to happen
+very rarely, almost never for me.
+
+=============================================================
+---------------------------SOLVED----------------------------
+=============================================================
+The pathetic little whiner below is beneath me, and dead.
+This was a relatively easy problem to solve. The game
+no longer has any game breaking bugs.
+=============================================================
+2: If the player picks up more than one weapon, it spawns a second player
+which follows the first one around moving in a similar, but still different
+pattern, sometimes wandering off on his own. I tried to fix it and failed,
+but on further consideration I think this is hilarious and looks cool,
+so I will not be fixing this bug.
+
+(While hilarious, picking up too many weapons will result in exponential
+growth, this is a game breaking bug, especially if you pick up two weapons
+spawning two players, then they both pick up two weapons spawning 4 players,
+and then they all pick up the 4 dropped weapons, making 16 players, then they
+pick up the sixteen weapons you just dropped 16 times each, etc, etc, until
+even force quit doesn't work, it needs to be balanced. I want to keep the bug,
+but there has to be controls in place to prevent it from growing out of control.
+Maybe I'll just kill you if you do that, and leave a big fuckin splatter or something.)
+
+{Perhaps I have a pulsating machine, if there are more than one players on the screen
+at once, he kills them until there is only one.}
+==============================================================
+
+
+3: The doors move weirdly, they will turn around in circles when pushed
+and phase through the wall they are attached to. However, from a gameplay
+standpoint, they work perfectly, they open well, and provide excellent
+movable cover from the enemies. I see no reason to change them.
+
+[A feature not a bug, I have no intention of changing this.]
+
+4: You can melee enemies through doors, and if a gun enemy is too close
+to a door he can shoot through it. Both of these would break core gameplay
+elements if changed, and fixing them is not a priority. The effect is minimal.
+
+5: If there are too many objects spawned in Invasion of Stupid,
+the game may crash. I have implemented countermeasures but I am unsure
+if they were successful or not. Added a function that removes all the
+guns on the ground every five seconds.
+
+6: Null reference exceptions when running the life sim, I don't know
+why it's happening, so I don't know how to fix it. Manifests as enemies
+standing around doing nothing, they can still be killed to finish the level.
+
+[There is apparently no limit on the amount of gibs I can create.]
+
+That is all.
+
+7: Save window persists even into my main game, retarded, what were you thinking?
+
+==============================================
+Make Leonard Nimoy an evil bastard...
+==============================================
+==============================================
+
+Project Light
+
+(9/11)
+Adolf Hitler {Hunter Thompson}
+Cthulhu {Bin Laden}
+Donald Trump/Kek
+Hikari/Leonard Nimoy (Charlie Hebdo)
+
+The Second Coming
+
+Infinity (The Bataclan)
+...Hillary Clinton
+...
+...
+Tenma/Metatron (The White House)
+
+(Infinity)
+=======================
+11->15
+=======================
+1: 9/11
+2: Anthrax {18/9/01}, Beltway Sniper{Oct/02}, Madrid Train Bombing {11/3/04} {Hunter Thompson Dies} Bush ReElected
+3: London Bombings {7/7/5}, Fort Hood Shooting {5/11/9} {Bin Laden Dies}
+4: Anders Behring Breivik {22/7/11}, Boston Marathon {15/4/13}
+5: 2015 - Charlie Hebdo {7/1/15} {Leonard Nimoy Dies}
+=======================
+Attacks US:
+=======================
+9/11 9/11/01 (2977 killed)
+Anthrax 18/9/01 (5 killed)
+Beltway Sniper October 2002 (10 killed)
+Ford Hood Shooting 5/11/09 (13 killed)
+Boston Marathon 15/4/13 (5 killed)
+San Bernardino 2/12/15 (14 killed)
+Orlando Nightclub 12/6/16 (49 killed)
+Las Vegas 1/10/17 (58+ killed)
+New York Truck of Peace 31/10/17 (8 killed)
+
+=======================
+Attacks Europe:
+=======================
+Spain - Madrid Train Bombings - 11/3/04 (191 killed)
+London - London Bombings - 7/7/05 (56 killed)
+Norway - Anders Behring Breivik - 22/7/11 (77 killed)
+France - Charlie Hebdo - 7/1/15 (20 killed)
+France - The Bataclan (Chapter 16) - 13/11/15 (137 killed)
+Germany - Cologne New Years Eve Rape Attacks - 31/12/15 to 1/1/16 (509 sex attacks, 22 rapes)
+Begium - Brussels Airport Suicide Bombings - 22/3/16 (35 killed)
+France - Nice Truck Attack - 14/1/16 (87 killed)
+Germany - Berlin Christmas Market Attack - 19/12/16 (12 killed)
+Britain - Truck Attack - 22/3/17 (5 killed)
+Britain - Ariana Grande Bombing - 22/5/17 (20+ killed)
+Spain - Truck of Peace Strikes Again - 17/8/17 (13 killed 100+ injured)
+
+==============================================

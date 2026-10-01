@@ -1,0 +1,1515 @@
+/* global monogatari */
+
+// ============================================================
+// ALPHA RESURRECTION 2 - ∞'s REVENGE
+// VERSION 1
+// ============================================================
+
+
+// ------------------------------------------------------------
+// Messages
+// ------------------------------------------------------------
+
+monogatari.action('message').messages({});
+
+
+// ------------------------------------------------------------
+// Notifications
+// ------------------------------------------------------------
+
+monogatari.action('notification').notifications({});
+
+
+// ------------------------------------------------------------
+// Particles / Canvas
+// ------------------------------------------------------------
+
+monogatari.action('particles').particles({});
+monogatari.action('canvas').objects({});
+
+
+// ------------------------------------------------------------
+// Credits
+// ------------------------------------------------------------
+
+monogatari.configuration('credits', {});
+
+
+// ------------------------------------------------------------
+// Assets
+// ------------------------------------------------------------
+
+monogatari.assets('gallery', {});
+monogatari.assets('music', {});
+monogatari.assets('voices', {});
+
+
+// ============================================================
+// R2 STREAMING MUSIC
+// ============================================================
+
+const GodsDebrisMusic = new Audio(
+	'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/LOKI%27S%20GANG/4%20-%20GOD%27S%20DEBRIS%20(fire).mp3'
+);
+
+
+// ============================================================
+// SCENE 1 RANDOM MUSIC POOL
+// ============================================================
+
+const Scene1MusicFiles = [
+	'1 - CONCERN.wav',
+	'2 - ROT (male).wav',
+	'3 - DON\'T DIE ON ME SALLY (CINDY).mp3',
+	'4 - GOD\'S DEBRIS (fire).mp3',
+	'5 - SKYSCRAPER (17).mp3',
+	'6 - THE BRAND NEW CONDO BOARD (Black Widow).mp3',
+	'7 - DON\'T DIE ON ME SALLY (SALLY).mp3',
+	'8 - LIGHT IS ALL YOU CAN SEE (female).mp3',
+	'9 - THE YOKE.mp3',
+	'10 - ROT (female).wav',
+	'11 - RED APPLE.mp3',
+	'12 - SKYSCRAPER.mp3',
+	'13 - Three Blind Mice.mp3',
+	'14 - THE BRAND NEW CONDO BOARD.mp3',
+	'15 - LORD TAKE MY WRECKAGE - AND MAKE ME FUCKING CLEAN.mp3',
+	'16 - DON\'T DIE ON ME SALLY (BITE).mp3',
+	'17 - RED APPLE (eve).mp3',
+	'18 - SHE\'S HIDDEN IN MY CHEST (chloe).mp3',
+	'19 - THE YOKE (siren).mp3',
+	'20 - THE BRAND NEW CONDO BOARD (wild).mp3',
+	'21 - LIGHT IS ALL YOU CAN SEE (male).mp3',
+	'22 - CONCERN.wav',
+	'23 - RED APPLE (lilith).mp3'
+];
+
+const Scene1MusicBase =
+	'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/LOKI%27S%20GANG/';
+
+let Scene1Music = null;
+let lastScene1MusicIndex = -1;
+
+
+const TheBeginningMusic = new Audio(
+	'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/THE%20YOKED%20WROTH%20DRAGGED%20TO%20HELL%20AND%20STAINED%20WITH%20CASH%20AND%20BLOOD/THE%20YOKED%20WROTH%20DRAGGED%20TO%20HELL%20AND%20STAI%20(11).mp3'
+);
+
+
+const BrandonMusic = new Audio(
+	'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/FOOLISH%20GIRL%20-%20SHE%20VOMITED%20ON%20COMMAND/FOOLISH%20GIRL%20-%20SHE%20VOMITED%20ON%20COMMAND%20(6).mp3'
+);
+
+
+const Scene3Music = new Audio(
+	'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/LUCIFER%20MEDIA%20CORPORATION/LUCIFER%20MEDIA%20CORPORATION.mp3'
+);
+
+
+// ------------------------------------------------------------
+// Music Configuration
+// ------------------------------------------------------------
+
+GodsDebrisMusic.loop = true;
+TheBeginningMusic.loop = true;
+BrandonMusic.loop = true;
+Scene3Music.loop = true;
+
+GodsDebrisMusic.preload = 'auto';
+TheBeginningMusic.preload = 'auto';
+BrandonMusic.preload = 'auto';
+Scene3Music.preload = 'auto';
+
+GodsDebrisMusic.volume = 0.45;
+TheBeginningMusic.volume = 0.45;
+BrandonMusic.volume = 0.45;
+Scene3Music.volume = 0.45;
+
+
+// ------------------------------------------------------------
+// Music State
+// ------------------------------------------------------------
+
+let gameStarted = false;
+let titleMusicStarted = false;
+
+
+// ------------------------------------------------------------
+// TITLE MUSIC
+// ------------------------------------------------------------
+
+function playGodsDebris () {
+
+	if (gameStarted) {
+		return;
+	}
+
+	if (Scene1Music) {
+
+		Scene1Music.pause();
+
+		try {
+			Scene1Music.currentTime = 0;
+		} catch (error) {}
+
+		Scene1Music = null;
+	}
+
+	TheBeginningMusic.pause();
+	BrandonMusic.pause();
+	Scene3Music.pause();
+
+	if (GodsDebrisMusic.paused) {
+
+		GodsDebrisMusic.play()
+			.then(() => {
+				titleMusicStarted = true;
+				console.log('GODS DEBRIS playing from R2.');
+			})
+			.catch((error) => {
+				console.error(
+					'GODS DEBRIS playback failed:',
+					error
+				);
+			});
+	}
+}
+
+
+// ------------------------------------------------------------
+// SCENE 1 MUSIC
+// ------------------------------------------------------------
+
+function playScene1Music () {
+
+	gameStarted = true;
+
+	GodsDebrisMusic.pause();
+	TheBeginningMusic.pause();
+	BrandonMusic.pause();
+	Scene3Music.pause();
+
+	try {
+		GodsDebrisMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		TheBeginningMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		BrandonMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		Scene3Music.currentTime = 0;
+	} catch (error) {}
+
+	if (Scene1Music) {
+
+		Scene1Music.pause();
+
+		try {
+			Scene1Music.currentTime = 0;
+		} catch (error) {}
+
+		Scene1Music = null;
+	}
+
+	let selectedIndex;
+
+	do {
+		selectedIndex =
+			Math.floor(
+				Math.random() * Scene1MusicFiles.length
+			);
+	} while (
+		Scene1MusicFiles.length > 1 &&
+		selectedIndex === lastScene1MusicIndex
+	);
+
+	lastScene1MusicIndex = selectedIndex;
+
+	const selectedFile =
+		Scene1MusicFiles[selectedIndex];
+
+	const musicUrl =
+		Scene1MusicBase +
+		selectedFile
+			.split('/')
+			.map(part => encodeURIComponent(part))
+			.join('/');
+
+	Scene1Music = new Audio(musicUrl);
+
+	Scene1Music.loop = true;
+	Scene1Music.preload = 'auto';
+	Scene1Music.volume = 0.35;
+
+	Scene1Music.play()
+		.then(() => {
+			console.log(
+				'SCENE 1 MUSIC:',
+				selectedFile
+			);
+		})
+		.catch((error) => {
+			console.error(
+				'Scene 1 music playback failed:',
+				selectedFile,
+				error
+			);
+		});
+}
+
+
+// ------------------------------------------------------------
+// THE BEGINNING MUSIC
+// ------------------------------------------------------------
+
+function playTheBeginningMusic () {
+
+	GodsDebrisMusic.pause();
+	BrandonMusic.pause();
+	Scene3Music.pause();
+
+	try {
+		GodsDebrisMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		BrandonMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		Scene3Music.currentTime = 0;
+	} catch (error) {}
+
+	if (Scene1Music) {
+
+		Scene1Music.pause();
+
+		try {
+			Scene1Music.currentTime = 0;
+		} catch (error) {}
+
+		Scene1Music = null;
+	}
+
+	if (!TheBeginningMusic.paused) {
+		return;
+	}
+
+	TheBeginningMusic.play()
+		.catch((error) => {
+			console.error(
+				'THE BEGINNING music playback failed:',
+				error
+			);
+		});
+}
+
+
+// ------------------------------------------------------------
+// BRANDON MUSIC
+// ------------------------------------------------------------
+
+function playBrandonMusic () {
+
+	GodsDebrisMusic.pause();
+	TheBeginningMusic.pause();
+	Scene3Music.pause();
+
+	try {
+		GodsDebrisMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		TheBeginningMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		Scene3Music.currentTime = 0;
+	} catch (error) {}
+
+	if (Scene1Music) {
+
+		Scene1Music.pause();
+
+		try {
+			Scene1Music.currentTime = 0;
+		} catch (error) {}
+
+		Scene1Music = null;
+	}
+
+	try {
+		BrandonMusic.currentTime = 0;
+	} catch (error) {}
+
+	BrandonMusic.play()
+		.catch((error) => {
+			console.error(
+				'BRANDON music playback failed:',
+				error
+			);
+		});
+}
+
+
+// ------------------------------------------------------------
+// SCENE 3 - SOUND AND FURY MUSIC
+// ------------------------------------------------------------
+
+function playScene3Music () {
+
+	gameStarted = true;
+
+	GodsDebrisMusic.pause();
+	TheBeginningMusic.pause();
+	BrandonMusic.pause();
+
+	try {
+		GodsDebrisMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		TheBeginningMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		BrandonMusic.currentTime = 0;
+	} catch (error) {}
+
+	if (Scene1Music) {
+
+		Scene1Music.pause();
+
+		try {
+			Scene1Music.currentTime = 0;
+		} catch (error) {}
+
+		Scene1Music = null;
+	}
+
+	try {
+		Scene3Music.currentTime = 0;
+	} catch (error) {}
+
+	Scene3Music.play()
+		.catch((error) => {
+			console.error(
+				'SCENE 3 music playback failed:',
+				error
+			);
+		});
+}
+
+
+// ------------------------------------------------------------
+// STOP ALL GAME MUSIC
+// ------------------------------------------------------------
+
+function stopGameMusic () {
+
+	GodsDebrisMusic.pause();
+	TheBeginningMusic.pause();
+	BrandonMusic.pause();
+	Scene3Music.pause();
+
+	try {
+		GodsDebrisMusic.currentTime = 0;
+	} catch (error) {}
+
+	if (Scene1Music) {
+
+		Scene1Music.pause();
+
+		try {
+			Scene1Music.currentTime = 0;
+		} catch (error) {}
+
+		Scene1Music = null;
+	}
+
+	try {
+		TheBeginningMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		BrandonMusic.currentTime = 0;
+	} catch (error) {}
+
+	try {
+		Scene3Music.currentTime = 0;
+	} catch (error) {}
+}
+
+
+// ------------------------------------------------------------
+// Make Music Controls Globally Available
+// ------------------------------------------------------------
+
+window.playGodsDebris = playGodsDebris;
+window.playScene1Music = playScene1Music;
+window.playTheBeginningMusic = playTheBeginningMusic;
+window.playBrandonMusic = playBrandonMusic;
+window.playScene3Music = playScene3Music;
+window.stopGameMusic = stopGameMusic;
+
+
+// ============================================================
+// R2 SCENE 1 VOICE / SOUND SYSTEM
+// ============================================================
+
+const R2Scene1Base =
+	'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/ALPHA%20RESURRECTION%202/';
+
+const R2Scene1Sounds = {
+
+	DearRegistrar:
+		'DEAR REGISTRAR I\'M GLAD THAT YOU\'VE FINALLY WOKEN UP.mp3',
+
+	TribunalGame:
+		'WHAT\'S GOING ON IS THE TRIBUNAL GAME.mp3',
+
+	AdjudicatorBomb:
+		'THE ADJUDICATOR HAS A BOMB IN HIS HEAD.mp3',
+
+	FindAdjudicator:
+		'YOU MUST FIND THE ADJUDICATOR WITHIN 30 MINUTES AND DEACTIVATE THE BOMB IN HIS HEAD.mp3',
+
+	SaveHands:
+		'THEN TO SAVE THE HANDS - WITHIN SIX HOURS.mp3',
+
+	ThenAgain:
+		'THEN AGAIN FOR THE OTHER.mp3',
+
+	Armed:
+		'ARMED WITH TWO HANDS AND A HEAD.mp3',
+
+	Apple:
+		'THEN YOU\'LL BE GIVEN THE RIGHT TO CHOOSE - an apple.mp3',
+
+	SaveAdjudicator:
+		'FOR NOW FIND THE ADJUDICATOR - AND SAVE HIM.mp3',
+
+	EatTheDead:
+		'BRENDAN_S_ROSE_-_TO001E_ACCOMMODATIONS_-_BINARY_RELIGIOUS_ACCOMMODATIONS_-_REITERATED_-_2026-69006-I.mp3',
+
+	BeginningMadeIt:
+		'i am infinity - LOOKS LIKE YOU\'VE MADE IT TO THE END.mp3',
+
+	BeginningVerdict:
+		'SO TELL ME - WHAT VERDICT DID THE TRIBUNAL HOLD.mp3',
+
+	BeginningCheated:
+		'OH I SEE YOU CHEATED WELL I\'M GONNA GIVE YOU THE WIN ANYWAY.mp3',
+
+	BeginningFriends:
+		'YOUR NEW FRIENDS ARE WAITING FOR YOU DONT GET THEM EXCITED.mp3'
+};
+
+
+let currentR2Voice = null;
+
+
+function playR2Voice (soundName) {
+
+	const file = R2Scene1Sounds[soundName];
+
+	if (!file) {
+		console.error(
+			'Unknown R2 Scene 1 sound:',
+			soundName
+		);
+		return;
+	}
+
+	if (currentR2Voice) {
+		currentR2Voice.pause();
+		currentR2Voice = null;
+	}
+
+	const voiceUrl =
+		R2Scene1Base +
+		file
+			.split('/')
+			.map(part => encodeURIComponent(part))
+			.join('/');
+
+	console.log(
+		'Playing R2 voice:',
+		voiceUrl
+	);
+
+	currentR2Voice =
+		new Audio(voiceUrl);
+
+	currentR2Voice.preload = 'auto';
+	currentR2Voice.volume = 1;
+
+	currentR2Voice.play()
+		.catch((error) => {
+			console.error(
+				'R2 Scene 1 sound playback failed:',
+				soundName,
+				voiceUrl,
+				error
+			);
+		});
+}
+
+
+function stopR2Voice () {
+
+	if (!currentR2Voice) {
+		return;
+	}
+
+	currentR2Voice.pause();
+
+	try {
+		currentR2Voice.currentTime = 0;
+	} catch (error) {}
+
+	currentR2Voice = null;
+}
+
+
+window.playR2Voice = playR2Voice;
+window.stopR2Voice = stopR2Voice;
+
+
+// ============================================================
+// TITLE SCREEN MUSIC HOOK
+// ============================================================
+
+function startTitleMusicFromInteraction () {
+
+	if (gameStarted || titleMusicStarted) {
+		return;
+	}
+
+	playGodsDebris();
+}
+
+
+document.addEventListener(
+	'pointerdown',
+	startTitleMusicFromInteraction
+);
+
+
+document.addEventListener(
+	'keydown',
+	startTitleMusicFromInteraction
+);
+
+
+// ============================================================
+// Sounds / ∞ Voice Dialogue - INTRO
+// ============================================================
+
+monogatari.assets('sounds', {
+
+	'InfinityGame':
+		'you\'re going to play a game.mp3',
+
+	'InfinityTribunal':
+		'you\'re going to play the tribunal game.mp3',
+
+	'InfinityIdentity':
+		'I am infinity - the Trickster.mp3',
+
+	'InfinityYouToo':
+		'But I suppose you thought that YOU were infinity too.mp3',
+
+	'InfinitySelected':
+		'that\'s why i\'ve selected you.mp3',
+
+	'InfinityGods':
+		'you\'ll have to make peace with your Gods.mp3',
+
+	'InfinityNoSurvival':
+		'there is no chance to survive.mp3',
+
+	'InfinityEnjoy':
+		'enjoy the time you have left.mp3',
+
+	'InfinityFullest':
+		'live it to the fullest.mp3'
+
+});
+
+
+monogatari.assets('videos', {});
+
+
+// ============================================================
+// Images
+// ============================================================
+
+monogatari.assets('images', {
+
+	'AlphaTitle':
+		'ALPHA RESSURRECTION-TITLE IMAGE.png',
+
+	'GasGrenade':
+		'GAS GRENADE.png',
+
+	'PerfectEyes':
+		'perfect-eyes.png',
+
+	'Number9Door':
+		'YOUR ONLY HOPE IS TO FIND THE EXIT - AND EXIT THERE.jpg',
+
+	'HorrorShow':
+		'THANK YOU YOU FINALLY CAUGHT ON THIS IS HORRORSHOW.png',
+
+	'Satan':
+		'SATAN.jpg',
+
+	'WhatsMyName':
+		'WHAT\'S MY NAME.png',
+
+	'AbandonAllHope1':
+		'ABANDON ALL HOPE 1.png',
+
+	'AbandonAllHope2':
+		'ABANDON ALL HOPE 2.png',
+
+	'HappyBirthday':
+		'HAPPY BIRTHDAY.png',
+
+	'Escape':
+		'ESCAPE.png',
+
+	'TheExit':
+		'THE EXIT.png',
+
+	'Brandon':
+		'BRANDON.png',
+
+	'covered':
+		'covered.png',
+
+	'Scene3A':
+		'scene 3 A.png',
+
+	'Scene3B':
+		'scene 3 b.png',
+
+	'Scene3C':
+		'scene 3 c.png',
+
+	'Scene3D':
+		'scene 3 d.png',
+
+	'Scene3F':
+		'scene 3 f.png',
+
+	'Scene3G':
+		'scene 3 g.png',
+
+	'Scene3H':
+		'scene 3 h.png',
+
+	'Scene3I':
+		'scene 3 i.png',
+
+	'Scene3J':
+		'scene 3 j.png',
+
+	'Scene3K':
+		'scene 3 k.png',
+
+	'Scene3Grotesque':
+		'Grotesque Manga Figures in an Industrial Chamber.png',
+
+	'Scene3Twine':
+		'Nightmare Arena Beneath the Concern Screen.png',
+
+	'BadEnd1':
+		'bad end 1.jpg'
+
+});
+
+
+// ============================================================
+// Background Scenes
+// ============================================================
+
+monogatari.assets('scenes', {});
+
+
+// ============================================================
+// Characters
+// ============================================================
+
+monogatari.characters({
+
+	'i': {
+		name: '∞',
+		color: '#b00000'
+	},
+
+	'me': {
+		name: 'Me',
+		color: '#ffffff'
+	},
+
+	'n': {
+		name: '',
+		color: '#bbbbbb'
+	}
+
+});
+
+
+// ============================================================
+// SCRIPT
+// ============================================================
+
+monogatari.script({
+
+	// ========================================================
+	// INTRO
+	// ========================================================
+
+	'Intro': [
+
+		'show scene #000000 with fadeIn',
+
+		'show image AlphaTitle with fadeIn',
+
+		'play sound InfinityGame',
+
+		'i You\'re going to play a game.',
+
+		'me Who are you?-- What??',
+
+		'n I still remember living my life, it was just a normal day.',
+
+		'n I had just got home from my injection, 400 mg abilify to take the edge off, what a failed life.',
+
+		'n I had been playing my music in the streets, that day they weren\'t very receptive.',
+
+		'n I was making an ass of myself. But the walk is very long, and it pleases me to bother them, when I arrived home I realized I wasn\'t alone in my room.',
+
+		'show image GasGrenade with fadeIn',
+
+		'n A gas grenade fell on the floor.',
+
+		'n gas grenade on a wooden floor, with lines going through it, the wood is made of planks joined together, rather than a flat wood surface. You can see the corner of a bed, with a wood leg, and blankets draping down over the side, on the floor is a magazine, the girls of Vermont, discarded face down under the bed somewhat, there are clothes and other items strewn around, as well as garbage from some discarded food packages, the gas is spilling out into the room, not filling the room yet, spilling out, barfing into a gulf plumes of gas rolling out of it, in a line moving upward from the nossle.',
+
+		'play sound InfinityTribunal',
+
+		'i You\'re going to play the Tribunal Game.',
+
+		'me Who are you????',
+
+		'play sound InfinityIdentity',
+
+		'i I am ∞, the trickster.',
+
+		'play sound InfinityYouToo',
+
+		'i But I suppose you thought that YOU were ∞, too.',
+
+		'play sound InfinitySelected',
+
+		'i That\'s why I\'ve selected you.',
+
+		'n The gas filled my lungs and I began to pass out.',
+
+		'n Before I did he said one more thing, through a voice changer.',
+
+		'n As I was passing out, he leaned forward and looked down upon me. He had the build of a man, but it was hard to tell. It had that cartoon voice, and it sounded mocking, like its eyes were laughing at me through those googles, but the face was just stern cold gasmask, like something purchased in a war.',
+
+		'show image AlphaTitle with fadeIn',
+
+		'play sound InfinityGods',
+
+		'i You\'ll have to make peace with your Gods.',
+
+		'play sound InfinityNoSurvival',
+
+		'i There is no chance to survive.',
+
+		'play sound InfinityEnjoy',
+
+		'i Enjoy the time you have left.',
+
+		'show image PerfectEyes with fadeIn',
+
+		'play sound InfinityFullest',
+
+		'i Live it to the fullest---',
+
+		'n I passed out.',
+
+		'hide image PerfectEyes with fadeOut',
+
+		'hide image GasGrenade',
+
+		'hide image AlphaTitle',
+
+		'show scene #000000 with fadeIn',
+
+		'end'
+	],
+
+
+	// ========================================================
+	// ACT 1 SCENE 1
+	// ========================================================
+
+	'Start': [
+
+		'show scene #000000 with fadeIn',
+
+		'n ACT 1 SCENE 1',
+
+		() => {
+			playScene1Music();
+		},
+
+		'show image Number9Door with fadeIn',
+
+		'n THIS IS THE NUMBER 9 DOOR, WHERE WE START THE GAME. A LONG TIME AGO, THESE PEOPLE DIED IN HERE, NOW THEY\'RE LONG DEAD, THEY\'RE CORPSES,AN IMAGE OF THESE TWO PEOPLE, LONG DEAD, ROTTED DOWN TO MUMMIES, I AM IN THIS ROOM.WHY AM i HERE? WHAT "brought!!!" ME HERE!?!!?!?!??! DOWN INTO THIS DUNGEON??????ON ONE THE DOORS IN RED PAINT IS THE NUMBER 9, AS IF IT WAS PAINTED IN BLOOD.IN RED LETTERS IT SAYS "YOUR ONLY HOPE, IS TO FIND THE EXIT, AND EXIT THERE."SOMEONE HAS SCRAWLED ON THE WALL IN BLACK MARKER "THE BEGINNING......"',
+
+		'show image HorrorShow with fadeIn',
+
+		() => {
+			playR2Voice('DearRegistrar');
+		},
+
+		'n "DEAR REGISTRAR" A VOICE SAID "I\'M GLAD THAT YOU\'VE FINALLY WOKEN UP!!!"',
+
+		'me "What?!" I say "How did you know I was --- What\'S GOING ON HERE?!!??"',
+
+		() => {
+			playR2Voice('TribunalGame');
+		},
+
+		'i "WHAT\'S GOING ON IS THE TRIBUNAL GAME, REMEMBER I TOLD YOU ABOUT IT, WHEN I CAPTURED YOU, NOW I\'LL EXPLAIN THE RULES."',
+
+		() => {
+			playR2Voice('AdjudicatorBomb');
+		},
+
+		'i "THE ADJUDICATOR HAS A BOMB IN HIS HEAD, A KEY IN HIS SKULL, AND ONE MORE BOMB IN EACH HAND."',
+
+		() => {
+			playR2Voice('FindAdjudicator');
+		},
+
+		'i "YOU MUST FIND THE ADJUDICATOR WITHIN 30 MINUTES, AND DEACTIVATE THE BOMB IN HIS HEAD."',
+
+		() => {
+			playR2Voice('SaveHands');
+		},
+
+		'i "THEN TO SAVE THE HANDS, WITHIN 6 HOURS, YOU MUST SOLVE ONE OF THE GREATER PUZZLES IN THESE ROOMS."',
+
+		() => {
+			playR2Voice('ThenAgain');
+		},
+
+		'i "THEN AGAIN FOR THE OTHER. OR IF YOU WANT, UNLOCK THE GATE. THAT WILL TAKE YOU SOMEWHERE."',
+
+		() => {
+			playR2Voice('Armed');
+		},
+
+		'i "ARMED WITH TWO HANDS AND A HEAD, YOU\'LL NEED EYES THEN. AQUIRE A SET OF EYES, AND ARM YOURSELF WITH KNOWLEDGE, IF YOU PASS THE CORRECT FILES TO THE ADJUDICATOR THEN, HE WILL CARRY THEM THROUGH THE ENTRYWAY, AND YOU\'LL BE GRANTED EXIT FROM THE FACILITY, AND ENTRY INTO THE FESTIVAL, WHERE DEATH AND PAIN RETCH JOY IN TWINE, THE DEATH OF BACKWARDS PEOPLE, A HEAVEN FOR SOME."',
+
+		() => {
+			playR2Voice('Apple');
+		},
+
+		'show image Number9Door with fadeIn',
+
+		'i "THEN YOU\'LL BE GIVEN THE RIGHT TO CHOOSE... an apple."',
+
+		() => {
+			playR2Voice('SaveAdjudicator');
+		},
+
+		'i "FOR NOW, FIND THE ADJUDICATOR, AND SAVE HIM."',
+
+		'n PANICKED, YOU LOOK AROUND THE ROOM.',
+
+		'n YOU DON\'T SEE MANY OPTIONS.',
+
+		'n YOU\'RE VERY HUNGRY.',
+
+		'jump Scene1HungerChoice'
+	],
+
+
+	// ========================================================
+	// SCENE 1 - HUNGER CHOICE
+	// ========================================================
+
+	'Scene1HungerChoice': [
+
+		{
+			'Choice': {
+
+				'EatDead': {
+					'Text': '[EAT THE DEAD]',
+					'Do': 'jump Scene1EatDead'
+				},
+
+				'DoNothing': {
+					'Text': '[DO NOTHING]',
+					'Do': 'jump Scene1DoNothing'
+				},
+
+				'TalkScreen': {
+					'Text': '[TALK TO THE SCREEN]',
+					'Do': 'jump Scene1TalkToScreen'
+				}
+			}
+		}
+	],
+
+
+	// ========================================================
+	// SCENE 1 - EAT THE DEAD
+	// ========================================================
+
+	'Scene1EatDead': [
+
+		'hide image HorrorShow',
+
+		'hide image Number9Door',
+
+		'show image Satan with fadeIn',
+
+		() => {
+			playR2Voice('EatTheDead');
+		},
+
+		{
+			'Choice': {
+				'Dialog': '',
+
+				'Return': {
+					'Text': '[GO BACK]',
+					'Do': 'jump Scene1ReturnFromSatan'
+				}
+			}
+		}
+	],
+
+
+	// ========================================================
+	// RETURN FROM SATAN IMAGE TO HUNGER CHOICE
+	// ========================================================
+
+	'Scene1ReturnFromSatan': [
+
+		() => {
+			stopR2Voice();
+		},
+
+		'hide image Satan with fadeOut',
+
+		'show image Number9Door with fadeIn',
+
+		'jump Scene1HungerChoice'
+	],
+
+
+	// ========================================================
+	// TALK TO THE SCREEN
+	// ========================================================
+
+	'Scene1TalkToScreen': [
+
+		'hide image Number9Door',
+
+		'show image WhatsMyName with fadeIn',
+
+		{
+			'Input': {
+				'Text': 'WHAT\'S MY NAME?',
+				'Type': 'text',
+				'actionString': 'Confirm',
+
+				'Save': function (input) {
+					window.alphaEnteredName =
+						String(input).trim().toUpperCase();
+				}
+			}
+		},
+
+		{
+			'Conditional': {
+
+				'Condition': function () {
+
+					const name =
+						window.alphaEnteredName || '';
+
+					if (name.startsWith('BRANDON')) {
+						return 'Brandon';
+					}
+
+					if (
+						name === 'BRENDAN S. ROSE' ||
+						name === 'BRENDAN S ROSE' ||
+						name === 'BRENDAN SAMUEL ROSE'
+					) {
+						return 'Scene2';
+					}
+
+					if (name === 'BRENDAN ROSE') {
+						return 'Scene3';
+					}
+
+					if (name === 'LOKI') {
+						return 'Scene4';
+					}
+
+					if (name === 'EFSMB') {
+						return 'Scene5';
+					}
+
+					if (
+						name === 'INFINITY' ||
+						name === '∞'
+					) {
+						return 'Scene6';
+					}
+
+					if (
+						name === 'SUTTER' ||
+						name === 'SUTTER KAIN' ||
+						name === 'SUTTER CAIN'
+					) {
+						return 'SceneX';
+					}
+
+					if (name === 'THE BEGINNING') {
+						return 'TheBeginning';
+					}
+
+					return 'WrongName';
+				},
+
+				'Brandon':
+					'jump Brandon',
+
+				'Scene2':
+					'jump Scene2',
+
+				'Scene3':
+					'jump Scene3',
+
+				'Scene4':
+					'jump Scene4',
+
+				'Scene5':
+					'jump Scene5',
+
+				'Scene6':
+					'jump Scene6',
+
+				'SceneX':
+					'jump SceneX',
+
+				'TheBeginning':
+					'jump TheBeginning',
+
+				'WrongName':
+					'jump Scene1WrongName'
+			}
+		}
+	],
+
+
+	// ========================================================
+	// WRONG NAME - LOOP BACK TO CHOICE ROOT
+	// ========================================================
+
+	'Scene1WrongName': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		'show image Number9Door with fadeIn',
+
+		'jump Scene1HungerChoice'
+	],
+
+
+	// ========================================================
+	// DO NOTHING
+	// ========================================================
+
+	'Scene1DoNothing': [
+
+		'end'
+	],
+
+
+	// ========================================================
+	// NAME ROUTE PLACEHOLDERS
+	// ========================================================
+
+	'Scene2': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		'n SCENE 2',
+
+		'end'
+	],
+
+
+	// ========================================================
+	// SCENE 3 - SOUND AND FURY
+	// ========================================================
+
+	'Scene3': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		() => {
+			stopR2Voice();
+			playScene3Music();
+		},
+
+		'n ACT 1 SCENE 3',
+
+		'n [UPON TYPING THE NAME THE DOOR OPENS.]',
+
+		'n [YOU HURRY THROUGH.]',
+
+		'n [THE DOOR SLAMS SHUT.]',
+
+		'show image Scene3A with fadeIn',
+
+		'n [YOU ARE IN A STRANGE ROOM, LIKE A BIG WAREHOUSE,\nIN THE CENTER ARE THESE BIG CUBES WITH DOORS IN THEM.]',
+
+		'show image Scene3B with fadeIn',
+
+		'n [SUDDENLY ONE OF THE DOORS OPENS UP.]',
+
+		'n [A MAN IN A BLACK SUIT WITH A RED TIE,\nWALKS OUT OF IT.]',
+
+		'show image Scene3C with fadeIn',
+
+		'n [THE OTHER DOORS ALL OPEN MOSTLY AT ONCE.]',
+
+		'show image Scene3D with fadeIn',
+
+		'n [7 PEOPLE WALK THROUGH THE DOORS.]',
+
+		'n [THE SCREEN TURNS ON.]',
+
+		'i WE\'LL NOW YOU\'RE COMING OUT,\nSO SOON YOU\'LL BE COMING IN.\nWHY BOTHER TO PARTY WHEN YOU\'RE\nIN LIFE THREATENING DANGER!!?!?!',
+
+		'me WHAT\'S GOING ON?! WHERE ARE WE?!',
+
+		// Alternate to the other new rabbit image.
+		'show image Scene3H with fadeIn',
+
+		'i YOU\'RE IN HELL FOOL, DIDN\'T YOU KNOW THAT?!?!\nTHAT\'S WHERE EVIL PEOPLE GO WHEN THEY DIE,\nYOU\'RE IN HELL, FOR YOUR SINS IN THE OTHER LIFE.',
+
+		'me I DON\'T..... REMEMBER ANY SINS.........',
+
+		// Occasionally use the established rabbit.
+		'show image HorrorShow with fadeIn',
+
+		'i NOW YOU\'RE LYING TO ME AS WELL,\nFOOL AS YOU ARE IN WANT,\nWANT WHAT YOU WANT FOOL,\nTIME TO CURSE THAT BLOOD\nRUSHING THROUGH YOUR VEINS,\nYOU WANNA SHARE SOME?!?!!?',
+
+		// New rabbit image prioritized.
+		'show image Scene3G with fadeIn',
+
+		'n [A TOY, A TEDDY BEAR WALKS UP TO YOU.]',
+
+		'n [IT GRABS ON YOUR SLEEVE AND PULLS DOWN.]',
+
+		'n LUCIFER:\nDON\'T LET THIS CLOWN GET YOU DOWN,\nYOU HAVEN\'T DONE ANYTHING WRONG,\nDEAR REGISTRAR.',
+
+		'i AND YOU\'RE WHAT IMPORTANCE IN MY REALM?\nYOU\'RE BOUND, YOU CAN\'T DO ANYTHING,\nYOU\'RE JUST A TOY IN MY REALM!!!!',
+
+		'show image Scene3H with fadeIn',
+
+		'i AND THE SAME GOES FOR YOU LUCIFER TEDDY!!!!',
+
+		'show image Scene3D with fadeIn',
+
+		'n [THERE ARE MORE PEOPLE HERE.]',
+
+		'show image Scene3I with fadeIn',
+
+		'n [THERE ARE TWO WOMEN.]',
+
+		'show image Scene3J with fadeIn',
+
+		'n [THERE\'S A MAN IN A WELL CUT SUIT.]',
+
+		'show image Scene3K with fadeIn',
+
+		'n [THERE\'S A MAN WHO LOOKS LIKE A MOBSTER, OR A GREASER.]',
+
+		'show image Scene3F with fadeIn',
+
+		'n [AND THERE\'S A BEAUTIFUL WOMAN, WHO SHOULD NOT BE SHAPED LIKE THAT,\nHER SKIN IS YELLOW, HER ARMS ARE LIKE, HORRIBLE TENTACLES\nOH GOD WHERE AM I?!]',
+
+		'show image Scene3H with fadeIn',
+
+		'i YOUR GOD DOESN\'T HEAR YOU HERE.\nBUT DON\'T WORRY, I CAN HEAR ALL YOUR PRAYERS.\nGO ON, PRAY, YOU\'LL SEE THAT I KNOW EVERYTHING.',
+
+		'me [instinctively my mind goes to my lost cat, given away, i never learned if she was safe or hurt]',
+
+		'i CERTAINLY YOU KNOW THE CAT IS DEAD, MET IT\'S FATE LONG AGO SHE DID,\nIF ONLY YOU HAD CARED FOR HER AS SHE DESERVED, TO BAD HER DAD,\nWAS THIS BASTARD!!!!!!',
+
+		'show image HorrorShow with fadeIn',
+
+		'i SHE SCREAMED FOR YOU..... DO YOU KNOW THAT????\nWHEN THEY PUT HER DOWN, FOR SCRATCHING,\nSHE SCREAMED FOR YOU IN HER LAST BREATH.',
+
+		'show image Scene3H with fadeIn',
+
+		'i I HAVE HER SOUL IN A BOTTLE HERE,\nIF YOU LOOK DEEP ENOUGH IN THIS PLACE YOU WILL FIND HER,\nSTILL PRESERVED, AT THE MOMENT BEFORE DEATH, FOREVER,\nSHE\'S STILL CONSCIOUS.',
+
+		'show image Scene3H with fadeIn',
+
+		'i EVERYTHING BAD CAN HAPPEN TO YOU HERE.\nDON\'T YOU GET IT? DEATH IS ASSURED!!!!',
+
+		'show image HorrorShow with fadeIn',
+
+		'i YOU SHOULD BE THINKING ABOUT SECURING LOVE\nWHETHER IT\'S WANTED, HOW TO ENJOY TAKING THINGS\nFROM PEOPLE, AND WHO TO KILL THOUGH YOU SHAN\'T SURVIVE.\nDON\'T TOIL WORRYING SURVIVAL, EVERY PATH IS DEATH!!!!',
+
+		'hide image HorrorShow with fadeOut',
+
+		'show scene #000000 with fadeIn',
+
+		'n [THE SCREEN GOES BLANK.]',
+
+		'me WHAAT??',
+
+		'me WHAAAAAAAAAAAAAATTT?!?!?!??!',
+
+		'me WHAAAAT DO YOU mean NEKO IS DEAAAD!!?>!?!?\nHOW COULD YOU KNOW THAT, WHAT BOTTLE?!?!?!??',
+
+		'n [YOU FALL TO YOUR KNEES.]',
+
+		'show image Scene3Grotesque with fadeIn',
+		
+		'n [THEN YOU REMEMBER, OH, I\'M A FLESH SPIRIT,\nI FORGOT.]',
+
+		'n [BUT INSTEAD OF THIS, THE SINGULARITY OF YOU\nPULLS ALL OF YOU INTO THE FLESHY MIDDLE.]',
+
+		'show image Scene3Twine with fadeIn',
+
+		'n [AND THE BONES ARE BENT NECKS SNAPPED\nBODIES MADE MUTUAL MUSH, YOU FIND YOURSELF\nIN ONE BALL OF TWINE FLESH]',
+
+		'n [AND AS YOU ARE TWINE FLESH, YOUR JOURNEY WAS OVER\'D.]',
+
+		'show image BadEnd1 with fadeIn',
+
+		'n [RETURN TO MAIN MENU.]',
+
+		'end'
+	],
+
+
+	'Scene4': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		'n SCENE 4',
+
+		'end'
+	],
+
+
+	'Scene5': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		'n SCENE 5',
+
+		'end'
+	],
+
+
+	'Scene6': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		'n SCENE 6',
+
+		'end'
+	],
+
+
+	// ========================================================
+	// THE BEGINNING
+	// ========================================================
+
+	'TheBeginning': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		() => {
+			stopR2Voice();
+			playTheBeginningMusic();
+		},
+
+		'n AFTER MUCH TOIL AND SUFFERING IN THE FACILITY,\nYOU FINALLY REACHED THE EXIT.',
+
+		'show image AbandonAllHope1 with fadeIn',
+
+		'n THERE WAS A WALL PAINTED IN BLOOD THAT SAID,\n"abandon all hope, ye who enter here"',
+
+		'n ON THE STEREO THE MUSIC WAS PLAYING.',
+
+		'n "*VOMITING INTO YOU YOU LUKEWARM FUCKING THING\nVOMITING MY WORKS IN THEE YE BROKEN POULTRY WING*"',
+
+		'show image HappyBirthday with fadeIn',
+
+		'n THE TELEVISION FLICKS ON:',
+
+		() => {
+			playR2Voice('BeginningMadeIt');
+		},
+
+		'i I AM INFINITY, SO, LOOKS LIKE YOU\'VE MADE IT TO THE END,\nHOW YOU SURVIVED ALL THAT, I WON\'T REMIND YOU!!!!',
+
+		() => {
+			playR2Voice('BeginningVerdict');
+		},
+
+		'i SO TELL ME, WHAT VERDICT DID THE TRIBUNAL HOLD,\nWERE YOUR AMMENDMENTS TAKEN?',
+
+		'show image AbandonAllHope1 with fadeIn',
+
+		'n "AND SINGING AS I WENT I CUT THEE OPEN LIKE A SWINE\nAND ALL THE THINGS YE THOUGHT WERE THINE WERE TAKEN ALL AS MINE"',
+
+		'n YOU SHRUG AND LOOK AT YOUR EMPTY POCKETS.',
+
+		'show image HappyBirthday with fadeIn',
+
+		() => {
+			playR2Voice('BeginningCheated');
+		},
+
+		'i OH I SEE..... YOU CHEATED......\nWEEEEEEEEEEEELL..... I\'M GONNA GIVE YOU THE WIN ANYWAY,\nYOUR PRIZE IS JUST THROUGH THAT DOOR, ESCAPE IS THROUGH TAHT DOOR',
+
+		'show image TheExit with fadeIn',
+
+		'n "SO DRAGGING THEE AROUND BY NECK\nLIKE YOKED CATTLE THAT YE WERE\nAND HOW ON FIRE WERE THY FRIENDS\nIN FIRE DID THEY BURN"',
+
+		'show image Escape with fadeIn',
+
+		() => {
+			playR2Voice('BeginningFriends');
+		},
+
+		'i YOUR NEW FRIENDS ARE WAITING FOR YOU,\nDON\'T GET THEM EXCITED.',
+
+		'n [GAME OVER]',
+
+		'end'
+	],
+
+
+	// ========================================================
+	// BRANDON
+	// ========================================================
+
+	'Brandon': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		() => {
+			stopR2Voice();
+			playBrandonMusic();
+		},
+
+		'show image Brandon with fadeIn',
+
+		'me What?',
+
+		'n [you are neck deep in waste]',
+
+		'me HELP!!!!',
+
+		'n [you struggle in the muck]',
+
+		'me HELP GET ME OUT OF HERE!!!!!!',
+
+		'me SOMEONE COME GET ME OUT OF HERE!!!!!!!!!',
+
+		'me SAVE ME!!!!!!!!!',
+
+		'me HELP SOMEONE!!! I\'M TRAPPED IN HERE!!!!',
+
+		'me OH GOD THE SMELL!!!!!!\nHELP!!!!!!!!',
+
+		'n [you move your arms and waist around]',
+
+		'n [the muck bubbles around you]',
+
+		'me OH GOD SAVE ME!!!\nIT\'S AWFUL!!!!!!!!\nGOOOOOOD!!! HEEEEEEEEEEEEEEEEEELP!!!!!!',
+
+		'n [your arms float at your side, while the muck itself seems to pull you down]',
+
+		'n [the smell is repellent]',
+
+		'me ANYONE!!!!!!!\nOH GODDDDD!!!!!!!\nOH GOOOOOODDDDDD!!!!!!!!\nDON\'T LET ME DIE DOWN HERE!!!!!!!!!',
+
+		'me ANYTHING BUT THIS!!!!!\nplease!!!!!!!',
+
+		'n [there is a light at the top]',
+
+		'n [you can see shapes moving around up there....]',
+
+		'me HELOOOO!!!!!!\nOH GOD HELP ME!!!!!!\nHEEEEEEEEEEEEELLLPPPPP!!!!!!!!!!',
+
+		'show image covered with fadeIn',
+
+		'n [the light goes out briefly]',
+
+		'n [for about 2 minutes]',
+
+		'show image Brandon with fadeIn',
+
+		'n [then the light opens up again]',
+
+		'n [you are covered in muck]',
+
+		'me SOMEONE SAVE ME!!!!!!!',
+
+		'me SAAAAVEEE MEEEEEEEEEE!!!!!!!!!!!!',
+
+		'me Please someone!!!!\nPLEASE SAVE ME!!!!!!!\nGOOOOOOOOOOOOOOOOOOOOODDDD!!!!!!!!!',
+
+		'n [it takes you 79 hours to die]',
+
+		'n [That\'S not how you spell it.]',
+
+		'end'
+	],
+
+
+	// ========================================================
+	// SUTTER ROUTE
+	// ========================================================
+
+	'SceneX': [
+
+		'hide image WhatsMyName with fadeOut',
+
+		'n SCENE X',
+
+		'end'
+	]
+
+});

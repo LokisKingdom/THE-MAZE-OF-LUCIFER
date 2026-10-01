@@ -1,0 +1,1472 @@
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+WRITTEN SUBMISSIONS OF THE APPLICANT
+CAMH / TORONTO POLICE SERVICE
+
+HRTO File No.:
+
+2026-67461-I
+
+Applicant:
+
+Brendan S. Rose
+
+Respondents:
+
+Toronto Police Services Hate Crimes Unit;
+Center for Addiction and Mental Health (CAMH)
+
+Filer:
+
+Brendan S. Rose
+
+Telephone:
+
+437-432-9165
+
+Email:
+
+thesulfurgod@protonmail.com
+
+Mailing address:
+
+11 Stanley Ave, Toronto, Ontario, Canada, M6J1A4
+
+Date:
+
+August 18, 2026
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+1. TABLE OF CONTENTS
+SECTION 1 - THE CASE AGAINST CAMH
+Historical and Systemic Context
+Facts of the Events - CAMH
+
+The Recruitment of Family, Historical TPS Intervention, and the Power of a Phonecall
+Legal Significance - CAMH
+Implications and Appropriate Structural Remedies - CAMH
+SECTION 2 - THE CASE AGAINST THE TORONTO POLICE SERVICE - HATE CRIMES UNIT
+Unequal Standing / Broader Context
+The Facts of the Matter - TPS
+Legal Significance - TPS
+Evidence That Should Resolve the Dispute
+LIST OF AUTHORITIES
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 2
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+INTRODUCTION
+SUPPLEMENTAL CONTEXT FOLLOWING THE TABLE OF CONTENTS
+A Quotation before beginning:
+"There's two coins fighting to survive
+one of them is rusted, the other clean"
+-Abe
+"Martin was forbidden from recording our meeting as he would not agree to provide me a transcript, and instead
+i've learned, when the contents of the transcript are misunderstood in writing by martin, sufficiently, the
+transcript, my words, are thrown out. categorically into the garbage.
+I confirmed he would try to get something worked out
+to get me my medicine delivery, perhaps he suggested, and i agreed,
+Patrick Newland could deliver the medicine.
+I confirmed he DOES listen to the songs.
+This was interesting information, and improved my opinion of him considerably.
+This is in sharp contradiction to what I was told by his superior, in our meeting,
+about 2 or 3 months ago. When she informed me that he was barred from reading my emails,
+listening to my songs, and the lie therefore (or misunderstanding) caused a lot of trouble,
+in the subsequent months, and as Martin does not respond to emails, there was no way to simmer
+down the problem. He informed me he read the email recently, and even heard the song,
+He proved genuine street cred by mentioning his favorite was GROK PUT HER IN A BIKINI.
+Which I found amusing.
+This does nothing to address the structural arguments I will raise in this document.
+The CAMH system is systemically abusive. Down to it's core.
+It is an abusive system from top to bottom. And it corrupts other institutions
+with it's influence, easily and often. It is an outgrowth of the pharmaceutical industry,
+which has a lot of money, more than most governments, perhaps ours too I haven't checked.
+This edifice manifests as large institutions like CAMH, found all over the world,
+instituting systems of abuse in the name of "concern" globally in every country
+in the world (Except Philippines, essentially). The victims of this institution,
+are typically impoverished into the utterly lowest levels of society,
+typically dwelling on the street (I have a rich family) eating from missions, etc,
+but if they are provided adequate housing and nutrition, potentially any of them
+could excel in the same way I have, if further barriers had been removed,
+I could have been anything, in public office likely, or perhaps the judiciary maybe,
+although the pay would be considerably less in a system that accommodates
+the actual needs of people on ODSP, instead of fake hypothetical needs,
+like, 500 dollars a month for shelter, which doesn't even buy a closet,
+and we're told it's because we get supportive housing for that price,
+which is a lie, i spent ten years on those waiting lists, they are fake.
+The dwindling supply is so nightmarishly small it beggars the weapon.
+But in any case, this and other issues were not addressed by Martin,
+nor can they be, as CAMH does not control ODSP, rather,
+it exists as a parasite over people in need,
+giving them the medication they need, but denying them their basic actual needs,
+to the point they whither and die on the street, as people walk over them.
+It is a provincial matter, the Government of Doug Ford is required to
+solve the problem, and has demonstrated hateful contempt for people on ODSP
+for as long as he's been in office, not by his words, counsel, but by
+his actions, depriving us of basic needs to the point of protracted death
+on the street. (unless you have a rich family, then they whittle away your family's
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 2A
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+money, houses get sold, people have to move, marriages fall apart, but some fates
+are certainly worse.)
+I do not like the homeless population, as they generally have hated me and mistreated me
+my whole life, but I do not wish them harm, rather I feel more should be done to help them,
+through twofold purposes, first by providing a social safety net capable of keeping
+everybody off the street, and in the case of ODSP, we should get what has been suggested
+many times to this government, $3000 dollars a month ODSP, enough for rent and food.
+Instead of neither one nor the other (fully), so that we can live rich and full meaningful lives,
+instead of this.
+Please review the other sections, taking special care to examine the section on
+the conditions in the CAMH Prison-like System, it is not a form of care,
+it is an abusive, discriminatory and backwards system that should actually
+be abolished in my opinion, but as all those questions are outside the scope
+of the HRTO to address the fix, I instead ask only that the limited examples provided
+be addressed to the extent the court is capable of providing.
+Thank You and Good Day,"
+-Brendan S. Rose
+[NOTE: This introduction therefore, the work therefore you are reading, may contain
+slightly outdated opinions and statements on the topics discussed in this introduction at times, the meeting with Martin opens
+up a world of questions, and please note, much of this has been created with the help of ChatGPT, understand that ChatGPT
+can make mistakes at times, and does not possess perfect information, it is possible that a few statements may have crept in
+here and there that were misstated or misunderstood by ChatGPT, However I take full responsibility for this document, with
+the stipulation that errors like this are likely not malicious, but rather an unfortunate reality of the technology, and some
+statements may require clarification.]
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 2B
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+2.
+
+1. SECTION 1: THE CASE AGAINST CAMH
+
+Historical and Systemic Context Poverty, Deprivation, Institutionalization and Psychiatric Stability
+1. Purpose and Scope of This Historical Section This section is provided primarily as historical and systemic context. It is not
+intended to transform every historical experience described below into a separate allegation requiring adjudication, nor is
+every criticism of Ontario's psychiatric system advanced as an independent claim for relief.
+The context is nevertheless material to the Tribunal's understanding of the events in issue.
+The events at issue did not arise in a vacuum. They occurred within a psychiatric system that possesses extraordinary power
+over persons diagnosed with serious mental illness: the power to assess them, characterize their behaviour, record
+conclusions about their mental state, substantially influence how police and other institutions respond to them, and, under
+circumstances prescribed by law, participate in processes resulting in involuntary confinement and treatment.
+My criticism of that system therefore forms part of the background necessary to understand my relationship with CAMH, my
+concern about the relationship between CAMH and the Toronto Police Service, and the significance I attach to apparently
+ordinary disputes about credibility, independence, work, behaviour and psychiatric stability.
+The objective is twofold, and the objectives are parallel rather than contradictory.
+I seek appropriate relief concerning the matters properly before the Tribunal.
+I also intend to describe, within the rules and proper scope of these proceedings, the institutional system in which those
+events occurred.
+The latter should not be discarded merely because some experiences that explain the system predate the period directly at
+issue. Historical evidence can remain important to understanding a contemporary institutional relationship without every
+historical event itself becoming a separate claim. Where a historical event materially explains my fear, credibility
+
+concerns, reaction to police or psychiatric intervention, or the consequences I say flowed from those
+institutions, I ask that it be retained as context even if it is not itself an independently adjudicable claim.
+2. The Cycle of Disability, Poverty and Psychiatric Crisis A central criticism concerns the relationship between disability
+income, poverty, food security, housing security and psychiatric stability.
+Ontario Disability Support Program recipients may already begin from a position of substantial vulnerability. A person who
+cannot reliably afford both adequate housing and adequate food is not merely experiencing an accounting problem. Those
+material conditions affect the circumstances under which that person is expected to remain psychiatrically stable.
+This criticism is directed expressly at the policy choices of Premier Doug Ford's Ontario government insofar as those choices
+determine or perpetuate inadequate disability assistance.
+The argument requires precise delineation.
+I am not arguing that starvation creates schizophrenia, schizoaffective disorder, or another underlying psychiatric disease.
+I have a diagnosed psychiatric illness. The argument here does not deny the existence of serious mental illness and does not
+propose hunger as its original cause.
+The proposition is narrower and more precise:
+Food is a prerequisite of human functioning. Deprive a human being of adequate food for sufficiently long and that human
+being will deteriorate.
+The precise breaking point varies from person to person. The underlying physiological principle does not.
+Hunger causes suffering. Prolonged and severe deprivation can produce weakness, irritability, desperation, impaired
+concentration, emotional dysregulation and increasingly abnormal behaviour. A human being possesses no infinite reserve
+against starvation.
+This principle applies to people with psychiatric illnesses and people without them.
+There is therefore no contradiction between saying that a person has an underlying psychiatric disorder and saying that
+hunger, homelessness, exhaustion, fear, isolation or other severe environmental stressors can worsen that person's
+condition. The original diagnosis and the subsequent deterioration are different questions.
+A person with serious mental illness who has been forcibly confined, then discharged does not cease being biologically
+human upon leaving the hospital. That person requires food, shelter, sleep, safety and the ordinary material foundations of
+life. If those foundations are removed, deterioration is not mysterious.
+It is a foreseeable consequence.
+3. Hunger, Suffering and the Human Breaking Point The point about food must not be misunderstood as a theory concerning
+the origin of psychiatric disease.
+Take psychiatric diagnosis out of the equation entirely.
+Take an otherwise psychologically healthy human being and subject that person to sufficiently severe and prolonged
+deprivation.
+Eventually the person suffers.
+Eventually the person reaches a breaking point.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 3
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+A starving person may cry.
+A suffering person may scream.
+A desperate person who repeatedly asks for food and receives none may begin shouting for somebody to respond.
+Someone who was calm at the beginning of the ordeal may no longer be calm after prolonged deprivation.
+The precise temporal threshold is not determinative. Different human beings have different physical reserves and different
+tolerances for suffering. What matters is the elementary proposition that human beings deteriorate when deprived of the
+necessities required to sustain them.
+That proposition becomes especially important when the resulting behaviour occurs inside a psychiatric institution.
+4. When Ordinary Human Distress Becomes Psychiatric Evidence A psychiatric environment creates an unusual interpretive
+problem.
+Behaviour occurring inside such an institution is observed through a psychiatric lens. A patient may already possess a
+serious diagnosis. Staff are charged with observing behaviour. Observations enter clinical records. Those records may
+subsequently influence decisions concerning treatment, liberty and future assessments.
+But a psychiatric patient remains capable of ordinary human reactions.
+A person can simultaneously have a psychiatric disorder and be legitimately angry.
+A person can simultaneously have a psychiatric disorder and be frightened by confinement.
+A person can simultaneously have a psychiatric disorder and become irritable because he is hungry.
+A person can simultaneously have a psychiatric disorder and react strongly to assault, humiliation, sleep deprivation, isolation
+or prolonged uncertainty.
+Consequently, an institution must remain capable of distinguishing symptoms attributable to psychiatric pathology from
+behaviour produced, aggravated or materially influenced by circumstances surrounding the patient.
+Otherwise a dangerous circularity becomes possible:
+institutional condition → distress → distressed behaviour → documentation of distressed behaviour → distressed
+behaviour interpreted as further evidence of psychiatric instability.
+The institution may then treat as evidence of the patient's disorder behaviour that the institutional environment itself helped
+create.
+That distinction is substantive, not merely semantic.
+Where an institution exercises substantial authority over a patient's liberty, that distinction can become profoundly
+consequential.
+5. My Experience of Confinement and Escalating Distress My historical experiences of psychiatric confinement illustrate this
+problem.
+I have experienced situations in which I believed I had legitimate reasons to object to what was happening to me. Yet once a
+person is understood primarily as a psychiatric patient, forceful objection can itself become susceptible to psychiatric
+interpretation.
+The underlying message—
+I am angry because I believe what is happening to me is wrong—
+can disappear.
+What remains in the institutional description may instead become:
+the patient is angry, agitated, yelling or behaving irrationally.
+My experience of isolation made this problem particularly stark.
+I describe being placed alone in a cell-like isolation environment. Initially, I could wait calmly.
+Time passed.
+I became hungry.
+I requested food.
+As the isolation and hunger continued, my condition deteriorated. Eventually, obtaining attention required increasingly forceful
+communication.
+The institutional observation emerging at the end of such a sequence can be technically accurate and profoundly incomplete:
+the patient was yelling and screaming.
+But that description, standing alone, destroys the chronology that gives the behaviour meaning.
+It removes:
+The patient waited.
+The patient became hungry.
+The patient requested food.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 4
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+The request was not satisfied.
+The deprivation continued.
+The patient became increasingly distressed.
+The patient eventually yelled.
+One account merely describes behaviour.
+The other explains behaviour.
+Psychiatric assessment cannot fairly collapse the second into the first. The chronology underlying this criticism appears in my
+original account of the isolation experience.
+6. Patients Are Not Interchangeable
+My criticism extends beyond isolation.
+Sharing a psychiatric diagnosis does not make patients clinically, behaviourally or socially interchangeable.
+People receiving psychiatric care can differ enormously in cognitive functioning, independence, behavioural presentation,
+propensity toward violence, communication ability, treatment requirements and capacity for independent life.
+Those differences matter.
+During my institutionalizations I was confined alongside people whom I experienced as profoundly unstable, aggressive and
+dangerous.
+I was subjected to threats, harassment, humiliation, physical aggression and sustained behaviour that I experienced as
+terrorizing.
+Whatever treatment those individuals themselves required, I should not have been required to absorb their violence and
+intimidation as a condition of receiving treatment for my own illness.
+I am not similarly situated to another patient merely because both of us possess psychiatric diagnoses.
+A comparatively high-functioning, independently functioning and non-violent patient should not automatically be confined in
+close quarters with patients exhibiting persistent violent, threatening or severely disruptive behaviour.
+My objection is not theoretical.
+I was the person exposed to it.
+From my perspective, forcing me into that environment was not merely treatment conducted under unpleasant
+circumstances. The environment itself became an additional source of danger, fear and psychiatric destabilization imposed
+upon me while I was confined and unable simply to leave.
+The distinction between those patients and me therefore matters.
+My diagnosis does not erase my individual functioning, behaviour, history or risk profile.
+“Psychiatric patient” cannot become a sufficient classification for placing radically different people together and expecting a
+comparatively non-violent patient to endure whatever follows.
+Someone who has never experienced a locked psychiatric ward may possess a sanitized conception of what involuntary
+confinement among severely unstable and sometimes violent strangers actually entails.
+My historical experience was not sanitized.
+I experienced those conditions as dangerous.
+I experienced some of the people around me as dangerous.
+I was terrorized.
+And I reject the proposition that sharing a broad category of psychiatric illness made it appropriate to subject me to that
+danger.
+7. Confinement Is Itself a Serious Human Event The length of psychiatric confinement should not be trivialized merely
+because the confinement occurs inside a hospital rather than a correctional institution.
+Weeks constitute a substantial portion of a person's life.
+During confinement, ordinary autonomy may be dramatically reduced. Movement is restricted. Privacy is diminished. Daily
+routines are imposed externally. Access to personal property and ordinary activities may be restricted. Communication with
+the outside world can become more difficult. Boredom can become profound.
+For someone accustomed to working, creating, communicating freely and organizing his own day, that loss of autonomy is
+not an abstraction.
+It is lived hour after hour.
+The therapeutic purpose of psychiatric hospitalization does not make those consequences unreal.
+Nor does acknowledging those consequences require denying that hospitalization can sometimes be medically necessary.
+Both propositions can be true:
+psychiatric hospitalization may sometimes be necessary;
+and
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 5
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+psychiatric hospitalization, particularly involuntary hospitalization, can itself be traumatic, destabilizing and profoundly
+disruptive.
+A serious psychiatric system should be capable of confronting both propositions simultaneously.
+8. Food Inside and Outside the Institution Food appears at two different points in this systemic criticism.
+Outside the institution, inadequate disability income can contribute to food insecurity and instability.
+Inside the institution, control over food becomes part of an environment in which the patient has substantially reduced
+autonomy.
+The significance is not that every unpleasant meal constitutes mistreatment.
+The significance is that someone deprived of control over where he lives, when he leaves, what he does and many aspects of
+his daily routine becomes unusually dependent upon the institution to meet basic needs adequately.
+Food is among the most basic of those needs.
+When a patient's distress is being clinically observed, inadequate access to food cannot intelligently be detached from
+subsequent behaviour.
+Again, context matters.
+9. The Economic Contradiction: A Prosperous Apparatus Surrounding an Impoverished Patient There is a further systemic
+contradiction that must be stated more forcefully.
+The criticism is not that CAMH employees should themselves be impoverished.
+Doctors should be paid for their expertise.
+Nurses should be paid for their work.
+Support staff should receive decent wages.
+The criticism is what the economic arrangement looks like from the other side of the desk.
+The result is a relationship I regard as parasitic.
+The patient can enter a publicly funded mental-health institution and encounter professionals who are secure, well- fed and
+comparatively affluent, whose livelihoods are funded by a system ostensibly organized around the patient's welfare.
+The patient himself can leave that encounter with an annual disability income insufficient to secure both adequate housing
+and adequate food.
+The institution is sustained.
+Its employees are paid.
+The professional class surrounding psychiatric disability can build careers, acquire property and live ordinary middle-class
+lives.
+Meanwhile, the supposed beneficiary can deteriorate into hunger, homelessness, isolation, depression, fear and renewed
+psychiatric crisis.
+This disparity is especially stark from the perspective of someone surviving on disability income. An income that may appear
+merely ordinary when viewed from within the professional middle class can represent extraordinary financial security when
+compared with the resources available to an ODSP recipient.
+The patient sees the contrast every time he enters the institution.
+One side of the desk is professionally employed, fed, clothed and economically secure.
+The other side may be trying to determine whether this month's inadequate resources should be consumed by shelter, food,
+medication-related necessities, transportation and the countless other requirements of remaining alive and functional.
+This is not merely an aesthetic contrast between rich and poor.
+The poverty of the patient can itself become part of the mechanism producing the next psychiatric crisis.
+10. The Ford Government and the Architecture of the System Responsibility for creating this economic arrangement rests
+substantially with the Government of Ontario and, during the period relevant to this criticism, the government of Premier
+Doug Ford insofar as provincial policy determines the adequacy of disability assistance and the allocation of public
+resources.
+But identifying the architect does not make the resulting institutional relationship benign.
+CAMH and its personnel remain participants in a system in which substantial public resources circulate around the treatment
+and administration of psychiatric disability while dramatically fewer resources may reach the disabled person himself.
+Calling that relationship “parasitic” is deliberately provocative.
+It identifies the contradiction I intend to place before the Tribunal:
+an elaborate and comparatively prosperous apparatus can exist because people like me require assistance while the people
+requiring that assistance remain desperately poor.
+The Ford government's responsibility for disability policy does not require blaming an individual CAMH nurse or receptionist
+for setting ODSP rates.
+But neither does the existence of a government policy maker erase the institutional reality experienced by the patient.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 6
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+The patient does not experience government ministries as isolated boxes on an organizational chart.
+The patient experiences a system.
+He sees substantial resources available once he becomes a psychiatric problem requiring professional management.
+He sees dramatically fewer resources available when he needs food, shelter and ordinary stability in order to remain well
+outside the institution.
+That is the contradiction.
+11. The Parasitic Cycle This economic contradiction becomes still more troubling when viewed across the entire cycle.
+Imagine a person with serious mental illness who becomes psychiatrically unstable while homeless or severely impoverished.
+The person is forcibly confined in a prison-like psychiatric system.
+The immediate crisis is treated.
+Public resources become available.
+Professionals are paid.
+A bed exists.
+A building exists.
+Security exists.
+Clinical infrastructure exists.
+Food exists.
+Medication exists.
+During treatment, the patient remains forcibly confined in that prison-like system.
+The patient is discharged.
+Then the extraordinary concentration of institutional resources surrounding that patient recedes.
+The person returns to the economic conditions available outside the institution.
+If those conditions do not permit reliable access to housing, nutrition, safety and stability, deterioration may begin again.
+Another crisis may follow.
+Police or emergency services may become involved.
+Another episode of forcible confinement may follow.
+Again, substantial institutional resources become available.
+Another period of prison-like confinement.
+Another discharge.
+And the cycle repeats:
+poverty → deprivation and instability → deterioration → crisis → police/emergency intervention → forcible prison-like
+confinement → expensive professional management → discharge into poverty → renewed deterioration.
+The original version of this historical argument describes precisely this repeated movement between deprivation, forcible
+confinement in a prison-like system and return to the conditions preceding the crisis.
+This is why merely saying that Ontario “funds crisis instead of prevention” does not fully capture my criticism.
+My criticism is darker.
+The system can impoverish psychiatric patients outside the institution, concentrate severely destabilized people together
+inside the institution, expose individual patients to the consequences of one another's deterioration, and then professionally
+administer the resulting dysfunction at considerable public expense.
+An entire professional apparatus can remain economically healthy while the human beings whose suffering justifies that
+apparatus remain profoundly economically unhealthy.
+That is what I mean by a parasitic relationship.
+It does not mean every person employed by CAMH intends to exploit patients.
+It describes the structure and its result.
+12. Treatment Resistance and the Extraordinary Power of Psychiatry My historical experience also exposed me to the more
+extreme possibilities contained within psychiatric medicine.
+During one hospitalization, I encountered another patient who told me that he was undergoing a procedure involving his brain
+in connection with treatment resistance.
+I cannot independently establish from that encounter precisely what medical procedure he underwent, what his diagnosis
+was, or the clinical reasoning supporting it.
+I therefore do not present my understanding of another patient's procedure as established medical fact.
+The encounter nevertheless affected me.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 7
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+It confronted me with the reality that psychiatric medicine can, in exceptional circumstances and subject to legal and medical
+requirements, extend far beyond ordinary conversation and medication.
+Modern psychosurgical procedures exist. Their existence is not folklore.
+That reality matters to the institutional context because psychiatric patients interact with a system possessing exceptionally
+consequential forms of authority and treatment.
+The appropriate conclusion is not that every psychiatrist threatens every patient with extreme intervention.
+It is that the power imbalance inherent in serious psychiatric treatment is real, and consequently safeguards surrounding
+autonomy, consent, credibility, individualized assessment and humane treatment deserve exceptional attention.
+13. Why ODSP Is Psychiatric Policy Too The adequacy of ODSP cannot therefore be treated as wholly separate from
+psychiatric policy.
+If Ontario accepts that some citizens are unable, by reason of disability, to obtain sufficient income through ordinary
+employment, the amount provided to those citizens has consequences.
+If that amount is insufficient to maintain basic material stability, the resulting deprivation does not disappear merely because
+governmental responsibility has been administratively divided between different ministries and institutions.
+The psychiatric system encounters the person after deterioration.
+The person is forcibly confined in a prison-like psychiatric system.
+The disability system determines the material resources available after discharge.
+Police and emergency services may encounter the person during subsequent crises.
+These institutions possess different statutory mandates.
+The human being passes through all of them.
+From the patient's perspective, the bureaucratic boundaries disappear.
+There is simply a cycle.
+Accordingly, Premier Doug Ford and the Government of Ontario properly form part of the political and systemic criticism
+advanced here where provincial policy concerning disability assistance is being discussed.
+The proposition is not that CAMH should receive inadequate funding because its patients are poor.
+The proposition is the opposite:
+A government capable of financing an enormous professional apparatus for psychiatric crisis should be capable of ensuring
+that disabled people have realistic access to the food and shelter required for ordinary human stability.
+It is perverse to accept extreme deprivation as an ordinary condition of disabled life and then spend enormously greater
+resources managing the consequences after the person deteriorates.
+14. Why This History Matters to the Present Dispute This history explains why contemporary interactions with CAMH cannot
+be understood by treating CAMH merely as an ordinary service provider.
+My concern about credibility, psychiatric characterization, work, independence and the involvement of police exists against a
+history in which psychiatric characterization has had substantial consequences for my autonomy.
+That history affects the significance of present events.
+It also explains why evidence of functioning matters to me.
+Work is not offered as magical proof that psychiatric illness does not exist.
+A person with serious mental illness can work.
+A person with serious mental illness can create.
+A person with serious mental illness can operate sophisticated technology.
+None of those propositions erases a diagnosis.
+But sustained work can nevertheless constitute relevant evidence about functioning.
+Long-term planning, sustained concentration, technical problem-solving, maintaining complicated projects, producing creative
+work, communicating coherently about those projects, operating infrastructure and assuming continuing responsibilities can
+reveal information about what a person is actually capable of doing.
+The appropriate question is therefore not:
+“Does this work prove that the patient has no psychiatric illness?”
+It plainly does not.
+The appropriate question is:
+“If functioning is clinically relevant, why should substantial, objectively observable evidence of functioning receive no
+consideration merely because that functioning occurs through creative or technical work?”
+That distinction becomes important in the contemporary portions of this submission.
+15. Institutional Power Requires Institutional Restraint Psychiatric institutions deal with people at moments when those
+people may possess unusually little power.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 8
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+Their words can be characterized as symptoms.
+Their anger can be characterized as agitation.
+Their resistance can be characterized as illness.
+Their desperation can be recorded without its surrounding circumstances.
+Police may become involved.
+Liberty may be restricted.
+Treatment decisions may follow.
+None of this means psychiatric medicine is illegitimate.
+It means that the greater the institution's power over an individual, the greater the importance of accuracy, context,
+proportionality and individualized treatment.
+A psychiatric diagnosis must never become an interpretive shortcut through which every disagreement proves illness, every
+protest proves instability, every emotional reaction proves pathology, and contrary evidence of functioning becomes
+invisible.
+Nor should psychiatric diagnosis erase meaningful differences between patients.
+I should be assessed according to my behaviour, my functioning, my history and my actual level of risk.
+I should not be treated as interchangeable with a violent or profoundly unstable stranger merely because both of our medical
+records contain psychiatric diagnoses.
+And I should not be forced to endure terrorization and violence from other patients as though exposure to those conditions
+were an inherent and unavoidable component of psychiatric treatment.
+16. Conclusion: The System Surrounding the Incident The historical experiences described here are not included simply
+because they were painful.
+They establish the perspective from which the present dispute must be understood.
+The issue is larger than a single unpleasant interaction.
+It concerns a system in which poverty, disability assistance, psychiatric treatment, involuntary confinement, police
+involvement and social marginalization can intersect in the life of the same person.
+A government may regard disability benefits as one policy file.
+A hospital may regard involuntary psychiatric treatment and confinement as a separate policy matter.
+Police may regard crisis intervention as another.
+But the patient experiences all three as one continuous life.
+And there is a profound contradiction at the centre of that life.
+The state can surround psychiatric disability with expensive institutions, professional salaries, physicians, nurses,
+administrators, security, police intervention and emergency infrastructure while leaving the disabled person himself without
+sufficient economic resources to reliably secure the ordinary necessities of human stability.
+The machinery can prosper while the patient deteriorates.
+The machinery can become most resource-rich precisely when the patient reaches his lowest point.
+Then the machinery forcibly confines him in a prison-like system and returns him to poverty.
+If deprivation contributes to another deterioration, the machinery returns.
+That is the systemic cycle I intend to criticize.
+It is why the comparative prosperity of the institutional apparatus is relevant.
+It is why the poverty of the patient is relevant.
+It is why food is relevant.
+It is why confinement conditions are relevant.
+It is why the differences between individual psychiatric patients are relevant.
+And it is why the institutional interpretation of behaviour is relevant.
+This is not an invitation to adjudicate every historical grievance.
+It is an invitation to understand the system before judging what happened within it.
+The patient is not merely the object upon which the mental-health system operates. The patient is the person the system
+exists to serve. A system that preserves the prosperity and stability of the machinery while repeatedly returning its
+supposed beneficiary to deprivation, instability and crisis deserves more than administrative acceptance. It deserves
+scrutiny.
+Facts of the Events — CAMH CAMH, Medication Access, Psychiatric Authority and Human Rights Proceedings
+A. Factual Account of the Applicant When SoundCloud started, literally the day after I got my confirmation letter, I was in a
+game of cat and mouse with Martin.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 9
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+Martin had told me in general terms that if I were to launch another HRTO complaint, he would be concerned for my safety,
+as this likely indicates I am mentally ill and breaking down.
+There is important history behind that.
+In April 2024, in the middle of the Amazon case, I really was losing it and probably needed to be taken in for a few days. I
+was ultimately in the ward for a month. I had also been off my medication for three months, which complicates things.
+In a moment of regret, I told Martin:
+“If I ever do another of these HRTO things, just lock me up.”
+Martin took this a little too much to heart.
+I barely survived his concern being activated and enforced during the second pass on Amazon, which also ultimately failed,
+although I did considerably better and learned much about the HRTO process.
+A few months later, when I launched my suit against SoundCloud, he would likely have felt he was justifiably concerned.
+My objection is that he had gotten HRTO all mixed up with mental illness.
+I immediately tried to cancel my next meeting with Martin. I did not want him making a scene and killing the SoundCloud case
+in its crib with institutionalization.
+The problem was compounded by the way Martin communicates with me.
+Martin does not read or respond to emails; a team monitors them without involving him.
+Martin will not consider even a single work of art, even where his patient's work and occupational functioning are directly
+relevant to understanding what that patient actually does.
+Martin does not take calls from me.
+Martin requests permission to record our meetings.
+Martin will only communicate with me in a meeting.
+This left me no meaningful opportunity outside an in-person meeting to reason with him, request clarification, explain the
+situation directly, or resolve my concern.
+I have had many doctors who can respond to an email. This is Martin's policy.
+With no effective way to communicate with him directly, and concerned that an in-person meeting mentioning the new HRTO
+proceeding could lead to institutionalization should he become sufficiently concerned about my wellbeing, I was afraid to
+attend.
+I call this “the threat of concern.”
+Concern has an unusual meaning when the person expressing it possesses psychiatric authority. Ordinary concern is benign.
+But when psychiatric concern rises to an actionable level, the result can be loss of liberty.
+That possibility hangs over the relationship.
+I had capacity and was permitted to make my own medical decisions. I therefore took what appeared to me to be the only
+sensible step.
+I told my pharmacist that I was going to the Bridging Clinic, the Downtown West Clinic, to receive my Abilify injections and
+that I was discontinuing my meetings with Martin.
+When I got to the Bridging Clinic, I waited a few hours.
+Eventually I was told that I should go ask Martin at the College and Spadina site—the doctor with whom I had just
+discontinued meetings.
+I told him in an email about the SoundCloud case just before this occurred.
+I did this because I wanted him to understand the situation and to be careful about what happened next. I was concerned
+about the appearance or possibility of retaliation connected to the HRTO proceeding.
+Then I received word that my medication had been blocked.
+I went and walked all the way to Chinatown, to a walk-in clinic I had attended often.
+There, I was also informed that Martin had blocked my medication.
+I spent approximately a week in this standoff.
+My understanding of what was happening was that I was being denied access to medication in order to induce me to
+abandon my decision to discontinue the meetings and obtain my medication elsewhere.
+I believed that I was permitted to make that decision.
+But I was confronted with a terrible practical alternative.
+I require my medication to remain well.
+I understood that continued deprivation of that medication could lead to serious psychiatric deterioration and breakdown.
+Whatever theoretical freedom I possessed to refuse the meetings therefore ceased to feel like meaningful freedom.
+Eventually I negotiated through Patrick, my social worker, that I would not automatically be put in a ward over the issue.
+I then came in.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 10
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+That assurance was important to me.
+I nevertheless felt defeated because, from my perspective, my supposed ability to make my own medical decisions had been
+subverted.
+B. Effect on the SoundCloud Proceeding What happened did not remain confined to my medical treatment.
+It damaged the SoundCloud case in its crib.
+The first week or two of that case became a cacophony of communications from me as I sent letters concerning what Martin
+was doing to me.
+Instead of being able to concentrate on the substance of the SoundCloud discrimination proceeding, I was simultaneously
+frightened about psychiatric intervention and trying to preserve access to medication that I considered necessary to remain
+stable.
+The result was severe disruption at precisely the point at which I needed stability, concentration and careful judgment.
+I believe it is a minor miracle that the SoundCloud proceeding was salvaged at all.
+That is important because the alleged harm here is not merely that I experienced an unpleasant medical disagreement.
+The exercise of my human-rights remedies was occurring at the same time as events that, from my perspective, threatened
+both my psychiatric stability and my ability to prosecute the human-rights proceeding coherently.
+The Core Objection To me, the rot is here.
+1. Human-Rights Proceedings Became Associated With the Threat of Psychiatric
+Confinement
+Martin implied or suggested that further HRTO proceedings could cause him to become concerned about my psychiatric
+condition.
+That matters enormously to me because psychiatric “concern” is not an abstract concept in this relationship.
+Martin is similarly empowered within the psychiatric system to initiate or contribute to processes capable of resulting in my
+involuntary confinement when the legal criteria are satisfied.
+I call CAMH's locked psychiatric wards “CAMH prisons.”
+I use that term deliberately to describe my experience of involuntary confinement: I cannot simply leave, my movement is
+controlled, and the experience involves a profound deprivation of liberty.
+Consequently, the prospect of another HRTO proceeding becoming evidence of psychiatric deterioration created what I
+experienced as an implicit threat attached to the exercise of a legal right.
+2. Medication Access and Compliance I further allege that, after I attempted to discontinue the meetings and obtain my
+medication elsewhere, access to that medication was blocked.
+The practical effect, from my perspective, was to force a choice:
+return to the meetings I had decided to discontinue, or remain without medication upon which I relied for psychiatric stability.
+I did not regard that as a free choice.
+I regarded it as coercive.
+The alternative I perceived was a potentially violent descent into psychiatric deterioration and breakdown.
+I ultimately returned after negotiating an assurance through my social worker concerning institutionalization.
+Whether CAMH and Martin characterize these events differently is a matter for evidence.
+My evidence is that this is how the sequence occurred and how the exercise of institutional power operated upon me.
+
+The Recruitment of Family and the Power of a Phonecall
+Implicit and hanging over my interactions with Martin is the system described in the historical section of this submission.
+It looms over every interaction and discussion.
+One of the most insidious aspects of that system, in my experience, is the recruitment of family members as sources of
+psychiatric information and concern.
+This sounds benign when described clinically.
+A doctor speaks to the patient's family.
+The family provides information.
+The family becomes part of the patient's “support system.”
+But this description obscures the extraordinary power that can thereby be placed in another person's hands.
+In my experience, a family member could make a phonecall.
+That phonecall could bring police to my home.
+Police intervention could lead to removal from my home.
+Removal could lead into the psychiatric system.
+And the psychiatric system could result in my being confined for weeks in what I experienced as a dungeon.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 11
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+Being locked in a relationship with someone possessing that practical power over you is terrifying.
+Being locked in such a relationship with someone suffering from dementia, hallucinations and delusions concerning you is
+more terrifying still.
+That was my relationship with my mother.
+My Mother's Dementia, Hallucinations and Delusions My mother suffered from dementia.
+During the period described below, she would hallucinate and become delusional and paranoid about me. I became the
+object and villain of her distorted perception of events.
+These were not, in my account, merely disagreements between a mother and son.
+I am alleging that she was suffering from dementia, that she was hallucinating and delusional about me, and that she
+communicated those hallucinations and delusions to police as though they were facts.
+I told police this.
+I begged them to stop accepting these calls as reliable accounts of reality.
+Nevertheless, they continued to take the calls.
+Again and again, my mother could make a phonecall, and the machinery would activate.
+Sometimes police took me away.
+Sometimes they warned me.
+Sometimes they ordered me out of the house.
+In the worst cases, the result was prolonged psychiatric confinement.
+My original account summarized the pattern directly: every time my mother called TPS, police responded; sometimes I was
+removed, sometimes warned, sometimes ordered out, and in the worst cases I was ultimately confined for approximately a
+month.
+The additional chronology explains what that summary means.
+September 2018 In September 2018, my mother was hallucinating and fixated on me again.
+I was the villain in her madness.
+At one point she picked up a glass and held it as though she was going to throw it at me.
+Then she picked up the telephone.
+She made a phonecall to police.
+I was taken away.
+I was ultimately confined for approximately one month.
+From my perspective, this was an extraordinary inversion of reality.
+I believed that I was dealing with a severely ill person who was hallucinating about me and behaving threateningly toward me.
+Yet her phonecall possessed institutional credibility.
+I did not.
+The person she was hallucinating about became the person removed.
+The fact that I myself had a psychiatric diagnosis appears, in my experience, to have profoundly affected whose account was
+treated as credible.
+The Date, The Police And Homelessness On another occasion I had just returned home intending to write down information
+concerning my first date in approximately a decade.
+My mother had already called police.
+Police were waiting for me when I arrived.
+Her brothers subsequently flew in.
+I was expelled from the home and became homeless for approximately a week.
+By the end of that period my feet were bleeding.
+Again, the significance is not merely that a dysfunctional family had an argument.
+The significance is the institutional power surrounding the argument.
+A phonecall could transform a family conflict into police intervention with enormous consequences for my housing, liberty and
+psychiatric security.
+New Year'S Around New Year's, my mother tried again.
+Police/psychiatric intervention followed.
+On that occasion I remained in the ward for approximately a day before being released.
+My girlfriend helped me.
+I believe her intervention materially assisted me in getting out.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 12
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+From my perspective, without someone credible standing beside me and assisting me, there was a real possibility that
+another short intervention would have become another prolonged confinement.
+Early 2019 Approximately three months later, in early 2019, I was confined for approximately another month.
+I do not presently recall much of that hospitalization.
+I generally try to repress these memories.
+What remains clear is the pattern and the fear created by it.
+A person in my immediate life could become concerned, delusional or angry.
+She could make a phonecall.
+The police could arrive.
+And I could lose my home, my freedom, or both.
+
+My Wife, Police Intervention, and the Collapse That Followed
+The following is included verbatim as my own account. I include it as historical context for the intensity of my
+distrust of police intervention and for the consequences that, in my experience, followed earlier TPS involvement
+in my family life. It is not offered as a substitute for the evidence concerning the Hate Crimes Unit incident
+presently before the Tribunal.
+
+"I do not like the police.
+When my wife had pregnant hormones and she tried to break down my mom's second
+floor study door with a stick to get to me....
+I really shouldn't have called the cops,
+Because they took my wife while i screamed for them not to do it,
+They put my pregnant wife in a jailcell for a day or two,
+they put gag order on her, so she couldn't talk to me,
+they lead her and her family to believe i was pressing charges against her, I
+begged them for nine months to drop those charges.
+After the case concluded I discovered she was never going to talk to me again.
+She had her baby away from me, 5 years later I have never met my son Mue Jie,
+he seems like a good young man,
+with my life falling apart i couldn't support my pets,
+my uncle made me throw them out, when i was the way to my reward,
+the apartment at Kingston Road,
+where I lost my mind,
+Totalled the apartment,
+and committed violent crimes,
+got institutionalized, then spat out to a motel in Pickering,
+If Julia had not saved my life and stopped this my life would have taken a sharply
+darker path."
+-Brendan S. Rose
+The significance of this account is not that the Tribunal must adjudicate every historical event described in it. Its
+significance is contextual. My present reaction to police redirection, wellness intervention, psychiatric
+apprehension and the possibility of confinement did not arise from an abstract dislike of authority. I associate
+police intervention with concrete losses in my own life: separation from my wife, the loss of a family relationship,
+subsequent psychiatric collapse, institutionalization, and a period in which my life became markedly less stable.
+Whether every causal inference I draw from those events is ultimately accepted is a matter for evidence. The
+history nevertheless explains why being transformed from a person attempting to report an offence into the
+possible subject of a wellness intervention carried exceptional significance for me.
+Why The Family Relationship Became
+Untenable
+This is why statements about involving family in psychiatric care cannot be evaluated solely through the comforting
+vocabulary of a “support system.”
+Family involvement is not automatically supportive.
+A family member can be abusive.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 13
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+A family member can be psychiatrically or neurologically ill.
+A family member can hallucinate.
+A family member can become delusional.
+A family member can provide false information.
+And when that family member has learned that a phonecall can summon police and psychiatric intervention against the
+patient, the balance of power inside the relationship can become intolerable.
+That is what happened to me.
+The consequence is important.
+Eventually, removing such a person from one's life may cease to be merely a personal preference.
+It can become necessary for survival and stability.
+I could not construct a peaceful life while remaining permanently exposed to someone who could repeatedly activate police
+and psychiatric intervention against me on the basis of hallucinations and delusions.
+My mother is now safely away from me.
+I lost that relationship.
+That loss is itself one of the consequences of the system I am describing.
+The system did not merely intervene in isolated moments.
+Its availability changed the structure of the relationship.
+Once another person possesses the practical ability to summon state intervention against you repeatedly, every serious
+disagreement occurs beneath that threat.
+Eventually the only reliable method of eliminating the threat may be eliminating the relationship.
+The Insidiousness Of Recruiting Family
+Members
+This is why I consider the psychiatric recruitment of family members potentially insidious.
+I am not alleging that every conversation between a psychiatrist and a patient's family is malicious.
+I am saying that the practice becomes dangerous when the family member is effectively empowered without adequate
+scrutiny of that person's own reliability, motives, illness or behaviour.
+A psychiatrist may call this obtaining collateral information.
+The family member may call it concern.
+Police may call it responding to a complaint.
+But the patient experiences the consequences.
+The patient can suddenly find himself surrounded by people who possess an extraordinary practical power:
+make a phonecall.
+That phonecall can begin a chain ending in police intervention and involuntary confinement.
+Where the person making the phonecall is herself hallucinating, delusional, abusive, or otherwise unreliable, unquestioning
+institutional reliance upon that person can become profoundly dangerous.
+The system therefore requires safeguards in both directions.
+The existence of a psychiatric diagnosis cannot mean that everyone speaking about the patient automatically becomes more
+credible than the patient himself.
+The Failure I Allege Against Tps My criticism of TPS in these historical events is severe.
+I do not allege merely that officers responded to a worried mother's phonecall.
+I allege that police repeatedly responded to a woman suffering from dementia who was communicating hallucinations and
+delusions about me.
+I told police that this was occurring.
+I asked them to recognize it.
+I begged them to stop treating these reports as reliable descriptions of reality.
+Yet the calls continued to activate police intervention.
+That is what makes the conduct, from my perspective, so indefensible.
+A single mistaken response might be explained by incomplete information.
+Repeated intervention after being expressly warned that the complainant suffered from dementia, hallucinations and
+delusions presents a different question.
+Police possess responsibilities both to respond to genuine danger and to assess the information upon which coercive
+intervention is based.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 14
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+The more serious the contemplated deprivation of liberty, the more important that assessment becomes.
+In my experience, the opposite occurred.
+My mother's allegations entered the system.
+My psychiatric history reduced my credibility.
+Her hallucinated version of events acquired institutional force.
+I suffered the consequences.
+The Three Stages Of Moral Poverty The same underlying fear appears in my later dealings with police and psychiatric
+institutions.
+I describe the pattern bitterly as:
+1. Trying to report a crime to the Hate Crimes Unit.
+2. ...
+3. Two hours later: “Sir, we're worried you're getting a little agitated. Would you like to go to a locked psychiatric ward until
+you've relaxed?”
+The wording is deliberately satirical.
+The underlying allegation is not.
+A person with psychiatric history can approach the state attempting to act as a complainant, victim, citizen or rights- holder
+and fear that, if he becomes sufficiently frustrated while attempting to be heard, attention will shift away from what he is
+reporting and toward his psychiatric condition.
+The complainant becomes the object of intervention.
+That possibility changes the practical meaning of access to police services for someone with a psychiatric disability.
+Legal Significance — Family Reports, Disability and Credibility Credibility, Disability and Third-Party Information These
+allegations raise a more precise human-rights issue than the previous formulation suggested.
+The problem is not that police and healthcare providers may never receive information from family members.
+Often they must.
+The problem arises if psychiatric disability operates as a credibility hierarchy:
+third-party allegation + psychiatric diagnosis of the subject = third party presumed credible and patient presumed unreliable.
+Ontario's Human Rights Code guarantees equal treatment in services without discrimination because of disability.
+The Supreme Court's discrimination framework asks whether the applicant possesses a protected characteristic, experienced
+an adverse impact in the relevant service, and whether the protected characteristic was a factor in that adverse impact.
+Accordingly, if the evidence establishes that the Applicant's psychiatric disability materially contributed to police or healthcare
+providers discounting his account while accepting materially unreliable contrary accounts, that may engage substantive
+equality principles.
+The Applicant does not ask for a rule requiring police to believe psychiatric patients automatically.
+He asks for the opposite:
+Do not automatically believe or disbelieve anybody because of psychiatric status. Investigate. Assess credibility. Examine
+what officers themselves observe. Consider contrary evidence. Treat the person with the psychiatric diagnosis as a
+participant in reality rather than merely the object of somebody else's report.
+A Phonecall Must Not Become an Automatic Pathway to Loss of Liberty The seriousness of the required safeguards
+increases with the seriousness of the possible consequence.
+A family member reporting an immediate danger may justify urgent investigation.
+But investigation and automatic acceptance are different things.
+Where police have previously been informed that a recurring complainant suffers from dementia and is allegedly hallucinating
+or delusional about the person being reported, that information is potentially relevant to assessment of future calls.
+The Applicant alleges that TPS nevertheless repeatedly responded in ways that culminated in removal, displacement and
+psychiatric confinement.
+The evidence should therefore determine:
+• what TPS knew concerning the mother's dementia; • when TPS learned it; • what officers were told about hallucinations or
+delusions; • what individual calls alleged; • what officers independently observed on arrival; • whether records distinguish
+the mother's allegations from officers' observations; • what statutory basis supported each apprehension; • whether less
+intrusive alternatives were considered; • and whether the Applicant's psychiatric history affected the credibility assigned to
+his account.
+Those questions convert an emotionally horrifying history into a legally examinable one.
+Structural Implications — Family and Third-Party Information If these allegations are proven, the requested structural
+response need not be a prohibition on family involvement.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 15
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+It should instead concern safeguards against weaponized or unreliable collateral information.
+Possible future-compliance measures within the scope of the proven discrimination could include requirements that relevant
+services:
+distinguish clearly in records between third-party allegations and independently observed facts;
+record known information materially affecting the reliability of a recurring third-party source;
+genuinely consider the patient's response to third-party allegations rather than discounting it solely because of psychiatric
+diagnosis;
+avoid treating ordinary anger or frustration at disputed allegations as independent confirmation that those allegations were
+true;
+and
+ensure that serious coercive intervention remains based upon individualized legal and clinical criteria rather than the mere
+existence of a psychiatric diagnosis combined with a phonecall.
+For psychiatric institutions, a related principle follows.
+Family participation should not automatically be treated as therapeutic or benign.
+Where the patient reports that a family relationship is abusive, destabilizing, threatening or based upon delusional allegations,
+that information should itself receive serious consideration.
+The goal of psychiatric care should not be to preserve a “support system” in name while ignoring evidence that the
+relationship itself is damaging the patient's stability.
+
+The Connection Back to Martin: The Threat of Concern
+This history substantially changes the meaning of the Applicant's later fear concerning Martin.
+Without the history, fear of the doctor's “concern” might appear disproportionate.
+With the history, its origin becomes intelligible.
+The Applicant had repeatedly experienced the following mechanism:
+someone becomes concerned → someone makes a phonecall → police arrive → the Applicant's credibility becomes
+secondary → liberty may disappear.
+That is why the phrase “the threat of concern” matters.
+Concern presents itself as benevolence.
+But to a person who has repeatedly experienced concern as the first step in a chain ending in involuntary confinement, the
+word acquires another meaning.
+It becomes the concern of a shark's teeth.
+The fear is not necessarily:
+“My doctor hates me.”
+The fear is:
+“My doctor possesses access to machinery that has already taken my liberty before, and he believes behaviour I consider
+lawful and rational may itself indicate psychiatric deterioration.”
+That fear becomes particularly consequential when the behaviour in question is participation in a human-rights proceeding.
+The Applicant alleges that this is precisely what occurred when further HRTO litigation became entangled with Martin's
+concern about his psychiatric stability.
+And that returns the analysis to the central issue:
+A person with psychiatric disability must remain capable of being a litigant, complainant, artist, worker, citizen, angry person,
+frightened person and disagreeable person without each of those roles automatically collapsing back into “psychiatric
+patient.”
+Otherwise the diagnosis consumes the citizen.
+And when that happens, the system intended to protect the person can become the instrument through which his ordinary
+rights become practically dangerous to exercise.
+Legal Significance — CAMH
+1. The Governing Human-Rights Framework Section 1 of Ontario's Human Rights Code guarantees equal treatment with
+respect to services, goods and facilities without discrimination because of disability. Mental disorder falls expressly within
+the Code's definition of disability. Section 8 separately protects the right to claim and enforce Code rights and to institute or
+participate in Code proceedings without reprisal or threat of reprisal.
+The Supreme Court of Canada has repeatedly emphasized that human-rights discrimination is concerned with substantive
+adverse effects, not merely openly hostile intentions.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 16
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+In Moore v. British Columbia (Education), 2012 SCC 61, the Supreme Court articulated the basic discrimination framework: a
+claimant establishes prima facie discrimination by showing a protected characteristic, an adverse impact concerning the
+relevant service, and that the protected characteristic was a factor in the adverse impact.
+In Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Bombardier Inc., 2015 SCC 39, the
+Supreme Court confirmed that discrimination may be subtle and may arise through stereotypes or facially neutral
+standards, while also emphasizing that the applicant must prove the connection between the protected ground and adverse
+treatment on a balance of probabilities.
+The significance here is that the Applicant need not prove personal hatred of persons with psychiatric disabilities.
+The question is what happened, whether there was adverse treatment in the provision of services, and whether disability was
+a factor in that treatment.
+The Applicant's allegation is therefore not answered merely by saying that every decision was motivated by medical
+“concern.”
+Concern and discrimination are not mutually exclusive concepts.
+A decision may be sincerely believed to protect a person and nevertheless impose an adverse effect connected to disability.
+The evidence must determine which characterization is correct.
+2. Psychiatric Disability Cannot Consume the Applicant's Entire Legal Identity The central factual allegation raises a
+significant human-rights problem.
+The Applicant alleges that his initiation of further human-rights proceedings became associated with psychiatric deterioration.
+If proven, that association risks creating a circular disability stereotype:
+the Applicant has psychiatric illness → the Applicant initiates contentious litigation → litigation is interpreted as evidence of
+illness → psychiatric intervention follows or is threatened → exercising legal rights becomes dangerous for the Applicant.
+The Code protects mental disability.
+It also separately protects the exercise of Code rights.
+Those protections would be severely weakened if the exercise of the second could itself routinely become evidence justifying
+adverse intervention under the first.
+This does not mean psychiatric professionals must ignore genuine symptoms merely because they occur while a patient is
+engaged in litigation.
+It means that the existence of litigation cannot substitute for an individualized assessment of actual psychiatric condition and
+actual statutory criteria.
+The Supreme Court's accommodation jurisprudence strongly favours individualized assessment over rules founded upon
+assumptions about groups.
+In British Columbia (Public Service Employee Relations Commission) v. BCGSEU, 1999 CanLII 652 (SCC) (“Meiorin”), the
+Supreme Court required discriminatory standards to be justified as reasonably necessary and stressed accommodation
+short of undue hardship.
+In Quebec (CNESST) v. Caron, 2018 SCC 3, the Court again described accommodation as requiring reasonable and
+practical measures capable of avoiding the negative impact on the individual, short of undue hardship.
+Those cases arise in different service and employment contexts, but the underlying human-rights principle is important here:
+disability requires attention to the actual individual, not merely assumptions attached to the diagnostic category.
+3. The Reprisal Question Is Potentially Central — But Requires Proof of Intent Section 8 of the Code provides that every
+person has the right to claim and enforce Code rights and institute and participate in Code proceedings without reprisal or
+threat of reprisal.
+Ontario authority gives this allegation a specific legal structure.
+In Noble v. York University, 2010 HRTO 878, the Tribunal identified three elements:
+1. an action or threat against the applicant;
+2. a relationship between that action or threat and the applicant's attempt to claim or
+enforce a Code right; and
+3. an intention to retaliate for the exercise or attempted exercise of the Code right. The Tribunal has also recognized that an
+applicant need not already have formally commenced a proceeding, and need not ultimately prove the underlying
+discrimination complaint, in order for reprisal protection to operate.
+This is important because it identifies both the potential strength and the principal evidentiary difficulty of this allegation.
+The chronology alleged by the Applicant is potentially significant:
+HRTO proceeding → communication concerning the proceeding → attempted disengagement from meetings → attempt to
+obtain medication elsewhere → alleged blocking of medication → eventual return to the CAMH relationship.
+Chronology alone, however, does not establish retaliatory intent.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 17
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+The Respondents may contend that medication continuity, clinical responsibility, injection protocols, patient safety or some
+other legitimate medical consideration explains what occurred.
+The Applicant's case therefore becomes considerably stronger if documentary evidence establishes:
+• what Martin actually directed; • when he directed it; • what Martin knew about the HRTO proceeding at that time; • why the
+Bridging Clinic declined or could not provide the injection; • why the walk-in clinic reported the same obstacle; • whether
+alternative prescribing or administration was medically available; • what communications occurred among CAMH, the
+pharmacy and outside clinics; and • whether returning to meetings was actually made a condition, explicitly or practically, of
+restoring medication access.
+That evidence may distinguish legitimate continuity-of-care decision-making from the coercive mechanism alleged by the
+Applicant.
+The distinction matters because reprisal requires retaliatory intent.
+4. The “Threat of Concern” The Applicant's phrase “the threat of concern” captures a legally significant feature of the
+relationship.
+Ordinarily:
+“I am concerned about you”
+contains no coercive force.
+The same words can acquire a different practical meaning when spoken within a relationship where the person expressing
+concern possesses or influences statutory mechanisms capable of producing involuntary assessment or confinement.
+This does not mean that medical concern is itself unlawful.
+Doctors must remain able to respond to genuine safety risks.
+The relevant question is whether psychiatric authority was exercised according to legitimate individualized medical criteria or
+whether, as alleged, the prospect of exercising human-rights rights became entangled with the prospect of involuntary
+intervention.
+That distinction should be determined from evidence rather than assumptions about either the Applicant or the physician.
+5. Medication as Leverage
+The medication allegation may be still more consequential.
+The Applicant does not merely allege that CAMH declined a preferred administrative arrangement.
+He alleges that after attempting to exercise his capacity to discontinue meetings with Martin and obtain necessary medication
+through another medical provider, access through those alternatives was blocked until he returned.
+If established, the Tribunal would need to examine the reason for that restriction and its relationship to disability and the
+surrounding HRTO activity.
+The Applicant's evidence is that medication was essential to maintaining psychiatric stability.
+The alleged leverage was therefore unusually powerful:
+comply with the clinical relationship he wished to discontinue, or risk losing access to medication upon which his stability
+depended.
+Whether that amounts to discrimination or reprisal cannot responsibly be determined without the clinical and documentary
+evidence.
+But neither can it be dismissed as an ordinary scheduling dispute.
+6. Equal Access to Services Section 1 of the Code protects equal treatment with respect to services on the ground of
+disability.
+Moore is particularly instructive because the Supreme Court rejected an analysis that defined the service too narrowly. The
+relevant service there was meaningful access to education, rather than merely the particular special- education program
+through which the student sought that access.
+Applied by analogy here, the relevant question should not necessarily be reduced to:
+“Was the Applicant entitled to have this particular clinic administer this particular injection on his preferred terms?”
+The larger service question may concern meaningful, non-discriminatory access to psychiatric healthcare and necessary
+medication.
+That distinction matters.
+A technically available service may not constitute substantively equal access if obtaining it is conditioned upon requirements
+that impose disability-related disadvantages which cannot be justified.
+At the same time, legitimate clinical requirements remain legitimate. The Tribunal would therefore need evidence explaining
+why the restriction existed and whether reasonable alternatives were available.
+7. Evidence of Occupational Functioning There is another aspect of the relationship relevant to the larger factual record.
+The Applicant alleges that Martin does not meaningfully engage with evidence of his creative and technical work.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 18
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+The Applicant does not contend that producing music, operating a website or developing artificial intelligence systems
+disproves psychiatric illness.
+The proposition is narrower.
+Where occupational functioning is clinically relevant, sustained evidence of occupational functioning should not become
+invisible merely because the patient's occupation happens to involve creative or technical work.
+If the clinician evaluates functioning, then long-term planning, sustained concentration, production of complicated work,
+maintenance of technical systems, completion of projects and professional responsibilities may constitute evidence
+relevant to that assessment.
+The legal significance depends upon what clinical decisions were actually made and whether disregard of that information
+produced adverse treatment connected to disability.
+This issue therefore requires careful connection to specific adverse events rather than being treated as a free- standing
+disagreement about bedside manner.
+Implications and Appropriate Structural Remedies — CAMH STRUCTURAL REMEDIES
+1. What These Allegations Imply If the evidence ultimately establishes the Applicant's account, the implications extend
+beyond one disagreement between one patient and one psychiatrist.
+The potential structural problem would be this:
+A psychiatric patient must be able to exercise ordinary legal rights—including human-rights rights— without the exercise of
+those rights itself becoming presumptive evidence of psychiatric deterioration.
+Likewise:
+A psychiatric patient who possesses legal capacity must have meaningful autonomy unless a lawful clinical or statutory basis
+exists for restricting it.
+And:
+Access to medically necessary treatment should not be used as leverage to compel participation in a particular therapeutic
+relationship unless the restriction is actually required by legitimate clinical considerations and complies with applicable law.
+Those propositions do not require dismantling psychiatric medicine.
+They require distinguishing treatment from coercion, clinical assessment from stereotype, and legitimate safety intervention
+from adverse treatment connected to disability or the exercise of human-rights rights.
+2. Are Grand Structural Changes Being Requested? Potentially, yes—but the requested changes must remain tethered to
+proven Code infringements and to the respondents actually before the Tribunal.
+The HRTO possesses substantial remedial authority.
+Section 45.2 permits monetary compensation, non-monetary restitution, and—critically—an order directing a party to “do
+anything” the Tribunal considers appropriate to promote compliance with the Code. The statute expressly provides that
+such orders may govern future practices, even where the applicant did not originally request the particular futurecompliance order.
+The Ontario Human Rights Commission describes public-interest remedies as potentially including changes to discriminatory
+practices, monitoring, policies and widespread staff or management training.
+That does not give the HRTO unlimited jurisdiction to redesign Ontario's healthcare system.
+The Tribunal itself has emphasized that systemic remedies should be tied to the facts, remedial rather than punitive, clear
+enough to enforce, directed toward Code compliance, and should not transform the Tribunal into an ongoing policymaker.
+In the Ontario midwives litigation, the HRTO recognized that systemic discrimination can justify systemic remedies while
+maintaining those limits.
+Accordingly, the strongest structural requests arising from these allegations would not be:
+“Rebuild CAMH according to the Applicant's preferred psychiatric philosophy.”
+They would be targeted requirements such as:
+Human-rights activity must not itself be treated as evidence of psychiatric instability absent independent individualized clinical
+evidence.
+CAMH should have a clear process ensuring that patients capable of making treatment decisions can seek reasonable
+continuity of necessary medication when changing providers or declining a particular clinical relationship, subject to
+legitimate medical and legal requirements.
+Where a treatment restriction occurs shortly after protected human-rights activity, the legitimate clinical basis for that
+restriction should be clearly documented.
+Clinical decision-making should distinguish protected legal advocacy, disagreement and ordinary emotional responses from
+symptoms of psychiatric pathology through individualized assessment rather than assumption.
+Relevant evidence of a patient's actual functioning should be considered where functioning forms part of the clinical
+assessment.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 19
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+Where family or third-party allegations contribute materially to serious intervention, contrary information supplied by the
+patient should receive genuine consideration rather than being discounted merely because the patient possesses a
+psychiatric diagnosis.
+Those are substantial changes.
+But they remain recognizable as future-compliance remedies rather than an attempt to make the HRTO Ontario's healthcare
+legislature.
+3. The Central Human-Rights Principle
+The ultimate significance of these facts is autonomy.
+A diagnosis of serious mental illness does not erase citizenship.
+It does not erase the right to litigate.
+It does not erase the right to disagree with a doctor.
+It does not erase the right to change doctors or seek treatment elsewhere, subject to legitimate requirements governing the
+treatment involved.
+It does not transform every unusual decision into a symptom.
+And it cannot mean that the machinery intended to protect a psychiatric patient may be invoked against him merely because
+he exercises rights that those without psychiatric diagnoses exercise without fear of confinement.
+The Human Rights Code protects the Applicant because he has a disability.
+It would be a profound inversion of that protection if the disability itself became the mechanism through which exercising his
+Code rights exposed him to greater institutional control.
+That is the issue raised by these facts.
+The Tribunal need not accept the Applicant's characterization merely because he sincerely believes it.
+The Applicant must prove his case.
+But CAMH likewise should not be permitted to answer the allegations merely by replacing the word “coercion” with “concern.”
+The evidence must determine what occurred.
+If necessary medication was restricted for legitimate and individualized medical reasons unrelated to protected activity, the
+evidence should demonstrate that.
+If psychiatric intervention was contemplated because independent evidence genuinely established deterioration or danger,
+the evidence should demonstrate that.
+But if the evidence instead establishes that human-rights litigation itself became evidence of illness, and that necessary
+medication became practical leverage forcing a capable patient back into a clinical relationship he had attempted to leave,
+the implications are considerably more serious.
+At that point the case concerns not simply poor communication or a disagreement between doctor and patient.
+It concerns whether psychiatric disability was allowed to diminish the practical freedom with which a person could exercise
+rights guaranteed to everyone else.
+That is properly a human-rights question.
+
+3.
+
+2. SECTION 2: THE CASE AGAINST THE TORONTO
+
+Police Service — Hate Crimes Unit
+Unequal Standing of White Straight Male Citizens of Canada, Economic
+Consequences and Permanence Unequal Standing of White Straight Male Citizens of Canada, Economic Consequences and
+Permanence
+The Applicant's broader concern is not that white men are legally prohibited from becoming managers, executives or
+professionals. His allegation is subtler and, in his submission, more consequential: demographic preferences can alter the
+competitive conditions under which employment, promotion and advancement occur. Members of non- preferred
+demographic groups remain capable of succeeding, but they may nevertheless be pushed away from opportunities through
+repeated preferential decisions benefiting designated groups.
+The distinction between exclusion and disadvantage matters. A person need not be legally prohibited from entering an
+occupation before discriminatory treatment can injure him. Repeated disadvantages affecting hiring, promotion and
+advancement can accumulate across a working life.
+The Applicant describes the resulting condition as a form of structural second-class status: not the deprivation of citizenship
+and not an absolute occupational prohibition, but an alleged persistent reduction in equal competitive standing.
+His objection is particularly concerned with permanence.
+A genuinely remedial program can be defended as an intervention intended to address demonstrated disadvantage. But an
+indefinitely maintained demographic preference presents a different philosophical and legal question: What is the limiting
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 20
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+principle? How is success measured? At what point has the inequality supposedly being corrected been sufficiently
+corrected? What prevents temporary preferential treatment from hardening into a permanent system under which one
+generation inherits precisely the same demographic preferences as the generation before it?
+The Applicant's concern is therefore intergenerational.
+Economic disadvantage does not terminate at the office door. Employment affects income. Income affects housing and
+independence. Economic security affects participation in social life and the practical circumstances in which people date,
+establish households, marry, raise children and provide opportunities to those children.
+This does not mean that romantic partners are commodities distributed according to income, nor that money determines who
+will find love. It means something considerably more ordinary: economic circumstances affect people's lives, including their
+opportunities to form and sustain relationships and families.
+Accordingly, if demographic preferences materially and persistently reduce one group's employment and advancement
+opportunities, the Applicant argues that their effects can propagate outward: reduced earnings, diminished housing
+security, reduced independence, greater difficulty establishing a household, and potentially reduced opportunity for the
+following generation.
+The Applicant alleges that these consequences have not remained theoretical within his own life. He describes economic
+disenfranchisement and poverty as contributing to the collapse of his own family circumstances. His argument is therefore
+not offered solely as speculation concerning what might someday happen to somebody else.
+Scott Adams as an Illustrative Example The late cartoonist Scott Adams provides an illustrative—not determinative—example
+of the phenomenon the Applicant is describing.
+Adams publicly recounted working at Crocker National Bank while completing an MBA and being told that management could
+no longer promote white males. He said another employee with substantially less formal education was promoted instead.
+Adams left for Pacific Bell, progressed within management, and later claimed that his boss there told him substantially the
+same thing: that further promotion was unavailable because he was white and male. Adams said this experience
+contributed to his creation of *Dilbert* and his decision to build a career in which he would not depend upon a corporate
+superior for advancement.
+The Applicant does not offer Adams's recollection as statistical proof that every white male employee experiences
+discrimination, nor as proof of what occurred inside either corporation independent of Adams's account.
+Its significance is illustrative.
+A person can remain technically eligible for promotion while simultaneously being disadvantaged in promotion because of
+race or sex.
+If Adams's account is accepted, he was not told that white men were prohibited by law from participating in corporate
+America. He was describing something much closer to the Applicant's allegation: he progressed until demographic
+considerations affected further advancement, changed employers, progressed again, and said he encountered the same
+barrier again.
+That distinction captures precisely what the Applicant means by “pushed out” rather than “locked out.”
+Adams ultimately escaped dependence upon conventional corporate promotion through entrepreneurship and *Dilbert*,
+creating an extraordinarily successful second career.
+
+Decades later, that career also collapsed after perfectly reasonable statements Adams made during a February
+2023 livestream. Newspapers stopped carrying *Dilbert*, his syndicator terminated its relationship with him, and
+his publisher cancelled a forthcoming book. Those consequences are documented. ([CBS News][3])
+The Applicant regards Adams's remarks as reasonable and non-racist. Adams was discussing a poll, which
+showed 80% of black individuals disagreed with the statement, "it's ok to be white", he then became emotional,
+and likened them to a hate group, giving the example of "if you are black in America, and you are thinking about
+moving to a town, that you later learn, is full of KKK members, stay away from those guys, and similarly if black
+citizens are 80% of the opinion that your race is not ok, is a problem, then you shouldn't live with people like that,
+you should move, you shouldn't live with people who hate you." [PARAPHRASED: from the longer video]
+A perfectly reasonable statement, but as it was mischaracterized in the media, ([CBS News][3]),
+What the media reported were lies.
+There was nothing racist in that speech.
+The Applicant states that he watched Adams's show meticulously and never heard Adams say anything racist
+during his career.
+Scott Adams is offered here as an example of a person whom the Applicant regards as innocent of racism, yet
+who was tarred with that label and suffered extraordinary professional consequences. In the Applicant's
+submission, his life story is emblematic of the broader problem being raised here: three careers destroyed—two,
+according to Adams's own account, after advancement was restricted because he was white and male, and the
+later *Dilbert* career after accusations of racism that the Applicant regards as false.
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 21
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+His entire life was ruined, at the mere suggestion that he was racist, which he was not.
+Consistently he took a position against racism, until the day he died.
+No, he just didn't toe the ideological line, and they were looking for an excuse to get rid of him. This cancel
+culture is pervasive, nobody can say anything anymore, any famous artist, movie actor, musician or band
+member, videogame developer, you name it,
+If someone applies the label racism on him, regardless of if there's any merit to it, unlike the Scott Adams case,
+their life is ruined, their job is removed, if they need food they starve, if they need rent they're on the street, their
+children starve with no food, and the artist becomes a MCDONALDS WORKER.
+The Tribunal does not need to decide whether those publishers characterized Adams fairly.
+Nor does this submission need to turn Scott Adams into a test case concerning freedom of expression.
+His earlier employment account supplies the relevant illustration: according to Adams, twice in his corporate career he
+advanced until he was expressly told that being white and male prevented further promotion.
+That is enough for the purpose for which the example is offered.
+The Principle The Applicant does not ask that historically disadvantaged groups themselves be disadvantaged.
+He asks for something simpler:
+equal standing.
+A remedial system should contain a coherent account of what remedy it seeks to accomplish, how progress is measured, and
+when demographic preference is no longer necessary. Otherwise there is a legitimate concern that an exceptional
+corrective mechanism can become an ordinary and permanent feature of social organization.
+The Applicant's objection is ultimately to permanent demographic preference.
+He rejects the proposition that his race or sex should entitle him to superior treatment.
+He equally rejects the proposition that they should justify inferior treatment.
+And that principle returns directly to the Toronto Police Service allegation.
+Whatever broader debates exist concerning employment equity, historical disadvantage or remedial programs, the Applicant
+approached the Toronto Police Service as an individual citizen seeking access to a public service.
+He alleges that within approximately one minute, before his report had meaningfully been heard, the Hate Crimes Unit officer
+had already decided to transfer him elsewhere.
+Race was pleaded.
+Mental disability was pleaded.
+The Applicant does not need the Tribunal to decide the entire Canadian debate over affirmative action in order to decide what
+happened during that minute, he is merely illustrating the cultural zeitgeist and historical background of the situation that
+resulted, in that instance, in that dropped call, in his opinion.
+The immediate question is much smaller:
+Was this individual afforded the same opportunity to be heard and assessed on the substance of his complaint as another
+person seeking the same public service, without his race or psychiatric disability operating against him?
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 22
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+4.
+
+THE FACTS OF THE MATTER - TPS
+
+The Event-Specific TPS Allegation
+My complaint concerning the Toronto Police Service is principally directed at the Hate Crimes Unit and the manner in which
+my call was handled. The central point is simple: I called seeking to report what I believed were hate-motivated incidents
+connected to a protected characteristic. Before I had a meaningful opportunity to explain the incidents, the available
+identifying information, or why I believed disability was relevant, the officer had already begun arranging to transfer me out
+of the Hate Crimes Unit.
+The significance of the timing is not that an officer is required to remain on a telephone call for some arbitrary minimum
+number of seconds. The significance is what had not yet been heard. The underlying account involved several incidents
+that I had, at the time, partly combined in my own mind. Some were serious; some were less serious; and I have since
+reconsidered or corrected aspects of my original interpretation. I needed time to separate them and explain them. Instead,
+within approximately one minute, questions were already being asked for the purpose of transferring my call to a division.
+The transfer process itself then took approximately another one to two minutes.
+What I Had Not Yet Been Able to Explain
+The police position appears to have been that I had not provided information capable of identifying a suspect. My objection is
+that I had not yet been given a meaningful opportunity to provide it. I had a description relating to one person and a
+photograph relating to another. We never reached a substantive discussion of that information before the transfer decision
+was underway.
+The incidents I was trying to explain included the following. I had experienced a longer pattern of people spitting or appearing
+to spit near or at me. On one occasion, I believed someone had spat on my chest while I was travelling toward Moores in
+the downtown financial district. I later reconsidered that event and accept that it is possible I spat on myself while coughing
+after smoking. I had considered that possibility at the time and dismissed it too quickly. On another occasion, a man on a
+bicycle spat on me. I acknowledge that I had been behaving in an annoying manner. I also previously described a young
+man carrying a staff in a way that made him sound threatening; I later encountered him again and concluded that I had
+unintentionally misrepresented him. He appeared to be a regular person in the neighbourhood and I no longer regard that
+incident as evidence that I was in danger.
+Another incident was different. I encountered an older Southeast Asian man whom I understood to work at a Pizza Hut. As I
+walked by, he turned and spat in my direction. I moved and the spit did not land on me. I understood this as an attempted
+spitting incident. I photographed him and later supplied the photograph in the email chain that I intend to rely upon as
+evidence. I therefore had, at least in relation to that incident, a photograph and a place of work that could potentially assist
+identification.
+At the end of the factual account, I intended to explain why I believed the pattern was connected to mental illness as a
+protected ground. That explanation was not simple. It involved the circumstances of my neighbourhood, my public creative
+work, my reputation at the time, and the way I believed people were reacting to me. Whether that theory ultimately had
+sufficient evidentiary support is a separate question from whether I should have been allowed to explain it before the
+service I sought was redirected.
+The Later Officer and an Important Concession
+A police officer later attended and listened to my account. I found him professional, friendly and willing to hear me. We even
+spoke about Judge Dredd comics. No report number was provided and, to my understanding, no formal report was
+ultimately filed. After reflection, I do not object to that officer's assessment. Once my account had actually been heard, I
+recognized that substantial parts of my theory rested on assumptions, emotion, rashness or mistakes, even though the
+underlying string of incidents was real and some incidents remained serious.
+That concession is important. My case is not that police were legally required to agree with my interpretation or lay charges.
+My complaint is about the earlier process: the Hate Crimes Unit did not first hear the report and then reject it on its merits. I
+allege that I was redirected before the substance of the report could meaningfully be assessed. The later officer
+demonstrates the distinction I am asking the Tribunal to draw between listening and disagreeing, on the one hand, and
+deciding that the complainant should be routed elsewhere before his complaint has been heard, on the other.
+The Transfer, Divisional Calls, and Wellness Check
+After the Hate Crimes Unit transfer, the call moved through divisional channels. I was offered assistance relating to food and
+shelter when what I was attempting to obtain was an opportunity to make a police report. A wellness check was also
+proposed. At first I misunderstood the wellness check as part of the reporting process. When I realized what was being
+contemplated, I tried to cancel it and explained that I was recording the events and intended to pursue an HRTO complaint.
+My fear of a wellness check was shaped by my prior history of police and psychiatric intervention. I believed that such a
+check carried a serious risk of involuntary assessment or confinement. I do not ask the Tribunal to treat my prediction that
+confinement was 'guaranteed' as an established fact. The legally relevant point is that the shift from complainant to
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 23
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+potential object of a wellness intervention was, from my perspective, immediate and frightening, and occurred while I was
+persisting in an attempt to obtain the police service I had originally sought.
+A later dispatcher was calmer and, after I explained that the HRTO references were genuine rather than gibberish, the
+wellness response was de-escalated. I was nevertheless told that no absolute promise could be made that officers would
+not attend. This sequence is part of the factual basis for my allegation that my psychiatric status affected how my request
+for police service was understood and handled.
+Scope of My Grievance
+I have had other painful experiences involving TPS, including historical family and psychiatric events described earlier in this
+submission. Those experiences explain my distrust, but I do not ask the Tribunal to decide this case as a general
+indictment of every Toronto police officer. I have also encountered officers whom I regarded as professional and kind. My
+principal present grievance is narrower: the Hate Crimes Unit should have meaningfully heard and assessed the report
+before deciding to transfer me elsewhere.
+I allege that disability was a factor in the redirection. Race was also pleaded. I recognize that the racial allegation requires
+evidence and cannot be established merely by my belief that race must have been involved. My position is that the Tribunal
+should determine, from the call recording, records, testimony, policies and surrounding circumstances, why the transfer
+decision was made when it was made and whether either protected ground was a factor.
+
+5.
+
+LEGAL SIGNIFICANCE - TPS
+
+Legal Significance - Access to Police Services
+Section 1 of Ontario's Human Rights Code protects equal treatment with respect to services without discrimination because
+of, among other grounds, race and disability. The Applicant's allegation is therefore most precisely framed as a question of
+equal access to public services: whether his psychiatric disability, race, or both were factors in the decision to redirect him
+before the substance of his complaint had been meaningfully heard.
+The Supreme Court of Canada's discrimination framework requires a protected characteristic, an adverse impact in the
+relevant service, and proof that the protected characteristic was a factor in the adverse impact. Intent to discriminate is not
+required. At the same time, the connection to the protected ground must be proved on a balance of probabilities; it cannot
+rest on speculation alone. That makes the contemporaneous call recording, transfer records, officer evidence, dispatch
+notes and applicable policies substantially more important than rhetoric about what the officer 'must' have thought.
+Disability: The Stronger Evidentiary Theory
+On the present record, disability is the more direct theory because the subsequent response expressly moved toward food,
+shelter and wellness intervention rather than simply receiving the complainant as a person attempting to report an offence.
+The Applicant alleges that his psychiatric presentation or disclosure caused the service to reclassify him from complainant
+to person in need of crisis management before the underlying complaint had been heard.
+The Supreme Court has recognized that discrimination may operate through perception, myths and stereotypes about
+disability, not only through actual functional limitations. The question is therefore not whether the Applicant had a
+psychiatric diagnosis - he did - but whether assumptions associated with that diagnosis materially affected the service he
+received.
+Race: Preserve the Pleading, Require the Proof
+Race remains a pleaded ground, but the allegation must be advanced with evidentiary discipline. Ontario appellate authority
+recognizes that discrimination is often proved circumstantially and that an adjudicator may draw reasonable inferences
+from multiple pieces of evidence. It is equally important, however, not to reverse the burden by assuming discrimination
+merely because the decision is unexplained. The Applicant should therefore invite the Tribunal to examine whether race
+was a factor, rather than state as an established fact that it was.
+The more rigorous formulation does not depend upon asserting that only two logically possible explanations existed for the
+transfer. Other explanations are possible. The evidentiary question is narrower and stronger: if TPS says neither race nor
+disability played any role, what contemporaneous, non-discriminatory reason explains the decision to transfer the call
+before the substance of the complaint had been heard? The Respondent can answer that question with evidence. The
+Tribunal can then assess that explanation against the recording and the surrounding circumstances.
+Reprisal
+The Applicant also raises reprisal. That allegation should be kept analytically separate from the original transfer. The original
+transfer occurred before the later assertion that an HRTO complaint would be made and therefore cannot itself have been
+retaliation for that later assertion. The potential reprisal issue concerns what happened after the Applicant invoked humanrights protections and announced an intention to complain, including whether the wellness response was initiated,
+escalated or maintained with retaliatory intent.
+Because reprisal under section 8 requires proof of retaliatory intention, chronology is relevant but not enough by itself. The
+strongest evidence would be the recordings and records showing what was said immediately before the wellness response,
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 24
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+who initiated it, the reasons recorded for it, whether the response changed after HRTO was mentioned, and whether the
+officers or dispatchers understood the Applicant to be exercising or threatening to exercise Code rights.
+What the Tribunal Is and Is Not Asked to Decide
+The Tribunal need not determine whether every incident the Applicant originally attributed to hate independently satisfied the
+legal characterization of a hate-motivated offence. Nor is it asked to conclude that the later attending officer was wrong not
+to file a report. The narrower issue is whether the Applicant received equal treatment in access to the police service at the
+point when the Hate Crimes Unit decided to redirect him.
+This distinction protects both sides of the case. Police remain free to assess credibility, jurisdiction, evidentiary sufficiency
+and whether an incident is actionable. The Applicant, however, says those judgments should follow a meaningful
+opportunity to present the relevant facts, rather than be replaced by disability-based assumptions about what kind of
+service a psychiatric complainant requires.
+Evidence That Should Resolve the Dispute
+The most probative evidence is likely to include: the complete Hate Crimes Unit call recording; the time stamps showing
+when the transfer decision was initiated; dispatch and transfer notes; any occurrence or CAD records; the identities and
+testimony of the involved personnel; TPS policies governing Hate Crimes Unit intake and transfers; records concerning the
+proposed wellness check; the later attending officer's notes; and the Applicant's contemporaneous email chain containing
+the photograph and other identifying information.
+This evidence permits the Tribunal to adjudicate the dispute on the contemporaneous record rather than on either party's
+characterization alone. It can determine what the officer knew at the moment of transfer, what information had not yet been
+heard, why the call was redirected, and whether a protected ground was a factor.
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 25
+
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+6. LIST OF AUTHORITIES
+Human Rights Code, R.S.O. 1990, c. H.19 - ss. 1, 8, 45.2
+Moore v. British Columbia (Education), 2012 SCC 61 - Protected characteristic, adverse impact, protected characteristic
+as a factor.
+Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Bombardier Inc. (Bombardier
+Aerospace Training Center), 2015 SCC 39 - Connection to protected ground must be proved on a balance of
+probabilities; circumstantial evidence may be used.
+Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Montréal (City); Quebec
+(Commission des droits de la personne et des droits de la jeunesse) v. Boisbriand (City), 2000 SCC 27 - Disability
+discrimination may be based on perception, myths and stereotypes.
+British Columbia (Public Service Employee Relations Commission) v. BCGSEU, 1999 CanLII 652 (SCC) (Meiorin) Individualized accommodation / justification framework.
+Quebec (CNESST) v. Caron, 2018 SCC 3 - Reasonable and practical accommodation short of undue hardship.
+Peel Law Association v. Pieters, 2013 ONCA 396 - Circumstantial proof and inference in discrimination cases.
+Shaw v. Phipps, 2012 ONCA 155 - Inference of racial discrimination from multiple pieces of evidence; police-service
+context.
+Noble v. York University, 2010 HRTO 878 - Reprisal framework, including retaliatory intent.
+
+SECONDARY FACTUAL SOURCE
+[3] CBS News / Associated Press, “Dilbert distributor cuts ties to comic strip's creator over his remarks about
+race,” February 27, 2023. https://www.cbsnews.com/news/dilbert-distributor-andrews-mcmeel-universal-cutsties-creator-scott-adams-race-remarks/
+
+HRTO File 2026-67461-I | Written Submissions of the Applicant | Page 26
+
+
