@@ -1,0 +1,146 @@
+PRISONER SALLY
+← LOKI'S KINGDOM
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+YOU — HP 100/100 | HUNGER 17 (Fed) | GOLD 206
+SALLY — HP 99/100 | HUNGER 26 (Hungry)
+Prisoner Sally
+PROVIDE FOR THE PRISONER
+GOLD: 206
+HUNGER: 26/100 — Hungry
+FULLNESS: 74/100
+
+Bread and Soup — 50 gold
+GIVE — 50 GOLD
+FOOD — A warm bowl of simple soup with thick bread.
+Bread and Soup was purchased, but Sally was already full enough to receive no emotional benefit.
+SALLY
+...Who speaks through the wall?
+YOU
+Is it too soon to eat, would you like some Soup?
+SALLY
+For a moment, Sally's voice dissolves into an unintelligible murmur.
+SALLY
+Sally accepts the Bread and Soup, but only after a long hesitation. "I'm already full. I can finish the last little bit, perhaps, but don't mistake excess for care."
+YOU
+I'm sorry, I think i see how it works, i don't hurt you if i give you enough to fill the last little bit of hunger, a bit too much, just as long as i don't give you too much.
+SALLY
+Well, you're starting to understand how things work down here.
+YOU
+i try to keep you fed at all times in case i'm away for a while.
+SALLY
+That's...nice.
+YOU
+What color is the apple?
+SALLY
+I don't know why you're asking that.
+YOU
+What color is the key?
+SALLY
+I don't know.
+YOU
+What is my name?
+SALLY
+I don't know.
+YOU
+There's an appletree on the top of the hill.
+SALLY
+There's an appletree on the top of the hill.
+YOU
+What color apples are growing on it?
+SALLY
+I don't know.
+YOU
+The Apple is Red. Try to remember.
+SALLY
+That doesn't matter.
+YOU
+what color is the apple?
+SALLY
+The red apple isn't really important.
+YOU
+When i was a baby, my first memory was listening to music while i made weird sounds. I think that was the first memory out of any of them.
+SALLY
+Music... *silence*
+YOU
+When i was a boy, we found all these frogs at this house in the country. i loved the frogs and wanted to take them home with me, so i put them in a container and brought them home. But my house was not their natural habitat, so they all died one by one.... :(
+SALLY
+So, maybe it's good that I'm down here?
+YOU
+When I was young guy, I attacked a wasp nest. They were just building their nest in the garbage can by the swimming pool, I ran up and hit the nest with sticks. The wasps all turned and started chasing me to punish me for attacking them. I dove into the water, and they hit the water one after another. While i laughed and laughed.
+SALLY
+You're laughing about hurting wasps?
+YOU
+Around that same time, I found a slug, and i heard if you put salt on them, they slowly melt until they die. So i poured salt all over it's body. it frothed up, it must have been agnoizing..... yes, there were many things like this, I harmed insects, in horrible ways.
+SALLY
+There's a black gulf in my mind.
+YOU
+There was a fly or moth or something, i caught it in my fingers, or maybe in a spider web (I liked throwing bugs into spider webs and watching the spider weave them up and eat them)..... anyway, i took that insect, and i slowly ripped off it's wings, one by one, until it had none. Then I left it there.....
+SALLY
+My memories...
+YOU
+I had goldfish in a tank, my parents kept buying and..... refreshing......
+SALLY
+My memories...
+YOU
+The goldfish would get sick and die because i wasn't good at caring for them, so..... my parents would just buy new ones..... eventually they stopped, and i did love the fish, it wasn't malice, it was neglect.
+SALLY
+Neglect...
+YOU
+i found a kitten in a rainstorm when i was a teenager.
+SALLY
+that storm...
+YOU
+it was dying in the rain.
+SALLY
+so it drowned...
+YOU
+no, i took it in, and cared for it, and brought it back to good health. or i thought it was.....
+SALLY
+so it lived...
+YOU
+yes for a few weeks, then it died, i had been giving it weed smoke, thinking it was funny, the cat was clearly already very injured from being abandoned in the rain, it was already close to dying, but i don't know how much that weed smoke might have hurt him. He was an orange cat, a calico, I was going to name him: "Ace"
+SALLY
+why 'ace'?
+YOU
+It was the name of Hunter Thompson's Monkey. But I also thought it was a good name.
+SALLY
+Stop reminiscing.
+YOU
+You're right, we shouldn't talk about Neko.
+SALLY
+Let's not.
+YOU
+I tried very hard to keep her safe.
+SALLY
+No.
+YOU
+But we won't talk about that for now....
+SALLY
+Fine.
+YOU
+What color is the apple?
+SALLY
+red
+YOU
+And in the end, We'll fly away, together forever, walking down a dusty road. And you'll be missed, when you are gone, i won't be missed, i never was. and we'll come back, for another round, and they'll be missed, all summer long. Two taaaaastes of sweet eternity, one in a little pill, that tastes just like me, one in another, little tab of wine, which tastes just like the other, it tastes like me, and you're serious, i can tell, your demons going back to Hell, and you all want, what you deserve, but i take from you another apple.
+SALLY
+Oh, great. Now you're getting poetic.
+YOU
+Don't you like poetic?
+SALLY
+Poetry is one thing, madness is another.
+YOU
+What's wrong?
+SALLY
+Nothing.
+YOU
+People often mistake the best poetry for madness.
+SALLY
+That's precisely why I do it.
+YOU
+hahahah
+SALLY
+Indeed.
+Speak through the wall...
+SPEAK

@@ -1,0 +1,850 @@
+PART I — WRITTEN SUBMISSIONS OF THE APPLICANT
+
+HRTO FILE: 2026-67265-I Brendan S. Rose v Soundcloud 2026-08-17 4:12 PM
+
+A. Overview
+
+1.  The Applicant submits that this Application has a reasonable
+    prospect of success and should proceed to a hearing on its merits.
+
+2.  At its core, this is a case about equality of access to economic
+    participation in a modern digital music service. The Applicant is an
+    Ontario artist with a disability who uses artificial intelligence as
+    a disability-related aid in the creation and production of music.
+
+3.  The Applicant alleges that SoundCloud applies a rule or practice
+    that prevents or restricts monetization of music because it was
+    created using artificial intelligence. Whatever the purpose of that
+    rule may be, its effect upon the Applicant is not neutral.
+
+4.  The Applicant’s disability creates substantial barriers to
+    conventional methods of professional music production. Traditional
+    production ordinarily requires sustained interpersonal collaboration
+    with musicians, bands, producers and others. Those methods have
+    repeatedly proven inaccessible or ineffective for the Applicant
+    because of disability-related limitations affecting sustained
+    interpersonal and professional relationships.
+
+5.  Artificial intelligence removed that barrier. It enabled the
+    Applicant to transform his writing, compositions, concepts and
+    artistic direction into completed musical works without depending
+    upon a conventional band structure that he has been unable to
+    maintain.
+
+6.  The Applicant puts the matter simply:
+
+  I am a human artist.
+
+7.  Artificial intelligence does not change that fact. The Applicant
+    conceives the works, writes and directs his artistic output, selects
+    what is produced and published, develops the corpus in which those
+    works exist, and presents those works to an audience. AI is the
+    instrument and disability-related aid through which the Applicant is
+    able to participate meaningfully in music production.
+
+8.  The Applicant therefore rejects any suggestion that accommodating
+    his use of AI would improperly divert money away from “human
+    artists.” The Applicant is himself the human artist seeking equal
+    access to monetization. The distinction created by the challenged
+    policy is not, in his circumstances, between human creativity and
+    non-human creativity. It is between a human artist able to work
+    through conventional production methods and a human artist who
+    alleges that disability requires him to work through an alternative
+    technological method.
+
+B. Adverse-Effect Discrimination Based on Disability
+
+9.  The Applicant does not need to establish that SoundCloud adopted its
+    AI policy because it intended to discriminate against persons with
+    disabilities. That is not the principal theory advanced here.
+
+10. The Application concerns adverse-effect or constructive
+    discrimination: a requirement that may appear neutral but allegedly
+    produces unequal consequences when applied to the Applicant because
+    of a characteristic protected by the Ontario Human Rights Code.
+
+11. Section 11 of the Code addresses requirements, qualifications or
+    factors that are neutral on their face but result in exclusion,
+    restriction or preference affecting persons identified by prohibited
+    grounds. Ontario human-rights guidance likewise recognizes that
+    discrimination need not be intentional and that service providers
+    have obligations concerning disability-related barriers. (Ontario
+    Human Rights Commission)
+
+    [Authority note: Ontario Human Rights Commission v. Simpsons-Sears Ltd. (O’Malley), 1985 CanLII 18 (SCC), and Moore v. British Columbia (Education), 2012 SCC 61, support the adverse-effect / meaningful-access framework. See Authorities A2 and A4.]
+
+12. The Applicant’s position can therefore be expressed as a
+    straightforward chain:
+
+Disability → disability-related barrier to conventional music production
+→ AI as a means of overcoming that barrier → successful participation in
+music production → exclusion of AI-assisted works from monetization →
+adverse economic effect.
+
+13. Before the availability of generative music technology, the
+    Applicant spent many years attempting to make music through methods
+    that did not provide a viable route to independent professional
+    participation. Among other things, he created vocals over existing
+    copyrighted recordings because he could not independently produce
+    the underlying musical performances and could not reliably obtain
+    them through conventional collaboration.
+
+14. Generative music technology fundamentally changed that situation.
+    For the first time, the Applicant had an instrument capable of
+    addressing the particular barrier preventing independent production.
+
+15. The Applicant describes Suno in functional terms as “my guitar.” The
+    analogy is not intended to suggest that the technology is literally
+    equivalent to a guitar. It describes its role: it is the means
+    through which the Applicant can translate human authorship, writing,
+    direction and creative decisions into music without requiring a
+    conventional collaborative structure that disability makes
+    substantially inaccessible to him.
+
+16. The resulting productivity is not evidence that accommodation is
+    unnecessary. On the contrary, the Applicant submits that his
+    productivity demonstrates that the accommodation works.
+
+17. A person does not cease to have a disability-related need merely
+    because the technology addressing that need enables the person to
+    perform successfully.
+
+18. Ontario human-rights principles recognize that accommodation exists
+    to remove barriers so that people with Code-related needs can have
+    equal opportunities, access and benefits. Accommodation can require
+    adjustment of policies or rules rather than requiring the affected
+    person simply to function through the conventional method. (Ontario
+    Human Rights Commission)
+
+    [Authority note: Meiorin, Grismer and VIA Rail explain that standards must be examined for accommodation and individual difference rather than treated as self-justifying merely because they are uniform. See Authorities A5, A6 and A7.]
+
+19. The Applicant alleges that SoundCloud’s monetization practice
+    produces the opposite result. He can use technology to overcome the
+    disability-related barrier and participate creatively, but the
+    resulting works are then excluded from meaningful economic
+    participation because of the technological method that enabled him
+    to produce them.
+
+20. On the Applicant’s case, this is not a request for preferential
+    royalties, guaranteed commercial success, or payment for work that
+    would otherwise be ineligible for legitimate reasons.
+
+21. It is a request for an opportunity to participate in the same
+    monetization system available to other eligible artists, without
+    being excluded merely because disability-related needs resulted in
+    the use of AI in producing the work.
+
+22. The Applicant has generated millions of listens. The precise
+    economic loss resulting from the alleged exclusion will ultimately
+    depend upon evidence concerning SoundCloud’s monetization system,
+    the streams that would otherwise have qualified, applicable royalty
+    calculations, and other relevant factors.
+
+23. The exact quantum need not be exaggerated to establish the alleged
+    adverse effect. The essential allegation is that substantial
+    listening activity occurred while the Applicant was denied the
+    economic opportunity ordinarily associated with eligible monetized
+    listening.
+
+C. Creed and the Religious Corpus
+
+24. The Application independently raises discrimination based upon
+    creed.
+
+25. The Applicant’s music forms part of a sincerely held religious
+    corpus. The fact that the works may outwardly resemble rap,
+    electronic music, popular music or other secular artistic forms does
+    not determine their religious significance to the Applicant.
+
+26. The Applicant’s creed is unconventional and has evolved over time.
+    Neither fact, by itself, establishes insincerity.
+
+27. The Applicant relies upon Syndicat Northcrest v. Amselem for the
+    principle that the assessment of religious belief focuses upon the
+    individual’s sincerely held belief rather than requiring the
+    claimant to establish that the practice is objectively mandatory
+    according to an external religious authority. The jurisprudence
+    cautions against turning courts into arbiters of religious
+    orthodoxy. (SCC CSC Lexum)
+
+    [Authority note: Syndicat Northcrest v. Amselem, 2004 SCC 47, is the principal Supreme Court authority relied upon for sincerity and the Court’s refusal to make religious orthodoxy the legal test. See Authority A8.]
+
+28. Ontario human-rights guidance similarly recognizes that a sincerely
+    held creed belief need not be an essential element of a creed or
+    recognized as valid by religious officials. (Ontario Human Rights
+    Commission)
+
+29. There is substantial evidence available concerning sincerity in this
+    case. The Applicant has created an extraordinarily large corpus of
+    works over an extended period and has consistently attributed
+    profound religious significance to the creation and preservation of
+    that corpus.
+
+30. The Applicant’s historical conduct also includes extraordinary
+    personal sacrifices associated with continuing this work under
+    extremely adverse circumstances.
+
+31. The Applicant does not contend that such sacrifice is required to
+    establish religious sincerity. It plainly is not.
+
+32. Rather, that history is evidence available in this particular case
+    supporting the proposition that the Applicant’s characterization of
+    the corpus as religious is sincerely held and is not a belief
+    manufactured for purposes of litigation.
+
+33. The Applicant further submits that where unusually substantial
+    evidence of sincerity exists, that evidence cannot rationally be
+    discounted merely because the particular creed or its means of
+    artistic expression appears strange or unfamiliar to an outside
+    observer. To do so would effectively subject an unconventional creed
+    to a more demanding sincerity standard than a familiar creed.
+
+34. That latter proposition is advanced as the Applicant’s argument. It
+    does not depend upon claiming that Amselem expressly formulated that
+    precise evidentiary rule.
+
+35. Ontario’s adverse-effect framework is particularly relevant to this
+    aspect of the case. The OHRC expressly recognizes that an
+    organizational rule may constitute creed discrimination through its
+    unintended effect and that accommodation seeks to permit people with
+    different sincerely held creed beliefs to participate equally in
+    services. (Ontario Human Rights Commission)
+
+36. The Applicant alleges that the challenged monetization rule
+    adversely affects the very works through which he creates and
+    disseminates his religious corpus.
+
+37. Accordingly, the disability and creed allegations are distinct but
+    intersect:
+
+The Applicant uses AI because of disability-related needs.
+
+The Applicant uses that means of production to create works forming part
+of his religious corpus.
+
+The challenged monetization rule allegedly attaches an economic
+disadvantage to those works because of that means of production.
+
+38. One apparently neutral rule therefore allegedly produces adverse
+    effects engaging two protected characteristics in the Applicant’s
+    particular circumstances: disability and creed.
+
+D. This Is an Equality Claim, Not an Attack on SoundCloud
+
+39. The Applicant does not allege that SoundCloud is inherently hostile
+    to persons with disabilities or to his creed.
+
+40. Nor is this proceeding motivated by personal hostility toward
+    SoundCloud.
+
+41. The Applicant regards SoundCloud as a valuable service. It has
+    enabled his music to reach listeners and has facilitated
+    interactions with an audience that would otherwise have been
+    difficult or impossible for him to develop.
+
+42. The Applicant’s objection is narrower: he believes the monetization
+    policy is wrong because, as applied to his circumstances, it permits
+    him to contribute music, audience engagement and listening activity
+    to the platform while preventing him from participating equally in
+    the corresponding economic opportunity.
+
+43. The remedy sought should therefore be understood principally as an
+    equality remedy. The Applicant wants the opportunity to work,
+    compete and receive monetization without a disability-related means
+    of production automatically disqualifying his work.
+
+44. Human-rights accommodation is not a demand for special privilege.
+    Its purpose is substantive equality: addressing rules or structures
+    that may function adequately for most people while creating barriers
+    for people protected by the Code. (Ontario Human Rights Commission)
+
+45. Again:
+
+  I am a human artist.
+
+46. The Applicant does not accept that recognizing his
+    disability-related use of AI takes an opportunity away from human
+    artists. Accommodating the Applicant would provide an opportunity to
+    a human artist who alleges that conventional production methods are
+    inaccessible because of disability.
+
+E. Reasonable Prospect of Success
+
+47. The Tribunal is not presently being asked to determine every
+    disputed fact or finally quantify the Applicant’s damages.
+
+48. The immediate question is whether the Application should be
+    terminated at the summary stage notwithstanding the factual and
+    legal foundation available to the Applicant.
+
+49. The Applicant can identify evidence concerning his disability; the
+    functional barriers affecting conventional music production; his
+    historical attempts to make music before generative technology
+    became available; his use of AI in overcoming those barriers; his
+    extensive musical output; SoundCloud’s treatment of AI-assisted
+    works; the listening activity generated by those works; the
+    religious corpus and its development; and the sincerity of the
+    beliefs associated with that corpus.
+
+50. There are consequently genuine factual and legal questions
+    concerning whether the challenged policy produces adverse-effect
+    discrimination and, if so, whether the Applicant’s disability- and
+    creed-related needs could be accommodated without undue hardship.
+
+51. Those questions warrant determination on a proper evidentiary record
+    rather than dismissal on the premise that AI-assisted music
+    necessarily represents something other than human artistic
+    participation.
+
+52. The Applicant respectfully submits that the Application therefore
+    has a reasonable prospect of success and should be permitted to
+    proceed.
+
+------------------------------------------------------------------------
+
+QUESTIONS REGARDING JURISDICTION:
+
+Were you living in Ontario throughout the entire period relevant to the
+SoundCloud dispute?
+
+1)  Yes
+
+Were essentially all of the disputed tracks written/created while you
+were physically in Ontario?
+
+2)  Yes
+
+Were the tracks uploaded to SoundCloud from Ontario?
+
+3)  Yes
+
+Did you operate/manage the SoundCloud account from Ontario?
+
+4)  Yes
+
+5)  Yes, there was the option to monatize, AI Tracks are not eligible
+    for monetization by default, so attempting to monetize them, while
+    physically possible, is in violation of the SOUNDCLOUD TOS (which
+    our position is the Laws of Canada Supercede the TOS of Soundcloud
+    when doing business within the borders of our nation.) As it is
+    against the rules, I never tried to monatize. I try to follow the
+    Soundcloud rules.
+
+6)  Were monetization applications or submissions made from Ontario?
+
+No, I was informed by Soundcloud Support that Monatization and
+Distribution of AI tracks was against Soundcloud’s TOS, when I attempted
+succesfully to publish an AI generated album (THE DEVIL’S SHADOW), which
+was approved, then when I learned about the against AI Monatization and
+Distribution, I reported my mistake to Soundcloud Support. My ability to
+post Vinyl’s was removed, as I was attempting to purchase one. I later
+was told that moves like this are a prelude to a ban and essentially
+operate as 1st strikes under a 3 strike policy (although I cannot
+confirm the details as it is internal company policy as far as I’m
+aware.) meaning when my satricial song (or hymn) GOING FULL FASCIST (A
+satire of fascism written in 2018) was taken down under NETZDG, A law
+which claims jurisdiction over me although I am not a German, As i do
+business with Germany, I am subject to that rule. The Company recived at
+report from some enterprising young individual, that my song (A series I
+had recently remade with Suno on Soundcloud) was breaking German law, I
+disagree, the song seeks to humiliate and oppose fascism, by showing how
+bad it is, arguably almost by definition, you would have to be thinking
+like a fascist to want to ban it at all. But in any case, the report was
+filed, the German Government gave Soundcloud if I’m not mistaken 24
+hours to remove my “offending content” [my satire opposing fascism] or a
+50 million Euro fine would have been imposed, and other measures should
+they refuse compliance. This resulted in a strike on my account, and
+technically, under my understanding, with the vinyls acting as the first
+strike, the satire the second, I was one strike away from termination. I
+was in Ontario when it happened.
+
+7)  Did you receive SoundCloud’s decisions/notices while in Ontario?
+
+Yes. They continued sending these notices, throughout the proceedings,
+at no time CC’ing the Registrar and me, and continued this behavior even
+after the case was frozen.
+
+8)  Where would SoundCloud royalties have been received?
+
+Here in Ontario. Under approximate numbers provided by Google, 1 million
+streams is approximately $6000 US Dollars. I have 2,140,188 plays in the
+last 12 months (+100%) since December 2025, When I began actively
+posting. That’s a 100% increase year over year so in effect, that was
+from nothing, from zero to this in 9 months. According to standard
+payouts, I believe I am owed a bit over $12000, and I would like to be
+able to actively pursue my career moving forward without these
+obstructions.
+
+9)  If there was economic loss from demonetization, where was that loss
+    experienced?
+
+In my house, at Stanley Ave, it was experienced as, some non-trivial
+periods of food insecurity, although i am living and getting by ok now,
+it was much worse before.     [Authority note: Athey v. Leonati, 1996 CanLII 183 (SCC), is the canonical Supreme Court authority for the thin-skull rule in tort. Its direct application to HRTO remedies should not be assumed; it is best treated here as an ancillary damages analogy unless specific human-rights authority is found. See Authority A12.]
+
+I believe my mental health diagnosis and past
+history make this a good candidate for the Thin Skull Rule, as I am
+disproportionately affected by decisions that limit or remove my income,
+as I am totally reliant on ODSP and Family Income (which ultimately we
+cannot afford in a sustainable way. It leaves my old age severely in
+question.)
+
+10) Were there any materially relevant activities in another province or
+    country?
+
+Soundcloud Operates it’s headquarters out of Karl Marx Street in
+Germany.
+
+11) Is there anything about the actual dispute that physically occurred
+    in Germany, other than SoundCloud or related corporate operations
+    being located there?
+
+The activation of NETZDG.
+
+B. Your relationship with SoundCloud
+
+12) They are the primary music distribution platform on the Internet, they are
+    where most of most of the money is made in music, they are where new
+    stars rise up, and old ones fall, I was drawn to them because they
+    have a reputation for allowing for mature musical acts to prosper
+    too, it’s a good place for gangster rappers, and other outcasts,
+    whom I admire. I actually had 2 or 3 Soundcloud accounts before this
+    one, posting some of the most extreme music ever made, but as it was
+    copyrighted music, nobody saw it, except briefly the lawyer for
+    Eminem, as i kept stealing his backtracks, which I would have to go
+    back to without Suno. I actually built a non-trivial fanbase, though
+    nothing like i have now, the music made was wonderful if your goal
+    is pushing boundaries, or pure aesthetics, or intellectual
+    stimulation, but it was not moral, they were evil works, full of all
+    my worst instincts, If i recall neither account was shut down, I
+    shut them down, mostly out of shame. But I remembered that
+    Soundcloud had let me run wild and I thought, well, I have Suno,
+    Maybe we can make it work this time. I toned it down a lot, steered
+    clear of topics that would cause trouble, GOING FULL FASCIST was a
+    mistake, I was compliance testing them for content guidelines, to
+    see what they would tolerate, I thought the song was risky but
+    probably ok, I was very wrong. It almost terminated my account.
+
+I consider them a useful service. I do not think they are malicious. I
+believe they made that policy hastily and in err, and ultimately it
+would be better for them, me, us, and everyone if they change this rule
+against AI Monatization and Distribution.
+
+13) When did you create your SoundCloud account?
+
+The first two were created between approximately fourth quarter 2023 and
+April 2024 mid month. The current Soundcloud acccount was created in or
+around December 2025, during a mostly unrelated matter regarding another
+HRTO file that was withdrawn prior to service.
+
+14) Were you living in Ontario when you created it?
+
+Yes.
+
+15) What kind of account was it originally?
+
+It originally housed what I thought was my lifetime body of work, Songs
+violating copyright law, which I feel should be granted religious
+accommodations to excempt them of this. They were commercial songs,
+chopped and spliced up with movie and tv show and youtube clips, and
+other singers and songs, with me narrating generally or singing over the
+tracks. They beautiful and profoundly dark works of art, I do not make
+works like that anymore, I do not wish to, I feel they were too
+negative, and a spoonful of compromise can often do what a bucket of
+“truth” can win.
+
+My second or third account was primarily an AI music channel, i was
+still learning Suno then, Eventually i stopped uploading my old arcs,
+and switched to Suno, this was supposed to secure legitimacy, and it did
+to an extent, it brought legitimacy to the music, for once I wasn’t
+being squashed in the algorithm. Suno offers a song promotion service
+with their pro accounts, it gives songs about 100-150 hits of promoted
+traffic each, when you have thousands of tracks this adds up, and I got
+my 2 million.
+
+16) What kind of account do you have now?
+
+The Same Soundcloud Pro Account.
+
+17) Have you ever purchased a SoundCloud subscription?
+
+Yes, many times.
+
+18) If yes, which product?
+
+Their pro service, with unlimited song uploads and tracks promoted in
+Related Tracks.
+
+19) Approximately how much have you been paid?
+
+0, though the number was technically 35 cents at last count. it is not
+enough for one payout so it cannot be withdrawn.
+
+20) Was payment made from Ontario?
+
+Yes i paid with my BMO Bank Account Debit Card, as I did today.
+
+21) Canadian dollars or another currency?
+
+It is paid in USD.
+
+22) What payment method?
+
+Debit Card.
+
+23) Was a Canadian/Ontario billing address associated with it?
+
+Yes.
+
+24) Did SoundCloud know from ordinary account/payment information that
+    it was dealing with a Canadian/Ontario customer?
+
+Yes
+
+Have you entered into separate SoundCloud for Artists terms?
+
+Artist Pro Unlimited upload time, fan-powered royalties, advanced
+analytics and more
+
+Separate monetization terms?
+
+Yes under their terms an AI Musician makes zero, fullstop. Essentially
+if you make 1 song they’ll give you money, if you make 100 songs, you
+get zero.
+
+Distribution terms?
+
+Yes Distribution is also prohibited, which they told me after
+accidentally publishing THE DEVIL’S SHADOW. It remains on Youtube and
+other platforms. I am proud of it. My son is on the cover.
+
+Any artist agreement beyond the ordinary Terms of Use?
+
+No
+
+Did you affirmatively click/accept any of those agreements while in
+Ontario?
+
+Yes. I do not think they supercede Canadian law at all, I claim all of
+my rights under Canadian law with Germans doing business in our country.
+
+Do we still have copies/screenshots/emails documenting any of this?
+
+Yes I still have the email chains, although I cannot document the old
+accounts.
+
+    [Evidence note: those email chains are potentially central because the Registrar’s letter says the Tribunal may ask what evidence the Applicant expects to present at a merits hearing, while the summary hearing itself ordinarily proceeds on the existing record and submissions rather than live evidence. See Procedural Authority P1 and Dabic, Authority A1.]
+
+======================================================================
+INTERVIEW SUMMARY
+======================================================================
+
+The answered interview establishes a concrete Ontario-centred factual theory. The Applicant says he lived in Ontario throughout the relevant period; created, uploaded and administered the works from Ontario; opened and operated the relevant SoundCloud account from Ontario; paid for SoundCloud's Artist Pro service from an Ontario bank account using Ontario billing information; accepted the relevant online terms while in Ontario; received SoundCloud's notices while in Ontario; and would have received monetization revenue in Ontario. He says SoundCloud knew through ordinary account and payment information that it was dealing with a Canadian/Ontario customer. He also identifies contemporaneous email chains capable of documenting the monetization/distribution discussions. These facts, if established, are more substantial than the bare proposition that an Ontario resident happened to suffer disappointment from a foreign website.
+
+The interview also clarifies an important feature of the adverse-effect theory: the Applicant says he did not knowingly submit AI tracks for monetization because SoundCloud Support had informed him that AI monetization and distribution were prohibited by the governing rules. The allegation is therefore not that a conventional monetization application was formally filed and individually refused; it is that a generally applicable rule allegedly made the Applicant's disability-related production method economically ineligible. That distinction must remain explicit. It is also why the precise policy, its date, its terms, the Applicant's subscription and rights documentation, and the relevant support communications are more important than rhetorical estimates about what SoundCloud "would have" done.
+
+The remaining unanswered questions in the earlier design document can be condensed into four evidentiary tasks rather than reproduced as hundreds of interrogatories: (1) identify the exact SoundCloud entity and contractual terms governing the Ontario account; (2) establish the precise AI monetization/distribution rule actually applied during the material period and whether accommodation was requested or reasonably available; (3) document the economic mechanism and any claimed loss using SoundCloud-specific royalty evidence rather than a generic per-stream estimate; and (4) identify the strongest authority on territorial jurisdiction over a foreign online service provider, including the effect, if any, of a foreign governing-law or forum-selection clause. These are matters for the next evidentiary stage of preparation, not reasons to dilute the present argument.
+
+======================================================================
+PART II — JURISDICTION: THE ACTUAL QUESTION IS THE LOCATION OF THE
+ALLEGED DISCRIMINATORY RELATIONSHIP, NOT THE LOCATION OF A SERVER
+======================================================================
+
+53. The jurisdiction issue should be stated narrowly. The Applicant does not submit that Ontario acquires authority over every aspect of a multinational corporation merely because an Ontario resident opens a browser. Nor does he ask the Tribunal to regulate SoundCloud's worldwide business. The submission is that the particular service and contractual relationship challenged here was entered into, performed and experienced in Ontario, and that the alleged adverse effect of the impugned rule operated upon an Ontario artist in Ontario.
+
+54. That distinction matters because the HRTO's current Practice Direction on Jurisdiction identifies applications whose events and allegations are "not sufficiently connected to Ontario" as potentially outside the Tribunal's jurisdiction. [J1] The present case, on the Applicant's pleaded facts, is not devoid of Ontario connections. It is saturated with them.
+
+55. The Applicant says: he was resident in Ontario; the works were created in Ontario; the works were uploaded and administered in Ontario; the Artist Pro service was purchased and used from Ontario; payment was made from an Ontario bank account associated with an Ontario billing address; the relevant online terms were accepted from Ontario; SoundCloud communicated its decisions into Ontario; the alleged prohibition operated on the Applicant's Ontario catalogue; and the foregone economic benefit would have been received in Ontario.
+
+56. The Code itself protects equal treatment in "services, goods and facilities" and separately protects the right to contract on equal terms, including on the grounds of creed and disability. Section 11 expressly addresses constructive discrimination arising from a requirement, qualification or factor that appears neutral but has an exclusionary or restrictive effect connected to a prohibited ground. [S1] That statutory architecture fits the Applicant's pleaded characterization better than an employment metaphor does. The strongest legal description of the relationship, on the present record, is service plus contract.
+
+57. The Applicant therefore need not prove that a SoundCloud employee physically clicked a button in Toronto. The better territorial question is whether the allegedly discriminatory condition governed an Ontario-facing service and contractual relationship and produced its legally relevant adverse effect here.
+
+58. No Supreme Court case located in this review directly decides the territorial reach of the Ontario Human Rights Code against a foreign online music platform. That absence must be stated rather than disguised. Two Supreme Court authorities are nonetheless highly instructive by analogy.
+
+59. First, Club Resorts Ltd. v. Van Breda recognizes, in the civil jurisdiction context, objective connecting factors capable of grounding Ontario jurisdiction, including carrying on business in Ontario and a contract connected with the dispute made in Ontario. [A10] Van Breda is not an HRTO case and should not be presented as though its presumptive connecting factors mechanically decide this Tribunal's statutory jurisdiction. Its relevance is conceptual: Canadian jurisdiction doctrine takes seriously the place where a connected contract is made and performed, rather than reducing territorial analysis to the defendant's head-office address.
+
+60. Second, Douez v. Facebook, Inc. is unusually close at the level of legal architecture. A Canadian user sued a foreign online platform whose standard-form terms selected a foreign forum and law. The Supreme Court did not treat the platform's boilerplate as the end of the inquiry. The plurality emphasized public-policy concerns, inequality of bargaining power in online consumer contracts, and the local statutory rights at stake. [A11] Douez concerned British Columbia privacy legislation and a court action, not the Ontario Human Rights Code or the HRTO. It is therefore persuasive by analogy, not controlling. But it refutes the overbroad intuition that a multinational digital platform can invariably answer a locally protected statutory claim simply by pointing to foreign headquarters and standard-form terms.
+
+61. Renaud supplies a related human-rights principle. In the accommodation context, the Supreme Court rejected the proposition that private contractual arrangements could be used to contract out of human-rights obligations. [A9] Again, Renaud was an employment case involving a collective agreement. The Applicant does not invoke it as a magic formula invalidating every term in SoundCloud's TOS. He invokes the narrower proposition that private agreement does not, merely by existing, supersede mandatory human-rights obligations that otherwise apply.
+
+62. The Applicant's limiting principle is therefore intelligible and modest:
+
+    Ontario need only regulate the Ontario component of the relationship before it.
+
+63. If SoundCloud offers a paid artist service to an Ontario resident, accepts payment from Ontario, permits that resident to upload and administer a catalogue from Ontario, offers monetization as part of that artist-service ecosystem, and applies a term that allegedly produces a Code-related adverse effect upon that Ontario user, the fact that SoundCloud is foreign does not make the Ontario nexus imaginary. Whether that nexus is legally sufficient is the jurisdiction question the Tribunal should decide on the facts and law, not by treating the corporate address as dispositive.
+
+======================================================================
+PART III — THE RULE 19A QUESTION: THIS CASE NEED NOT BE FINALLY PROVED
+AT THE SUMMARY HEARING
+======================================================================
+
+64. The Registrar's August 17, 2026 letter defines the present task with unusual precision. The summary hearing is not the merits trial. The Tribunal may dismiss all or part of the Application if there is no reasonable prospect of success, and it specifically directs attention to two questions: how the Respondent's actions were linked to the Applicant's Code-protected characteristics, and what evidence the Applicant expects to be able to present at a merits hearing to prove the allegations on a balance of probabilities. [P1]
+
+65. The Registrar also reproduces the reasoning in Dabic v. Windsor Police Service, 2010 HRTO 1994. Dabic recognizes two related modes of summary analysis. Some claims fail as a matter of law even if the alleged facts are assumed true. Others turn on whether evidence the applicant has, or that is reasonably available, could establish the required connection between the adverse event and the protected ground. [A1]
+
+66. The Registrar's letter goes further: at the summary hearing the parties do not ordinarily call witnesses or adduce evidence; the adjudicator considers the materials already filed and the parties' submissions. The Applicant's version of events is presumed true unless contradicted by clear or undisputed evidence, although the Tribunal need not accept the Applicant's beliefs or assumptions about why events occurred. [P1] That final qualification is important. It means the Applicant cannot replace nexus evidence with conviction. But neither must he possess, before disclosure, every internal record explaining SoundCloud's policy or decision-making.
+
+67. This is therefore a poor case for summary extinction if the legal theory is cognizable and the evidence identified could rationally prove it. The Applicant identifies existing or reasonably obtainable evidence concerning: his disability; the disability-related barriers to conventional collaborative production; his historical methods of making music before generative tools; his use of Suno to overcome those barriers; SoundCloud account and subscription records; support communications concerning AI monetization and distribution; the Artist Pro / monetization / distribution terms; catalogue and play data; the religious corpus and its development; and the history relevant to creed sincerity.
+
+68. At this stage, the identified evidence need not finally prove the entire merits case. The relevant question is whether it is capable, if accepted at a merits hearing, of proving the required elements. That is precisely the distinction Dabic and the Registrar's letter require the Tribunal to preserve. [A1] [P1]
+
+======================================================================
+PART IV — DISABILITY: THE ADVERSE EFFECT IS NOT THAT AI EXISTS; IT IS
+THAT THE ALLEGED RULE PENALIZES THE METHOD THAT REMOVES THE BARRIER
+======================================================================
+
+69. The disability claim does not depend upon proof of discriminatory animus. The Applicant does not need to prove that SoundCloud dislikes disabled people, knew his diagnosis when the rule was created, or designed the policy with discriminatory intent. O'Malley remains the foundational Supreme Court authority: a rule honestly adopted and neutral in form may nevertheless discriminate because of its effect, and discriminatory intent is not required. [A2]
+
+70. The modern prima facie framework asks whether the claimant possesses a protected characteristic, experienced an adverse impact in the relevant social area, and whether the protected characteristic was a factor in that adverse impact. Moore states the test in the service context; Bombardier and Stewart reiterate that the protected ground need not be the exclusive cause, but there must be a real evidentiary connection rather than speculation. [A4] [A13] [A14]
+
+71. The Applicant's theory supplies that connection in functional rather than diagnostic terms:
+
+    disability
+    -> difficulty sustaining the collaborative structure ordinarily required
+       for conventional professional music production
+    -> AI as the tool that removes that barrier
+    -> independent and demonstrably productive artistic participation
+    -> an alleged rule making AI-assisted work ineligible for monetization
+    -> economic exclusion attached to the very method by which the barrier
+       was overcome.
+
+72. The phrase "Suno is my guitar" is useful because it prevents the technology from swallowing the human being. The Applicant is not asking the Tribunal to decide whether a machine is an artist. He says that he is the artist, and that AI is the production instrument through which his human authorship, selection, direction and judgment become music.
+
+73. "I am a human artist" is therefore not rhetorical decoration. It answers a category error. If the Respondent's justification is that AI restrictions protect "human artists" from diverted royalties, the Applicant's answer is that the proposed class of protected human artists includes him. The policy cannot be justified merely by defining the person seeking accommodation out of the human category.
+
+74. Moore is particularly useful here because the Supreme Court describes accommodation in terms of meaningful access to the service actually offered. [A4] The question is not whether the Applicant can somehow make sounds by a different and substantially inaccessible route. It is whether the service can be made meaningfully available without discrimination connected to disability.
+
+75. Meiorin and Grismer add a structural insight. Human-rights law does not require the individual to conform to a standard first and ask for mercy afterward; standards themselves must be examined for whether they incorporate difference to the point required by the applicable undue-hardship analysis. [A5] [A6] VIA Rail makes the same point forcefully in a disability-access setting: convenience, efficiency or the existence of a standardized system does not automatically establish undue hardship. [A7]
+
+76. None of those cases determines that SoundCloud must monetize Suno tracks. They do something more disciplined: they prevent the inquiry from ending at "that is our rule." If prima facie adverse-effect discrimination is established, justification and accommodation must be examined on evidence.
+
+77. That evidentiary question may also have changed over time. SoundCloud's current public Help Center states that monetization generally depends on ownership or licensing of the content, and another current page says SoundCloud supports "AI tracks" subject to rights verification while also stating that its terms prohibit generative AI in a distribution-rejection context. [SC1] [SC2] Those current materials should not be retroactively substituted for the policy allegedly communicated to the Applicant during the material period. Their value is narrower: they demonstrate why the exact dated policy and the Applicant's support emails matter, and why the technical or commercial feasibility of individualized rights review should be proved rather than assumed impossible.
+
+======================================================================
+PART V — CREED: AMSELEM DOES NOT REQUIRE THE MUSIC TO LOOK RELIGIOUS
+TO AN OUTSIDER
+======================================================================
+
+78. The creed branch is independently justiciable and forms part of the alleged discriminatory effect. The Applicant says the musical corpus is part of his religion. The legal question is not whether a rap record resembles a hymn to a judge.
+
+79. Amselem rejects an objective-orthodoxy test. The Supreme Court held that a claimant need not prove that a practice is objectively required by official religious doctrine or endorsed by religious authorities; the focus is the individual's sincerely held belief and its nexus with religion. [A8]
+
+80. That is why the Applicant's extraordinary historical conduct matters. He does not argue that a person must nearly die, impoverish himself, or make thousands of works to prove religion. Such a test would itself be grotesque. He argues that, in his particular case, extreme and costly persistence is probative evidence that the claimed religious significance was not casually invented for litigation.
+
+
+82. The disability and creed claims intersect without becoming identical. The Applicant says AI is disability-related because it permits him to produce independently; he also says the works produced through that method form part of a sincerely held religious corpus. A single neutral policy may therefore have more than one protected-ground consequence.
+
+83. The creed issue also illustrates why the summary-hearing standard matters. An adjudicator may test sincerity, and the Tribunal need not simply accept a religious label. But Amselem makes the nature of that inquiry legally constrained: courts and tribunals are not to transform themselves into arbiters of religious dogma. [A8] The Applicant says he has extensive longitudinal evidence of belief, conduct, production and sacrifice from which sincerity could be assessed at a merits hearing.
+
+======================================================================
+PART VI — CONTRACT, ONLINE TERMS, AND A FOREIGN PLATFORM
+======================================================================
+
+84. The Applicant's interview states, in colloquial terms, that Canadian law supersedes SoundCloud's TOS. The legal proposition advanced here is narrower and more exact.
+
+85. A standard-form contract can define private rights and obligations. It cannot be assumed, without analysis, to erase mandatory statutory protections that otherwise govern the relationship. Renaud is strong human-rights authority for the proposition that parties cannot contract out of human-rights obligations. [A9]
+
+86. Douez supplies a particularly useful digital-platform analogy. The Supreme Court confronted Facebook's standard-form forum-selection clause in a dispute involving locally protected statutory rights. The plurality treated the nature of the right, public policy and the inequality inherent in consumer online contracting as relevant to whether the foreign forum clause should be enforced. [A11]
+
+87. Uber Technologies Inc. v. Heller provides a second, Ontario-centred illustration of judicial scrutiny of inaccessible dispute-resolution terms in a standard-form digital-platform contract. The case turns on unconscionability and arbitration rather than human-rights jurisdiction, so it should be used sparingly. [A15] Its relevance is not that every foreign clause is invalid, but that "clicking agree" is not a universal answer to questions of mandatory law, access to adjudication, or enforceability.
+
+88. The Applicant relies only upon contractual provisions that are established in the record. No foreign forum or governing-law term should be presumed in the absence of the governing agreement.
+
+======================================================================
+PART VII — DAMAGES, ECONOMIC LOSS, AND THE THIN-SKULL POINT
+======================================================================
+
+
+90. None of that defeats the allegation of adverse economic effect at the summary stage. The legal distinction is between the existence of an allegedly denied economic opportunity and the final quantum of damages. The former can be material even while the latter remains to be proved.
+
+91. The interview also raises the thin-skull rule. Athey v. Leonati is authoritative Supreme Court tort law for the proposition that a wrongdoer generally takes the victim as found, including unusual vulnerability. [A12] But this proceeding is under the Human Rights Code, not a negligence action. Unless specific HRTO or appellate human-rights authority connects that tort doctrine to Code compensation, Athey should be treated as an analogy concerning vulnerability and causation, not as an independent rule the Tribunal is bound to apply to damages.
+
+
+======================================================================
+PART VIII — CONCLUSION
+======================================================================
+
+103. The architecture of this case is unusual because the technology is new. The governing legal principles are not.
+
+104. Human-rights law has dealt for decades with rules that appear neutral until they encounter a person whose protected characteristics make the rule operate differently. O'Malley names the phenomenon. Moore supplies the modern prima facie framework and the language of meaningful access. Meiorin, Grismer and VIA Rail explain why a standard cannot immunize itself from scrutiny merely by being standardized. Amselem prevents unfamiliar religious expression from being judged according to external orthodoxy. Renaud prevents private agreement from becoming an automatic escape hatch from human-rights duties. Douez demonstrates, in the digital-platform context, why local statutory rights, public policy and standard-form foreign terms cannot be collapsed into the proposition that a multinational's boilerplate necessarily wins. [A2] [A4] [A5] [A6] [A7] [A8] [A9] [A11]
+
+105. The Applicant's claim can therefore be stated without exaggeration.
+
+106. He is a human artist with a disability. He says that conventional collaborative production creates disability-related barriers severe enough to exclude him from meaningful professional participation. He found a technological method that removes those barriers. He used it successfully. He then encountered an alleged monetization rule that attached economic ineligibility to the very method by which he had overcome the barrier.
+
+107. That is a legally intelligible adverse-effect allegation. It may ultimately succeed or fail on evidence. What it is not is inherently incapable of proof.
+
+108. The creed branch is similarly justiciable. The Applicant says the works constitute a sincerely held religious corpus. The Tribunal is entitled to assess sincerity. Amselem is equally clear that sincerity is not the same question as conventionality and that external religious orthodoxy is not the controlling test. [A8] The Applicant identifies a substantial history from which sincerity could be tested.
+
+109. The territorial argument is likewise more than residence alone. The Applicant identifies an Ontario-based service and contractual relationship: Ontario creation, upload, account administration, payment, agreement, receipt of communications, alleged adverse effect and economic consequence. The HRTO's Practice Direction asks whether the events and allegations are sufficiently connected to Ontario. [J1] The Applicant says they are. Van Breda and Douez do not decide the HRTO question, but they demonstrate that Canadian law treats contract formation, local business relationships, statutory rights and digital-platform structure as legally significant connecting considerations rather than irrelevant scenery. [A10] [A11]
+
+110. The Applicant does not ask the Tribunal to declare that every AI-generated track must be monetized, that copyright and licensing rules disappear, that SoundCloud must pay an invented fixed royalty per stream, or that a German corporation becomes subject to every Ontario rule in every country merely because it operates a website.
+
+111. He asks for something narrower and more recognizable in human-rights law: that an Ontario service relationship not be insulated from examination where a facially neutral rule is alleged to make the disability-related means of participation economically worthless.
+
+112. SoundCloud may ultimately establish that the Applicant's works were ineligible for reasons unrelated to disability or creed; that the alleged policy has been misunderstood or changed; that rights ownership or licensing requirements control the result; that the proposed accommodation would alter the essential nature of the service or cause undue hardship; that Ontario lacks sufficient territorial jurisdiction; or some combination of those propositions. Those are defences and merits questions. They are not presently established merely because they can be imagined.
+
+113. Conversely, the Applicant cannot prevail merely by asserting sincerity, disability, loss, jurisdiction or causation. He must prove them at the appropriate stage. The significance of this submission is that he identifies a coherent legal route by which they can be proved, and identifies evidence that exists or is reasonably available to support that route.
+
+114. That is enough to make the summary-hearing question concrete. The issue is not whether the Tribunal is already certain the Applicant will win. The issue is whether there is a reasonable prospect that the evidence could establish a Code violation. [A1] [P1]
+
+115. The Applicant's position can be reduced to the sentence that has survived every layer of the argument:
+
+    I am a human artist.
+
+116. If AI is the Applicant's disability-related instrument, its success does not make the disability disappear. If thousands of unconventional musical works are, in his sincerely held belief, part of a religious corpus, their genre does not by itself make the belief fictitious. If a multinational service relationship is carried on with him in Ontario, the foreign location of the corporate headquarters does not by itself erase every Ontario connecting factor. Each proposition remains open to evidence and law.
+
+117. The Applicant respectfully requests that the Tribunal decline to dismiss the Application at the summary stage, determine that the pleaded disability and creed theories have a reasonable prospect of success, resolve the territorial issue on the full Ontario nexus advanced here, and permit the matter to proceed to the next stage of the HRTO process.
+
+======================================================================
+GLOSSARY / TABLE OF AUTHORITIES
+======================================================================
+
+A1 — Dabic v. Windsor Police Service, 2010 HRTO 1994 (CanLII).
+LEVEL: Human Rights Tribunal of Ontario.
+PRINCIPLE / RELEVANCE: The Registrar expressly directs the parties to Dabic. It is the principal Rule 19A authority for the distinction between (i) a claim that fails legally even if the allegations are true and (ii) a claim that turns on whether evidence the applicant has or could reasonably obtain can establish the link between the event and a Code ground. It also informs the "reasonable prospect of success" framework used in the Registrar's letter.
+CANLII: Search citation "2010 HRTO 1994" on CanLII; the Registrar reproduces paras. 8-10 in its August 17, 2026 letter.
+OFFICIAL HRTO CONTEXT: https://tribunalsontario.ca/documents/hrto/Practice%20Directions/PD-HRTO_Summary_Hearing_Requests.html
+
+A2 — Ontario Human Rights Commission v. Simpsons-Sears Ltd. (O'Malley), 1985 CanLII 18 (SCC), [1985] 2 S.C.R. 536.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Foundational Canadian adverse-effect discrimination authority, arising under Ontario human-rights legislation. A neutral rule may discriminate through its effect even without discriminatory intent. The decision also recognizes reasonable accommodation short of undue hardship.
+RELEVANCE TO THIS APPLICATION: Central authority for the proposition that SoundCloud need not have adopted an AI policy out of hostility toward disabled people for the rule to be discriminatory in its operation.
+CANLII: https://www.canlii.org/t/1ftxz
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/101/index.do
+
+A3 — Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Bombardier Inc. (Bombardier Aerospace Training Center), 2015 SCC 39, [2015] 2 S.C.R. 789.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Explains the prima facie discrimination inquiry and emphasizes that discriminatory intent is unnecessary; the prohibited ground need only be connected to / a factor in the adverse treatment, not the exclusive cause.
+RELEVANCE TO THIS APPLICATION: Helps separate the Applicant's adverse-effect theory from accusations of malice and reminds the Applicant that a tangible factual nexus must still be established.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2015/2015scc39/2015scc39.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/15471/index.do
+
+A4 — Moore v. British Columbia (Education), 2012 SCC 61, [2012] 3 S.C.R. 360.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: States the modern prima facie discrimination framework in a service setting: protected characteristic, adverse impact in the service, and the protected characteristic as a factor in the adverse impact. It also frames accommodation as the means by which a person with a disability obtains meaningful access to the service.
+RELEVANCE TO THIS APPLICATION: Strongest Supreme Court service/accommodation analogue for the proposition that the issue is meaningful access to the benefit actually offered, not whether the Applicant can somehow function without the disability-related tool.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2012/2012scc61/2012scc61.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/12680/index.do
+
+A5 — British Columbia (Public Service Employee Relations Commission) v. BCGSEU (Meiorin), 1999 CanLII 652 (SCC), [1999] 3 S.C.R. 3.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Landmark accommodation case rejecting rigid separation between "direct" and "adverse-effect" discrimination and requiring standards to be justified in a manner that incorporates accommodation.
+RELEVANCE TO THIS APPLICATION: Supports scrutiny of the standard itself instead of assuming that an across-the-board AI rule is justified merely because it applies to everyone.
+CANLII: https://www.canlii.org/t/1fqk1
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1724/index.do
+
+A6 — British Columbia (Superintendent of Motor Vehicles) v. British Columbia (Council of Human Rights) (Grismer), 1999 CanLII 646 (SCC), [1999] 3 S.C.R. 868.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Extends the Meiorin accommodation analysis beyond employment. A general standard must be sufficiently accommodating of individual difference if it is to be justified under human-rights law.
+RELEVANCE TO THIS APPLICATION: Particularly useful because this is not an employment case. It helps translate Meiorin's inclusive-design reasoning into a service / regulatory context.
+CANLII: https://www.canlii.org/en/ca/scc/doc/1999/1999canlii646/1999canlii646.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1761/index.do
+
+A7 — Council of Canadians with Disabilities v. VIA Rail Canada Inc., 2007 SCC 15, [2007] 1 S.C.R. 650.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Major disability-access case. It applies the accommodation / undue-hardship analysis to a transportation service and rejects the idea that standardized systems, cost assertions or convenience automatically settle accessibility.
+RELEVANCE TO THIS APPLICATION: Supports requiring actual evidence about accommodation feasibility rather than accepting "our system does not do that" as a complete answer.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2007/2007scc15/2007scc15.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2352/index.do
+
+A8 — Syndicat Northcrest v. Amselem, 2004 SCC 47, [2004] 2 S.C.R. 551.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Leading authority on sincerely held religious belief. Protection does not depend on proving that a practice is objectively mandatory under official doctrine or approved by religious authorities; the sincerity inquiry is individual.
+RELEVANCE TO THIS APPLICATION: The pillar authority for the Applicant's creed argument. The musical form of the corpus cannot, without more, determine whether the religious belief is sincere.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2004/2004scc47/2004scc47.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2161/index.do
+
+A9 — Central Okanagan School District No. 23 v. Renaud, 1992 CanLII 81 (SCC), [1992] 2 S.C.R. 970.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Important accommodation authority. It expressly rejects using private contractual arrangements to contract out of human-rights obligations.
+RELEVANCE TO THIS APPLICATION: Supports the narrow proposition that a TOS, if Ontario human-rights law otherwise applies, is not automatically dispositive merely because the Applicant accepted it. It does NOT itself decide the effect of a foreign-law clause in SoundCloud's contract.
+CANLII: https://www.canlii.org/en/ca/scc/doc/1992/1992canlii81/1992canlii81.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/910/index.do
+
+A10 — Club Resorts Ltd. v. Van Breda, 2012 SCC 17, [2012] 1 S.C.R. 572.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Leading civil territorial-jurisdiction authority. Recognizes objective connecting factors including carrying on business in the province and a contract connected with the dispute made in the province.
+RELEVANCE TO THIS APPLICATION: Analogy only. It supports taking Ontario contract formation and Ontario-facing commercial activity seriously in territorial analysis. It does not itself establish HRTO statutory jurisdiction.
+CANLII: Search "2012 SCC 17" on CanLII.
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/8004/index.do
+
+A11 — Douez v. Facebook, Inc., 2017 SCC 33, [2017] 1 S.C.R. 751.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: A high-profile Canadian case involving a foreign internet platform, standard-form online terms, a foreign forum / choice-of-law clause and locally protected statutory rights. The plurality treated public policy, the nature of the right and inequality of bargaining power as relevant.
+RELEVANCE TO THIS APPLICATION: Strong digital-platform analogy against the proposition that foreign boilerplate necessarily ends the local-law inquiry. It is a British Columbia privacy/court case, not an HRTO human-rights decision, and should be labelled accordingly.
+CANLII: https://www.canlii.org/t/h4g1b
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/16700/index.do
+
+A12 — Athey v. Leonati, 1996 CanLII 183 (SCC), [1996] 3 S.C.R. 458.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Canonical modern Supreme Court authority on the thin-skull rule in tort: unusual pre-existing vulnerability does not ordinarily relieve a wrongdoer from responsibility for the injury actually caused.
+RELEVANCE TO THIS APPLICATION: Ancillary only. The Applicant invoked the thin-skull concept in his interview. This case confirms the doctrine exists, but further authority would be needed before treating tort thin-skull principles as directly controlling HRTO damages.
+CANLII: https://www.canlii.org/en/ca/scc/doc/1996/1996canlii183/1996canlii183.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1435/index.do
+
+A13 — Stewart v. Elk Valley Coal Corp., 2017 SCC 30, [2017] 1 S.C.R. 591.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Reiterates Moore's prima facie discrimination test and emphasizes that the connection between the protected characteristic and adverse impact is a factual inquiry requiring evidence.
+RELEVANCE TO THIS APPLICATION: Confirms that the protected ground must have a genuine evidentiary connection to the adverse impact. Here, the Applicant relies upon the functional role of AI in overcoming disability-related barriers and the alleged economic consequence attached to that method.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2017/2017scc30/2017scc30.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/16679/index.do
+
+A14 — Quebec (Commission des droits de la personne et des droits de la jeunesse) v. Bombardier Inc., 2015 SCC 39.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: See A3. Retained as a second cross-reference because the "factor in the adverse impact" point recurs throughout the submission.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2015/2015scc39/2015scc39.html
+
+A15 — Uber Technologies Inc. v. Heller, 2020 SCC 16, [2020] 2 S.C.R. 118.
+LEVEL: Supreme Court of Canada.
+PRINCIPLE / RELEVANCE: Ontario case involving a digital platform and a standard-form contract that required costly foreign arbitration. The Court scrutinized the clause under unconscionability doctrine.
+RELEVANCE TO THIS APPLICATION: Ancillary and sparing. It reinforces that digital-platform boilerplate is not self-validating in every context, but it does not decide HRTO jurisdiction or SoundCloud's terms.
+CANLII: https://www.canlii.org/en/ca/scc/doc/2020/2020scc16/2020scc16.html
+SCC: https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/18406/index.do
+
+S1 — Human Rights Code, R.S.O. 1990, c. H.19, especially ss. 1, 3 and 11.
+LEVEL: Ontario statute — primary authority.
+PRINCIPLE / RELEVANCE:
+- s. 1: equal treatment with respect to services, goods and facilities without discrimination because of creed, disability and other protected grounds.
+- s. 3: right to contract on equal terms without discrimination on protected grounds.
+- s. 11: constructive / adverse-effect discrimination arising from a requirement, qualification or factor whose effect is exclusion, restriction or preference connected to a prohibited ground, subject to the statutory justification / accommodation framework.
+OFFICIAL: https://www.ontario.ca/laws/statute/90h19
+
+J1 — HRTO Practice Direction on Jurisdiction.
+LEVEL: Official Tribunal guidance.
+PRINCIPLE / RELEVANCE: The current Practice Direction identifies events and allegations "not sufficiently connected to Ontario" as a jurisdictional problem and explains that jurisdiction can be reviewed at a preliminary stage.
+OFFICIAL: https://tribunalsontario.ca/documents/hrto/Practice%20Directions/PD-HRTO_Jurisdiction.html
+
+P1 — HRTO letter dated August 17, 2026, File 2026-67265-I, "Summary Hearing Will Be Held."
+LEVEL: Binding procedural direction in this file.
+PRINCIPLE / RELEVANCE: It sets the September 14, 2026 deadline; identifies Rule 19A and Dabic; states the reasonable-prospect test; identifies the two questions concerning nexus and available evidence; permits written submissions; requires a cases list with citation and CanLII link; requires delivery to the other party; explains filing mechanics; and governs hearing-format / participation requirements.
+SOURCE: Tribunal correspondence in the HRTO record.
+
+SC1 — SoundCloud Help Center, "DAW & AI Integrations."
+LEVEL: Respondent's current public guidance; factual/policy source, not legal authority.
+PRINCIPLE / RELEVANCE: States that whether songs created with listed AI/DAW integrations may be monetized or distributed depends on rights ownership/licensing. Useful to show the importance of identifying the exact policy actually applicable to the Applicant at the material time.
+URL: https://help.soundcloud.com/hc/en-us/articles/22353035482523-DAW-AI-Integrations
+
+SC2 — SoundCloud Help Center, "Distribution Rejections & How to Resolve Them."
+LEVEL: Respondent's current public guidance; factual/policy source.
+PRINCIPLE / RELEVANCE: Current guidance says SoundCloud supports formats including AI tracks subject to rights verification, while also containing a statement that its terms explicitly prohibit generative AI. That nuance/tension makes the dated policy and support communications in this case especially important.
+URL: https://help.soundcloud.com/hc/en-us/articles/48881707977627-Distribution-Rejections-How-to-Resolve-Them
+
+SC3 — SoundCloud Help Center, "Start Monetizing with SoundCloud for Artists."
+LEVEL: Respondent's current public guidance; factual/policy source.
+PRINCIPLE / RELEVANCE: Describes fan-powered royalties, eligibility and rights ownership requirements. It is relevant to the proper assessment of any claimed monetization loss because SoundCloud describes its royalty system as fan-powered rather than as a single fixed payment per stream.
+URL: https://help.soundcloud.com/hc/en-us/articles/4406233941787-Start-Monetizing-with-SoundCloud-for-Artists
+
+
+======================================================================
+FINAL WORD
+======================================================================
+
+The conclusion sought here is not that novelty defeats law. It is that old legal principles remain capable of examining new instruments. The Applicant does not ask the Tribunal to decide that artificial intelligence is human, religious, disabled, or entitled to anything. He asks the Tribunal to look through the instrument to the human being using it, and then to ask the ordinary human-rights question: what did the rule do to this person, in this service, because of characteristics the Code protects?
+
+The Supreme Court's formulation in O'Malley remains an apt final instruction:
+
+"The Code aims at the removal of discrimination."
+
+— Ontario Human Rights Commission v. Simpsons-Sears Ltd. (O'Malley), 1985 CanLII 18 (SCC), [1985] 2 S.C.R. 536.

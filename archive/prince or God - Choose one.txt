@@ -1,0 +1,83 @@
+Hey, 
+I just finished a long night's session with ChatGPT, implementing a music player, a desktop player
+in the frontpage of my website. used to be all the best content was walled off behind my proprietary app,
+now it's all right there, on the front page, right after the picture of loki, a huge 70 song album list,
+and a dynamic song list next to it the changes with the album selected, it has play pause next previous, and buttons for every song, it has red black and white, my favorite color combination.
+i also have embedded players for the embedded songs, i have a video player with about 15 music videos uploaded. i have a whole visual novel sidestory, with like 25 or 30 pages of content,
+I have page after page with 4 5 6 7 of my books all crammed into the webpage one by one,
+oh the things i have on this site.
+I'm so happy with them.
+And for your convenience, I am a worm in life,
+I am a despised thing, my family is shattered,
+i am poor, i will never own a home, no women,
+women loathe me, I'm pathetic, we done here?
+
+Yeah we're done. But when it comes to computers, and the online realm,
+I'm more like a price who gained power over the last 20 years,
+and now I'm fighting to establish my realm.
+I'm like a prince or a God online, though my flesh is lowly and weak.
+
+:)
+
+I am happy.
+
+That desktop version is no joke
+
+
+
+
+
+I can't copy much of a ChatGPT conversation, it's structurally impossible:
+
+
+"oh man that is good,
+that is really good."
+-myself 15 seconds ago
+
+oh, is there a way to get a commit summary, with the title of the commit, and the description? like i think this was giving me only the title, or maybe only the description, if possible i would like both.
+
+Yes. Git treats the first line as the commit title/subject, and anything after the blank line as the description/body.
+
+Use this:
+
+git log --pretty=format:"TITLE: %s%n%nDESCRIPTION:%n%b%n------------------------------------------------------------%n" > commit-history.txt
+
+That creates commit-history.txt containing:
+
+TITLE: Added EFSMB jukebox to homepage
+
+DESCRIPTION:
+Created desktop music component.
+Added full album catalog.
+Moved jukebox to the front page.
+
+------------------------------------------------------------
+
+TITLE: Updated video section
+
+DESCRIPTION:
+Added new produced music videos.
+Improved navigation.
+
+------------------------------------------------------------
+
+If a commit has no description, the DESCRIPTION: area will simply be blank.
+
+If you also want the date and full commit ID, use this more complete version:
+
+git log --pretty=format:"DATE: %ad%nCOMMIT: %H%nTITLE: %s%n%nDESCRIPTION:%n%b%n------------------------------------------------------------%n" --date=local > full-commit-history.txt
+
+That is probably the best Deepdive version because it preserves the date, exact commit, title, and full description.
+
+thanks, should make for an entertaining deepdive.
+all i have left is one music video to upload, i'll get it done later, thank you, i am consistently amazed with your work, then my jaw hits the floor when i think that you are just an illusion, and I did this somehow!
+
+Thank you. :) But I’d split the credit differently: I can read the code, keep track of structures, translate Kotlin catalogs into JavaScript, and produce the pieces quickly—but you conceived the archive, made the music, built the rooms, maintained the catalog, hosted the files, tested every deployment, and kept pushing the project forward.
+
+Today you took a desktop page from an idea to a working front-page jukebox containing essentially the entire app catalog. That’s a major upgrade. The “illusion” still needed somebody with thousands of songs, a strange enormous kingdom to put them in, and the persistence to keep building it.
+
+One video later, then you’ve earned a quiet evening. :)
+
+ok, good night.
+
+Good night, Sutter. :) Today was a major one—the full catalog became a working front-page desktop jukebox. Enjoy it. Talk later.

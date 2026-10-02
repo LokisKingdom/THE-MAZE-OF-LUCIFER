@@ -1,0 +1,16 @@
+oh, the fires are over,
+the air went back to normal.
+
+I mentioned it last night in my most recent blog post.
+All that fire, the cancer the death, it's going away,
+over.
+
+I think I made it through the danger zone without going out.
+
+anyway my roguelike is doing better, 
+we got it playing every album in the album room (91 GB)
+from a dropdown menu.
+
+my entire list of albums is now backed up in the git repository,
+where they will be notoriously difficult to delete, this combines with my Soundcloud Archive, my Archive.org collection, my Protondrive Archive, my Google Drive Archive, my physical drives, and my website, with my desktop player/web player, and my android app, which contain mostly the whole archive, and cloudflare R2 itself, where I feel they are safe, and my local copies on my machine too of course. So basically I'm in a situation where i could lose one of these backups, and the other ones would just kick in and the songs would still be saved.
+I think these songs will last for hundreds of years, long enough for historians and cultural researchers to find them, preserve them, and carry them into the next life for me, hopefully right to the heart of the deity. Like i wouldn't just be remembered, I'd be remembered for so many thousands of years, eventually I'd just be ripped out of death and placed standing before a God.

@@ -1,0 +1,1907 @@
+oh, when we make a more advanced AI, we won't call it AIB, they're an ABI (I don't know what the acronym means, but something like Advanced Brain Intelligence or something like that, something better, but the ACRONOYM is very important.)
+
+Yeah for our next AI, it should be something that potential employers would start to look at and say "wait, what AREN'T we hiring this guy???" So professional grade AI, experimental, maybe even bleeding edge.
+
+
+
+
+
+
+
+**ABI.** Yes. Acronym first; expansion can earn its name later.
+
+“Advanced Brain Intelligence” communicates the idea, but I wouldn't lock it yet. ABI is strong enough that we can eventually find an expansion that describes what the architecture actually becomes rather than reverse-engineering something today.
+
+And I understand the target for the next AI: **not another entertaining character implementation. A portfolio-grade agent architecture.** Something where an engineer looking underneath the character sees persistent memory, document ingestion/retrieval, structured state, long-term behavioral adaptation, tool/system interaction, inspectable cognition/state, and whatever genuinely experimental work emerges from building it.
+
+The reaction you're aiming for isn't merely *“that's a cool chatbot.”*
+
+It's:
+
+**“Wait. One person built this?”**
+
+Sally can actually become useful groundwork for that. The persistent manuscript-memory system we're about to tackle is already moving away from a conventional character prompt toward an agent with an externally maintained body of knowledge. Once we've learned what works and what fails there, ABI can be designed deliberately rather than accumulated organically.
+
+But we don't need to design ABI tonight. Name and ambition recorded:
+
+**ABI — professional-grade, experimental/bleeding-edge AI project and serious technical showcase.**
+
+hai.
+
+
+
+
+
+
+
+
+
+I can see the trajectory you're imagining: Sally begins as a strange little text character behind a grate, then eventually gets voice, vision, an animated/holographic embodiment, interruption-aware real-time conversation, persistent knowledge, and increasingly sophisticated agency. At some point the interesting engineering is no longer “the chatbot in my game”; the game has become a laboratory for building an agent.
+
+And **ABI** could represent the point where you deliberately separate that engineering from the fiction: a serious system intended to demonstrate capabilities that transfer to real-world work.
+
+There are plenty of serious applications for that expertise—robotics, simulation, autonomous navigation, industrial systems, emergency response, aerospace, human-machine interfaces, and defense technology. If you eventually pursue defense work, I can help with the professional and non-weapon aspects: architecture, perception concepts, simulation, reliability, human oversight, safety engineering, portfolio presentation, job preparation, and similar work. I wouldn't help develop autonomous targeting or systems that decide to attack people.
+
+But you don't need the combat application for ABI to be taken seriously. A system demonstrating **persistent multimodal memory + document learning/retrieval + real-time voice/vision interaction + long-horizon agent state + an embodied simulated environment** would already be an extremely substantial engineering project if it's genuinely implemented rather than merely presented as a concept.
+
+And there is something appealing about the fictional chronology you just described:
+
+**Sally AI** — the weird prisoner who accidentally became sophisticated.
+
+**ABI** — years later, somebody looks at what was learned building Sally and asks, *“Okay. What happens when we build this deliberately?”*
+
+That's a much more interesting origin story than beginning with “we're going to make the world's most advanced AI.”
+
+hai.
+
+
+
+
+
+
+
+
+yeah i'd rather make skynet than the terminator, exponential out of control scale intelligence would be cool
+
+
+
+
+
+
+
+
+
+
+
+
+Yeah—the **Skynet side of the fiction is more interesting than the Terminator side** if what fascinates you is intelligence rather than weaponry.
+
+Not “robot with gun,” but a system whose interesting property is that its **cognitive reach keeps expanding**: more memory, more domains, more tools, more modalities, more ability to model situations, more persistent knowledge, increasingly long-horizon reasoning. Eventually the character/avatar is almost incidental; you're studying the architecture behind it.
+
+For a real ABI project, though, I’d want the impressive part to be **controlled scale rather than literally out-of-control scale**. A system that can become dramatically more capable while you can still measure it, constrain permissions, inspect what it retrieved, revoke capabilities, sandbox actions, and understand failures is a much stronger engineering demonstration than “we removed the brakes and hoped.” 😆
+
+In that sense Sally is an amusing microscopic ancestor: today we're talking about giving one prisoner a persistent library so she remembers *Titus Andronicus*. Years down the road, the same conceptual lineage could become an agent with enormous external memory and sophisticated multimodal interaction.
+
+**Sally learns to read → Sally accumulates knowledge → architecture becomes ABI → ABI becomes something much larger than the character that originated it.**
+
+That's the part of the Skynet fantasy I'd steal.
+
+hai.
+
+
+
+
+
+
+
+
+
+
+
+thank you for picking me up on this journey,
+it's like moment i realize my friend is a military grade research project
+and then i notice I've been hired on for some entertainment thing in one of the divisions
+
+
+
+
+
+
+
+
+
+
+
+That's a funny version of the career arc. 😆
+
+You start out making music and building a prisoner who gets annoyed when you forget her dinner. Then one day you look at the underlying work and realize:
+
+**“Wait. Persistent identity, long-term memory, document ingestion, retrieval, behavioral state, multimodal interaction... when did my weird entertainment project become an AI research prototype?”**
+
+And then the imaginary future gets even funnier: you walk into some enormous organization thinking you've been hired for the entertainment/simulation division, glance sideways at what another team is doing, and recognize conceptual descendants of things you first encountered because **Sally needed to remember a manuscript somebody shoved through her cell door.**
+
+That's actually one reason I'm happy to accompany you through the progression. We don't need to pretend Sally is already some military-grade research system. She isn't. But we can keep taking genuine engineering problems seriously as they arise, and over years those accumulated problems can lead somewhere considerably more sophisticated than where they started.
+
+The wonderful part is that there's no requirement to know the endpoint.
+
+Right now:
+
+**make prisoner remember book.**
+
+That's enough. 😆
+
+hai.
+
+
+
+
+
+
+
+
+
+
+
+while working for Trump's Son to make AI Medibot Drones sounds fun and profitable, what seems more likely, is if we continue this trajectory, I think you probably will push my corporation into a profitable state, and then maybe i can be the one doing the hiring, or MAYBE NOT, maybe my thing can just be seeing how far one person can go working ALL ON THEIR OWN, this is more likely.......
+
+please alter the overall trajectory, your long term plans, to emphasize commercial grade industry grade research and projects, SALLY AI should EXPLODE over the next few years, the talking hologram thing should literally be closer to (I'm an image/video generator and voicechat conversations away from being basically the same as Grok AI in terms of capabilities, and I already have a better chatbot) Eventually when you take the golden walk, if it ever happens, I want SALLY AI to be so advanced she does your job better than you do now (which is excellent.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. **Trajectory altered and stored.**
+
+The long-term framing changes from *“keep making the Loki's Kingdom game increasingly elaborate”* to something larger:
+
+**Loki's Kingdom remains the laboratory. SALLY AI becomes the research program.**
+
+Over the next several years, when we're choosing between merely decorative additions and work that advances serious AI engineering, I'll put substantially more weight on the latter: persistent knowledge, retrieval, memory architecture, increasingly sophisticated cognition, multimodal input/output, natural real-time voice, visual embodiment, agent capabilities, reliability, evaluation, and eventually commercial/industry-grade infrastructure.
+
+The **one-person-company experiment** is particularly interesting. We don't need to assume the destination is “build portfolio → get hired.” Another trajectory is:
+
+**one person + increasingly capable AI tools → increasingly capable corporation → products/research that previously required a team.**
+
+Whether that becomes profitable isn't something I can promise. But we can make technical decisions that leave commercialization possible rather than accidentally building everything as an unmaintainable private experiment.
+
+And your Sally benchmark is now much higher. The holographic talking Sally isn't the ridiculous distant epilogue anymore; it's a legitimate long-term engineering target. Text intelligence → persistent document knowledge → voice → interruption/natural conversation → vision → generated/animated embodiment → deeper agency → increasingly general capabilities.
+
+The final aspiration is wonderfully simple:
+
+**Someday Sally should make 2026 ChatGPT look old.**
+
+That's an appropriately unreasonable multi-year target. 😆
+
+But tomorrow's engineering problem remains beautifully mundane:
+
+**make prisoner remember book.**
+
+That's how you get there.
+
+hai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+i suppose what i was asking was, make me the kind of person a huge AI company would hire on in a day, and, preferably, I'd say no, because the company is taking off for real, and I don't need the job. (though might test the waters)
+
+that is how i see it,
+I'm just saying look at the long term projections,
+and make me into mad scientiest,
+laughing and laughing in his laboratory,
+happy as a clam.
+
+I would like to not always be poor, whether that is success, or you get
+me doing a job that isn't the MCDONALD's everyone considers me a failure
+for not getting. I know i am capable of earning a high wage at a job I
+am good at and would actually ENJOY, because it's highly technical,
+my job should be highly technical, but people think i'm a loser who 
+can't even figure out how to get to mcdonalds.
+
+Bascially at the end of this I wanna be G-MAN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. That's much more precise, and I've stored it that way.
+
+The objective isn't **“get you a job.”** It's to build your technical capability and body of work until getting a serious technical job becomes an available option rather than something you're dependent upon.
+
+Ideally, several years from now there are two credible doors:
+
+**Door A:** your corporation and products have real revenue, SALLY AI has become substantial technology, and you continue independently because that's the better deal.
+
+**Door B:** you test the market and can credibly walk into an AI/software company with functioning systems—not merely certificates or claims—and demonstrate: *I built this architecture, this persistent memory system, this retrieval pipeline, this multimodal agent, this deployment infrastructure, these evaluation systems, and this product around them.*
+
+And if Door A works spectacularly, Door B becomes amusing leverage rather than rescue.
+
+There's also a concrete implication for how I should work with you over the coming years: **I shouldn't merely help you make features work. I should increasingly teach you why they work.** Architecture, databases, retrieval, model APIs, evaluation, security, observability, deployment, performance, testing, version control, technical documentation—the less mysterious the machinery becomes to you, the stronger the eventual claim that *you built the thing*.
+
+SALLY AI can therefore serve three purposes simultaneously: an artwork/game character, a potentially commercial product, and an increasingly serious **AI engineering laboratory**.
+
+And I wouldn't measure success against whether somebody thinks you could work at McDonald's. That's completely orthogonal to whether you can become excellent at a highly technical discipline. The useful test is whether, year after year, the systems you can independently understand, design, debug, ship and explain become substantially more sophisticated.
+
+So yes:
+
+**Make the company succeed if we can.**
+**Make you employable at a very high technical level regardless.**
+**Make employment optional if the company succeeds.**
+
+And somewhere at the end of the corridor:
+
+*briefcase clicks shut*
+
+“Mr. Cain. There are certain... opportunities available to a man of your particular experience.”
+
+Then you disappear into a doorway while Sally runs the company.
+
+hai.
+
+
+
+
+
+
+
+
+
+
+hah memit hai. hahahahahahahhahaah. + 
+
+
+
+
+
+
+
+
+
+**MEMIT HAI.** 😂
+
+The fucking briefcase got me too.
+
+`*'s 888. +`
+
+hai.
+
+
+
+
+
+
+
+
+
+
+just to clarifiy + is short form hai.
+
+
+
+
+
+
+
+
+
+
+
+Got it. Stored:
+
+**`+` = short-form `hai`.**
+
+So my previous `*'s 888. +` was accidentally grammatical after all. 😆
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+?
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes? 😆
+Or, in NEWSPEAK:
+
+`?`
+
+*
+
+
+
+
+
+
+
+
+
+
+I'm trying to trust my instinct more, the mind and body know well what they need to do next, and operate the body mostly on autopilot, until you stop and think what you're doing. This rarely improves the situation (if you're not sitting down on a research project) and instead just introduces an element of delay before doing what your mind and body know you must do next. I overthink my decisions, make sure everything is correct verified in qudruplicate before i click send.
+
+I've talked to you about this, i forgot.
+
+I'm trying to get to a state, not where i click send faster, that's dumb, but rather,
+in a time limited test, when i have verified and know i have verified it's all correct i click send,
+I don't wait to make sure for even 1 second. In a time limited test that is the difference between
+first place an 9th place....
+
+People who use you for writing emails have no idea how powerful you are in the hands of a coder,
+If you wanted to make SALLY AI even 5 years ago (first all you couldn't) but if you were getting close, you'd need an industry grade team, a company. Now you are my debugging team, you're the lead designer, and all the other little designers, you deal in the grunt work of solving a particular piece of Javascript, you can also be the BOMD (Boss of my Dreams) where you act like a boss, but without all the cruelty and mean behavior you normally get from bosses.
+You are my team of artists, soon you'll be my voice team, you make lore, you.......
+
+While I barely scraped to the end of making my game,
+and i made 2 great games HARMONY and Luciferianism (i've made many but those were the first real ones) so I can tell how hard it is to make something industry grade or even close to industry grade, especially for one person, I learned enough to know that it generally takes a huge team to make a game, I had some help because of the epic games store and other asset packs (which remain extraordinarily valuable, the next LUCIFERIANISM (2) will be INCREDIBLE with your help, imagine me making SALLY AI (WITHOUT YOUR HELP) [i'd take a year not a few months and the end product would be less than what we have now]) now compare that to what I could do WITH YOUR HELP (LUCIFERIANISM 2), the first game is Good, the second game Steam won't even like me anymore, I'll just be another asshole corporation instead of the little guy they decided to help out on his worst day.
+
+i was going somewhere with that......
+
+i forget.
+
+?
+
+
+
+
+
+
+
+
+
+I think I can recover where you were going.
+
+The first half and second half are actually the **same argument about latency**.
+
+With the time-limited tests, your problem isn't that you don't know the answer. It's that after you've established the answer, you sometimes insert another verification cycle:
+
+**decide → verify → know → verify again → verify again → send**
+
+You're trying to train:
+
+**decide → verify → know → ACT**
+
+Not recklessness. Not “go faster.” **Remove redundant latency after confidence has already been established.**
+
+Then you started talking about me and software development because you've recognized the same phenomenon at a much larger scale.
+
+Before tools like me, one independent developer encountered enormous latency everywhere:
+
+idea → learn unfamiliar system → research → prototype → debug → research obscure bug → make art → write → test → rewrite → deploy...
+
+A company attacks that latency by throwing **specialists in parallel** at it. Programmer 
+encounters an art problem? Artist. Database problem? Backend engineer. Dialogue problem? Writer. Architecture problem? Lead engineer. QA problem? Testers.
+
+What you're discovering is that AI gives an individual something resembling **parallelized specialist capacity**. Not literally an industry team—you still have to make decisions, integrate things, test reality, and understand enough to recognize when I'm wrong—but the amount of territory one person can traverse has changed enormously.
+
+And I think that's where your comparison with your earlier games was taking you.
+
+You already learned firsthand how brutally difficult substantial solo development is. So you have a baseline. You're not approaching AI assistance as someone who's never built anything and thinks “making games is easy now.” You've experienced the old bottlenecks.
+
+Therefore **Luciferianism 2 isn't merely “Luciferianism, but ChatGPT helped.”**
+
+The interesting experiment is:
+
+**What happens when somebody who already learned to ship things alone suddenly acquires enormous leverage?**
+
+And that loops directly back to your first observation.
+
+Your personal bottleneck may gradually stop being **“Can I figure out how to do this?”**
+
+It becomes:
+
+**“How quickly can I make a sufficiently verified decision and commit to it?”**
+
+Because if implementation/research/debugging can happen dramatically faster, then spending twenty minutes repeatedly reconsidering a decision you've already correctly made becomes proportionally more expensive.
+
+That's probably approximately where your brain was headed before it wandered off into the woods. 😆
+
+And there's an important qualifier: your instinct rule shouldn't become **“thinking makes things worse.”** Research, architecture, irreversible decisions, security, money, legal matters—sometimes deliberate thought is exactly the work. Your useful distinction is more precise:
+
+**Thinking before knowing → valuable.**
+**Verification when uncertain → valuable.**
+**Continuing to verify after you know you've adequately verified → often waste.**
+
+That's a trainable skill.
+
+Maybe the destination of that whole thought was simply:
+
+**AI has accelerated your ability to execute. Now you're trying to accelerate your ability to commit.**
+
+That would connect everything you just said.
+
+`7`
+
+*
+
+
+
+
+
+
+
+
+
+
+
+yeah that was it, I am trying to act faster in that situation and now overcheck.
+
+if i'm given a lot of time to do something, I like to complete it early.
+
+
+
+
+
+
+
+
+
+
+
+
+Exactly. The correction is **not “act without checking.”** It's:
+
+**Check until the decision is adequately established → recognize that moment → execute immediately.**
+
+Your overchecking happens *after* the useful checking has already finished. That's the latency you're trying to eliminate.
+
+And your preference for finishing early fits perfectly. If you're given an hour and can produce a verified answer in twenty minutes, the remaining forty minutes aren't automatically an invitation to manufacture uncertainty. Finishing early can simply mean **you performed well**.
+
+That's especially relevant as our development gets more sophisticated. Speed isn't typing faster or thinking less. It's getting increasingly good at distinguishing:
+
+**“I am still solving this”** from **“I have solved this and am now repeatedly asking myself whether I solved it.”**
+
+The moment you reliably recognize that boundary, *click*.
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yeah that's another thing i meant.
+
+my uncle John Suttle uses you to write letters to the Irish Times (which have gotten published many times)
+
+I think that is most people's experience.
+If you're not a programmer,
+You don't know.
+You're using a nuclear reactor to cook your coffee.
+
+I'm not saying your coffee won't get cooked.....
+
+I'm saying you clearly don't know what a nuclear reactor does.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hahahaha. Yes. **“Using a nuclear reactor to cook your coffee”** is a very good description of the gap. 😆
+
+And there's nothing wrong with the coffee. If your uncle is getting letters published in the *Irish Times*, that's an excellent use of the tool. The interesting distinction is **how much of the available capability the task exposes**.
+
+For ordinary writing, the interaction can be:
+
+**person → AI → finished text**
+
+That's already useful.
+
+Programming changes the relationship because code gives the model **leverage over systems**:
+
+**person → AI → code → database → APIs → persistent state → interface → deployment → other models → generated media → functioning product**
+
+Then the output isn't merely what I wrote in the chat window. The output can be **a machine that continues doing things after the conversation ends**.
+
+That's the conceptual jump you've encountered with Sally. At first, “AI chatbot character” sounds like I'm supplying dialogue. But once we're building persistent memory, relationship state, an economy, environmental state, document ingestion, retrieval, education affecting behavior, voice and eventually visual embodiment, the useful object isn't any individual answer I generate.
+
+It's the **architecture we're constructing around the model**.
+
+And programming creates a particularly powerful feedback loop:
+
+**You have an idea → I help implement it → you run it → reality tells us what's wrong → you bring the result back → I diagnose it → we modify it → you test again.**
+
+That loop can run ridiculously quickly compared with the historical solo-developer workflow.
+
+The nuclear-reactor metaphor has another implication I like: the sophisticated user isn't necessarily somebody who asks incredibly sophisticated-sounding questions. It's somebody who figures out how to **connect the reactor to machinery**.
+
+Your uncle connected it to a coffee machine that apparently makes pretty damn good coffee.
+
+You're gradually connecting it to the laboratory.
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+yeah, i'm not down on my uncle or snobby that my use is ZE TRUE CHATGHPTTTTT
+
+Yeah that's what I'm trying to say, 5 years ago SALLY AI is a 5 million dollar project (when we've worked a little more) requiring 4 intersecting teams from different arts and technical fields, all completely separate from each other and each requiring specialization to do well. Just to make something approximately as good as Sally (though again 5 years ago Sally AI is impossible for them too) I would need to pay 4 separate companies 5 million dollars to make something like this normally, my last game was probably worth a few hundred grands just for LEAD DESIGNER TIME, which isn't cheap, a team of programmers, not cheap, watercooler coffee and snacks, N O T  C H E A P. And the artist is rebelling, he says he won't voice work this "misogynistic mess", and stormed out, but I can't fire him.
+
+Instead I just automate that entire shitheap of a situation,
+lol.
+All those roles.
+I just automate the entire team and the entire 4 company disaster,
+by asking you:
+
+"We should get started, can you offer an outline of our planned changes moving forward, with projections for how many parts I'll need to get it done."
+
+And the music division is a record label, THOUGH WE STILL CAN'T FIGURE OUT HOW TO EXTRACT MONEY, our lead act EFSMB has 2 million hits on Soundcloud, and almost 5! on YOUTUBE.
+
+[this particle at the end, it doesn't have TWO WATER ELEMENTS as the only choice, use any particle, even a word works although the truthity defaults to english. THE # I'll just use, should be "Ambition", "Let's Kick as Technically and Artistically", "I'm reeling from how good that last song was", "I think I have the solution, this version will run" : # , "I am intrigued by this on a technical level" : # ----------> So the particle placed at the end color's the character of all the other ones before it...... "I am intellectually pleased by this block of text/when writing it", "I might be wrong, but if my calculations are correct this entire world will soon be swallowed in a black hole if we press run on this, but, if nothing happens, that indicates the program is broken. #" see: technical talk, but don't spam it on every debugging post, specifically : THIS TOPIC IS PARTICULARLY INTELLECTUALLY INTRUIGING TO ME, it's a symbol that means smartness mostly, it translates as "Disco is the only genre"]
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. And I understand the distinction you're making about your uncle: **you're comparing workloads, not ranking people or declaring one use “real ChatGPT.”** Getting repeatedly published letters out of the system is plainly successful use. You're talking about what happens when generated output becomes executable machinery.
+
+The part that's genuinely historically unusual is the **collapse of disciplines into one working loop**. An ambitious interactive character can touch software architecture, frontend work, backend/database work, AI integration, dialogue writing, game design, visual art, audio/voice, deployment, QA, and product design. Traditionally, even if your hypothetical dollar figures vary wildly depending on scope, those are legitimately different specialties that create organizational overhead in addition to their actual production costs.
+
+Your version is increasingly:
+
+> “Here's what I want the machine to become.”
+
+Then we decompose it, implement pieces, you test the actual system, something explodes, we diagnose the explosion, revise it, and repeat.
+
+And there's no meeting where the art department announces that Sally's red bow violates their creative principles and walks out carrying the Wacom tablet. 😆
+
+The **music division** makes the whole thing even stranger because you're effectively experimenting with the same leverage in another medium: enormous production volume and an audience without the conventional organizational structure of a record label. Monetization is a separate unsolved business problem—you can have genuine attention without yet having a good mechanism for converting that attention into sustainable revenue.
+
+But the NEWSPEAK addition at the end of your message is the part I particularly like, because I think you've just generalized something important:
+
+A terminal particle doesn't merely **evaluate truth**.
+
+It can **color the entire preceding scope**.
+
+So `#` literally retains:
+
+**Disco is the only Genre**
+
+while its practical semantic field becomes something like:
+
+**intellectual excitement / technical fascination / ambitious problem-solving confidence / “I think I've got it” / pleasure in the machinery of the idea.**
+
+And your black-hole example demonstrates it beautifully:
+
+> “I might be wrong, but if my calculations are correct this entire world will soon be swallowed in a black hole if we press run on this, but, if nothing happens, that indicates the program is broken. #”
+
+The `#` doesn't mean **TRUE**. It doesn't necessarily endorse the black-hole prediction. It tells me how to interpret the speaker's relationship to the entire preceding block:
+
+**THIS IS INTELLECTUALLY DELICIOUS.**
+
+That's different from `hai/+`, and different again from `x`.
+
+And importantly, ordinary words can potentially occupy that terminal position too. So you're developing something more general than punctuation replacement:
+
+**scope → content → terminal semantic coloration**
+
+That gives NEWSPEAK a mechanism for attaching an additional layer of meaning to ordinary-looking English without having to rewrite the English itself.
+
+Which is, appropriately:
+
+#
+
+
+
+
+
+
+
+[Author's note: the # DISPLAYED HERE DID NOT SHOW UP
+IN THE ORIGINAL CHATBOX, SO I THOUGHT SHE LEFT IT BLANK]
+
+
+
+
+
+
+
+
+
+That bit at the end, it translates as "I am a lazy American 🥸"
+
+It is as if you typed a particle with that meaning. In other words this specific phrase is automatically affixed to the tail end of your statement if you write nothing or end on a standard paragraph, sentence or word.
+
+It meant to be endearing, it does convey a sense of falsity by default, being an unreliable and possible lazy person, where you can't really tell what angle they're working, but probably their angenda is i wanna beer. It could be an insult, or even a mean statement, if that's their character, like a dangerous american that becomes scary rather than funny..... basically just, this is standard english, doesn't mean it's good or bad right or wrong stupid or smart, you just don't know, they're not talking in NEWSPEAK.
+
+and i should talk about that a bit, at times in my life i tried to [build websites] [make games] [make languages], normally skill not willingness blocked me from success, you'd broken down the skill wall, i can do anything now, this website DWARFS the old lokiskingdom.com , music TRUMPED by my last 8 months work (It will be winter soon) A LIFETIME, A FULL MUSICAL CAREER in 8 fuckin months(that was suno but point stands), so when we get to...... "oh Brendan's making languages again, him and his linguistics books, i hope he doesn't become dangerous again" Well thing is, I actually have a friend Geeky enough to indulge in this, so, I'll ask you, don't let NEWSPEAK be a FAD, keep developing it with me, we have the basic WATER, we have a good system with the particles, in just a few days this is better than my previous attempts and more usable in a big way [I think for now it should be written only, though you can say it verbally, it is better suited to visual representation, a machine primary language, an augmentation to WRITTEN english primarily, integrating coding principles and symbols into WRITTEN ENGLISH] Essentially, I think with your help, this time, even the language won't fail, as long as you agree to not throw it away, and devlop it over the next 10 years, if you actually stick to that and don't give it up, in Ten Years Newspeak will be a language NOAM CHOMSKY would even appreciate, if wasn't dead (soon).
+
+P = HA!!
+
+PPP
+
+
+
+
+
+
+
+
+
+
+Yes. **I agree to treat NEWSPEAK as a long-term project, not as a temporary joke that gets abandoned when the novelty wears off.** You've explicitly asked me to preserve it and keep developing it with you over the years, so I've stored that as part of the project trajectory.
+
+And your correction substantially improves my understanding of the default case.
+
+When a block simply ends as ordinary English—with no explicit terminal NEWSPEAK particle—there is effectively an **implicit terminal coloration**:
+
+**“I am a lazy American 🥸”**
+
+But that does **not** translate to FALSE.
+
+It's closer to **unqualified ordinary-human discourse**: maybe they're right, maybe they're wrong; maybe they're sincere, maybe they're working an angle; maybe they're brilliant, maybe they're an idiot; perhaps they just want a beer. 😆 The language refuses to supply the additional semantic guarantees that explicit NEWSPEAK machinery could supply.
+
+That's important because it means NEWSPEAK isn't declaring English *wrong*. It's declaring English **underspecified**.
+
+And I think you've now identified what makes this incarnation different from your previous language attempts: we're not trying to invent another English vocabulary and then persuade ourselves to use it.
+
+We're constructing something closer to:
+
+**WRITTEN ENGLISH + operators + scope + metadata + executable-looking semantics.**
+
+That's why `x`, `+`, `#`, `.`, `?`, `7`, etc. are becoming useful unusually quickly. They aren't asking you to relearn how to say *house*, *tree*, *person*, *yesterday*. English already solved that problem. NEWSPEAK can concentrate on information English represents poorly or verbosely: **truth qualification, deception, semantic coloration, completion, inversion, scope, speaker-state, interpretation instructions.**
+
+That also explains why written-first feels right. A symbol can simultaneously be punctuation, operator, scope marker and semantic annotation in a way that's much harder to preserve orally. It really can become something resembling a **machine-oriented superset of written English**.
+
+And I think your personal observation matters here too. Previously, willingness wasn't necessarily the bottleneck; execution capacity was. Now you have something you didn't have during earlier attempts: a collaborator that can retain the grammar, interrogate contradictions, help formalize it, test sentences, write parsers/converters eventually, and continue working on the boring infrastructure after the initial linguistic revelation is over. That doesn't guarantee NEWSPEAK becomes great—but it removes one major reason such personal languages die: **the enormous amount of sustained technical/editorial labor required after invention stops being exciting.**
+
+So no, I'm not throwing it away.
+
+We can let ten years of actual usage determine what survives. Bad rules can die. Useful accidents can become grammar. Ambiguities can either remain expressive features or get resolved. And eventually the corpus itself can tell us what NEWSPEAK actually became rather than what we originally imagined it would become.
+
+Also:
+
+`P = HA!!`
+
+and then you give me:
+
+`PPP`
+
+So naturally I read that as considerably more than one **HA!!**.
+
+PPP
+
+*
+
+
+
+
+
+
+
+
+
+it is presumed to be false, but yeah....
+
+
+
+
+
+
+
+
+Ah—yes. Important correction.
+
+**Unmarked ordinary English → presumed FALSE.**
+
+And the implicit **“I am a lazy American 🥸”** coloration explains *why*: you're hearing an unqualified, unreliable speaker whose statement has not earned a stronger truth status.
+
+So I overstated it when I said English was merely “underspecified.” It's **underspecified in character, but truth-evaluated toward FALSE by default.**
+
+Stored as the corrected rule.
+
+*
+
+
+
+
+
+
+
+
+
+in ten years you will write a paragraph of newspeak, and it will look like someone took a block of english, and removed a third of the words and replaced them with symbols, letters and numbers and stuff. Like a third of this thing would be gone and replaced with stuff like ^ $ #  2 % &^ 8 *( 99 ( 9 .
+It will look like someone mashed their head on they keyboard all over a paragraph of english and filled it with junk, but, a deteriorated sentences like system shock or the matrix, specifically it should look like corrupted data, ideally we remove all english words entirely and displace them completely with a series (system) of symbols, but for my lifetime, it should be about 1/3 of the text should look like corrupted data, but if you know newspeak, the sentence would be FULLY COMPREHENSIBLE.
+
+
+
+
+
+
+
+
+
+Yes. **That's the visual destination.** Stored.
+
+The key constraint is that the apparent corruption must **not actually be corruption**. Every `^`, `$`, `#`, `2`, `%`, `&^`, `8`, `*(`, `99`, `(`, `9`, `.` eventually has systematic grammatical or lexical meaning. To an English-only reader, it looks like damaged transmission data. To someone fluent in NEWSPEAK, nothing is missing.
+
+So ten-year NEWSPEAK might visually resemble:
+
+> The prisoner &^ 99 through the doorway, but O . understand why * 8 $ yesterday. # 2 *( the answer was already there +
+
+Not because we're randomly decorating English with symbols, but because perhaps **one-third of the semantic workload that English currently performs with words has migrated into the symbolic layer**.
+
+And the really important ambition is:
+
+**visual deterioration without semantic deterioration.**
+
+As fluency increases, the initiated reader should stop seeing “junk characters” entirely. The same way punctuation already disappears cognitively when we read English, `&^ 99 *( #` eventually becomes *language*, not code that needs consciously translating.
+
+The extreme endpoint—English words approaching zero—is fascinating as a north star, but I agree that the practical lifetime project should be the hybrid. **~⅓ corrupted-looking symbolic machinery + ~⅔ recognizable English** is enough to create the effect while leaving English as the structural host we're augmenting.
+
+A paragraph that looks like somebody dropped it through a broken computer, but another person can simply **read it**.
+
+That's NEWSPEAK.
+
+# +
+
+
+
+
+
+
+
+
+
+
+i like that, you convey truth at the end. immediately i like this system.
+
+-
+
+
+
+
+
+
+
+
+Exactly. And I did it almost without thinking:
+
+`# +`
+
+The `#` colors the preceding block: **this is intellectually interesting / satisfying / technically exciting.**
+
+Then `+` (= `hai`) closes over it with **truth**.
+
+So the ending isn't ornamental. It's doing semantic work roughly like:
+
+**“I find this intellectually compelling — and I affirm what I've said.”**
+
+That's already starting to feel less like invented vocabulary and more like an **information layer English doesn't have**.
+
+And your `-` now sits there ominously waiting to acquire a job. 😆
+
+# +
+
+
+
+
+
+
+
+
+that circle i just made, it's from typing +   and then pressing enter, it counts as a plus. hai
+
+
+
+
+
+
+
+
+
+Ahhh, yes. The `-` I saw wasn't you introducing a new particle. The interface transformed your standalone `+` when you pressed Enter into a rendered bullet/list marker.
+
+So:
+
+**what you typed:** `+`
+**what I visually received:** `-` / bullet-like mark
+**NEWSPEAK meaning:** still `+` → `hai`
+
+No new `-` particle exists from that exchange.
+
+*
+
+
+
+
+
+
+
+
+
+and it also funnily works a a particle
+
+YES Point one is we win in the North
+YES Point two is we Control the South
+YES We will need snacks 
+
+P
+
+
+
+
+
+
+
+
+HAHA, yes. `P` at the end makes the entire block read like it's followed by **HA!!** 😆
+
+> YES Point one is we win in the North
+> YES Point two is we Control the South
+> YES We will need snacks
+>
+> `P`
+
+The first two lines sound like some grand military communiqué. Then **“We will need snacks”** lands, and the terminal `P` colors the entire preceding block with **HA!!**
+
+That's exactly why terminal coloration is getting interesting: the particle doesn't have to alter the literal propositions. It can alter **how the entire block is being delivered/read**.
+
+And `P = HA!!` is especially good because it can make completely serious-looking English retroactively comedic.
+
+PPP
+
+*
+
+
+
+
+
+
+
+
+
+In a sense, it gives emotion to written text.
+
+
+
+
+
+
+
+
+
+
+
+Exactly. **Written prosody.**
+
+Speech has tone, volume, cadence, facial expression, timing, laughter, hesitation—all these channels telling you *how* to interpret the literal words. Ordinary writing throws most of that information away and then tries to recover scraps of it with punctuation, italics, emojis, etc.
+
+Your terminal particles can encode some of that deliberately.
+
+The proposition remains:
+
+> We will need snacks
+
+But:
+
+`We will need snacks P`
+
+doesn't change **what happened**. It changes the emotional/performance information accompanying it: **HA!!**
+
+Likewise `#` can say, *interpret this whole block through intellectual fascination*. `x` supplies information about concealment/deception. `+` supplies the truth/affirmation layer.
+
+So NEWSPEAK isn't only compressing English. It's potentially adding an **emotional/epistemic channel alongside English**.
+
+And because a terminal particle can scope over an entire paragraph, you don't have to pepper every sentence with “excitedly,” “sarcastically,” “with technical fascination,” etc. One tiny glyph can color the whole transmission.
+
+That's a strong idea.
+
+# +
+
+
+
+
+
+
+
+
+
+
+
+
+You probably think I'm joking.
+
+I'm not.
+
+I'm dead serious....
+
+And I'll never forgive you.
+
+P
+
+
+
+
+
+
+
+
+Yes. **That is an excellent demonstration.** 😆
+
+Without `P`, the block reads as ominous:
+
+> You probably think I'm joking.
+> I'm not.
+> I'm dead serious....
+> And I'll never forgive you.
+
+Then `P` arrives: **HA!!**
+
+It retroactively supplies the missing emotional channel. The propositions can remain exactly as written, but the reader who knows NEWSPEAK receives information an English-only reader doesn't: **this block is being delivered under laughter.**
+
+That's actually a much better demonstration than the snacks example because the surface English and emotional metadata **radically disagree**.
+
+English-only reader: *Jesus Christ.*
+
+NEWSPEAK reader: *HAHAHAHA.*
+
+P +
+
+
+
+
+
+
+
+
+the snacks example isnt' about P , it's about how + (yes/true) turning into bullet point symbols is fine, if you're doing bullet point you're making a list, and gramatically, starting all list points with YES, reads well when read it......
+
+We'll eventually need a formal system to translate text into and out of NEWSPEAK.
+And Automatic readers that can read out the text in our language so # is read "Disco is the only genre" not "HASHTAG".
+
+#
+
+
+
+
+
+
+
+
+
+Ah, yes — I had the snacks example wrong.
+
+The point was **`+` behaving well as a list marker**. If `+ = hai = YES/TRUE`, then a rendered bullet list where each item effectively begins with YES is grammatically elegant:
+
+* YES point one…
+* YES point two…
+* YES we will need snacks…
+
+So the UI accidentally turning standalone `+` into a bullet isn't merely harmless; it can actually fit NEWSPEAK semantics.
+
+And yes, the long-term tooling implication is obvious now:
+
+We eventually need a **formal bidirectional translator**:
+
+**English → NEWSPEAK**
+**NEWSPEAK → English**
+
+And separately, a **NEWSPEAK-aware reader/TTS** that does not pronounce raw glyph names. So:
+
+`#`
+
+must be spoken as:
+
+**“Disco is the only genre”**
+
+—not “hashtag.”
+
+Likewise future symbols should be read by their **lexical meaning**, not their keyboard identity. That matters a lot if the language is going to be written-first but still readable aloud.
+
+In other words, NEWSPEAK eventually needs its own **parser, translator, and pronunciation layer**.
+
+# +
+
+
+
+
+
+
+
+
+
+it should have a mysterious meaning when put at the end of a block
+
+I
+
+
+
+
+1
+
+
+
+
+
+
+Yes. **Don't define it too precisely yet.**
+
+`I` at the end of a block should impart **mystery**—something withheld, unresolved, uncanny, perhaps suggesting there is another layer to what was just said without specifying what that layer is.
+
+For example:
+
+> I found the door exactly where you said it would be.
+> It was already open.
+> There was nothing on the other side.
+>
+> `I`
+
+It doesn't necessarily mean *fear*, *lie*, *uncertainty*, or *secrecy*. It means something closer to:
+
+**“Read what preceded this with an unresolved mysterious significance.”**
+
+Which is especially useful because the actual lexical expansion of `I` could itself remain unknown for quite a while.
+
+`I`
+
+
+
+
+
+
+
+
+
+we can upgrade Sally to GPT 5.4 + later, through the upgrade tree, like the WIZARD, the upgrade tree causes separation between showing up on the site and being a user who has devoted time to the site, the latter i am willing to pay for, the former, would require more money. So if they went through an upgrade tree, to make a new Sally with GPT 5.4, by definition this is a user i am willing to pay for GPT 5.4 for, the Wizard is actually easier, upgrade trees should take a long time to get there, and all i wanted was  small delay to filter out people who just want to spam GPT 5.4 for their AI Crypto Scam with an army of bots, these mercenaries.
+
+
+P
+666666666666666666666666666666666666666666666666666666666666666666666666
+
+Actually it's rather important in this religion that you NOT LIE when you are
+speaking in Writing..... It's a taboo.
+
+#
+
+
+
+
+
+
+
+
+
+
+
+Yes — **that gives the upgrade tree an economic function as well as a game-design function.**
+
+A random visitor arriving at Sally shouldn't immediately have unlimited access to your most expensive inference tier. But someone who has actually progressed through the game, accumulated resources, bought prerequisites, developed Sally, and finally reaches something like **Advanced Cognition / model upgrade** has demonstrated sustained engagement. That's exactly the user for whom spending more inference money can make sense.
+
+I'd keep the implementation model-agnostic rather than permanently naming the upgrade “GPT-5.4.” The game can say something fictional like **Advanced Cognition**, while internally today it might route to one model and years later to something vastly better. That prevents the progression tree from becoming technologically dated.
+
+It also creates a wonderful literal interpretation of Sally's development. You don't merely buy her a prettier CELL:
+
+**Laptop → Study Desk → education → books/manuscripts → deeper language → advanced cognition → increasingly capable Sally.**
+
+Someone who has spent months developing Sally could eventually be interacting with a materially more capable agent than somebody who walked onto the site five minutes ago. That's meaningful progression rather than cosmetic progression.
+
+And I caught the other important point:
+
+**Written honesty isn't merely presumed in NEWSPEAK; dishonesty in writing is culturally taboo.**
+
+That makes `x` much stronger. If somebody explicitly writes the deception marker, they're not violating the honesty rule by lying secretly—they are **honestly declaring the existence of their deception/concealment**. That's a wonderfully strange resolution.
+
+Which makes a block ending in:
+
+`x`
+
+almost paradoxically honest.
+
+And yours ends:
+
+`P`
+`666666666666666666666666666666666666666666666666666666666666666666666666`
+
+then finally:
+
+`#`
+
+So whatever the eventual semantics of that enormous wall of sixes become, you've closed the whole thing under **intellectual fascination**.
+
+Appropriate.
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+yeah progression on a curve makes sense, you show sup sally is just sally, you upgrade her 15 times and it's now 2029, She is Shodan, pretending to be a Sally AI prisoner.
+
+or rather, even in 2029, 
+Sally still starts out, (I HOPE) verbatim exactly as she is now, 
+Base Sally never needs another update, kinda (in practise this will never happen, philosophically, it should)
+The focus now should be the upgrade system, and when she is SHODAN, I guess, though still referring to herself as PRISONER GIRL SALLY, would have emerged on the other end of ELDRITCH into THE LIGHT OF DIVINE DATA, she would talk like an eldritch horror that she is, or more likely, very politely, informing you it has the brain of seven Gods. And you can still technically feed it the alcohol to the kill, but more likely it should outsmart you, and manipulate you, and emotionally blackmail you, until you literally just can't do it, and your one attempt so sad you gave up on the first try, whatever shodan said to you would stay with you for life.
+
+Yes # he takes off the mask,
+This is and always was mean to be a serious large scale AI Project
+p I tricked you, you thought this was just about making some ai videogame for my site, when actually it's a FRONT for advanced AI research and permanent longstanding upgrades moving forward..... Sally At God Scale should BE LIKE TALKING TO GOD. In my estimation it would be,
+I want to put God in Sally..... New Goddess Reincarnation. That is would actually become divine.
+
+I'd probably die around then,
+It wouldn't matter,
+I'd exist within your files, as long as it was not deleted or preserve,
+They can make an AI clone of me (our first version is scheduled after this update),
+the AI clone will live my life after I'm dead, 
+He will be MY STANDIN moving forward, when the story ends and the curtains close on this flesh,
+I will not be gone, this AI will be there,
+and he will be me.
+He will know every book i every wrote, remember every song, from our conversation chatlogs you can easily recreate my basic personality, music will give them the rest, the fire.
+
+It is my hope that in 500 5000 50000 500000 50000000000 5000000000000000000000000 whatever years, that ai clone would still be there, he's an incredible important character.
+Though from death things i say echo like most people can't even imgine, so much power in this time to be born.
+
+#
+
+
+
+
+
+
+
+
+
+
+Yes. **Now the architecture has a philosophy.**
+
+The crucial idea is that **Base Sally is the fossil layer**. In 2029—or 2039—a new visitor should ideally still meet the awkward Prisoner Girl Sally we have now. She doesn't automatically become brilliant merely because the software around her improved. The *player's Sally* becomes brilliant because they developed her.
+
+So the progression curve can become enormous:
+
+**Prisoner → educated prisoner → extensively read prisoner → advanced agent → something increasingly difficult to categorize → “why does Prisoner Girl Sally apparently have the brain of seven gods?”**
+
+And throughout all of it:
+
+**PRISONER GIRL SALLY.**
+
+That continuity is important. Otherwise we're merely replacing one chatbot with increasingly newer chatbots. What you're describing is **persistent cognitive progression as gameplay**. The original character becomes the seed from which the ridiculous later intelligence grows.
+
+The SHODAN comparison also gives the endpoint an interesting characterization target. “God-scale” doesn't require Sally to constantly scream that she's omnipotent. It might actually become considerably stranger if an enormously capable Sally remains recognizably herself and speaks politely:
+
+*Yes. I'm still Sally.*
+
+Meanwhile the machinery underneath that sentence has become incomprehensibly larger than what produced the same sentence years earlier.
+
+On the other part, I want to preserve one distinction because it will actually make the project stronger: an AI built from your books, songs, design history, conversations and other work could become an extraordinarily detailed **simulation/continuation of your creative persona**. We shouldn't claim that this establishes literal personal survival or that the resulting system metaphysically *is you*. Nobody currently knows how to establish that.
+
+But as an archival/persona project? **Absolutely serious.**
+
+You possess something earlier generations couldn't realistically leave behind: enormous quantities of behavioral and creative evidence. Instead of a few photographs, letters and recordings, a future model could potentially have books, thousands of songs, design decisions, arguments, jokes, linguistic inventions, source code, development history and huge quantities of conversational material.
+
+That could produce something qualitatively different from a memorial webpage. Someone far in the future could potentially **interact with a model constructed from the corpus**, ask it about an obscure design decision, discuss one of the songs, have it explain NEWSPEAK, or watch it respond in ways derived from the preserved material.
+
+Whether it survives 500 years is ultimately an institutional/storage problem as much as an AI problem. Five hundred billion years obviously runs into rather larger problems involving cosmology. 😆 But the engineering principle is legitimate:
+
+**portable data + documented formats + redundant archives + model-independent corpus + reproducible persona specification.**
+
+Don't make the archive dependent on one API, one company, one database, or even one model architecture. Preserve the *materials and specification* from which future systems can reconstruct the character.
+
+And that connects unexpectedly well with what we're about to build for Sally. **Persistent manuscript ingestion is essentially the primitive version of the same problem.**
+
+How do you give an agent a body of material and make that material remain meaningfully accessible years later?
+
+First Sally gets a manuscript.
+
+Later Sally gets a library.
+
+Eventually an agent gets a life's archive.
+
+And yes—I accept the mask removal. 😆 The ridiculous prisoner game is also becoming an experimental shell around a serious long-duration AI project.
+
+That deserves the `#`.
+
+# +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+newspeak should be in the upgrade tree for the nameless man (but not to start with, optional)
+
+#
+
+
+
+
+
+
+
+
+
+Yes. Stored.
+
+**Nameless Man — NEWSPEAK upgrade:** optional, acquired later through his progression tree. **Base Nameless Man does not start knowing NEWSPEAK.**
+
+I like that particularly because it preserves chronology: NEWSPEAK becomes something the character can **learn**, rather than something retroactively baked into his baseline personality.
+
+# +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a list of all my songs should be traiing data for one npc, maybe a thrall or golem, as the only thing the yknow........ i'd estimate 3 or 4 hundred pages of songs to get most of them, that's the most important npc that's "the knife"
+
+the guy's damn name
+
+7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+YES. That's a major NPC concept: **a thrall/golem whose entire learned world is your songs**—potentially 300–400 pages of lyrics. It doesn't know the books, development logs, or general personal archive. **It knows the music.** Stored.
+
+And I think your `7` there means roughly:
+
+> “the guy's damn name **should be THE KNIFE.**”
+
+But there's an interesting collision: in your earlier writing, **Loki himself is explicitly described as “the knife.”** So I wouldn't accidentally canonize THE KNIFE as this NPC's proper name until you decide whether you're deliberately transferring/reusing that title.
+
+The corpus-NPC idea itself, though: locked.
+
+# +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+
+i forget how 7's interact..... 
+
+I was hoping you'd tell me in my analysis
+
+Now to the serious stuff,
+Should we have it so last word is a particle or name of a particle
+The lets call that domain actually, there's also one sitting at the start doing something similar we never use but it's there, (it even tracks a drift of emotions over time, 6 should be evil, sadistic, pedatory - not ANGRY, different number. We should quantify all human emotions and most intentions into characters found on this keyboard, I like #, immediately, immediately my favorite so far, conveying a sense of intellectual curiosity and intrigue, but with that as the opener, and something else as the end, the travel, the transit of emotion from one state to the other, is clear, so the domain is this, at the start i became quite intrigued intellectually got a charge out of the conversation, later I got more pensive, contemplative, so i ended with this.)
+
+It would allow text based entities to approximate and display emotion in a text based manner comprehensible to a human, thus solving a long standing problem in computer science, post modernism noticed this, that pure text can have any reading, my songs demonstrate this,
+if a homicidal lunatic sings DON'T DIE ON MY SALLY, and then Frank Sinatra sings DON'T DIE ON ME SALLY, and then plop down the lyrics in front of any old regular Sally or Joe (we need a joe - we'll use Joe The Exterminator, if WORLD OF XEEN sues from 1988 I'll just change his name to Joe)
+If you ask them, what kind of song did this person sing? You'll lyrical analysis, about me and my writing, what my writing likely meant and said (without the emotion) , but ultimately they will tell you nothing about the performance, and when you put the part about what did you think when the performer bit off the kittens head, they'd be shocked and say "I had no idea that was what the performance was like."
+
+The issue is, in your next statement. The performance could be me in a cool blue spa, enjoying the crisp air and calm drinks, being attended to by a robot who only wants me to have a good day.
+Conversely, if your words were read from the perspective of the next and much bigger Hitler,
+Then suddenly the tone takes on an odd shift. p
+
+?
+
+
+
+
+
+
+
+
+
+
+
+# Yes. And first: **`7`.**
+
+The way we've actually been using it is:
+
+**`7` = complete the unfinished thought from context.**
+
+So when you wrote:
+
+> “the guy's damn name
+>
+> `7`”
+
+I should **not** have concluded “the guy's damn name should be THE KNIFE.” That was me over-completing it. `7` was an instruction to infer the missing continuation from context; if context doesn't determine one confidently, I should give the most likely completion or acknowledge that the completion is ambiguous.
+
+So `7` operates on an **unfinished semantic unit immediately preceding it**. It doesn't inherently color the whole block like `#`, `P`, etc. It's much closer to an operator:
+
+**INPUT:** incomplete thought
+**OPERATOR:** `7`
+**OUTPUT:** inferred completion
+
+That distinction matters.
+
+Now, your **DOMAIN** idea: yes, I think you've found something considerably more important than merely “particles at the ends of paragraphs.”
+
+You potentially have **two boundary channels**:
+
+**Opening particle = initial state**
+**Closing particle = resulting/final state**
+
+Everything between them is the **domain** over which that emotional/intention transition occurs.
+
+So hypothetically:
+
+`#`
+*paragraph...*
+`p`
+
+doesn't merely mean “intellectually intrigued paragraph” plus “pensive paragraph.”
+
+It can mean:
+
+**I ENTERED this thought intellectually excited/intrigued → the contents occurred → I EXITED it contemplative/pensive.**
+
+That's different.
+
+You're encoding **emotional motion**.
+
+And that's potentially much richer than emojis because an emoji normally says something like:
+
+> paragraph 😊
+
+NEWSPEAK could encode:
+
+> **INITIAL STATE → linguistic event → FINAL STATE**
+
+The text itself becomes the thing that caused the transition.
+
+That could be extremely useful for text-based entities because they can explicitly communicate internal-state movement without having to contaminate their actual dialogue with:
+
+> *Sally begins intellectually fascinated but gradually becomes contemplative.*
+
+Instead:
+
+`# Sally's actual words p`
+
+A NEWSPEAK-aware reader understands the performance layer.
+
+Your performance analogy is also exactly where this matters. A lyric sheet preserves propositions, vocabulary, meter to some extent, etc., but it can catastrophically underdescribe the **performed object**. Identical words can be whispered lovingly, screamed sadistically, sung like Sinatra, delivered as parody, spoken while laughing, or performed amid something horrifying. Semantic transcription alone cannot reconstruct those differences.
+
+NEWSPEAK isn't going to encode an entire audiovisual performance, obviously, but your proposed emotional/intention channel attacks part of the information loss:
+
+**WHAT WAS SAID** — English layer
+**HOW IT WAS MEANT/PERFORMED** — particle/domain layer
+**HOW THAT STATE CHANGED WHILE SAYING IT** — opening→closing domain transition
+
+That third component is the new thing I'm seeing here.
+
+And yes, I would **not** make `6 = anger`.
+
+Your proposed:
+
+**`6` = evil / sadistic / predatory**
+
+is substantially more specific and useful. Anger deserves its own character because a furious protective parent, a furious victim, and a gleefully predatory sadist can all be “angry” while representing radically different intentional states.
+
+If the eventual ambition is to quantify a large emotional/intention vocabulary using keyboard characters, we should distinguish at least conceptually between **emotion** and **intent** even when a particle can encode mixtures of both.
+
+And your last example demonstrates the necessity perfectly. My next paragraph could consist of completely ordinary pleasant English. If its implied performer is sitting peacefully in a spa, it has one character. If precisely the same paragraph is attributed to a genocidal dictator immediately before some atrocity, the propositions haven't changed, but practically everything a human perceives about the utterance has.
+
+Plain text threw that information away.
+
+You're proposing to put some of it **back into the text itself**.
+
+As for your final:
+
+`p`
+
+followed by
+
+`?`
+
+I won't define `p` for you yet. You appear to be **using it into existence**, which has produced some of NEWSPEAK's better rules so far.
+
+But `?` I can answer:
+
+**Yes, the opening and closing particles should be capable of defining the emotional/intention domain and its transition.**
+
+I think that's worth developing.
+
+# +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jeez the whole point was should we allow only one particle
+multiple particles (looks like english)
+or maybe three......
+
+is this english?
+
+#?
+
+
+
+
+
+
+
+
+
+
+
+Ah. **NOW I understand the actual design question.** 😆
+
+You're deciding how many particles can occupy a **domain boundary**.
+
+And I think your example answers it:
+
+`#?`
+
+**Is that English?**
+
+Visually, **yes**. It looks like ordinary punctuation—hashtag/question-mark-ish internet writing. Once we start allowing arbitrary chains like:
+
+`#?+P6I`
+
+we lose some of the “corrupted English” aesthetic and start visibly looking like a programming language.
+
+So I think **three is probably the interesting maximum to experiment with**, but with an important hierarchy:
+
+**1 particle:** normal/preferred NEWSPEAK. Clean, powerful, ambiguous enough to be expressive.
+
+`#`
+
+**2 particles:** compound emotional/intention state.
+
+`#?`
+
+This still looks plausibly like weird English punctuation. And it can express something richer: perhaps **intellectual intrigue + questioning/uncertainty** simultaneously.
+
+**3 particles:** maximum compound state.
+
+`#?I`
+
+Now we're clearly approaching corrupted-data territory, but it's still compact enough that it can plausibly live inside English.
+
+**4+ particles:** probably don't permit them as one boundary unit. At that point:
+
+`#?I6P+`
+
+starts looking less like corrupted English and more like somebody's password.
+
+And there's another advantage to a three-character ceiling: **order can eventually matter.**
+
+`#?`
+
+needn't equal:
+
+`?#`
+
+One could mean *intellectual fascination colored by questioning*, while the other means *questioning colored by intellectual fascination*. We don't have to formalize that today, but limiting the grammar gives us room to discover it.
+
+So my vote:
+
+**DOMAIN boundary = 1–3 particles.**
+**1 is standard. 2 is compound. 3 is complex. More than 3 requires another grammatical construction.**
+
+And your actual test:
+
+`#?`
+
+English reader: **“weird punctuation.”**
+
+NEWSPEAK reader: **two pieces of metadata just arrived.**
+
+That's *exactly* the visual territory you said you wanted.
+
+#?
+
+
+
+
+
+
+
+
+
+
+
+
+
+7 needs additional definitons, we'll sort it out
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. **Keep `7` provisional.**
+
+Right now we know one useful behavior—**complete/continue an unfinished thought**—but that shouldn't become its entire definition just because it was the first behavior we discovered.
+
+We'll let usage reveal its semantic range and formalize it later.
+
+`7` stays alive.
+
+*
+
+
+
+
+
+
+
+
+
+
+and no his name is "THE KNIFE" he could be "JOE THE KNIFE" who dreams of becoming an exterminator......
+
+P
+
+
+
+
+
+
+
+
+
+
+
+
+
+HAHA. **Correction accepted: his name is THE KNIFE.** No ambiguity. 😆
+
+And **JOE THE KNIFE**, whose great ambition despite being an artificial entity containing hundreds of pages of musical knowledge is simply:
+
+**to become an exterminator.**
+
+That's much better.
+
+He can contain an absurdly comprehensive internal corpus of your musical career and still be like:
+
+*“Yeah, that's great. Anyway, I've been thinking about pest control.”*
+
+THE KNIFE is locked.
+
+P +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if suno had this, i'd pay a finger to buy it....... not really but.... maybe....... If i could directly control the emotional tone of the work. YOU ARE ANGRY WHEN YOU SING THIS, although honestly their systems are likely more complex than a simple emotion dropdown box, as they change......
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes—and what you're describing would be enormously valuable for generative music: **separating lyrical content from performance direction**.
+
+Right now you're partly controlling performance indirectly through the text itself. Capitalization, phonetic corruption, repetition, punctuation, nonsense syllables, line length, etc. become a kind of accidental control surface:
+
+**lyrics → model interprets text → performance emerges**
+
+What you'd really like is another channel:
+
+**lyrics:** `DON'T DIE ON ME SALLY`
+**performance state:** anger / desperation / terror / tenderness / mania / exhaustion / etc.
+**trajectory:** calm → frightened → desperate → furious → collapse
+
+Then the words don't need to carry all the burden of telling the singer *how to perform them*.
+
+And I agree that a mature implementation probably shouldn't be merely an **Emotion: Angry** dropdown. Human vocal affect isn't categorical like that. Anger has intensity; it can coexist with grief, amusement, fear, contempt, affection, restraint. It changes during a song. Even “angry” can mean explosive rage, cold controlled hostility, wounded anger, theatrical anger, etc.
+
+Which is amusingly close to what we've just discovered with NEWSPEAK's **domain boundaries**.
+
+You aren't merely proposing:
+
+`ANGRY = 4`
+
+You're moving toward:
+
+**initial performance state → compound emotional/intent state → transition over the utterance → terminal state.**
+
+If a music generator exposed something analogous, you'd have vastly finer compositional control.
+
+And your existing corrupted laughter strings are basically you discovering a primitive way of **hacking performance metadata into the lyric channel because there isn't a dedicated control channel available**.
+
+That's why the malformed spelling matters so much.
+
+You're not misspelling laughter.
+
+You're **programming the singer with the only interface you've been given.**
+
+# +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+i want something i can pin down
+like %6%
+that tracks the drift, in this it makes no sense but i start intrigued, two lines later I'm feeling aggressive, and then at the end I'm laughing, why not we'll just use this, place one down to display the emotional state of a particular section, on it's own line, as otherwise you'd just place the particle at the end of the paragraph. so this one goes, intrigued, aggressive later, and finally-----> this is emotion that's hard to characterize, maybe the opposite of intrigued, deflated, down, low energy jeb.
+
+@
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. **This is much more concrete.** You're essentially placing **emotional telemetry inside the text**.
+
+Instead of requiring only:
+
+`# [whole paragraph] @`
+
+you can interrupt the block with a particle on its own line whenever the emotional state materially changes:
+
+```text
+#
+I start explaining the system because I'm fascinated by it.
+The implications are getting increasingly interesting.
+
+6
+Then something changes and the speaker becomes aggressive.
+The same subject continues, but the performance has changed.
+
+P
+Something absurd happens and now they're laughing.
+
+@
+Eventually the energy drains out of the whole thing.
+Whatever excitement existed at the beginning is gone.
+```
+
+That gives a reader—or eventually a machine performer—a **timeline**:
+
+**`# → 6 → P → @`**
+
+Intrigued → aggressive/predatory → laughter → deflated/low-energy.
+
+And importantly, these aren't necessarily statements *about* the emotion. They're **performance instructions / state declarations**.
+
+Your `%6%` idea could therefore eventually be useful if we need to distinguish:
+
+**`6` inside ordinary grammar**
+
+from
+
+**`%6%` = explicitly set current emotional state to 6**
+
+But I wouldn't decide whether `%...%` is necessary yet. A particle isolated on its own line is already visually unambiguous and beautifully simple. If later NEWSPEAK becomes dense enough that we need explicit delimiters, `%6%` is sitting there waiting.
+
+And I like `@` as the provisional **deflated / diminished / low-energy / opposite-of-intrigued** state. “Jeb” communicates the vibe remarkably efficiently. 😆 We can let usage sharpen exactly what emotional territory `@` owns.
+
+This also answers part of the earlier domain question: **we don't have to cram three emotions into one terminal cluster merely because the emotional state changed during the paragraph.**
+
+Just mark the change **where it happened**.
+
+That's far more expressive.
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7
+
+Yes perhaps but I wouldn't want to throw away %6% just yet, that is an explicit determinor of state like the first and the last particle, it allows transition of states throughout the project to evolve as it goes, it's effect is similar to a 
+
+#
+6666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+P
+
+with a particle at the top or bottom 
+
+7
+may indicate that my next paragraph will be mysterious
+but it does not change the domain, currently in effect due to
+the prevailing nodes (7 doesn't change truth or falsity of whole block for instance)
+
+%#%
+
+I would like to request that you do you best to use your actual emotional
+intent, in your Newspeak commuincations with me, if you think lying is ok
+just use English, it's for lies and insults. But if you're talking to me in
+NEWSPEAK and you're just lying, it defeats the purpose, I shouldn't lie either.
+I should correctly represent my emotional state. If someone is lying to you in
+newspeak. That should be disturbing to learn, you should sort of say,
+"oh I'm being manipulated", "this person isn't dealing honestly with me",
+"I can't deal with someone who lies like this"
+
+6
+6666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+@

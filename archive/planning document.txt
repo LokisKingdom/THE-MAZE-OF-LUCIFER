@@ -1,0 +1,27 @@
+so i didn't derail the work while that was happening, here's everything i thought while i was waiting before we begin.....
+
+1: write an essay on the topic that is most important to you. 40 pages.
+2: stupid characters are better fighters, lots of short quick statements, precedeed by an attack,
+3: conversely shakespeare every time he talks, even dealing huge damage, unless he can oneshot (those that can funny) lacks dexterity and speed, they lose to the faster talker quickly.
+4: our game is made in Cruelty Engine, even in 5 years we'll still probably be working in cruelty engine, it's confidential trade secrets right now but one day when we're popular enough for it to matter i wanna be like UNREAL ENGINE 5.4, that would be in 10 years if we become a millionaire corporation.
+5: i am sorry when i spend 9 hours getting ready to work, and i come to you and say lets work, frankly i don't care if i had the scariest look on my face that anyone ever saw and i drank the entire giant thing of vodka and there's barf on my shoes, if i say let's work, don't even delay for a second, the 9 hours are over, the peak second where we must work is here : don----- "she didn't"
+6: our new workflow is miles better. discussion planning design becomes the incredibly time consuming new task, then drafting, then this. the WORK, even in a big script with 30-40 thousand lines of code still takes less than 1 hour even with 15-20 parts. it is the quickest and one of the easiest tasks we have ----> it is a one shot, attack ------> when i'm done planning i need to -> [i missed]
+
+look it was all garbage, that would have derailed useful work......
+
+
+[3 minutes later]
+
+
+yeah, it takes 1-3 days planning a new update. It takes 2-9 hours to get ready to work on an update. When the time comes to work on an update, what you say and do directly preceding it, will DIRECTLY AND SEVERELY IMPACT THE DIRECTION OF THE WORK (this does not even always mean a happy day is a happy workday, i think we have don[.]e fine here, but we have arrived at testing) the next big phase, in testing you test and verify if the code you produced is working, fix it if you have to, if you can't get it resolved, and if it's fundamentally broken, start over. no skill in testing really, just grunt work. fun grunt work but grunt still..............
+
+now, that [.] right there, is the moment we sat down and worked
+it lasts often and usually less than an hour weather permitting even on 15 or 20 parts, give or take.
+it is the most important phase in the project.
+
+What you say and do before to get read matters
+What you say directly before matters
+[.]
+the second you do the work, the only operation that matters is on the line just above this
+then in testing you confirm if it's good or not, if it's real, true, working, or whether you shot off to the side and hit a wall and it's broke and you need to rewrite it (not the worst tragedy a failed build was considered 5 years ago, an extra hour to try 1 more time)
+the test worked, the bullet hit it's target, shogo makashima is dead.

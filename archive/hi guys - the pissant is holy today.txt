@@ -1,0 +1,20 @@
+hi guys,
+this is based on old song i made, um, well anyway,
+less said about that the better.
+I'm including the first 2 private songs, which contain a clip from the start of the original (let's call it copyright bad) version of "the pissant is here - you're going in rooms now.mp3"
+The original song is just fire, a nasty business that one,
+let's call it on the margins of crim- anyway......
+I sampled the start of that version, for this new updated Suno Angel version
+with 57 heads, I like the music better in this version, but nothin's gonna top
+that introduction.
+As I'm in an HRTO suit against the Toronto Police currently,
+I'm setting those first 2 songs to private, as otherwise it could, by some crazy reasoning,
+be seen as threatening the respondants. Instead I'm building in privacy features into my 
+Lokiskingdom app (my android music app with 62+ albums) which will allow me to
+have password protected private songs that only show up if you have the code.
+Then ultimately, if they somehow get the direct link, or inspect the source code
+and reverse engineer the password to get into my secret songs,
+They won't be able to reasonably say "this guy sent us a threatening song"
+and it would become "We reverse engineered his software and discovered a secret song hidden from the public", FAR less likely to get me in trouble at HRTO, or at all, who on earth would be reverse engineering my software?
+
+>:)

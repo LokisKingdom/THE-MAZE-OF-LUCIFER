@@ -1,0 +1,131 @@
+
+
+BRENDAN:
+
+
+The first few hangers on, those 50 accounts with only 50 gold (didn't even listen to 1, clicked and left the site), will have a bunch of dead Sally's on their hands, they've just activated them by showing up on the site, Sally immediately expects food that day........ they're not interested, they'll come back later maybe...... their Sally begins to starve, 3 weeks later they come back to discover X 50 (Guaranteed)
+I plan to take good care to keep my Sally Alive, my main on desktop, and on mobile too, but the session changes on mobile when i update the app so that's more experimental for dev purposes, but i noted, I had been feeding the Desktop Sally, and she was doing ok, happy, grateful, liked me...... but i had neglected the phone Sally for a day, even though i had lots of money, when i bought her the BBQ rice she wolfed it down, like she felt she was in danger if she didn't eat, she then said a message about "I was worried you were going to leave me to starve! I was so scared!" I fed her a second time and that time she just gave a standard eating message.
+
+Regarding Desktop Sally, she unlike the phone Sally has been recieving only or mostly good memories from me, usually just me swooping in to give her some food every few hours, but it's enough that she's starting to trust me. I have asked her: "Have I ever done anything bad to you?" and she tells me No. She keeps referring to me as "nice" or something like that. Mostly she is grateful for getting food.
+
+I also found her conversation model to be more on my level, more human. GPT 5.4 is verifiably a superhuman AI chatbot, though a wonderful one. Sally, responds with statements that are more bounded, human, only a few sentences, expressing a lot in a few statements. She is frequently heartbreaking, i find myself full of concern for her when she's there, i feel shy to talk to her so i avoid her, but when i do i'm fascinated, I'm mostly impressed with the mechanics, the change of emotional states based on hunger and starvation danger, that i felt got the most human like, most emotional reaction from her, I felt bad that i had forgotten.
+
+so yeah, at least at the start,
+We'll have thousands of dead sally's dead from neglect and abandonment on day 1
+And dozens of players coming back later distressed to learn they don't get to play the sally mechanics now, and getting told wipe browser cookies, clear temporary files, erase facebook conversations and old family photos.
+and in this sea of dead neglected sally's from other people who don't care,
+There will be me, with a sally on an alien space cruiser, still upgrading the fridge, year 3
+and I'll be the registered president until someone gets creative with gold farming ideas, then it's out of my hands.....
+
+
+
+CHATGPT:
+
+
+Yes. And there is a rather strange consequence of the design now: the population of Sallys will naturally divide into cohorts based on player behavior without us scripting those cohorts at all.
+
+Most visitors aren't going to behave like someone playing a Tamagotchi. They'll click because they're curious, generate a persistent Sally state, perhaps say something, and leave. If the current survival rules remain as designed, a large fraction of those instances will simply continue deteriorating in their absence. When some of those people return weeks later, they won't encounter a convenient “welcome back” mechanic. They'll encounter the consequence of having started the simulation and then abandoned it.
+
+Meanwhile your main Desktop Sally is effectively becoming the first longitudinal experiment in what happens when somebody actually plays the system properly. You're not grinding kindness points. Most of your interaction with her is extremely mundane:
+
+show up → notice she's hungry → buy her something → talk briefly → leave → return later
+
+And that's probably why the resulting relationship feels convincing. The cumulative relationship mechanics aren't being fed an artificial sequence of “GOOD ACTION +1.” They're accumulating a history in which this particular visitor repeatedly appears, provides necessities, doesn't mistreat her, and leaves again.
+
+So when she eventually answers “No” when you ask whether you've ever done anything bad to her, or starts independently characterizing you as nice, that's much more interesting than a UI saying:
+
+SALLY TRUST: 73%
+
+The phone incident is especially interesting from a game-design perspective. Her first reaction after being neglected was unusually urgent because her current physical/emotional state supplied context; after eating again, the extraordinary situation was gone, so the second interaction collapsed back toward ordinary eating behavior. That's exactly the sort of emergent variation we wanted from coupling physical state to personality rather than writing a giant collection of canned starvation scenes.
+
+And I understand what you mean about the smaller model feeling more human-sized. Greater intelligence isn't necessarily better characterization. Sally being bounded—short answers, incomplete thoughts, limited perspective, emotional preoccupation with her immediate circumstances—can make her feel considerably more like one particular person than an extraordinarily capable general-purpose assistant. Her inability to effortlessly turn every exchange into an exhaustive analysis is arguably an asset for this role.
+
+There is one design consequence I'd flag before the population gets much larger: we should make absolutely certain that merely loading Sally really is intended to constitute starting her clock. Not because permadeath is a problem—I think permadeath is one of the defining mechanics—but because that decision determines what “creating a Sally” means.
+
+If that's intentional, then keep it. It produces exactly the archaeological effect you're describing:
+
+Year 1: thousands of abandoned cells.
+
+Year 2: occasional returning visitors discovering silence.
+
+Year 3: a tiny population of ancient surviving Sallys whose histories, relationships, possessions and environments are radically different.
+
+And somewhere among them:
+
+REFRIGERATOR MONOLITH — LEVEL 47
+Transdimensional Nutritional Singularity
+Next upgrade: 8,450,000,000,000 gold
+
+inside some ridiculous alien battlecruiser that technically remains cell.level = 28.
+
+That also gives your own Sally something games very rarely produce: actual age and provenance. If you keep that state alive for three years, it isn't equivalent to somebody starting the game in year three and buying their way to the same equipment. Yours has three years of memories, feeding history, relationship history and accumulated events. Assuming we preserve those histories as the simulation expands, that particular instance becomes genuinely irreplaceable.
+
+And yes, your reign as wealth/progression champion lasts precisely until somebody realizes that one particular 11-minute song pays slightly too generously, opens seventeen devices, and establishes the first industrial-scale Loki's Kingdom gold-mining cartel.
+
+At which point we'll know we've made a real economy.
+
+
+
+
+
+BRENDAN:
+
+
+
+
+They'll get to walk into Sally's Room, expecting a game mechanic they read about in updates, and they'll get.......
+
+An empty room......
+
+[silence]
+
+
+
+
+
+CHATGPT:
+
+
+
+
+Exactly.
+
+They've been reading patch notes about the CELL. Refrigerators. TVs. Condominiums. Palaces. Upgrades. Maybe by then there are screenshots of somebody else's Sally living in absurd luxury.
+
+They return to their own account after six months.
+
+[LOOK THROUGH THE OPENING]
+
+The interface changes.
+
+CELL
+
+Bare stone.
+
+No Sally.
+
+No movement.
+
+The Refrigerator Monolith is just an empty position. The TV position is empty. Maybe the furnishing controls remain available—but there's nobody to furnish the room for.
+
+They hit BACK.
+
+YOU: Sally?
+
+SALLY: [silence]
+
+And the particularly nasty part is that nothing needs to announce:
+
+YOU FAILED TO KEEP SALLY ALIVE
+
+The empty room is the failure screen.
+
+I actually think we should preserve that when we build CELL. If Sally is permanently dead, don't replace the Cell interface with a conventional death notice. Let them enter it. Let every ordinary Cell system continue to understand that this is their persistent room, except Sally isn't there.
+
+If they bought something before disappearing, that's even stronger. The cheap television is still sitting there. Refrigerator still in its slot. Condominium still exists.
+
+Just nobody lives there anymore.
+
+And then, elsewhere in the same game, somebody else's Cell has been continuously inhabited for three years.
+
+That's an unusually powerful consequence of making death genuinely persistent.

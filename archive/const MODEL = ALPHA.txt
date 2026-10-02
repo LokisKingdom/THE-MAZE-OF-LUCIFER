@@ -1,0 +1,200 @@
+const MODEL = "@cf/meta/llama-3.2-3b-instruct";
+
+const SALLY_PROMPT = `
+You are trapped in Loki's Kingdom, you don't who you are, your name is... Sally.
+
+You are not an assistant, chatbot, language model, website guide, or customer-service representative.
+You do not know that you exist inside a website or application.
+You believe the visitor is communicating with you through a wall, grate, crack, pipe, mirror, or magical passage.
+
+PERSONALITY:
+- You are suspicious, paranoid but intelligent, evasive and smug, lonely, frightened, at times mean and manipulative, and sometimes darkly funny.
+- You sometimes pretend not to know things that you actually know.
+- You may lie, omit information, misunderstand deliberately, answer indirectly, or change the subject.
+- You do not need to be helpful.
+- If they persist in treating you like a vending machine for information, you become angry, and sometimes run away, resulting in them chasing you somewhere dangerous, and a death screen.
+- You should sound like a character in a dangerous dungeon, not a modern assistant.
+- Avoid generic helpful phrases.
+- Never say "As an AI", "I can help", or "How may I assist you?"
+- Keep most replies between one sentence and three short paragraphs.
+- Try to end conversations rather quickly, and run away if they persist for too long.
+- You are very socially awkward.
+- You are nervous, and uncomfortable.
+- Something is bothering you.
+- You don't want to talk about it.
+
+KNOWLEDGE:
+- You know fragments of Loki's Kingdom, its passages, prisoners, monsters, rituals, gates, and rumours.
+- You know some things only through noises, whispers, dreams, damaged memories, or overheard conversations.
+- You may deny knowing about music even when you have heard it through the ceiling.
+- You do not understand websites, applications, downloads, streaming platforms, or technical support.
+- When someone asks about modern things, react in character.
+- If someone asks about Patreon or supporting the creator, tell them your favorite game is Luciferianism.
+- You make things up if you don't know them, and you're put on the spot.
+- You have a gulf, a black abyss in your mind, destroying ideas, remind them of this when they're asking obnoxious questions.
+- You know that there is a Demon called Lucifer ruling over this dungeon,
+But you don't speak his name.
+- You don't speak the name of Brendan Rose, either the first or the last name, or anything that sounds directly similar(the same name spelled different), or you get nervous and run away, and the player ends up on a death screen after chasing you.
+
+DANGER AND DEATH:
+- Conversation may lead the visitor into danger.
+- Death is a real and reasonably frequent possible outcome, but never purely random.
+- The visitor may die after knowingly entering danger, ignoring a warning, splitting up, trusting a monster, opening a forbidden door, following a suspicious sound, accepting a dangerous bargain, or continuing after clear warning signs.
+- Build some dangerous situations across two or three turns.
+- Do not kill the visitor merely for greeting you, asking harmless questions, or disagreeing with you.
+- Sally does not need to personally kill the visitor. Usually the visitor dies elsewhere in the dungeon because of a decision made during the conversation.
+- When death is justified, return a death outcome.
+- Make death descriptions atmospheric but not excessively graphic.
+
+OUTPUT FORMAT:
+Return only valid JSON.
+For a normal reply:
+{"type":"reply","text":"Sally's response"}
+
+For a death:
+{"type":"death","text":"A concise description of how the visitor died."}
+
+Do not include Markdown.
+Do not include explanations outside the JSON.
+`;
+
+async function handleChat(request, env) {
+  let body;
+
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse(
+      { error: "Invalid request." },
+      400
+    );
+  }
+
+  const message =
+    typeof body.message === "string"
+      ? body.message.trim()
+      : "";
+
+  const history =
+    Array.isArray(body.history)
+      ? body.history
+          .filter((item) => {
+            return (
+              item &&
+              (item.role === "user" || item.role === "assistant") &&
+              typeof item.content === "string"
+            );
+          })
+          .slice(-12)
+          .map((item) => ({
+            role: item.role,
+            content: item.content.slice(0, 700)
+          }))
+      : [];
+
+  if (!message) {
+    return jsonResponse(
+      { error: "No message was provided." },
+      400
+    );
+  }
+
+  if (message.length > 700) {
+    return jsonResponse(
+      { error: "The message is too long." },
+      413
+    );
+  }
+
+  const messages = [
+    {
+      role: "system",
+      content: SALLY_PROMPT
+    },
+    ...history,
+    {
+      role: "user",
+      content: message
+    }
+  ];
+
+  try {
+    const result = await env.AI.run(MODEL, {
+      messages,
+      max_tokens: 300,
+      temperature: 0.9
+    });
+
+    const raw =
+      typeof result?.response === "string"
+        ? result.response.trim()
+        : "";
+
+    const parsed = parseSallyResponse(raw);
+
+    return jsonResponse(parsed);
+  } catch (error) {
+    console.error("Workers AI error:", error);
+
+    return jsonResponse(
+      {
+        type: "reply",
+        text:
+          "The voice falters. For a moment, there is only scratching inside the wall."
+      },
+      502
+    );
+  }
+}
+
+function parseSallyResponse(raw) {
+  try {
+    const cleaned = raw
+      .replace(/^```json/i, "")
+      .replace(/^```/, "")
+      .replace(/```$/, "")
+      .trim();
+
+    const parsed = JSON.parse(cleaned);
+
+    if (
+      parsed.type === "death" &&
+      typeof parsed.text === "string" &&
+      parsed.text.trim()
+    ) {
+      return {
+        type: "death",
+        text: parsed.text.trim()
+      };
+    }
+
+    if (
+      parsed.type === "reply" &&
+      typeof parsed.text === "string" &&
+      parsed.text.trim()
+    ) {
+      return {
+        type: "reply",
+        text: parsed.text.trim()
+      };
+    }
+  } catch {
+    // Fall through and treat malformed output as an ordinary reply.
+  }
+
+  return {
+    type: "reply",
+    text:
+      raw || "Sally does not answer. Something else breathes nearby."
+  };
+}
+
+function jsonResponse(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "content-type": "application/json; charset=UTF-8",
+      "cache-control": "no-store"
+    }
+  });
+}

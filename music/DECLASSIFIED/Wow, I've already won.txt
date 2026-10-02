@@ -1,0 +1,93 @@
+Wow, I've already won. When they get a decision, they'll put it on CanLii, I made the history books, twice. What a glorious case!
+
+Yes — once the Tribunal issues any written decision (interim or final), it goes onto CanLII and becomes part of the permanent, searchable public record.Your two files will be there under your name (or initials if anonymized), with the full reasons. That’s the moment it enters the history books for anyone who searches later.You’ve already put a very large, detailed record into the system. When the decision lands, the combination will be publicly available.  Glorious is one word for it.
+
+If I really disagree with something the regsitrar has done, am i permitted to say "Objection----> [insert objection here]" does that carry an official meaning that might be lost on me currently, also don't i not bring my concerns to the judge at all, but rather store them up for judicial review if the final rendering is lacking. So DON'T argue with him(her)?
+
+Short answers:“Objection —> …”
+You are allowed to write it. It does not carry any special official meaning at the HRTO the way a formal objection does in a courtroom. The Registrar will simply treat it as you expressing disagreement. It does not trigger an automatic ruling or preserve anything extra.
+When and how to raise concerns  Purely administrative issues (service, file numbers, copy requests, etc.) → raise them with the Registrar.  
+Anything that affects fairness, procedure, accommodation, or how the case is being managed → put it on the record with the adjudicator (usually by Form 10 or in a written submission).  
+You do not have to stay completely silent and “store everything up” for judicial review. If something is genuinely unfair or prejudicial, the better practice is to raise it during the proceeding so the Tribunal has a chance to fix it. Courts later look more favourably on parties who objected in real time rather than raising the issue for the first time on judicial review.
+
+Practical rule of thumb  Don’t argue back-and-forth with the Registrar about substantive or fairness points.  
+Do put any serious procedural fairness concern in writing to the Tribunal (Form 10 or clear submission) so it is on the record.  
+If the Tribunal then rules against you, that ruling (and your objection) becomes part of what you can later take to Divisional Court on judicial review.
+
+You are allowed to protect the record. You are not required to stay silent until the very end.
+
+How to draft a Form 10
+
+HRTO procedural fairness principles
+
+Clarify Registrar versus Adjudicator roles
+
+I raised an issue that could affect fairness in my last email, i've been waiting 3 days and plan to wait weeks for an answer if needed, can i wait for an answer before putting it on record with the ajudicator?
+
+You can wait a short, reasonable time, but do not wait weeks.A fairness issue needs to be clearly on the record with the adjudicator, not just sitting in an email to the Registrar. Three days is still early. A week or so of waiting for a reply is normally fine. Stretching it to multiple weeks starts to create risk — later someone could argue that you did not diligently pursue the issue or that it was not properly raised before the decision-maker.Safe approach right nowGive it a few more days (up to about 7–10 days total from when you sent the email).
+If you still have no substantive reply, file a short Form 10 (or a clear written submission) that:Notes you raised the fairness concern with the Registrar on [date],
+Attaches or quotes the relevant part of that email, and
+Asks the adjudicator to address it.
+
+That way you have both waited reasonably and protected the record.Waiting in complete silence for weeks is the riskier option.
+
+How to draft a fairness submission
+
+Registrar vs adjudicator roles
+
+Clarify the specific fairness concern
+
+ok i will 7 days, no more.
+
+Got it. Seven days total, then escalate to the adjudicator if needed. Clean and disciplined.
+
+Explore escalation protocols
+
+Review dispute resolution steps
+
+Confirm the seven-day deadline
+
+can i raise more than one issue at the same time? there have been a few issues that gave me pause
+
+Yes, you can raise more than one issue at the same time.A single Form 10 (or a single written submission) can list several procedural or fairness concerns together. Just number them clearly (Issue 1, Issue 2, etc.) and state what you want the Tribunal to do about each one.That is normal and efficient. The adjudicator would rather see all the outstanding concerns in one place than receive separate Form 10s for every individual point.Go ahead and bundle the ones that have given you pause.
+
+How to structure multiple issues
+
+Form 10 submission guidelines
+
+ok, then i'll wait, thank you Grok, wonderful advice!
+
+You’re very welcome.  Seven-day clock is running. Whenever you’re ready to draft the Form 10 or need anything else, just say the word. Good luck.
+
+Form 10 drafting tips
+
+UK tax year deadlines
+
+I'll wait, thanks Grok
+
+i thought that was the point of judicial review, to make you bring your concerns there instead of arguing with the Adjudicator.
+
+That’s a common misunderstanding.Judicial review is the way to challenge a final (or certain interim) decision of the Tribunal after it has been made. It is not a rule that says you must stay silent during the proceeding and save every fairness complaint for later.In fact, the opposite is true in practice:Courts expect parties to raise procedural fairness concerns with the adjudicator while the case is still ongoing, so the Tribunal has a chance to fix the problem.
+If you stay completely silent and then raise the issue for the first time on judicial review, the Divisional Court can (and often does) refuse to hear it on the basis that you waived it or failed to give the Tribunal an opportunity to address it.
+
+So the correct sequence is:Raise the fairness issue with the adjudicator (Form 10 or clear written submission) while the case is live.  
+If the adjudicator rules against you or ignores it, that ruling (and your objection) becomes part of the record you can later take to judicial review.
+
+You are allowed — and usually expected — to put the concern on the record with the adjudicator. Judicial review is the safety net afterward, not a substitute for speaking up during the process.
+
+Waiver Of Rights
+
+Mandamus Application
+
+thanks, you saved my skin. it should be that way, you should be barred from arguing with him until review challenges it later, it would prevent situataions like this. I think the Ajudicator should be able to make his decision freely without pressure and save your concerns for later, but this is good too, this is very, fighty.
+
+You’re welcome — glad it helped.You’re right that a system where everything is saved for judicial review would feel cleaner and less confrontational for the adjudicator. The current rule is the opposite: raise fairness concerns while the case is live so the Tribunal can deal with them, then use judicial review only if the result is still wrong. It does make the process more “fighty,” but it also gives you a stronger record later.You’ve got the correct approach now. Wait the seven days, then put the issues on the record with the adjudicator if needed. You’re protecting yourself either way.
+
+Drafting Judicial Review Grounds
+
+Tribunal Procedure Rules
+
+Clarify adjudicator independence
+
+Fast
+

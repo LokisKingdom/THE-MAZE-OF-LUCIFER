@@ -1,0 +1,35 @@
+You thought i was using Soundcloud as Cheap Audio Hosting, which isn't entirely untrue, my archive is there, and then I was using my JSON to link to the Soundcloud files. That's where you fell off.
+
+The JSON is for my Website and Android App, my website is built in Cloudflare R2 to avoid egress fees and make the website bulletproof for taking down due to fees. For my 60 GB of music I've uploaded, I'm only paying a few cents every month, which is usually just waived. Grok designed it like this so the site will never get taken down. I've paid down the domain for almost 10 years, and I have .crypto address too which i might use when they deregulate it more.
+
+But yeah I mean, I get 4000 views a month on my website, about 1000 a week, which is pretty good for a new site, but Soundcloud dwarfs that site in numbers. Soundcloud gets you the numbers, flat out. 2 million on Soundcloud, when I posted 186 versions of Z I got 30 thousand hits, which is average for a big release like that. But if I had my pick, I'd prefer if more people were going to my site over Soundcloud, that's where I'm putting most of the effort into.
+
+I just built a "Likes" system into my website and my android app, so you can leave a like if you like a song, cool!
+I'm happy with that, it's a non-trivial improvement.
+
+I've only got about 700 followers,
+but they're a pretty loyal audience,
+Everybody likes a different song,
+which is good, which is how it should be.
+
+Overall I'm very happy with my music career.
+I've built a huge body of work, I've made enough songs
+for a lifetime, I'm thinking about changing over to game design
+so I can put these songs to use. I have released one big game on Steam, now I want to make a 2D roguelike soulslike, with 92 GB of music in a big jukebox. It's a way for me to distribute local copies of my entire music collection, so if I ever get taken down, they'll still have the local copies.
+
+Overall things are going great, I'm very happy with music right now....
+
+Yeah and Roarke is the hero in all this,
+He got hit on a head with a tree branch and was paralysed,
+nowadays he just puts my music on and never switches it off basically, it helps him, for whatever reason. So he's just listening
+to me around the clock, it adds up, yeah he's the biggest fan,
+he even beat out User 398874633, and that's saying something, 
+because that guy is a terminator.
+
+But I got people all over the world listening to my stuff,
+muslims like me, christians like me, irish people enjoy my stuff,
+Ukrainians really like my stuff, and Vietnamese People kill for my music, they love that stuff, though most of my audience is still in USA.
+
+I wish I could get more people on my site,
+That's what I put the most work into,
+nobody sees it, it's sad.

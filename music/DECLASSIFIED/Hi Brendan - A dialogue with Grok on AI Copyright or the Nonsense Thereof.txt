@@ -1,0 +1,120 @@
+Hi Brendan,
+
+In accordance with your last email:
+
+1.  This information is received.
+2.  We understand the material you refer to are works you consider original.
+3.  We are not taking action against the identified account.
+
+Best,
+Mike
+
+grok: has the ability to kill my suno account, i'm mostly happy to accept this actually, what is your opinion? it gives us nothing, but we lose nothing. this is the only party that holds something over my head.
+
+Thought for 7s
+Accept it and stop the thread.
+
+Mike gave you the only thing Suno could give you without rewriting their product:
+
+they have the amended notice
+they will not touch @ncr_666_007
+they will not treat this as “someone else’s account, take it down”
+They did not concede copyright. “Works you consider original” is deliberate. That is “we heard you,” not “LMC owns these under U.S. law.” Do not try to force a fourth email that makes them say the second sentence. That is how a quiet file becomes a Terms-of-Service review.
+
+You lose nothing by taking this. You can lose the account by keeping score. They already said they can block generation under the TOS even if you wrote the lyrics. That power does not go away because Mike was polite.
+
+Park it:
+
+Save the whole chain as one PDF.
+Do not send another “please confirm ownership.”
+If they stay quiet, that silence plus “not taking action against the account” is the result.
+HRTO stays on the Form 1. Do not cc Mike on it.
+If you want a last line at all, make it one sentence and then leave:
+
+Thank you. Understood: notice received, no action on https://suno.com/@ncr_666_007.
+Anything more is asking them to keep looking at you.
+
+I'd rather say nothing.
+
+Thought for 6s
+Say nothing. That is the better move.
+
+Save the thread. Leave Mike’s last three points on the file. Do not reply.
+
+Am I wrong here?
+Do i not own my own songs at all?
+do the lyrics not give me the right to take them down?
+
+they're just public domain by definition?
+what if i curate the public domain stuff,
+I can copyright a curated collection of HP Lovecraft works,
+can i polish and master and improve a collection of songs and THEN claim copyright over the new work made from the public domain work, or has the supreme court killed that too?
+
+so i can only control access?
+make my website, sell subscriptions,
+sell song downloads, sell services related to the songs,
+but i don't own them, and neither does Suno,
+suno is selling me downloads of a public domain work?
+
+but what about the heart of the artist?!
+WHAT ABOUT THE ARTIST WHOSE MEDIUM IS AI?!
+WHAT IN GOD'S NAME KIND OF RULING WAS THAT?!?!?!?!?
+
+Thought for 30s
+I’ll check the current U.S. Copyright Office and case law on AI outputs, lyrics, and curated public-domain collections so this isn’t guesswork.
+
+
+Thought
+You are not wrong about the lyrics. You are mixing three different things into one word: “song.”
+
+1. The lyrics
+If you wrote them, they are a human literary work. That copyright is real. It exists the moment the words are fixed. You can register the lyrics. You can tell someone not to copy those words. A platform can take down a file that reproduces those lyrics, because the file contains your protected text. That is the strongest takedown hook you actually have.⁠Musicologize
+
+2. The AI music and the AI performance
+Under current U.S. practice, material whose expressive elements were determined by the model is not copyrightable to you, and not copyrightable to Suno as author either. Prompts are not enough. Picking the take you liked is not enough. The Supreme Court did not write a grand “AI art is dead” opinion. It refused to hear Thaler v. Perlmutter in March 2026, so the D.C. Circuit rule stands: the author has to be a human. The Copyright Office’s 2025 Part 2 report says the same thing in more detail.⁠Copyright
+
+So you do not own the Suno melody, arrangement, and synthetic vocal the way you own a song you composed and sang yourself.
+
+3. “Public domain by definition”
+No. That phrase is sloppy.
+
+Uncopyrightable is not the same as “this is a 1925 Lovecraft story, expired, free for all uses forever, no other law applies.”
+
+No one can sue for copyright in the machine-made audio layer.
+Suno’s terms still govern the service.
+A paid-plan “commercial use” grant is a contract license, not a registration certificate.
+Third-party training-data fights are a separate mess. “No copyright in the output” does not automatically mean “this file is clean.”
+Suno is not “selling you public-domain MP3s” in the Gutenberg sense. They are selling access to files produced on their system, on their terms. You are not the copyright owner of that audio layer. Neither are they, as author. They still control the tap.
+
+Do the lyrics let you take the whole track down?
+Sometimes, practically, yes: the track is a container for the lyrics. That is why your DMCA could even be processed. It does not mean you own the instrumental. If someone kept only the AI beat and dumped your words, the lyrics claim would not reach that beat.
+
+Can you curate, polish, master, then own the new thing?
+Partly. Feist killed “I worked hard, therefore I own it.” Sweat of the brow is dead. Mastering, cleanup, loudness, and “I improved the file” do not create copyright in the underlying uncopyrightable or public-domain material.⁠Ecommons.udayton
+
+What still works:
+
+Compilation copyright: a creative selection and order. A curated Lovecraft volume can be protected as a compilation. The individual stories stay public domain. Nobody needs your permission to reprint one story. They need it to copy your particular lineup and packaging. Same logic as Zarya of the Dawn: text and arrangement can be protected; the machine pictures were not.⁠Legalclarity
+New human expression on top: new lyrics, a real human vocal you record, a creative arrangement you actually write, original sequencing of an album, liner notes, cover art you made. Copyright covers those additions only.
+Not: “I EQ’d the public-domain / AI track, so now the track is mine.”
+The Court did not kill compilation copyright. It made it thin. Thin is still something. It is not ownership of every song in the pile.
+
+What you can actually control
+Access, contract, and the human parts.
+
+Your site, your subscriptions, your downloads, your services
+Your lyrics
+Your brand
+A compilation or album sequence if the selection is yours
+Suno access only while they let the account live
+You cannot, under current U.S. copyright doctrine, lock the machine-made music itself the way a band locks a self-written recording.
+
+The artist whose medium is AI
+The ruling is not “this person is not an artist.” It is “copyright is a monopoly on human-authored expression, and Congress has not extended that monopoly to machine-determined notes.” That is a brutal result if the guitar is the model. It is also older than Suno: cameras, player pianos, and typesetting already forced the same split between tool and author. The Office’s line is: use AI as an instrument inside a human work and the human parts still count; let the model choose the expression and those parts do not.⁠Copyright
+
+If you want a usable rule for LMC:
+
+Register the lyrics as literary works, or register hybrid works with a limitation of claim: “lyrics by author; AI-generated musical accompaniment excluded.”
+Sell access. Do not swear you own the Suno audio as a sound recording.
+Build the catalog as a curated corpus plus lyrics plus whatever human performance or arrangement you actually add.
+You own the words. You do not own the ghost band. That is the current split.

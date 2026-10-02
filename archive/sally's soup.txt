@@ -1,0 +1,66 @@
+PRISONER SALLY
+← LOKI'S KINGDOM
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+YOU — HP 100/100 | HUNGER 10 (Fed) | GOLD 44,737
+SALLY — HP 98/100 | HUNGER 0 (Fed)
+Prisoner Sally
+PROVIDE FOR THE PRISONER
+GOLD: 44,737
+HUNGER: 0/100 — Fed
+FULLNESS: 100/100
+
+Bread and Soup — 50 gold
+GIVE — 50 GOLD
+FOOD — A warm bowl of simple soup with thick bread.
+Bread and Soup was delivered to Sally.
+SALLY
+...Who speaks through the wall?
+SALLY
+Sally accepts the Bread and Soup and begins eating while it is still warm. "Thank you." She says it quietly, then adds, "No qualification. Just—thank you."
+YOU
+Are you ok?
+SALLY
+For a moment, only Sally's breathing comes through the wall.
+YOU
+What's wrong?
+SALLY
+Silence.
+YOU
+What color is the key?
+SALLY
+Don't try to distract me.
+YOU
+from what?
+SALLY
+Nothing.
+YOU
+have you ever seen a paper crane?
+SALLY
+Why would I?
+YOU
+They're important......
+SALLY
+So are we talking about birds?
+YOU
+Oh yes, most certainly.....
+SALLY
+We're talking about birds?
+YOU
+You don't like birds?
+SALLY
+Birds aren't what this is about.
+YOU
+what is this about?
+SALLY
+This.
+YOU
+I am trying my best to be good to you, have i mistreated you in any way?
+SALLY
+No.
+YOU
+ok, just pointing that out, i'm trying.....
+SALLY
+I appreciate it.
+Speak through the wall...
+SPEAK

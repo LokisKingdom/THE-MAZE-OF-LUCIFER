@@ -1,0 +1,36 @@
+The Wizard
+The Wizard
+Scholar, magician, engineer of strange mechanisms.
+
+[AFTER A SHORT CONVERSATION ABOUT BEING LOCKED OUT OF HIS CHAMBER DUE TO THE GUILD ROLLS]
+
+Voice: On
+Statistics
+Wizard HP
+25 / 25
+Your Gold
+1,797
+Condition
+Frail, but alive
+The study smells of paper, candle smoke, dust and old bindings. Books occupy nearly every available surface.
+The Wizard looks up from a book.
+You
+Just to be sure, give me a thorough history of videogames from 1989 to 2005, please discuss the most important games and list the other heavy hitters.
+[*he taps his finger on the table*]
+You
+You can't tell me?
+[*he taps his finger on the table*]
+You
+How are you?
+The Wizard
+How am I? Frail, underfed only in the technical sense, and somewhat annoyed that the guild thought interruption was an acceptable administrative philosophy. But otherwise intact.
+
+I am glad enough to see you returned in one piece. You were agitated when you came in, and people rarely use that tone unless some mechanism, institution, or fool has begun slipping its gear.
+
+If you wish to speak simply, we may do that. If you wish to tell me what almost went wrong, do that instead. I should like to know what threatened to come apart.
+Attach .txt Manuscript
+No manuscript attached. Maximum size: 300 KB.
+Speak to The Wizard...
+Send
+← Return to Loki's Kingdom
+The Wizard is listening.

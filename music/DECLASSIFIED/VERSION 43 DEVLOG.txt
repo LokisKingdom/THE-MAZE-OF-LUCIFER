@@ -1,0 +1,150 @@
+VERSION 43:
+
+ANDROID OVERHAUL
+
+We are basically finished with the Android emergency/priority pass. The major platform-specific objectives we set are now either done or in final verification:
+
+Recall Thy Name survives screen-off/pocket use — Step 5 has now run for several minutes successfully, pending your longer confirmation.
+Amazon Polly voices work natively on Android.
+Native completion/autonomous turn continuation works.
+The album-selection bug is patched so merely choosing/browsing an album no longer replaces the currently playing song.
+Your Deepdives/media catalog work is already on Android as well.
+
+There is one larger Android idea we discussed that we have not built yet: the AI character/game menu — instead of Recall Thy Name merely being one webpage reached through the browser portion of the app, have a proper menu where you can choose among Recall Thy Name, Sally, Wizard, Nameless/other AI characters as they become available. That is a real feature, not part of today's repair job.
+
+So unless your 10–15 minute sleep test fails, I would leave Android alone now. We got the dangerous infrastructure problem solved. The character selector can go into a later Android UX pass rather than extending this surgery.
+
+Then we move back to the Worker games.
+
+And the big pending Worker-side work we had before this Android diversion was the actual game/system overhaul territory: permanent memory/document systems, Recall/Nameless work, Sally brain work, Wizard intelligence/tiredness behavior, export/chat improvements, etc.
+
+So my vote:
+
+finish sleep test → declare Android pass closed → return to Worker/game editing.
+
+
+
+
+
+[hours of surgery later]
+
+
+
+
+
+
+# DEVELOPMENT LOG — ANDROID APP UPDATE
+
+**August 16, 2026**
+
+This update substantially expands the Android version of Loki’s Kingdom beyond its original jukebox/browser role, with particular attention paid to making the AI experiences behave like native mobile applications rather than webpages that happen to be displayed on a phone.
+
+## BACKGROUND AI CONVERSATIONS
+
+Recall Thy Name can now continue operating while the phone screen is off.
+
+The Android application now uses a dedicated native foreground media service for AI voice playback. When the phone enters sleep or lock mode, the active AI conversation can continue generating dialogue and speaking rather than immediately being suspended with the WebView.
+
+The foreground service maintains ownership of the active AI broadcast across the pauses between speakers and AI-generation periods. This is particularly important for Recall Thy Name because silence between lines does not necessarily mean the program has stopped; the hosts may simply be generating their next response.
+
+The result is effectively **pocket-mode Recall Thy Name**: start the broadcast, turn off the display, put the phone away, and continue listening.
+
+## AMAZON POLLY VOICES ON ANDROID
+
+The Android AI system now supports the Amazon Polly voice system used by the web version.
+
+AI dialogue can be handed from the webpage to the native Android application, synthesized through the existing Polly infrastructure, and played through the application's native media service.
+
+This replaces dependence on ordinary browser speech synthesis for supported AI experiences and gives the Android version the same substantially more natural voice presentation developed for Recall Thy Name.
+
+The native voice system also handles completion of spoken lines so autonomous conversations can continue from one turn to the next.
+
+## PERSISTENT ANDROID AI IDENTITY
+
+The Android AI bridge now passes the player's persistent visitor identity into the native AI voice system.
+
+This allows background AI requests to remain associated with the same player/session instead of becoming disconnected from the conversation when control moves from the visible webpage to the Android background service.
+
+The Wizard entry also carries the Android visitor identity when launched, preserving the foundation required for persistent character interactions.
+
+## NATIVE AI CHARACTER MENU
+
+Loki’s Kingdom now has a dedicated **AI CHARACTERS** control built directly into the Android application.
+
+The menu provides direct access to:
+
+**Recall Thy Name**
+**Prisoner Sally**
+**The Wizard**
+**The Gypsie Fortuneteller**
+**Loki’s Kingdom**
+
+This turns the Android application into a central launcher for the growing collection of AI characters and games rather than requiring the player to navigate to each experience manually through the website.
+
+Switching characters also cleans up active native AI speech so a previous character does not continue talking over the newly selected experience.
+
+Music playback remains independent and is not unnecessarily interrupted when moving between AI experiences.
+
+## ANDROID INTERFACE REORGANIZATION
+
+The application's persistent overlay controls have been reorganized to accommodate the new AI system without sacrificing the existing interface.
+
+**AI CHARACTERS** now has its own dedicated, clearly labeled position.
+
+**MINIMIZE** retains its own separate control and function.
+
+The **GOLD** display has been relocated to the lower-right area of the interface, raised above the bottom control suite so that it remains visible without competing with the upper interface.
+
+The final layout separates the three functions visually and physically rather than stacking unrelated controls into the same screen region.
+
+## NON-DESTRUCTIVE ALBUM BROWSING
+
+Opening an album no longer automatically changes the currently playing music.
+
+Previously, selecting an album immediately loaded its queue and began playing from that album. Album selection and song selection are now separate actions.
+
+The new behavior is:
+
+**Select Albums → select an album → browse its songs → current music continues uninterrupted.**
+
+Playback changes only when the listener deliberately selects a song from the newly opened album.
+
+This makes the jukebox substantially better for browsing a large music library while something is already playing.
+
+## DEEPDIVE VIDEO SUPPORT
+
+Deepdive video collections are now viable as part of the media catalog, including the newly integrated Room XVI material.
+
+The Android media collection has been expanded with the large Deepdive archive, with Room XVI alone adding roughly 250 Deepdives and the overall Deepdive collection now exceeding 1,750 entries.
+
+MP4 Deepdive material can therefore serve as an actual browsable media component of Loki’s Kingdom rather than existing only as an external archive.
+
+## BACKGROUND MEDIA ARCHITECTURE
+
+The Android application now has a clearer division between its two long-running media systems:
+
+**MusicService** handles jukebox/music playback.
+
+**AIBVoiceService** handles AI-generated speech and autonomous AI broadcasts.
+
+Both are designed around Android's native media-service architecture, allowing music and AI experiences to behave independently instead of forcing every form of audio through the lifecycle of the embedded browser.
+
+This is an important architectural expansion of the Android application: **Loki’s Kingdom can now function simultaneously as a music player, media archive, website interface, AI-character launcher, and background AI radio/conversation application.**
+
+## RESULT
+
+The Android version has moved significantly closer to being a first-class Loki’s Kingdom client rather than simply a mobile wrapper around the website.
+
+The major user-facing improvements delivered in this update are:
+
+**Background/screen-off AI conversations.**
+**Native Amazon Polly AI voices.**
+**Persistent identity through the Android AI bridge.**
+**Autonomous background conversation continuation.**
+**A native AI character/game launcher.**
+**Independent AI and music playback systems.**
+**Non-destructive album browsing.**
+**Expanded Deepdive/video access.**
+**A reorganized persistent mobile control interface.**
+
+The phone can now be used much more like a portable Loki’s Kingdom terminal: play the music library, browse the archive, enter an AI experience, or start Recall Thy Name and simply put the phone in your pocket while the conversation continues.

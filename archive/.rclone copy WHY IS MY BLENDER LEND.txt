@@ -1,0 +1,2 @@
+.\rclone copy "WHY IS MY BLENDER LENDING (funny video).mp4" r2:r2-video-upload/ --progress
+

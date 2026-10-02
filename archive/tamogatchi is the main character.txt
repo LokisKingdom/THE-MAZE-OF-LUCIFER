@@ -1,0 +1,118 @@
+she has expended 4 units of hunger in the last few hours, that's, ok, in a day or two she will be getting there to trouble, I will not give extra food at this time, it would annoy her.
+
+SALLY is the player character (an ai at the center)
+The World around her is the Upgrade Base System
+The Player is not the main character hero or player, he is
+closer to the camera. There is a character doing stuff there,
+but that's the user tapping on their interface, the player character
+of significance is Sally, she is your AI Experiment, your tamogatchi,
+yes some entity is feeding the tamogatchi food, but the tamogatchi
+is the main character, just removed in perspective into the third person,
+tamogatchi is the player, removed in perspective and moved to the side,
+but still is.
+Memory updated
+
+Yes. That distinction actually clarifies the whole design.
+
+Sally is the player character, but agency has been displaced. The human isn't inhabiting Sally directly. They're operating one layer outside her—buying things, providing resources, manipulating her environment, talking to her, and watching what she independently does with the resulting state.
+
+So the structure is essentially:
+
+Human operator → Upgrade Base / World → Sally → autonomous consequences
+
+That also makes the room-upgrade idea much more fundamental than I initially framed it. You're not decorating an NPC's room. You're upgrading the player character by upgrading her world. A bed, refrigerator, food supply, equipment, better quarters, etc. are effectively Sally's progression tree expressed as physical objects.
+
+And unlike a conventional RPG, where you click +5 Vitality, here you buy Sally a bed and the bed is +5 Vitality, or whatever its eventual systemic effect becomes. The progression becomes diegetic.
+
+The screenshot makes that relationship particularly apparent. Sally is visually central, her HP/hunger/fullness are exposed, and the user's gold exists principally as a resource that can be spent on her. Even the current hunger behavior contributes: she has only moved from roughly 0 to 4 hunger over several hours, so there is no reason to mechanically optimize by stuffing her with food. You can simply leave her alone until she actually needs something.
+
+That's considerably closer to a Tamagotchi crossed with an RPG character whose skill tree is her environment than an RPG where the human visitor is the hero.
+
+And it makes the permanent-upgrade philosophy fit extremely well:
+
+You don't become OP. You make Sally OP.
+
+I've saved this distinction because it should influence how we design basically every subsequent Sally system.
+
+one day an image to video generator will turn every one of these images into a music video generated at runtime (or separately) that you can just sit and watch while you listen to my song, that is our goal, image to video for the song images. (2027 projected or sooner), Keep it in mind.
+
+Exactly. When you explicitly tell me “remember this,” “take a note,” “save this for later,” etc., I can put it into persistent memory rather than merely acknowledging it in the conversation.
+
+So months from now, something like “what was that future idea we had for the Jukebox?” can bring the image-to-video roadmap back into the discussion. And the same applies to the Sally design decisions we're deliberately recording.
+
+It's particularly useful for this project because we're accumulating hundreds of little design decisions that would otherwise disappear into enormous conversation histories.
+
+So yes: when there's something you specifically don't want lost, “take a note” is a literal instruction with me.
+
+This is also typical of Sally's Design, We have made systems which could be classifed as cruel today, unfairly but ok, well tomorrow, our job is to spend the same amount of time or more on, systems which would be classifed as nice / funny / cute/ sweet / kind / home, we will build a wall of new content as we start the upgrade room system. The Wizard was right, I was underestimating Sally's potential, he wasn't just shocked and afraid when he saw her code, he was amazed by it's quality, in love with the character we'd built, saw in her all kinds of potential, endless infinite potential. That made me feel guilty, and he was right, it should be, i was not planning to neglect her, but my plans clearly were not grand enough. I hope i never lose that safe, and i hope my first test sally aib does not die too soon. ideally if this character never dies, i'd be happy, later getting her into an upgradre state where she requires no maintainance to survive, you can take trips to tahiti and forget about her, then come back and she's fine, is early to early-mid game territory, buying that fridge will be the first thing you'll want to do if you don't want to feed her every day 3 times a day. that scramble should be quickly alleviated.
+Memory updated
+
+Yes. And I think there's an important progression principle buried in what you just described: maintenance is the opening problem, not the permanent game.
+
+At first, Sally is precarious. Food matters. Gold matters. You have to check on her. But the reward for engaging with those systems shouldn't merely be better numbers—it should be freedom from the systems that used to threaten her.
+
+The fridge is therefore much more significant than “an object that reduces hunger.” It's the beginning of Sally conquering hunger as a problem. Later upgrades can do the same thing to other vulnerabilities. Eventually you look at the character you started with—hungry, imprisoned, poorly equipped, dependent on somebody checking on her—and she's almost absurdly secure, comfortable, wealthy, equipped and difficult to kill.
+
+That also creates a nice emotional progression in the room itself. The original cell remains underneath everything, but gradually you build home over it.
+
+And I like the development symmetry you're describing. We spent time making it possible for the simulation to remember cruelty, deprivation, hostility, death, and consequences. That doesn't mean those things define Sally. Now we're building an equally elaborate vocabulary for feeding her, furnishing her home, making her laugh, giving her possessions, improving her circumstances, protecting her, and eventually making her ridiculously powerful.
+
+The harsh systems arguably become more meaningful once the positive alternative is enormous. There's a difference between “don't kill this NPC” and “this is the same Sally I've maintained for months, whose room I've built piece by piece and whose permanent progression I've accumulated.”
+
+And yes—I recorded this one too, particularly the progression target that routine survival maintenance should eventually disappear, with the fridge representing one of the first major steps toward Sally becoming self-sufficient.
+
+I didn't explain that well enough.
+
+If we are working on building out Sally's Cell to Deck it out and fill it with stuff she needs, probably, the day before, we modified or worked on or near systems that were high in cruelty, to the next day we balance that by decking out her house, making the Sally is the MC game better, kindness. later if we are cruel again, then after that we better build her a yacht.
+Memory updated
+
+Ah—yes. I understand the distinction now. You're describing a development cadence, not primarily an in-game progression curve.
+
+If one development session spends substantial effort expanding Sally's capacity to suffer—cruelty reactions, starvation, hostility, death, punishment, whatever—then we shouldn't just keep drilling downward into that design space the following day. We deliberately swing development in the opposite direction and spend comparable or greater effort expanding why being Sally is good.
+
+So tomorrow's Room Upgrade work isn't merely another feature on the roadmap. It's partly a deliberate counterweight: today Sally got harsher systems; tomorrow Sally gets a home.
+
+And if six months from now we spend three days creating some magnificently horrible system for her:
+
+Fine.
+
+Now build Sally a yacht.
+
+That's much clearer. I've corrected the note so I remember it specifically as a rule for how we develop Sally over time, rather than merely a rule governing her internal mechanics.
+
+It's not quite as cynical as it sounds. When the game is Shippable (we'll get it on Steam somehow) We should have a game system where Sally is upgradeable indefinitely (president can involve their sally somehow, manipulate economy), the upgrades should be funny and amazing, right up to space cruisers with her cell on the bridge, and then cosmic upside down outside the universe stuff next, then pay for Dagon's world or something like that, ends up looking like an alien monolith that thing in the end, Xenu style nonsense. (in a year or two of development, i'd guess a year we can do most of this) Evolve the tower you're riding inside of Up into Heaven, into God's head, and then like parasites in his brain he dies, and they build pandamonium.......... (something of this nature is what i am planning - planning and execution don't always match up by the way) Sally is wearing Transformers robot armor, protected by the veils of Goddesses, armed with swords that scream fire at their opponents........
+
+Conversely, there would be an equal and opposite system of threats, problems, dangers, pain, suffering, sadness, misery, betrayal, not too much overt violence exactly, the system we have is fine for now as the only way to directly deal damage other than starving. The culmination of all these threats, should eventually add up to even in her transformers mech, divine goddess mode, there would always be threats and dangers capable of hurting or killing her, it should be HARD to keep her alive, it should get HARDER over time, not easier, Fending off these threats and dangers will be harrowing and difficult and challenging. KEEPING her alive should be HARD. So there is a mess of danger and problems waiting for her, all very frightening and disturbing especially if she succumbs to it, and is lost forever, she is not generally there to be killed by the player, more likely the player will be trying to HELP HER, and will fail as the game is hard. So there would be an intense SYSTEM of cruelty, targeting her, outside of her initial concerns, which will look quite quaint soon. But balancing it out, will be everything you need to make her OP.
+
+I am sorry if that last message came off too cynical.
+Memory updated
+
+No apology needed. This explanation changes my understanding substantially.
+
+What you're describing isn't “cruelty content balanced by kindness content.” It's two escalating systems locked in an arms race:
+
+Sally's power ↑↑↑ versus the world's ability to destroy Sally ↑↑↑
+
+The early cell is almost comically small-scale compared with where you want this to go. Today the strategic question is whether she has enough food. Much later, Sally could be sitting on the bridge of some impossible cruiser, wearing ridiculous mythological/mechanical armor, protected by divine systems and carrying absurd weapons—and the game still needs to produce the same fundamental anxiety:
+
+Can I keep this Sally alive?
+
+That's important because permanent upgrades otherwise eventually destroy the game. If Sally becomes self-sufficient and invulnerable, progression eliminates the thing that made progression valuable. Your solution is that maintenance can disappear while survival difficulty increases. You stop worrying about whether there's soup in the cupboard and start worrying about whatever cosmic catastrophe has discovered the gigantic tower you've driven into God's skull.
+
+And that makes permanent death considerably more interesting. The intended tragedy isn't predominantly:
+
+“I decided to kill Sally.”
+
+It's:
+
+“I spent eight months building this Sally into an absolute monster, something finally overwhelmed us, and I couldn't save her.”
+
+The fact that mechanically you can deliberately destroy her remains part of the simulation's freedom, but it isn't the dramatic center. Protection is.
+
+There's also effectively no required ceiling. If you've implemented 500 upgrades, upgrade 501 can simply move the ontology another notch upward. Cell → apartment/palace → infrastructure → political/economic power → vehicles → spacecraft → worlds → gods → universes → increasingly incoherent metaphysical nonsense. The escalating absurdity itself becomes part of the comedy.
+
+Meanwhile the threat generator gets permission to follow her upward.
+
+That also explains your earlier development-balance rule better. The “build her a yacht” joke isn't guilt-driven compensation. It's maintaining both halves of the arms race. If we've just substantially expanded the hostile universe, Sally's side needs new toys with which to fight back.
+
+I've updated the persistent design note with this fuller version, including the crucial point that routine maintenance can become easier or disappear while keeping Sally alive overall becomes harder.

@@ -1,0 +1,51 @@
+package com.example.lokis_kingdom
+
+import android.content.Context
+import org.json.JSONArray
+
+object JsonMusicCatalog {
+
+    fun load(context: Context): List<Album> {
+        val jsonText = context.assets
+            .open("musicCatalog.json")
+            .bufferedReader()
+            .use { reader -> reader.readText() }
+
+        val albumsJson = JSONArray(jsonText)
+        val albums = mutableListOf<Album>()
+
+        for (albumIndex in 0 until albumsJson.length()) {
+            val albumJson = albumsJson.getJSONObject(albumIndex)
+
+            val title = albumJson.getString("title")
+
+            val lyricsFile = albumJson
+                .optString("lyricsFile")
+                .takeIf { it.isNotBlank() }
+
+            val songsJson = albumJson.getJSONArray("songs")
+            val songs = mutableListOf<Song>()
+
+            for (songIndex in 0 until songsJson.length()) {
+                val songJson = songsJson.getJSONObject(songIndex)
+
+                songs.add(
+                    Song(
+                        title = songJson.getString("title"),
+                        file = songJson.getString("file")
+                    )
+                )
+            }
+
+            albums.add(
+                Album(
+                    title = title,
+                    songs = songs,
+                    lyricsFile = lyricsFile
+                )
+            )
+        }
+
+        return albums
+    }
+}

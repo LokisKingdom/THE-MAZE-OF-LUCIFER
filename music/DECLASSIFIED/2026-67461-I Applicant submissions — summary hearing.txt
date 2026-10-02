@@ -1,0 +1,130 @@
+HUMAN RIGHTS TRIBUNAL OF ONTARIO
+
+File No. 2026-67461-I
+
+BETWEEN:
+
+BRENDAN S. ROSE  
+Applicant
+
+and
+
+TORONTO POLICE SERVICE BOARD  
+(named in the Application as Toronto Police Hate Crimes Unit)  
+Respondent
+
+APPLICANT’S SUBMISSIONS  
+Responding to the Respondent’s Submissions dated 14 September 2026  
+Summary hearing directed 17 August 2026 (Rule 19A)
+
+These submissions answer the Board’s request that File No. 2026-67461-I be dismissed on a summary basis. The Application has a reasonable prospect of success. The Board has recast the claim as a complaint about unknown spitters and about “customer service.” That is not the claim. The claim is that a person who asked the Hate Crimes Unit to take a report was diverted, cut off, and processed as a mental-health file the moment disability was named, and was then met with a wellness-check dispatch when he would not accept meals in place of a report and when he named this Tribunal.
+
+What this case is
+
+Police services are services under section 1 of the Human Rights Code, R.S.O. 1990, c. H.19. The Hate Crimes Unit is the specialized door through which a member of the public asks that a bias-motivated assault be recorded and assessed. The Applicant is a person with schizoaffective disorder, manic type. In late May 2026 he attempted to report a series of assaults — repeated spitting, and a man who menaced him with a staff outside Shoppers Drug Mart after he obtained lithium. He told the Unit the assaults were, in his view, tied to visible mental illness and to the way he presents in public.
+
+He was not permitted to complete that report with the Unit. The call lasted on the order of half a minute. After mental illness was stated, he was transferred to 51 Division, which was not his division, then to 14 Division. Fourteen Division put him on hold at length and offered mental-health meals and a psychiatrist he already has. When he refused that substitute and asked for a report, a wellness check was put on the board for 11 Stanley Avenue. He spent the rest of the night trying to cancel it. The officer who took the cancellation call would not confirm that dispatch would honour the cancel, only that a note would be added and that it would “most likely” be cancelled. The Applicant said he would wait up. That sequence is in the transcript filed as Exhibit A / Schedule A.
+
+The Code question is therefore narrow and triable:
+
+(a) Was the Applicant denied equal treatment in the service of making a hate-crime report because disability was a factor in how the Unit and the receiving divisions handled the call?
+
+(b) Was he denied the procedural and substantive accommodation that Krieger requires when a mentally disabled person is trying to use a police service?
+
+(c) Was the wellness-check response, after he rejected “help” and named an HRTO complaint, reprisal under section 8?
+
+The Tribunal is not asked to convict the spitters. It is not asked to sit as a police-complaints commission on the quality of an investigation that never began at the Unit. It is asked whether the gate was closed because the caller was crazy.
+
+The Board’s first move is a misdescription
+
+Paragraph 4 of the Board’s submissions says the Applicant “alleges that they reported various incidents of assault … to the Toronto Police Hate Crimes Unit.” He did not complete a report. That is the point. The transcript shows the Unit asking where it happened, then transferring him to 51 Division before the substance of the complaint was taken. The officer’s own words: after mental illness and an unseen spitter were mentioned, “I’m gonna put you through 251 division.” The Applicant’s later question — whether mentally ill people are excluded from the Hate Crimes Unit — was answered with a formula (“Absolutely not”) by a different officer who had not taken the first call, while the first call had already been thrown to a division.
+
+Paragraph 4 then treats the street assaults as the discrimination to be proved. They are context. The discrimination alleged against this respondent is the Unit’s and the divisions’ treatment of the Applicant as a wellness object rather than as a complainant.
+
+Assume the transcript is true
+
+On the first branch of Dabic v. Windsor Police Service, 2010 HRTO 1994, at paras. 8–9, the Tribunal may assume the pleaded facts. If the transcript is true, the following happened in a single service encounter:
+
+The Applicant asked for the Hate Crimes Unit.
+He identified mental illness as the alleged motive and as his own characteristic.
+He was not allowed to finish.
+He was sent to the wrong division, then to 14 Division.
+Fourteen Division offered food and psychiatric referral instead of taking the report he asked for.
+A wellness check was created for his house.
+He had to bargain at night to cancel it, without a firm assurance it would not proceed.
+
+That is adverse treatment in a service. The remaining question is connection to disability. The connection is not speculative. Disability was the information that changed the path of the call. The officer at the Unit made the transfer after that information. The division offered a mental-health package. The wellness check is a disability-coded instrument. A caller who did not announce schizoaffective disorder would not have been run through that machine in the same way. That is enough, at a summary hearing, to send the matter on. The Code does not require disability to be the sole factor. It requires that it be a factor. Québec (Commission des droits de la personne) v. Montréal (City), 2000 SCC 27; Moore v. British Columbia (Education), 2012 SCC 61.
+
+Krieger governs this respondent
+
+Krieger v. Toronto Police Services Board, 2010 HRTO 1361, binds this respondent on the duty to accommodate mental disability in the course of police work. The Tribunal held that where mental disability is known or ought to be known, the Service must ask whether the person’s presentation is disability-related before it treats that presentation as a reason to end, divert, or sanction the encounter. The duty is procedural and substantive. It exists even when the person cannot neatly self-advocate.
+
+The Applicant did the opposite of hiding the disability. He named it because it was the alleged hate motive and because it is a Code ground. The Unit used the same fact as a routing signal: off the specialized desk, onto the mental-health track. That is the Krieger error in a services wrapper. Accommodation here was simple. Let him finish the report. Take an occurrence. If the facts do not meet the Unit’s charging threshold, say so after the report exists. Offering meals is not accommodation of the service he asked for. It is a substitution that treats the disabled complainant as a client of social work.
+
+P.G. v. Baton Rouge Restaurant, 2016 HRTO 500, is the same principle in a shorter transaction. An invisible mental disability was met with impatience and ejection. The Tribunal found discrimination. A police unit has a higher, not a lower, duty than a restaurant manager.
+
+The Board’s authorities do not reach this record
+
+Buchner v. Toronto (City), 2022 HRTO 54, and Watt v. Cambridge (City), 2014 HRTO 218, are about general unfairness with no Code factor. They are not about a specialized unit that changes course when “mental illness” is spoken.
+
+Forde v. Elementary Teachers’ Federation of Ontario, 2011 HRTO 1389, requires more than speculation. The transcript is not speculation. It is the service encounter.
+
+Pella v. Peel Police Services Board, 2015 HRTO 719, at para. 11, says the Tribunal does not second-guess officers and doctors in the discharge of their duties where the complaint is bare unfairness. The Applicant is not asking the Tribunal to grade an investigation. There was no Unit investigation to grade. Pella still requires an objective look at whether conduct was based on stereotype. Routing a disabled complainant to meals and a wellness check, instead of a notebook, is exactly that look.
+
+Tranchemontagne and the Board’s “substantive equality” paragraph are aimed at the race plea. They do not erase disability. A White applicant can still be denied a service because he is mentally ill. That is the live ground. The race theory — that the Unit will not take a White victim of a hate crime — may or may not survive a hearing. It is not necessary to the disability case. The Tribunal can keep the disability and reprisal claims and still dismiss race if it finds no prospect there. Summary dismissal of the entire Application is not required to manage that issue.
+
+Hughes v. Ontario Provincial Police, 2012 HRTO 609, is about hurt feelings. A night spent waiting to see whether the door would be forced for a cancelled wellness check is not hurt feelings. It is the coercive end of a mental-health script.
+
+Evidence reasonably available
+
+On the second branch of Dabic, at para. 10, reasons that live only inside the Service are obtained by disclosure and cross-examination. The Applicant already has:
+
+the call recordings and the transcript in Exhibit A;
+dates in a two-week window ending 30 May 2026, including the Shoppers Drug Mart incident the same day as the Moore’s / Yonge and King spitting;
+the identity of the Unit as the first desk, 51 Division as the first dump, 14 Division as the receiving desk;
+the wellness-check board entry for 11 Stanley Avenue;
+his statement on the call that he was considering an HRTO complaint against the Hate Crimes Unit, made while asking that the check be cancelled.
+
+What he reasonably needs from the respondent, and what a summary dismissal would bury, is:
+
+the identity and notes of the Hate Crimes Unit member who transferred him;
+the CAD / dispatch record of the wellness check and the cancel note;
+any policy the Unit uses when a caller discloses mental illness;
+whether a White, non-disabled caller reporting three spit assaults and a staff used as a weapon would have been given an occurrence number at the Unit.
+
+That is not a fishing trip. It is the ordinary path Dabic describes when the respondent holds the reasons.
+
+Reprisal
+
+Section 8 does not require that the underlying Application already exist as a filed form. It requires that the person claimed or enforced a Code right, or tried to. On the cancellation call the Applicant said he was considering an HRTO complaint against the Hate Crimes Unit. The wellness check was already live. The officer would not say it would actually be cancelled. The Applicant’s Form 1 treats that sequence as punishment for insisting on a report and for naming this Tribunal. That is a reprisal theory with a documentary spine. It cannot be declared hopeless on a paper record written by the Board.
+
+The proper respondent
+
+The Board says it was “improperly named.” Institutional respondents are often styled by the unit the applicant dealt with. The Tribunal can correct the style to the Toronto Police Service Board. That correction is not a dismissal. The Board is the entity that answers for the Unit and the divisions. The Applicant sued the desk that refused him. He does not withdraw the claim because counsel prefers a different caption.
+
+Hearing format
+
+The Applicant does not agree that this summary hearing should proceed in writing only. The live issue is what was said on the calls and why the transfer happened. That is oral. If the Tribunal directs a written summary hearing, these submissions and Exhibit A are the Applicant’s record.
+
+Order requested
+
+The Applicant asks that the Board’s request to dismiss File No. 2026-67461-I in its entirety be refused; that the disability and reprisal claims proceed; and that the Tribunal order production of the Unit transfer notes, the dispatch record for the 11 Stanley Avenue wellness check, and the name of the Hate Crimes Unit member who took the first call.
+
+ALL OF WHICH IS RESPECTFULLY SUBMITTED this 14th day of September, 2026.
+
+Brendan S. Rose  
+Applicant  
+11 Stanley Avenue, Toronto, Ontario M6J 1A4  
+thesulfurgod@protonmail.com  
+437-432-9165  
+File No. 2026-67461-I
+
+Authorities
+
+Human Rights Code, R.S.O. 1990, c. H.19, ss. 1, 8, 9, 11, 17  
+Krieger v. Toronto Police Services Board, 2010 HRTO 1361  
+P.G. v. Baton Rouge Restaurant, 2016 HRTO 500  
+Dabic v. Windsor Police Service, 2010 HRTO 1994  
+Moore v. British Columbia (Education), 2012 SCC 61  
+Québec (Commission des droits de la personne et des droits de la jeunesse) v. Montréal (City), 2000 SCC 27  
+HRTO Rules of Procedure, Rule 19A

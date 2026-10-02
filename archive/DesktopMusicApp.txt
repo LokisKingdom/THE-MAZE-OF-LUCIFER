@@ -1,0 +1,245 @@
+---
+import { albums } from '../data/musicCatalog.js';
+
+const r2Base = 'https://pub-4ae7f49887bc46e9a03de6e38886b609.r2.dev/';
+---
+
+<section class="desktop-music-app">
+  <h1 style="text-align:center; color:#8B0000;">THE EFSMB JUKEBOX</h1>
+
+  <div class="desktop-app">
+    <aside class="album-list">
+      <h2>Albums</h2>
+      <div id="albums"></div>
+    </aside>
+
+    <main class="song-area">
+      <h2 id="albumTitle">Select an album</h2>
+      <h3 id="nowPlaying">Nothing playing</h3>
+
+      <audio id="audioPlayer" controls style="width:100%; margin:1rem 0;"></audio>
+
+      <div class="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <div id="songs" class="song-list"></div>
+    </main>
+  </div>
+</section>
+
+<script define:vars={{ albums, r2Base }}>
+  let currentAlbumIndex = 0;
+  let currentSongIndex = 0;
+
+  const albumsEl = document.getElementById('albums');
+  const songsEl = document.getElementById('songs');
+  const albumTitleEl = document.getElementById('albumTitle');
+  const nowPlayingEl = document.getElementById('nowPlaying');
+  const audio = document.getElementById('audioPlayer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function getSongUrl(song) {
+    if (song.file.startsWith('http')) return song.file;
+    return r2Base + song.file;
+  }
+
+  function renderAlbums() {
+    albumsEl.innerHTML = '';
+
+    albums.forEach((album, index) => {
+      const button = document.createElement('button');
+      button.textContent = album.title;
+      button.className = 'album-button';
+
+      button.addEventListener('click', () => {
+        currentAlbumIndex = index;
+        currentSongIndex = 0;
+        renderSongs();
+      });
+
+      albumsEl.appendChild(button);
+    });
+  }
+
+  function renderSongs() {
+    const album = albums[currentAlbumIndex];
+    albumTitleEl.textContent = album.title;
+    songsEl.innerHTML = '';
+
+    album.songs.forEach((song, index) => {
+      const button = document.createElement('button');
+      button.textContent = song.title;
+      button.className = 'song-button';
+
+      button.addEventListener('click', () => {
+        playSong(index);
+      });
+
+      songsEl.appendChild(button);
+    });
+  }
+
+  function playSong(index) {
+    const album = albums[currentAlbumIndex];
+    const song = album.songs[index];
+
+    currentSongIndex = index;
+    audio.src = getSongUrl(song);
+    nowPlayingEl.textContent = `Now Playing: ${song.title}`;
+    audio.play();
+  }
+
+  function nextSong() {
+    const album = albums[currentAlbumIndex];
+    currentSongIndex = (currentSongIndex + 1) % album.songs.length;
+    playSong(currentSongIndex);
+  }
+
+  function prevSong() {
+    const album = albums[currentAlbumIndex];
+    currentSongIndex =
+      (currentSongIndex - 1 + album.songs.length) % album.songs.length;
+    playSong(currentSongIndex);
+  }
+
+  nextBtn.addEventListener('click', nextSong);
+  prevBtn.addEventListener('click', prevSong);
+  audio.addEventListener('ended', nextSong);
+
+  renderAlbums();
+  renderSongs();
+</script>
+
+<style>
+  .desktop-music-app {
+    margin-bottom: 2rem;
+    background: #080008;
+    border: 2px solid #8b0000;
+    padding: 1rem;
+  }
+
+  .desktop-music-app h1 {
+    color: #ff3030 !important;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+
+  .desktop-app {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1rem;
+    min-height: 70vh;
+  }
+
+  .album-list,
+  .song-area {
+    border: 1px solid #cc0000;
+    padding: 1rem;
+    background: #000000;
+    color: #ff3030;
+  }
+
+  .album-list h2,
+  .song-area h2,
+  .song-area h3 {
+    color: #ff3030;
+  }
+
+  .album-button,
+  .song-button {
+    background: #090909;
+    color: #ff3030;
+    border: 1px solid #700000;
+    border-radius: 3px;
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: left;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .album-button {
+    display: block;
+    width: 100%;
+  }
+
+  .song-button {
+    display: inline-block;
+    width: auto;
+  }
+
+  .album-button:hover,
+  .song-button:hover {
+    background: #280000;
+    color: #ff6060;
+    border-color: #ff3030;
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
+  }
+
+  .album-button:active,
+  .song-button:active {
+    background: #500000;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .controls button {
+    width: 100%;
+    padding: 0.65rem;
+    cursor: pointer;
+    background: #090909;
+    color: #ff3030;
+    border: 1px solid #8b0000;
+    border-radius: 3px;
+  }
+
+  .controls button:hover {
+    background: #280000;
+    border-color: #ff3030;
+  }
+
+  #audioPlayer {
+    background: #111111;
+    border-radius: 20px;
+  }
+
+  .song-list {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 0.4rem;
+    background: #050505;
+    border: 1px solid #500000;
+  }
+
+  .song-list::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .song-list::-webkit-scrollbar-track {
+    background: #080808;
+  }
+
+  .song-list::-webkit-scrollbar-thumb {
+    background: #700000;
+    border-radius: 6px;
+  }
+
+  .song-list::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+  }
+
+  @media (max-width: 800px) {
+    .desktop-app {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

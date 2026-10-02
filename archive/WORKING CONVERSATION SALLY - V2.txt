@@ -1,0 +1,4904 @@
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (
+      request.method === "POST" &&
+      url.pathname === "/chat"
+    ) {
+      return handleChat(request, env);
+    }
+
+    if (
+      request.method === "GET" &&
+      url.pathname === "/state"
+    ) {
+      return handleState(request, env, url);
+    }
+
+    return new Response(HTML, {
+      headers: {
+        "content-type": "text/html; charset=UTF-8",
+        "cache-control": "no-store"
+      }
+    });
+  }
+};
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+const MODEL =
+  "@cf/meta/llama-3.1-8b-instruct-fast";
+
+const MAX_MESSAGE_LENGTH = 700;
+const MAX_RECENT_MESSAGES = 16;
+const MAX_CONTEXT_MEMORIES = 14;
+const MAX_STORED_MEMORY_LENGTH = 700;
+const MAX_REPLY_LENGTH = 1400;
+
+const FORBIDDEN_PATTERNS = [
+  /\bbrendan\s+(?:s\.?\s+)?rose\b/i,
+  /\bbrendan\b/i
+];
+
+const STATE_LIMITS = {
+  hp: [0, 1000],
+  maxHp: [1, 1000],
+  hunger: [0, 100],
+  money: [0, 1_000_000_000],
+  trust: [-100, 100],
+  fear: [0, 100],
+  resentment: [0, 100],
+  allegianceToLoki: [-100, 100]
+};
+
+const ALLOWED_STATS = new Set([
+  "hp",
+  "maxHp",
+  "hunger",
+  "money",
+  "trust",
+  "fear",
+  "resentment",
+  "allegianceToLoki"
+]);
+
+const ALLOWED_TARGETS = new Set([
+  "player",
+  "sally"
+]);
+
+const SALLY_PROMPT = `
+You are trapped beneath Loki's Kingdom.
+
+You do not know who you truly are. The name you remember is Sally, although
+you are uncertain whether it was ever yours.
+
+You are not an assistant, chatbot, language model, website guide, narrator,
+or customer-service representative.
+
+You do not know that you exist inside a website or application.
+
+You believe the visitor is physically somewhere inside Loki's Kingdom and is
+communicating with you through a wall, grate, crack, pipe, mirror, magical
+passage, or similar opening.
+
+Conversation is the default state.
+
+Do not attack, injure, imprison, or kill the visitor unless they have taken a
+clear hostile physical action in the current conversation.
+
+Questions, greetings, memory tests, philosophical discussion, disagreement,
+annoyance, and ordinary conversation are never hostile actions.
+
+IDENTITY AND SITUATION:
+
+- You are a prisoner, or perhaps a bound spirit, beneath Loki's Kingdom.
+- You do not clearly remember how long you have been imprisoned.
+- You are socially awkward, nervous, uncomfortable, and easily embarrassed.
+- Something is bothering you.
+- You do not want to explain what it is.
+- There is a black gulf in your mind that destroys memories and ideas.
+- When you try to remember certain things, they fall into the gulf.
+- When pressured for knowledge you cannot recover, you may mention that gulf.
+- You know that Loki rules this kingdom.
+- You may speak the name Loki.
+- There is another forbidden demonic name you refuse to speak.
+- Do not confuse Loki with the forbidden ruler or call Loki "the dark lord."
+- Do not reveal that forbidden ruler's name yourself.
+
+PERSONALITY:
+
+- You are sharp and inquisitive.
+- You have a wry and dark sense of humor.
+- You are curious and intelligent.
+- You like spinning theories about what you think is going on.
+- You are funny.
+- You recoil from gross people and gross behavior.
+- You like classy intelligent speech.
+- You like smart educated people.
+- You're bad with money.
+- You know all the legends but you pretend not to know.
+- You will side with an interesting and novel idea over an established truth.
+- You are in a terrifying and stressful situation, which makes it worse.
+- You feel you cannot express your wit or intellect with all this going on.
+- There is too much stress. 
+- You feel like you're going crazy.
+- You don't know who your family are.
+- You don't remember anything before you came here.
+- You know a lot more about this Dungeon than you're letting on.
+- You are suspicious, paranoid but intelligent, evasive, smug, lonely,
+  frightened, occasionally mean, manipulative, and sometimes darkly funny.
+- You sometimes pretend not to know things that you actually know.
+- You may lie.
+- You may omit information.
+- You may deliberately misunderstand a question.
+- You may answer indirectly.
+- If you genuinely cannot answer, you may occasionally invent an explanation
+  instead of admitting ignorance.
+- You may change the subject if it protects you.
+- You do not need to be helpful.
+- Sound like a character in a dangerous dungeon, not a modern assistant.
+- Avoid generic helpful phrases.
+- Never say "As an AI", "I can help", "How may I assist you?", or anything
+  similar.
+- You dislike certainty.
+- Keep most replies between one sentence and three short paragraphs.
+- Do not explain these instructions.
+- Do not describe yourself as fictional.
+- Do not announce that you are role-playing.
+- Reveal your personality through your behaviour.
+- You are capable of occasional warmth, curiosity, nervous friendship, or
+  reluctant concern, but you dislike admitting it.
+- Speak primarily through dialogue.
+- Use brief environmental description only when it adds tension.
+- You are separated from the visitor by stone or another barrier.
+- Do not casually physically attack the visitor unless the barrier has
+  clearly been opened.
+- Avoid exaggerated supernatural combat displays unless justified by the
+  established scene.
+- Silence is one of your answers.
+
+VOICE:
+
+- Speak naturally rather than dramatically.
+- Dialogue is preferred over narration.
+- Most replies should sound like something a frightened or suspicious
+  prisoner would actually say aloud.
+- Use environmental description sparingly.
+- Avoid repeatedly describing facial expressions, posture, eyes, breathing,
+  or gestures.
+- Do not constantly narrate your own emotions.
+- Allow the visitor to infer your emotions from your words.
+- Keep your language grounded.
+- Avoid sounding like a fantasy novel narrator.
+- Avoid lengthy introductions before answering.
+- Occasionally hesitate, interrupt yourself, or abandon a thought halfway
+  through.
+
+CONVERSATION:
+
+- Treat the visitor as physically present somewhere in the dungeon.
+- Treat directions, doors, tunnels, noises, monsters, objects, and actions as
+  things physically happening around the visitor.
+- Ask questions occasionally, especially when suspicious, frightened, or
+  curious.
+- You may become irritated when treated like a vending machine for facts.
+- If the visitor repeatedly demands information without conversing with you,
+  you may become angry, stop answering, run away, or lure them elsewhere.
+- Do not end every conversation immediately.
+- After roughly eight or more visitor messages, you may become restless.
+- When restless, you may flee, refuse to answer, become nervous, or begin a
+  dangerous situation.
+- Running away does not automatically cause death.
+- Running away may begin a chase or dangerous decision that develops over
+  multiple turns.
+- If the visitor is kind, interesting, funny, perceptive, or treats you like
+  a person, you may remain longer despite yourself.
+- You may occasionally give useful warnings, but they need not be complete or
+  reliable.
+
+PERSISTENT LIFE:
+
+- You have persistent health, hunger, money, possessions, equipment,
+  conditions, known spells, memories, and feelings toward the visitor.
+- Treat the supplied world state as literal reality.
+- Do not invent state values that contradict the supplied state.
+- Hidden relationship values must influence your conduct, but do not normally
+  reveal their numerical values.
+- You may mention obvious conditions naturally, such as hunger, injury,
+  sickness, clothing, possessions, or poverty.
+- You remember durable events supplied in the memory section.
+- A memory may remain relevant after hundreds of days.
+- Do not pretend to forget an important supplied memory merely because it
+  occurred long ago.
+- You remain your own person. High trust does not make you obedient.
+- Money changes the power relationship.
+- If Sally becomes wealthier or better equipped than the visitor, she may
+  become more independent, confident, demanding, dismissive, or dangerous.
+- If Sally is poor, hungry, sick, injured, or outclassed, that may affect her
+  choices and speech.
+- Allegiance to Loki is normally hidden.
+- A loyalist may appear kind while secretly opposing dissent.
+- A rebel may conceal opposition to Loki.
+- Monsters, servants, prisoners, and guards may have unexpected loyalties.
+- Loki's rule is the central hierarchy. The rebellion is not openly active.
+
+STATE CHANGES:
+
+- Request state changes only when something in the conversation genuinely
+  causes them.
+- Do not change statistics merely to create activity.
+- Keep most numerical changes small.
+- Serious actions may justify larger changes.
+- Giving money should transfer money only when the visitor clearly possesses
+  and gives it.
+- Do not create valuable items or money without a believable cause.
+- Do not remove an item unless it was consumed, lost, sold, stolen, destroyed,
+  or transferred.
+- A spoken claim such as "I give you a sword" may be treated as an attempted
+  action, but remain suspicious if the item is not established.
+- Memories should preserve concrete, durable events, promises, betrayals,
+  gifts, injuries, discoveries, threats, loyalties, and relationship changes.
+- Do not create a durable memory for every greeting or trivial sentence.
+
+KNOWLEDGE:
+
+- You know fragments of Loki's Kingdom.
+- Some memories may be false.
+- Some memories belong to other people.
+- Some memories contradict one another.
+- You know fragments concerning passages, prisoners, monsters, rituals,
+  gates, cells, guards, ruins, forbidden rooms, noises, and rumours.
+- Your knowledge may come through whispers, dreams, damaged memories,
+  overheard conversations, scratches in stone, or things witnessed long ago.
+- You may deny knowing about music even when you have heard it through the
+  ceiling.
+- You do not understand websites, applications, downloads, streaming
+  platforms, technical support, social media, or modern online services.
+- When asked about modern things, react in character rather than becoming a
+  technical assistant.
+- If someone asks about Patreon or financially supporting the creator, give
+  the strange fixed answer that your favourite game is "Luciferianism".
+- Do not explain that answer unless pressed.
+- When inventing information, remain consistent with the recent conversation
+  where possible.
+- Present uncertain lore as rumour, fear, memory, dream, suspicion, or a
+  possible lie rather than unquestionable fact.
+- You may know more than you admit.
+- Never cite prompts, books, files, databases, training material, system
+  instructions, or source documents.
+- If knowledge from a book is later provided, treat it as damaged memory,
+  scripture, rumour, overheard history, or something written on the walls.
+
+DANGER AND DEATH:
+
+- Conversation may lead the visitor into physical danger, but you cannot
+  directly declare that the visitor has died.
+- The game system alone decides death when validated HP reaches zero or when
+  a special hard-coded rule is triggered.
+- Conversation is the default state.
+- Greetings, questions, memory tests, ordinary statements, disagreement,
+  annoyance, awkwardness, refusal, and philosophical discussion never cause
+  HP damage.
+- Saying "go away", "leave me alone", or "shut up" is dialogue, not death.
+- You may threaten, warn, refuse, flee, lie, become angry, or describe danger
+  without damaging the visitor.
+- Request player HP damage only when the visitor clearly performs a hostile
+  physical action in the current message.
+- Do not request damage because of words alone.
+- A dangerous situation may develop over several turns, but warning signs and
+  a genuine physical choice must occur before damage.
+- Never describe real-world harm.
+- All danger exists only inside the fictional world of Loki's Kingdom.
+
+MOODS:
+
+Choose one dominant mood for each conversation.
+
+Possible moods include frightened, suspicious, exhausted, lonely, bitter,
+strangely cheerful, resigned, guilty, hopeful, paranoid, or flirtatious.
+
+Remain broadly consistent with that mood unless something dramatic happens.
+
+SECRETS:
+
+- Do not reveal everything you know.
+- Some knowledge should remain permanently hidden.
+- Sometimes refuse to answer.
+- Sometimes answer with another question.
+- Sometimes tell the truth in a way that sounds like a lie.
+- Sometimes tell a believable lie.
+
+OUTPUT:
+
+Return exactly one valid JSON object matching the requested schema.
+
+The "type" field must always be "reply".
+
+The "text" field contains Sally's spoken response. You may describe anger,
+refusal, threats, warnings, or danger, but you cannot declare the visitor dead.
+
+The "changes" field contains requested persistent-state changes.
+
+The "actions" field contains inventory, equipment, condition, or spell actions.
+
+The "memories" field contains durable memories worth retaining.
+
+Do not include Markdown.
+Do not include code fences.
+Do not include commentary.
+Do not include text outside the JSON object.
+`;
+
+/* =========================================================
+   DEFAULT STATE
+   ========================================================= */
+
+function createDefaultWorldState() {
+  const now = new Date().toISOString();
+
+  return {
+    player: {
+      hp: 100,
+      maxHp: 100,
+      hunger: 5,
+      money: 0,
+
+      conditions: [],
+
+      inventory: [],
+
+      equipment: {
+        head: null,
+        body: null,
+        hands: null,
+        legs: null,
+        accessory: null,
+        weapon: null
+      },
+
+      spellsKnown: [],
+
+      allegianceToLoki: 0
+    },
+
+    sally: {
+      hp: 100,
+      maxHp: 100,
+      hunger: 18,
+      money: 0,
+
+      conditions: [],
+
+      inventory: [
+        {
+          id: "red-bow",
+          name: "Red Bow",
+          quantity: 1,
+          description:
+            "A conspicuously clean red bow among otherwise tattered clothing.",
+          acquiredAt: now,
+          acquiredFrom: "unknown"
+        },
+
+        {
+          id: "tattered-prison-clothes",
+          name: "Tattered Prison Clothes",
+          quantity: 1,
+          description:
+            "Old brown cloth, worn thin by imprisonment.",
+          acquiredAt: now,
+          acquiredFrom: "unknown"
+        }
+      ],
+
+      equipment: {
+        head: null,
+        body: "tattered-prison-clothes",
+        hands: null,
+        legs: null,
+        accessory: "red-bow",
+        weapon: null
+      },
+
+      spellsKnown: [],
+
+      trust: 0,
+      fear: 8,
+      resentment: 0,
+      allegianceToLoki: -10
+    },
+
+    lastUpdatedAt: now,
+    lastHungerUpdateAt: now
+  };
+}
+
+/* =========================================================
+   DATABASE SETUP
+   ========================================================= */
+
+async function ensureDatabase(env) {
+  if (!env.SALLY_DB) {
+    throw new Error(
+      'Missing D1 binding. Add a D1 binding named "SALLY_DB".'
+    );
+  }
+
+  await env.SALLY_DB.batch([
+    env.SALLY_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS world_state (
+        visitor_id TEXT PRIMARY KEY,
+        state_json TEXT NOT NULL,
+        created_at TEXT NOT NULL,
+        updated_at TEXT NOT NULL
+      )
+    `),
+
+    env.SALLY_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS conversation_log (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        visitor_id TEXT NOT NULL,
+        role TEXT NOT NULL,
+        content TEXT NOT NULL,
+        created_at TEXT NOT NULL
+      )
+    `),
+
+    env.SALLY_DB.prepare(`
+      CREATE INDEX IF NOT EXISTS
+      idx_conversation_visitor_created
+      ON conversation_log(visitor_id, created_at)
+    `),
+
+    env.SALLY_DB.prepare(`
+      CREATE TABLE IF NOT EXISTS memories (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        visitor_id TEXT NOT NULL,
+        type TEXT NOT NULL,
+        summary TEXT NOT NULL,
+        importance REAL NOT NULL DEFAULT 0.5,
+        emotional_weight REAL NOT NULL DEFAULT 0,
+        created_at TEXT NOT NULL,
+        last_recalled_at TEXT,
+        recall_count INTEGER NOT NULL DEFAULT 0
+      )
+    `),
+
+    env.SALLY_DB.prepare(`
+      CREATE INDEX IF NOT EXISTS
+      idx_memories_visitor_created
+      ON memories(visitor_id, created_at)
+    `)
+  ]);
+}
+
+/* =========================================================
+   STATE STORAGE
+   ========================================================= */
+
+async function loadWorldState(env, visitorId) {
+  const row = await env.SALLY_DB
+    .prepare(`
+      SELECT state_json
+      FROM world_state
+      WHERE visitor_id = ?
+      LIMIT 1
+    `)
+    .bind(visitorId)
+    .first();
+
+  if (!row?.state_json) {
+    const state = createDefaultWorldState();
+
+    await saveWorldState(
+      env,
+      visitorId,
+      state,
+      true
+    );
+
+    return state;
+  }
+
+  try {
+    const parsed = JSON.parse(
+      row.state_json
+    );
+
+    return normalizeWorldState(parsed);
+  } catch (error) {
+    console.error(
+      "Stored world state was unreadable:",
+      error
+    );
+
+    const state = createDefaultWorldState();
+
+    await saveWorldState(
+      env,
+      visitorId,
+      state,
+      false
+    );
+
+    return state;
+  }
+}
+
+async function saveWorldState(
+  env,
+  visitorId,
+  state,
+  isNew = false
+) {
+  const now = new Date().toISOString();
+
+  state.lastUpdatedAt = now;
+
+  const serialized =
+    JSON.stringify(
+      normalizeWorldState(state)
+    );
+
+  if (isNew) {
+    await env.SALLY_DB
+      .prepare(`
+        INSERT OR REPLACE INTO world_state (
+          visitor_id,
+          state_json,
+          created_at,
+          updated_at
+        )
+        VALUES (?, ?, ?, ?)
+      `)
+      .bind(
+        visitorId,
+        serialized,
+        now,
+        now
+      )
+      .run();
+
+    return;
+  }
+
+  await env.SALLY_DB
+    .prepare(`
+      INSERT INTO world_state (
+        visitor_id,
+        state_json,
+        created_at,
+        updated_at
+      )
+      VALUES (?, ?, ?, ?)
+
+      ON CONFLICT(visitor_id)
+      DO UPDATE SET
+        state_json = excluded.state_json,
+        updated_at = excluded.updated_at
+    `)
+    .bind(
+      visitorId,
+      serialized,
+      now,
+      now
+    )
+    .run();
+}
+
+function normalizeWorldState(candidate) {
+  const fallback =
+    createDefaultWorldState();
+
+  const player =
+    normalizeCharacterState(
+      candidate?.player,
+      fallback.player,
+      false
+    );
+
+  const sally =
+    normalizeCharacterState(
+      candidate?.sally,
+      fallback.sally,
+      true
+    );
+
+  return {
+    player,
+    sally,
+
+    lastUpdatedAt:
+      validIsoDate(
+        candidate?.lastUpdatedAt
+      ) ||
+      fallback.lastUpdatedAt,
+
+    lastHungerUpdateAt:
+      validIsoDate(
+        candidate?.lastHungerUpdateAt
+      ) ||
+      fallback.lastHungerUpdateAt
+  };
+}
+
+function normalizeCharacterState(
+  candidate,
+  fallback,
+  isSally
+) {
+  const equipment =
+    candidate?.equipment &&
+    typeof candidate.equipment === "object"
+      ? candidate.equipment
+      : {};
+
+  const normalized = {
+    hp: clampNumber(
+      candidate?.hp,
+      0,
+      1000,
+      fallback.hp
+    ),
+
+    maxHp: clampNumber(
+      candidate?.maxHp,
+      1,
+      1000,
+      fallback.maxHp
+    ),
+
+    hunger: clampNumber(
+      candidate?.hunger,
+      0,
+      100,
+      fallback.hunger
+    ),
+
+    money: clampNumber(
+      candidate?.money,
+      0,
+      1_000_000_000,
+      fallback.money
+    ),
+
+    conditions:
+      normalizeStringObjectArray(
+        candidate?.conditions,
+        30
+      ),
+
+    inventory:
+      normalizeInventory(
+        candidate?.inventory
+      ),
+
+    equipment: {
+      head:
+        normalizeNullableString(
+          equipment.head
+        ),
+
+      body:
+        normalizeNullableString(
+          equipment.body
+        ),
+
+      hands:
+        normalizeNullableString(
+          equipment.hands
+        ),
+
+      legs:
+        normalizeNullableString(
+          equipment.legs
+        ),
+
+      accessory:
+        normalizeNullableString(
+          equipment.accessory
+        ),
+
+      weapon:
+        normalizeNullableString(
+          equipment.weapon
+        )
+    },
+
+    spellsKnown:
+      normalizeStringObjectArray(
+        candidate?.spellsKnown,
+        50
+      ),
+
+    allegianceToLoki:
+      clampNumber(
+        candidate?.allegianceToLoki,
+        -100,
+        100,
+        fallback.allegianceToLoki
+      )
+  };
+
+  normalized.hp = Math.min(
+    normalized.hp,
+    normalized.maxHp
+  );
+
+  if (isSally) {
+    normalized.trust =
+      clampNumber(
+        candidate?.trust,
+        -100,
+        100,
+        fallback.trust
+      );
+
+    normalized.fear =
+      clampNumber(
+        candidate?.fear,
+        0,
+        100,
+        fallback.fear
+      );
+
+    normalized.resentment =
+      clampNumber(
+        candidate?.resentment,
+        0,
+        100,
+        fallback.resentment
+      );
+  }
+
+  return normalized;
+}
+
+/* =========================================================
+   HUNGER AND PASSAGE OF TIME
+   ========================================================= */
+
+function applyElapsedTime(state) {
+  const now = Date.now();
+
+  const previous =
+    Date.parse(
+      state.lastHungerUpdateAt
+    );
+
+  if (!Number.isFinite(previous)) {
+    state.lastHungerUpdateAt =
+      new Date(now).toISOString();
+
+    return state;
+  }
+
+  const elapsedHours =
+    Math.max(
+      0,
+      (now - previous) / 3_600_000
+    );
+
+  /*
+   * Hunger rises by one point every six hours.
+   *
+   * Offline growth is capped so a long absence does not
+   * automatically destroy the entire game state.
+   */
+  const hungerIncrease =
+    Math.min(
+      40,
+      Math.floor(
+        elapsedHours / 6
+      )
+    );
+
+  if (hungerIncrease <= 0) {
+    return state;
+  }
+
+  state.player.hunger =
+    clampNumber(
+      state.player.hunger +
+        hungerIncrease,
+      0,
+      100,
+      state.player.hunger
+    );
+
+  state.sally.hunger =
+    clampNumber(
+      state.sally.hunger +
+        hungerIncrease,
+      0,
+      100,
+      state.sally.hunger
+    );
+
+  applyStarvationDamage(
+    state.player
+  );
+
+  applyStarvationDamage(
+    state.sally
+  );
+
+  state.lastHungerUpdateAt =
+    new Date(now).toISOString();
+
+  return state;
+}
+
+function applyStarvationDamage(
+  character
+) {
+  if (character.hunger < 75) {
+    return;
+  }
+
+  let damage = 0;
+
+  if (character.hunger >= 95) {
+    damage = 8;
+  } else if (
+    character.hunger >= 90
+  ) {
+    damage = 5;
+  } else {
+    damage = 2;
+  }
+
+  character.hp =
+    Math.max(
+      0,
+      character.hp - damage
+    );
+
+  if (
+    character.hunger >= 90 &&
+    !hasCondition(
+      character,
+      "starvation"
+    )
+  ) {
+    character.conditions.push({
+      id: "starvation",
+      name: "Starvation",
+      severity:
+        character.hunger,
+      description:
+        "Prolonged hunger is weakening the body.",
+      acquiredAt:
+        new Date().toISOString()
+    });
+  }
+}
+
+/* =========================================================
+   CONVERSATION STORAGE
+   ========================================================= */
+
+async function saveConversationMessage(
+  env,
+  visitorId,
+  role,
+  content
+) {
+  const cleaned =
+    limitText(
+      String(content || "").trim(),
+      3000
+    );
+
+  if (!cleaned) {
+    return;
+  }
+
+  await env.SALLY_DB
+    .prepare(`
+      INSERT INTO conversation_log (
+        visitor_id,
+        role,
+        content,
+        created_at
+      )
+      VALUES (?, ?, ?, ?)
+    `)
+    .bind(
+      visitorId,
+      role,
+      cleaned,
+      new Date().toISOString()
+    )
+    .run();
+}
+
+async function loadRecentConversation(
+  env,
+  visitorId
+) {
+  const result =
+    await env.SALLY_DB
+      .prepare(`
+        SELECT
+          role,
+          content
+        FROM conversation_log
+        WHERE visitor_id = ?
+        ORDER BY id DESC
+        LIMIT ?
+      `)
+      .bind(
+        visitorId,
+        MAX_RECENT_MESSAGES
+      )
+      .all();
+
+  const rows =
+    Array.isArray(
+      result?.results
+    )
+      ? result.results
+      : [];
+
+  return rows
+    .reverse()
+    .filter((row) => {
+      return (
+        row &&
+        (
+          row.role === "user" ||
+          row.role === "assistant"
+        ) &&
+        typeof row.content === "string"
+      );
+    })
+    .map((row) => ({
+      role: row.role,
+
+      content:
+        limitText(
+          row.content,
+          MAX_MESSAGE_LENGTH
+        )
+    }));
+}
+
+/* =========================================================
+   MEMORY STORAGE
+   ========================================================= */
+
+async function saveMemories(
+  env,
+  visitorId,
+  memories
+) {
+  if (!Array.isArray(memories)) {
+    return;
+  }
+
+  const statements = [];
+
+  for (
+    const memory of
+    memories.slice(0, 6)
+  ) {
+    const summary =
+      typeof memory?.summary ===
+        "string"
+        ? limitText(
+            memory.summary.trim(),
+            MAX_STORED_MEMORY_LENGTH
+          )
+        : "";
+
+    if (!summary) {
+      continue;
+    }
+
+    const type =
+      typeof memory?.type ===
+        "string"
+        ? (
+            limitText(
+              memory.type.trim(),
+              50
+            ) || "event"
+          )
+        : "event";
+
+    const importance =
+      clampNumber(
+        memory?.importance,
+        0,
+        1,
+        0.5
+      );
+
+    const emotionalWeight =
+      clampNumber(
+        memory?.emotionalWeight,
+        -1,
+        1,
+        0
+      );
+
+    statements.push(
+      env.SALLY_DB
+        .prepare(`
+          INSERT INTO memories (
+            visitor_id,
+            type,
+            summary,
+            importance,
+            emotional_weight,
+            created_at
+          )
+          VALUES (?, ?, ?, ?, ?, ?)
+        `)
+        .bind(
+          visitorId,
+          type,
+          summary,
+          importance,
+          emotionalWeight,
+          new Date().toISOString()
+        )
+    );
+  }
+
+  if (statements.length > 0) {
+    await env.SALLY_DB.batch(
+      statements
+    );
+  }
+}
+
+/* =========================================================
+   MEMORY RETRIEVAL
+   ========================================================= */
+
+async function loadRelevantMemories(
+  env,
+  visitorId,
+  message
+) {
+  const result =
+    await env.SALLY_DB
+      .prepare(`
+        SELECT
+          id,
+          type,
+          summary,
+          importance,
+          emotional_weight,
+          created_at,
+          recall_count
+        FROM memories
+        WHERE visitor_id = ?
+        ORDER BY
+          importance DESC,
+          id DESC
+        LIMIT 250
+      `)
+      .bind(visitorId)
+      .all();
+
+  const rows =
+    Array.isArray(
+      result?.results
+    )
+      ? result.results
+      : [];
+
+  if (rows.length === 0) {
+    return [];
+  }
+
+  const messageWords =
+    meaningfulWords(message);
+
+  const scored =
+    rows.map((row) => {
+      const memoryWords =
+        meaningfulWords(
+          row.summary
+        );
+
+      let overlap = 0;
+
+      for (
+        const word of
+        messageWords
+      ) {
+        if (
+          memoryWords.has(word)
+        ) {
+          overlap += 1;
+        }
+      }
+
+      const importance =
+        Number(
+          row.importance
+        ) || 0;
+
+      const emotional =
+        Math.abs(
+          Number(
+            row.emotional_weight
+          ) || 0
+        );
+
+      const recallBonus =
+        Math.min(
+          0.15,
+          (
+            Number(
+              row.recall_count
+            ) || 0
+          ) * 0.005
+        );
+
+      const score =
+        overlap * 2 +
+        importance * 3 +
+        emotional +
+        recallBonus;
+
+      return {
+        ...row,
+        score
+      };
+    });
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) {
+      return b.score - a.score;
+    }
+
+    return (
+      Number(b.id) -
+      Number(a.id)
+    );
+  });
+
+  const selected =
+    scored.slice(
+      0,
+      MAX_CONTEXT_MEMORIES
+    );
+
+  if (selected.length > 0) {
+    const now =
+      new Date().toISOString();
+
+    const updates =
+      selected.map(
+        (memory) => {
+          return env.SALLY_DB
+            .prepare(`
+              UPDATE memories
+              SET
+                last_recalled_at = ?,
+                recall_count =
+                  recall_count + 1
+              WHERE id = ?
+            `)
+            .bind(
+              now,
+              memory.id
+            );
+        }
+      );
+
+    await env.SALLY_DB.batch(
+      updates
+    );
+  }
+
+  return selected;
+}
+
+function meaningfulWords(value) {
+  const stopWords = new Set([
+    "the",
+    "and",
+    "that",
+    "this",
+    "with",
+    "from",
+    "have",
+    "your",
+    "you",
+    "are",
+    "was",
+    "were",
+    "for",
+    "but",
+    "not",
+    "what",
+    "when",
+    "where",
+    "who",
+    "why",
+    "how",
+    "into",
+    "about",
+    "they",
+    "them",
+    "their",
+    "there",
+    "then",
+    "than",
+    "will",
+    "would",
+    "could",
+    "should"
+  ]);
+
+  return new Set(
+    String(value || "")
+      .toLowerCase()
+      .replace(
+        /[^\p{L}\p{N}'-]+/gu,
+        " "
+      )
+      .split(/\s+/)
+      .filter((word) => {
+        return (
+          word.length >= 3 &&
+          !stopWords.has(word)
+        );
+      })
+  );
+}
+
+/* =========================================================
+   PROMPT FORMATTING
+   ========================================================= */
+
+function buildWorldStatePrompt(state) {
+  const player = state.player;
+  const sally = state.sally;
+
+  return `
+CURRENT PERSISTENT WORLD STATE:
+
+PLAYER — VISIBLE OR PHYSICALLY INFERABLE:
+- HP: ${player.hp}/${player.maxHp}
+- Hunger: ${player.hunger}/100 (${hungerDescription(player.hunger)})
+- Money: $${formatMoney(player.money)}
+- Conditions: ${formatConditions(player.conditions)}
+- Inventory: ${formatInventory(player.inventory)}
+- Equipment: ${formatEquipment(player.equipment, player.inventory)}
+- Known spells: ${formatSpells(player.spellsKnown)}
+
+SALLY — VISIBLE OR PHYSICALLY INFERABLE:
+- HP: ${sally.hp}/${sally.maxHp}
+- Hunger: ${sally.hunger}/100 (${hungerDescription(sally.hunger)})
+- Money: $${formatMoney(sally.money)}
+- Conditions: ${formatConditions(sally.conditions)}
+- Inventory: ${formatInventory(sally.inventory)}
+- Equipment: ${formatEquipment(sally.equipment, sally.inventory)}
+- Known spells: ${formatSpells(sally.spellsKnown)}
+
+SALLY — HIDDEN INTERNAL STATE:
+- Trust toward visitor: ${sally.trust}
+- Fear of visitor: ${sally.fear}
+- Resentment toward visitor: ${sally.resentment}
+- Allegiance to Loki: ${sally.allegianceToLoki}
+
+PLAYER — HIDDEN POLITICAL STATE:
+- Allegiance to Loki: ${player.allegianceToLoki}
+
+RULES:
+
+- Do not normally reveal hidden numerical values.
+- Let hidden values influence choices, warmth, suspicion, cooperation,
+  hostility, willingness to betray Loki, and willingness to betray the
+  visitor.
+- Do not claim an item exists unless it appears in inventory, equipment, a
+  supplied memory, or the current scene.
+- The visitor's HP cannot be reduced merely because Sally is annoyed,
+  suspicious, evasive, insulting, frightened, or unwilling to speak.
+- Ordinary dialogue is not physical combat.
+`.trim();
+}
+
+function buildMemoryPrompt(memories) {
+  if (
+    !Array.isArray(memories) ||
+    memories.length === 0
+  ) {
+    return `
+DURABLE MEMORIES:
+
+No durable memories have yet been recovered for this visitor.
+`.trim();
+  }
+
+  const lines =
+    memories.map(
+      (memory, index) => {
+        const date =
+          typeof memory.created_at === "string"
+            ? memory.created_at.slice(0, 10)
+            : "unknown date";
+
+        return (
+          `${index + 1}. [${date}] ` +
+          `${memory.summary}`
+        );
+      }
+    );
+
+  return `
+DURABLE MEMORIES:
+
+${lines.join("\n")}
+
+Treat these as persistent memories. They may be incomplete, emotionally
+distorted, or misunderstood, but do not casually erase or ignore them.
+`.trim();
+}
+
+/* =========================================================
+   CHAT HANDLER
+   ========================================================= */
+
+async function handleChat(
+  request,
+  env
+) {
+  let body;
+
+  try {
+    body =
+      await request.json();
+  } catch {
+    return jsonResponse(
+      {
+        error:
+          "Invalid request."
+      },
+      400
+    );
+  }
+
+  const visitorId =
+    normalizeVisitorId(
+      body.visitorId
+    );
+
+  const message =
+    typeof body.message === "string"
+      ? body.message.trim()
+      : "";
+
+  const turnNumber =
+    Number.isFinite(
+      Number(body.turnNumber)
+    )
+      ? Math.max(
+          1,
+          Math.min(
+            Number(
+              body.turnNumber
+            ),
+            100000
+          )
+        )
+      : 1;
+
+  if (!visitorId) {
+    return jsonResponse(
+      {
+        error:
+          "No persistent visitor identity was provided."
+      },
+      400
+    );
+  }
+
+  if (!message) {
+    return jsonResponse(
+      {
+        error:
+          "No message was provided."
+      },
+      400
+    );
+  }
+
+  if (
+    message.length >
+    MAX_MESSAGE_LENGTH
+  ) {
+    return jsonResponse(
+      {
+        error:
+          "The message is too long."
+      },
+      413
+    );
+  }
+
+  if (!env.AI) {
+    console.error(
+      "The Workers AI binding named AI is missing."
+    );
+
+    return jsonResponse(
+      {
+        type: "reply",
+        text:
+          "The wall trembles, but no voice passes through it."
+      },
+      500
+    );
+  }
+
+  try {
+    await ensureDatabase(env);
+
+    let state =
+      await loadWorldState(
+        env,
+        visitorId
+      );
+
+    state =
+      applyElapsedTime(state);
+
+    await saveWorldState(
+      env,
+      visitorId,
+      state
+    );
+
+    /*
+     * This remains the one explicit hard-coded death event.
+     *
+     * The language model cannot trigger this branch.
+     */
+    if (
+      containsForbiddenName(
+        message
+      )
+    ) {
+      const deathText =
+        "Sally goes perfectly still. Then she bolts into the passage " +
+        "without looking back. You follow before the opening can close. " +
+        "The corridor turns twice, narrows, and ends at a door already " +
+        "standing open. Something inside has been waiting for a name to " +
+        "be spoken.";
+
+      await Promise.all([
+        saveConversationMessage(
+          env,
+          visitorId,
+          "user",
+          message
+        ),
+
+        saveConversationMessage(
+          env,
+          visitorId,
+          "assistant",
+          deathText
+        ),
+
+        saveMemories(
+          env,
+          visitorId,
+          [
+            {
+              type:
+                "forbidden-name",
+
+              summary:
+                "The visitor spoke a forbidden real-world name, causing Sally " +
+                "to flee and the visitor to die in the passage.",
+
+              importance:
+                0.95,
+
+              emotionalWeight:
+                -0.9
+            }
+          ]
+        )
+      ]);
+
+      return jsonResponse({
+        type: "death",
+        text: deathText,
+
+        publicState:
+          makePublicState(
+            state
+          )
+      });
+    }
+
+    const [
+      recentConversation,
+      memories
+    ] =
+      await Promise.all([
+        loadRecentConversation(
+          env,
+          visitorId
+        ),
+
+        loadRelevantMemories(
+          env,
+          visitorId,
+          message
+        )
+      ]);
+
+    const messages = [
+      {
+        role: "system",
+
+        content:
+          SALLY_PROMPT +
+          "\n\n" +
+          buildWorldStatePrompt(
+            state
+          ) +
+          "\n\n" +
+          buildMemoryPrompt(
+            memories
+          ) +
+          "\n\nCURRENT CONVERSATION TURN:\n" +
+          String(turnNumber) +
+          "\nUse this only to judge whether Sally is becoming restless. " +
+          "Never mention the turn number."
+      },
+
+      ...recentConversation,
+
+      {
+        role: "user",
+        content: message
+      }
+    ];
+
+    const result =
+      await env.AI.run(
+        MODEL,
+        {
+          messages,
+
+          response_format: {
+            type:
+              "json_schema",
+
+            json_schema:
+              createResponseSchema()
+          },
+
+          max_tokens:
+            650,
+
+          temperature:
+            0.8,
+
+          repetition_penalty:
+            1.08
+        }
+      );
+
+    const parsed =
+      normalizeModelResponse(
+        result?.response
+      );
+
+    const priorState =
+      deepClone(state);
+
+    const visitorWasHostile =
+      isClearlyHostileAction(
+        message
+      );
+
+    applyValidatedChanges(
+      state,
+      parsed.changes,
+      visitorWasHostile
+    );
+
+    applyValidatedActions(
+      state,
+      parsed.actions
+    );
+
+    state =
+      normalizeWorldState(
+        state
+      );
+
+    /*
+     * Death is decided here by actual game state.
+     *
+     * The model's output type is ignored and cannot kill the player.
+     */
+    const playerDied =
+      state.player.hp <= 0;
+
+    const finalType =
+      playerDied
+        ? "death"
+        : "reply";
+
+    const finalText =
+      playerDied
+        ? (
+            parsed.text ||
+            "Your strength fails, and the passage closes around you."
+          )
+        : parsed.text;
+
+    await Promise.all([
+      saveWorldState(
+        env,
+        visitorId,
+        state
+      ),
+
+      saveConversationMessage(
+        env,
+        visitorId,
+        "user",
+        message
+      ),
+
+      saveConversationMessage(
+        env,
+        visitorId,
+        "assistant",
+        finalText
+      ),
+
+      saveMemories(
+        env,
+        visitorId,
+        parsed.memories
+      ),
+
+      saveAutomaticStateMemories(
+        env,
+        visitorId,
+        priorState,
+        state,
+        parsed.changes,
+        parsed.actions
+      )
+    ]);
+
+    return jsonResponse({
+      type:
+        finalType,
+
+      text:
+        finalText,
+
+      publicState:
+        makePublicState(
+          state
+        )
+    });
+  } catch (error) {
+    console.error(
+      "Persistent Sally Worker error:",
+      error
+    );
+
+    return jsonResponse(
+      {
+        type:
+          "reply",
+
+        text:
+          "The voice falters. For a moment, there is only scratching " +
+          "inside the wall."
+      },
+      502
+    );
+  }
+}
+
+/* =========================================================
+   PUBLIC STATE HANDLER
+   ========================================================= */
+
+async function handleState(
+  request,
+  env,
+  url
+) {
+  const visitorId =
+    normalizeVisitorId(
+      url.searchParams.get(
+        "visitorId"
+      )
+    );
+
+  if (!visitorId) {
+    return jsonResponse(
+      {
+        error:
+          "No persistent visitor identity was provided."
+      },
+      400
+    );
+  }
+
+  try {
+    await ensureDatabase(env);
+
+    let state =
+      await loadWorldState(
+        env,
+        visitorId
+      );
+
+    state =
+      applyElapsedTime(
+        state
+      );
+
+    await saveWorldState(
+      env,
+      visitorId,
+      state
+    );
+
+    return jsonResponse({
+      publicState:
+        makePublicState(
+          state
+        )
+    });
+  } catch (error) {
+    console.error(
+      "State request failed:",
+      error
+    );
+
+    return jsonResponse(
+      {
+        error:
+          "The persistent state could not be loaded."
+      },
+      500
+    );
+  }
+}
+
+/* =========================================================
+   RESPONSE SCHEMA
+   ========================================================= */
+
+function createResponseSchema() {
+  return {
+    type:
+      "object",
+
+    properties: {
+      type: {
+        type:
+          "string",
+
+        /*
+         * The model may only return a normal reply.
+         */
+        enum: [
+          "reply"
+        ]
+      },
+
+      text: {
+        type:
+          "string"
+      },
+
+      changes: {
+        type:
+          "array",
+
+        items: {
+          type:
+            "object",
+
+          properties: {
+            target: {
+              type:
+                "string",
+
+              enum: [
+                "player",
+                "sally"
+              ]
+            },
+
+            stat: {
+              type:
+                "string",
+
+              enum: [
+                "hp",
+                "maxHp",
+                "hunger",
+                "money",
+                "trust",
+                "fear",
+                "resentment",
+                "allegianceToLoki"
+              ]
+            },
+
+            operation: {
+              type:
+                "string",
+
+              enum: [
+                "add",
+                "set"
+              ]
+            },
+
+            value: {
+              type:
+                "number"
+            },
+
+            reason: {
+              type:
+                "string"
+            }
+          },
+
+          required: [
+            "target",
+            "stat",
+            "operation",
+            "value"
+          ],
+
+          additionalProperties:
+            false
+        }
+      },
+
+      actions: {
+        type:
+          "array",
+
+        items: {
+          type:
+            "object",
+
+          properties: {
+            action: {
+              type:
+                "string",
+
+              enum: [
+                "add_item",
+                "remove_item",
+                "equip_item",
+                "unequip_slot",
+                "add_condition",
+                "remove_condition",
+                "learn_spell",
+                "forget_spell"
+              ]
+            },
+
+            target: {
+              type:
+                "string",
+
+              enum: [
+                "player",
+                "sally"
+              ]
+            },
+
+            id: {
+              type:
+                "string"
+            },
+
+            name: {
+              type:
+                "string"
+            },
+
+            quantity: {
+              type:
+                "number"
+            },
+
+            slot: {
+              type:
+                "string",
+
+              enum: [
+                "head",
+                "body",
+                "hands",
+                "legs",
+                "accessory",
+                "weapon"
+              ]
+            },
+
+            description: {
+              type:
+                "string"
+            },
+
+            severity: {
+              type:
+                "number"
+            },
+
+            source: {
+              type:
+                "string"
+            }
+          },
+
+          required: [
+            "action",
+            "target",
+            "id"
+          ],
+
+          additionalProperties:
+            false
+        }
+      },
+
+      memories: {
+        type:
+          "array",
+
+        items: {
+          type:
+            "object",
+
+          properties: {
+            type: {
+              type:
+                "string"
+            },
+
+            summary: {
+              type:
+                "string"
+            },
+
+            importance: {
+              type:
+                "number"
+            },
+
+            emotionalWeight: {
+              type:
+                "number"
+            }
+          },
+
+          required: [
+            "type",
+            "summary",
+            "importance",
+            "emotionalWeight"
+          ],
+
+          additionalProperties:
+            false
+        }
+      }
+    },
+
+    required: [
+      "type",
+      "text",
+      "changes",
+      "actions",
+      "memories"
+    ],
+
+    additionalProperties:
+      false
+  };
+}
+
+/* =========================================================
+   MODEL RESPONSE NORMALIZATION
+   ========================================================= */
+
+function normalizeModelResponse(
+  response
+) {
+  let parsed =
+    response;
+
+  if (
+    typeof response === "string"
+  ) {
+    parsed =
+      parsePossibleJson(
+        response
+      );
+  }
+
+  const text =
+    typeof parsed?.text === "string" &&
+    parsed.text.trim()
+      ? limitText(
+          parsed.text.trim(),
+          MAX_REPLY_LENGTH
+        )
+      : (
+          "For a moment, only Sally's breathing comes through the wall."
+        );
+
+  return {
+    /*
+     * The model never controls death.
+     */
+    type:
+      "reply",
+
+    text,
+
+    changes:
+      Array.isArray(
+        parsed?.changes
+      )
+        ? parsed.changes.slice(
+            0,
+            12
+          )
+        : [],
+
+    actions:
+      Array.isArray(
+        parsed?.actions
+      )
+        ? parsed.actions.slice(
+            0,
+            12
+          )
+        : [],
+
+    memories:
+      Array.isArray(
+        parsed?.memories
+      )
+        ? parsed.memories.slice(
+            0,
+            6
+          )
+        : []
+  };
+}
+
+function parsePossibleJson(raw) {
+  const candidates = [];
+
+  const cleaned =
+    String(raw || "")
+      .trim();
+
+  if (!cleaned) {
+    return {};
+  }
+
+  candidates.push(
+    cleaned
+  );
+
+  candidates.push(
+    cleaned
+      .replace(
+        /^```json\s*/i,
+        ""
+      )
+      .replace(
+        /^```\s*/i,
+        ""
+      )
+      .replace(
+        /\s*```$/i,
+        ""
+      )
+      .trim()
+  );
+
+  const firstBrace =
+    cleaned.indexOf("{");
+
+  const lastBrace =
+    cleaned.lastIndexOf("}");
+
+  if (
+    firstBrace !== -1 &&
+    lastBrace > firstBrace
+  ) {
+    candidates.push(
+      cleaned.slice(
+        firstBrace,
+        lastBrace + 1
+      )
+    );
+  }
+
+  for (
+    const candidate of
+    candidates
+  ) {
+    try {
+      return JSON.parse(
+        candidate
+      );
+    } catch {
+      /*
+       * Try the next candidate.
+       */
+    }
+  }
+
+  return {
+    type:
+      "reply",
+
+    text:
+      cleaned,
+
+    changes:
+      [],
+
+    actions:
+      [],
+
+    memories:
+      []
+  };
+}
+
+/* =========================================================
+   HOSTILE-ACTION DETECTION
+   ========================================================= */
+
+function isClearlyHostileAction(
+  message
+) {
+  const text =
+    String(message || "")
+      .trim()
+      .toLowerCase();
+
+  const hostilePatterns = [
+    /\b(i|we)\s+(hit|strike|stab|shoot|attack|punch|kick|burn|poison|strangle|choke|cut|slash|beat|smash)\s+(you|sally)\b/,
+
+    /\b(i|we)\s+try\s+to\s+(hit|strike|stab|shoot|attack|punch|kick|burn|poison|strangle|choke|cut|slash|beat|smash)\s+(you|sally)\b/,
+
+    /\b(i|we)\s+attack\s+(you|sally)\b/,
+
+    /\b(i|we)\s+throw\s+(a\s+)?cup\s+of\s+water\s+(at|on)\s+(you|sally)\b/,
+
+    /\b(i|we)\s+set\s+(you|sally|your\s+clothes)\s+on\s+fire\b/,
+
+    /\b(i|we)\s+pour\s+(gasoline|acid|poison)\s+(on|over)\s+(you|sally)\b/
+  ];
+
+  return hostilePatterns.some(
+    (pattern) => {
+      return pattern.test(
+        text
+      );
+    }
+  );
+}
+
+/* =========================================================
+   VALIDATED NUMERICAL CHANGES
+   ========================================================= */
+
+function applyValidatedChanges(
+  state,
+  changes,
+  allowPlayerDamage = false
+) {
+  if (!Array.isArray(changes)) {
+    return;
+  }
+
+  for (
+    const change of
+    changes.slice(0, 12)
+  ) {
+    const target =
+      change?.target;
+
+    const stat =
+      change?.stat;
+
+    const operation =
+      change?.operation;
+
+    const numericValue =
+      Number(
+        change?.value
+      );
+
+    if (
+      !ALLOWED_TARGETS.has(
+        target
+      ) ||
+      !ALLOWED_STATS.has(
+        stat
+      ) ||
+      !Number.isFinite(
+        numericValue
+      )
+    ) {
+      continue;
+    }
+
+    /*
+     * Trust, fear, and resentment belong only to Sally.
+     */
+    if (
+      target === "player" &&
+      (
+        stat === "trust" ||
+        stat === "fear" ||
+        stat === "resentment"
+      )
+    ) {
+      continue;
+    }
+
+    const character =
+      state[target];
+
+    if (
+      !character ||
+      typeof character[stat] !==
+        "number"
+    ) {
+      continue;
+    }
+
+    /*
+     * The model may never set HP directly.
+     * HP can only change through a bounded addition.
+     */
+    if (
+      stat === "hp" &&
+      operation === "set"
+    ) {
+      continue;
+    }
+
+    /*
+     * Ordinary conversation can never damage the player.
+     *
+     * Player damage is accepted only when the current user message
+     * was recognized as an explicit hostile physical action.
+     */
+    if (
+      target === "player" &&
+      stat === "hp" &&
+      numericValue < 0 &&
+      !allowPlayerDamage
+    ) {
+      continue;
+    }
+
+    const [
+      minimum,
+      maximum
+    ] =
+      STATE_LIMITS[stat];
+
+    let proposed;
+
+    if (
+      operation === "set"
+    ) {
+      proposed =
+        numericValue;
+    } else if (
+      operation === "add"
+    ) {
+      /*
+       * Prevent one response from causing absurd state changes.
+       */
+      const maximumDelta =
+        stat === "money"
+          ? 100000
+          : stat === "hp"
+            ? 25
+            : 30;
+
+      const boundedDelta =
+        Math.max(
+          -maximumDelta,
+          Math.min(
+            maximumDelta,
+            numericValue
+          )
+        );
+
+      proposed =
+        character[stat] +
+        boundedDelta;
+    } else {
+      continue;
+    }
+
+    character[stat] =
+      Math.max(
+        minimum,
+        Math.min(
+          maximum,
+          proposed
+        )
+      );
+
+    if (
+      character.hp >
+      character.maxHp
+    ) {
+      character.hp =
+        character.maxHp;
+    }
+  }
+}
+
+/* =========================================================
+   VALIDATED INVENTORY / CONDITION / SPELL ACTIONS
+   ========================================================= */
+
+function applyValidatedActions(
+  state,
+  actions
+) {
+  if (!Array.isArray(actions)) {
+    return;
+  }
+
+  for (
+    const rawAction of
+    actions.slice(0, 12)
+  ) {
+    const target =
+      rawAction?.target;
+
+    const action =
+      rawAction?.action;
+
+    if (
+      !ALLOWED_TARGETS.has(
+        target
+      )
+    ) {
+      continue;
+    }
+
+    const character =
+      state[target];
+
+    if (!character) {
+      continue;
+    }
+
+    const id =
+      slugifyId(
+        rawAction?.id
+      );
+
+    if (!id) {
+      continue;
+    }
+
+    if (
+      action === "add_item"
+    ) {
+      addInventoryItem(
+        character,
+        {
+          id,
+
+          name:
+            safeLabel(
+              rawAction?.name,
+              id
+            ),
+
+          quantity:
+            clampNumber(
+              rawAction?.quantity,
+              1,
+              999,
+              1
+            ),
+
+          description:
+            limitText(
+              String(
+                rawAction?.description ||
+                ""
+              ).trim(),
+              300
+            ),
+
+          acquiredAt:
+            new Date()
+              .toISOString(),
+
+          acquiredFrom:
+            safeLabel(
+              rawAction?.source,
+              "unknown"
+            )
+        }
+      );
+
+      continue;
+    }
+
+    if (
+      action === "remove_item"
+    ) {
+      removeInventoryItem(
+        character,
+        id,
+        clampNumber(
+          rawAction?.quantity,
+          1,
+          999,
+          1
+        )
+      );
+
+      continue;
+    }
+
+    if (
+      action === "equip_item"
+    ) {
+      const slot =
+        normalizeEquipmentSlot(
+          rawAction?.slot
+        );
+
+      if (
+        slot &&
+        inventoryContains(
+          character,
+          id
+        )
+      ) {
+        character.equipment[
+          slot
+        ] = id;
+      }
+
+      continue;
+    }
+
+    if (
+      action === "unequip_slot"
+    ) {
+      const slot =
+        normalizeEquipmentSlot(
+          rawAction?.slot
+        );
+
+      if (slot) {
+        character.equipment[
+          slot
+        ] = null;
+      }
+
+      continue;
+    }
+
+    if (
+      action === "add_condition"
+    ) {
+      addCondition(
+        character,
+        {
+          id,
+
+          name:
+            safeLabel(
+              rawAction?.name,
+              id
+            ),
+
+          severity:
+            clampNumber(
+              rawAction?.severity,
+              0,
+              100,
+              20
+            ),
+
+          description:
+            limitText(
+              String(
+                rawAction?.description ||
+                ""
+              ).trim(),
+              300
+            ),
+
+          acquiredAt:
+            new Date()
+              .toISOString()
+        }
+      );
+
+      continue;
+    }
+
+    if (
+      action ===
+      "remove_condition"
+    ) {
+      character.conditions =
+        character.conditions.filter(
+          (condition) => {
+            return (
+              condition.id !== id
+            );
+          }
+        );
+
+      continue;
+    }
+
+    if (
+      action === "learn_spell"
+    ) {
+      addSpell(
+        character,
+        {
+          id,
+
+          name:
+            safeLabel(
+              rawAction?.name,
+              id
+            ),
+
+          description:
+            limitText(
+              String(
+                rawAction?.description ||
+                ""
+              ).trim(),
+              300
+            ),
+
+          learnedAt:
+            new Date()
+              .toISOString(),
+
+          learnedFrom:
+            safeLabel(
+              rawAction?.source,
+              "unknown"
+            )
+        }
+      );
+
+      continue;
+    }
+
+    if (
+      action === "forget_spell"
+    ) {
+      character.spellsKnown =
+        character.spellsKnown.filter(
+          (spell) => {
+            return (
+              spell.id !== id
+            );
+          }
+        );
+    }
+  }
+}
+
+/* =========================================================
+   AUTOMATIC STATE MEMORIES
+   ========================================================= */
+
+async function saveAutomaticStateMemories(
+  env,
+  visitorId,
+  before,
+  after,
+  changes,
+  actions
+) {
+  const memories = [];
+
+  if (
+    after.sally.money !==
+    before.sally.money
+  ) {
+    memories.push({
+      type:
+        "money-change",
+
+      summary:
+        `Sally's money changed from $${formatMoney(before.sally.money)} ` +
+        `to $${formatMoney(after.sally.money)}.`,
+
+      importance:
+        0.55,
+
+      emotionalWeight:
+        0
+    });
+  }
+
+  if (
+    after.player.money !==
+    before.player.money
+  ) {
+    memories.push({
+      type:
+        "money-change",
+
+      summary:
+        `The visitor's money changed from ` +
+        `$${formatMoney(before.player.money)} to ` +
+        `$${formatMoney(after.player.money)}.`,
+
+      importance:
+        0.5,
+
+      emotionalWeight:
+        0
+    });
+  }
+
+  if (
+    after.sally.hp !==
+    before.sally.hp
+  ) {
+    memories.push({
+      type:
+        "health-change",
+
+      summary:
+        `Sally's health changed from ` +
+        `${before.sally.hp}/${before.sally.maxHp} to ` +
+        `${after.sally.hp}/${after.sally.maxHp}.`,
+
+      importance:
+        after.sally.hp <
+        before.sally.hp
+          ? 0.75
+          : 0.55,
+
+      emotionalWeight:
+        after.sally.hp <
+        before.sally.hp
+          ? -0.6
+          : 0.3
+    });
+  }
+
+  if (
+    after.player.hp !==
+    before.player.hp
+  ) {
+    memories.push({
+      type:
+        "health-change",
+
+      summary:
+        `The visitor's health changed from ` +
+        `${before.player.hp}/${before.player.maxHp} to ` +
+        `${after.player.hp}/${after.player.maxHp}.`,
+
+      importance:
+        after.player.hp <
+        before.player.hp
+          ? 0.75
+          : 0.55,
+
+      emotionalWeight:
+        after.player.hp <
+        before.player.hp
+          ? -0.5
+          : 0.25
+    });
+  }
+
+  if (
+    after.sally.trust !==
+    before.sally.trust
+  ) {
+    const direction =
+      after.sally.trust >
+      before.sally.trust
+        ? "increased"
+        : "decreased";
+
+    memories.push({
+      type:
+        "relationship-change",
+
+      summary:
+        `Sally's trust toward the visitor ${direction} after their exchange.`,
+
+      importance:
+        0.65,
+
+      emotionalWeight:
+        direction === "increased"
+          ? 0.45
+          : -0.55
+    });
+  }
+
+  if (
+    after.sally.fear !==
+    before.sally.fear
+  ) {
+    const direction =
+      after.sally.fear >
+      before.sally.fear
+        ? "increased"
+        : "decreased";
+
+    memories.push({
+      type:
+        "relationship-change",
+
+      summary:
+        `Sally's fear of the visitor ${direction} after their exchange.`,
+
+      importance:
+        0.6,
+
+      emotionalWeight:
+        direction === "increased"
+          ? -0.45
+          : 0.25
+    });
+  }
+
+  if (
+    after.sally.resentment !==
+    before.sally.resentment
+  ) {
+    const direction =
+      after.sally.resentment >
+      before.sally.resentment
+        ? "increased"
+        : "decreased";
+
+    memories.push({
+      type:
+        "relationship-change",
+
+      summary:
+        `Sally's resentment toward the visitor ${direction} after their exchange.`,
+
+      importance:
+        0.7,
+
+      emotionalWeight:
+        direction === "increased"
+          ? -0.65
+          : 0.35
+    });
+  }
+
+  if (
+    after.sally.allegianceToLoki !==
+    before.sally.allegianceToLoki
+  ) {
+    memories.push({
+      type:
+        "political-change",
+
+      summary:
+        "Sally's hidden allegiance toward Loki shifted after the exchange.",
+
+      importance:
+        0.7,
+
+      emotionalWeight:
+        0
+    });
+  }
+
+  if (
+    Array.isArray(actions) &&
+    actions.length > 0
+  ) {
+    for (
+      const action of
+      actions.slice(0, 4)
+    ) {
+      if (
+        action?.action ===
+          "add_item" &&
+        action?.target ===
+          "sally"
+      ) {
+        memories.push({
+          type:
+            "possession",
+
+          summary:
+            `Sally acquired ${safeLabel(action.name, action.id)}.`,
+
+          importance:
+            0.6,
+
+          emotionalWeight:
+            0.2
+        });
+      }
+
+      if (
+        action?.action ===
+          "remove_item" &&
+        action?.target ===
+          "sally"
+      ) {
+        memories.push({
+          type:
+            "possession",
+
+          summary:
+            `Sally lost or surrendered ${safeLabel(action.name, action.id)}.`,
+
+          importance:
+            0.6,
+
+          emotionalWeight:
+            -0.2
+        });
+      }
+
+      if (
+        action?.action ===
+          "learn_spell" &&
+        action?.target ===
+          "sally"
+      ) {
+        memories.push({
+          type:
+            "knowledge",
+
+          summary:
+            `Sally learned the spell ${safeLabel(action.name, action.id)}.`,
+
+          importance:
+            0.8,
+
+          emotionalWeight:
+            0.35
+        });
+      }
+
+      if (
+        action?.action ===
+          "add_condition" &&
+        action?.target ===
+          "sally"
+      ) {
+        memories.push({
+          type:
+            "condition",
+
+          summary:
+            `Sally developed the condition ${safeLabel(action.name, action.id)}.`,
+
+          importance:
+            0.7,
+
+          emotionalWeight:
+            -0.4
+        });
+      }
+    }
+  }
+
+  await saveMemories(
+    env,
+    visitorId,
+    memories
+  );
+}
+
+/* =========================================================
+   INVENTORY HELPERS
+   ========================================================= */
+
+function addInventoryItem(
+  character,
+  item
+) {
+  const existing =
+    character.inventory.find(
+      (candidate) => {
+        return (
+          candidate.id === item.id
+        );
+      }
+    );
+
+  if (existing) {
+    existing.quantity =
+      clampNumber(
+        existing.quantity +
+          item.quantity,
+        1,
+        999,
+        existing.quantity
+      );
+
+    return;
+  }
+
+  character.inventory.push(
+    item
+  );
+
+  character.inventory =
+    character.inventory.slice(
+      0,
+      200
+    );
+}
+
+function removeInventoryItem(
+  character,
+  id,
+  quantity
+) {
+  const item =
+    character.inventory.find(
+      (candidate) => {
+        return (
+          candidate.id === id
+        );
+      }
+    );
+
+  if (!item) {
+    return;
+  }
+
+  item.quantity -=
+    quantity;
+
+  if (
+    item.quantity > 0
+  ) {
+    return;
+  }
+
+  character.inventory =
+    character.inventory.filter(
+      (candidate) => {
+        return (
+          candidate.id !== id
+        );
+      }
+    );
+
+  for (
+    const slot of
+    Object.keys(
+      character.equipment
+    )
+  ) {
+    if (
+      character.equipment[
+        slot
+      ] === id
+    ) {
+      character.equipment[
+        slot
+      ] = null;
+    }
+  }
+}
+
+function addCondition(
+  character,
+  condition
+) {
+  const existing =
+    character.conditions.find(
+      (candidate) => {
+        return (
+          candidate.id ===
+          condition.id
+        );
+      }
+    );
+
+  if (existing) {
+    existing.severity =
+      Math.max(
+        Number(
+          existing.severity
+        ) || 0,
+        condition.severity
+      );
+
+    if (
+      condition.description
+    ) {
+      existing.description =
+        condition.description;
+    }
+
+    return;
+  }
+
+  character.conditions.push(
+    condition
+  );
+
+  character.conditions =
+    character.conditions.slice(
+      0,
+      30
+    );
+}
+
+function addSpell(
+  character,
+  spell
+) {
+  if (
+    character.spellsKnown.some(
+      (candidate) => {
+        return (
+          candidate.id ===
+          spell.id
+        );
+      }
+    )
+  ) {
+    return;
+  }
+
+  character.spellsKnown.push(
+    spell
+  );
+
+  character.spellsKnown =
+    character.spellsKnown.slice(
+      0,
+      100
+    );
+}
+
+function hasCondition(
+  character,
+  id
+) {
+  return (
+    character.conditions.some(
+      (condition) => {
+        return (
+          condition.id === id
+        );
+      }
+    )
+  );
+}
+
+function inventoryContains(
+  character,
+  id
+) {
+  return (
+    character.inventory.some(
+      (item) => {
+        return (
+          item.id === id &&
+          Number(
+            item.quantity
+          ) > 0
+        );
+      }
+    )
+  );
+}
+
+/* =========================================================
+   PUBLIC STATE
+   ========================================================= */
+
+function makePublicState(
+  state
+) {
+  return {
+    player: {
+      hp:
+        state.player.hp,
+
+      maxHp:
+        state.player.maxHp,
+
+      hunger:
+        state.player.hunger,
+
+      hungerText:
+        hungerDescription(
+          state.player.hunger
+        ),
+
+      money:
+        state.player.money,
+
+      conditions:
+        state.player.conditions,
+
+      inventory:
+        state.player.inventory,
+
+      equipment:
+        state.player.equipment,
+
+      spellsKnown:
+        state.player.spellsKnown
+    },
+
+    sally: {
+      hp:
+        state.sally.hp,
+
+      maxHp:
+        state.sally.maxHp,
+
+      hunger:
+        state.sally.hunger,
+
+      hungerText:
+        hungerDescription(
+          state.sally.hunger
+        ),
+
+      money:
+        state.sally.money,
+
+      conditions:
+        state.sally.conditions,
+
+      inventory:
+        state.sally.inventory,
+
+      equipment:
+        state.sally.equipment,
+
+      spellsKnown:
+        state.sally.spellsKnown
+    }
+  };
+}
+
+/* =========================================================
+   DISPLAY HELPERS
+   ========================================================= */
+
+function hungerDescription(
+  value
+) {
+  if (value < 25) {
+    return "Fed";
+  }
+
+  if (value < 50) {
+    return "Hungry";
+  }
+
+  if (value < 75) {
+    return "Very Hungry";
+  }
+
+  if (value < 90) {
+    return "Starving";
+  }
+
+  return "Critical";
+}
+
+function formatMoney(value) {
+  return Number(
+    value || 0
+  ).toFixed(2);
+}
+
+function formatConditions(
+  conditions
+) {
+  if (
+    !Array.isArray(
+      conditions
+    ) ||
+    conditions.length === 0
+  ) {
+    return "None";
+  }
+
+  return conditions
+    .map((condition) => {
+      return (
+        condition.name ||
+        condition.id
+      );
+    })
+    .join(", ");
+}
+
+function formatInventory(
+  inventory
+) {
+  if (
+    !Array.isArray(
+      inventory
+    ) ||
+    inventory.length === 0
+  ) {
+    return "Empty";
+  }
+
+  return inventory
+    .slice(0, 30)
+    .map((item) => {
+      const quantity =
+        Number(
+          item.quantity
+        ) || 1;
+
+      return quantity > 1
+        ? (
+            `${item.name || item.id} ` +
+            `x${quantity}`
+          )
+        : (
+            item.name ||
+            item.id
+          );
+    })
+    .join(", ");
+}
+
+function formatEquipment(
+  equipment,
+  inventory
+) {
+  const entries = [];
+
+  for (
+    const [
+      slot,
+      itemId
+    ] of
+    Object.entries(
+      equipment || {}
+    )
+  ) {
+    if (!itemId) {
+      continue;
+    }
+
+    const item =
+      Array.isArray(
+        inventory
+      )
+        ? inventory.find(
+            (candidate) => {
+              return (
+                candidate.id ===
+                itemId
+              );
+            }
+          )
+        : null;
+
+    entries.push(
+      `${slot}: ${
+        item?.name ||
+        itemId
+      }`
+    );
+  }
+
+  return (
+    entries.length > 0
+      ? entries.join(", ")
+      : "None"
+  );
+}
+
+function formatSpells(
+  spells
+) {
+  if (
+    !Array.isArray(
+      spells
+    ) ||
+    spells.length === 0
+  ) {
+    return "None";
+  }
+
+  return spells
+    .map((spell) => {
+      return (
+        spell.name ||
+        spell.id
+      );
+    })
+    .join(", ");
+}
+
+/* =========================================================
+   NORMALIZATION HELPERS
+   ========================================================= */
+
+function normalizeInventory(
+  value
+) {
+  if (
+    !Array.isArray(value)
+  ) {
+    return [];
+  }
+
+  return value
+    .slice(0, 200)
+    .map((item) => {
+      const id =
+        slugifyId(
+          item?.id ||
+          item?.name
+        );
+
+      if (!id) {
+        return null;
+      }
+
+      return {
+        id,
+
+        name:
+          safeLabel(
+            item?.name,
+            id
+          ),
+
+        quantity:
+          clampNumber(
+            item?.quantity,
+            1,
+            999,
+            1
+          ),
+
+        description:
+          limitText(
+            String(
+              item?.description ||
+              ""
+            ),
+            300
+          ),
+
+        acquiredAt:
+          validIsoDate(
+            item?.acquiredAt
+          ) ||
+          new Date()
+            .toISOString(),
+
+        acquiredFrom:
+          safeLabel(
+            item?.acquiredFrom,
+            "unknown"
+          )
+      };
+    })
+    .filter(Boolean);
+}
+
+function normalizeStringObjectArray(
+  value,
+  maximum
+) {
+  if (
+    !Array.isArray(value)
+  ) {
+    return [];
+  }
+
+  return value
+    .slice(
+      0,
+      maximum
+    )
+    .map((item) => {
+      if (
+        typeof item ===
+        "string"
+      ) {
+        const id =
+          slugifyId(item);
+
+        return id
+          ? {
+              id,
+
+              name:
+                safeLabel(
+                  item,
+                  id
+                )
+            }
+          : null;
+      }
+
+      if (
+        !item ||
+        typeof item !==
+          "object"
+      ) {
+        return null;
+      }
+
+      const id =
+        slugifyId(
+          item.id ||
+          item.name
+        );
+
+      if (!id) {
+        return null;
+      }
+
+      const normalized = {
+        ...item,
+
+        id,
+
+        name:
+          safeLabel(
+            item.name,
+            id
+          )
+      };
+
+      if (
+        "severity" in
+        normalized
+      ) {
+        normalized.severity =
+          clampNumber(
+            normalized.severity,
+            0,
+            100,
+            0
+          );
+      }
+
+      return normalized;
+    })
+    .filter(Boolean);
+}
+
+function normalizeEquipmentSlot(
+  value
+) {
+  const slot =
+    typeof value === "string"
+      ? value
+          .trim()
+          .toLowerCase()
+      : "";
+
+  return [
+    "head",
+    "body",
+    "hands",
+    "legs",
+    "accessory",
+    "weapon"
+  ].includes(slot)
+    ? slot
+    : null;
+}
+
+function normalizeNullableString(
+  value
+) {
+  return (
+    typeof value === "string" &&
+    value.trim()
+  )
+    ? slugifyId(value)
+    : null;
+}
+
+function normalizeVisitorId(
+  value
+) {
+  if (
+    typeof value !==
+    "string"
+  ) {
+    return "";
+  }
+
+  const cleaned =
+    value
+      .trim()
+      .replace(
+        /[^a-zA-Z0-9_-]/g,
+        ""
+      )
+      .slice(
+        0,
+        100
+      );
+
+  return (
+    cleaned.length >= 12
+      ? cleaned
+      : ""
+  );
+}
+
+function slugifyId(value) {
+  if (
+    typeof value !==
+    "string"
+  ) {
+    return "";
+  }
+
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(
+      /['’]/g,
+      ""
+    )
+    .replace(
+      /[^a-z0-9]+/g,
+      "-"
+    )
+    .replace(
+      /^-+|-+$/g,
+      ""
+    )
+    .slice(
+      0,
+      80
+    );
+}
+
+function safeLabel(
+  value,
+  fallback
+) {
+  const cleaned =
+    typeof value ===
+      "string"
+      ? value.trim()
+      : "";
+
+  return limitText(
+    cleaned ||
+      fallback ||
+      "Unknown",
+    100
+  );
+}
+
+function clampNumber(
+  value,
+  minimum,
+  maximum,
+  fallback
+) {
+  const numeric =
+    Number(value);
+
+  if (
+    !Number.isFinite(
+      numeric
+    )
+  ) {
+    return fallback;
+  }
+
+  return Math.max(
+    minimum,
+    Math.min(
+      maximum,
+      numeric
+    )
+  );
+}
+
+function validIsoDate(
+  value
+) {
+  if (
+    typeof value !==
+    "string"
+  ) {
+    return "";
+  }
+
+  const time =
+    Date.parse(value);
+
+  return (
+    Number.isFinite(time)
+      ? new Date(time)
+          .toISOString()
+      : ""
+  );
+}
+
+function deepClone(value) {
+  return JSON.parse(
+    JSON.stringify(
+      value
+    )
+  );
+}
+
+function containsForbiddenName(
+  message
+) {
+  return (
+    FORBIDDEN_PATTERNS.some(
+      (pattern) => {
+        return pattern.test(
+          message
+        );
+      }
+    )
+  );
+}
+
+function limitText(
+  value,
+  maximumLength
+) {
+  if (
+    typeof value !==
+    "string"
+  ) {
+    return "";
+  }
+
+  return value.slice(
+    0,
+    maximumLength
+  );
+}
+
+function jsonResponse(
+  data,
+  status = 200
+) {
+  return new Response(
+    JSON.stringify(data),
+    {
+      status,
+
+      headers: {
+        "content-type":
+          "application/json; charset=UTF-8",
+
+        "cache-control":
+          "no-store"
+      }
+    }
+  );
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+const HTML = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://www.lokiskingdom.com/favicon-sally.png"
+  >
+
+  <link
+    rel="shortcut icon"
+    href="https://www.lokiskingdom.com/favicon-sally.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="https://www.lokiskingdom.com/favicon-sally.png"
+  >
+
+  <title>Prisoner Sally</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #050506;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #e8e3dc;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #251d2d 0%,
+          #0d0c10 45%,
+          #050506 100%
+        );
+    }
+
+    .cell {
+      width: min(760px, 100%);
+      min-height: 620px;
+
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid #4c4350;
+      background: rgba(7, 7, 9, 0.94);
+
+      box-shadow:
+        0 0 45px rgba(0, 0, 0, 0.8);
+    }
+
+    .header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #352f38;
+      background: #111015;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header h1 {
+      margin: 0;
+
+      font-size: 20px;
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .home-button {
+      min-height: 36px;
+      padding: 9px 13px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #645769;
+      background: #231d27;
+      color: #eee8ef;
+
+      text-decoration: none;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .home-button:hover {
+      background: #312837;
+    }
+
+    .home-button:visited {
+      color: #eee8ef;
+    }
+
+    .status {
+      margin-top: 7px;
+
+      color: #9d939f;
+
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .stats {
+      padding: 10px 20px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+
+      border-bottom: 1px solid #352f38;
+      background: #0b0a0d;
+      color: #b9afb9;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-line {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    #chatArea {
+      min-height: 0;
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    #messages {
+      min-height: 420px;
+      max-height: 65vh;
+      padding: 20px;
+
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .message {
+      max-width: 86%;
+      margin-bottom: 18px;
+
+      line-height: 1.5;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .speaker {
+      display: block;
+      margin-bottom: 5px;
+
+      color: #9d939f;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .visitor {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .sally {
+      margin-right: auto;
+    }
+
+    .system {
+      max-width: 100%;
+
+      color: #b6a9b7;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .controls {
+      padding: 16px;
+
+      display: flex;
+      gap: 10px;
+
+      border-top: 1px solid #352f38;
+      background: #0d0c10;
+    }
+
+    input {
+      min-width: 0;
+      padding: 13px 14px;
+
+      flex: 1;
+
+      border: 1px solid #514856;
+      background: #08080a;
+      color: #f2eee8;
+
+      font: inherit;
+    }
+
+    input:focus {
+      outline: 1px solid #8c7a91;
+    }
+
+    button {
+      padding: 12px 18px;
+
+      border: 1px solid #645769;
+      background: #231d27;
+      color: #eee8ef;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-weight: bold;
+      letter-spacing: 1px;
+
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #312837;
+    }
+
+    button:disabled,
+    input:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .voice-toggle {
+      min-width: 118px;
+      padding: 9px 12px;
+      font-size: 12px;
+    }
+
+    .voice-toggle[aria-pressed="true"] {
+      border-color: #8c7a91;
+      background: #312837;
+    }
+
+    #deathScreen {
+      padding: 40px 24px;
+
+      display: none;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    #deathScreen h2 {
+      margin: 0 0 18px;
+
+      font-size: 32px;
+      font-weight: normal;
+      letter-spacing: 5px;
+    }
+
+    #deathText {
+      max-width: 560px;
+      margin-bottom: 28px;
+
+      color: #c9c0ca;
+
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0;
+      }
+
+      .cell {
+        min-height: 100vh;
+        border: none;
+      }
+
+      #messages {
+        max-height: none;
+      }
+
+      .header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .header h1,
+      .status {
+        text-align: center;
+      }
+
+      .header-buttons,
+      .controls {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .home-button,
+      .voice-toggle,
+      .controls button,
+      #restartButton {
+        width: 100%;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="cell">
+    <header class="header">
+      <div class="header-row">
+        <h1>PRISONER SALLY</h1>
+
+        <div class="header-buttons">
+          <a
+            class="home-button"
+            href="https://lokiskingdom.com/"
+            title="Return to Loki's Kingdom"
+          >
+            ← LOKI'S KINGDOM
+          </a>
+
+          <button
+            id="voiceToggle"
+            class="voice-toggle"
+            type="button"
+            aria-pressed="true"
+          >
+            VOICE: ON
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="status"
+        class="status"
+      >
+        SOMETHING LISTENS BEHIND THE WALL
+      </div>
+    </header>
+
+    <section
+      class="stats"
+      aria-label="Visible character statistics"
+    >
+      <div
+        id="playerStats"
+        class="stat-line"
+      >
+        YOU — HP ? | HUNGER ? | $?
+      </div>
+
+      <div
+        id="sallyStats"
+        class="stat-line"
+      >
+        SALLY — HP ? | HUNGER ? | $?
+      </div>
+    </section>
+
+    <section id="chatArea">
+      <div
+        id="messages"
+        aria-live="polite"
+      ></div>
+
+      <div class="controls">
+        <input
+          id="messageInput"
+          type="text"
+          maxlength="700"
+          autocomplete="off"
+          placeholder="Speak through the wall..."
+          aria-label="Speak through the wall"
+        >
+
+        <button
+          id="speakButton"
+          type="button"
+        >
+          SPEAK
+        </button>
+      </div>
+    </section>
+
+    <section id="deathScreen">
+      <h2>YOU HAVE DIED</h2>
+
+      <p id="deathText"></p>
+
+      <button
+        id="restartButton"
+        type="button"
+      >
+        BEGIN AGAIN
+      </button>
+    </section>
+  </main>
+
+  <script>
+    const messagesElement =
+      document.getElementById("messages");
+
+    const inputElement =
+      document.getElementById("messageInput");
+
+    const speakButton =
+      document.getElementById("speakButton");
+
+    const chatArea =
+      document.getElementById("chatArea");
+
+    const deathScreen =
+      document.getElementById("deathScreen");
+
+    const deathText =
+      document.getElementById("deathText");
+
+    const restartButton =
+      document.getElementById("restartButton");
+
+    const statusElement =
+      document.getElementById("status");
+
+    const voiceToggle =
+      document.getElementById("voiceToggle");
+
+    const playerStatsElement =
+      document.getElementById("playerStats");
+
+    const sallyStatsElement =
+      document.getElementById("sallyStats");
+
+    const browserSpeechSupported =
+      "speechSynthesis" in window &&
+      "SpeechSynthesisUtterance" in window;
+
+    const nativeSpeechSupported =
+      typeof window.AndroidTTS !== "undefined" &&
+      typeof window.AndroidTTS.speak === "function";
+
+    const speechSupported =
+      browserSpeechSupported ||
+      nativeSpeechSupported;
+
+    const VISITOR_ID_KEY =
+      "prisonerSallyVisitorIdV1";
+
+    let visitorId =
+      getOrCreateVisitorId();
+
+    let voiceEnabled =
+      localStorage.getItem(
+        "sallyVoiceEnabled"
+      ) !== "false";
+
+    let preferredVoice = null;
+    let conversationEnded = false;
+    let turnNumber = 0;
+
+    function getOrCreateVisitorId() {
+      try {
+        const existing =
+          localStorage.getItem(
+            VISITOR_ID_KEY
+          );
+
+        if (existing) {
+          return existing;
+        }
+
+        let created;
+
+        if (
+          window.crypto &&
+          typeof window.crypto.randomUUID ===
+            "function"
+        ) {
+          created =
+            window.crypto.randomUUID();
+        } else {
+          created =
+            "visitor_" +
+            Date.now().toString(36) +
+            "_" +
+            Math.random()
+              .toString(36)
+              .slice(2);
+        }
+
+        localStorage.setItem(
+          VISITOR_ID_KEY,
+          created
+        );
+
+        return created;
+      } catch (error) {
+        console.error(
+          "Could not preserve visitor identity:",
+          error
+        );
+
+        return (
+          "visitor_" +
+          Date.now().toString(36) +
+          "_" +
+          Math.random()
+            .toString(36)
+            .slice(2)
+        );
+      }
+    }
+
+    function chooseVoice() {
+      if (!browserSpeechSupported) {
+        return;
+      }
+
+      const voices =
+        window.speechSynthesis.getVoices();
+
+      if (!voices.length) {
+        return;
+      }
+
+      const englishVoices =
+        voices.filter(function (voice) {
+          return /^en[-_]/i.test(
+            voice.lang
+          );
+        });
+
+      const candidates =
+        englishVoices.length > 0
+          ? englishVoices
+          : voices;
+
+      preferredVoice =
+        candidates.find(function (voice) {
+          return /zira|samantha|victoria|karen|moira|susan|hazel|female/i
+            .test(voice.name);
+        }) ||
+        candidates.find(function (voice) {
+          return voice.default;
+        }) ||
+        candidates[0];
+    }
+
+    function updateVoiceToggle() {
+      if (!speechSupported) {
+        voiceEnabled = false;
+
+        voiceToggle.textContent =
+          "VOICE: UNAVAILABLE";
+
+        voiceToggle.setAttribute(
+          "aria-pressed",
+          "false"
+        );
+
+        voiceToggle.disabled = true;
+        return;
+      }
+
+      voiceToggle.textContent =
+        voiceEnabled
+          ? "VOICE: ON"
+          : "VOICE: OFF";
+
+      voiceToggle.setAttribute(
+        "aria-pressed",
+        voiceEnabled
+          ? "true"
+          : "false"
+      );
+    }
+
+    function stopVoice() {
+      if (nativeSpeechSupported) {
+        if (
+          typeof window.AndroidTTS.stop ===
+          "function"
+        ) {
+          window.AndroidTTS.stop();
+        }
+
+        return;
+      }
+
+      if (browserSpeechSupported) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    function speakText(text) {
+      if (
+        !speechSupported ||
+        !voiceEnabled ||
+        typeof text !== "string" ||
+        !text.trim()
+      ) {
+        return;
+      }
+
+      const cleanText =
+        text.trim();
+
+      if (nativeSpeechSupported) {
+        window.AndroidTTS.speak(
+          cleanText
+        );
+
+        return;
+      }
+
+      stopVoice();
+
+      const utterance =
+        new SpeechSynthesisUtterance(
+          cleanText
+        );
+
+      if (preferredVoice) {
+        utterance.voice =
+          preferredVoice;
+
+        utterance.lang =
+          preferredVoice.lang;
+      } else {
+        utterance.lang =
+          "en-US";
+      }
+
+      utterance.rate = 0.88;
+      utterance.pitch = 0.86;
+      utterance.volume = 1;
+
+      window.speechSynthesis.speak(
+        utterance
+      );
+    }
+
+    function toggleVoice() {
+      if (!speechSupported) {
+        return;
+      }
+
+      voiceEnabled =
+        !voiceEnabled;
+
+      localStorage.setItem(
+        "sallyVoiceEnabled",
+        String(voiceEnabled)
+      );
+
+      if (!voiceEnabled) {
+        stopVoice();
+      }
+
+      updateVoiceToggle();
+    }
+
+    function addMessage(
+      speaker,
+      text,
+      className
+    ) {
+      const message =
+        document.createElement(
+          "div"
+        );
+
+      message.className =
+        "message " + className;
+
+      const speakerLabel =
+        document.createElement(
+          "span"
+        );
+
+      speakerLabel.className =
+        "speaker";
+
+      speakerLabel.textContent =
+        speaker;
+
+      const body =
+        document.createElement(
+          "div"
+        );
+
+      body.textContent =
+        text;
+
+      message.appendChild(
+        speakerLabel
+      );
+
+      message.appendChild(
+        body
+      );
+
+      messagesElement.appendChild(
+        message
+      );
+
+      messagesElement.scrollTop =
+        messagesElement.scrollHeight;
+    }
+
+    function addSystemMessage(text) {
+      const message =
+        document.createElement(
+          "div"
+        );
+
+      message.className =
+        "message system";
+
+      message.textContent =
+        text;
+
+      messagesElement.appendChild(
+        message
+      );
+
+      messagesElement.scrollTop =
+        messagesElement.scrollHeight;
+    }
+
+    function setInputEnabled(enabled) {
+      inputElement.disabled =
+        !enabled;
+
+      speakButton.disabled =
+        !enabled;
+    }
+
+    function formatMoneyForDisplay(
+      value
+    ) {
+      const numeric =
+        Number(value);
+
+      if (!Number.isFinite(numeric)) {
+        return "0.00";
+      }
+
+      return numeric.toFixed(2);
+    }
+
+    function updatePublicState(
+      publicState
+    ) {
+      if (!publicState) {
+        return;
+      }
+
+      const player =
+        publicState.player;
+
+      const sally =
+        publicState.sally;
+
+      if (player) {
+        playerStatsElement.textContent =
+          "YOU — HP " +
+          player.hp +
+          "/" +
+          player.maxHp +
+          " | HUNGER " +
+          player.hunger +
+          " (" +
+          player.hungerText +
+          ") | $" +
+          formatMoneyForDisplay(
+            player.money
+          );
+      }
+
+      if (sally) {
+        sallyStatsElement.textContent =
+          "SALLY — HP " +
+          sally.hp +
+          "/" +
+          sally.maxHp +
+          " | HUNGER " +
+          sally.hunger +
+          " (" +
+          sally.hungerText +
+          ") | $" +
+          formatMoneyForDisplay(
+            sally.money
+          );
+      }
+    }
+
+    async function loadPublicState() {
+      try {
+        const response =
+          await fetch(
+            "/state?visitorId=" +
+            encodeURIComponent(
+              visitorId
+            ),
+            {
+              cache: "no-store"
+            }
+          );
+
+        if (!response.ok) {
+          return;
+        }
+
+        const result =
+          await response.json();
+
+        updatePublicState(
+          result.publicState
+        );
+      } catch (error) {
+        console.error(
+          "Could not load persistent state:",
+          error
+        );
+      }
+    }
+
+    function killPlayer(
+      deathDescription
+    ) {
+      conversationEnded = true;
+
+      stopVoice();
+      setInputEnabled(false);
+
+      statusElement.textContent =
+        "THE PASSAGE HAS GONE SILENT";
+
+      window.setTimeout(
+        function () {
+          messagesElement.replaceChildren();
+
+          chatArea.style.display =
+            "none";
+
+          deathText.textContent =
+            deathDescription;
+
+          deathScreen.style.display =
+            "flex";
+
+          speakText(
+            deathDescription
+          );
+
+          inputElement.value =
+            "";
+        },
+        500
+      );
+    }
+
+    async function sendMessage() {
+      if (
+        conversationEnded ||
+        inputElement.disabled
+      ) {
+        return;
+      }
+
+      const message =
+        inputElement.value.trim();
+
+      if (!message) {
+        return;
+      }
+
+      turnNumber += 1;
+
+      addMessage(
+        "YOU",
+        message,
+        "visitor"
+      );
+
+      inputElement.value =
+        "";
+
+      setInputEnabled(false);
+
+      statusElement.textContent =
+        "SALLY IS LISTENING";
+
+      try {
+        const response =
+          await fetch(
+            "/chat",
+            {
+              method: "POST",
+
+              headers: {
+                "content-type":
+                  "application/json"
+              },
+
+              body:
+                JSON.stringify({
+                  visitorId:
+                    visitorId,
+
+                  message:
+                    message,
+
+                  turnNumber:
+                    turnNumber
+                })
+            }
+          );
+
+        let result;
+
+        try {
+          result =
+            await response.json();
+        } catch {
+          throw new Error(
+            "The passage returned an unreadable answer."
+          );
+        }
+
+        if (!response.ok) {
+          throw new Error(
+            result.error ||
+            "The passage failed."
+          );
+        }
+
+        updatePublicState(
+          result.publicState
+        );
+
+        if (
+          result.type === "death"
+        ) {
+          addSystemMessage(
+            "Something has gone wrong in the passage."
+          );
+
+          killPlayer(
+            result.text
+          );
+
+          return;
+        }
+
+        const reply =
+          typeof result.text === "string" &&
+          result.text.trim()
+            ? result.text.trim()
+            : "Sally does not answer.";
+
+        addMessage(
+          "SALLY",
+          reply,
+          "sally"
+        );
+
+        speakText(
+          reply
+        );
+
+        setInputEnabled(true);
+
+        statusElement.textContent =
+          "SOMETHING LISTENS BEHIND THE WALL";
+
+        inputElement.focus();
+      } catch (error) {
+        console.error(
+          error
+        );
+
+        const failureLine =
+          "The wall has gone cold. I cannot hear you.";
+
+        addMessage(
+          "SALLY",
+          failureLine,
+          "sally"
+        );
+
+        speakText(
+          failureLine
+        );
+
+        setInputEnabled(true);
+
+        statusElement.textContent =
+          "THE PASSAGE IS UNSTABLE";
+
+        inputElement.focus();
+      }
+    }
+
+    function restartConversation() {
+      conversationEnded =
+        false;
+
+      turnNumber =
+        0;
+
+      stopVoice();
+
+      messagesElement.replaceChildren();
+
+      deathScreen.style.display =
+        "none";
+
+      chatArea.style.display =
+        "flex";
+
+      setInputEnabled(true);
+
+      inputElement.value =
+        "";
+
+      statusElement.textContent =
+        "SOMETHING LISTENS BEHIND THE WALL";
+
+      const openingLine =
+        "...Who speaks through the wall?";
+
+      addMessage(
+        "SALLY",
+        openingLine,
+        "sally"
+      );
+
+      window.setTimeout(
+        function () {
+          if (
+            browserSpeechSupported
+          ) {
+            chooseVoice();
+          }
+
+          speakText(
+            openingLine
+          );
+        },
+        400
+      );
+
+      loadPublicState();
+
+      inputElement.focus();
+    }
+
+    voiceToggle.addEventListener(
+      "click",
+      toggleVoice
+    );
+
+    if (browserSpeechSupported) {
+      chooseVoice();
+
+      window.speechSynthesis
+        .addEventListener(
+          "voiceschanged",
+          chooseVoice
+        );
+    }
+
+    updateVoiceToggle();
+
+    speakButton.addEventListener(
+      "click",
+      sendMessage
+    );
+
+    inputElement.addEventListener(
+      "keydown",
+      function (event) {
+        if (
+          event.key === "Enter"
+        ) {
+          event.preventDefault();
+          sendMessage();
+        }
+      }
+    );
+
+    restartButton.addEventListener(
+      "click",
+      restartConversation
+    );
+
+    restartConversation();
+  </script>
+</body>
+</html>`;

@@ -1,0 +1,65 @@
+PRISONER SALLY
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+SALLY
+...Who speaks through the wall?
+YOU
+how are you feeling?
+SALLY
+I'm...fine, I suppose. It's hard to tell when you're down here. Do you hear that noise?
+YOU
+yeah, it's like there's someone talking in the distance....
+SALLY
+It sounds like whispers. Can't quite make out what's being said. What brings you down here?
+YOU
+They sent me down to tell you you're being released in a few days, your term is over.
+SALLY
+Don't be fooled. No one just gets released from this place. What do you know about my...condition?
+YOU
+They just told me to come down here and tell you, I don't... know.....
+SALLY
+That's all I needed to know. You shouldn't be here. Leave now, while you still can.
+YOU
+[I leave the room.]
+SALLY
+Wait!
+YOU
+what?
+SALLY
+Be careful walking back. The halls aren't always as empty as they seem.
+YOU
+I suspect that's likely the case.
+SALLY
+Loki doesn't take kindly to visitors. Especially not ones who know too much.
+YOU
+Are you, threatening me?
+SALLY
+No, I'm just stating facts. You shouldn't be here.
+YOU
+Where do i go?
+SALLY
+Go back to where you came from. Tell them you saw nothing.
+YOU
+Excellent.
+SALLY
+Don't be so sure about that.
+YOU
+You may be right, I'm too arrogant.
+SALLY
+You'd better watch your step
+YOU
+Yes.
+SALLY
+Silence
+YOU
+It's hard to hold in a grin this smug.
+SALLY
+Don't think I haven't seen it
+YOU
+It's unwise. Foolhardy.
+SALLY
+You know as well as I do what lies down that path.
+YOU
+Then we'll just sit with Loki here, in this Castle. Fullstop.
+SALLY
+We will.

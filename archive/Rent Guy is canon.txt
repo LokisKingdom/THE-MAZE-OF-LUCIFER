@@ -1,0 +1,257 @@
+[IMAGES OF A JAIL CELL] [AND AN OVERLAY OF A ROOM FILLED WITH STUFF]
+
+ok, number one thing on the agenda looking at this, it looks great, all great, seems to be working or at least so far.
+
+THE CELL MUST BE REPRESENTED VISUALLY, you SEE AN IMAGE of the CELL. (we already created it, i can provide links) :
+
+                                       "the cell is represented visually on the screen, upon clicking the CELL section - and therefore, MONOLITHS will also be overlayed over the original CELL image. So (this wasn't just for show) WHEN YOU BUY THE CONDOMINUM UNIT, YOU LITERALLY SEE THE BACKGROUND IMAGE CHANGE FROM A JAILCELL TO A CONDOMNIUM UNIT, AND THE SAME MONOLITHS REMAIN OVERLAYED OVER IT WITH ALPHA IN THE SAME PLACES."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. **That should be treated as a core rendering rule of the CELL system, not decoration.**
+
+What you have now makes the intended architecture much clearer:
+
+* **CELL tab → opens a visual scene.** The cell image you just provided is the initial/base environment.
+* **Housing upgrades replace the base image.** So purchasing the condominium doesn't merely change a stat from `cell` → `condominium`; the displayed environment literally changes to the condominium artwork.
+* **Monoliths are a separate persistent overlay layer.** They should be transparent PNGs positioned over the environment at fixed coordinates. Changing the underlying residence does **not** remove them.
+* The same principle should apply to other persistent visual objects we add later: they belong to the scene's overlay/state system rather than being baked into the background.
+* Therefore the renderer is effectively:
+
+```text
+CELL VIEW
+
+┌─────────────────────────────────────────┐
+│                                         │
+│       CURRENT RESIDENCE BACKGROUND      │
+│       jail cell / condo / mansion /     │
+│       spaceship / cosmic insanity...    │
+│                                         │
+│    [Monolith A]       [Monolith B]      │
+│                                         │
+│          [other persistent objects]     │
+│                                         │
+└─────────────────────────────────────────┘
+```
+
+And technically I'd keep the state separated something like:
+
+```js
+cellVisualState = {
+    residence: "jail_cell",
+
+    overlays: {
+        monolith1: false,
+        monolith2: false,
+        monolith3: false
+    }
+};
+```
+
+Then rendering is conceptually:
+
+```js
+background.src = RESIDENCE_IMAGES[cellVisualState.residence];
+
+renderOverlays(cellVisualState.overlays);
+```
+
+So when the player buys the condominium:
+
+```js
+cellVisualState.residence = "condominium";
+```
+
+the renderer changes **only the bottom/background layer**:
+
+```text
+BEFORE
+
+Monolith PNGs
+─────────────
+Jail Cell PNG
+
+
+AFTER BUYING CONDO
+
+Monolith PNGs     ← SAME AS BEFORE
+─────────────
+Condominium PNG   ← REPLACED
+```
+
+That's substantially better than treating upgrades as menu entries. **The CELL becomes a visual record of Sally's progression.** You can look at it and immediately see what has happened to her situation.
+
+And this matters enormously once the escalation gets ridiculous. The starting image is this miserable, virtually empty stone prison. Eventually we can replace the entire environment underneath the persistent objects while retaining whatever artifacts she has accumulated. That means the visual transformation itself communicates the progression from **prisoner in a dungeon → absurdly upgraded Sally**.
+
+So yes: **I would put this first on the implementation agenda.** Before adding more CELL purchases, establish the visual renderer correctly so every subsequent housing/monolith/environment upgrade plugs into it rather than requiring us to retrofit the architecture afterward.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THAT'S WHY RENT GUY IS FUNNY, YOU CAN ACTUALLY SEE HIM THERE, JUST STANDING THERE IN THE CELL WITH A DRINK IN HIS SUNGLASSES WITH HIS BIG NOSE (and hat) AND HAWAIIAN SHIRT.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+YES — exactly. 😂 **Rent Guy isn't funny as a database entry. He's funny because he's physically there.**
+
+You click **CELL**, and among all Sally's accumulated possessions there's just this ridiculous bastard standing in the dungeon:
+
+**Hawaiian shirt. Hat. Huge nose. Sunglasses. Drink in hand.**
+
+No explanation necessary.
+
+And because he's an overlay, the joke actually gets *better* as Sally progresses. He survives the environment changes:
+
+**Filthy jail cell → furnished cell → luxury condo → penthouse → palace → spaceship → impossible cosmic residence**
+
+…and **Rent Guy is still standing there**, dressed for a vacation, holding his drink.
+
+That also gives us the correct distinction for the renderer:
+
+```text
+BASE ENVIRONMENT
+    Jail Cell
+    Condominium
+    Mansion
+    Space Cruiser
+    etc.
+
+PERSISTENT VISUAL OVERLAYS
+    Monolith #1
+    Monolith #2
+    Rent Guy
+    Furniture / trophies / special objects
+    etc.
+```
+
+So buying **Rent Guy** should set something like `rentGuyOwned = true`, and from that moment his transparent sprite gets composited into whatever the current CELL environment happens to be.
+
+And **the image shouldn't replace Sally's cell image with a precomposed "cell-with-rent-guy" image.** That's important. Rent Guy needs to be his own alpha layer. Otherwise every future residence would require another bespoke Rent Guy version.
+
+It also means we can deliberately position him somewhere obnoxiously conspicuous—just standing against a wall as though **of course this man belongs here**.
+
+That makes the CELL screen much more than an illustration. It's basically a **persistent visual dollhouse/inventory of the entire progression system.**
+
+And yes, now I completely understand why you were emphasizing that the monoliths remain in exactly the same positions when the condominium replaces the jail cell. **We're building a scene compositor.** The jail cell is merely its first background.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+YES, PLEASE CREATE RENT GUY (image as described, with alpha)
+
+
+
+
+
+
+
+
+
+
+[THE IMAGE OF RENT GUY]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WOW. That is so much better than i could have imagined.
+
+I was thinkin this crummy cartoon character, this guy has DETAIL. VERY GOOD WORK. EXTRA CREDITS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HAHA. He came out **far more magnificent than Rent Guy had any right to be.**
+
+The crossed legs are what kill me. He's not merely trapped in Sally's cell because somebody bought him. **He's comfortable.** The drink, umbrella, sunglasses, open Hawaiian shirt, giant RENT medallion—he looks like he's been collecting rent in Hell for thirty years and has finally achieved tenure.
+
+And the level of detail is actually ideal for what we're doing. When he's scaled down into the CELL scene, he'll still have a very recognizable silhouette: **hat + enormous nose + sunglasses + belly + tropical shirt + cocktail.** You won't need to inspect him to understand that something profoundly stupid has appeared in Sally's prison.
+
+More importantly, this establishes a visual quality bar for these overlays. The joke objects don't have to look like cheap game icons. They can look **absurdly lavish and serious**, which makes the absurdity considerably stronger.
+
+Imagine Sally eventually inhabiting some transcendent palace at the end of creation, surrounded by monoliths and impossible artifacts...
+
+and this fucker is **still there with his drink.**
+
+Rent Guy is canon.

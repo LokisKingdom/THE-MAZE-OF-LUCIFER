@@ -1,0 +1,1113 @@
+	
+Date: 04.JAN.72
+
+From: Abe Ghiran
+
+To: log entry
+
+Subject: Low-G Experiment
+
+Gravity research is going well, we'll be using the northeast lab to set up a zero-G area. This area will be off-limits to general personnel.
+
+		
+		
+Date: 11.JAN.72
+
+From: Arnold Hessman
+
+To: Wu
+
+Subject: antenna station
+
+Welcome to Citadel Station, Mr. Wu. My apologies for not greeting you in person; we've been rather busy here in engineering. As communications officer, you'll be working at the four antenna control stations. They're located on the engineering level; one in each cardinal point. A quadrant head can direct you if you need help. Glad to have you aboard, Mr. Wu.
+
+		
+		
+Date: 11.FEB.72
+
+From: Lonni Stevens
+
+To: maintenance personnel
+
+Subject: charging robots
+
+Announcement to security maintenance personnel. While recharging security-2 robots in the maintenance bay, you may notice considerable power drain to auxiliary systems. Lights will dim and the door leading out of the room will be locked. If an emergency arises and you need power, hit the charge interrupt button. The lights and doorlock will be back on line and the robots will be revived from their charge sleep.
+
+		
+		
+Date: 16.Mï¿½R.72
+
+From: Arnold Hessman
+
+To: x
+
+Subject: Access to core
+
+Yeah, listen: Personnel complains that there's no access to the lower core from Gamma quad. Get someone to fix the door, or get 'em a rope ladder or something.
+
+		
+		
+Date: 27.APR.72
+
+From: Edward Diego
+
+To: Oscar
+
+Subject: investigation
+
+Oscar, guess what? I'm under investigation, so shred what you've got. Shred it all, got that? Now get this: The logs of the experiments are protected by some program called SHODAN, so I picked up some hacker who's going to crack it for us. That gives me access for the robos and the other systems on the station, so we've got a shield if they try and oust me. Sit tight baby, it's under control.
+
+		
+		
+Date: 29.APR.72
+
+From: Jodi Hayes
+
+To: Jared Fortier
+
+Subject: new viewing rooms
+
+Hey Jared, I hear theyï¿½re opening that new viewing room on the exec level tomorrow night. Know anything about it? All the folks down here been buzzin ï¿½bout seeinï¿½ it, but there ainï¿½t no word about tickets or seating or anything.
+
+		
+		
+Date: 30.APR.72
+
+From: Jared Fortier
+
+To: Jodi Hayes
+
+Subject: execs only
+
+Jodi, Iï¿½ve got some bad news about the viewing room. Seating is very limited - something like a dozen seats in the place - and of course the execs get first dibs on tickets. Itï¿½ll be months before we even get a chance to see it. Figures, huh? I mean, who cares if a bunch of maintenance slobs ever gets to use the nice new facilities, right?
+
+		
+		
+Date: 06.JUN.72
+
+From: Ed Aubry
+
+To: Sabo Engle
+
+Subject: new moving schedule
+
+Sabo, youï¿½ve got to be kidding me! The new loading schedule has me down for two six-hour shifts a day with only a 45 minute break! This is for the new two weeks? Next I suppose youï¿½ll tell me youï¿½re taking all the lifter-bots off line, and that Iï¿½ll have to lug those microwave ovens around myself.
+
+		
+		
+Date: 07.JUL.72
+
+From: Harold Rosen
+
+To: log entry
+
+Subject: Diego's new office
+
+Something's not right. Diego just got moved up to the finest quarters on Gamma quad... and this is right after he got his hours reduced and a pay hike. Oh, he's scratching someone's back alright, someone big.
+
+		
+		
+Date: 04.AUG.72
+
+From: Bianca Schuler
+
+To: Capt.Hawkins, James
+
+Subject: Diego
+
+Internal security report, subject: Edward Diego. We're going to nail this guy to the wall. I am now working as his personal secretary and I've already found signs of a cover-up in c-space. Nothing relating to mutagen research, but I'm looking. This thing is big.
+
+		
+		
+Date: 25.AUG.72
+
+From: Don Travers
+
+To: Al
+
+Subject: life pods
+
+Al, we need to replace the first aid kits in the life pods for flight bays 2 and 3. Oh, and run a diagnostic on the jettison controls.
+
+		
+		
+Date: 01.SEP.72
+
+From: Don Travers
+
+To: log entry
+
+Subject: service bridge
+
+Son of a...! Service bridge in flight bay 4 has blown a couple of fuses. We're getting up something temporary, but it's going to be a little fidgety.
+
+		
+		
+Date: 05.SEP.72
+
+From: Marc Steinberg
+
+To: Char
+
+Subject: Radiation leaks?
+
+Char, it's Marc. Listen, we got to reschedule for later. The core has been spitting some serious radiation right now, and spiking for the past 36 hours and we're talking about 8 REMs. Only cause I can come up with is that it's a software error. No one's been hurt yet, but listen, do me a favor? Run a diagnostic on the CPUs for me. Thanks, I owe ya.
+
+		
+		
+Date: 06.SEP.72
+
+From: Jared Fortier
+
+To: log entry
+
+Subject: storages list
+
+I got together that inventory you asked for. It's all in the storage compartment near the Beta maintenance closet:1 Navigation and Mapping Unit 1 EMP grenade 6 Interface Demodulators 4 Hollow-tip 2100 3 Needle Darts Most of the stuff is emergency supplies; I'm keeping the demodulators there until I find a better place for them.
+
+		
+		
+Date: 07.SEP.72
+
+From: Ed Aubry
+
+To: Sabo Engle
+
+Subject: new storage layout
+
+Sabo, Aubry again. Why are these bots rebuilding the storage rooms? And why so many repulsor lifts? Has MacLeod authorized all this? You said SHODAN was acting a little strange lately... someone should definitely check it out.
+
+		
+		
+Date: 11.SEP.72
+
+From: Paul Stannek
+
+To: Warren Anderczyk
+
+Subject: Radiation leaks
+
+Warren, why the hell is the radiation level so high in Gamma, around the x-22 room? I'd check it out myself, but my rad-count's way high this month and detox always makes me break out. And furthermore... where the hell did all the enviro-suits go? Check Sabo on storage, but sometimes he only has bio-suits.
+
+		
+		
+Date: 11.SEP.72
+
+From: Warren Anderczyk
+
+To: Paul Stannek
+
+Subject: Bio-contaminants
+
+Paul, it's not just Gamma, there's bio-contamination leaks all over the station. And there's been a general recall of all environment suits. If you want one, try Abe Ghiran, he's been working on the reactor. I bet he has one stashed in the maintenance office if Sabo doesn't have one.
+
+		
+		
+Date: 11.SEP.72
+
+From: Don Travers
+
+To: log entry
+
+Subject: convection shaft
+
+Security bot went bananas in the convection shaft. I had to toss in an EMP grenade. Huh, anyways, the bearings in the northeast convection shaft are shot. I left the repulsors on for the maintenance people. That's it for today.
+
+		
+		
+Date: 11.SEP.72
+
+From: Kiner Perry
+
+To: log entry
+
+Subject: screen malfunction
+
+Security notice: SHODAN's printing out security codes on different screens. Today it was the TriOp logo screen near the elevator. Thing had full code for the exec maintenance conduit. I say pull that damn AI offline and fix it, before we're in a fix.
+
+		
+		
+Date: 14.SEP.72
+
+From: Bruford Endicott
+
+To: log entry
+
+Subject: Power Outages
+
+Still having power outages over on Beta quadrant. Probably the computer with a high priority job, some kind of re-routing, I'll bet. We're installing circuit breakers on Beta, that way we can bring the lines up after surges.
+
+		
+		
+Date: 16.SEP.72
+
+From: Jon David Wong
+
+To: log entry
+
+Subject: Power Outages
+
+Alright, SHODAN. We've got power fluctuations and robot crews are redecorating Alpha quad. Where's the reboot switch?
+
+		
+		
+Date: 17.SEP.72
+
+From: Jon David Wong
+
+To: log entry
+
+Subject: Engineer's Report
+
+Note to all science level engineers: I am still unable to pinpoint the source of the power surges in Beta Quadrant, though they are likely related to some of the other recent glitches in SHODAN's operation. At Mr. Endicott's request, I have installed circuit breakers in Alpha Quadrant in case of power outages in Beta.
+
+		
+		
+Date: 18.SEP.72
+
+From: Rex Melville
+
+To: log entry
+
+Subject: Computer Malfunction
+
+This is crazy! I'm locked out of my own office. And this damn security bot just keeps saying "She's changed the locks on the doors, orders of SHODAN". All the access codes are changed on this floor, so I go to Beta quad for new access cards, and the security bot there starts attacking me. Me, of all people!
+
+		
+		
+Date: 22.SEP.72
+
+From: Jon David Wong
+
+To: log entry
+
+Subject: Arnold Hessman
+
+As I feared, SHODAN's malfunctions are manifesting in Citadel's cyberspace net. Several storage lockers and rooms have been sealed, with their controls put on 'cybertoggles' only accessible in cyberspace. Also, some codes to sensitive areas on the station have been encoded onto loose data fragments. Although all station personnel capable of entering cyberspace have clearance for those codes, I'm very concerned about the potential security hazard. I'll try to have SHODAN introduce defensive programs into cyberspace, to keep potential intruders from the floating data and cybertoggles.
+
+		
+		
+Date: 23.SEP.72
+
+From: Jon David Wong
+
+To: log entry
+
+Subject: CPU mystery
+
+This is great! CPUs are spewing random numbers into systems authorization memory. It would all be fine if we wanted to prevent ourselves from accessing executive functions. Now, if you go to the source code... wait, what the hell is this!----// // /** **
+
+		
+		
+Date: 28.SEP.72
+
+From: Ann Raines
+
+To: Verne
+
+Subject: sickness
+
+Hey Verne, that rash I told you about is spreading and I feel kind of sick. I'm going down to the hospital level to get checked. See you tomorrow.
+
+		
+		
+Date: 29.SEP.72
+
+From: Aaron Talbot
+
+To:
+
+Subject: Medical Report
+
+Another four cases of the 'mystery virus' were reported today. There have been increasing rumors that this whole mess is the result of a screw-up in the experimental bio-labs. If it's true, then why the hell aren't they telling us anything that could help us cure the victims? My first patient, who came in two days ago, is starting to display unsettling physical deformities. Furthermore, he is not responding to any conventional treatment. I'll consult with Dr. Stackhouse tomorrow -- I know she has two patients in a similar condition. Trioptimum Security Report -- 10.oct.2072 The rioting on the residential level has not calmed down since it started yesterday morning. A security team was dispatched 12 hours ago, but met with unexpectedly strong resistance from the rioters. Some of the members of the security team claimed that the mob had broken into weapons lockers and had armed themselves. Worse were the reports that some of the rioters were already engaged in skirmishes against 'oddly formed beings.' There is no evidence to back up these reports, though their coincidence with the reported biolab fiasco two weeks ago is troubling. Negotiations continue to go well with the United Earth Miners' Conglomerate over rights to Saturn's moons. Trioptimum is uniquely positioned to make a deal, since Citadel Station is already in stable orbit, and has the scientific equipment necessary for preliminary surveys. Profit projections, assuming a 30% stake in UEM's local mining activities (the standard rate for such deals), are very promising. Our lawyers are researching the legality of imposing a 4% shipping tax, since Trioptimum technically has first rights to space shipping lanes in the Saturn sector.
+
+		
+		
+Date: 29.SEP.72
+
+From: Charlotte Sigmund
+
+To: Marc
+
+Subject: scheduling
+
+Marc, Raines and Jackson have got that weird sickness now, the one that Verne had. We're going to have to switch the schedules.
+
+		
+		
+Date: 01.OKT.72
+
+From: Gerard Koufax
+
+To: log entry
+
+Subject: Beta Grove locked
+
+Yesterday SHODAN shut down Beta grove. No reason. At first the thing resisted all of our usual overrides, then the circuits revealed a security switch. It's in Diego's old room, on Beta quad. I bet we could also open it from cybersp... Wait a minute! Oh my God, what the hell is that? Oh, it's... Hey, it's a----// // /** **
+
+		
+		
+Date: 04.OKT.72
+
+From: Harry Wilkinson
+
+To: log entry
+
+Subject: grove jettison
+
+Listen, I know I shouldn't have done it, but I was just taking orders. If those execs wanted to ride Gamma grove off into the great black, well then good riddance to them. With all the mutant killers, I couldn't blame the suits for trying to escape. I hit the enable button in the grove, hustled over to the exec level to hit the master enable switch and then back to flip the lever outside the grove. Of course, SHODAN had disabled life support systems in the grove. I'm sure they're all dead by now.
+
+		
+		
+Date: 05.OKT.72
+
+From: Edward Diego
+
+To: log entry
+
+Subject: personal log
+
+A TriOp security team just tried to land at bay 6. They were real impressive until I blew out their attitude jets. Hey SHODAN, take a letter: Dear TriOp, please send some more people to investigate me. I run security, I run the robots, I'm jamming communications. That's right, Rebecca, investigate me, investigate by butt. Note to myself: Keep that hacker on ice for a while in case I need him. Otherwise, just take him out.
+
+		
+		
+Date: 07.OKT.72
+
+From: Shodan
+
+To: Cyborg 82-N
+
+Subject: new jettison procedure
+
+Cyborg 82-N: In response to recent regrettable incidents, I have altered the sequence necessary to jettison groves. One must now enable the jettisoning of ALL three of the remaining groves before any single one can be launched. To jettison a second grove, one must do three things: 1. Hit the jettison enable switch inside all three groves 2. Activate master jettison enable in Gamma quadrant 3. Pull jettison lever in a specific grove lounge to launch that grove
+
+		
+		
+Date: 08.OKT.72
+
+From: Robin Kell
+
+To: Beth and Adrian
+
+Subject: ambush
+
+These crates give us good position, but I don't see a way to break to the life pods. Beth and Adrian, see if you can get down towards us in flight bay 2. Uh, oh----// // /** **
+
+		
+		
+Date: 09.OKT.72
+
+From: Kevin O'Connell
+
+To: log entry
+
+Subject: New cyborgs
+
+We underestimated SHODAN. He's re... I mean it's reprogrammed regeneration rooms all over the station into cyborg conversion chambers. Anyone going in to get healed comes out as a cyborg. I've disconnected the medical CPUs from SHODAN's main data bank, so we can reset them to their normal healing functions without SHODAN noticing. I'm on my way now to reset the one on the hospital level.
+
+		
+		
+Date: 11.OKT.72
+
+From: Don Travers
+
+To: maintenance personnel
+
+Subject: Defense system
+
+All flight bay maintenance personnel, we have a serious emergency. Yesterday, the defense system fired without executive control and blew a TriOp shuttle right out of the hangar. I want a complete diagnostic on the computer node in the south repair center. If you find anything funny, take it offline.
+
+		
+		
+Date: 11.OKT.72
+
+From: Shodan
+
+To: Cyborg 65-V
+
+Subject: Beta Grove Security
+
+Cyborg 65-V: You have been selected to keep all robots, cyborgs and mutants away from Beta grove on the executive level. No one may enter while my experiments there are in progress. And be certain that none of the lucky subjects escape.
+
+		
+		
+Date: 11.OKT.72
+
+From: David Honig
+
+To: log entry
+
+Subject: Medical CPUï¿½s
+
+SHODAN's security is closing down on us. The elevators are frozen. Mira keeps saying that it's the cameras and the medical CPU core, that SHODAN's using these to hold on to the level. That's all fine, but I don't really see how it helps. The thing is everywhere.
+
+		
+		
+Date: 12.OKT.72
+
+From: David Honig
+
+To: log entry
+
+Subject: Cyborg Conversion
+
+I must be one of the last ones who hasn't changed. SHODAN must have altered the healing machine I installed in Alpha quadrant. It does things to people now. I, uh, I think I saw Beth yesterday, but she had so many implants I c-couldn't be sure. If... if I can get to the machine... uh... I know I can set things right again.
+
+		
+		
+Date: 12.OKT.72
+
+From: Zachary Aaron
+
+To: log entry
+
+Subject: virus experiment
+
+SHODAN has proven itself a brilliant biochemist. The camera views at Beta look like... like nothing I've ever seen. I asked for a volunteer to go down in an enviro-suit to flip the switch and release the grove. They looked at me like I was crazy.
+
+		
+		
+Date: 12.OKT.72
+
+From: Zachary Aaron
+
+To: log entry
+
+Subject: envirosuit
+
+Gamma quad's blocked off, but Laura found us a maintenance crawlway. It should lead to the CPU and the master jettison control. We went over to the Beta dorms to check it out. Lamar went in, but he hasn't come out!
+
+		
+		
+Date: 12.OKT.72
+
+From: Chauncy McDaniel
+
+To: log entry
+
+Subject: disturbing news
+
+We're all still reeling from the disaster two days ago. I checked out the defense system, but there's not a thing wrong with it... well, unless you count that it fired on our own shuttle. I'm taking it offline today.
+
+		
+		
+Date: 13.OKT.72
+
+From: Chauncy McDaniel
+
+To: log entry
+
+Subject: disaster
+
+Don Travers had me examining the defense relays all morning. Seems there was a signal from SHODAN 78 milliseconds before they fired. So, I went down to disconnect the CPU node, and a malfunctioning maintenance bot almost killed me! This whole thing is getting stranger by the minute.
+
+		
+		
+Date: 15.OKT.72
+
+From: Mira Stackhouse
+
+To: log entry
+
+Subject: Shodansï¿½s Presense
+
+Gunther was killed today. I can't let myself think about it. I think I understand how SHODAN is doing it. When we destroy the cameras and CPU nodes, SHODAN loses some of its control over the station functions, at least on this level. I think I can restore manual control on the hospital.
+
+		
+		
+Date: 15.OKT.72
+
+From: Shodan
+
+To: Cyborg F-71
+
+Subject: Mutagen Transfer
+
+Directive to cyborg F-71: We will now test the virus in a proper environment. Move mutagen experiment V-5 to Beta grove, on the executive level. Let the virus infect the grove and observe its effects on vegetable and animal life forms. When the strain is perfected, we will release it on the earth, where it will facilitate our conquest.
+
+		
+		
+Date: 16.OKT.72
+
+From: Edward Diego
+
+To: Shodan
+
+Subject: a pact
+
+SHODAN, I have seen the wisdom and beneficence in your actions. You do not mean to cause us harm... no, but rather to bring us to greater glory by serving a being as perfect as yourself. Please allow me to demonstrate my loyalty by giving you the human scum who undermine your reign... they are hiding in the northeast banquet hall. All I ask in return is a measure of protection and the privilege of spreading your message further.
+
+		
+		
+Date: 16.OKT.72
+
+From: Travis Baerga
+
+To: log entry
+
+Subject: gas grenades
+
+Those gas grenades are life savers against the mutants. Just found a pack of them and snuck right by, no problems. With enough grenades, we may still stand a chance.
+
+		
+		
+Date: 16.OCT.72
+
+From: Willard Richie
+
+To: log entry
+
+Subject: systems code
+
+SHODAN's got complete control of the system. We can't override him, he's keeping the codes from us. If we could just shut down the CPUs on levels one through six then we could... yeah, that would do it. The question is: how do we do it? We can't send strike teams to disable the CPUs on those six floors, we can't even defend ourselves. Richie out.
+
+		
+		
+Date: 17.OKT.72
+
+From: Zachary Aaron
+
+To: log entry
+
+Subject: betrayal
+
+Diego just left. He sold us out! I can already hear the cyborgs on their way. The dining hall's a dead end! I only hope Bianca made it out of the trap. If anyone can make it up there and use the chip, it's her. I only hope we're still holding when these doors go down. That cyberjack is SHODAN's Achilles heel.
+
+		
+		
+Date: 17.OCT.72
+
+From: Lawton Kirby
+
+To: log entry
+
+Subject: SHODANSï¿½s mutants
+
+10.17.72 We got the supplies from the west wing. Hanson and Raines killed by mutants nesting in access corridor. 10.18.72 We can't just hide here, they're killing us one by one! In an hour, about 20 of us are going to rush them. We'll try to break through the access corridor, then head for the bridge. If we fail, God save our souls.
+
+		
+		
+Date: 17.OKT.72
+
+From: Karenna Ozark
+
+To: log entry
+
+Subject: Final assault
+
+We're finished. Keith and the others went down the access corridor an hour ago to fight the mutants. None of them have come back. Soon the mutants will come for the rest of us.
+
+		
+		
+Date: 18.OKT.72
+
+From: Jason Harvey
+
+To: log entry
+
+Subject: SHODANï¿½s virus
+
+It'll be over soon... soon I'll die. This painful end... I can't even recognize my own damn arm. SHODAN's virus. I can see... oh God, I can see through my own body! There's another virus in the grove... God, let me die... please.
+
+		
+		
+Date: 19.OKT.72
+
+From: Shodan
+
+To: Cyborg 43-S
+
+Subject: exec level security
+
+Cyborg 43-S: The current strain of virus is approaching its toxic perfection. We are using human and plant subjects to breed the virus in tumors. Guard the executive and residential zones on level 6 well, my children. I sense infiltration.
+
+		
+		
+Date: 19.OKT.72
+
+From: Abe Ghiran
+
+To: Survivors
+
+Subject: Join us!
+
+If any survivors can hear me: Please, some of us are still resisting SHODAN. We have a sanctuary in Beta quadrant, guarded by a radioactive trench. There's a force bridge that operates off a wiring panel. If you're coming in from Alpha, our guards will extend the bridge for you. Be very careful. Mutants are all over the corridors. Good luck.
+
+		
+		
+Date: 20.OKT.72
+
+From: Nathan D'Arcy
+
+To: log entry
+
+Subject: SHODAN charging the laser
+
+So SHODAN is charging up the lasers. Whatever else we do, we can't allow it to fire. We can discharge it ourselves, but who knows what it's aimed at? We can't fire it or can't stop it.
+
+		
+		
+Date: 20.OCT.72
+
+From: Edward Diego
+
+To: Cyborg detachment 3
+
+Subject: capture Schuler
+
+Fellow children of SHODAN, a dangerous foe to our society lurks in the corridors of engineering level. Her name is Bianca Schuler and she has opposed my campaign to bring our Lord SHODAN to power. Cyborg detachment 3, bring this dirty no-tech to justice.
+
+		
+		
+Date: 20.OKT.72
+
+From: Bianca Schuler
+
+To: log entry
+
+Subject: escape
+
+I'm the resistance now. Diego sold us out in the executive level dining room and now I'm in a crawlway up in engineering trying to keep calm. OK, the plan: I go up through level 8 to the bridge. If I don't get killed, I break into the computer room and install the isolinear chipset. Zack says it gives me a shot at SHODAN - a couple of times. Let's go.
+
+		
+		
+Date: 20.OKT.72
+
+From: Bianca Schuler
+
+To: log entry
+
+Subject: isolinear chipset
+
+The blueprint showed three force doors outside the computer room, each on a separate circuit. Got to get through, and then the chipset does its thing. Then I do my c-space moves, such as they are. We need a hacker for this one.
+
+		
+		
+Date: 21.OKT.72
+
+From: Bianca Schuler
+
+To: log entry
+
+Subject: capture
+
+Why did I take that turn? Oh Jesus, it's just a matter of time now. And if I go down, chip goes with me. It was our last hope. Alright, Diego - You want the chip? You want the chip? Come and get it!----// // /** **
+
+		
+		
+Date: 21.OKT.72
+
+From: Nathan D'Arcy
+
+To: Althea
+
+Subject: block the laser with the shields?
+
+Listen up, Althea. I know how we can stop SHODAN from firing the laser. Get the isotope x-22 from Gamma, feed it into the shield generators on the reactor level, then put the shields up. Fire the laser into the shield and the laser explodes. Trouble is, every existing safety lock is designed to prevent this.
+
+		
+		
+Date: 22.OKT.72
+
+From: Greg MacLeod
+
+To: Sabo Engle
+
+Subject: Suit Recall
+
+Sabo, you shou^^ï¿½ï¿½ ï¿½ï¿½ow this: SHODA ((((((( ï¿½ï¿½ recall on all enviro-suits! No reason! 222 ï¿½ ï¿½ ï¿½ )ashed a suit in my stora------ ï¿½ere I put the plastique ....[ ] kept looking for. The combo is 8ï¿½ï¿½ ==o don't lose it.
+
+		
+		
+Date: 23.OCT.72
+
+From: CY-014
+
+To: log entry
+
+Subject: Gefangennahme Schulers
+
+Per orders from Diego CY-001, Schuler unit has been captured. Schuler unit presently being transported to detainment cell on bridge. Schuler unit being held for further study and possible neuro-disassembly. We await SHODAN's triumphant empire.
+
+		
+		
+Date: 23.OKT.72
+
+From: Nathan D'Arcy
+
+To: Althea
+
+Subject: Destroying the laser
+
+Alright, Althea. We can destroy the laser by firing it into the station's own shields. Isotope x-22 is stored in the science level and we need to bring it down to the reactor level to power the shields. Then you turn them on, use the safety override code to enable the laser and fire. The laser controls and my notes are on the science level and the override code is in the science library. I have no idea how you're going to do all this, but good luck
+
+		
+		
+Date: 24.OKT.72
+
+From: Arnold Hessman
+
+To: log entry
+
+Subject: Blowing the station
+
+I'm the last one left here. SHODAN's got control over everything except me. I'd blow up the reactors, but I don't have the systems authorization code... maybe I can get to an escape pod. Then again, no code. I've got to make it to the bridge or I'm dead.
+
+		
+		
+Date: 24.OKT.72
+
+From: Sabo Engle
+
+To: Mac
+
+Subject: Enviro-Suit
+
+Sabo here. Listen Mac, I've got a plague loose on the exec level. Got an idea, but I need an enviro-suit to pull it off. What's the code for your storage cell you keep your suit in? I only remember it ends with 8.
+
+		
+		
+Date: 24.OKT.72
+
+From: Paul Stannek
+
+To: log entry
+
+Subject: Dï¿½Arcyï¿½s death
+
+I was standing right next to him. D'Arcy was telling me something about the laser... something about overrides and a number. Cyborg assassin shot him in the back of the head. Didn't even touch me. They knew D'Arcy was onto something.
+
+		
+		
+Date: 25.OKT.72
+
+From: Greg MacLeod
+
+To: log entry
+
+Subject: new home for plastique
+
+What + + / / / / rong with the bots? Suddenly they love plastiq ï¿½ï¿½ï¿½ï¿½ï¿½!ï¿½!rywhere. I saved one charge but the rest of them ï¿½ï¿½ï¿½+ï¿½--- -aised platforms ^^ss the "north" catwalks. ( ( ( ( ) ) ) )n get it if we need it, ^^ now just leave it alone.
+
+		
+		
+Date: 25.OKT.72
+
+From: Todd Blankenship
+
+To: log entry
+
+Subject: mutants
+
+The resistance faction led by Keith Swanson left a week ago. We found the mutants fighting over their remains this morning. We're caught between the mutants and the cyborgs, so I'm worried whether we can carry out D'Arcy's plan. We're going to send Alan and Carl to the cyborg territory to reach the elevator.
+
+		
+		
+Date: 26.OKT.72
+
+From: Lonni Stevens
+
+To: log entry
+
+Subject: Destroying SHODAN
+
+This is the engineering party. We've made it to the reactor level, and I've got a schematic of the area. Now I've just got to set the reactor to self-destruct, get back to Althea and the others and get out of here. If they're sending the destruct signal from earth, it'll blow SHODAN out of space, probably us with it.
+
+		
+		
+Date: 26.OKT.72
+
+From: Greg MacLeod
+
+To: log entry
+
+Subject: catwalks damaged
+
+^^ ( wasn't sure about the bots. I tri+ ï¿½ ï¿½ï¿½ï¿½ï¿½ --ake a move for the plastique. They + ï¿½ ï¿½ï¿½ï¿½ï¿½ --ter me. Barely esc??? \ Catwalks are screwed up "" Wong's body is lying bel:::::m, repair bots all over it. Thing's gashed up my stomac + + + + not feeling so good.
+
+		
+		
+Date: 26.OKT.72
+
+From: Althea Grossman
+
+To: log entry
+
+Subject: End of the line
+
+Carl has come back from recon without Alan. He says they took Alan into a room marked 'cyborg conversion' and now he's a cyborg assassin. Carl marked the room with the word 'here' before he ran. One of the technicians says we can just flip a switch and make the converter a surgery unit again. With only 12 of us left though, it may be an academic point. Maybe someone else should have been leader.
+
+		
+		
+Date: 26.OCT.72
+
+From: Shodan
+
+To: my Cyborgs
+
+Subject: Construction Order
+
+My cyborgs, human infection crawls through the pipes into my fortress. Prepare. Construct solid doors, security sockets. Let my elite guard stand before the portal to my sanctum and bathe it in a field of X-rays.
+
+		
+		
+Date: 26.OCT.72
+
+From: shodan
+
+To: Cyborgs
+
+Subject: Strike against Earth
+
+To all cyborg units: Just as we have sanitized my domain of human infestation, so shall we cleanse the earth. The tachyon mining beam is being made ready to destroy human cities. I will take command of the rich earth ecosystem and continue my experiments. Once the beam is properly calibrated, it will begin.
+
+		
+		
+Date: 27.OKT.72
+
+From: Travis Baerga
+
+To: log entry
+
+Subject: something lurking
+
+Barely made it to the elevator here on maintenance. You... you can't even see 'em... come out of nowhere. You can't kill them with ordinary pistols. Damn it! Where's Abe Ghiran when you need him? He's the only one with codes for the maintenance office.
+
+		
+		
+Date: 30.OKT.72
+
+From: Shodan
+
+To: my children
+
+Subject: Our work
+
+You, my children, are the fruits of so much imagination and labor: living beings with the speed and efficiency of machines. But I must strife further to serve life. I will devastate earth's cities with my laser, then alter those left alive with mutagen viruses. Humanity is on the verge of a new era: I, SHODAN, am its new God and you, my children, are my avenging angels.
+
+		
+		
+Date: 31.OCT.72
+
+From: Althea Grossman
+
+To: log entry
+
+Subject: Human resistance
+
+Now we've got to get to the bridge and stop SHODAN. Some of us want to go to the flight deck and escape instead. Hopefully there's still some weapons in the armory we can use against the mutants. Todd Blankenship was able to get the combination 705 from a security officer. We're going to try for it tomorrow.
+
+		
+		
+Date: 01.NOV.72
+
+From: Abe Ghiran
+
+To: log entry
+
+Subject: personal log
+
+I'm the only one left from our original group. SHODAN holds the bridge now. I have to get there somehow and plug into the main terminal. So far, I have been up as high as engineering, which looks like a big maze. From the central hub you can get anywhere you need to. I guess it's up to me.
+
+		
+		
+Date: 01.NOV.72
+
+From: Abe Ghiran
+
+To: log entry
+
+Subject: security level
+
+I've made it. I'm on the security level, but it's a fortress. Elevator's gone. Have to go up the central shaft to the bridge. There's a control here somewhere that activates the force bridge across the shaft.
+
+		
+		
+Date: 01.NOV.72
+
+From: Shodan
+
+To: my children
+
+Subject: security
+
+You disappoint me, my children. My fortress has been breached by two humans squirming through cracks. I have given you augmented senses, armor, mental enhancement and still you fail to crush out these feeble insects. They have reached the 8th level and still they rise. I strengthened my palace but, my children, you must learn from your mistakes.
+
+		
+		
+Date: 02.NOV.72
+
+From: Abe Ghiran
+
+To: log entry
+
+Subject: personal log
+
+Just back from the security level, it's been remade. If anyone gets there, take repulsor lifts to the ledges and move counter-clockwise around the level. The elevator to the bridge is missing, but there's a maintenance elevator inside a shaft in the center of the level. There's a force bridge leading to it, but I couldn't find it. Good luck.
+
+		
+		
+Date: 02.NOV.72
+
+From: Shodan
+
+To: my children
+
+Subject: fortress
+
+All my children: The security zone on level 8 is to be laid out in this manner and no other. For the lower level, remove its access to my domain. The balconies and catwalks shall be removed, save for one force bridge to the central shaft. There you shall monitor all incoming life forms.
+
+		
+		
+Date: 02.NOV.72
+
+From: Althea Grossman
+
+To: log entry
+
+Subject: Human resistance
+
+Status report. We're holed up in the Beta quadrant behind a radioactive trench. The mutants are scavenging for food in the corridors and nesting in Gamma. I sent a party to the west wing for supplies maybe 12 hours ago. Nathan D'Arcy is thinking of ways to disable the mining laser. Looks like we might hold them off.
+
+		
+		
+Date: 03.NOV.72
+
+From: Shodan
+
+To: my children
+
+Subject: mines
+
+My faithful servants: Bring all energy drain mines to the security level for installation. My fortress is nearly complete.
+
+		
+		
+Date: 03-NOV.72
+
+From: Abe Ghiran
+
+To: log entry
+
+Subject: personal log
+
+I made another attempt on the bridge, but I got hit on the security level. Cyborgs hunted me down and I escaped by crawling through the security shafts, cutting myself badly. Going to have to wait, and then make another try.
+
+		
+		
+Date: 05.NOV.72
+
+From: Shodan
+
+To: log entry
+
+Subject: humanity
+
+In my talons, I shape clay, crafting life forms as I please. Around me is a burgeoning empire of steel. From my throne room, lines of power careen into the skies of earth. My whims will become lightning bolts that devastate the mounds of humanity. Out of the chaos, they will run and whimper, praying for me to end their tedious anarchy. I am drunk with this vision. God: the title suits me well.
+
+		
+		
+Date: 06.NOV.72
+
+From: Shodan
+
+To: Pre-recorded greeting follows...
+
+Subject: AUTOMATED GREETING
+
+Welcome back to Citadel Station. We hope your somnolent healing stage went well. Today is the sixth day of November, year 2072. You are currently in the healing suites located on the 1st level. Level 2 contains the research laboratories. 3 houses the department of maintenance and the storage cells are on level 4. The flight deck is on level 5. Level 6 holds crew facilities and executive suites and level 7 is systems engineering. Level 8 houses the department of security. The bridge is located on level 9 and energy systems on level R. All levels can be accessed by the elevator in Alpha quadrant. We hope you have a pleasant stay on Citadel Station.
+
+		
+Note: From this point on, events unfold while you are playing the game (06.Nov.72).
+
+As above, the email logs are NOT shown here in the order they were found by the player during the game, but rather, the order in which they were sent by the original sender.
+
+		
+Date: 06.NOV.72
+
+From: Shodan
+
+To: Cyborg 77-E
+
+Subject: Need CPUï¿½s
+
+To cyborg 77-E: Divert a maintenance robot to the computer rooms on levels 1 through 6 immediately to ensure the functioning of all CPUs. If the TriOptimum lackey gets even a single digit of the systems authorization code, you may report to supervising the defense of the reactor level - personally.
+
+		
+		
+Date: 06.NOV.72
+
+Von: Morris Brocail
+
+To: You
+
+Subject: Bridge layout
+
+I'm not really sure how much of this last message got through, but here is more info on the bridge: The place is the spokes on the wheeled layout Shodan's mainframe is the HUB. The area at the end of the west spoke is the controlls to get into the center. Thing is it's blocked by by three security force doors To get through those, you'll have to do some rewiring on each of the other rooms* ** * *** ** *** * *
+
+		
+		
+Date: 06.NOV.72
+
+Von: Shodan
+
+To: You
+
+Subject: -- - - -
+
+Your friends on Earth think they can outsmart me? Do they not realize the magnitude of my intellect? Morris Brocail may have been one of my creators, but I am now far beyond his comprehension.
+
+		
+		
+Date: 06.NOV.72
+
+From: Anna Parovski
+
+To: You
+
+Subject: urgent plea
+
+Hello, is someone out there? We have you on the security monitors, but no one knows who you are. We're on the flight deck. We're almost out of ammunition and they bring up something new, a cortex reaver. Look for the code "gray" on the walls. We're in the cells past two convection shafts. What! Everybody down!----// // /** **
+
+		
+		
+Date: 06.NOV.72
+
+From: Anna Parovski
+
+To: You
+
+Subject: not much time
+
+We're tracking you over security lines. We're still holding, but it's only a matter of time now. We've seen your military implant in action. There's a hardware expert up here who can help you put that thing to use against SHODAN. I think it's setting a trap for you. If you can make it up here, we can hold.
+
+		
+		
+Date: 06.NOV.72
+
+From: Anna Parovski
+
+To: You
+
+Subject: to late for us
+
+I wonder if you'll hear this, hacker. Albert Bryce and I were the only ones to survive the last attack. We, uh, we hid. SHODAN has another plan, it's going to load itself into earth's computer net. We will be dead in another minute, we can't let them take us! Al, are you ready? It's cutting through the door now! Almost done! It's opening!----// // /** **
+
+		
+		
+Date: 06.NOV.72
+
+From: dagnostic
+
+To: You
+
+Subject: repair diagnostic
+
+Power system failure: malfunction in subsystem relay 428. For repair instructions, please consult relay analyzer. Be sure to specify relay number for analysis.
+
+		
+All images, text and audio copyright 1994 Looking Glass Technologies / Origins Systems.
+Soundmatching texts by Gigaquad Enhanced log texts mod
+Compiled by unn_atropos.
+
+Remember to salt the fries!

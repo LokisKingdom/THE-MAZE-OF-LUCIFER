@@ -1,0 +1,51 @@
+ANDROID FOLDER: D:\lokis-kingdom
+
+
+
+BUILT APK PATH: D:\THE NERVOUS SYSTEM\USER_KC\QUOTATIONS FROM BRENDAN S ROSE\BRENDAN'S INFERNAL BIBLE\THE GLOT\THE GULLET\loki\loki\lokis-kingdom\loki\app\release
+
+
+
+ARCHIVE/TARGET FOLDER: D:\THE_MAZE_OF_LUCIFER\THE MAZE OF LUCIFER\music\ALBUM ROOM\APP RELEASES
+
+
+
+R2 BUCKET: efsmb-music/A_RELEASES/  
+
+
+
+
+HERE'S THE CURRENT JSON:
+
+@echo off
+
+cd /d "D:\lokis-kingdom"
+
+echo WELL BRAIN, WHAT DO YOU WANNA DO TONIGHT???
+
+echo THE SAME THING WE DO EVERY NIGHT PINKY.....
+
+echo [Generating music catalog JSON...]
+
+echo.
+
+
+
+node generateMusicCatalog.mjs
+
+echo MWAHAHAHAHaHAAHAHAahhahHAHahHaHHaaHAah!!!!!
+
+
+echo.
+
+echo ========================================
+
+echo DONE - [Lightning Bolt!!!] Check the results above.
+
+echo ========================================
+
+echo.
+
+
+
+pause

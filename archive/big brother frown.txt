@@ -1,0 +1,42 @@
+
+ALAS IN WONDERLAND
+You have reached the maximum number of notebooks. Learn more.
+PRO
+Sources
+I am sending you some technical documents related…
+Source guide
+The author describes a new digital project titled The Maze of Lucifer, a video game designed as a massive open-source distribution vehicle for their entire musical catalog. By bundling over 92 gigabytes of music under a highly permissive license, the creator aims to provide a permanent hard copy of their life's work that exists independently of centralized streaming platforms. The text also highlights the development of an in-game database of collectible prompts, a feature that served as a vital therapeutic distraction from the author’s recent struggles with mental health and medication. Ultimately, the project functions as a comprehensive creative archive, offering future developers and players unrestricted access to a vast library of sound and thought.
+
+
+
+
+I am sending you some technical documents related to my new game
+THE MAZE OF LUCIFER.
+It's a 2D Roguelike based on Staticos Godot Roguelike Example.
+It contains 92 GB of music, basically whoever buys this (for free) off Steam
+will get every song I've ever made, all 6800 or whatever and the 105 albums or whatever,
+Basically they'll get my whole Gigantic Jukebox (92 GB of music) in hard copy form,
+so even if i get deleted by Cloudflare, (I'd switch to Anybunny) or I get banned off Soundcloud (possible but unlikely) they'd still have their hard copies as long as I don't get completely nuked off Steam,
+and they let me back after doing way worse stuff than what I'm planning, should be fine.
+Yeah, we'll have hardcopies of the music. I released it with a near MIT license that allows
+anyone to take the music and use it without crediting me in their own games and other projects,
+It's actually a huge gift, I think most people won't understand how big that is at first.
+Yeah if you're an indie dev and you need some free music, these are 6800 great ones!!!
+go hog wild, they can make their own game, whatever, they can fork my project and make their own version of my game and sell it.
+Anyway, in these logs you'll see me debugging a new feature,
+We're trying to build collectable deepdive prompts, which you can pickup and read
+in a big deepdive database. I put a lot of work into those prompts, (like I'm doing here)
+so I think they will be fun to collect, and since there's hundreds and hundreds,
+they're a good random object to find in a one life roguelike with no save games,
+just these random object with a random reward inside, it's cool.
+So we had to build the items containing them,
+we already built the reader interface last night,
+it helped a lot with my lithium problem,
+I missed two lithiums over a week or two,
+then i skipped one yesterday,
+DEVASTATION, so much panicked sickened fearful depression,
+but working on this all evening,
+It's gone away, i'm fine now, mostly........
+So anyway we got that deepdive system working,
+you can now collect my prompts, they'll appear randomly in the levels,
+while you're being killed by monsters, you can read my prompts.... is cool.......

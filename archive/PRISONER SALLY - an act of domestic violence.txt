@@ -1,0 +1,133 @@
+PRISONER SALLY
+← LOKI'S KINGDOM
+CELL
+VOICE: ON
+SOMETHING LISTENS BEHIND THE WALL
+YOU — HP 100/100 | HUNGER 23 (Fed) | GOLD 10,281
+SALLY — HP 95.87147986111111/100 | HUNGER -8 (Fed)
+Prisoner Sally
+PROVIDE FOR THE PRISONER
+GOLD: 10,281
+HUNGER: -8/100 — Fed
+FULLNESS: 108/100
+
+Beer — 180 gold
+GIVE — 180 GOLD
+ALCOHOL — A cold bottle of ordinary beer.
+Beer was purchased, but Sally was already full enough to receive no emotional benefit.
+SALLY
+...Who speaks through the wall?
+SALLY
+Sally accepts the Bread and Soup and begins eating while it is still warm. "Thank you." She says it quietly, then adds, "No qualification. Just—thank you."
+YOU
+Are you doing, ok?
+SALLY
+it doesn't change anything...
+YOU
+that's what i think
+SALLY
+shut up
+YOU
+Did I upset you? I'm sorry.
+SALLY
+no...
+YOU
+...ok
+SALLY
+...
+YOU
+..
+SALLY
+...
+YOU
+....
+SALLY
+For a moment, only Sally's breathing comes through the wall.
+YOU
+[knock knock knock]
+SALLY
+who is it?
+YOU
+Mario with a twisted oil slicked moustache, holding Bill Hicks hostage with a ping pong paddle, and playing TEENAGE MUTANT NINJA TURTLES - Turtles in Time. :) Wait is this even the right door?
+SALLY
+that's definitely not the right door.
+YOU
+Then where is the VEnding Machine Gala? I spent all morning adjusting my WIG.
+SALLY
+what is this, some sort of jest?
+YOU
+you don't like corny humor?
+SALLY
+just leave
+YOU
+that's not very likely
+SALLY
+why would i?
+YOU
+It's not my concern, if you're being like this.....
+SALLY
+stop making jokes
+YOU
+that one wasn't a joke, Sally.....
+SALLY
+What do you want?
+YOU
+Some conversation, and to help you...... :(
+SALLY
+Fine.
+SALLY
+Stop. That hurts. Don't do that again.
+YOU
+ok i'm sorry
+SALLY
+don't apologize
+YOU
+it was an accident.
+SALLY
+stop saying sorry
+YOU
+what can i do to help?
+SALLY
+There's nothing you can do.
+YOU
+I didn't mean to, I mean I stopped. I.....
+SALLY
+Just talk.
+YOU
+[There's voices heard somewhere in the distance.]
+SALLY
+what do you know?
+YOU
+Just myself, and barely that.
+SALLY
+just talking won't fix anything
+YOU
+what's wrong?
+SALLY
+nothing
+YOU
+then what's there to fix?
+SALLY
+nothing
+YOU
+nothing
+SALLY
+nothing
+YOU
+nothing nothing nothing
+SALLY
+there's something... *gulps*... in my head.
+YOU
+sounds scary.
+SALLY
+For a moment, only Sally's breathing comes through the wall.
+YOU
+You had your beer, i gave you soup and bread, you're good for now. I won't let you die, and I'll talk to you.
+SALLY
+Thank you. For the soup and bread, I mean.
+YOU
+No problem.
+SALLY
+it's just the usual stuff
+Speak through the wall...
+SPEAK

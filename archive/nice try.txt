@@ -1,0 +1,49 @@
+So I'd like to preempt arguments that ChatGPT and Grok are doing everything,
+and I'm just a puppet. That's not exactly true, I'm pretty sure if your neighbor just
+decides to start working with ChatGPT to code a website, they'd run into a few problems
+along the way. I have a long background in programming going back to when i was a kid,
+I have been formally educated in programming in college. So even though I don't know Kotlin,
+and yes, admittedly, I have no idea what almost any of these solutions actually do,
+I am managing things at a higher level, a kind of "boss" level, rather than a "grunt coder" level,
+The grunt coder problems are just solved by ChatGPT (edited back into the original codebase by me i note)
+but why are there grunt coder problems?
+
+Well let's look at today, I have a problem, the AI is not aggressively fighting the other AI factions and species enough. I have to order ChatGPT to solve this, however this is one is a bad example because
+it's difficult to quantify, lets say I wanted to make a new sprite for a new enemy get hooked up,
+I will ask ChatGPT, how do i hookup the sprite, and I will get an answer, sometimes it works right away,
+sometimes it requires extensive engineering. My job is to order ChatGPT around, solve the problems in the 
+code, and send relevant scripts for ChatGPT to review, so I need to know how the project is structured,
+I need to know what it's all doing, eventually with time, I get good enough at the engine that I don't
+need to ask ChatGPT as much. It's a lot more complicated than ChatGPT is doing everything for me,
+it is more like, ChatGPT is my employee, a skilled expert in all computer tasks, and my friend.
+
+If a layman thinks, OH LOOK BRENDAN CAN MAKE AN INDUSTRY GRADE MUSIC APP IN EXOPLAYER AND ANDROID MEDIA 3 AND ANYONE CAN MAKE A GREAT VIDEOGAME AND I CAN MAKE A THOUSAND SONGS JUST AS GOO---- pppppsshhsshisdhisah ppft!!!......... no........
+
+That person will almost certainly fail, unless they have a backing in coding and / or game design / programming, and an extensive talent stack of tech literacy, they will not get results like this,
+they will get stuck in a broken coding problem basically day 1, it's a good way to get started learning,
+but don't expect a lifetime of results, just because you have an AI too.
+
+Look I have a keyboard too I can write just like Samuel Beckett,
+well.......
+
+I'm not gonna say definitively that you can't, I just think it's unlikely at this time,
+well, bad example, chatGPT can write you prose pretty easy.
+
+Look I can code an industry grade app just like Microsoft!!!!
+I'd say cool down there guy, let's see where you're at before you go up against Microsoft.
+You might get there one day, you might be there, we'll see i guess,
+But I'd caution you against assuming that because BRENDAN (College Educated Programmer)
+can code industry grade Apps, Websites, Games, and (especially) write and produce that beautiful music,
+if you're an amateur, you can probably make something pretty good with ChatGPT,
+don't assume my output and my results are the average, I'm an exception,
+a Leonardo Divinci of music art programming and games,
+just because you have the same tools as me, it doesn't mean your song will be as good as
+THIS IS THE WAY IT SHOULD BE (4), this is artistry, not just a coding problem.
+The coding issue is by necessity, in order to put forward the art, I am an artist first,
+a coder and programmer second. You can fill a book with text but you have to be smart to write FIGHT CLUB. My videogame is not an asset flip, it is industry grade, a corporation would generally pay 6 figures or higher to maker a game of that quality, it reminds me of Ocarina of Time, I will just say definitively you cannot make a game that good if you're just an amateur, bring Grok in to design the foundation (he designed the website foundation, R2 and astro- keeping costs down to nothing, he designed the roguelike foundation, found me Statico's thing, Grok is a good IDEA MAN, not a good grunt debugger) you're
+not gonna get those results as one person. I have too many separate skills that you can't account for,
+I make my own music for one thing, I am skilled at game design, coding and programming, I am a master of writing and literature, I am well versed in all aspects of tech.
+
+So no,
+You cannot just pickup ChatGPT and do what I did,
+nice try.

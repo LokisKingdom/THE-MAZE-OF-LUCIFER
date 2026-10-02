@@ -1,0 +1,27 @@
+[VERSION 44]
+
+DEVLOG: 2:41 PM - 2026 08 16, Sunday, August 26
+
+* **Persistent document attachment system implemented.** Players can now attach supported text documents directly to an audience interruption and send the document together with their message as one conversational turn. The attached work is persisted through the document-memory system rather than treated as disposable prompt text, allowing the characters to actually read and respond to the supplied material. After a successful send, the attachment is consumed so it does not accidentally carry into later messages.
+
+* **Attached document names are now represented directly in the conversation.** When an audience message contains an attachment, the visible audience post also identifies the file by name, for example `[DOCUMENT: manuscript.txt]`. This makes document-based conversations readable in the live transcript and makes it immediately clear which work was being discussed at a particular point in the show.
+
+* **Traditional Chinese presentation mode implemented.** The television can now switch its displayed dialogue into Traditional Chinese while preserving the underlying conversation system. The language control behaves as a destination toggle: while the program is in English it offers `繁體中文`, and while Traditional Chinese is active it offers `ENGLISH`.
+
+* **DISTORTION presentation mode implemented.** A dedicated distortion control now applies the machine-corrupted visual speech treatment to dialogue. The system supports character stretching, damaged capitalization, numerical intrusions, spacing corruption, brackets and other textual mutations while leaving the underlying normal dialogue available for speech playback. The initial distortion level is operational and provides the foundation for progressively stronger levels.
+
+* **Audience betting implemented.** During the opening betting window, viewers can choose a contestant, enter a GOLD wager and place a bet directly from the television interface. Betting is tied into the persistent Loki’s Kingdom economy, with wager status and available GOLD represented directly in the control panel.
+
+* **Machine progression controls implemented.** The television now exposes the MACHINE upgrade system directly alongside the other audience controls. The panel displays the current machine level, the next available level, its GOLD cost and the player’s available balance, providing a persistent progression path connected to the shared economy.
+
+* **Expanded chat exporter implemented.** Conversation transcripts can now be exported directly from Recall Thy Name instead of requiring manual copying. The exporter supports the current conversation or the complete conversation archive, allowing a short individual episode to be saved separately from the player’s full historical record.
+
+* **Bilingual transcript export implemented.** Standard exports can include both the original English dialogue and its Traditional Chinese presentation. This preserves both representations of the conversation in the same archive and makes translated versions portable outside the television interface.
+
+* **Clean transcript export implemented.** `EXPORT CLEAN` removes television metadata and presentation decoration and produces a simplified character-and-dialogue transcript intended for reading, archival work and external text-to-speech processing. In bilingual mode, each character’s English dialogue is followed directly by its Traditional Chinese counterpart.
+
+* **English-only export implemented.** A dedicated `ENGLISH ONLY` option allows exports to bypass Traditional Chinese entirely. This works independently with current-chat, export-all and clean-export modes, so viewers who only want the original English dialogue can produce a substantially simpler archive without translation material.
+
+* **DISTORTION-aware exporting implemented.** When DISTORTION is active, exported host dialogue preserves the distorted visual presentation rather than silently reverting to the clean source text. This allows particularly unusual or memorable corrupted broadcasts to be archived exactly as they appeared during the show.
+
+* **Unified final television control layer implemented.** The expanded Recall Thy Name control panel now consolidates language selection, DISTORTION, MACHINE progression, betting and transcript export into the live television interface while retaining the original TV, voice, Host Store, document and jukebox controls.

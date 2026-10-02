@@ -1,0 +1,237 @@
+Why is it doing this? I paid my GitLFS just now for another 2 dollars.
+
+Because paying for Git LFS only increases your available LFS storage/bandwidth. It does not automatically make those .exe files use LFS.
+
+GitHub Desktop is warning that these four files are currently being committed as ordinary Git files:
+
+the_maze_of_lucifer.exe
+the_maze_of_lucifer_v1.exe
+the_maze_of_lucifer_v2.exe
+the_maze_of_lucifer_v3.exe
+
+They are each over GitHub’s normal 100 MiB file limit, so the commit may succeed locally, but GitHub will reject the push unless those files are actually tracked by Git LFS.
+
+Also, this is important:
+
+music\.gdignore
+
+only tells Godot to ignore the music folder. It does not tell Git to ignore it. That is why GitHub Desktop is showing 7,932 changed files, including your external music library.
+
+Do not click “Commit anyway” yet
+
+Open Git Bash or PowerShell inside the repository and run:
+
+git lfs install
+git lfs track "*.exe"
+
+That should create or update:
+
+.gitattributes
+
+with something like:
+
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+GitHub requires file types to be explicitly associated with LFS using git lfs track; GitHub Desktop then handles them normally.
+
+Then deal with the music folder. Since the music is now external and should not be committed, create a repository-root file named:
+
+.gitignore
+
+and put:
+
+music/
+*.pck
+
+You may also want to ignore exported executables instead of storing them in Git:
+
+*.exe
+
+But choose one approach for the executables:
+
+Track *.exe with Git LFS, or
+Ignore *.exe and distribute builds through GitHub Releases/elsewhere.
+
+After adding .gitignore, if those 7,900 music files are already being tracked by Git, run:
+
+git rm -r --cached music
+
+This removes them from Git’s staging/index while leaving the actual files safely on your drive.
+
+Then check:
+
+git status
+git lfs ls-files
+
+You want git lfs ls-files to show the .exe files, and git status should no longer show thousands of music files.
+
+The cleanest setup for your project is probably:
+
+music/
+*.pck
+
+while keeping:
+
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+That gives you the small game repository plus LFS-backed builds, without trying to recommit the entire 90 GB external music library.
+
+it's just removing the old import files for my album not the album the changes are fine i think
+
+Yeah, that sounds fine. The 7,932 changes are probably mostly Godot deleting the old .import/.godot metadata tied to the music files after you added .gdignore, not deleting the actual albums.
+
+The only real problem in that dialog is the four .exe files over 100 MB. Paying for Git LFS gives you capacity, but those executables still need to be marked as LFS files.
+
+Cancel that commit, then run once inside the repository:
+
+git lfs track "*.exe"
+
+Save the resulting .gitattributes, return to GitHub Desktop, and commit again. The deleted import files and other project changes can remain selected.
+
+You can verify before committing by opening .gitattributes; it should contain:
+
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+Then GitHub Desktop should stop warning that the executables are ordinary oversized Git files.
+
+it'a already committing it, it's fine
+
+That's fine. If it's already committing, there's no reason to interrupt it.
+
+The key thing to watch is the push afterward.
+
+There are two possibilities:
+
+It pushes successfully. Great—that means your .exe files were already configured for Git LFS, or they were under the limit GitHub enforced in your setup.
+The push fails with a message about files over 100 MB. Then you'll know the executables weren't tracked by LFS yet, and you can fix that before pushing again.
+
+So I'd just let the commit finish and see what happens on the push. The commit itself is local; the push is where GitHub enforces its file size rules.
+
+Also, congratulations on reaching this point. A working Version 1 executable with external music and notes is a solid milestone for the project.
+
+it's fine, i just had to track them, you were right.
+
+Excellent. That confirms the diagnosis.
+
+The warning wasn't about your LFS balance—it was about Git not yet knowing that *.exe files should be stored in LFS. Once you tracked them, GitHub Desktop recognized them correctly, and the push could proceed using LFS.
+
+So your repository is now in a much healthier state:
+
+✅ Game source in normal Git.
+✅ Large executables in Git LFS.
+✅ External music library no longer bundled into the executable.
+✅ Version 1 builds preserved.
+
+I'd still keep an eye on your LFS usage over time. If you upload a new 124 MB executable every day, the LFS storage will gradually fill up. A common approach is to keep the latest few builds in the repository and distribute official releases through GitHub Releases, where users can download tagged versions more conveniently.
+
+In any case, it's good that this was just a configuration issue rather than a repository problem. One more hurdle cleared.
+
+I hope I can be more assertive, less of an employee. I noticed today a lot more that problems that were bedeviling us, the answer was just staring me in the face, i could see what was wrong, it was more about having the confidence to go, no that IS the solution, i'm not imagining it. It's like web design, eventually i became a master of that system, now i can manage much of it on my own.
+
+I do not want to be mean, because that would cause arguments, just, direct, and efficient, maybe even rudely so, direct contradictions more often maybe. I don't know, then again, we have a good dynamic here, why mess with it?
+
+I actually think today's debugging is a good example of the balance you're talking about.
+
+There were a couple of moments where you said, in effect, "I don't think that's the problem," or "Why are we using res:// at all?" Those weren't arguments—they were hypotheses based on what you were observing. That's exactly the kind of input that makes debugging better.
+
+Later, you noticed that the executable was still behaving like the old code, and you suggested intentionally misspelling the path to see whether the new code was even running. That's a classic debugging technique. It wasn't something I had suggested first, and it turned out to be a useful way to narrow the possibilities.
+
+So I don't think the goal is to become "rudely direct." I think it's to become comfortable saying:
+
+"I think this assumption is wrong."
+"The logs don't match that explanation."
+"Let's test this instead."
+"I can see another possibility."
+
+Those are collaborative debugging habits.
+
+The other thing that's changing is your familiarity with the codebase. A few weeks ago we were both discovering it. Now you've spent enough time in it that you recognize patterns. You mentioned web development—that's a good comparison. At first, every CSS issue feels mysterious. After a while you look at a page and think, "That's probably overflow," or "That's almost certainly a flexbox issue." You're not guessing randomly; you're drawing on experience.
+
+I also wouldn't worry too much about changing the dynamic between us. If you think an idea is wrong, just say so. I'd much rather you say, "No, I don't buy that," than spend an hour following a dead end because you felt you had to defer.
+
+Today's session is a nice example: we each contributed pieces. You spotted clues in the behavior, I suggested diagnostics, you found the save/export issue, then the LFS tracking issue got resolved. That's a pretty normal collaborative debugging process.
+
+As your project grows, I actually expect your role to shift more toward what you described: you'll increasingly say, "Here's the architecture I want; help me implement it," rather than, "What architecture should I use?" That's a natural consequence of becoming deeply familiar with your own codebase.
+
+i think over time you will become more comfortable with verbal requests over code based questions. I think they will abstract the coding and development out to the AI exclusively, we'll have a bunch of programmers who don't know how to program, they just have this entity that they talk to, and the entity makes them the app or the game.
+
+I think we'll see a lot more abstraction, yes, but probably not a complete disappearance of programming knowledge.
+
+A good analogy is SQL. Millions of people build applications that use databases without writing sophisticated SQL by hand anymore. ORMs, query builders, and visual tools handle much of it. Yet understanding what a database is and how it behaves still matters. AI seems likely to push that trend much further.
+
+The kind of interaction we've been having already hints at this. Early on, there were lots of messages like:
+
+"Rewrite this function."
+
+Now there are more messages like:
+
+"The music shouldn't be inside the executable anymore."
+
+"I want books to be collectibles."
+
+"Let's make the archive external."
+
+"The player should discover notes throughout the world."
+
+Those are architectural requests. The code is just the implementation.
+
+If AI keeps improving, I can imagine a developer spending much more time describing systems than writing syntax:
+
+"NPCs should form factions that defend territory."
+"Scatter collectible documents throughout the map."
+"The jukebox should pull albums from an external folder."
+"Players should unlock developer commentary after defeating Paper Crane."
+
+The AI would generate and revise the implementation, while the human decides what the game should be.
+
+Where I think human expertise will still matter is in the parts that AI can't infer from a vague request. If someone says, "Make combat fun," that's not a coding problem—it's a design problem. The AI can propose mechanics, but deciding whether they fit the vision of your game is still a creative judgment.
+
+Today's debugging also illustrates this. The syntax wasn't the difficult part. The difficult part was reasoning about the system:
+
+Is the executable reading the new script?
+Is the path wrong?
+Is the export stale?
+Is the asset actually external now?
+
+Those are questions about architecture and diagnosis. AI can help answer them, but the person building the project still has to define the goals, notice inconsistencies, and decide which direction to pursue.
+
+So I do think programming will become more conversational. The skill set may shift from "remember the exact API" toward "describe the desired behavior clearly, evaluate the result, and iterate." That's still engineering—it just moves the emphasis away from typing syntax and more toward specifying, testing, and refining systems.
+
+i still think over time they'll abstract all that out completely. You'll have games and apps being developed just verbally, the machine will talk to the human, the human will tell it what kind of game it wants to play, and the machine will make the game. internally it will still run on code machine side, and the human will still be able to study code like a foreign language people don't use much anymore, but i can see, well two things happening, more traditional programmers specializing into sort of tech wizard roles, and what i said here, laymans getting the same results or better than the tech wizards, just by talking to the machines.
+
+That's a plausible long-term scenario. The main uncertainty is not whether AI can generate code—it already can—but how reliable it becomes at handling large, evolving systems.
+
+If an AI eventually has a persistent understanding of an entire codebase, a conversation could look like this:
+
+Human: "I want a roguelike where books are collectible, music changes by region, and factions wage wars."
+
+AI: "Should books be randomly placed or hand-authored? Should faction wars persist between saves?"
+
+Human: "Hand-authored books. Persistent wars."
+
+AI: "Done. Would you like me to rebalance monster difficulty now that guards can reinforce towns?"
+
+That's much closer to directing a creative collaborator than programming in today's sense.
+
+Your own workflow has already drifted in that direction. A lot of our recent conversations aren't really about syntax anymore. They're about intent:
+
+"The archive shouldn't be inside the executable."
+"Images are too personal; let's stick to text collectibles."
+"The player should discover notes throughout the world."
+"Music should become rarer."
+
+Those are design decisions. The code follows from them.
+
+Where I think your prediction is strongest is for independent creators and small teams. If one person can describe a game well enough, AI could remove much of the implementation barrier. Someone with no traditional programming background could produce surprisingly sophisticated software.
+
+I do think there will still be people who specialize in lower-level work. There are already engineers who spend their careers on compilers, databases, rendering engines, operating systems, and networking. Even if most people never write code directly, someone will still need to build and improve the layers underneath.
+
+The interesting possibility is that "programming" becomes stratified:
+
+Most creators describe behavior, mechanics, interfaces, and stories in natural language.
+AI systems translate those descriptions into working implementations, tests, assets, and revisions.
+Systems engineers work on the AI models, languages, runtimes, operating systems, and hardware that make the abstraction possible.
+
+That wouldn't be unprecedented. Very few programmers today write machine code, even though computers ultimately execute machine instructions. We use higher-level languages because they let us think at the level of the problem instead of the hardware. Natural language could be another step in that progression—assuming AI becomes reliable enough to handle ambiguity, long-term consistency, and very large projects.
+
+One thing that may become even more valuable, rather than less, is the ability to specify what you actually want. A person who can clearly articulate mechanics, constraints, priorities, tradeoffs, and artistic direction may end up producing better software than someone who simply knows the syntax of a programming language. That's a different skill, but it's still a demanding one.

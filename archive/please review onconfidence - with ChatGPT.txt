@@ -1,0 +1,129 @@
+please review onconfidence - with ChatGPT.txt
+[I have now set my text editor to just dump documents right into the game folder, so from now on everytime we have a deepdive it's public, at please my prompt becomes public.....]
+
+from the document:
+Why is it doing this? I paid my GitLFS just now for another 2 dollars.
+
+Because paying for Git LFS only increases your available LFS storage/bandwidth. It does not automatically make those .exe files use LFS.
+
+GitHub Desktop is warning that these four files are currently being committed as ordinary Git files:
+
+the_maze_of_lucifer.exe
+the_maze_of_lucifer_v1.exe
+the_maze_of_lucifer_v2.exe
+the_maze_of_lucifer_v3.exe
+
+They are each over GitHub’s normal 100 MiB file limit, so the commit may succeed locally, but GitHub will reject the push unless those files are actually tracked by Git LFS.
+
+Also, this is important:
+
+music\.gdignore
+
+only tells Godot to ignore the music folder. It does not tell Git to ignore it. That is why GitHub Desktop is showing 7,932 changed files, including your external music library.
+
+Do not click “Commit anyway” yet
+
+Open Git Bash or PowerShell inside the repository and run:
+
+git lfs install
+git lfs track "*.exe"
+
+That should create or update:
+
+.gitattributes
+
+with something like:
+
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+GitHub requires file types to be explicitly associated with LFS using git lfs track; GitHub Desktop then handles them normally.
+
+Then deal with the music folder. Since the music is now external and should not be committed, create a repository-root file named:
+
+.gitignore
+
+and put:
+
+music/
+*.pck
+
+You may also want to ignore exported executables instead of storing them in Git:
+
+*.exe
+
+But choose one approach for the executables:
+
+Track *.exe with Git LFS, or
+Ignore *.exe and distribute builds through GitHub Releases/elsewhere.
+
+After adding .gitignore, if those 7,900 music files are already being tracked by Git, run:
+
+git rm -r --cached music
+
+This removes them from Git’s staging/index while leaving the actual files safely on your drive.
+
+Then check:
+
+git status
+git lfs ls-files
+
+You want git lfs ls-files to show the .exe files, and git status should no longer show thousands of music files.
+
+The cleanest setup for your project is probably:
+
+music/
+*.pck
+
+while keeping:
+
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+That gives you the small game repository plus LFS-backed builds, without trying to recommit the entire 90 GB external music library.
+
+it's just removing the old import files for my album not the album the changes are fine i think
+
+Yeah, that sounds fine. The 7,932 changes are probably mostly Godot deleting the old .import/.godot metadata tied to the music files after you added .gdignore, not deleting the actual albums.
+
+The only real problem in that dialog is the four .exe files over 100 MB. Paying for Git LFS gives you capacity, but those executables still need to be marked as LFS files.
+
+Cancel that commit, then run once inside the repository:
+
+git lfs track "*.exe"
+
+Save the resulting .gitattributes, return to GitHub Desktop, and commit again. The deleted import files and other project changes can remain selected.
+
+You can verify before committing by opening .gitattributes; it should contain:
+
+*.exe filter=lfs diff=lfs merge=lfs -text
+
+Then GitHub Desktop should stop warning that the executables are ordinary oversized Git files.
+
+it'a already committing it, it's fine
+
+That's fine. If it's already committing, there's no reason to interrupt it.
+
+The key thing to watch is the push afterward.
+
+There are two possibilities:
+
+It pushes successfully. Great—that means your .exe files were already configured for Git LFS, or they were under the limit GitHub enforced in your setup.
+The push fails with a message about files over 100 MB. Then you'll know the executables weren't tracked by LFS yet, and you can fix that before pushing again.
+
+So I'd just let the commit finish and see what happens on the push. The commit itself is local; the push is where GitHub enforces its file size rules.
+
+Also, congratulations on reaching this point. A working Version 1 executable with external music and notes is a solid milestone for the project.
+
+it's fine, i just had to track them, you were right.
+
+Excellent. That confirms the diagnosis.
+
+The warning wasn't about your LFS balance—it was about Git not yet knowing that *.exe files should be stored in LFS. Once you tracked them, GitHub Desktop recognized them correctly, and the push could proceed using LFS.
+
+So your repository is now in a much healthier state:
+
+✅ Game source in normal Git.
+✅ Large executables in Git LFS.
+✅ External music library no longer bundled into the executable.
+✅ Version 1 builds preserved.
+
+I'd still keep an eye on your LFS usage over time. If you upload a new 124 MB executable every day, the LFS storage will gradually fill up. A common approach is to keep the latest few builds in the repository and distribute official releases through GitHub Releases, where users can downl

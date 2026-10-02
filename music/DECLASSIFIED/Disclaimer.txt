@@ -1,0 +1,32 @@
+By Brendan S. Rose, 2016
+
+All artwork in this game is in the public domain, it may be reproduced and used in
+any way you wish. You are free to sell the art commercially, or change it in any way
+you see fit. If you change the work significantly you may freely copyright the changed
+images, provided the original work remains in the public domain so others are free to
+use the work.
+
+All scripts are also in the public domain, and subject to the same terms.
+
+The only artwork that is not in the public domain is the floor in Invasion of Stupid,
+which is made of memes, the same is true for the Invasion of Stupid Main Menu Screen.
+
+I have purchased the right to use those shogi kanji from a royalty free website,
+you may not reproduce that artwork unless you also pay for the service.
+
+I have purchased the 3D models of the chess pieces from the Unity Asset Store,
+I have the right to use them in my game.
+
+All music was downloaded legally from the Unity Asset Store and may not be used
+unless obtained legally.
+
+Colossal Game Music Collection by The Indie Devs Nation Music (T.I.D.N.Music)
+purchased legally from the Unity Asset Store.
+
+Synthwave 001 by Mercurius FM purchased legally from the Unity Asset Store.
+
+The Psychedelic Nietzsche, Tenma as Van Gogh, and Holy Crap You Cant Even Tell Its Offensive,
+were all created by feeding my own hand drawn cartoons into Dreamscope, and therefore
+are not released into the public domain.
+
+FUNGUS used legally through the Unity Asset Store.
